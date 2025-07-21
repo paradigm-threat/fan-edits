@@ -1,4 +1,7 @@
+.tmp*
 *.mkv
+*.mkv.log
 *.mp3
 *.mp4
 *.ass
+*.resume.xml
