@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/FanEdits/The Day After Tomorrow (2004) - Chemtrail Edition" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/FanEdits/FanMixes/The Day After Tomorrow (2004) - Chemtrail Edition" version="7.33.0">
  <profile colorspace="709" description="4K UHD 2160p 23.98 fps" display_aspect_den="9" display_aspect_num="16" frame_rate_den="1001" frame_rate_num="24000" height="2160" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain2" out="02:03:40.457">
   <property name="length">177913</property>
@@ -3341,7 +3341,7 @@
   <property name="kdenlive:docproperties.rendertcoverlay">0</property>
   <property name="kdenlive:docproperties.rendertctype">-1</property>
   <property name="kdenlive:docproperties.rendertwopass">0</property>
-  <property name="kdenlive:docproperties.renderurl">C:/Users/kado/Videos/The Day After Tomorrow (2004) - Chemtrail Edition 75.mkv</property>
+  <property name="kdenlive:docproperties.renderurl">C:/Users/kado/Videos/The Day After Tomorrow (2004) - Chemtrail Edition.mkv</property>
   <property name="kdenlive:docproperties.seekOffset">30000</property>
   <property name="kdenlive:docproperties.sessionid">{aadc9826-cbc4-4c9b-a1e3-1b5da15717aa}</property>
   <property name="kdenlive:docproperties.uuid">{616d4122-cb01-43dd-8764-e9ee648a931b}</property>
