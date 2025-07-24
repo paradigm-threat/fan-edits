@@ -160,7 +160,7 @@
   <property name="kdenlive:monitorPosition">0</property>
   <property name="mute_on_pause">0</property>
  </chain>
- <producer id="producer0" in="00:00:00.000" out="01:36:16.475">
+ <producer id="producer0" in="00:00:00.000" out="01:35:16.141">
   <property name="length">2147483647</property>
   <property name="eof">continue</property>
   <property name="resource">black</property>
@@ -387,18 +387,18 @@
    <property name="kdenlive:collapsed">0</property>
    <property name="instances">1</property>
   </filter>
-  <filter id="filter4">
-   <property name="channel">-1</property>
-   <property name="mlt_service">panner</property>
-   <property name="internal_added">237</property>
-   <property name="start">0.5</property>
-   <property name="disable">1</property>
-  </filter>
   <filter id="filter3">
    <property name="window">75</property>
    <property name="max_gain">20dB</property>
    <property name="mlt_service">volume</property>
    <property name="internal_added">237</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter4">
+   <property name="channel">-1</property>
+   <property name="mlt_service">panner</property>
+   <property name="internal_added">237</property>
+   <property name="start">0.5</property>
    <property name="disable">1</property>
   </filter>
   <filter id="filter2">
@@ -620,8 +620,8 @@
   <entry in="00:58:48.048" out="00:59:54.888" producer="chain1">
    <property name="kdenlive:id">4</property>
   </entry>
-  <blank length="00:05:18.268"/>
-  <entry in="01:06:21.647" out="01:07:37.871" producer="chain1">
+  <blank length="00:04:17.684"/>
+  <entry in="01:06:21.438" out="01:07:37.871" producer="chain1">
    <property name="kdenlive:id">4</property>
   </entry>
   <blank length="00:00:04.004"/>
@@ -883,10 +883,10 @@
    <property name="kdenlive:id">4</property>
   </entry>
   <blank length="00:01:03.045"/>
-  <entry in="01:00:47.756" out="01:06:08.508" producer="chain3">
+  <entry in="01:00:47.756" out="01:05:08.425" producer="chain3">
    <property name="kdenlive:id">4</property>
   </entry>
-  <blank length="00:01:13.722"/>
+  <blank length="00:01:13.472"/>
   <entry in="01:07:50.926" out="01:07:59.226" producer="chain3">
    <property name="kdenlive:id">4</property>
   </entry>
@@ -924,7 +924,7 @@
    <property name="kdenlive:id">4</property>
   </entry>
  </playlist>
- <tractor id="tractor1" in="00:00:00.000" out="01:31:16.433">
+ <tractor id="tractor1" in="00:00:00.000" out="01:30:16.099">
   <property name="kdenlive:audio_track">1</property>
   <property name="kdenlive:trackheight">84</property>
   <property name="kdenlive:timeline_active">1</property>
@@ -933,7 +933,37 @@
   <property name="kdenlive:audio_rec"/>
   <track hide="video" producer="playlist2"/>
   <track hide="video" producer="playlist3"/>
-  <transition id="transition29" in="00:49:01.084" out="00:49:04.004">
+  <transition id="transition24" in="00:45:17.100" out="00:45:19.102">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">24</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition37" in="01:01:31.740" out="01:01:32.741">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition36" in="01:20:06.506" out="01:20:09.509">
+   <property name="a_track">1</property>
+   <property name="b_track">0</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">56</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition35" in="01:20:21.104" out="01:20:24.107">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
@@ -943,145 +973,27 @@
    <property name="accepts_blanks">1</property>
    <property name="reverse">0</property>
   </transition>
-  <transition id="transition28" in="00:48:36.078" out="00:48:39.081">
+  <transition id="transition34" in="00:56:35.702" out="00:56:38.705">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
    <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">0</property>
+   <property name="kdenlive:mixcut">36</property>
    <property name="start">-1</property>
    <property name="accepts_blanks">1</property>
    <property name="reverse">1</property>
   </transition>
-  <transition id="transition27" in="00:47:52.344" out="00:47:54.179">
+  <transition id="transition33" in="00:53:12.262" out="00:53:19.186">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
    <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
+   <property name="kdenlive:mixcut">154</property>
    <property name="start">-1</property>
    <property name="accepts_blanks">1</property>
    <property name="reverse">0</property>
   </transition>
-  <transition id="transition26" in="00:47:37.913" out="00:47:41.250">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">50</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition25" in="00:47:32.908" out="00:47:33.909">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition24" in="00:46:17.684" out="00:46:19.228">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">18</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition23" in="00:40:58.433" out="00:40:59.434">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition22" in="00:39:52.552" out="00:39:55.430">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">6</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition21" in="00:38:35.327" out="00:38:36.328">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition20" in="00:37:34.576" out="00:37:38.830">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">47</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition19" in="00:34:39.498" out="00:34:40.499">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition18" in="00:33:25.234" out="00:33:28.820">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">59</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition17" in="00:32:21.688" out="00:32:22.689">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition16" in="00:31:52.803" out="00:31:53.804">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition15" in="00:31:05.714" out="00:31:06.715">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition14" in="00:28:18.852" out="00:28:19.853">
+  <transition id="transition32" in="00:53:07.507" out="00:53:08.508">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
@@ -1091,7 +1003,7 @@
    <property name="accepts_blanks">1</property>
    <property name="reverse">1</property>
   </transition>
-  <transition id="transition13" in="00:24:30.197" out="00:24:31.198">
+  <transition id="transition31" in="00:50:11.094" out="00:50:12.095">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
@@ -1101,7 +1013,17 @@
    <property name="accepts_blanks">1</property>
    <property name="reverse">0</property>
   </transition>
-  <transition id="transition12" in="00:23:14.473" out="00:23:16.683">
+  <transition id="transition30" in="00:49:08.467" out="00:49:12.429">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">38</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition0" in="00:09:26.693" out="00:09:27.694">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
@@ -1111,17 +1033,77 @@
    <property name="accepts_blanks">1</property>
    <property name="reverse">1</property>
   </transition>
-  <transition id="transition11" in="00:22:47.881" out="00:22:48.298">
+  <transition id="transition1" in="00:10:04.588" out="00:10:05.589">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
    <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">5</property>
+   <property name="kdenlive:mixcut">12</property>
    <property name="start">-1</property>
    <property name="accepts_blanks">1</property>
    <property name="reverse">0</property>
   </transition>
-  <transition id="transition10" in="00:20:24.691" out="00:20:25.692">
+  <transition id="transition2" in="00:11:20.812" out="00:11:25.776">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">67</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition3" in="00:12:02.878" out="00:12:06.924">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">45</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition4" in="00:13:13.305" out="00:13:16.308">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">36</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition5" in="00:13:18.227" out="00:13:19.228">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition6" in="00:13:37.162" out="00:13:39.122">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">21</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition7" in="00:15:33.909" out="00:15:34.910">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">3</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition8" in="00:17:03.754" out="00:17:04.755">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
@@ -1141,7 +1123,7 @@
    <property name="accepts_blanks">1</property>
    <property name="reverse">0</property>
   </transition>
-  <transition id="transition8" in="00:17:03.754" out="00:17:04.755">
+  <transition id="transition10" in="00:20:24.691" out="00:20:25.692">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
@@ -1151,27 +1133,27 @@
    <property name="accepts_blanks">1</property>
    <property name="reverse">1</property>
   </transition>
-  <transition id="transition7" in="00:15:33.909" out="00:15:34.910">
+  <transition id="transition11" in="00:22:47.881" out="00:22:48.298">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
    <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">3</property>
+   <property name="kdenlive:mixcut">5</property>
    <property name="start">-1</property>
    <property name="accepts_blanks">1</property>
    <property name="reverse">0</property>
   </transition>
-  <transition id="transition6" in="00:13:37.162" out="00:13:39.122">
+  <transition id="transition12" in="00:23:14.473" out="00:23:16.683">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
    <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">21</property>
+   <property name="kdenlive:mixcut">12</property>
    <property name="start">-1</property>
    <property name="accepts_blanks">1</property>
    <property name="reverse">1</property>
   </transition>
-  <transition id="transition5" in="00:13:18.227" out="00:13:19.228">
+  <transition id="transition13" in="00:24:30.197" out="00:24:31.198">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
@@ -1181,132 +1163,150 @@
    <property name="accepts_blanks">1</property>
    <property name="reverse">0</property>
   </transition>
-  <transition id="transition4" in="00:13:13.305" out="00:13:16.308">
+  <transition id="transition14" in="00:28:18.852" out="00:28:19.853">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition15" in="00:31:05.714" out="00:31:06.715">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition16" in="00:31:52.803" out="00:31:53.804">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition17" in="00:32:21.688" out="00:32:22.689">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition18" in="00:33:25.234" out="00:33:28.820">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">59</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition19" in="00:34:39.498" out="00:34:40.499">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition20" in="00:37:34.576" out="00:37:38.830">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">47</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition21" in="00:38:35.327" out="00:38:36.328">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition22" in="00:39:52.552" out="00:39:55.430">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">6</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition23" in="00:40:58.433" out="00:40:59.434">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition25" in="00:46:32.574" out="00:46:33.575">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition26" in="00:46:37.579" out="00:46:40.916">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">50</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition27" in="00:46:52.010" out="00:46:53.845">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition28" in="00:47:35.702" out="00:47:38.705">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="kdenlive:mixcut">0</property>
+   <property name="start">-1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="reverse">1</property>
+  </transition>
+  <transition id="transition29" in="00:48:00.751" out="00:48:03.670">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="mlt_service">mix</property>
    <property name="kdenlive_id">mix</property>
    <property name="kdenlive:mixcut">36</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition3" in="00:12:02.878" out="00:12:06.924">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">45</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition2" in="00:11:20.812" out="00:11:25.776">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">67</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition1" in="00:10:04.588" out="00:10:05.589">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition0" in="00:09:26.693" out="00:09:27.694">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition30" in="00:50:08.800" out="00:50:12.763">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">38</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition31" in="00:51:11.470" out="00:51:12.471">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition32" in="00:54:07.841" out="00:54:08.842">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition33" in="00:54:12.596" out="00:54:19.519">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">154</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition34" in="00:57:36.036" out="00:57:39.039">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">36</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">1</property>
-  </transition>
-  <transition id="transition35" in="01:21:21.480" out="01:21:24.483">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">36</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition36" in="01:21:06.882" out="01:21:09.885">
-   <property name="a_track">1</property>
-   <property name="b_track">0</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">56</property>
-   <property name="start">-1</property>
-   <property name="accepts_blanks">1</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition37" in="01:02:32.074" out="01:02:33.075">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="mlt_service">mix</property>
-   <property name="kdenlive_id">mix</property>
-   <property name="kdenlive:mixcut">12</property>
    <property name="start">-1</property>
    <property name="accepts_blanks">1</property>
    <property name="reverse">0</property>
@@ -1561,7 +1561,7 @@
   <entry in="00:58:50.676" out="00:59:54.388" producer="chain4">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:00:48.257" out="01:06:07.758" producer="chain4">
+  <entry in="01:00:48.257" out="01:05:07.424" producer="chain4">
    <property name="kdenlive:id">4</property>
   </entry>
   <entry in="01:06:22.439" out="01:07:37.371" producer="chain4">
@@ -1794,7 +1794,7 @@
   <entry in="00:38:26.193" out="00:42:14.973" producer="chain5">
    <property name="kdenlive:id">4</property>
   </entry>
-  <blank length="00:19:18.352"/>
+  <blank length="00:18:17.976"/>
   <entry in="01:07:58.433" out="01:08:14.389" producer="chain5">
    <property name="kdenlive:id">4</property>
   </entry>
@@ -1802,7 +1802,7 @@
    <property name="kdenlive:id">4</property>
   </entry>
  </playlist>
- <tractor id="tractor2" in="00:00:00.000" out="01:31:16.433">
+ <tractor id="tractor2" in="00:00:00.000" out="01:30:16.099">
   <property name="kdenlive:trackheight">84</property>
   <property name="kdenlive:timeline_active">1</property>
   <property name="kdenlive:collapsed">0</property>
@@ -1810,43 +1810,15 @@
   <property name="kdenlive:audio_rec"/>
   <track hide="audio" producer="playlist4"/>
   <track hide="audio" producer="playlist5"/>
-  <transition id="transition38" in="00:48:38.580" out="00:48:39.581">
-   <property name="a_track">1</property>
-   <property name="b_track">0</property>
-   <property name="factory">loader</property>
-   <property name="resource"/>
-   <property name="mlt_service">luma</property>
-   <property name="kdenlive_id">luma</property>
-   <property name="kdenlive:mixcut">12</property>
-   <property name="softness">0</property>
-   <property name="alpha_over">1</property>
-   <property name="fix_background_alpha">1</property>
-   <property name="invert">0</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition39" in="00:47:37.663" out="00:47:40.666">
-   <property name="a_track">0</property>
-   <property name="b_track">1</property>
-   <property name="factory">loader</property>
-   <property name="resource"/>
-   <property name="mlt_service">luma</property>
-   <property name="kdenlive_id">luma</property>
-   <property name="kdenlive:mixcut">36</property>
-   <property name="softness">0</property>
-   <property name="alpha_over">1</property>
-   <property name="fix_background_alpha">1</property>
-   <property name="invert">0</property>
-   <property name="reverse">0</property>
-  </transition>
-  <transition id="transition40" in="00:24:30.530" out="00:24:30.864">
+  <transition id="transition42" in="00:13:14.598" out="00:13:15.015">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
    <property name="resource">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
-   <property name="kdenlive:mixcut">4</property>
-   <property name="softness">0.66</property>
+   <property name="kdenlive:mixcut">5</property>
+   <property name="softness">0.62</property>
    <property name="alpha_over">1</property>
    <property name="fix_background_alpha">1</property>
    <property name="invert">0</property>
@@ -1866,15 +1838,43 @@
    <property name="invert">0</property>
    <property name="reverse">0</property>
   </transition>
-  <transition id="transition42" in="00:13:14.598" out="00:13:15.015">
+  <transition id="transition40" in="00:24:30.530" out="00:24:30.864">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
    <property name="resource">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
-   <property name="kdenlive:mixcut">5</property>
-   <property name="softness">0.62</property>
+   <property name="kdenlive:mixcut">4</property>
+   <property name="softness">0.66</property>
+   <property name="alpha_over">1</property>
+   <property name="fix_background_alpha">1</property>
+   <property name="invert">0</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition39" in="00:46:37.329" out="00:46:40.332">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="factory">loader</property>
+   <property name="resource"/>
+   <property name="mlt_service">luma</property>
+   <property name="kdenlive_id">luma</property>
+   <property name="kdenlive:mixcut">36</property>
+   <property name="softness">0</property>
+   <property name="alpha_over">1</property>
+   <property name="fix_background_alpha">1</property>
+   <property name="invert">0</property>
+   <property name="reverse">0</property>
+  </transition>
+  <transition id="transition38" in="00:47:38.205" out="00:47:39.206">
+   <property name="a_track">1</property>
+   <property name="b_track">0</property>
+   <property name="factory">loader</property>
+   <property name="resource"/>
+   <property name="mlt_service">luma</property>
+   <property name="kdenlive_id">luma</property>
+   <property name="kdenlive:mixcut">12</property>
+   <property name="softness">0</property>
    <property name="alpha_over">1</property>
    <property name="fix_background_alpha">1</property>
    <property name="invert">0</property>
@@ -1892,9 +1892,9 @@
   <track hide="audio" producer="playlist6"/>
   <track hide="audio" producer="playlist7"/>
  </tractor>
- <tractor id="tractor4" in="00:00:00.000" out="01:31:16.433">
-  <property name="kdenlive:duration">01:31:16.475</property>
-  <property name="kdenlive:maxduration">131303</property>
+ <tractor id="tractor4" in="00:00:00.000" out="01:30:16.099">
+  <property name="kdenlive:duration">01:30:16.141</property>
+  <property name="kdenlive:maxduration">129856</property>
   <property name="kdenlive:clipname">Sequence 1</property>
   <property name="kdenlive:description"/>
   <property name="kdenlive:uuid">{616d4122-cb01-43dd-8764-e9ee648a931b}</property>
@@ -1904,7 +1904,7 @@
   <property name="kdenlive:clip_type">0</property>
   <property name="kdenlive:file_hash">166f5e02628af21cbb78c731df2d377f</property>
   <property name="kdenlive:folderid">2</property>
-  <property name="kdenlive:sequenceproperties.activeTrack">2</property>
+  <property name="kdenlive:sequenceproperties.activeTrack">1</property>
   <property name="kdenlive:sequenceproperties.audioTarget">1</property>
   <property name="kdenlive:sequenceproperties.disablepreview">0</property>
   <property name="kdenlive:sequenceproperties.documentuuid">{616d4122-cb01-43dd-8764-e9ee648a931b}</property>
@@ -1914,8 +1914,8 @@
   <property name="kdenlive:sequenceproperties.hasAudio">1</property>
   <property name="kdenlive:sequenceproperties.hasVideo">1</property>
   <property name="kdenlive:sequenceproperties.hidesubtitle">0</property>
-  <property name="kdenlive:sequenceproperties.position">90017</property>
-  <property name="kdenlive:sequenceproperties.scrollPos">127708</property>
+  <property name="kdenlive:sequenceproperties.position">65365</property>
+  <property name="kdenlive:sequenceproperties.scrollPos">43219</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
         "file": "C:/Users/kado/AppData/Local/Temp/1752357145352-{78bc9435-ed06-44df-9858-1312bf7fd2a7}.ass",
@@ -1930,32 +1930,17 @@
   <property name="kdenlive:sequenceproperties.videoTarget">2</property>
   <property name="kdenlive:sequenceproperties.zonein">48067</property>
   <property name="kdenlive:sequenceproperties.zoneout">48162</property>
-  <property name="kdenlive:sequenceproperties.zoom">6</property>
+  <property name="kdenlive:sequenceproperties.zoom">7</property>
   <property name="kdenlive:sequenceproperties.groups">[
     {
         "children": [
             {
-                "data": "2:55524:-1",
+                "data": "1:57363:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "1:55512:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:19051:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:19020:-1",
+                "data": "2:57426:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -1965,732 +1950,72 @@
     {
         "children": [
             {
-                "data": "-2:108693:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:107622:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "children": [
-                    {
-                        "data": "2:89971:-1",
-                        "leaf": "clip",
-                        "type": "Leaf"
-                    },
-                    {
-                        "data": "1:89959:-1",
-                        "leaf": "clip",
-                        "type": "Leaf"
-                    }
-                ],
-                "type": "AVSplit"
-            },
-            {
-                "data": "-2:108221:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:108308:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:108357:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:108452:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "children": [
-                    {
-                        "data": "2:116703:-1",
-                        "leaf": "clip",
-                        "type": "Leaf"
-                    },
-                    {
-                        "data": "1:116687:-1",
-                        "leaf": "clip",
-                        "type": "Leaf"
-                    }
-                ],
-                "type": "AVSplit"
-            },
-            {
-                "data": "-2:108539:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:108644:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:111380:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:111441:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "2:117011:-1",
+                "data": "1:32796:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "2:117140:-1",
+                "data": "2:32797:-1",
                 "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "children": [
-                    {
-                        "data": "1:117149:-1",
-                        "leaf": "clip",
-                        "type": "Leaf"
-                    },
-                    {
-                        "data": "2:117149:-1",
-                        "leaf": "clip",
-                        "type": "Leaf"
-                    }
-                ],
-                "type": "AVSplit"
-            },
-            {
-                "data": "-2:103785:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:103645:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:103596:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:103553:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:103483:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:103411:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:106323:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:106265:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:106191:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:106097:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:104325:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:104211:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:104163:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:104110:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:104034:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:103869:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:99297:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93869:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:99481:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93956:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:99521:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:106612:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:106755:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:101326:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:101237:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:100484:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93208:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93300:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93349:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:92804:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93400:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93086:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93804:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:92992:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:92650:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:92280:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:92869:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:92404:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:91677:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93667:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:91510:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93550:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:92716:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:91457:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93500:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93448:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:91393:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:91330:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:90209:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:117037:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:93752:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:97274:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:97071:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:96979:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:96869:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:97996:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:97744:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:99021:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:94335:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:94396:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:94572:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:96796:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:97835:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:96733:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:94937:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:97509:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:97614:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:95688:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:96638:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:95586:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:95810:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:97427:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:97668:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:95734:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:94736:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:95497:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:94700:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:94999:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:94033:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:94078:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:94229:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:100172:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:100431:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:101672:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:101729:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:101946:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:102007:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:102042:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:106990:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "2:116914:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:111570:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:111725:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:112667:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:114347:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:114560:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:114698:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:115521:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:115843:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:116513:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:116310:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:116459:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:116215:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:116099:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:116369:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:114854:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:117011:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:116965:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:116914:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:119006:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:118959:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:118901:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:117528:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:106863:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:117446:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:107531:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:116585:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:107182:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:106421:0",
-                "leaf": "subtitle",
-                "type": "Leaf"
-            },
-            {
-                "data": "-2:106494:0",
-                "leaf": "subtitle",
                 "type": "Leaf"
             }
         ],
-        "type": "Normal"
+        "type": "AVSplit"
     },
     {
         "children": [
             {
-                "data": "2:22412:-1",
+                "data": "1:13587:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
+            {
+                "data": "2:13599:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:0:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:0:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "1:44732:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "2:44744:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
             {
                 "data": "1:22391:-1",
                 "leaf": "clip",
                 "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "1:68521:-1",
-                "leaf": "clip",
-                "type": "Leaf"
             },
             {
-                "data": "2:68515:-1",
+                "data": "2:22412:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -2700,42 +2025,12 @@
     {
         "children": [
             {
-                "data": "1:77984:-1",
+                "data": "1:40731:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "2:77996:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:27775:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:27763:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "1:49858:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "2:49870:-1",
+                "data": "2:40743:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -2760,327 +2055,27 @@
     {
         "children": [
             {
-                "data": "1:45861:-1",
+                "data": "1:33433:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
-            {
-                "data": "2:45873:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "1:66597:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "2:66616:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:46565:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:46553:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:16375:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:16323:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:35257:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:35249:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:19150:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:19138:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:69975:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:69915:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "1:19592:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "2:19618:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:73653:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:73641:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "1:68867:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "2:68899:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:32797:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:32796:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:13599:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:13587:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:29375:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:29363:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:68413:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:68401:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "1:14495:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "2:14507:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "1:77870:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "2:77882:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:44744:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:44732:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:82898:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:82862:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "2:72196:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "1:72139:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "1:54055:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "2:54110:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
-            {
-                "data": "1:24545:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            },
-            {
-                "data": "2:24557:-1",
-                "leaf": "clip",
-                "type": "Leaf"
-            }
-        ],
-        "type": "AVSplit"
-    },
-    {
-        "children": [
             {
                 "data": "2:33474:-1",
                 "leaf": "clip",
                 "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "1:55512:-1",
+                "leaf": "clip",
+                "type": "Leaf"
             },
             {
-                "data": "1:33433:-1",
+                "data": "2:55524:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3090,14 +2085,164 @@
     {
         "children": [
             {
-                "data": "2:17383:-1",
+                "data": "1:29363:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
+            {
+                "data": "2:29375:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:68528:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:68468:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "1:35249:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "2:35257:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "1:67420:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "2:67452:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:19618:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:19592:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:72206:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:72194:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "1:27763:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "2:27775:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:70749:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:70692:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "1:16323:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "2:16375:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "1:115702:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "2:115702:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
             {
                 "data": "1:17331:-1",
                 "leaf": "clip",
                 "type": "Leaf"
+            },
+            {
+                "data": "2:17383:-1",
+                "leaf": "clip",
+                "type": "Leaf"
             }
         ],
         "type": "AVSplit"
@@ -3105,12 +2250,12 @@
     {
         "children": [
             {
-                "data": "2:57426:-1",
+                "data": "2:69102:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "1:57363:-1",
+                "data": "1:69068:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3120,12 +2265,12 @@
     {
         "children": [
             {
-                "data": "2:70549:-1",
+                "data": "2:49870:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "1:70515:-1",
+                "data": "1:49858:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3135,12 +2280,12 @@
     {
         "children": [
             {
-                "data": "1:0:-1",
+                "data": "1:67074:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "2:0:-1",
+                "data": "2:67068:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3150,12 +2295,12 @@
     {
         "children": [
             {
-                "data": "2:40743:-1",
+                "data": "2:115256:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "1:40731:-1",
+                "data": "1:115240:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3164,13 +2309,208 @@
     },
     {
         "children": [
+            {
+                "data": "1:46553:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "2:46565:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "1:76537:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "2:76549:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:88524:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:88512:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:14507:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:14495:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:66966:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:66954:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "1:76423:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "2:76435:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:48104:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
             {
                 "data": "1:48077:-1",
                 "leaf": "clip",
                 "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:65169:-1",
+                "leaf": "clip",
+                "type": "Leaf"
             },
             {
-                "data": "2:48104:-1",
+                "data": "1:65145:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:81451:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:81415:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:24557:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:24545:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:45873:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:45861:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "1:19020:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "2:19051:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "1:19138:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "2:19150:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            }
+        ],
+        "type": "AVSplit"
+    },
+    {
+        "children": [
+            {
+                "data": "2:54110:-1",
+                "leaf": "clip",
+                "type": "Leaf"
+            },
+            {
+                "data": "1:54055:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3257,7 +2597,7 @@
   <property name="kdenlive:docproperties.activetimeline">{616d4122-cb01-43dd-8764-e9ee648a931b}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">C:/Users/kado/Videos/Alien Resurrection/</property>
+  <property name="kdenlive:docproperties.browserurl">C:/Users/kado/Videos/</property>
   <property name="kdenlive:docproperties.documentid">1752357145352</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -3324,7 +2664,7 @@
   <property name="kdenlive:docproperties.proxyminsize">1000</property>
   <property name="kdenlive:docproperties.proxyparams"/>
   <property name="kdenlive:docproperties.proxyresize">640</property>
-  <property name="kdenlive:docproperties.rendercategory">Generic (HD for web, mobile devices...)</property>
+  <property name="kdenlive:docproperties.rendercategory">Ultra-High Definition (4K)</property>
   <property name="kdenlive:docproperties.rendercustomquality">75</property>
   <property name="kdenlive:docproperties.renderendguide">-1</property>
   <property name="kdenlive:docproperties.renderexportaudio">0</property>
@@ -3332,18 +2672,18 @@
   <property name="kdenlive:docproperties.rendermode">0</property>
   <property name="kdenlive:docproperties.renderplay">0</property>
   <property name="kdenlive:docproperties.renderpreview">0</property>
-  <property name="kdenlive:docproperties.renderprofile">Matroska-H264/AAC</property>
+  <property name="kdenlive:docproperties.renderprofile">MP4-H265 (HEVC)</property>
   <property name="kdenlive:docproperties.renderrescale">0</property>
   <property name="kdenlive:docproperties.renderrescaleheight">1080</property>
   <property name="kdenlive:docproperties.renderrescalewidth">1920</property>
-  <property name="kdenlive:docproperties.renderspeed">0</property>
+  <property name="kdenlive:docproperties.renderspeed">6</property>
   <property name="kdenlive:docproperties.renderstartguide">-1</property>
   <property name="kdenlive:docproperties.rendertcoverlay">0</property>
   <property name="kdenlive:docproperties.rendertctype">-1</property>
   <property name="kdenlive:docproperties.rendertwopass">0</property>
-  <property name="kdenlive:docproperties.renderurl">C:/Users/kado/Videos/The Day After Tomorrow (2004) - Chemtrail Edition.mkv</property>
+  <property name="kdenlive:docproperties.renderurl">The Day After Tomorrow (2004) - Chemtrail Edition 75.mp4</property>
   <property name="kdenlive:docproperties.seekOffset">30000</property>
-  <property name="kdenlive:docproperties.sessionid">{aadc9826-cbc4-4c9b-a1e3-1b5da15717aa}</property>
+  <property name="kdenlive:docproperties.sessionid">{88e02230-a482-45ce-8dc0-1c3dea5898ea}</property>
   <property name="kdenlive:docproperties.uuid">{616d4122-cb01-43dd-8764-e9ee648a931b}</property>
   <property name="kdenlive:docproperties.version">1.1</property>
   <property name="kdenlive:expandedFolders"/>
@@ -3360,10 +2700,10 @@ li.checked::marker { content: "\2612"; }
   <property name="kdenlive:documentnotesversion">2</property>
   <property name="xml_retain">1</property>
   <entry in="00:00:00.000" out="02:03:40.457" producer="chain2"/>
-  <entry in="00:00:00.000" out="01:31:25.734" producer="tractor4"/>
+  <entry in="00:00:00.000" out="01:30:16.099" producer="tractor4"/>
  </playlist>
- <tractor id="tractor5" in="00:00:00.000" out="01:31:16.433">
+ <tractor id="tractor5" in="00:00:00.000" out="01:30:16.099">
   <property name="kdenlive:projectTractor">1</property>
-  <track in="00:00:00.000" out="01:31:16.433" producer="tractor4"/>
+  <track in="00:00:00.000" out="01:30:16.099" producer="tractor4"/>
  </tractor>
 </mlt>
