@@ -9,3 +9,6 @@ Nick Stahl was removed as much as possible, along with - his crappy narration, t
 I also replaced "Dat Funky Man" by some unknown guy being played in the background with Beastie Boys 'Brass Monkey', which really really REALLY seemed like the original song pick for this scene, likely decided back in the 90s when the T3 script was first realized. Clearly Terminator 3 is a victim of the 21st century. 
 
 DM me for a copy of the whole movie.
+
+## Trailer
+[Terminator 3 - Brass Monkey Edition](https://youtu.be/SeD2-LLPhk8)
