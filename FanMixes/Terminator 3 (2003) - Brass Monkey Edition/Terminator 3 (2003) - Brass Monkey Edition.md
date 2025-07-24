@@ -11,4 +11,5 @@ I also replaced "Dat Funky Man" by some unknown guy being played in the backgrou
 DM me for a copy of the whole movie.
 
 ## Trailer
-[Terminator 3 - Brass Monkey Edition](https://youtu.be/SeD2-LLPhk8)
+
+[Terminator 3 - Brass Monkey Edition](https://youtu.be/h0aUj_RPQ_U)
