@@ -4,6 +4,9 @@
 *.mp3
 *.flac
 *.mp4*
-*.ass
 *.resume.xml
 *.ini
+*.m4a
+*.ac3
+*.idx
+*.sub

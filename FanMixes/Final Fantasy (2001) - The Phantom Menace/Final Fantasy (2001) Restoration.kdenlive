@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) Restoration" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace" version="7.33.0">
  <profile colorspace="709" description="1916x1036 23.98fps" display_aspect_den="259" display_aspect_num="479" frame_rate_den="1001" frame_rate_num="24000" height="1036" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1916"/>
  <chain id="chain4" out="01:45:58.350">
   <property name="length">152448</property>
@@ -565,417 +565,6 @@ http://timsheehy.com</property>
   <property name="kdenlive:file_hash">30b244bf6bc335b7c0baec37d4f8f949</property>
   <property name="kdenlive:monitorPosition">628</property>
  </chain>
- <chain id="chain6" out="00:02:46.296">
-  <property name="length">3988</property>
-  <property name="eof">pause</property>
-  <property name="resource">ost/Final_Fantasy_The_Beginning_of_the_Fantasy_OC_ReMix.mp3</property>
-  <property name="mlt_service">avformat-novalidate</property>
-  <property name="meta.media.nb_streams">2</property>
-  <property name="meta.media.0.stream.type">audio</property>
-  <property name="meta.media.0.codec.sample_fmt">fltp</property>
-  <property name="meta.media.0.codec.sample_rate">44100</property>
-  <property name="meta.media.0.codec.channels">2</property>
-  <property name="meta.media.0.codec.layout">stereo</property>
-  <property name="meta.media.0.codec.name">mp3float</property>
-  <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
-  <property name="meta.media.0.codec.bit_rate">192000</property>
-  <property name="meta.media.1.stream.type">video</property>
-  <property name="meta.media.1.stream.frame_rate">90000</property>
-  <property name="meta.media.1.stream.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.width">700</property>
-  <property name="meta.media.1.codec.height">700</property>
-  <property name="meta.media.1.codec.rotate">0</property>
-  <property name="meta.media.1.codec.pix_fmt">yuvj444p</property>
-  <property name="meta.media.1.codec.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.colorspace">601</property>
-  <property name="meta.media.1.codec.name">mjpeg</property>
-  <property name="meta.media.1.codec.long_name">MJPEG (Motion JPEG)</property>
-  <property name="meta.media.1.codec.bit_rate">0</property>
-  <property name="meta.attr.1.stream.comment.markup">Cover (front)</property>
-  <property name="meta.attr.album.markup">ocremix.org</property>
-  <property name="meta.attr.artist.markup">mp</property>
-  <property name="meta.attr.album_artist.markup">OverClocked ReMix</property>
-  <property name="meta.attr.comment.markup">Remix of "Prelude" from Final Fantasy [x] for the NES, SNES, and PSX.&#xd;
-&#xd;
-My own version of the Final Fantasy "Prelude" in a... style I can't exactly define. Kind of generic electronic percussion, a steel-stringed guitar, some crazy electronic bass, and a Rhodes. I dunno.&#xd;
-&#xd;
-Matt Pollard&#xd;
-http://mattpollard.net</property>
-  <property name="meta.attr.composer.markup">Nobuo Uematsu</property>
-  <property name="meta.attr.grouping.markup">Final Fantasy</property>
-  <property name="meta.attr.copyright.markup">Square</property>
-  <property name="meta.attr.encoded_by.markup">Matt Pollard</property>
-  <property name="meta.attr.encoder.markup">LAME Encoder</property>
-  <property name="meta.attr.genre.markup">Game</property>
-  <property name="meta.attr.compilation.markup">1</property>
-  <property name="meta.attr.TOPE.markup">NES</property>
-  <property name="meta.attr.publisher.markup">OverClocked ReMix</property>
-  <property name="meta.attr.SETSUBTITLE.markup">OCR00642</property>
-  <property name="meta.attr.TIT3.markup">The Beginning of the Fantasy</property>
-  <property name="meta.attr.title.markup">Final Fantasy "The Beginning of the Fantasy" OC ReMix</property>
-  <property name="meta.attr.track.markup">642</property>
-  <property name="meta.attr.date.markup">2001</property>
-  <property name="seekable">1</property>
-  <property name="meta.media.sample_aspect_num">1</property>
-  <property name="meta.media.sample_aspect_den">1</property>
-  <property name="audio_index">0</property>
-  <property name="video_index">1</property>
-  <property name="vstream">0</property>
-  <property name="meta.media.frame_rate_num">90000</property>
-  <property name="meta.media.frame_rate_den">1</property>
-  <property name="meta.media.colorspace">601</property>
-  <property name="meta.media.color_trc">2</property>
-  <property name="meta.media.has_b_frames">0</property>
-  <property name="meta.media.width">700</property>
-  <property name="meta.media.height">700</property>
-  <property name="meta.media.aspect_ratio">1</property>
-  <property name="meta.media.color_range">full</property>
-  <property name="astream">0</property>
-  <property name="meta.media.top_field_first">0</property>
-  <property name="meta.media.progressive">1</property>
-  <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">7</property>
-  <property name="kdenlive:control_uuid">{07b818e9-3c1c-4c90-bb32-ed3aa9807e67}</property>
-  <property name="mute_on_pause">0</property>
-  <property name="kdenlive:clip_type">0</property>
-  <property name="kdenlive:coverartstream">1</property>
-  <property name="kdenlive:file_size">4079378</property>
-  <property name="kdenlive:file_hash">3d0b99a2c02c9f099aabedd7daf6fc39</property>
-  <property name="kdenlive:monitorPosition">855</property>
- </chain>
- <chain id="chain9" out="00:05:27.819">
-  <property name="length">7860</property>
-  <property name="eof">pause</property>
-  <property name="resource">ost/Final_Fantasy_Matoya's_Grave_OC_ReMix.mp3</property>
-  <property name="mlt_service">avformat-novalidate</property>
-  <property name="meta.media.nb_streams">2</property>
-  <property name="meta.media.0.stream.type">audio</property>
-  <property name="meta.media.0.codec.sample_fmt">fltp</property>
-  <property name="meta.media.0.codec.sample_rate">44100</property>
-  <property name="meta.media.0.codec.channels">2</property>
-  <property name="meta.media.0.codec.layout">stereo</property>
-  <property name="meta.media.0.codec.name">mp3float</property>
-  <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
-  <property name="meta.media.0.codec.bit_rate">128000</property>
-  <property name="meta.media.1.stream.type">video</property>
-  <property name="meta.media.1.stream.frame_rate">90000</property>
-  <property name="meta.media.1.stream.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.width">700</property>
-  <property name="meta.media.1.codec.height">700</property>
-  <property name="meta.media.1.codec.rotate">0</property>
-  <property name="meta.media.1.codec.pix_fmt">yuvj444p</property>
-  <property name="meta.media.1.codec.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.colorspace">601</property>
-  <property name="meta.media.1.codec.name">mjpeg</property>
-  <property name="meta.media.1.codec.long_name">MJPEG (Motion JPEG)</property>
-  <property name="meta.media.1.codec.bit_rate">0</property>
-  <property name="meta.attr.1.stream.comment.markup">Cover (front)</property>
-  <property name="meta.attr.album.markup">ocremix.org</property>
-  <property name="meta.attr.artist.markup">Deimos</property>
-  <property name="meta.attr.album_artist.markup">OverClocked ReMix</property>
-  <property name="meta.attr.comment.markup">Chad Birch&#xd;
-chad.birch@gmail.com</property>
-  <property name="meta.attr.composer.markup">Nobuo Uematsu</property>
-  <property name="meta.attr.grouping.markup">Final Fantasy</property>
-  <property name="meta.attr.copyright.markup">Square</property>
-  <property name="meta.attr.encoded_by.markup">Chad Birch (chad.birch@gmail.com)</property>
-  <property name="meta.attr.genre.markup">Game</property>
-  <property name="meta.attr.compilation.markup">1</property>
-  <property name="meta.attr.TOPE.markup">NES</property>
-  <property name="meta.attr.publisher.markup">OverClocked ReMix</property>
-  <property name="meta.attr.SETSUBTITLE.markup">OCR00460</property>
-  <property name="meta.attr.TIT3.markup">Matoya's Grave</property>
-  <property name="meta.attr.title.markup">Final Fantasy "Matoya's Grave" OC ReMix</property>
-  <property name="meta.attr.track.markup">460</property>
-  <property name="meta.attr.date.markup">2001</property>
-  <property name="seekable">1</property>
-  <property name="meta.media.sample_aspect_num">1</property>
-  <property name="meta.media.sample_aspect_den">1</property>
-  <property name="audio_index">0</property>
-  <property name="video_index">1</property>
-  <property name="vstream">0</property>
-  <property name="meta.media.frame_rate_num">90000</property>
-  <property name="meta.media.frame_rate_den">1</property>
-  <property name="meta.media.colorspace">601</property>
-  <property name="meta.media.color_trc">2</property>
-  <property name="meta.media.has_b_frames">0</property>
-  <property name="meta.media.width">700</property>
-  <property name="meta.media.height">700</property>
-  <property name="meta.media.aspect_ratio">1</property>
-  <property name="meta.media.color_range">full</property>
-  <property name="astream">0</property>
-  <property name="meta.media.top_field_first">0</property>
-  <property name="meta.media.progressive">1</property>
-  <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">8</property>
-  <property name="kdenlive:control_uuid">{64284bdd-2a79-4fbd-955f-325bc0a12c16}</property>
-  <property name="mute_on_pause">0</property>
-  <property name="kdenlive:clip_type">0</property>
-  <property name="kdenlive:coverartstream">1</property>
-  <property name="kdenlive:file_size">5332503</property>
-  <property name="kdenlive:file_hash">2f1c5e46c2311f69957004ce47477373</property>
-  <property name="kdenlive:monitorPosition">941</property>
- </chain>
- <chain id="chain8" out="00:03:59.810">
-  <property name="length">5750</property>
-  <property name="eof">pause</property>
-  <property name="resource">ost/Final_Fantasy_Hardcore_OC_ReMix.mp3</property>
-  <property name="mlt_service">avformat-novalidate</property>
-  <property name="meta.media.nb_streams">2</property>
-  <property name="meta.media.0.stream.type">audio</property>
-  <property name="meta.media.0.codec.sample_fmt">fltp</property>
-  <property name="meta.media.0.codec.sample_rate">44100</property>
-  <property name="meta.media.0.codec.channels">2</property>
-  <property name="meta.media.0.codec.layout">stereo</property>
-  <property name="meta.media.0.codec.name">mp3float</property>
-  <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
-  <property name="meta.media.0.codec.bit_rate">128000</property>
-  <property name="meta.media.1.stream.type">video</property>
-  <property name="meta.media.1.stream.frame_rate">90000</property>
-  <property name="meta.media.1.stream.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.width">700</property>
-  <property name="meta.media.1.codec.height">700</property>
-  <property name="meta.media.1.codec.rotate">0</property>
-  <property name="meta.media.1.codec.pix_fmt">yuvj444p</property>
-  <property name="meta.media.1.codec.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.colorspace">601</property>
-  <property name="meta.media.1.codec.name">mjpeg</property>
-  <property name="meta.media.1.codec.long_name">MJPEG (Motion JPEG)</property>
-  <property name="meta.media.1.codec.bit_rate">0</property>
-  <property name="meta.attr.1.stream.comment.markup">Cover (front)</property>
-  <property name="meta.attr.album.markup">ocremix.org</property>
-  <property name="meta.attr.artist.markup">Jared Hudson</property>
-  <property name="meta.attr.album_artist.markup">OverClocked ReMix</property>
-  <property name="meta.attr.comment.markup">Yes, the guitar is fake, but go with it, and see what you think. You might hate it considering the amazing guitar work done by other arrangers on this site. HAHA! Anyways, I went crazy making this, 9 hours straight, and turned a once peaceful song, into a violent head banging activity! Enjoy! :D&#xd;
-&#xd;
-Jared Hudson&#xd;
-jared@jaredhudson.com&#xd;
-http://jaredhudson.com</property>
-  <property name="meta.attr.composer.markup">Nobuo Uematsu</property>
-  <property name="meta.attr.grouping.markup">Final Fantasy</property>
-  <property name="meta.attr.copyright.markup">Square</property>
-  <property name="meta.attr.encoded_by.markup">Jared Hudson (jared@jaredhudson.com)</property>
-  <property name="meta.attr.genre.markup">Game</property>
-  <property name="meta.attr.compilation.markup">1</property>
-  <property name="meta.attr.TOPE.markup">NES</property>
-  <property name="meta.attr.publisher.markup">OverClocked ReMix</property>
-  <property name="meta.attr.SETSUBTITLE.markup">OCR00738</property>
-  <property name="meta.attr.TIT3.markup">Hardcore</property>
-  <property name="meta.attr.title.markup">Final Fantasy "Hardcore" OC ReMix</property>
-  <property name="meta.attr.track.markup">738</property>
-  <property name="meta.attr.date.markup">2002</property>
-  <property name="seekable">1</property>
-  <property name="meta.media.sample_aspect_num">1</property>
-  <property name="meta.media.sample_aspect_den">1</property>
-  <property name="audio_index">0</property>
-  <property name="video_index">1</property>
-  <property name="vstream">0</property>
-  <property name="meta.media.frame_rate_num">90000</property>
-  <property name="meta.media.frame_rate_den">1</property>
-  <property name="meta.media.colorspace">601</property>
-  <property name="meta.media.color_trc">2</property>
-  <property name="meta.media.has_b_frames">0</property>
-  <property name="meta.media.width">700</property>
-  <property name="meta.media.height">700</property>
-  <property name="meta.media.aspect_ratio">1</property>
-  <property name="meta.media.color_range">full</property>
-  <property name="astream">0</property>
-  <property name="meta.media.top_field_first">0</property>
-  <property name="meta.media.progressive">1</property>
-  <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">9</property>
-  <property name="kdenlive:control_uuid">{f2a3ada8-976e-4fb9-9919-a6d0f69a033d}</property>
-  <property name="mute_on_pause">0</property>
-  <property name="kdenlive:clip_type">0</property>
-  <property name="kdenlive:coverartstream">1</property>
-  <property name="kdenlive:file_size">3924579</property>
-  <property name="kdenlive:file_hash">6e98a3841c994bfe20018e827a7e8ee9</property>
-  <property name="kdenlive:monitorPosition">5589</property>
- </chain>
- <chain id="chain10" out="00:04:18.227">
-  <property name="length">6192</property>
-  <property name="eof">pause</property>
-  <property name="resource">ost/Final_Fantasy_Warriors_of_Light_OC_ReMix.mp3</property>
-  <property name="mlt_service">avformat-novalidate</property>
-  <property name="meta.media.nb_streams">2</property>
-  <property name="meta.media.0.stream.type">audio</property>
-  <property name="meta.media.0.codec.sample_fmt">fltp</property>
-  <property name="meta.media.0.codec.sample_rate">44100</property>
-  <property name="meta.media.0.codec.channels">2</property>
-  <property name="meta.media.0.codec.layout">stereo</property>
-  <property name="meta.media.0.codec.name">mp3float</property>
-  <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
-  <property name="meta.media.0.codec.bit_rate">173888</property>
-  <property name="meta.attr.0.stream.encoder.markup">LAME3.96 </property>
-  <property name="meta.media.1.stream.type">video</property>
-  <property name="meta.media.1.stream.frame_rate">90000</property>
-  <property name="meta.media.1.stream.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.width">700</property>
-  <property name="meta.media.1.codec.height">700</property>
-  <property name="meta.media.1.codec.rotate">0</property>
-  <property name="meta.media.1.codec.pix_fmt">yuvj444p</property>
-  <property name="meta.media.1.codec.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.colorspace">601</property>
-  <property name="meta.media.1.codec.name">mjpeg</property>
-  <property name="meta.media.1.codec.long_name">MJPEG (Motion JPEG)</property>
-  <property name="meta.media.1.codec.bit_rate">0</property>
-  <property name="meta.attr.1.stream.comment.markup">Cover (front)</property>
-  <property name="meta.attr.album.markup">ocremix.org</property>
-  <property name="meta.attr.artist.markup">Darangen</property>
-  <property name="meta.attr.album_artist.markup">OverClocked ReMix</property>
-  <property name="meta.attr.comment.markup">This was my submission to RPGamer's Sonic Revolution contest in February.&#xd;
-http://rpgamer.com/music/compo/sonicrev/srfinal.html&#xd;
-&#xd;
-Nostalgia... This was always one of my favorite VG themes ever, and still is to this day. I can remember when my friend down the street brought Final Fantasy 1 over, we all thought it was the neatest thing to have 4 black mages with confuse and watch the enemies hit themselves (well, the few times that confuse would work). A few weeks later, my brother and I begged our parents enough to buy the game for ourselves. We finally got it, and I've loved the music ever since, the whole Final Fantasy 1 soundtrack is amazing.&#xd;
-&#xd;
-OK, enough rambling and onto something about this release. :)&#xd;
-&#xd;
-This is my take on the Chaos Temple theme (which also plays in the Underwater Shrine) and my entry to RPGamer's Sonic Revolution contest. I've given it a brighter feel than the original, changed the chord progression to give it a major key feel.&#xd;
-&#xd;
-So kick of them shoes, relax those feet, and enjoy! :)&#xd;
-&#xd;
-Michael Boyd&#xd;
-mike@darangen.com&#xd;
-https://youtube.com/darangen</property>
-  <property name="meta.attr.composer.markup">Nobuo Uematsu</property>
-  <property name="meta.attr.grouping.markup">Final Fantasy</property>
-  <property name="meta.attr.copyright.markup">Square</property>
-  <property name="meta.attr.encoded_by.markup">Michael Boyd (mike@darangen.com)</property>
-  <property name="meta.attr.genre.markup">Game</property>
-  <property name="meta.attr.compilation.markup">1</property>
-  <property name="meta.attr.TOPE.markup">NES</property>
-  <property name="meta.attr.publisher.markup">OverClocked ReMix</property>
-  <property name="meta.attr.SETSUBTITLE.markup">OCR01339</property>
-  <property name="meta.attr.TIT3.markup">Warriors of Light</property>
-  <property name="meta.attr.title.markup">Final Fantasy "Warriors of Light" OC ReMix</property>
-  <property name="meta.attr.track.markup">1339</property>
-  <property name="meta.attr.date.markup">2005</property>
-  <property name="seekable">1</property>
-  <property name="meta.media.sample_aspect_num">1</property>
-  <property name="meta.media.sample_aspect_den">1</property>
-  <property name="audio_index">0</property>
-  <property name="video_index">1</property>
-  <property name="vstream">0</property>
-  <property name="meta.media.frame_rate_num">90000</property>
-  <property name="meta.media.frame_rate_den">1</property>
-  <property name="meta.media.colorspace">601</property>
-  <property name="meta.media.color_trc">2</property>
-  <property name="meta.media.has_b_frames">0</property>
-  <property name="meta.media.width">700</property>
-  <property name="meta.media.height">700</property>
-  <property name="meta.media.aspect_ratio">1</property>
-  <property name="meta.media.color_range">full</property>
-  <property name="astream">0</property>
-  <property name="meta.media.top_field_first">0</property>
-  <property name="meta.media.progressive">1</property>
-  <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">10</property>
-  <property name="kdenlive:control_uuid">{da9b3f27-75cc-437e-b20d-47f255f6a0be}</property>
-  <property name="mute_on_pause">0</property>
-  <property name="kdenlive:clip_type">0</property>
-  <property name="kdenlive:coverartstream">1</property>
-  <property name="kdenlive:file_size">5702418</property>
-  <property name="kdenlive:file_hash">39c40b348b2ee6086b4c9689bc2596bf</property>
-  <property name="kdenlive:monitorPosition">0</property>
- </chain>
- <chain id="chain11" out="00:01:00.334">
-  <property name="length">1447</property>
-  <property name="eof">pause</property>
-  <property name="resource">ost/カオスの神殿.mp3</property>
-  <property name="mlt_service">avformat</property>
-  <property name="meta.media.nb_streams">1</property>
-  <property name="meta.media.0.stream.type">audio</property>
-  <property name="meta.media.0.codec.sample_fmt">fltp</property>
-  <property name="meta.media.0.codec.sample_rate">44100</property>
-  <property name="meta.media.0.codec.channels">2</property>
-  <property name="meta.media.0.codec.layout">stereo</property>
-  <property name="meta.media.0.codec.name">mp3float</property>
-  <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
-  <property name="meta.media.0.codec.bit_rate">192000</property>
-  <property name="meta.attr.0.stream.encoder.markup">Lavc60.31</property>
-  <property name="meta.attr.major_brand.markup">dash</property>
-  <property name="meta.attr.minor_version.markup">0</property>
-  <property name="meta.attr.compatible_brands.markup">iso6mp41</property>
-  <property name="meta.attr.encoder.markup">Lavf60.16.100</property>
-  <property name="seekable">1</property>
-  <property name="audio_index">0</property>
-  <property name="video_index">-1</property>
-  <property name="astream">0</property>
-  <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">11</property>
-  <property name="kdenlive:control_uuid">{222c6794-13ef-440d-b74b-f48d5ee1cb06}</property>
-  <property name="kdenlive:clip_type">1</property>
-  <property name="kdenlive:file_size">1448992</property>
-  <property name="kdenlive:file_hash">d430439c594d6d96bb83e3d83dd0159b</property>
-  <property name="kdenlive:monitorPosition">40</property>
- </chain>
- <chain id="chain12" out="00:01:06.673">
-  <property name="length">1599</property>
-  <property name="eof">pause</property>
-  <property name="resource">ost/05. カオスの神殿 (SFC Style mix feat.FF5).flac</property>
-  <property name="mlt_service">avformat</property>
-  <property name="meta.media.nb_streams">1</property>
-  <property name="meta.media.0.stream.type">audio</property>
-  <property name="meta.media.0.codec.sample_fmt">s16</property>
-  <property name="meta.media.0.codec.sample_rate">44100</property>
-  <property name="meta.media.0.codec.channels">2</property>
-  <property name="meta.media.0.codec.layout">stereo</property>
-  <property name="meta.media.0.codec.name">flac</property>
-  <property name="meta.media.0.codec.long_name">FLAC (Free Lossless Audio Codec)</property>
-  <property name="meta.media.0.codec.bit_rate">0</property>
-  <property name="meta.attr.DATE.markup">2021</property>
-  <property name="meta.attr.YEAR.markup">2021</property>
-  <property name="meta.attr.ARTIST.markup">Ｊ.Ｍ.</property>
-  <property name="meta.attr.TITLE.markup">カオスの神殿 (SFC Style mix feat.FF5)</property>
-  <property name="meta.attr.GENRE.markup">Game</property>
-  <property name="meta.attr.BAND.markup">J.M.'s Home</property>
-  <property name="meta.attr.track.markup">5</property>
-  <property name="meta.attr.ALBUM.markup">FINAL FANTASY I 《SFC Style mix》 ～All Sounds Collection～ 【APOLLO 11 Edition】</property>
-  <property name="meta.attr.album_artist.markup">J.M.'s Home</property>
-  <property name="meta.attr.ALBUM ARTIST.markup">J.M.'s Home</property>
-  <property name="meta.attr.ENSEMBLE.markup">J.M.'s Home</property>
-  <property name="seekable">1</property>
-  <property name="audio_index">0</property>
-  <property name="video_index">-1</property>
-  <property name="astream">0</property>
-  <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">12</property>
-  <property name="kdenlive:control_uuid">{80c255c3-3585-41d8-9c07-21b7e995e980}</property>
-  <property name="kdenlive:clip_type">1</property>
-  <property name="kdenlive:file_size">6741267</property>
-  <property name="kdenlive:file_hash">b10b53d50bb9b2aef3c44847356cd3b2</property>
- </chain>
- <chain id="chain13" out="00:00:52.511">
-  <property name="length">1260</property>
-  <property name="eof">pause</property>
-  <property name="resource">ost/プレリュード.mp3</property>
-  <property name="mlt_service">avformat</property>
-  <property name="meta.media.nb_streams">1</property>
-  <property name="meta.media.0.stream.type">audio</property>
-  <property name="meta.media.0.codec.sample_fmt">fltp</property>
-  <property name="meta.media.0.codec.sample_rate">44100</property>
-  <property name="meta.media.0.codec.channels">2</property>
-  <property name="meta.media.0.codec.layout">stereo</property>
-  <property name="meta.media.0.codec.name">mp3float</property>
-  <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
-  <property name="meta.media.0.codec.bit_rate">192000</property>
-  <property name="meta.attr.0.stream.encoder.markup">Lavc60.31</property>
-  <property name="meta.attr.major_brand.markup">dash</property>
-  <property name="meta.attr.minor_version.markup">0</property>
-  <property name="meta.attr.compatible_brands.markup">iso6mp41</property>
-  <property name="meta.attr.encoder.markup">Lavf60.16.100</property>
-  <property name="seekable">1</property>
-  <property name="audio_index">0</property>
-  <property name="video_index">-1</property>
-  <property name="astream">0</property>
-  <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">13</property>
-  <property name="kdenlive:control_uuid">{7978c387-4288-407c-b247-88ff094c35f7}</property>
-  <property name="kdenlive:clip_type">1</property>
-  <property name="kdenlive:file_size">1261537</property>
-  <property name="kdenlive:file_hash">4f534d448f24dd6758741114d12be415</property>
-  <property name="kdenlive:monitorPosition">0</property>
- </chain>
  <chain id="chain14" out="00:04:05.797">
   <property name="length">5894</property>
   <property name="eof">pause</property>
@@ -1047,18 +636,19 @@ https://youtube.com/rebeccaetripp</property>
   <property name="meta.media.top_field_first">0</property>
   <property name="meta.media.progressive">1</property>
   <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">14</property>
+  <property name="kdenlive:id">7</property>
   <property name="kdenlive:control_uuid">{93e86435-4609-41f8-acc6-be87cdccf41b}</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
   <property name="kdenlive:coverartstream">1</property>
   <property name="kdenlive:file_size">6797335</property>
   <property name="kdenlive:file_hash">89c39d837ae5299f73020f770ce7b7b7</property>
+  <property name="kdenlive:monitorPosition">0</property>
  </chain>
- <chain id="chain15" out="00:05:41.041">
-  <property name="length">8177</property>
+ <chain id="chain17" out="00:03:36.870">
+  <property name="length">5200</property>
   <property name="eof">pause</property>
-  <property name="resource">ost/Final_Fantasy_Roaming_Please_Wait_OC_ReMix.mp3</property>
+  <property name="resource">ost/Final_Fantasy_10_Lake_in_Ontario_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -1068,8 +658,7 @@ https://youtube.com/rebeccaetripp</property>
   <property name="meta.media.0.codec.layout">stereo</property>
   <property name="meta.media.0.codec.name">mp3float</property>
   <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
-  <property name="meta.media.0.codec.bit_rate">220133</property>
-  <property name="meta.attr.0.stream.encoder.markup">LAME3.100</property>
+  <property name="meta.media.0.codec.bit_rate">192000</property>
   <property name="meta.media.1.stream.type">video</property>
   <property name="meta.media.1.stream.frame_rate">90000</property>
   <property name="meta.media.1.stream.sample_aspect_ratio">0</property>
@@ -1084,83 +673,24 @@ https://youtube.com/rebeccaetripp</property>
   <property name="meta.media.1.codec.bit_rate">0</property>
   <property name="meta.attr.1.stream.comment.markup">Cover (front)</property>
   <property name="meta.attr.album.markup">ocremix.org</property>
-  <property name="meta.attr.artist.markup">BONKERS</property>
+  <property name="meta.attr.artist.markup">ilp0</property>
   <property name="meta.attr.album_artist.markup">OverClocked ReMix</property>
-  <property name="meta.attr.comment.markup">https://encounter.ocremix.org&#xd;
-Final Fantasy: Random Encounter&#xd;
-&#xd;
-This song was decisively a very difficult and eye-opening experience for me. For one, transforming the loveable very happy and adventureous melodies/feelings of the original song in to a hard rock/metal song without it changing those feelings. Metal songs, in general, are usually in just about any mode/key that is NOT a major key. The few, such as "Party Hard" by Andrew W.K., are condemed by the average metalhead as "LOL THIS ISN'T METAL" Even though by all means and purposes it sounds metal (production-wise), even if not to the average guy. (Disagree? Sue me. &lt;(0.0&lt;()&#xd;
-&#xd;
-So you can imagine my agony whether to change the song into a minor without destroying the original melodic feelings/integrity of the song -- I had even had discussions with IBBAZ (a.k.a. Kidd Cabbage/Jon Peros) about changing it into a minor, which actually does happen in one section of the song ;) -- or find a way to turn it into major metal.&#xd;
-&#xd;
-Originally, I was going to make an orchestral metal/just orchestral song. (If you visit the extra site Brandon Strader puts up, you can hear my early attempts at just such a thing.) I toiled for months slaving away trying to come up with ideas how to make it work. From scrapping sheet music over and over again, to long walks with my body on autopilot trying to figure it out. Soon after, I was shown some Children of Bodom songs by Strader; following this, the song became an attempt to start off as a CoB song that fakeout-ed into the main theme (another idea you can hear on the side site). This too was a BUST, as I could just not make it work and make sense. Then one day, whilst working on sheets, I had come up with extensions of the melody and played some guitar to it. ALL OF A SUDDEN, MY MIND WAS BLOWN. Every single line fell into place perfectly and it all worked and made sense. Writing the rest of the song was no problem as I could hear in my head all of the ideas clearly.&#xd;
-&#xd;
-Though that is not to say it was without challenge. Without Brandon, who's to say how the song would've turned out. He challenged ideas that I thought were just fine, but in actuality, that I could not see, did not work. Such as an extended chiptune section, that was essentially the song evolving from NES to Genesis to SNES, and planned to, PSX; adding in new lines of music for each hardware's extended audio capabilities/channels; however each version did essentially sound similar to the original song and, as Brandon pointed out to me, it dragged on too long. Much to my own dismay, I hated the idea of getting rid of it and fought to argue against changing it. I eventually gave in of course, and looking back, for the better.&#xd;
-&#xd;
-Where "Gurgu Volcano" came in was I believe the song hadn't been claimed yet and I voiced my opinion about probably being able to work it in my song somewhere as a break from the main theme. I came up with concept audio, then working it into the song in various stages/ideas until the current version, which was inspired by the Wild Arms arrangement album -rocking heart- (which is one of my favorite CDs of ALL TIME). I am personally extremely glad the way this section of music turned out. When I finished it, for the first time I was impressed with myself, and excited as well.&#xd;
-&#xd;
-Technically (not going to say much about this, since it's exactly the same problems I went through with "Prelude," so go and read that if you are interested) and logistically, this song, just like the "Prelude," was a nightmare. This is where I went through trial and extreme error in coming up with ways of making the project file within the DAW coherent and understandable, as well as smart integration of automation envelopes, track grouping, sends/recieves, you name it. At the end of the day, the song ended up being with all tracks counting grouping/sends/recieves/etc./a few unused tracks, 63 tracks large (my average is probably between 30-45). Now that is, at least to me, an extremely large amount of stuff to manage and balance out. But I did. And I'm very pleased.&#xd;
-&#xd;
-Anyways, overall, the general idea has been that this song was to be done in a way that has never been done before. I think that myself together with the other's working on this project as well as the judge's critcisms, have helped to make this possible. And, for that, I thank you all. It's been a long road for me personally from spending days thinking of ideas, to coming home from work during the Christmas 2010 season and doing nothing but working on the song, from going back to completely overhauling the song in various ways, to micro-managing the mastering process to make the song sound good.&#xd;
-&#xd;
-I hope you all can enjoy the song in its entirety.&#xd;
-&#xd;
-Also, for anyone who might curious, here is the list of the VST software (one, bass and electric guitar) I used in making the final version of the song.&#xd;
-&#xd;
-• Poulin HyBrit Full Stack&#xd;
-• LePou LeGion (from same maker as above)&#xd;
-• keFIR&#xd;
-• ReaComp&#xd;
-• ReaEQ&#xd;
-• ReaGate&#xd;
-• Voxengo SPAN&#xd;
-• Voxengo Analogflux Tapebus&#xd;
-• Voxengo Analogflux Chrous&#xd;
-• Voxengo Analogflux TapeDelay&#xd;
-• Recabinet 1/2&#xd;
-• free impulses from GuitarAmpModeling.com&#xd;
-• AmpliTube Metal&#xd;
-• GearBox&#xd;
-• ABSYNTH 4&#xd;
-• CSR Hall&#xd;
-• CSR Inverse&#xd;
-• CamelPhat 3&#xd;
-• Classic Chorus&#xd;
-• Prophet V 2&#xd;
-• Albino 2&#xd;
-• Cockos REAPER&#xd;
-• Panipulator&#xd;
-• Ampeg SVX&#xd;
-• PRO-53&#xd;
-• Miroslav Philharmonik&#xd;
-• Minimoog V&#xd;
-• EZ Drummer w/DFH Expansion&#xd;
-• EWQLSO Gold&#xd;
-• SynthFont&#xd;
-• T-RackS EQ 1.x&#xd;
-• T-RackS 3&#xd;
-• Wavestation&#xd;
-• Legacy Cell&#xd;
-• Gibson Les Paul Smartwood Studio Series 2001&#xd;
-• Ibanez Soundgear GSR200&#xd;
-&#xd;
-Nicholas Steven Perry&#xd;
-buttwipinglord@yahoo.com&#xd;
-https://twitter.com/n_bonkers_p</property>
+  <property name="meta.attr.comment.markup">Ilari Nieminen&#xd;
+isniemin@cs.helsinki.fi&#xd;
+http://last.fm/music/ilp0</property>
   <property name="meta.attr.composer.markup">Nobuo Uematsu</property>
-  <property name="meta.attr.grouping.markup">Final Fantasy</property>
+  <property name="meta.attr.grouping.markup">Final Fantasy X</property>
   <property name="meta.attr.copyright.markup">Square</property>
-  <property name="meta.attr.encoded_by.markup">Nicholas Steven Perry (buttwipinglord@yahoo.com)</property>
+  <property name="meta.attr.encoded_by.markup">Ilari Nieminen (isniemin@cs.helsinki.fi)</property>
   <property name="meta.attr.genre.markup">Game</property>
   <property name="meta.attr.compilation.markup">1</property>
-  <property name="meta.attr.TOAL.markup">Final Fantasy: Random Encounter</property>
-  <property name="meta.attr.TOPE.markup">NES</property>
+  <property name="meta.attr.TOPE.markup">PlayStation 2</property>
   <property name="meta.attr.publisher.markup">OverClocked ReMix</property>
-  <property name="meta.attr.setsubtitle.markup">OCR02662</property>
-  <property name="meta.attr.TIT3.markup">Roaming... Please Wait</property>
-  <property name="meta.attr.title.markup">Final Fantasy "Roaming... Please Wait" OC ReMix</property>
-  <property name="meta.attr.track.markup">2662</property>
-  <property name="meta.attr.date.markup">2013</property>
+  <property name="meta.attr.SETSUBTITLE.markup">OCR01560</property>
+  <property name="meta.attr.TIT3.markup">Lake in Ontario?</property>
+  <property name="meta.attr.title.markup">Final Fantasy X "Lake in Ontario?" OC ReMix</property>
+  <property name="meta.attr.track.markup">1560</property>
+  <property name="meta.attr.date.markup">2007</property>
   <property name="seekable">1</property>
   <property name="meta.media.sample_aspect_num">1</property>
   <property name="meta.media.sample_aspect_den">1</property>
@@ -1180,16 +710,43 @@ https://twitter.com/n_bonkers_p</property>
   <property name="meta.media.top_field_first">0</property>
   <property name="meta.media.progressive">1</property>
   <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">15</property>
-  <property name="kdenlive:control_uuid">{d00efd4a-4eff-4bbe-9f89-d30fae4d23a8}</property>
+  <property name="kdenlive:id">8</property>
+  <property name="kdenlive:control_uuid">{706a63b7-ae4c-4049-b185-bc0848649b24}</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
   <property name="kdenlive:coverartstream">1</property>
-  <property name="kdenlive:file_size">9482448</property>
-  <property name="kdenlive:file_hash">250e329c8d45463766e5e6240c13d42d</property>
-  <property name="kdenlive:monitorPosition">2570</property>
+  <property name="kdenlive:file_size">5292699</property>
+  <property name="kdenlive:file_hash">33b8cca8fdd7cb417563e7cd62304a4d</property>
+  <property name="kdenlive:monitorPosition">0</property>
  </chain>
- <producer id="producer0" in="00:00:00.000" out="01:50:58.392">
+ <chain id="chain8" out="01:46:27.402">
+  <property name="length">153144</property>
+  <property name="eof">pause</property>
+  <property name="resource">DVD/A1_t00_Audio03.JPN.ac3</property>
+  <property name="mlt_service">avformat</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">6</property>
+  <property name="meta.media.0.codec.layout">5.1(side)</property>
+  <property name="meta.media.0.codec.name">ac3</property>
+  <property name="meta.media.0.codec.long_name">ATSC A/52A (AC-3)</property>
+  <property name="meta.media.0.codec.bit_rate">384000</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:control_uuid">{e2839f57-3e08-482a-8683-710c59cd7d06}</property>
+  <property name="kdenlive:originalurl">DVD/A1_t00_Audio03.JPN.ac3</property>
+  <property name="kdenlive:id">9</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">306594816</property>
+  <property name="kdenlive:file_hash">c802da5bc01af08751d78d0369427df7</property>
+  <property name="kdenlive:folderid">17</property>
+  <property name="kdenlive:monitorPosition">39543</property>
+ </chain>
+ <producer id="producer0" in="00:00:00.000" out="01:51:28.946">
   <property name="length">2147483647</property>
   <property name="eof">continue</property>
   <property name="resource">black</property>
@@ -1199,6 +756,35 @@ https://twitter.com/n_bonkers_p</property>
   <property name="mlt_image_format">rgba</property>
   <property name="set.test_audio">0</property>
  </producer>
+ <playlist id="playlist0"/>
+ <playlist id="playlist1"/>
+ <tractor id="tractor0" in="00:00:00.000">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="both" producer="playlist0"/>
+  <track hide="both" producer="playlist1"/>
+  <filter id="filter0">
+   <property name="window">75</property>
+   <property name="max_gain">20dB</property>
+   <property name="mlt_service">volume</property>
+   <property name="internal_added">237</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter1">
+   <property name="channel">-1</property>
+   <property name="mlt_service">panner</property>
+   <property name="internal_added">237</property>
+   <property name="start">0.5</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter2">
+   <property name="iec_scale">0</property>
+   <property name="mlt_service">audiolevel</property>
+   <property name="dbpeak">1</property>
+   <property name="disable">1</property>
+  </filter>
+ </tractor>
  <chain id="chain0" out="00:03:36.870">
   <property name="length">5200</property>
   <property name="eof">pause</property>
@@ -1210,7 +796,7 @@ https://twitter.com/n_bonkers_p</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
   <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">16</property>
+  <property name="kdenlive:id">8</property>
   <property name="kdenlive:control_uuid">{706a63b7-ae4c-4049-b185-bc0848649b24}</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -1275,12 +861,12 @@ http://last.fm/music/ilp0</property>
   <property name="set.test_audio">0</property>
   <property name="set.test_image">1</property>
  </chain>
- <playlist id="playlist0">
+ <playlist id="playlist2">
   <property name="kdenlive:audio_track">1</property>
   <blank length="01:42:14.389"/>
   <entry in="00:00:00.000" out="00:03:36.870" producer="chain0">
-   <property name="kdenlive:id">16</property>
-   <filter id="filter0">
+   <property name="kdenlive:id">8</property>
+   <filter id="filter3">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="level">00:00:00.000=-8</property>
@@ -1290,33 +876,33 @@ http://last.fm/music/ilp0</property>
    </filter>
   </entry>
  </playlist>
- <playlist id="playlist1">
+ <playlist id="playlist3">
   <property name="kdenlive:audio_track">1</property>
  </playlist>
- <tractor id="tractor0" in="00:00:00.000" out="01:45:51.218">
+ <tractor id="tractor1" in="00:00:00.000" out="01:45:51.218">
   <property name="kdenlive:audio_track">1</property>
   <property name="kdenlive:trackheight">84</property>
   <property name="kdenlive:timeline_active">1</property>
   <property name="kdenlive:collapsed">0</property>
   <property name="kdenlive:thumbs_format"/>
   <property name="kdenlive:audio_rec"/>
-  <track hide="both" producer="playlist0"/>
-  <track hide="both" producer="playlist1"/>
-  <filter id="filter1">
+  <track hide="video" producer="playlist2"/>
+  <track hide="video" producer="playlist3"/>
+  <filter id="filter4">
    <property name="window">75</property>
    <property name="max_gain">20dB</property>
    <property name="mlt_service">volume</property>
    <property name="internal_added">237</property>
    <property name="disable">1</property>
   </filter>
-  <filter id="filter2">
+  <filter id="filter5">
    <property name="channel">-1</property>
    <property name="mlt_service">panner</property>
    <property name="internal_added">237</property>
    <property name="start">0.5</property>
    <property name="disable">1</property>
   </filter>
-  <filter id="filter3">
+  <filter id="filter6">
    <property name="iec_scale">0</property>
    <property name="mlt_service">audiolevel</property>
    <property name="dbpeak">1</property>
@@ -1399,13 +985,13 @@ http://timsheehy.com</property>
   <property name="set.test_audio">0</property>
   <property name="set.test_image">1</property>
  </chain>
- <playlist id="playlist2">
+ <playlist id="playlist4">
   <property name="kdenlive:audio_track">1</property>
   <blank length="00:00:19.561"/>
   <entry in="00:00:19.561" out="00:00:29.905" producer="chain1">
    <property name="kdenlive:id">6</property>
    <property name="kdenlive:activeeffect">1</property>
-   <filter id="filter4">
+   <filter id="filter7">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="level">00:00:19.561=-15</property>
@@ -1413,7 +999,7 @@ http://timsheehy.com</property>
     <property name="kdenlive_id">volume</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter5" in="00:00:27.319" out="00:00:29.905">
+   <filter id="filter8" in="00:00:27.319" out="00:00:29.905">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="mlt_service">volume</property>
@@ -1423,7 +1009,7 @@ http://timsheehy.com</property>
     <property name="kdenlive:collapsed">0</property>
     <property name="disable">1</property>
    </filter>
-   <filter id="filter6" in="00:00:19.561" out="00:00:29.947">
+   <filter id="filter9" in="00:00:19.561" out="00:00:29.947">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="mlt_service">volume</property>
@@ -1434,7 +1020,7 @@ http://timsheehy.com</property>
   </entry>
   <entry in="00:00:02.502" out="00:00:09.509" producer="chain1">
    <property name="kdenlive:id">6</property>
-   <filter id="filter7">
+   <filter id="filter10">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="level">00:00:02.502=-10</property>
@@ -1442,7 +1028,7 @@ http://timsheehy.com</property>
     <property name="kdenlive_id">volume</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter8" in="00:00:03.462" out="00:00:09.509">
+   <filter id="filter11" in="00:00:03.462" out="00:00:09.509">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="mlt_service">volume</property>
@@ -1451,7 +1037,7 @@ http://timsheehy.com</property>
     <property name="end">0</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter9" in="00:00:02.502" out="00:00:05.505">
+   <filter id="filter12" in="00:00:02.502" out="00:00:05.505">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="mlt_service">volume</property>
@@ -1460,7 +1046,7 @@ http://timsheehy.com</property>
     <property name="end">1</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter10">
+   <filter id="filter13">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="level">00:00:02.502=-16</property>
@@ -1471,7 +1057,7 @@ http://timsheehy.com</property>
   </entry>
   <entry in="00:00:02.502" out="00:00:10.260" producer="chain1">
    <property name="kdenlive:id">6</property>
-   <filter id="filter11">
+   <filter id="filter14">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="level">00:00:02.502=-10</property>
@@ -1479,7 +1065,7 @@ http://timsheehy.com</property>
     <property name="kdenlive_id">volume</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter12" in="00:00:04.213" out="00:00:10.260">
+   <filter id="filter15" in="00:00:04.213" out="00:00:10.260">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="mlt_service">volume</property>
@@ -1488,7 +1074,7 @@ http://timsheehy.com</property>
     <property name="end">0</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter13" in="00:00:02.502" out="00:00:05.505">
+   <filter id="filter16" in="00:00:02.502" out="00:00:05.505">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="mlt_service">volume</property>
@@ -1497,7 +1083,7 @@ http://timsheehy.com</property>
     <property name="end">1</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter14">
+   <filter id="filter17">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="level">00:00:02.502=-16</property>
@@ -1505,7 +1091,7 @@ http://timsheehy.com</property>
     <property name="kdenlive_id">volume</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter15">
+   <filter id="filter18">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="mlt_service">volume</property>
@@ -1515,10 +1101,10 @@ http://timsheehy.com</property>
    </filter>
   </entry>
  </playlist>
- <playlist id="playlist3">
+ <playlist id="playlist5">
   <property name="kdenlive:audio_track">1</property>
  </playlist>
- <tractor id="tractor1" in="00:00:00.000" out="00:00:44.753">
+ <tractor id="tractor2" in="00:00:00.000" out="00:00:44.753">
   <property name="kdenlive:audio_track">1</property>
   <property name="kdenlive:trackheight">84</property>
   <property name="kdenlive:timeline_active">1</property>
@@ -1526,9 +1112,30 @@ http://timsheehy.com</property>
   <property name="kdenlive:track_name">Reverb</property>
   <property name="kdenlive:thumbs_format"/>
   <property name="kdenlive:audio_rec"/>
-  <track hide="video" producer="playlist2"/>
-  <track hide="video" producer="playlist3"/>
-  <filter id="filter18" out="00:00:44.795">
+  <track hide="video" producer="playlist4"/>
+  <track hide="video" producer="playlist5"/>
+  <filter id="filter19">
+   <property name="window">75</property>
+   <property name="max_gain">20dB</property>
+   <property name="level">-10.0014</property>
+   <property name="mlt_service">volume</property>
+   <property name="internal_added">237</property>
+   <property name="disable">0</property>
+  </filter>
+  <filter id="filter20">
+   <property name="channel">-1</property>
+   <property name="mlt_service">panner</property>
+   <property name="internal_added">237</property>
+   <property name="start">0.5</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter21">
+   <property name="iec_scale">0</property>
+   <property name="mlt_service">audiolevel</property>
+   <property name="dbpeak">1</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter22" out="00:00:44.795">
    <property name="mlt_service">ladspa.2142</property>
    <property name="kdenlive_id">ladspa.2142</property>
    <property name="0">5000</property>
@@ -1543,7 +1150,7 @@ http://timsheehy.com</property>
    <property name="kdenlive:collapsed">0</property>
    <property name="instances">1</property>
   </filter>
-  <filter id="filter19" out="00:00:44.795">
+  <filter id="filter23" out="00:00:44.795">
    <property name="mlt_service">ladspa.2142</property>
    <property name="kdenlive_id">ladspa.2142</property>
    <property name="0">10000</property>
@@ -1558,29 +1165,8 @@ http://timsheehy.com</property>
    <property name="kdenlive:collapsed">0</property>
    <property name="instances">1</property>
   </filter>
-  <filter id="filter16">
-   <property name="window">75</property>
-   <property name="max_gain">20dB</property>
-   <property name="level">-10.0014</property>
-   <property name="mlt_service">volume</property>
-   <property name="internal_added">237</property>
-   <property name="disable">0</property>
-  </filter>
-  <filter id="filter17">
-   <property name="channel">-1</property>
-   <property name="mlt_service">panner</property>
-   <property name="internal_added">237</property>
-   <property name="start">0.5</property>
-   <property name="disable">1</property>
-  </filter>
-  <filter id="filter20">
-   <property name="iec_scale">0</property>
-   <property name="mlt_service">audiolevel</property>
-   <property name="dbpeak">1</property>
-   <property name="disable">1</property>
-  </filter>
  </tractor>
- <chain id="chain2" out="00:01:50.133">
+ <chain id="chain3" out="00:01:50.133">
   <property name="length">2641</property>
   <property name="eof">pause</property>
   <property name="resource">ost/Final_Fantasy_A_Temple_of_Chaos_OC_ReMix.mp3</property>
@@ -1656,11 +1242,94 @@ http://timsheehy.com</property>
   <property name="set.test_audio">0</property>
   <property name="set.test_image">1</property>
  </chain>
- <playlist id="playlist4">
+ <chain id="chain6" out="00:04:05.797">
+  <property name="length">5894</property>
+  <property name="eof">pause</property>
+  <property name="resource">ost/Final_Fantasy_4_Hymn_to_the_Crystals_OC_ReMix.mp3</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">1</property>
+  <property name="vstream">0</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:folderid">5</property>
+  <property name="kdenlive:id">7</property>
+  <property name="kdenlive:control_uuid">{93e86435-4609-41f8-acc6-be87cdccf41b}</property>
+  <property name="mute_on_pause">0</property>
+  <property name="kdenlive:clip_type">0</property>
+  <property name="kdenlive:coverartstream">1</property>
+  <property name="kdenlive:file_size">6797335</property>
+  <property name="kdenlive:file_hash">89c39d837ae5299f73020f770ce7b7b7</property>
+  <property name="kdenlive:monitorPosition">0</property>
+  <property name="meta.media.nb_streams">2</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">44100</property>
+  <property name="meta.media.0.codec.channels">2</property>
+  <property name="meta.media.0.codec.layout">stereo</property>
+  <property name="meta.media.0.codec.name">mp3float</property>
+  <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
+  <property name="meta.media.0.codec.bit_rate">218271</property>
+  <property name="meta.attr.0.stream.encoder.markup">LAME3.100</property>
+  <property name="meta.media.1.stream.type">video</property>
+  <property name="meta.media.1.stream.frame_rate">90000</property>
+  <property name="meta.media.1.stream.sample_aspect_ratio">0</property>
+  <property name="meta.media.1.codec.width">700</property>
+  <property name="meta.media.1.codec.height">700</property>
+  <property name="meta.media.1.codec.rotate">0</property>
+  <property name="meta.media.1.codec.pix_fmt">yuvj444p</property>
+  <property name="meta.media.1.codec.sample_aspect_ratio">0</property>
+  <property name="meta.media.1.codec.colorspace">601</property>
+  <property name="meta.media.1.codec.name">mjpeg</property>
+  <property name="meta.media.1.codec.long_name">MJPEG (Motion JPEG)</property>
+  <property name="meta.media.1.codec.bit_rate">0</property>
+  <property name="meta.attr.1.stream.comment.markup">Cover (front)</property>
+  <property name="meta.attr.album.markup">ocremix.org</property>
+  <property name="meta.attr.artist.markup">RebeccaETripp</property>
+  <property name="meta.attr.album_artist.markup">OverClocked ReMix</property>
+  <property name="meta.attr.comment.markup">This was my attempt to encapsulate the spiritual essence of the Final Fantasy series. I was going for a sort of mystical/reverent feeling. There are many versions of the FF prelude out there already, so it was difficult to find a new take on it in one sense. However, nobody had composed an arrangement of this main theme that emphasized the spiritual essence of the ever-prominent crystals in quite the same way -- so I used that to guide me: a feeling that this particular facet of the crystal had somehow been, for the most part, unnoticed.&#xd;
+&#xd;
+This is sort of how I've been wanting to hear the song all along, emphasizing the more ethereal aspects of the games, as opposed to making the theme more grandiose or, adversely, tame and relaxing. In my mind, this could be a version of the tune that might play inside a temple in some kind of ancient magical village guarding an elemental crystal shard, such as Cleyra or Mysidia.&#xd;
+&#xd;
+I used 3 harps, harpsichord, VSTs of a full choir, a soprano soloist, and a young boy soloist in this track, along with some temple bells and some mystical/spacey-sounding synths. I was sort of trying to combine the medieval aesthetic of most of the older games with the new-agey depth I have come to associate with the various alien and otherworldly races in FF, such as the Lunarians who are very knowledgeable and detached as compared with the protagonists.&#xd;
+&#xd;
+Rebecca E. Tripp&#xd;
+https://youtube.com/rebeccaetripp</property>
+  <property name="meta.attr.composer.markup">Nobuo Uematsu</property>
+  <property name="meta.attr.grouping.markup">Final Fantasy IV</property>
+  <property name="meta.attr.copyright.markup">Square</property>
+  <property name="meta.attr.encoded_by.markup">Rebecca E. Tripp</property>
+  <property name="meta.attr.genre.markup">Game</property>
+  <property name="meta.attr.compilation.markup">1</property>
+  <property name="meta.attr.TOPE.markup">SNES</property>
+  <property name="meta.attr.publisher.markup">OverClocked ReMix</property>
+  <property name="meta.attr.setsubtitle.markup">OCR03621</property>
+  <property name="meta.attr.TIT3.markup">Hymn to the Crystals</property>
+  <property name="meta.attr.title.markup">Final Fantasy IV "Hymn to the Crystals" OC ReMix</property>
+  <property name="meta.attr.track.markup">3621</property>
+  <property name="meta.attr.date.markup">2017</property>
+  <property name="meta.media.sample_aspect_num">1</property>
+  <property name="meta.media.sample_aspect_den">1</property>
+  <property name="meta.media.frame_rate_num">90000</property>
+  <property name="meta.media.frame_rate_den">1</property>
+  <property name="meta.media.colorspace">601</property>
+  <property name="meta.media.color_trc">2</property>
+  <property name="meta.media.has_b_frames">0</property>
+  <property name="meta.media.width">700</property>
+  <property name="meta.media.height">700</property>
+  <property name="meta.media.aspect_ratio">1</property>
+  <property name="meta.media.color_range">full</property>
+  <property name="xml">was here</property>
+  <property name="meta.media.top_field_first">0</property>
+  <property name="meta.media.progressive">1</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <playlist id="playlist6">
   <property name="kdenlive:audio_track">1</property>
-  <entry in="00:00:00.000" out="00:00:29.905" producer="chain2">
+  <entry in="00:00:00.000" out="00:00:29.905" producer="chain3">
    <property name="kdenlive:id">6</property>
-   <filter id="filter21">
+   <filter id="filter24">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="level">00:00:00.000=-10</property>
@@ -1668,7 +1337,7 @@ http://timsheehy.com</property>
     <property name="kdenlive_id">volume</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter22" in="00:00:27.444" out="00:00:29.905">
+   <filter id="filter25" in="00:00:27.444" out="00:00:29.905">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="mlt_service">volume</property>
@@ -1678,9 +1347,9 @@ http://timsheehy.com</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
   </entry>
-  <entry in="00:00:02.502" out="00:00:08.967" producer="chain2">
+  <entry in="00:00:02.502" out="00:00:08.967" producer="chain3">
    <property name="kdenlive:id">6</property>
-   <filter id="filter23">
+   <filter id="filter26">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="level">00:00:02.502=-10</property>
@@ -1688,7 +1357,7 @@ http://timsheehy.com</property>
     <property name="kdenlive_id">volume</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter24" in="00:00:02.920" out="00:00:08.967">
+   <filter id="filter27" in="00:00:02.920" out="00:00:08.967">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="mlt_service">volume</property>
@@ -1697,7 +1366,7 @@ http://timsheehy.com</property>
     <property name="end">0</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter25" in="00:00:02.502" out="00:00:02.628">
+   <filter id="filter28" in="00:00:02.502" out="00:00:02.628">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="mlt_service">volume</property>
@@ -1706,7 +1375,7 @@ http://timsheehy.com</property>
     <property name="end">1</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter26">
+   <filter id="filter29">
     <property name="window">75</property>
     <property name="max_gain">20dB</property>
     <property name="level">00:00:02.502=-6</property>
@@ -1715,41 +1384,137 @@ http://timsheehy.com</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
   </entry>
+  <blank length="01:41:37.913"/>
+  <entry in="00:00:08.258" out="00:03:52.261" producer="chain6">
+   <property name="kdenlive:id">7</property>
+   <filter id="filter33" in="00:00:08.258" out="00:00:30.906">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadein</property>
+    <property name="gain">0</property>
+    <property name="end">1</property>
+    <property name="kdenlive:collapsed">0</property>
+   </filter>
+   <filter id="filter34" in="00:03:37.412" out="00:03:52.261">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadeout</property>
+    <property name="gain">1</property>
+    <property name="end">0</property>
+    <property name="kdenlive:collapsed">0</property>
+   </filter>
+   <filter id="filter35">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="level">00:00:08.258=-6</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">volume</property>
+    <property name="kdenlive:collapsed">0</property>
+   </filter>
+  </entry>
  </playlist>
- <playlist id="playlist5">
+ <playlist id="playlist7">
   <property name="kdenlive:audio_track">1</property>
  </playlist>
- <tractor id="tractor2" in="00:00:00.000" out="00:00:36.411">
+ <tractor id="tractor3" in="00:00:00.000" out="01:45:58.350">
   <property name="kdenlive:audio_track">1</property>
   <property name="kdenlive:trackheight">84</property>
   <property name="kdenlive:timeline_active">1</property>
   <property name="kdenlive:collapsed">0</property>
   <property name="kdenlive:thumbs_format"/>
   <property name="kdenlive:audio_rec"/>
-  <track hide="video" producer="playlist4"/>
-  <track hide="video" producer="playlist5"/>
-  <filter id="filter29">
+  <track hide="both" producer="playlist6"/>
+  <track hide="both" producer="playlist7"/>
+  <filter id="filter30">
    <property name="window">75</property>
    <property name="max_gain">20dB</property>
    <property name="mlt_service">volume</property>
    <property name="internal_added">237</property>
    <property name="disable">1</property>
   </filter>
-  <filter id="filter30">
+  <filter id="filter31">
    <property name="channel">-1</property>
    <property name="mlt_service">panner</property>
    <property name="internal_added">237</property>
    <property name="start">0.5</property>
    <property name="disable">1</property>
   </filter>
-  <filter id="filter27">
+  <filter id="filter32">
    <property name="iec_scale">0</property>
    <property name="mlt_service">audiolevel</property>
    <property name="dbpeak">1</property>
    <property name="disable">1</property>
   </filter>
  </tractor>
- <chain id="chain3" out="01:45:58.350">
+ <chain id="chain2" out="01:46:27.402">
+  <property name="length">153144</property>
+  <property name="eof">pause</property>
+  <property name="resource">DVD/A1_t00_Audio03.JPN.ac3</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">-1</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:control_uuid">{e2839f57-3e08-482a-8683-710c59cd7d06}</property>
+  <property name="kdenlive:originalurl">DVD/A1_t00_Audio03.JPN.ac3</property>
+  <property name="kdenlive:id">9</property>
+  <property name="kdenlive:clip_type">1</property>
+  <property name="kdenlive:file_size">306594816</property>
+  <property name="kdenlive:file_hash">c802da5bc01af08751d78d0369427df7</property>
+  <property name="kdenlive:folderid">17</property>
+  <property name="kdenlive:monitorPosition">39543</property>
+  <property name="meta.media.nb_streams">1</property>
+  <property name="meta.media.0.stream.type">audio</property>
+  <property name="meta.media.0.codec.sample_fmt">fltp</property>
+  <property name="meta.media.0.codec.sample_rate">48000</property>
+  <property name="meta.media.0.codec.channels">6</property>
+  <property name="meta.media.0.codec.layout">5.1(side)</property>
+  <property name="meta.media.0.codec.name">ac3</property>
+  <property name="meta.media.0.codec.long_name">ATSC A/52A (AC-3)</property>
+  <property name="meta.media.0.codec.bit_rate">384000</property>
+  <property name="xml">was here</property>
+  <property name="mute_on_pause">0</property>
+  <property name="set.test_audio">0</property>
+  <property name="set.test_image">1</property>
+ </chain>
+ <playlist id="playlist8">
+  <blank length="00:00:01.501"/>
+  <entry in="00:00:00.000" out="01:46:27.402" producer="chain2">
+   <property name="kdenlive:id">9</property>
+  </entry>
+ </playlist>
+ <playlist id="playlist9"/>
+ <tractor id="tractor4" in="00:00:00.000" out="01:46:28.904">
+  <property name="kdenlive:track_name">Japan Audio</property>
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="video" producer="playlist8"/>
+  <track hide="video" producer="playlist9"/>
+  <filter id="filter36">
+   <property name="window">75</property>
+   <property name="max_gain">20dB</property>
+   <property name="mlt_service">volume</property>
+   <property name="internal_added">237</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter37">
+   <property name="channel">-1</property>
+   <property name="mlt_service">panner</property>
+   <property name="internal_added">237</property>
+   <property name="start">0.5</property>
+   <property name="disable">1</property>
+  </filter>
+  <filter id="filter38">
+   <property name="iec_scale">0</property>
+   <property name="mlt_service">audiolevel</property>
+   <property name="dbpeak">1</property>
+   <property name="disable">1</property>
+  </filter>
+ </tractor>
+ <chain id="chain7" out="01:45:58.350">
   <property name="length">152448</property>
   <property name="eof">pause</property>
   <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
@@ -2241,414 +2006,303 @@ http://timsheehy.com</property>
   <property name="set.test_audio">0</property>
   <property name="set.test_image">1</property>
  </chain>
- <chain id="chain7" out="00:04:05.797">
-  <property name="length">5894</property>
-  <property name="eof">pause</property>
-  <property name="resource">ost/Final_Fantasy_4_Hymn_to_the_Crystals_OC_ReMix.mp3</property>
-  <property name="mlt_service">avformat-novalidate</property>
-  <property name="seekable">1</property>
-  <property name="audio_index">0</property>
-  <property name="video_index">1</property>
-  <property name="vstream">0</property>
-  <property name="astream">0</property>
-  <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">14</property>
-  <property name="kdenlive:control_uuid">{93e86435-4609-41f8-acc6-be87cdccf41b}</property>
-  <property name="mute_on_pause">0</property>
-  <property name="kdenlive:clip_type">0</property>
-  <property name="kdenlive:coverartstream">1</property>
-  <property name="kdenlive:file_size">6797335</property>
-  <property name="kdenlive:file_hash">89c39d837ae5299f73020f770ce7b7b7</property>
-  <property name="meta.media.nb_streams">2</property>
-  <property name="meta.media.0.stream.type">audio</property>
-  <property name="meta.media.0.codec.sample_fmt">fltp</property>
-  <property name="meta.media.0.codec.sample_rate">44100</property>
-  <property name="meta.media.0.codec.channels">2</property>
-  <property name="meta.media.0.codec.layout">stereo</property>
-  <property name="meta.media.0.codec.name">mp3float</property>
-  <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
-  <property name="meta.media.0.codec.bit_rate">218271</property>
-  <property name="meta.attr.0.stream.encoder.markup">LAME3.100</property>
-  <property name="meta.media.1.stream.type">video</property>
-  <property name="meta.media.1.stream.frame_rate">90000</property>
-  <property name="meta.media.1.stream.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.width">700</property>
-  <property name="meta.media.1.codec.height">700</property>
-  <property name="meta.media.1.codec.rotate">0</property>
-  <property name="meta.media.1.codec.pix_fmt">yuvj444p</property>
-  <property name="meta.media.1.codec.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.colorspace">601</property>
-  <property name="meta.media.1.codec.name">mjpeg</property>
-  <property name="meta.media.1.codec.long_name">MJPEG (Motion JPEG)</property>
-  <property name="meta.media.1.codec.bit_rate">0</property>
-  <property name="meta.attr.1.stream.comment.markup">Cover (front)</property>
-  <property name="meta.attr.album.markup">ocremix.org</property>
-  <property name="meta.attr.artist.markup">RebeccaETripp</property>
-  <property name="meta.attr.album_artist.markup">OverClocked ReMix</property>
-  <property name="meta.attr.comment.markup">This was my attempt to encapsulate the spiritual essence of the Final Fantasy series. I was going for a sort of mystical/reverent feeling. There are many versions of the FF prelude out there already, so it was difficult to find a new take on it in one sense. However, nobody had composed an arrangement of this main theme that emphasized the spiritual essence of the ever-prominent crystals in quite the same way -- so I used that to guide me: a feeling that this particular facet of the crystal had somehow been, for the most part, unnoticed.&#xd;
-&#xd;
-This is sort of how I've been wanting to hear the song all along, emphasizing the more ethereal aspects of the games, as opposed to making the theme more grandiose or, adversely, tame and relaxing. In my mind, this could be a version of the tune that might play inside a temple in some kind of ancient magical village guarding an elemental crystal shard, such as Cleyra or Mysidia.&#xd;
-&#xd;
-I used 3 harps, harpsichord, VSTs of a full choir, a soprano soloist, and a young boy soloist in this track, along with some temple bells and some mystical/spacey-sounding synths. I was sort of trying to combine the medieval aesthetic of most of the older games with the new-agey depth I have come to associate with the various alien and otherworldly races in FF, such as the Lunarians who are very knowledgeable and detached as compared with the protagonists.&#xd;
-&#xd;
-Rebecca E. Tripp&#xd;
-https://youtube.com/rebeccaetripp</property>
-  <property name="meta.attr.composer.markup">Nobuo Uematsu</property>
-  <property name="meta.attr.grouping.markup">Final Fantasy IV</property>
-  <property name="meta.attr.copyright.markup">Square</property>
-  <property name="meta.attr.encoded_by.markup">Rebecca E. Tripp</property>
-  <property name="meta.attr.genre.markup">Game</property>
-  <property name="meta.attr.compilation.markup">1</property>
-  <property name="meta.attr.TOPE.markup">SNES</property>
-  <property name="meta.attr.publisher.markup">OverClocked ReMix</property>
-  <property name="meta.attr.setsubtitle.markup">OCR03621</property>
-  <property name="meta.attr.TIT3.markup">Hymn to the Crystals</property>
-  <property name="meta.attr.title.markup">Final Fantasy IV "Hymn to the Crystals" OC ReMix</property>
-  <property name="meta.attr.track.markup">3621</property>
-  <property name="meta.attr.date.markup">2017</property>
-  <property name="meta.media.sample_aspect_num">1</property>
-  <property name="meta.media.sample_aspect_den">1</property>
-  <property name="meta.media.frame_rate_num">90000</property>
-  <property name="meta.media.frame_rate_den">1</property>
-  <property name="meta.media.colorspace">601</property>
-  <property name="meta.media.color_trc">2</property>
-  <property name="meta.media.has_b_frames">0</property>
-  <property name="meta.media.width">700</property>
-  <property name="meta.media.height">700</property>
-  <property name="meta.media.aspect_ratio">1</property>
-  <property name="meta.media.color_range">full</property>
-  <property name="xml">was here</property>
-  <property name="meta.media.top_field_first">0</property>
-  <property name="meta.media.progressive">1</property>
-  <property name="set.test_audio">0</property>
-  <property name="set.test_image">1</property>
- </chain>
- <playlist id="playlist6">
+ <playlist id="playlist10">
   <property name="kdenlive:audio_track">1</property>
-  <entry in="00:00:00.000" out="00:00:36.411" producer="chain3">
+  <entry in="00:00:00.000" out="00:00:36.411" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:00:36.453" out="00:08:42.209" producer="chain3">
+  <entry in="00:00:36.453" out="00:08:42.209" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:08:42.251" out="00:08:54.721" producer="chain3">
+  <entry in="00:08:42.251" out="00:08:54.721" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:08:54.763" out="00:09:40.332" producer="chain3">
+  <entry in="00:08:54.763" out="00:09:40.332" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:09:40.374" out="00:09:42.209" producer="chain3">
+  <entry in="00:09:40.374" out="00:09:42.209" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:09:42.251" out="00:09:42.542" producer="chain3">
+  <entry in="00:09:42.251" out="00:09:42.542" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:09:42.584" out="00:09:47.047" producer="chain3">
+  <entry in="00:09:42.584" out="00:09:47.047" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:09:47.089" out="00:09:49.800" producer="chain3">
+  <entry in="00:09:47.089" out="00:09:49.800" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:09:49.841" out="00:09:52.094" producer="chain3">
+  <entry in="00:09:49.841" out="00:09:52.094" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:09:52.135" out="00:11:27.236" producer="chain3">
+  <entry in="00:09:52.135" out="00:11:27.236" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:11:27.277" out="00:12:16.225" producer="chain3">
+  <entry in="00:11:27.277" out="00:12:16.225" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:12:16.266" out="00:13:16.975" producer="chain3">
+  <entry in="00:12:16.266" out="00:13:16.975" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:13:17.017" out="00:13:37.120" producer="chain3">
+  <entry in="00:13:17.017" out="00:13:37.120" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:13:37.162" out="00:13:52.135" producer="chain3">
+  <entry in="00:13:37.162" out="00:13:52.135" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:13:52.177" out="00:13:57.766" producer="chain3">
+  <entry in="00:13:52.177" out="00:13:57.766" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:13:57.808" out="00:14:11.637" producer="chain3">
+  <entry in="00:13:57.808" out="00:14:11.637" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:14:11.678" out="00:14:19.353" producer="chain3">
+  <entry in="00:14:11.678" out="00:14:19.353" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:14:19.394" out="00:17:18.477" producer="chain3">
+  <entry in="00:14:19.394" out="00:17:18.477" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:17:18.518" out="00:17:28.362" producer="chain3">
+  <entry in="00:17:18.518" out="00:17:28.362" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:17:28.403" out="00:19:47.714" producer="chain3">
+  <entry in="00:17:28.403" out="00:19:47.714" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:19:47.756" out="00:20:11.011" producer="chain3">
+  <entry in="00:19:47.756" out="00:20:11.011" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:20:11.053" out="00:21:04.713" producer="chain3">
+  <entry in="00:20:11.053" out="00:21:04.713" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:21:04.755" out="00:21:11.845" producer="chain3">
+  <entry in="00:21:04.755" out="00:21:11.845" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:21:11.887" out="00:23:40.123" producer="chain3">
+  <entry in="00:21:11.887" out="00:23:40.123" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:23:40.165" out="00:23:50.092" producer="chain3">
+  <entry in="00:23:40.165" out="00:23:50.092" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:23:50.133" out="00:25:19.853" producer="chain3">
+  <entry in="00:23:50.133" out="00:25:19.853" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:25:19.895" out="00:25:24.316" producer="chain3">
+  <entry in="00:25:19.895" out="00:25:24.316" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:25:24.358" out="00:26:31.782" producer="chain3">
+  <entry in="00:25:24.358" out="00:26:31.782" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:26:31.823" out="00:26:42.960" producer="chain3">
+  <entry in="00:26:31.823" out="00:26:42.960" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:26:43.001" out="00:26:53.220" producer="chain3">
+  <entry in="00:26:43.001" out="00:26:53.220" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:26:53.262" out="00:27:08.926" producer="chain3">
+  <entry in="00:26:53.262" out="00:27:08.926" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:27:08.967" out="00:27:19.353" producer="chain3">
+  <entry in="00:27:08.967" out="00:27:19.353" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:27:19.394" out="00:27:35.869" producer="chain3">
+  <entry in="00:27:19.394" out="00:27:35.869" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:27:35.911" out="00:27:40.040" producer="chain3">
+  <entry in="00:27:35.911" out="00:27:40.040" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:27:40.082" out="00:30:38.997" producer="chain3">
+  <entry in="00:27:40.082" out="00:30:38.997" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:30:39.039" out="00:32:06.173" producer="chain3">
+  <entry in="00:30:39.039" out="00:32:06.173" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:32:06.215" out="00:32:14.681" producer="chain3">
+  <entry in="00:32:06.215" out="00:32:14.681" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:32:14.723" out="00:51:03.879" producer="chain3">
+  <entry in="00:32:14.723" out="00:51:03.879" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:51:03.921" out="00:51:12.846" producer="chain3">
+  <entry in="00:51:03.921" out="00:51:12.846" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:51:12.888" out="00:51:21.146" producer="chain3">
+  <entry in="00:51:12.888" out="00:51:21.146" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:51:21.188" out="00:51:36.119" producer="chain3">
+  <entry in="00:51:21.188" out="00:51:36.119" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:51:36.161" out="00:52:15.057" producer="chain3">
+  <entry in="00:51:36.161" out="00:52:15.057" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:52:15.098" out="00:52:19.519" producer="chain3">
+  <entry in="00:52:15.098" out="00:52:19.519" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:52:19.561" out="00:54:34.409" producer="chain3">
+  <entry in="00:52:19.561" out="00:54:34.409" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:54:34.451" out="00:54:46.338" producer="chain3">
+  <entry in="00:54:34.451" out="00:54:46.338" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:54:46.380" out="00:54:50.217" producer="chain3">
+  <entry in="00:54:46.380" out="00:54:50.217" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:54:50.259" out="00:55:02.920" producer="chain3">
+  <entry in="00:54:50.259" out="00:55:02.920" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:55:02.961" out="00:58:43.335" producer="chain3">
+  <entry in="00:55:02.961" out="00:58:43.335" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:58:43.377" out="00:58:45.212" producer="chain3">
+  <entry in="00:58:43.377" out="00:58:45.212" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:58:45.254" out="00:58:46.046" producer="chain3">
+  <entry in="00:58:45.254" out="00:58:46.046" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:58:46.088" out="00:58:47.339" producer="chain3">
+  <entry in="00:58:46.088" out="00:58:47.339" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:58:47.381" out="00:59:05.297" producer="chain3">
+  <entry in="00:58:47.381" out="00:59:05.297" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:59:05.339" out="00:59:05.964" producer="chain3">
+  <entry in="00:59:05.339" out="00:59:05.964" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:59:06.006" out="00:59:07.299" producer="chain3">
+  <entry in="00:59:06.006" out="00:59:07.299" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:59:07.341" out="01:01:30.822" producer="chain3">
+  <entry in="00:59:07.341" out="01:01:30.822" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:01:30.864" out="01:01:43.502" producer="chain3">
+  <entry in="01:01:30.864" out="01:01:43.502" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:01:43.543" out="01:03:21.563" producer="chain3">
+  <entry in="01:01:43.543" out="01:03:21.563" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:03:21.605" out="01:03:28.737" producer="chain3">
+  <entry in="01:03:21.605" out="01:03:28.737" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:03:28.779" out="01:03:56.014" producer="chain3">
+  <entry in="01:03:28.779" out="01:03:56.014" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:03:56.056" out="01:04:16.308" producer="chain3">
+  <entry in="01:03:56.056" out="01:04:16.308" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:04:16.350" out="01:08:25.692" producer="chain3">
+  <entry in="01:04:16.350" out="01:08:25.692" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:08:25.734" out="01:08:42.167" producer="chain3">
+  <entry in="01:08:25.734" out="01:08:42.167" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:08:42.209" out="01:11:26.235" producer="chain3">
+  <entry in="01:08:42.209" out="01:11:26.235" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:11:26.276" out="01:12:19.770" producer="chain3">
+  <entry in="01:11:26.276" out="01:12:19.770" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:12:19.811" out="01:14:44.503" producer="chain3">
+  <entry in="01:12:19.811" out="01:14:44.503" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:14:44.544" out="01:15:06.715" producer="chain3">
+  <entry in="01:14:44.544" out="01:15:06.715" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:15:06.757" out="01:24:13.555" producer="chain3">
+  <entry in="01:15:06.757" out="01:24:13.555" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:24:13.597" out="01:24:21.021" producer="chain3">
+  <entry in="01:24:13.597" out="01:24:21.021" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:24:21.063" out="01:28:40.916" producer="chain3">
+  <entry in="01:24:21.063" out="01:28:40.916" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:28:40.958" out="01:28:52.511" producer="chain3">
+  <entry in="01:28:40.958" out="01:28:52.511" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:28:52.552" out="01:29:10.969" producer="chain3">
+  <entry in="01:28:52.552" out="01:29:10.969" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:29:11.011" out="01:29:18.518" producer="chain3">
+  <entry in="01:29:11.011" out="01:29:18.518" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:29:18.560" out="01:29:28.904" producer="chain3">
+  <entry in="01:29:18.560" out="01:29:28.904" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:29:28.946" out="01:29:30.572" producer="chain3">
+  <entry in="01:29:28.946" out="01:29:30.572" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:29:30.614" out="01:29:39.206" producer="chain3">
+  <entry in="01:29:30.614" out="01:29:39.206" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:29:39.248" out="01:30:28.487" producer="chain3">
+  <entry in="01:29:39.248" out="01:30:28.487" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:30:28.528" out="01:30:35.285" producer="chain3">
+  <entry in="01:30:28.528" out="01:30:35.285" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:30:35.327" out="01:32:48.674" producer="chain3">
+  <entry in="01:30:35.327" out="01:32:48.674" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:32:48.715" out="01:33:14.014" producer="chain3">
+  <entry in="01:32:48.715" out="01:33:14.014" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:33:14.056" out="01:33:37.120" producer="chain3">
+  <entry in="01:33:14.056" out="01:33:37.120" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:33:37.162" out="01:33:50.592" producer="chain3">
+  <entry in="01:33:37.162" out="01:33:50.592" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:33:50.634" out="01:34:00.417" producer="chain3">
+  <entry in="01:33:50.634" out="01:34:00.417" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:34:00.459" out="01:34:10.636" producer="chain3">
+  <entry in="01:34:00.459" out="01:34:10.636" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:34:10.677" out="01:34:19.102" producer="chain3">
+  <entry in="01:34:10.677" out="01:34:19.102" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:34:19.144" out="01:34:22.272" producer="chain3">
+  <entry in="01:34:19.144" out="01:34:22.272" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:34:22.314" out="01:34:23.607" producer="chain3">
+  <entry in="01:34:22.314" out="01:34:23.607" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:34:23.649" out="01:37:13.513" producer="chain3">
+  <entry in="01:34:23.649" out="01:37:13.513" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:37:13.555" out="01:37:20.187" producer="chain3">
+  <entry in="01:37:13.555" out="01:37:20.187" producer="chain7">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="01:37:20.229" out="01:42:14.348" producer="chain3">
+  <entry in="01:37:20.229" out="01:42:14.348" producer="chain7">
    <property name="kdenlive:id">4</property>
-  </entry>
-  <entry in="00:00:08.258" out="00:03:52.261" producer="chain7">
-   <property name="kdenlive:id">14</property>
-   <filter id="filter28" in="00:00:08.258" out="00:00:30.906">
-    <property name="window">75</property>
-    <property name="max_gain">20dB</property>
-    <property name="mlt_service">volume</property>
-    <property name="kdenlive_id">fadein</property>
-    <property name="gain">0</property>
-    <property name="end">1</property>
-    <property name="kdenlive:collapsed">0</property>
-   </filter>
-   <filter id="filter31" in="00:03:37.412" out="00:03:52.261">
-    <property name="window">75</property>
-    <property name="max_gain">20dB</property>
-    <property name="mlt_service">volume</property>
-    <property name="kdenlive_id">fadeout</property>
-    <property name="gain">1</property>
-    <property name="end">0</property>
-    <property name="kdenlive:collapsed">0</property>
-   </filter>
-   <filter id="filter32">
-    <property name="window">75</property>
-    <property name="max_gain">20dB</property>
-    <property name="level">00:00:08.258=-6</property>
-    <property name="mlt_service">volume</property>
-    <property name="kdenlive_id">volume</property>
-    <property name="kdenlive:collapsed">0</property>
-   </filter>
   </entry>
  </playlist>
- <playlist id="playlist7">
+ <playlist id="playlist11">
   <property name="kdenlive:audio_track">1</property>
  </playlist>
- <tractor id="tractor3" in="00:00:00.000" out="01:45:58.350">
+ <tractor id="tractor5" in="00:00:00.000" out="01:42:14.348">
   <property name="kdenlive:audio_track">1</property>
   <property name="kdenlive:trackheight">84</property>
   <property name="kdenlive:timeline_active">1</property>
   <property name="kdenlive:collapsed">0</property>
   <property name="kdenlive:thumbs_format"/>
   <property name="kdenlive:audio_rec"/>
-  <track hide="video" producer="playlist6"/>
-  <track hide="video" producer="playlist7"/>
-  <filter id="filter33">
+  <track hide="video" producer="playlist10"/>
+  <track hide="video" producer="playlist11"/>
+  <filter id="filter39">
    <property name="window">75</property>
    <property name="max_gain">20dB</property>
    <property name="mlt_service">volume</property>
    <property name="internal_added">237</property>
    <property name="disable">1</property>
   </filter>
-  <filter id="filter34">
+  <filter id="filter40">
    <property name="channel">-1</property>
    <property name="mlt_service">panner</property>
    <property name="internal_added">237</property>
    <property name="start">0.5</property>
    <property name="disable">1</property>
   </filter>
-  <filter id="filter35">
+  <filter id="filter41">
    <property name="iec_scale">0</property>
    <property name="mlt_service">audiolevel</property>
    <property name="dbpeak">1</property>
@@ -3147,7 +2801,7 @@ https://youtube.com/rebeccaetripp</property>
   <property name="set.test_audio">1</property>
   <property name="set.test_image">0</property>
  </chain>
- <playlist id="playlist8">
+ <playlist id="playlist12">
   <entry in="00:00:00.000" out="00:00:36.411" producer="chain16">
    <property name="kdenlive:id">4</property>
   </entry>
@@ -3419,30 +3073,30 @@ https://youtube.com/rebeccaetripp</property>
    <property name="kdenlive:id">4</property>
   </entry>
  </playlist>
- <playlist id="playlist9"/>
- <tractor id="tractor4" in="00:00:00.000" out="01:45:58.350">
-  <property name="kdenlive:trackheight">84</property>
-  <property name="kdenlive:timeline_active">1</property>
-  <property name="kdenlive:collapsed">0</property>
-  <property name="kdenlive:thumbs_format"/>
-  <property name="kdenlive:audio_rec"/>
-  <track hide="audio" producer="playlist8"/>
-  <track hide="audio" producer="playlist9"/>
- </tractor>
- <playlist id="playlist10"/>
- <playlist id="playlist11"/>
- <tractor id="tractor5" in="00:00:00.000">
-  <property name="kdenlive:trackheight">84</property>
-  <property name="kdenlive:timeline_active">1</property>
-  <property name="kdenlive:collapsed">0</property>
-  <property name="kdenlive:thumbs_format"/>
-  <property name="kdenlive:audio_rec"/>
-  <track hide="audio" producer="playlist10"/>
-  <track hide="audio" producer="playlist11"/>
- </tractor>
+ <playlist id="playlist13"/>
  <tractor id="tractor6" in="00:00:00.000" out="01:45:58.350">
-  <property name="kdenlive:duration">01:45:58.392</property>
-  <property name="kdenlive:maxduration">152448</property>
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="both" producer="playlist12"/>
+  <track hide="both" producer="playlist13"/>
+ </tractor>
+ <playlist id="playlist14"/>
+ <playlist id="playlist15"/>
+ <tractor id="tractor7" in="00:00:00.000">
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="audio" producer="playlist14"/>
+  <track hide="audio" producer="playlist15"/>
+ </tractor>
+ <tractor id="tractor8" in="00:00:00.000" out="01:46:28.904">
+  <property name="kdenlive:duration">01:46:28.946</property>
+  <property name="kdenlive:maxduration">153180</property>
   <property name="kdenlive:clipname">Sequence 1</property>
   <property name="kdenlive:description"/>
   <property name="kdenlive:uuid">{1db74e36-f274-4325-a5be-2dc513831cf7}</property>
@@ -3452,7 +3106,8 @@ https://youtube.com/rebeccaetripp</property>
   <property name="kdenlive:clip_type">0</property>
   <property name="kdenlive:file_hash">becb503f1a4343e88c2c3b673120b8ec</property>
   <property name="kdenlive:folderid">2</property>
-  <property name="kdenlive:sequenceproperties.activeTrack">3</property>
+  <property name="kdenlive:sequenceproperties.tracksCount">8</property>
+  <property name="kdenlive:sequenceproperties.activeTrack">4</property>
   <property name="kdenlive:sequenceproperties.audioTarget">1</property>
   <property name="kdenlive:sequenceproperties.disablepreview">0</property>
   <property name="kdenlive:sequenceproperties.documentuuid">{1db74e36-f274-4325-a5be-2dc513831cf7}</property>
@@ -3462,8 +3117,8 @@ https://youtube.com/rebeccaetripp</property>
   <property name="kdenlive:sequenceproperties.hasAudio">1</property>
   <property name="kdenlive:sequenceproperties.hasVideo">1</property>
   <property name="kdenlive:sequenceproperties.hidesubtitle">0</property>
-  <property name="kdenlive:sequenceproperties.position">152313</property>
-  <property name="kdenlive:sequenceproperties.scrollPos">34082</property>
+  <property name="kdenlive:sequenceproperties.position">146822</property>
+  <property name="kdenlive:sequenceproperties.scrollPos">11479</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
         "file": "C:/Users/kado/AppData/Local/Temp/1753192907790-{5a4fb020-dfb8-4678-ae51-410861766279}.ass",
@@ -3473,22 +3128,21 @@ https://youtube.com/rebeccaetripp</property>
 ]
 </property>
   <property name="kdenlive:sequenceproperties.tracks">4</property>
-  <property name="kdenlive:sequenceproperties.tracksCount">6</property>
   <property name="kdenlive:sequenceproperties.verticalzoom">1</property>
   <property name="kdenlive:sequenceproperties.videoTarget">2</property>
-  <property name="kdenlive:sequenceproperties.zonein">612</property>
-  <property name="kdenlive:sequenceproperties.zoneout">823</property>
-  <property name="kdenlive:sequenceproperties.zoom">11</property>
+  <property name="kdenlive:sequenceproperties.zonein">2765</property>
+  <property name="kdenlive:sequenceproperties.zoneout">2787</property>
+  <property name="kdenlive:sequenceproperties.zoom">13</property>
   <property name="kdenlive:sequenceproperties.groups">[
     {
         "children": [
             {
-                "data": "4:98438:-1",
+                "data": "5:78508:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:98438:-1",
+                "data": "6:78508:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3498,12 +3152,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:104050:-1",
+                "data": "5:128765:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:104050:-1",
+                "data": "6:128765:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3513,12 +3167,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:13915:-1",
+                "data": "6:133514:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:13915:-1",
+                "data": "5:133514:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3528,12 +3182,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:108053:-1",
+                "data": "5:134999:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:108053:-1",
+                "data": "6:134999:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3543,12 +3197,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:39306:-1",
+                "data": "5:28477:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:39306:-1",
+                "data": "6:28477:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3558,12 +3212,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:46182:-1",
+                "data": "5:135683:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:46182:-1",
+                "data": "6:135683:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3573,12 +3227,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:91972:-1",
+                "data": "6:102767:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:91972:-1",
+                "data": "5:102767:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3588,12 +3242,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:14197:-1",
+                "data": "6:135235:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:14197:-1",
+                "data": "5:135235:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3603,12 +3257,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:38679:-1",
+                "data": "5:78794:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:38679:-1",
+                "data": "6:78794:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3618,12 +3272,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:73460:-1",
+                "data": "6:17652:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:73460:-1",
+                "data": "5:17652:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3633,12 +3287,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:39702:-1",
+                "data": "6:36441:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:39702:-1",
+                "data": "5:36441:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3648,12 +3302,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:88491:-1",
+                "data": "5:135791:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:88491:-1",
+                "data": "6:135791:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3663,12 +3317,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:20419:-1",
+                "data": "6:130153:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:20419:-1",
+                "data": "5:130153:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3678,12 +3332,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:107520:-1",
+                "data": "6:30494:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:107520:-1",
+                "data": "5:30494:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3693,12 +3347,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:24899:-1",
+                "data": "6:127574:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:24899:-1",
+                "data": "5:127574:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3708,12 +3362,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:46386:-1",
+                "data": "5:91146:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:46386:-1",
+                "data": "6:91146:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3723,12 +3377,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:84521:-1",
+                "data": "5:78887:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:84521:-1",
+                "data": "6:78887:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3738,12 +3392,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:73675:-1",
+                "data": "6:134676:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:73675:-1",
+                "data": "5:134676:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3753,12 +3407,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:20604:-1",
+                "data": "5:88795:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:20604:-1",
+                "data": "6:88795:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3768,12 +3422,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:73874:-1",
+                "data": "5:38165:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:73874:-1",
+                "data": "6:38165:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3783,12 +3437,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:25136:-1",
+                "data": "6:29036:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:25136:-1",
+                "data": "5:29036:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3798,12 +3452,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:75167:-1",
+                "data": "5:74233:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:75167:-1",
+                "data": "6:74233:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3813,12 +3467,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:85019:-1",
+                "data": "6:14076:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:85019:-1",
+                "data": "5:14076:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3828,12 +3482,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:78508:-1",
+                "data": "5:34049:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:78508:-1",
+                "data": "6:34049:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3843,12 +3497,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:28477:-1",
+                "data": "6:135480:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:28477:-1",
+                "data": "5:135480:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3858,12 +3512,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:78794:-1",
+                "data": "6:39802:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:78794:-1",
+                "data": "5:39802:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3873,12 +3527,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:130153:-1",
+                "data": "6:84521:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:130153:-1",
+                "data": "5:84521:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3888,12 +3542,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:78887:-1",
+                "data": "6:130316:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:78887:-1",
+                "data": "5:130316:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3903,12 +3557,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:29036:-1",
+                "data": "6:13968:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:29036:-1",
+                "data": "5:13968:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3918,12 +3572,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:121164:-1",
+                "data": "6:121164:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:121164:-1",
+                "data": "5:121164:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3933,12 +3587,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:874:-1",
+                "data": "6:13960:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:874:-1",
+                "data": "5:13960:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3948,12 +3602,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:128972:-1",
+                "data": "6:24899:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:128972:-1",
+                "data": "5:24899:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3963,12 +3617,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:19952:-1",
+                "data": "6:135759:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:19952:-1",
+                "data": "5:135759:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3978,12 +3632,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:36548:-1",
+                "data": "5:92459:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:36548:-1",
+                "data": "6:92459:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -3993,12 +3647,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:75274:-1",
+                "data": "6:98438:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:75274:-1",
+                "data": "5:98438:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4008,12 +3662,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:134122:-1",
+                "data": "6:107520:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:134122:-1",
+                "data": "5:107520:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4023,12 +3677,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:12521:-1",
+                "data": "6:128476:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:12521:-1",
+                "data": "5:128476:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4038,12 +3692,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:79191:-1",
+                "data": "5:12821:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:79191:-1",
+                "data": "6:12821:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4053,12 +3707,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:38433:-1",
+                "data": "5:874:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:38433:-1",
+                "data": "6:874:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4068,12 +3722,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:34288:-1",
+                "data": "6:20419:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:34288:-1",
+                "data": "5:20419:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4083,12 +3737,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:20087:-1",
+                "data": "6:73675:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:20087:-1",
+                "data": "5:73675:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4098,12 +3752,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:128295:-1",
+                "data": "6:14142:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:128295:-1",
+                "data": "5:14142:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4113,12 +3767,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:135759:-1",
+                "data": "6:128972:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:135759:-1",
+                "data": "5:128972:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4128,12 +3782,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:19592:-1",
+                "data": "5:88491:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:19592:-1",
+                "data": "6:88491:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4143,12 +3797,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:128765:-1",
+                "data": "6:128725:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:128765:-1",
+                "data": "5:128725:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4158,12 +3812,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:134999:-1",
+                "data": "5:39056:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:134999:-1",
+                "data": "6:39056:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4173,12 +3827,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:135683:-1",
+                "data": "6:19952:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:135683:-1",
+                "data": "5:19952:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4188,12 +3842,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:135235:-1",
+                "data": "6:39702:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:135235:-1",
+                "data": "5:39702:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4203,12 +3857,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:17652:-1",
+                "data": "5:20604:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:17652:-1",
+                "data": "6:20604:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4218,12 +3872,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:135791:-1",
+                "data": "6:44092:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:135791:-1",
+                "data": "5:44092:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4233,12 +3887,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:30494:-1",
+                "data": "6:36548:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:30494:-1",
+                "data": "5:36548:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4248,12 +3902,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:91146:-1",
+                "data": "6:73460:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:91146:-1",
+                "data": "5:73460:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4263,12 +3917,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:134676:-1",
+                "data": "5:98833:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:134676:-1",
+                "data": "6:98833:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4278,12 +3932,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:38165:-1",
+                "data": "5:127852:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:38165:-1",
+                "data": "6:127852:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4293,12 +3947,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:74233:-1",
+                "data": "6:75274:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:74233:-1",
+                "data": "5:75274:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4308,12 +3962,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:34049:-1",
+                "data": "6:38679:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:34049:-1",
+                "data": "5:38679:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4323,12 +3977,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:39802:-1",
+                "data": "6:73874:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:39802:-1",
+                "data": "5:73874:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4338,12 +3992,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:130316:-1",
+                "data": "5:30323:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:130316:-1",
+                "data": "6:30323:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4353,12 +4007,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:16478:-1",
+                "data": "5:134122:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:16478:-1",
+                "data": "6:134122:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4368,12 +4022,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:128476:-1",
+                "data": "6:14197:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:128476:-1",
+                "data": "5:14197:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4383,12 +4037,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:140024:-1",
+                "data": "5:0:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:140024:-1",
+                "data": "6:0:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4398,12 +4052,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:139864:-1",
+                "data": "5:19109:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:139864:-1",
+                "data": "6:19109:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4413,12 +4067,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:85051:-1",
+                "data": "6:16478:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:85051:-1",
+                "data": "5:16478:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4428,12 +4082,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:85003:-1",
+                "data": "5:46386:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:85003:-1",
+                "data": "6:46386:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4443,12 +4097,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:121343:-1",
+                "data": "5:140024:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:121343:-1",
+                "data": "6:140024:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4458,12 +4112,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:84541:-1",
+                "data": "6:128295:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:84541:-1",
+                "data": "5:128295:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4473,12 +4127,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:19109:-1",
+                "data": "5:104050:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:19109:-1",
+                "data": "6:104050:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4488,12 +4142,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:30323:-1",
+                "data": "6:85019:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:30323:-1",
+                "data": "5:85019:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4503,12 +4157,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:127852:-1",
+                "data": "6:139864:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:127852:-1",
+                "data": "5:139864:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4518,12 +4172,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:44092:-1",
+                "data": "6:20087:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:44092:-1",
+                "data": "5:20087:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4533,12 +4187,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:39056:-1",
+                "data": "6:13915:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:39056:-1",
+                "data": "5:13915:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4548,12 +4202,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:14142:-1",
+                "data": "5:84572:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:14142:-1",
+                "data": "6:84572:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4563,12 +4217,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:12821:-1",
+                "data": "6:85051:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:12821:-1",
+                "data": "5:85051:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4578,12 +4232,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:92459:-1",
+                "data": "6:34288:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:92459:-1",
+                "data": "5:34288:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4593,12 +4247,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:91318:-1",
+                "data": "6:108053:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:91318:-1",
+                "data": "5:108053:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4608,12 +4262,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:13968:-1",
+                "data": "6:75167:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:13968:-1",
+                "data": "5:75167:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4623,12 +4277,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:128725:-1",
+                "data": "6:85003:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:128725:-1",
+                "data": "5:85003:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4638,12 +4292,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:98833:-1",
+                "data": "5:38433:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:98833:-1",
+                "data": "6:38433:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4653,12 +4307,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:0:-1",
+                "data": "6:39306:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:0:-1",
+                "data": "5:39306:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4668,12 +4322,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:84476:-1",
+                "data": "6:84476:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:84476:-1",
+                "data": "5:84476:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4683,12 +4337,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:84572:-1",
+                "data": "6:121343:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:84572:-1",
+                "data": "5:121343:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4698,12 +4352,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:13960:-1",
+                "data": "6:79191:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:13960:-1",
+                "data": "5:79191:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4713,12 +4367,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:133514:-1",
+                "data": "6:46182:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:133514:-1",
+                "data": "5:46182:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4728,12 +4382,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:102767:-1",
+                "data": "5:25136:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:102767:-1",
+                "data": "6:25136:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4743,12 +4397,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:36441:-1",
+                "data": "5:84541:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:36441:-1",
+                "data": "6:84541:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4758,12 +4412,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:127574:-1",
+                "data": "5:12521:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:127574:-1",
+                "data": "6:12521:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4773,12 +4427,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "3:88795:-1",
+                "data": "6:91972:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "4:88795:-1",
+                "data": "5:91972:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4788,12 +4442,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:14076:-1",
+                "data": "6:19592:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:14076:-1",
+                "data": "5:19592:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4803,12 +4457,12 @@ https://youtube.com/rebeccaetripp</property>
     {
         "children": [
             {
-                "data": "4:135480:-1",
+                "data": "6:91318:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             },
             {
-                "data": "3:135480:-1",
+                "data": "5:91318:-1",
                 "leaf": "clip",
                 "type": "Leaf"
             }
@@ -4827,6 +4481,8 @@ https://youtube.com/rebeccaetripp</property>
   <track producer="tractor3"/>
   <track producer="tractor4"/>
   <track producer="tractor5"/>
+  <track producer="tractor6"/>
+  <track producer="tractor7"/>
   <transition id="transition0">
    <property name="a_track">0</property>
    <property name="b_track">1</property>
@@ -4870,17 +4526,26 @@ https://youtube.com/rebeccaetripp</property>
   <transition id="transition4">
    <property name="a_track">0</property>
    <property name="b_track">5</property>
-   <property name="compositing">0</property>
-   <property name="distort">0</property>
-   <property name="rotate_center">0</property>
-   <property name="mlt_service">qtblend</property>
-   <property name="kdenlive_id">qtblend</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
    <property name="internal_added">237</property>
    <property name="always_active">1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="sum">1</property>
   </transition>
   <transition id="transition5">
    <property name="a_track">0</property>
    <property name="b_track">6</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="sum">1</property>
+  </transition>
+  <transition id="transition6">
+   <property name="a_track">0</property>
+   <property name="b_track">7</property>
    <property name="compositing">0</property>
    <property name="distort">0</property>
    <property name="rotate_center">0</property>
@@ -4889,103 +4554,42 @@ https://youtube.com/rebeccaetripp</property>
    <property name="internal_added">237</property>
    <property name="always_active">1</property>
   </transition>
-  <filter id="filter36">
+  <transition id="transition7">
+   <property name="a_track">0</property>
+   <property name="b_track">8</property>
+   <property name="compositing">0</property>
+   <property name="distort">0</property>
+   <property name="rotate_center">0</property>
+   <property name="mlt_service">qtblend</property>
+   <property name="kdenlive_id">qtblend</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+  </transition>
+  <filter id="filter42">
    <property name="window">75</property>
    <property name="max_gain">20dB</property>
    <property name="mlt_service">volume</property>
    <property name="internal_added">237</property>
    <property name="disable">1</property>
   </filter>
-  <filter id="filter37">
+  <filter id="filter43">
    <property name="channel">-1</property>
    <property name="mlt_service">panner</property>
    <property name="internal_added">237</property>
    <property name="start">0.5</property>
    <property name="disable">1</property>
   </filter>
-  <filter id="filter38">
+  <filter id="filter44">
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
    <property name="av.filename">Final Fantasy (2001) Restoration.kdenlive.ass</property>
   </filter>
  </tractor>
- <chain id="chain17" out="00:03:36.870">
-  <property name="length">5200</property>
-  <property name="eof">pause</property>
-  <property name="resource">ost/Final_Fantasy_10_Lake_in_Ontario_OC_ReMix.mp3</property>
-  <property name="mlt_service">avformat-novalidate</property>
-  <property name="meta.media.nb_streams">2</property>
-  <property name="meta.media.0.stream.type">audio</property>
-  <property name="meta.media.0.codec.sample_fmt">fltp</property>
-  <property name="meta.media.0.codec.sample_rate">44100</property>
-  <property name="meta.media.0.codec.channels">2</property>
-  <property name="meta.media.0.codec.layout">stereo</property>
-  <property name="meta.media.0.codec.name">mp3float</property>
-  <property name="meta.media.0.codec.long_name">MP3 (MPEG audio layer 3)</property>
-  <property name="meta.media.0.codec.bit_rate">192000</property>
-  <property name="meta.media.1.stream.type">video</property>
-  <property name="meta.media.1.stream.frame_rate">90000</property>
-  <property name="meta.media.1.stream.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.width">700</property>
-  <property name="meta.media.1.codec.height">700</property>
-  <property name="meta.media.1.codec.rotate">0</property>
-  <property name="meta.media.1.codec.pix_fmt">yuvj444p</property>
-  <property name="meta.media.1.codec.sample_aspect_ratio">0</property>
-  <property name="meta.media.1.codec.colorspace">601</property>
-  <property name="meta.media.1.codec.name">mjpeg</property>
-  <property name="meta.media.1.codec.long_name">MJPEG (Motion JPEG)</property>
-  <property name="meta.media.1.codec.bit_rate">0</property>
-  <property name="meta.attr.1.stream.comment.markup">Cover (front)</property>
-  <property name="meta.attr.album.markup">ocremix.org</property>
-  <property name="meta.attr.artist.markup">ilp0</property>
-  <property name="meta.attr.album_artist.markup">OverClocked ReMix</property>
-  <property name="meta.attr.comment.markup">Ilari Nieminen&#xd;
-isniemin@cs.helsinki.fi&#xd;
-http://last.fm/music/ilp0</property>
-  <property name="meta.attr.composer.markup">Nobuo Uematsu</property>
-  <property name="meta.attr.grouping.markup">Final Fantasy X</property>
-  <property name="meta.attr.copyright.markup">Square</property>
-  <property name="meta.attr.encoded_by.markup">Ilari Nieminen (isniemin@cs.helsinki.fi)</property>
-  <property name="meta.attr.genre.markup">Game</property>
-  <property name="meta.attr.compilation.markup">1</property>
-  <property name="meta.attr.TOPE.markup">PlayStation 2</property>
-  <property name="meta.attr.publisher.markup">OverClocked ReMix</property>
-  <property name="meta.attr.SETSUBTITLE.markup">OCR01560</property>
-  <property name="meta.attr.TIT3.markup">Lake in Ontario?</property>
-  <property name="meta.attr.title.markup">Final Fantasy X "Lake in Ontario?" OC ReMix</property>
-  <property name="meta.attr.track.markup">1560</property>
-  <property name="meta.attr.date.markup">2007</property>
-  <property name="seekable">1</property>
-  <property name="meta.media.sample_aspect_num">1</property>
-  <property name="meta.media.sample_aspect_den">1</property>
-  <property name="audio_index">0</property>
-  <property name="video_index">1</property>
-  <property name="vstream">0</property>
-  <property name="meta.media.frame_rate_num">90000</property>
-  <property name="meta.media.frame_rate_den">1</property>
-  <property name="meta.media.colorspace">601</property>
-  <property name="meta.media.color_trc">2</property>
-  <property name="meta.media.has_b_frames">0</property>
-  <property name="meta.media.width">700</property>
-  <property name="meta.media.height">700</property>
-  <property name="meta.media.aspect_ratio">1</property>
-  <property name="meta.media.color_range">full</property>
-  <property name="astream">0</property>
-  <property name="meta.media.top_field_first">0</property>
-  <property name="meta.media.progressive">1</property>
-  <property name="kdenlive:folderid">5</property>
-  <property name="kdenlive:id">16</property>
-  <property name="kdenlive:control_uuid">{706a63b7-ae4c-4049-b185-bc0848649b24}</property>
-  <property name="mute_on_pause">0</property>
-  <property name="kdenlive:clip_type">0</property>
-  <property name="kdenlive:coverartstream">1</property>
-  <property name="kdenlive:file_size">5292699</property>
-  <property name="kdenlive:file_hash">33b8cca8fdd7cb417563e7cd62304a4d</property>
- </chain>
  <playlist id="main_bin">
   <property name="kdenlive:folder.-1.2">Sequences</property>
   <property name="kdenlive:folder.-1.5">ost</property>
+  <property name="kdenlive:folder.-1.17">DVD</property>
   <property name="kdenlive:sequenceFolder">2</property>
   <property name="kdenlive:docproperties.activetimeline">{1db74e36-f274-4325-a5be-2dc513831cf7}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
@@ -5058,10 +4662,10 @@ http://last.fm/music/ilp0</property>
   <property name="kdenlive:docproperties.proxyparams"/>
   <property name="kdenlive:docproperties.proxyresize">640</property>
   <property name="kdenlive:docproperties.seekOffset">30000</property>
-  <property name="kdenlive:docproperties.sessionid">{15b9103a-5e1c-4e87-99d3-23d5bf887716}</property>
+  <property name="kdenlive:docproperties.sessionid">{1ce37634-14b5-455a-9806-12e39fc4348d}</property>
   <property name="kdenlive:docproperties.uuid">{1db74e36-f274-4325-a5be-2dc513831cf7}</property>
   <property name="kdenlive:docproperties.version">1.1</property>
-  <property name="kdenlive:expandedFolders">5</property>
+  <property name="kdenlive:expandedFolders">17;5</property>
   <property name="kdenlive:binZoom">4</property>
   <property name="kdenlive:extraBins">project_bin:-1:0</property>
   <property name="kdenlive:documentnotes"/>
@@ -5069,20 +4673,13 @@ http://last.fm/music/ilp0</property>
   <property name="xml_retain">1</property>
   <entry in="00:00:00.000" out="01:45:58.350" producer="chain4"/>
   <entry in="00:00:00.000" out="00:01:50.133" producer="chain5"/>
-  <entry in="00:00:00.000" out="00:02:46.296" producer="chain6"/>
-  <entry in="00:00:00.000" out="00:05:27.819" producer="chain9"/>
-  <entry in="00:00:00.000" out="00:03:59.810" producer="chain8"/>
-  <entry in="00:00:00.000" out="00:04:18.227" producer="chain10"/>
-  <entry in="00:00:00.000" out="00:01:00.334" producer="chain11"/>
-  <entry in="00:00:00.000" out="00:01:06.673" producer="chain12"/>
-  <entry in="00:00:00.000" out="00:00:52.511" producer="chain13"/>
   <entry in="00:00:00.000" out="00:04:05.797" producer="chain14"/>
-  <entry in="00:00:00.000" out="00:05:41.041" producer="chain15"/>
-  <entry in="00:00:00.000" out="01:45:58.350" producer="tractor6"/>
   <entry in="00:00:00.000" out="00:03:36.870" producer="chain17"/>
+  <entry in="00:00:00.000" out="01:46:27.402" producer="chain8"/>
+  <entry in="00:00:00.000" out="01:46:28.862" producer="tractor8"/>
  </playlist>
- <tractor id="tractor7" in="00:00:00.000" out="01:45:58.350">
+ <tractor id="tractor9" in="00:00:00.000" out="01:46:28.904">
   <property name="kdenlive:projectTractor">1</property>
-  <track in="00:00:00.000" out="01:45:58.350" producer="tractor6"/>
+  <track in="00:00:00.000" out="01:46:28.904" producer="tractor8"/>
  </tractor>
 </mlt>
