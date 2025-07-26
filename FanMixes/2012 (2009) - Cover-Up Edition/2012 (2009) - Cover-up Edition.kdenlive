@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='utf-8'?>
+<<<<<<< Updated upstream
 <mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="C:/Users/kado/Videos/FanEdits/FanMixes/2012 (2009) - Cover-Up Edition" version="7.33.0">
+=======
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/FanEdits/FanMixes/2012 (2009) - Cover-Up Edition" version="7.33.0">
+>>>>>>> Stashed changes
  <profile colorspace="709" description="3840x1600 23.98fps" display_aspect_den="5" display_aspect_num="12" frame_rate_den="1001" frame_rate_num="24000" height="1600" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain6" out="02:37:50.509">
   <property name="length">227065</property>
@@ -2050,7 +2054,11 @@
   <property name="kdenlive:sequenceproperties.hasAudio">1</property>
   <property name="kdenlive:sequenceproperties.hasVideo">1</property>
   <property name="kdenlive:sequenceproperties.hidesubtitle">0</property>
+<<<<<<< Updated upstream
   <property name="kdenlive:sequenceproperties.position">154375</property>
+=======
+  <property name="kdenlive:sequenceproperties.position">117544</property>
+>>>>>>> Stashed changes
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
@@ -3348,11 +3356,11 @@
     }
 ]
 </property>
-  <property name="kdenlive:docproperties.kdenliveversion">25.04.2</property>
+  <property name="kdenlive:docproperties.kdenliveversion">25.04.3</property>
   <property name="kdenlive:docproperties.opensequences">{ac7bbb03-e4db-4fd0-9877-f5536cbd9e39}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile11</property>
+  <property name="kdenlive:docproperties.profile">C:/Users/ari/AppData/Roaming/kdenlive/profiles/customprofile0</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>
@@ -3376,9 +3384,15 @@
   <property name="kdenlive:docproperties.rendertcoverlay">0</property>
   <property name="kdenlive:docproperties.rendertctype">-1</property>
   <property name="kdenlive:docproperties.rendertwopass">0</property>
+<<<<<<< Updated upstream
   <property name="kdenlive:docproperties.renderurl">C:/Users/kado/Videos/2012 (2009) - Cover-up Edition.mp4</property>
   <property name="kdenlive:docproperties.seekOffset">30000</property>
   <property name="kdenlive:docproperties.sessionid">{dd0f6fed-f100-494a-aeed-5a9746ac5754}</property>
+=======
+  <property name="kdenlive:docproperties.renderurl">2012 (2009) - Cover-Up Edition.mp4</property>
+  <property name="kdenlive:docproperties.seekOffset">30000</property>
+  <property name="kdenlive:docproperties.sessionid">{f344102d-26ba-4246-9d03-68be040474c7}</property>
+>>>>>>> Stashed changes
   <property name="kdenlive:docproperties.uuid">{ac7bbb03-e4db-4fd0-9877-f5536cbd9e39}</property>
   <property name="kdenlive:docproperties.version">1.1</property>
   <property name="kdenlive:expandedFolders"/>
