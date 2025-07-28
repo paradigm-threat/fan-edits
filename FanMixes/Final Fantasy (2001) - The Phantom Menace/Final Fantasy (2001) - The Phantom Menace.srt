@@ -704,1908 +704,1890 @@ Faith and hard work, girl...
 you're going to die before me.
 
 157
-00:21:17,776 --> 00:21:19,069
+00:21:15,857 --> 00:21:17,150
 Captain Edwards...
 
 158
-00:21:19,778 --> 00:21:24,074
+00:21:17,859 --> 00:21:22,155
 ...you extracted a Dr. Ross from 
 Old New York several days ago did you not?
 
 159
-00:21:24,283 --> 00:21:27,577
+00:21:22,364 --> 00:21:25,659
 - Yes, sir. 
 - What were your impressions of Dr. Ross?
 
 160
-00:21:27,911 --> 00:21:31,248
+00:21:25,993 --> 00:21:29,329
 She seemed very capable and determined, sir.
 
 161
-00:21:31,456 --> 00:21:34,876
+00:21:29,538 --> 00:21:32,958
 You and the Deep Eyes are being 
 temporarily reassigned.
 
 162
-00:21:35,836 --> 00:21:38,296
+00:21:33,917 --> 00:21:36,378
 You will guard Dr. Ross 
 when she reenters the wasteland.
 
 163
-00:21:39,214 --> 00:21:42,592
+00:21:37,295 --> 00:21:40,674
 - Understood, sir. 
 - You don't understand yet, captain.
 
 164
-00:21:42,968 --> 00:21:47,139
+00:21:41,049 --> 00:21:45,220
 Report any aberrant behavior 
 in Dr. Ross to the major immediately.
 
 165
-00:21:47,347 --> 00:21:48,598
+00:21:45,429 --> 00:21:46,680
 Aberrant behavior sir?
 
 166
-00:21:48,807 --> 00:21:53,979
+00:21:46,888 --> 00:21:52,060
 The woman carries an alien infestation, captain. 
 We don't know what it may be doing to her.
 
 167
-00:21:54,187 --> 00:21:56,606
+00:21:52,269 --> 00:21:54,688
 The alien presence could be affecting her judgment.
 
 168
-00:21:56,815 --> 00:21:59,818
+00:21:54,896 --> 00:21:57,899
 They may be manipulating the doctor 
 for their very own purposes.
 
 169
-00:22:00,068 --> 00:22:02,904
+00:21:58,150 --> 00:22:00,986
 She's had prolonged exposure 
 to Phantom tissue.
 
 170
-00:22:03,196 --> 00:22:05,824
+00:22:01,278 --> 00:22:03,905
 If this begins to manifest itself in any way...
 
 171
-00:22:06,033 --> 00:22:10,829
+00:22:04,114 --> 00:22:08,910
 ...Dr. Ross is to be placed under arrest 
 and transported here for observation.
 
 172
-00:22:12,205 --> 00:22:15,292
+00:22:10,287 --> 00:22:13,373
 It is, in fact, for her own good, captain.
 
 173
-00:22:15,542 --> 00:22:16,626
+00:22:13,623 --> 00:22:14,708
 Of course, sir.
 
 174
-00:23:56,101 --> 00:23:59,771
+00:23:54,182 --> 00:23:57,853
 I'm convinced that these dreams 
 are some form of communication.
 
 175
-00:23:59,980 --> 00:24:01,982
+00:23:58,061 --> 00:24:00,063
 Their message still eludes me...
 
 176
-00:24:02,190 --> 00:24:06,653
+00:24:00,272 --> 00:24:04,734
 ...but they're coming faster now 
 and that can only mean one thing.
 
 177
-00:24:07,112 --> 00:24:10,073
+00:24:05,193 --> 00:24:08,155
 The Phantoms inside me are beginning to win.
 
 178
-00:24:10,282 --> 00:24:13,410
+00:24:08,363 --> 00:24:11,491
 Our target is 50 klicks west of Tucson.
 
 179
-00:24:14,119 --> 00:24:15,162
+00:24:12,200 --> 00:24:13,243
 - Roger. 
 - Phantom concentration?
 
 180
-00:24:15,370 --> 00:24:17,789
+00:24:13,452 --> 00:24:15,871
 Not good. We've got big metas everywhere.
 
 181
-00:24:17,998 --> 00:24:19,833
+00:24:15,162 --> 00:24:17,914
 So it's gonna be a real picnic.
 
 182
-00:24:20,041 --> 00:24:23,837
+00:24:18,123 --> 00:24:21,918
 Stick close to me. No heroics today. Okay? 
 Everything by the book.
 
 183
-00:24:24,045 --> 00:24:25,881
+00:24:22,127 --> 00:24:23,962
 By the book. Right.
 
 184
-00:24:32,471 --> 00:24:35,974
+00:24:30,552 --> 00:24:34,055
 If we drop energy buoys here, 
 here and here...
 
 185
-00:24:36,224 --> 00:24:38,018
+00:24:34,306 --> 00:24:36,099
 ...we should be able to 
 land, acquire the target,
 
 186
-00:24:38,018 --> 00:24:40,061
+00:24:36,099 --> 00:24:38,143
 and get out before the Phantoms 
 even know we were there.
 
 187
-00:24:40,270 --> 00:24:42,355
+00:24:38,351 --> 00:24:40,437
 And the buoys will attract the Phantoms?
 
 188
-00:24:42,564 --> 00:24:44,524
+00:24:40,645 --> 00:24:42,606
 - Yeah. 
 - For a while.
 
 189
-00:24:54,075 --> 00:24:57,204
+00:24:52,157 --> 00:24:55,285
 So you're from the 307th's right? 
 Under General Hein?
 
 190
-00:24:57,412 --> 00:25:01,541
+00:24:55,494 --> 00:24:59,623
 Ever done wasteland recon before? 
 It can get pretty ugly.
 
 191
-00:25:28,151 --> 00:25:33,532
+00:25:26,233 --> 00:25:31,613
 Captain, rendezvous for evac at 
 vector 6, coordinate 279.
 
 192
-00:25:34,616 --> 00:25:37,202
+00:25:32,697 --> 00:25:35,283
 Roger that. Stay alert for hostiles.
 
 193
-00:25:55,470 --> 00:25:57,722
+00:25:53,552 --> 00:25:55,804
 Looks like they've taken the bait.
 
 194
-00:26:13,280 --> 00:26:16,449
+00:26:11,361 --> 00:26:14,531
 The seventh spirit should be 
 just beyond that line of wreckage.
 
 195
-00:26:16,658 --> 00:26:19,536
+00:26:14,739 --> 00:26:17,617
 I don't see how any living thing 
 could survive out here?
 
 196
-00:26:19,744 --> 00:26:21,079
+00:26:17,826 --> 00:26:19,160
 We'll find out soon enough.
 
 197
-00:26:23,748 --> 00:26:26,501
+00:26:21,830 --> 00:26:24,582
 This was the Phantom Cleansing Mission.
 
 198
-00:26:26,751 --> 00:26:29,254
+00:26:24,833 --> 00:26:27,335
 It was supposed to end the war.
 
 199
-00:26:31,840 --> 00:26:34,426
+00:26:29,921 --> 00:26:32,507
 My father's in here somewhere.
 
 200
-00:26:37,470 --> 00:26:38,555
+00:26:35,552 --> 00:26:36,636
 All right.
 
 201
-00:26:39,222 --> 00:26:41,016
+00:26:37,304 --> 00:26:39,097
 Let's move out, people.
 
 202
-00:26:57,198 --> 00:26:58,450
+00:26:55,280 --> 00:26:56,531
 I'll be damned.
 
 203
-00:26:58,658 --> 00:26:59,743
+00:26:56,740 --> 00:26:57,824
 A survivor.
 
 204
-00:27:01,036 --> 00:27:02,537
+00:26:59,117 --> 00:27:00,619
 What's it doing out here?
 
 205
-00:27:02,746 --> 00:27:04,622
+00:27:00,827 --> 00:27:02,704
 Hoping for life to return.
 
 206
-00:27:06,082 --> 00:27:07,834
+00:27:04,164 --> 00:27:05,915
 Is that our spirit, doc?
 
 207
-00:27:09,794 --> 00:27:10,837
+00:27:07,876 --> 00:27:08,918
 No.
 
 208
-00:27:25,018 --> 00:27:26,728
+00:27:23,099 --> 00:27:24,809
 We're closing in on the life form.
 
 209
-00:27:26,936 --> 00:27:30,899
+00:27:25,018 --> 00:27:28,980
 - Distance? 
 - Hard to say. We're very close.
 
 210
-00:27:30,482 --> 00:27:33,443
+00:27:28,563 --> 00:27:31,524
 I don't see anything.
 
 211
-00:27:38,865 --> 00:27:42,369
+00:27:36,946 --> 00:27:40,450
 - You're not gonna tell me it's him? 
 - That's impossible.
 
 212
-00:27:50,752 --> 00:27:52,545
+00:27:48,833 --> 00:27:50,627
 It's not the soldier. It's his ovo-pac.
 
 213
-00:27:52,754 --> 00:27:56,675
+00:27:50,835 --> 00:27:54,756
 How do you explain that? The pacs power 
 our weapons, the barrier cities...
 
 214
-00:27:56,883 --> 00:27:58,635
+00:27:54,964 --> 00:27:56,716
 I mean it's just bio-etheric energy.
 
 215
-00:27:58,843 --> 00:28:02,263
+00:27:56,925 --> 00:28:00,345
 And to create that energy we use 
 living tissue. Single-cell organisms.
 
 216
-00:28:02,472 --> 00:28:05,266
+00:28:00,553 --> 00:28:03,348
 - You're telling me his backpack is the seventh spirit? 
 - Yes.
 
 217
-00:28:05,475 --> 00:28:07,352
+00:28:03,556 --> 00:28:05,433
 We have incoming. Captain? Do you read me?
 
 218
-00:28:07,560 --> 00:28:08,645
+00:28:05,642 --> 00:28:06,726
 - Captain? 
 - What? Say again?
 
 219
-00:28:08,937 --> 00:28:10,772
+00:28:07,018 --> 00:28:08,853
 You read me captain? We have incoming.
 
 220
-00:28:11,022 --> 00:28:12,899
+00:28:09,104 --> 00:28:10,980
 Ryan, get the soldier's pac.
 
 221
-00:28:30,417 --> 00:28:32,627
+00:28:28,498 --> 00:28:30,708
 I need a hand! Sarge!
 
 222
-00:28:36,840 --> 00:28:39,926
+00:28:34,921 --> 00:28:38,007
 - Those buoys? They're not working. 
 - Yeah.
 
 223
-00:28:42,846 --> 00:28:45,640
+00:28:40,927 --> 00:28:43,722
 - Are you all right? 
 - Of course I am.
 
 224
-00:28:45,890 --> 00:28:47,600
+00:28:43,972 --> 00:28:45,682
 Let's get the hell out of here!
 
 225
-00:28:51,271 --> 00:28:53,314
+00:28:49,352 --> 00:28:51,396
 Something's not right. 
 This shouldn't be happening.
 
 226
-00:28:53,523 --> 00:28:55,817
+00:28:51,604 --> 00:28:53,898
 Something's attracting them.
 
 227
-00:28:56,818 --> 00:28:57,902
+00:28:54,899 --> 00:28:55,984
 Aki!
 
 228
-00:29:02,365 --> 00:29:06,286
+00:29:00,447 --> 00:29:04,367
 - They're right on us, sir. Closing in fast! 
 - Jane, take the lead.
 
 229
-00:29:21,050 --> 00:29:22,302
+00:29:19,132 --> 00:29:20,383
 Fire in the hole!
 
 230
-00:29:35,023 --> 00:29:36,733
+00:29:33,104 --> 00:29:34,814
 Get us out of here, Neil.
 
 231
-00:29:37,358 --> 00:29:39,402
+00:29:35,440 --> 00:29:37,484
 - Sir, I would love to, but... 
 - Just do it!
 
 232
-00:30:05,428 --> 00:30:06,679
+00:30:03,510 --> 00:30:04,761
 - Sir? 
 - It's okay, that's it.
 
 233
-00:30:08,348 --> 00:30:10,058
+00:30:06,429 --> 00:30:08,139
 That doesn't look good, captain.
 
 234
-00:30:10,725 --> 00:30:12,519
+00:30:08,806 --> 00:30:10,600
 We have to get her to a hospital.
 
 235
-00:30:12,727 --> 00:30:16,314
+00:30:10,809 --> 00:30:14,395
 - You have your orders, sir. 
 - What the hell is going on here?
 
 236
-00:30:16,564 --> 00:30:20,276
+00:30:14,646 --> 00:30:18,358
 Dr. Ross is to be taken into custody now, sir.
 
 237
-00:30:24,572 --> 00:30:26,533
+00:30:22,654 --> 00:30:24,614
 Lower your weapons. That's an order!
 
 238
-00:30:26,783 --> 00:30:28,743
+00:30:24,864 --> 00:30:26,824
 Sir. We have no choice, 
 but to relieve you of your command.
 
 239
-00:30:28,993 --> 00:30:31,454
+00:30:27,075 --> 00:30:29,536
 I won't let you do this soldier. 
 You'll gonna have to shoot me.
 
 240
-00:30:31,746 --> 00:30:33,289
+00:30:29,828 --> 00:30:31,371
 Stand down, captain!
 
 241
-00:31:57,165 --> 00:31:59,250
+00:31:55,246 --> 00:31:57,332
 Hang on, everyone!
 
 242
-00:32:03,963 --> 00:32:08,051
+00:32:02,045 --> 00:32:06,132
 That's enough. 
 Hands where I can see them. Everyone now!
 
 243
-00:32:18,770 --> 00:32:20,313
+00:32:16,851 --> 00:32:18,394
 Deep Eyes, hard to starboard!
 
 244
-00:32:41,417 --> 00:32:44,420
+00:32:39,499 --> 00:32:42,502
 The Deep Eyes are returning 
 from the wasteland, sir.
 
 245
-00:32:44,629 --> 00:32:46,214
+00:32:42,710 --> 00:32:44,295
 Apparently, there was an incident.
 
 246
-00:32:46,506 --> 00:32:49,300
+00:32:44,587 --> 00:32:47,382
 It would seem the Phantoms 
 were attracted to Dr. Ross.
 
 247
-00:32:49,550 --> 00:32:52,762
+00:32:47,632 --> 00:32:50,843
 The crew barely escaped with their lives.
 
 248
-00:32:52,970 --> 00:32:55,473
+00:32:51,052 --> 00:32:53,554
 And sir, Captain Edwards is still in command.
 
 249
-00:32:55,682 --> 00:32:57,183
+00:32:53,763 --> 00:32:55,264
 Issue an order.
 
 250
-00:32:57,392 --> 00:33:00,353
+00:32:55,473 --> 00:32:58,434
 I want Edwards and Dr. Ross 
 placed under arrest.
 
 251
-00:33:00,561 --> 00:33:03,856
+00:32:58,643 --> 00:33:01,938
 All research materials pertaining 
 to Dr. Sid's wave theory...
 
 252
-00:33:04,065 --> 00:33:05,692
+00:33:02,146 --> 00:33:03,773
 ...are to be confiscated immediately.
 
 253
-00:33:05,900 --> 00:33:08,820
+00:33:03,982 --> 00:33:06,901
 That might not go over 
 too well with the council, sir.
 
 254
-00:33:09,028 --> 00:33:11,447
+00:33:07,110 --> 00:33:09,529
 What a tragedy that would be.
 
 255
-00:33:11,656 --> 00:33:15,952
+00:33:09,737 --> 00:33:14,033
 This is perfect, major. 
 The good captain has opened the door for us.
 
 256
-00:33:16,744 --> 00:33:19,163
+00:33:14,826 --> 00:33:17,245
 By tomorrow morning, 
 the council will be at our feet...
 
 257
-00:33:19,372 --> 00:33:22,792
+00:33:17,453 --> 00:33:20,873
 ...thanking us for exposing 
 the traitors and imploring us...
 
 258
-00:33:23,000 --> 00:33:25,128
+00:33:21,082 --> 00:33:23,209
 ...to save them from the Phantoms.
 
 259
-00:33:29,799 --> 00:33:31,384
+00:33:27,880 --> 00:33:29,465
 How is she, doctor?
 
 260
-00:33:32,176 --> 00:33:35,638
+00:33:30,258 --> 00:33:33,720
 - She is dying. 
 - There must be something you can do.
 
 261
-00:33:35,930 --> 00:33:38,224
+00:33:34,012 --> 00:33:36,305
 Aki is fighting with 
 only six of the eight spirits.
 
 262
-00:33:38,433 --> 00:33:40,643
+00:33:36,514 --> 00:33:38,725
 We'll have to implant the seventh 
 directly into her chest plate.
 
 263
-00:33:41,728 --> 00:33:44,188
+00:33:39,809 --> 00:33:42,270
 It took a bullet. 
 I think it might be damaged.
 
 264
-00:33:44,647 --> 00:33:46,566
+00:33:42,729 --> 00:33:44,647
 We have to repair this panel quickly.
 
 265
-00:33:47,650 --> 00:33:52,321
+00:33:45,732 --> 00:33:50,403
 Her vital signs are dropping. 
 Aki is slipping away from us.
 
 266
-00:33:53,031 --> 00:33:57,577
+00:33:51,112 --> 00:33:55,658
 She needs a sympathetic spirit 
 to help hold her in this world.
 
 267
-00:33:57,785 --> 00:34:02,457
+00:33:55,867 --> 00:34:00,538
 And I can think of no spirit better suited 
 for that task than yours, captain.
 
 268
-00:34:02,707 --> 00:34:06,419
+00:34:00,788 --> 00:34:04,500
 - I don't understand. 
 - You don't have to understand.
 
 269
-00:34:06,878 --> 00:34:08,838
+00:34:04,959 --> 00:34:06,919
 You just be with her now.
 
 270
-00:34:09,964 --> 00:34:12,049
+00:34:08,045 --> 00:34:10,131
 You keep her here with us.
 
 271
-00:35:04,143 --> 00:35:06,479
+00:35:02,225 --> 00:35:04,560
 Aki? Where are we?
 
 272
-00:35:06,687 --> 00:35:08,564
+00:35:04,769 --> 00:35:06,646
 On an alien planet.
 
 273
-00:35:08,773 --> 00:35:10,399
+00:35:06,854 --> 00:35:08,481
 How is that possible?
 
 274
-00:35:12,026 --> 00:35:14,195
+00:35:10,107 --> 00:35:12,276
 I'm not entirely sure.
 
 275
-00:35:14,403 --> 00:35:15,905
+00:35:12,485 --> 00:35:13,986
 You seem pretty calm.
 
 276
-00:35:16,114 --> 00:35:19,367
+00:35:14,195 --> 00:35:17,448
 I've been having this dream 
 every night for months.
 
 277
-00:35:19,575 --> 00:35:20,618
+00:35:17,657 --> 00:35:18,699
 Dream?
 
 278
-00:35:21,202 --> 00:35:23,329
+00:35:19,283 --> 00:35:21,410
 Well, whatever it is.
 
 279
-00:35:25,248 --> 00:35:27,750
+00:35:23,329 --> 00:35:25,832
 You're really here, aren't you?
 
 280
-00:35:29,669 --> 00:35:30,920
+00:35:27,750 --> 00:35:29,001
 What's happening to me?
 
 281
-00:35:31,212 --> 00:35:35,967
+00:35:29,293 --> 00:35:34,048
 Dr. Sid is implanting the seventh spirit 
 directly into your body.
 
 282
-00:35:39,387 --> 00:35:41,889
+00:35:37,468 --> 00:35:39,971
 Something you should see here, sir.
 
 283
-00:35:49,605 --> 00:35:51,858
+00:35:47,687 --> 00:35:49,939
 And I am watching what, major?
 
 284
-00:35:52,066 --> 00:35:55,528
+00:35:50,147 --> 00:35:53,609
 It seems Dr. Ross has been recording her dreams.
 
 285
-00:35:55,736 --> 00:35:58,322
+00:35:53,818 --> 00:35:56,404
 And why would I be interested in...
 
 286
-00:35:59,740 --> 00:36:00,992
+00:35:57,822 --> 00:35:59,073
 ...her dreams?
 
 287
-00:36:01,450 --> 00:36:03,661
+00:35:59,532 --> 00:36:01,742
 This is it. This is our evidence.
 
 288
-00:36:03,870 --> 00:36:06,330
+00:36:01,951 --> 00:36:04,412
 She's under the influence of the Phantoms.
 
 289
-00:36:09,083 --> 00:36:13,588
+00:36:07,165 --> 00:36:11,669
 Dr. Ross' dreams should be all the council needs 
 to authorize the firing of the Zeus cannon.
 
 290
-00:36:13,796 --> 00:36:17,174
+00:36:11,878 --> 00:36:15,256
 The council is content to hide 
 powering inside this barrier...
 
 291
-00:36:17,383 --> 00:36:19,927
+00:36:15,464 --> 00:36:18,009
 ...while the world dies a little more every day.
 
 292
-00:36:20,136 --> 00:36:22,930
+00:36:18,217 --> 00:36:21,012
 I believe they need a push 
 in the right direction, major.
 
 293
-00:36:23,139 --> 00:36:25,892
+00:36:21,220 --> 00:36:23,973
 Get together a group of your most trusted men.
 
 294
-00:37:17,735 --> 00:37:19,862
+00:37:15,816 --> 00:37:17,944
 What are they doing. 
 Why are they staring at us?
 
 295
-00:37:20,071 --> 00:37:21,614
+00:37:18,152 --> 00:37:19,695
 Not at us.
 
 296
-00:38:12,206 --> 00:38:14,166
+00:38:10,288 --> 00:38:12,248
 Welcome back, captain.
 
 297
-00:38:16,919 --> 00:38:18,129
+00:38:15,001 --> 00:38:16,210
 Is it over?
 
 298
-00:38:19,046 --> 00:38:20,715
+00:38:17,128 --> 00:38:18,796
 How is she, doctor?
 
 299
-00:38:20,923 --> 00:38:23,134
+00:38:19,005 --> 00:38:21,215
 She's gonna be fine. 
 But this is only temporary.
 
 300
-00:38:23,384 --> 00:38:26,929
+00:38:21,465 --> 00:38:25,011
 We'll need to find the eighth 
 and final spirit to cure her.
 
 301
-00:38:30,057 --> 00:38:32,560
+00:38:28,139 --> 00:38:30,641
 Aki, can you hear me?
 
 302
-00:38:34,895 --> 00:38:36,522
+00:38:32,977 --> 00:38:34,603
 I finished it.
 
 303
-00:38:36,731 --> 00:38:38,566
+00:38:34,812 --> 00:38:36,647
 I know what it means.
 
 304
-00:38:38,774 --> 00:38:41,527
+00:38:36,856 --> 00:38:39,608
 I know what the Phantoms really are.
 
 305
-00:38:42,737 --> 00:38:46,032
+00:38:40,818 --> 00:38:44,113
 Nobody move! You're all under arrest!
 
 306
-00:38:56,959 --> 00:38:58,377
+00:38:55,041 --> 00:38:56,459
 We have them, sir.
 
 307
-00:38:59,670 --> 00:39:00,755
+00:38:57,752 --> 00:38:58,836
 Sir?
 
 308
-00:39:01,297 --> 00:39:03,507
+00:38:59,378 --> 00:39:01,589
 My wife and daughter...
 
 309
-00:39:05,676 --> 00:39:10,348
+00:39:03,758 --> 00:39:08,429
 ...were killed by Phantoms in the 
 San Francisco Barrier City was attacked.
 
 310
-00:39:10,556 --> 00:39:12,516
+00:39:08,637 --> 00:39:10,598
 Did I ever tell you that?
 
 311
-00:39:16,979 --> 00:39:19,148
+00:39:15,061 --> 00:39:17,229
 You've lost family, haven't you?
 
 312
-00:39:19,607 --> 00:39:20,816
+00:39:17,688 --> 00:39:18,898
 Yes, sir.
 
 313
-00:39:21,317 --> 00:39:23,319
+00:39:19,398 --> 00:39:21,400
 That's why I trust you.
 
 314
-00:39:24,904 --> 00:39:27,615
+00:39:22,985 --> 00:39:25,696
 You know what must be done.
 
 315
-00:39:35,039 --> 00:39:37,291
+00:39:33,120 --> 00:39:35,373
 Security override.
 
 316
-00:39:37,583 --> 00:39:40,252
+00:39:35,664 --> 00:39:38,334
 Perimeter breached.
 
 317
-00:39:41,796 --> 00:39:44,090
+00:39:39,877 --> 00:39:42,171
 Major, arrest these men.
 
 318
-00:39:44,673 --> 00:39:47,676
+00:39:42,755 --> 00:39:45,758
 - Take it easy. 
 - Stand up. Go.
 
 319
-00:39:47,885 --> 00:39:51,639
+00:39:45,966 --> 00:39:49,720
 You are relieved of your post. 
 Don't ask any questions.
 
 320
-00:39:53,516 --> 00:39:55,267
+00:39:51,597 --> 00:39:53,349
 Reduce power to Sector 31.
 
 321
-00:39:55,476 --> 00:39:57,478
+00:39:53,557 --> 00:39:55,559
 Sir, you do realize that the Phantoms...
 
 322
-00:39:57,728 --> 00:39:59,105
+00:39:55,810 --> 00:39:57,186
 What I realize, major...
 
 323
-00:39:59,313 --> 00:40:03,275
+00:39:57,395 --> 00:40:01,357
 ...is that we must force the council 
 to take action against the enemy.
 
 324
-00:40:09,740 --> 00:40:12,993
+00:40:07,822 --> 00:40:11,075
 25% of energy pipe alpha redirected.
 
 325
-00:40:13,786 --> 00:40:16,705
+00:40:11,867 --> 00:40:14,787
 Lowering power output to Sector 31.
 
 326
-00:40:17,832 --> 00:40:20,960
+00:40:15,913 --> 00:40:19,041
 Barrier breached in Sector 31, general. 
 They're coming through now.
 
 327
-00:40:21,127 --> 00:40:24,338
+00:40:19,208 --> 00:40:22,419
 Oh I think we can easily handle 
 a few Phantoms in a contained space.
 
 328
-00:40:25,297 --> 00:40:30,219
+00:40:23,379 --> 00:40:28,300
 Relax, major. When this night's over, 
 you're going to be a hero.
 
 329
-00:40:32,012 --> 00:40:35,808
+00:40:30,094 --> 00:40:33,889
 Alright. Why do you think 
 we've never been able to determine...
 
 330
-00:40:36,016 --> 00:40:40,187
+00:40:34,098 --> 00:40:38,269
 ...a relationship between the human-sized Phantoms 
 and the giant ones roaming the wastelands?
 
 331
-00:40:40,479 --> 00:40:43,399
+00:40:38,561 --> 00:40:41,480
 He's right. If you've spent as much time 
 in the field as we had...
 
 332
-00:40:43,607 --> 00:40:47,111
+00:40:41,689 --> 00:40:45,192
 ...you know there is no relationship. 
 It's like a zoo out there.
 
 333
-00:40:47,319 --> 00:40:50,990
+00:40:45,401 --> 00:40:49,071
 Precisely. I think the giant ones are 
 like our whales or elephants.
 
 334
-00:40:51,198 --> 00:40:55,494
+00:40:49,280 --> 00:40:53,576
 But why would an invading army bring 
 a bunch of whales and elephants along for the ride?
 
 335
-00:40:55,744 --> 00:40:58,497
+00:40:53,826 --> 00:40:56,579
 Unless their ship was kind of 
 a crazy Noah's Ark?
 
 336
-00:40:59,081 --> 00:41:01,459
+00:40:57,163 --> 00:40:59,540
 We have always assumed that the meteor...
 
 337
-00:41:01,709 --> 00:41:04,879
+00:40:59,790 --> 00:41:02,960
 ...was intended as a form of transportation. 
 Perhaps it wasn't.
 
 338
-00:41:05,546 --> 00:41:08,382
+00:41:03,627 --> 00:41:06,464
 The meteor is a chunk of their planet 
 that got thrown into space...
 
 339
-00:41:08,591 --> 00:41:09,758
+00:41:06,672 --> 00:41:07,840
 ...when they destroyed their world.
 
 340
-00:41:10,009 --> 00:41:14,471
+00:41:08,090 --> 00:41:12,553
 But how could they survive the trip 
 across outer space on a hunk of rock?
 
 341
-00:41:14,680 --> 00:41:16,182
+00:41:12,761 --> 00:41:14,263
 They didn't.
 
 342
-00:41:20,394 --> 00:41:24,064
+00:41:18,475 --> 00:41:22,146
 I think that explains why we never had a chance.
 
 343
-00:41:24,356 --> 00:41:27,860
+00:41:22,438 --> 00:41:25,941
 All our strategies are based on one assumption:
 
 344
-00:41:28,152 --> 00:41:31,071
+00:41:26,233 --> 00:41:29,153
 That we were fighting alien invaders.
 
 345
-00:41:31,280 --> 00:41:34,116
+00:41:29,361 --> 00:41:32,198
 Think of the dream, Gray. How they died.
 
 346
-00:41:34,325 --> 00:41:37,161
+00:41:32,406 --> 00:41:35,242
 Since then, all they've known is suffering.
 
 347
-00:41:37,369 --> 00:41:39,246
+00:41:35,451 --> 00:41:37,328
 They're not an invading army.
 
 348
-00:41:39,455 --> 00:41:41,165
+00:41:37,536 --> 00:41:39,246
 They're ghosts.
 
 349
-00:41:43,000 --> 00:41:44,251
+00:41:41,081 --> 00:41:42,333
 How many Phantoms?
 
 350
-00:41:44,502 --> 00:41:46,295
+00:41:42,583 --> 00:41:44,376
 More than enough to convince the council, sir.
 
 351
-00:41:46,545 --> 00:41:49,924
+00:41:44,627 --> 00:41:48,005
 Excellent. Sound an alert. Send 
 a squad out to eliminate them.
 
 352
-00:41:49,924 --> 00:41:50,841
+00:41:48,005 --> 00:41:48,923
 Yes sir.
 
 353
-00:41:51,091 --> 00:41:53,636
+00:41:49,173 --> 00:41:51,717
 Alert status. Full deployment.
 
 354
-00:41:53,886 --> 00:41:55,596
+00:41:51,967 --> 00:41:53,677
 Sir. I have numerous Phantom contacts!
 
 355
-00:41:55,846 --> 00:41:57,306
+00:41:53,928 --> 00:41:55,387
 Well, of course you do.
 
 356
-00:41:57,515 --> 00:42:00,351
+00:41:55,596 --> 00:41:58,432
 Outside of Sector 31, sir. 
 And moving at incredible speed.
 
 357
-00:42:00,559 --> 00:42:02,353
+00:41:58,641 --> 00:42:00,434
 Major, What the hell is going on here?
 
 358
-00:42:02,561 --> 00:42:03,938
+00:42:00,643 --> 00:42:02,019
 They're in the pipes.
 
 359
-00:42:04,146 --> 00:42:06,690
+00:42:02,228 --> 00:42:04,772
 They're moving with the bio-etheric energy flow.
 
 360
-00:42:06,941 --> 00:42:10,819
+00:42:05,022 --> 00:42:08,901
 That's impossible. No living thing 
 could survive in those pipes.
 
 361
-00:42:11,320 --> 00:42:15,366
+00:42:09,401 --> 00:42:13,447
 Well, we've got a big one heading this way. 
 Meta class, sir.
 
 362
-00:42:22,748 --> 00:42:24,124
+00:42:20,829 --> 00:42:22,206
 Oh, my God.
 
 363
-00:42:24,833 --> 00:42:26,126
+00:42:22,915 --> 00:42:24,208
 Hold your fire!
 
 364
-00:43:12,840 --> 00:43:14,466
+00:43:10,921 --> 00:43:12,548
 What have I done?
 
 365
-00:44:01,847 --> 00:44:04,475
+00:43:59,928 --> 00:44:02,556
 - Here they come. 
 - But the others! Dr. Sid!
 
 366
-00:44:04,683 --> 00:44:06,977
+00:44:02,765 --> 00:44:05,059
 Deep Eyes'll take care of him. 
 Come on.
 
 367
-00:44:14,443 --> 00:44:16,570
+00:44:12,524 --> 00:44:14,651
 What's happening. Why can we see them now?
 
 368
-00:44:16,820 --> 00:44:20,157
+00:44:14,902 --> 00:44:18,238
 They must be carrying a residual charge 
 from passing through the barrier.
 
 369
-00:44:25,079 --> 00:44:26,372
+00:44:23,160 --> 00:44:24,453
 Behind you!
 
 370
-00:45:28,475 --> 00:45:30,060
+00:45:26,557 --> 00:45:28,142
 All aboard, captain!
 
 371
-00:46:37,920 --> 00:46:38,962
+00:46:36,001 --> 00:46:37,044
 We need to find my ship.
 
 372
-00:46:39,171 --> 00:46:41,840
+00:46:37,252 --> 00:46:39,922
 If it was towed inside the city, 
 it would be in the military hangar.
 
 373
-00:46:42,049 --> 00:46:43,801
+00:46:40,130 --> 00:46:41,882
 That's a big "if. "
 
 374
-00:46:52,768 --> 00:46:53,977
+00:46:50,849 --> 00:46:52,059
 Look out!
 
 375
-00:47:01,902 --> 00:47:03,987
+00:46:59,983 --> 00:47:02,069
 - Get us onto the platform. 
 - You got it.
 
 376
-00:47:19,711 --> 00:47:20,796
+00:47:17,793 --> 00:47:18,877
 Hang on, everybody!
 
 377
-00:47:40,107 --> 00:47:40,732
+00:47:38,188 --> 00:47:38,814
 - Captain.
 
 378
-00:47:46,029 --> 00:47:48,490
+00:47:44,111 --> 00:47:46,572
 Oh, God. Talk to me, sarge.
 
 379
-00:47:48,991 --> 00:47:50,033
+00:47:47,072 --> 00:47:48,115
 Ouch!
 
 380
-00:47:50,242 --> 00:47:51,577
+00:47:48,323 --> 00:47:49,658
 - Give me a hand, Jane. 
 - Right.
 
 381
-00:47:51,785 --> 00:47:55,872
+00:47:49,866 --> 00:47:53,954
 No wait! We're risking further injury. 
 We need the proper tools to cut him out.
 
 382
-00:47:56,081 --> 00:47:57,374
+00:47:54,162 --> 00:47:55,455
 They're in my ship.
 
 383
-00:47:58,792 --> 00:48:02,254
+00:47:56,874 --> 00:48:00,335
 - No. No, doc. No drugs. 
 - Captain?
 
 384
-00:48:02,462 --> 00:48:03,714
+00:48:00,544 --> 00:48:01,795
 You heard the man.
 
 385
-00:48:04,423 --> 00:48:06,008
+00:48:02,504 --> 00:48:04,089
 We'll find the ship and be back for you.
 
 386
-00:48:06,258 --> 00:48:08,010
+00:48:04,339 --> 00:48:06,091
 - I'll stay with him. 
 - Me too.
 
 387
-00:48:08,218 --> 00:48:09,803
+00:48:06,300 --> 00:48:07,884
 Nobody's staying.
 
 388
-00:48:11,013 --> 00:48:12,931
+00:48:09,094 --> 00:48:11,013
 - Just give me a gun. 
 - You got it.
 
 389
-00:48:13,140 --> 00:48:15,684
+00:48:11,221 --> 00:48:13,765
 Give him a weapon. Do it!
 
 390
-00:48:18,186 --> 00:48:19,980
+00:48:16,268 --> 00:48:18,061
 We'll be back for you, sergeant.
 
 391
-00:48:20,314 --> 00:48:21,398
+00:48:18,395 --> 00:48:19,479
 You hear me?
 
 392
-00:48:21,690 --> 00:48:24,901
+00:48:19,771 --> 00:48:22,983
 I hear you, captain. 
 Now, get out of here.
 
 393
-00:48:25,402 --> 00:48:26,737
+00:48:23,483 --> 00:48:24,818
 Let's move out.
 
 394
-00:49:17,746 --> 00:49:20,082
+00:49:15,827 --> 00:49:18,163
 A quad-axle ATV. This is good.
 
 395
-00:49:20,332 --> 00:49:24,378
+00:49:18,413 --> 00:49:22,459
 It can be used to retrieve Ryan 
 and transport him safely here.
 
 396
-00:49:24,586 --> 00:49:27,756
+00:49:22,668 --> 00:49:25,837
 However, we'll need to replace 
 these spent fuel cells.
 
 397
-00:49:28,048 --> 00:49:30,467
+00:49:26,129 --> 00:49:28,548
 There could be some live ovo-pacs in the hangar.
 
 398
-00:49:42,187 --> 00:49:43,271
+00:49:40,268 --> 00:49:41,353
 Gray, be careful.
 
 399
-00:49:43,480 --> 00:49:44,690
+00:49:41,561 --> 00:49:42,771
 You too.
 
 400
-00:50:27,149 --> 00:50:28,233
+00:50:25,230 --> 00:50:26,314
 Oh, yeah.
 
 401
-00:50:43,915 --> 00:50:45,417
+00:50:41,997 --> 00:50:43,498
 Neil, do you read me?
 
 402
-00:50:45,667 --> 00:50:47,169
+00:50:43,749 --> 00:50:45,250
 Loud and clear, captain.
 
 403
-00:50:47,419 --> 00:50:49,212
+00:50:45,500 --> 00:50:47,294
 This baby'll fly itself.
 
 404
-00:50:56,803 --> 00:50:58,096
+00:50:54,885 --> 00:50:56,178
 Flight path is set.
 
 405
-00:50:58,305 --> 00:50:59,765
+00:50:56,386 --> 00:50:57,846
 Beginning rotation.
 
 406
-00:51:03,310 --> 00:51:05,520
+00:51:01,391 --> 00:51:03,602
 Stop the airtray. We have a problem.
 
 407
-00:51:05,729 --> 00:51:08,315
+00:51:03,810 --> 00:51:06,396
 I'm reading an impound tractor 
 attached probably to the ship.
 
 408
-00:51:22,162 --> 00:51:23,663
+00:51:20,243 --> 00:51:21,745
 There's the problem.
 
 409
-00:51:32,589 --> 00:51:35,091
+00:51:30,670 --> 00:51:33,173
 The controls are locked, naturally.
 
 410
-00:51:49,523 --> 00:51:51,274
+00:51:47,604 --> 00:51:49,356
 What's happening down there?
 
 411
-00:51:51,525 --> 00:51:54,027
+00:51:49,606 --> 00:51:52,109
 Nothing we can't handle.
 
 412
-00:52:05,956 --> 00:52:09,042
+00:52:04,037 --> 00:52:07,124
 - Neil, what's your status? 
 - Almost there.
 
 413
-00:52:09,376 --> 00:52:10,919
+00:52:07,457 --> 00:52:09,000
 I want you two back inside.
 
 414
-00:52:11,127 --> 00:52:14,881
+00:52:09,209 --> 00:52:12,963
 We're fine, sir. Jane is negotiating 
 with extreme prejudice.
 
 415
-00:52:15,090 --> 00:52:16,341
+00:52:13,171 --> 00:52:14,422
 Talk to me, Jane.
 
 416
-00:52:17,926 --> 00:52:20,011
+00:52:16,007 --> 00:52:18,093
 No problem here, captain.
 
 417
-00:52:25,517 --> 00:52:28,145
+00:52:23,598 --> 00:52:26,226
 Yes! Captain, we are good to go.
 
 418
-00:53:08,226 --> 00:53:09,936
+00:53:06,308 --> 00:53:08,018
 Jane, get out of there.
 
 419
-00:53:10,270 --> 00:53:13,398
+00:53:08,351 --> 00:53:11,479
 Get out of there now! Go! Jane!
 
 420
-00:53:13,607 --> 00:53:15,567
+00:53:11,688 --> 00:53:13,648
 Get the hell out of there!
 
 421
-00:53:42,886 --> 00:53:45,597
-The shield is powered and ready.
-
-422
-00:53:45,805 --> 00:53:47,182
-- Where are you going? 
-- To the cockpit.
-
-423
-00:53:47,390 --> 00:53:50,477
-The ship is set on autopilot. 
-We're in countdown to liftoff.
-
-424
-00:53:50,727 --> 00:53:54,064
-No, wait. It's too dangerous. Aki!
-
-425
-00:54:17,963 --> 00:54:20,173
+00:54:01,404 --> 00:54:03,615
 Over here, you son of a bitch!
 
-426
-00:56:25,131 --> 00:56:27,217
+422
+00:56:08,573 --> 00:56:10,658
 Gray, come on!
 
-427
-00:59:28,940 --> 00:59:30,817
+423
+00:59:12,382 --> 00:59:14,259
 I enlarged the scanning perimeter...
 
-428
-00:59:31,025 --> 00:59:33,820
+424
+00:59:14,467 --> 00:59:17,262
 ...to include an area that 
 we had previously overlooked.
 
-429
-00:59:34,028 --> 00:59:35,822
+425
+00:59:17,470 --> 00:59:19,264
 The impact crater.
 
-430
-00:59:36,864 --> 00:59:38,908
+426
+00:59:20,306 --> 00:59:22,350
 That's a strange place to find the eighth spirit.
 
-431
-00:59:39,117 --> 00:59:40,743
+427
+00:59:22,558 --> 00:59:24,185
 Yes, really quite astonishing.
 
-432
-00:59:40,952 --> 00:59:43,288
+428
+00:59:24,394 --> 00:59:26,729
 But nothing could survive in there except Phantoms.
 
-433
-00:59:43,496 --> 00:59:44,622
+429
+00:59:26,938 --> 00:59:28,064
 Precisely.
 
-434
-00:59:44,956 --> 00:59:48,126
+430
+00:59:28,398 --> 00:59:31,567
 Which suggests that 
 the eighth spirit is a Phantom spirit.
 
-435
-00:59:48,334 --> 00:59:51,546
+431
+00:59:31,776 --> 00:59:34,988
 I can't explain it at the moment, 
 but once we get down there...
 
-436
-00:59:51,754 --> 00:59:55,049
+432
+00:59:35,196 --> 00:59:38,491
 - ... you will understand... 
 - Wait, doctor. That's a one-way trip.
 
-437
-00:59:55,258 --> 00:59:58,344
+433
+00:59:38,700 --> 00:59:41,786
 Yes, I expected that's how 
 you would evaluate our chances.
 
-438
-00:59:58,595 --> 01:00:00,013
+434
+00:59:42,036 --> 00:59:43,454
 Well, am I wrong?
 
-439
-01:00:00,221 --> 01:00:01,556
+435
+00:59:43,663 --> 00:59:44,080
 No, I agree. We probably...
 
-440
-01:00:01,806 --> 01:00:05,018
+436
+00:59:45,248 --> 00:59:48,459
 ...won't live long enough to extract 
 the eighth spirit from the crater.
 
-441
-01:00:05,226 --> 01:00:05,893
+437
+00:59:48,668 --> 00:59:49,335
 Then why should we even try it?
 
-442
-01:00:07,020 --> 01:00:09,105
+438
+00:59:50,461 --> 00:59:52,547
 Because we don't need to extract the eighth spirit.
 
-443
-01:00:09,314 --> 01:00:11,107
+439
+00:59:52,755 --> 00:59:54,549
 If we can't bring the final spirit here...
 
-444
-01:00:11,316 --> 01:00:13,860
+440
+00:59:54,757 --> 00:59:57,302
 ...we can go there and complete 
 the wave inside the crater.
 
-445
-01:00:14,068 --> 01:00:15,486
+441
+00:59:57,510 --> 00:59:58,928
 Yes, exactly.
 
-446
-01:00:15,695 --> 01:00:17,655
+442
+00:59:59,137 --> 01:00:01,097
 And how do we do that, exactly?
 
-447
-01:00:18,072 --> 01:00:19,949
+443
+01:00:01,514 --> 01:00:03,391
 I can construct a device that...
 
-448
-01:00:20,158 --> 01:00:24,454
+444
+01:00:03,600 --> 01:00:07,895
 ...would attach to Aki's chest plate 
 to gather the eighth spirit and then...
 
-449
-01:00:25,622 --> 01:00:26,748
+445
+01:00:09,063 --> 01:00:10,189
 And then what?
 
-450
-01:00:27,081 --> 01:00:30,251
+446
+01:00:10,523 --> 01:00:13,693
 And then we wait 
 and see what happens.
 
-451
-01:01:00,490 --> 01:01:03,201
+447
+01:00:43,931 --> 01:00:46,642
 What caused the barrier 
 to fail, General Hein?
 
-452
-01:01:04,994 --> 01:01:06,829
+448
+01:00:48,436 --> 01:00:50,271
 I'm afraid it was 
 only a matter of time...
 
-453
-01:01:07,038 --> 01:01:10,249
+449
+01:00:50,480 --> 01:00:53,691
 ...before the Phantoms developed 
 an immunity to our barriers.
 
-454
-01:01:10,667 --> 01:01:13,127
+450
+01:00:54,108 --> 01:00:56,569
 But I am relieved to see that you 
 and the rest of the council...
 
-455
-01:01:13,336 --> 01:01:16,839
+451
+01:00:56,778 --> 01:01:00,281
 ...were able to evacuate to Houston without incident.
 
-456
-01:01:17,048 --> 01:01:19,759
+452
+01:01:00,490 --> 01:01:03,201
 It was a terrible loss suffered this evening.
 
-457
-01:01:19,967 --> 01:01:23,012
+453
+01:01:03,409 --> 01:01:06,454
 The council has reconsidered 
 your proposal to fire the Zeus cannon.
 
-458
-01:01:23,221 --> 01:01:24,430
+454
+01:01:06,662 --> 01:01:07,872
 I see.
 
-459
-01:01:24,806 --> 01:01:27,016
+455
+01:01:08,247 --> 01:01:10,458
 We are transmitting the access codes to you now.
 
-460
-01:01:29,018 --> 01:01:30,311
+456
+01:01:12,460 --> 01:01:13,753
 And, general...
 
-461
-01:01:31,729 --> 01:01:33,898
+457
+01:01:15,171 --> 01:01:17,340
 ...best of luck to us all.
 
-462
-01:01:36,901 --> 01:01:38,403
+458
+01:01:20,343 --> 01:01:21,844
 Prepare to fire the cannon.
 
-463
-01:01:38,653 --> 01:01:39,737
+459
+01:01:22,095 --> 01:01:23,179
 The target, sir?
 
-464
-01:01:41,447 --> 01:01:43,241
+460
+01:01:24,889 --> 01:01:26,682
 The Phantom crater.
 
-465
-01:02:09,892 --> 01:02:14,230
+461
+01:01:53,334 --> 01:01:57,672
 Preparing to drop in three, two, one.
 
-466
-01:02:18,776 --> 01:02:20,486
+462
+01:02:02,218 --> 01:02:03,928
 Powering the shield.
 
-467
-01:02:23,448 --> 01:02:25,241
+463
+01:02:06,889 --> 01:02:08,683
 Okay, we're over the meteor.
 
-468
-01:02:25,450 --> 01:02:26,951
+464
+01:02:08,891 --> 01:02:10,393
 Do you have it in sight, doctor?
 
-469
-01:02:27,952 --> 01:02:30,496
+465
+01:02:11,394 --> 01:02:13,938
 There are so many of them.
 
-470
-01:02:32,415 --> 01:02:33,458
+466
+01:02:15,857 --> 01:02:16,899
 Wait.
 
-471
-01:02:33,666 --> 01:02:37,795
+467
+01:02:17,108 --> 01:02:21,237
 Yes! I'm tracking the eighth spirit 
 moving along the crater's surface.
 
-472
-01:02:38,379 --> 01:02:41,507
+468
+01:02:21,821 --> 01:02:24,949
 All right. Now let's take a closer look.
 
-473
-01:03:21,714 --> 01:03:23,424
+469
+01:03:05,156 --> 01:03:06,866
 Ready to fire in three minutes.
 
-474
-01:03:23,633 --> 01:03:27,428
+470
+01:03:07,074 --> 01:03:10,870
 Ovo-pacs at maximum. 
 Transferring plasma flow to auto.
 
-475
-01:03:27,929 --> 01:03:29,931
+471
+01:03:11,370 --> 01:03:13,372
 Counter-thrusters are engaged.
 
-476
-01:03:30,139 --> 01:03:32,975
+472
+01:03:13,581 --> 01:03:16,417
 Lox flow de-coupled. Status is green.
 
-477
-01:03:33,184 --> 01:03:36,979
+473
+01:03:16,626 --> 01:03:20,421
 We have something on radar 
 over the impact site, sir.
 
-478
-01:03:39,148 --> 01:03:40,483
+474
+01:03:22,590 --> 01:03:23,925
 It's her.
 
-479
-01:03:40,733 --> 01:03:41,859
+475
+01:03:24,175 --> 01:03:25,301
 Sir?
 
-480
-01:03:42,068 --> 01:03:44,570
+476
+01:03:25,510 --> 01:03:28,012
 Just a traitor under 
 the influence of the enemy.
 
-481
-01:03:44,779 --> 01:03:46,531
+477
+01:03:28,221 --> 01:03:29,972
 Continue the countdown.
 
-482
-01:03:46,739 --> 01:03:49,742
+478
+01:03:30,181 --> 01:03:33,184
 We'll take them all out at the same time.
 
-483
-01:03:53,120 --> 01:03:57,124
+479
+01:03:36,562 --> 01:03:40,566
 We're closing on the Phantom. 
 Contact in 30 seconds.
 
-484
-01:03:58,459 --> 01:03:59,877
+480
+01:03:41,901 --> 01:03:43,319
 Target locked.
 
-485
-01:04:00,127 --> 01:04:02,797
+481
+01:03:43,569 --> 01:03:46,239
 Ready to fire on your command.
 
-486
-01:04:06,592 --> 01:04:09,220
+482
+01:03:50,034 --> 01:03:52,662
 It's a match! It's a perfect match!
 
-487
-01:04:09,428 --> 01:04:11,222
+483
+01:03:52,870 --> 01:03:54,664
 - Target scanners ready, sir. 
 - Fire.
 
-488
-01:04:46,173 --> 01:04:47,341
+484
+01:04:29,615 --> 01:04:30,783
 What was that?
 
-489
-01:04:47,592 --> 01:04:50,052
+485
+01:04:31,033 --> 01:04:33,494
 It's the Zeus. They're firing on the crater.
 
-490
-01:04:50,303 --> 01:04:53,723
+486
+01:04:33,744 --> 01:04:37,164
 - Aki, Captain, are you all right? 
 - A little shaken. Stand by.
 
-491
-01:04:53,973 --> 01:04:58,477
+487
+01:04:37,415 --> 01:04:41,919
 Sid, the eighth spirit is not 
 on our scanner. Do you have it?
 
-492
-01:04:59,061 --> 01:05:00,730
+488
+01:04:42,503 --> 01:04:44,171
 The eighth spirit...
 
-493
-01:05:01,689 --> 01:05:03,190
+489
+01:04:45,131 --> 01:04:46,632
 ...has been destroyed.
 
-494
-01:05:03,858 --> 01:05:07,695
+490
+01:04:47,300 --> 01:04:51,137
 - What are we going to do now? 
 - Nothing. This mission is over.
 
-495
-01:05:08,029 --> 01:05:09,822
+491
+01:04:51,470 --> 01:04:53,264
 - We have to get out of here. 
 - Incoming!
 
-496
-01:05:41,687 --> 01:05:43,397
+492
+01:05:25,129 --> 01:05:26,839
 What is that?
 
-497
-01:05:43,606 --> 01:05:46,942
+493
+01:05:27,048 --> 01:05:30,384
 If you're getting us out of here, 
 you better do it now.
 
-498
-01:05:58,829 --> 01:05:59,914
+494
+01:05:42,271 --> 01:05:43,356
 Hold on!
 
-499
-01:06:09,256 --> 01:06:11,217
+495
+01:05:52,698 --> 01:05:54,659
 I can't hold on to you.
 
-500
-01:06:15,846 --> 01:06:18,349
+496
+01:05:59,288 --> 01:06:01,791
 Unable to maintain altitude.
 
-501
-01:06:25,481 --> 01:06:27,984
+497
+01:06:08,923 --> 01:06:11,425
 Initiate emergency landing procedures.
 
-502
-01:06:51,799 --> 01:06:54,260
+498
+01:06:35,241 --> 01:06:37,702
 Come in. Come in, please.
 
-503
-01:06:54,510 --> 01:06:57,346
+499
+01:06:37,952 --> 01:06:40,788
 Aki, Gray, can you hear me?
 
-504
-01:06:57,596 --> 01:07:01,517
+500
+01:06:41,038 --> 01:06:44,959
 Sid, I need to talk to the station. 
 Can you patch us through?
 
-505
-01:07:04,019 --> 01:07:06,939
+501
+01:06:47,461 --> 01:06:50,381
 - What is that thing? 
 - I don't know, sir.
 
-506
-01:07:07,189 --> 01:07:09,400
+502
+01:06:50,631 --> 01:06:52,842
 Incoming message, sir.
 
-507
-01:07:09,650 --> 01:07:12,111
+503
+01:06:53,092 --> 01:06:55,553
 General Hein, 
 You must cease fire immediately.
 
-508
-01:07:12,403 --> 01:07:16,699
+504
+01:06:55,845 --> 01:07:00,141
 What you are looking at in the crater is the 
 living spirit of an alien's home world.
 
-509
-01:07:16,907 --> 01:07:19,493
+505
+01:07:00,349 --> 01:07:02,935
 Their planet was destroyed 
 and part of it landed here.
 
-510
-01:07:19,744 --> 01:07:22,329
+506
+01:07:03,185 --> 01:07:05,771
 This is not an invasion. It never was.
 
-511
-01:07:21,704 --> 01:07:26,959
+507
+01:07:05,146 --> 01:07:10,401
 I see and what have we been fighting 
 all this time, doctor? Ghosts?
 
-512
-01:07:27,209 --> 01:07:31,797
+508
+01:07:10,651 --> 01:07:15,239
 Yes. Spirits that are confused, 
 lost and angry.
 
-513
-01:07:32,048 --> 01:07:34,717
+509
+01:07:15,489 --> 01:07:18,159
 Right. And these spirits are 
 coming out of this Gaia thing.
 
-514
-01:07:34,967 --> 01:07:36,552
+510
+01:07:18,409 --> 01:07:19,994
 General Hein, you have to listen.
 
-515
-01:07:36,844 --> 01:07:40,347
+511
+01:07:20,286 --> 01:07:23,789
 Alien Gaia, Earth Gaia. 
 Doctor, even if I believed in such nonsense...
 
-516
-01:07:40,681 --> 01:07:43,434
+512
+01:07:24,123 --> 01:07:26,876
 ...the fact remains the Earth 
 is under attack from an aggressor...
 
-517
-01:07:43,642 --> 01:07:45,936
+513
+01:07:27,084 --> 01:07:29,378
 ...who must be destroyed at all costs.
 
-518
-01:07:46,228 --> 01:07:48,689
+514
+01:07:29,670 --> 01:07:32,131
 The cost may be the entire planet, sir.
 
-519
-01:07:49,023 --> 01:07:51,776
+515
+01:07:32,465 --> 01:07:35,217
 Firing on the alien Gaia will only make it stronger.
 
-520
-01:07:52,067 --> 01:07:56,363
+516
+01:07:35,509 --> 01:07:39,805
 Well, since you're under the alien's influence, doctor, 
 I will take your protest to mean that we are...
 
-521
-01:07:56,614 --> 01:07:58,532
+517
+01:07:40,055 --> 01:07:41,974
 ...in fact pursuing the correct course of actions.
 
-522
-01:07:58,741 --> 01:08:03,245
+518
+01:07:42,183 --> 01:07:46,687
 So i suggest you take your last few moments 
 and prepare to meet your Gaia.
 
-523
-01:08:03,370 --> 01:08:06,499
+519
+01:07:46,812 --> 01:07:49,940
 Continue to fire until the invader has been destroyed.
 
-524
-01:08:43,077 --> 01:08:45,204
+520
+01:08:26,519 --> 01:08:28,646
 General, the system is overheating, sir.
 
-525
-01:08:45,412 --> 01:08:49,333
+521
+01:08:28,854 --> 01:08:32,775
 We're going to hit it again and again 
 and keep on hitting it until it's dead.
 
-526
-01:08:49,625 --> 01:08:52,169
+522
+01:08:33,067 --> 01:08:35,611
 But, sir. We're not even sure 
 if it's having any effect on the creature.
 
-527
-01:08:52,378 --> 01:08:55,756
+523
+01:08:35,820 --> 01:08:39,198
 No effect? We've got them on the run, soldier.
 
-528
-01:08:55,965 --> 01:09:00,052
+524
+01:08:39,406 --> 01:08:43,494
 This is our moment of victory. I order you to fire.
 
-529
-01:09:00,177 --> 01:09:04,014
+525
+01:08:43,619 --> 01:08:47,456
 - The system won't allow us to fire again. 
 - We'll see about that.
 
-530
-01:09:05,224 --> 01:09:09,061
+526
+01:08:48,666 --> 01:08:52,503
 Our shield is out. We're sitting ducks in here. 
 Come on!
 
-531
-01:09:30,165 --> 01:09:33,294
+527
+01:09:13,607 --> 01:09:16,735
 This is not a good place to be.
 
-532
-01:09:31,041 --> 01:09:33,294
+528
+01:09:14,483 --> 01:09:16,735
 This is not a good place to be.
 
-533
-01:09:43,637 --> 01:09:44,763
+529
+01:09:27,079 --> 01:09:28,205
 Hey, are you all right?
 
-534
-01:09:44,972 --> 01:09:48,642
+530
+01:09:28,414 --> 01:09:32,084
 I'm fine. I have to talk to Dr. Sid.
 
-535
-01:10:27,473 --> 01:10:30,017
+531
+01:10:10,915 --> 01:10:13,459
 Sid, do you read me?
 
-536
-01:10:30,684 --> 01:10:32,811
+532
+01:10:14,126 --> 01:10:16,253
 Go ahead, I'm still here.
 
-537
-01:10:33,103 --> 01:10:37,441
+533
+01:10:16,545 --> 01:10:20,883
 We're looking at Gaia. 
 Do you hear me, Sid? Gaia.
 
-538
-01:10:37,650 --> 01:10:41,737
+534
+01:10:21,091 --> 01:10:25,179
 I think this explains why 
 the eighth spirit appeared here.
 
-539
-01:10:42,905 --> 01:10:43,989
+535
+01:10:26,347 --> 01:10:27,431
 Yes.
 
-540
-01:10:44,531 --> 01:10:46,283
+536
+01:10:27,973 --> 01:10:29,725
 Yes, that's it!
 
-541
-01:10:46,492 --> 01:10:48,327
+537
+01:10:29,934 --> 01:10:31,769
 A Phantom must have changed into the eighth spirit...
 
-542
-01:10:48,327 --> 01:10:52,248
+538
+01:10:31,769 --> 01:10:35,689
 ...when it touched a new life born from our own Gaia.
 
-543
-01:10:52,539 --> 01:10:55,793
+539
+01:10:35,981 --> 01:10:39,235
 If so, it would've been given 
 a different energy signature...
 
-544
-01:10:56,001 --> 01:10:59,004
+540
+01:10:39,443 --> 01:10:42,446
 ...that set it apart from the other Phantoms.
 
-545
-01:10:59,421 --> 01:11:02,466
+541
+01:10:42,863 --> 01:10:45,908
 You two could not have hoped 
 for a better location...
 
-546
-01:11:02,800 --> 01:11:04,843
+542
+01:10:46,241 --> 01:10:48,285
 ...to find a new compatible spirit.
 
-547
-01:11:05,052 --> 01:11:09,431
+543
+01:10:48,494 --> 01:10:52,873
 Whatever you do, don't move. 
 Stay right where you are.
 
-548
-01:11:10,474 --> 01:11:14,311
+544
+01:10:53,916 --> 01:10:57,753
 Staying right where we are 
 may not be as easy as it sounds.
 
-549
-01:11:14,561 --> 01:11:16,730
+545
+01:10:58,003 --> 01:11:00,172
 Don't shoot any of them!
 
-550
-01:11:16,939 --> 01:11:19,733
+546
+01:11:00,381 --> 01:11:03,175
 You could very well destroy our last hope.
 
-551
-01:11:19,900 --> 01:11:22,987
+547
+01:11:03,342 --> 01:11:06,428
 And what do you suggest I do, doctor? 
 Ask them to play nice?
 
-552
-01:11:23,195 --> 01:11:27,324
+548
+01:11:06,637 --> 01:11:10,766
 Combat strategy is your area 
 of expertise, captain, not mine.
 
-553
-01:11:27,700 --> 01:11:31,078
+549
+01:11:11,141 --> 01:11:14,520
 I have a reading here in the fissure. 
 Do you see it?
 
-554
-01:11:28,575 --> 01:11:31,078
+550
+01:11:12,017 --> 01:11:14,520
 I have a reading here in the fissure. 
 Do you see it?
 
-555
-01:11:31,328 --> 01:11:36,208
+551
+01:11:14,770 --> 01:11:19,650
 Yes! A compatible spirit. 
 It must be very near you.
 
-556
-01:11:36,375 --> 01:11:39,712
+552
+01:11:19,817 --> 01:11:23,153
 Well? Which one is it? Which one?
 
-557
-01:11:39,920 --> 01:11:43,716
+553
+01:11:23,362 --> 01:11:27,157
 I'm having difficulty narrowing it down. 
 Just a moment, please.
 
-558
-01:11:46,135 --> 01:11:49,930
+554
+01:11:29,576 --> 01:11:33,372
 Doctor, it's getting crowded in here. 
 Aki, we don't have much time. Aki.
 
-559
-01:13:21,772 --> 01:13:24,024
+555
+01:13:05,214 --> 01:13:07,466
 With the hope of new life...
 
-560
-01:13:24,233 --> 01:13:27,277
+556
+01:13:07,674 --> 01:13:10,719
 ...has Gaia changed 
 the Phantom within?
 
-561
-01:13:33,409 --> 01:13:34,701
+557
+01:13:16,850 --> 01:13:18,143
 I have it.
 
-562
-01:13:40,916 --> 01:13:43,710
+558
+01:13:24,358 --> 01:13:27,152
 Gray, get in here. I need you!
 
-563
-01:13:44,503 --> 01:13:47,548
+559
+01:13:27,945 --> 01:13:30,989
 Do you hear me, Sid? 
 The wave pattern is complete.
 
-564
-01:13:47,756 --> 01:13:51,009
+560
+01:13:31,198 --> 01:13:34,451
 Yes, I read you. This is wonderful.
 
-565
-01:13:51,218 --> 01:13:54,096
+561
+01:13:34,660 --> 01:13:37,538
 I don't see how you could have found the final spirit.
 
-566
-01:13:54,346 --> 01:13:56,723
+562
+01:13:37,788 --> 01:13:40,165
 It found me, doctor.
 
-567
-01:13:58,600 --> 01:14:00,227
+563
+01:13:42,042 --> 01:13:43,669
 Oh, my word.
 
-568
-01:14:01,687 --> 01:14:03,564
+564
+01:13:45,129 --> 01:13:47,005
 I hope you know 
 what you're doing, Aki.
 
-569
-01:14:03,564 --> 01:14:06,066
+565
+01:13:47,005 --> 01:13:49,508
 - We can use the shield to project the wave. 
 - What?
 
-570
-01:14:06,275 --> 01:14:09,778
+566
+01:13:49,716 --> 01:13:53,220
 Dr. Sid's theory was right. 
 I have it. The eighth spirit.
 
-571
-01:14:10,237 --> 01:14:12,364
+567
+01:13:53,679 --> 01:13:55,806
 That's it. Shield on.
 
-572
-01:14:38,140 --> 01:14:39,933
+568
+01:14:21,582 --> 01:14:23,375
 I'll blast you all to hell.
 
-573
-01:14:47,608 --> 01:14:49,234
+569
+01:14:31,049 --> 01:14:32,676
 Oh, no. No!
 
-574
-01:14:53,614 --> 01:14:54,865
+570
+01:14:37,055 --> 01:14:38,307
 Get down!
 
-575
-01:15:08,045 --> 01:15:09,505
+571
+01:14:51,487 --> 01:14:52,946
 I know!
 
-576
-01:15:12,090 --> 01:15:14,092
+572
+01:14:55,532 --> 01:14:57,534
 But it must be done.
 
-577
-01:15:56,802 --> 01:15:57,844
+573
+01:15:40,244 --> 01:15:41,286
 Fire.
 
-578
-01:15:58,053 --> 01:15:59,763
+574
+01:15:41,495 --> 01:15:43,205
 Fire, damn you!
 
-579
-01:16:00,806 --> 01:16:01,932
+575
+01:15:44,248 --> 01:15:45,374
 Fire!
 
-580
-01:17:20,135 --> 01:17:22,346
+576
+01:17:03,577 --> 01:17:05,787
 Don't leave me, Gray.
 
-581
-01:17:23,555 --> 01:17:26,183
+577
+01:17:06,997 --> 01:17:09,625
 Told Sid this was a one-way trip.
 
-582
-01:17:27,017 --> 01:17:28,602
+578
+01:17:10,459 --> 01:17:12,044
 Looks like I was right.
 
-583
-01:17:28,977 --> 01:17:31,355
+579
+01:17:12,419 --> 01:17:14,796
 No, Gray. Hang on, please.
 
-584
-01:17:31,563 --> 01:17:33,482
+580
+01:17:15,005 --> 01:17:16,923
 I still have the wave.
 
-585
-01:17:33,690 --> 01:17:35,734
+581
+01:17:17,132 --> 01:17:19,176
 We can get through this.
 
-586
-01:17:53,710 --> 01:17:54,961
+582
+01:17:37,152 --> 01:17:38,403
 Help me.
 
-587
-01:18:05,389 --> 01:18:07,182
+583
+01:17:48,830 --> 01:17:50,624
 Listen to me.
 
-588
-01:18:07,391 --> 01:18:11,520
+584
+01:17:50,832 --> 01:17:54,961
 You saved my life once. 
 Now I want you to save yourself.
 
-589
-01:18:11,770 --> 01:18:13,480
+585
+01:17:55,212 --> 01:17:56,922
 Gray, no. Please?
 
-590
-01:18:13,730 --> 01:18:16,983
+586
+01:17:57,172 --> 01:18:00,425
 Let me do this, Aki. Trust me.
 
-591
-01:18:37,587 --> 01:18:38,714
+587
+01:18:21,029 --> 01:18:22,155
 I love you.
 
-592
-01:20:28,240 --> 01:20:30,200
+588
+01:20:11,681 --> 01:20:13,642
 Oh, it's warm.
 
