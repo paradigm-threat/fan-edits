@@ -15,4 +15,12 @@ The Final Fantasy remix "A Temple of Chaos" By Tim Sheehy was added.
 The credits song Spirit Dreams Inside was replaced with the Final Fantasy IV remix "Hymn to the Crystals" by RebeccaETripp.
 The title scene was moved from the first scene to after the intro sequence, since this is more traditional for Final Fantasy stories.
 
+## Strategy
+I use a minimalist approach with the following rules:
+1. Cut all scenes that include excessive human behavior - yelling, screaming, being nasty to eachother, when such behavior has little or nothing to do with the plot.
+2. Cut all scenes that have Predictive (agenda driven) Programming that are not essential to the flow or narrative of the movie.
+3. Reduce gore scenes to around a second or less, so the audience doesn't have to 'sit there and take it'
+
+I cut scenes on the transition frame, and then mix the audio between the recombined video. Sometimes a scene is too difficult to cut on the transition frame as the audio may overlap the next shot. In this case, I decouple the audio and video and re-arrange the scene as necessary to get the result I'm looking for. With this trick, I can change who is talking to whom and reduce the tension that exists in many movie dialog scenes. 
+
 ![Final Fantasy The Spirits Within (2001) - Phantom Menace Edition](https://raw.githubusercontent.com/clevertree/video-edits/refs/heads/main/FanMixes/Final%20Fantasy%20(2001)%20-%20The%20Phantom%20Menace/img/poster.jpg)
