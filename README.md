@@ -1,10 +1,18 @@
 # Ari's Movie Fan Edit Project Files
 
-This repo contains my collection of fan edits.
+This repo contains my collection of fan edits of various movies most of which I've watched countless times.
+I felt like I know the movies so well at this point, including their cringe moments, that it was time to start making
+my own edits. After all, I do plan to keep watching these movies until I die, right? Not to mention, I'd rather show 
+this version to a friend or relative than the original (and force them to sit through some awful scenes). 
+I am also making a small collection of 'kid friendly' cuts which remove all negative/questionable/horrific scenes entirely. 
 
 ## There are no copyrighted files in this repo
 This repo only contains KDENLive project files. No media files are contained within the project files. 
 No links are given to any copyright or pirated content. No clues are given as to how to find those links either.
+I have one or more legitimate copies of every movie I edit. I'm hoping those who view my edits do as well.
+Reminder: **We paid for all of this**. 
+None of these movies would even exist, had we not paid full price for them in the past.
+They belong to **us**. 
 
 ## Steps to render a movie edit from this repo
 1. Grab your legal copy of the movie's DVD/Blu-ray
