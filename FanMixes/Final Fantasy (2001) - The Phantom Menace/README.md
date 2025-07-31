@@ -23,4 +23,8 @@ I use a minimalist approach with the following rules:
 
 I cut scenes on the transition frame, and then mix the audio between the recombined video. Sometimes a scene is too difficult to cut on the transition frame as the audio may overlap the next shot. In this case, I decouple the audio and video and re-arrange the scene as necessary to get the result I'm looking for. With this trick, I can change who is talking to whom and reduce the tension that exists in many movie dialog scenes. 
 
+## Poster
 ![Final Fantasy The Spirits Within (2001) - Phantom Menace Edition](https://raw.githubusercontent.com/clevertree/video-edits/refs/heads/main/FanMixes/Final%20Fantasy%20(2001)%20-%20The%20Phantom%20Menace/img/poster.jpg)
+
+## Trailer
+[![Trailer: Final Fantasy The Phantom Menace](https://img.youtube.com/vi/supOKvLaGWY/0.jpg)](https://www.youtube.com/watch?v=supOKvLaGWY)
