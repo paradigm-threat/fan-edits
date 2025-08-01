@@ -6,7 +6,6 @@ I was looking forward to this movie when it came out, as I imagine many people i
 I have yet to meet anyone who didn't agree that much of the acting by Baldwin and Buscemi was distracting, 
 nevertheless director Hironobu Sakaguchi insisted that he would not change one scene and so far no edits of this movie have ever come out.
 To make things worse, the Blu-Ray edition of the Japan Release (Spiritual Edition) was never released. 
-This edit includes the rare dvd Japanese audio from the 2002 Spiritual Edition as a 2nd audio channel. 
 
 ## Changes
 In this cut, all distracting or poorly acted scenes have been removed. 
