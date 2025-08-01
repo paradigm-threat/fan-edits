@@ -26,4 +26,6 @@ I cut scenes on the transition frame, and then mix the audio between the recombi
 ![Final Fantasy The Spirits Within (2001) - Phantom Menace Edition](https://raw.githubusercontent.com/clevertree/video-edits/refs/heads/main/FanMixes/Final%20Fantasy%20(2001)%20-%20The%20Phantom%20Menace/img/poster.jpg)
 
 ## Trailer
-[![Trailer: Final Fantasy The Phantom Menace](https://img.youtube.com/vi/supOKvLaGWY/0.jpg)](https://www.youtube.com/watch?v=supOKvLaGWY)
+[![Desktop Trailer: Final Fantasy The Phantom Menace](https://img.youtube.com/vi/supOKvLaGWY/0.jpg)](https://www.youtube.com/watch?v=supOKvLaGWY)
+
+[![Mobile Trailer: Final Fantasy The Phantom Menace](https://img.youtube.com/vi/RiI_2LCRXBc/0.jpg)](https://www.youtube.com/watch?v=RiI_2LCRXBc)
