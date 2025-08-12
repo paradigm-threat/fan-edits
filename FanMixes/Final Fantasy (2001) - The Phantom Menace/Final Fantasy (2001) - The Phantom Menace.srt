@@ -813,7 +813,7 @@ Our target is 50 klicks west of Tucson.
 Not good. We've got big metas everywhere.
 
 181
-00:24:15,162 --> 00:24:17,914
+00:24:15,871 --> 00:24:17,914
 So it's gonna be a real picnic.
 
 182
@@ -940,7 +940,7 @@ We're closing in on the life form.
 - Hard to say. We're very close.
 
 210
-00:27:28,563 --> 00:27:31,524
+00:27:29,314 --> 00:27:31,524
 I don't see anything.
 
 211
@@ -1777,7 +1777,7 @@ You too.
 Oh, yeah.
 
 401
-00:50:41,997 --> 00:50:43,498
+00:50:41,079 --> 00:50:43,498
 Neil, do you read me?
 
 402
@@ -1921,7 +1921,7 @@ you would evaluate our chances.
 Well, am I wrong?
 
 435
-00:59:43,663 --> 00:59:44,080
+00:59:43,663 --> 00:59:45,248
 No, I agree. We probably...
 
 436
@@ -2234,7 +2234,7 @@ and part of it landed here.
 This is not an invasion. It never was.
 
 507
-01:07:05,146 --> 01:07:10,401
+01:07:06,272 --> 01:07:10,401
 I see and what have we been fighting 
 all this time, doctor? Ghosts?
 
@@ -2426,168 +2426,163 @@ I have a reading here in the fissure.
 Do you see it?
 
 550
-01:11:12,017 --> 01:11:14,520
-I have a reading here in the fissure. 
-Do you see it?
-
-551
 01:11:14,770 --> 01:11:19,650
 Yes! A compatible spirit. 
 It must be very near you.
 
-552
+551
 01:11:19,817 --> 01:11:23,153
 Well? Which one is it? Which one?
 
-553
+552
 01:11:23,362 --> 01:11:27,157
 I'm having difficulty narrowing it down. 
 Just a moment, please.
 
-554
+553
 01:11:29,576 --> 01:11:33,372
 Doctor, it's getting crowded in here. 
 Aki, we don't have much time. Aki.
 
-555
+554
 01:13:05,214 --> 01:13:07,466
 With the hope of new life...
 
-556
+555
 01:13:07,674 --> 01:13:10,719
 ...has Gaia changed 
 the Phantom within?
 
-557
+556
 01:13:16,850 --> 01:13:18,143
 I have it.
 
-558
+557
 01:13:24,358 --> 01:13:27,152
 Gray, get in here. I need you!
 
-559
+558
 01:13:27,945 --> 01:13:30,989
 Do you hear me, Sid? 
 The wave pattern is complete.
 
-560
+559
 01:13:31,198 --> 01:13:34,451
 Yes, I read you. This is wonderful.
 
-561
+560
 01:13:34,660 --> 01:13:37,538
 I don't see how you could have found the final spirit.
 
-562
+561
 01:13:37,788 --> 01:13:40,165
 It found me, doctor.
 
-563
+562
 01:13:42,042 --> 01:13:43,669
 Oh, my word.
 
-564
+563
 01:13:45,129 --> 01:13:47,005
 I hope you know 
 what you're doing, Aki.
 
-565
+564
 01:13:47,005 --> 01:13:49,508
 - We can use the shield to project the wave. 
 - What?
 
-566
+565
 01:13:49,716 --> 01:13:53,220
 Dr. Sid's theory was right. 
 I have it. The eighth spirit.
 
-567
+566
 01:13:53,679 --> 01:13:55,806
 That's it. Shield on.
 
-568
+567
 01:14:21,582 --> 01:14:23,375
 I'll blast you all to hell.
 
-569
+568
 01:14:31,049 --> 01:14:32,676
 Oh, no. No!
 
-570
+569
 01:14:37,055 --> 01:14:38,307
 Get down!
 
-571
+570
 01:14:51,487 --> 01:14:52,946
 I know!
 
-572
+571
 01:14:55,532 --> 01:14:57,534
 But it must be done.
 
-573
+572
 01:15:40,244 --> 01:15:41,286
 Fire.
 
-574
+573
 01:15:41,495 --> 01:15:43,205
 Fire, damn you!
 
-575
+574
 01:15:44,248 --> 01:15:45,374
 Fire!
 
-576
+575
 01:17:03,577 --> 01:17:05,787
 Don't leave me, Gray.
 
-577
-01:17:06,997 --> 01:17:09,625
+576
+01:17:06,079 --> 01:17:09,625
 Told Sid this was a one-way trip.
 
-578
+577
 01:17:10,459 --> 01:17:12,044
 Looks like I was right.
 
-579
+578
 01:17:12,419 --> 01:17:14,796
 No, Gray. Hang on, please.
 
-580
+579
 01:17:15,005 --> 01:17:16,923
 I still have the wave.
 
-581
+580
 01:17:17,132 --> 01:17:19,176
 We can get through this.
 
-582
+581
 01:17:37,152 --> 01:17:38,403
 Help me.
 
-583
+582
 01:17:48,830 --> 01:17:50,624
 Listen to me.
 
-584
+583
 01:17:50,832 --> 01:17:54,961
 You saved my life once. 
 Now I want you to save yourself.
 
-585
+584
 01:17:55,212 --> 01:17:56,922
 Gray, no. Please?
 
-586
+585
 01:17:57,172 --> 01:18:00,425
 Let me do this, Aki. Trust me.
 
-587
+586
 01:18:21,029 --> 01:18:22,155
 I love you.
 
-588
+587
 01:20:11,681 --> 01:20:13,642
 Oh, it's warm.
 

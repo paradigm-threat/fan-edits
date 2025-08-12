@@ -199,7 +199,7 @@ Dialogue: 0,00:24:05.19,00:24:08.15,Default,,0,0,0,,The Phantoms inside me are b
 Dialogue: 0,00:24:08.36,00:24:11.49,Default,,0,0,0,,Our target is 50 klicks west of Tucson.
 Dialogue: 0,00:24:12.20,00:24:13.24,Default,,0,0,0,,- Roger. \N- Phantom concentration?
 Dialogue: 0,00:24:13.45,00:24:15.87,Default,,0,0,0,,Not good. We've got big metas everywhere.
-Dialogue: 0,00:24:15.16,00:24:17.91,Default,,0,0,0,,So it's gonna be a real picnic.
+Dialogue: 0,00:24:15.87,00:24:17.91,Default,,0,0,0,,So it's gonna be a real picnic.
 Dialogue: 0,00:24:18.12,00:24:21.92,Default,,0,0,0,,Stick close to me. No heroics today. Okay? \NEverything by the book.
 Dialogue: 0,00:24:22.13,00:24:23.96,Default,,0,0,0,,By the book. Right.
 Dialogue: 0,00:24:30.55,00:24:34.05,Default,,0,0,0,,If we drop energy buoys here, \Nhere and here...
@@ -228,7 +228,7 @@ Dialogue: 0,00:27:04.16,00:27:05.91,Default,,0,0,0,,Is that our spirit, doc?
 Dialogue: 0,00:27:07.88,00:27:08.92,Default,,0,0,0,,No.
 Dialogue: 0,00:27:23.10,00:27:24.81,Default,,0,0,0,,We're closing in on the life form.
 Dialogue: 0,00:27:25.02,00:27:28.98,Default,,0,0,0,,- Distance? \N- Hard to say. We're very close.
-Dialogue: 0,00:27:28.56,00:27:31.52,Default,,0,0,0,,I don't see anything.
+Dialogue: 0,00:27:29.31,00:27:31.52,Default,,0,0,0,,I don't see anything.
 Dialogue: 0,00:27:36.95,00:27:40.45,Default,,0,0,0,,- You're not gonna tell me it's him? \N- That's impossible.
 Dialogue: 0,00:27:48.83,00:27:50.63,Default,,0,0,0,,It's not the soldier. It's his ovo-pac.
 Dialogue: 0,00:27:50.83,00:27:54.76,Default,,0,0,0,,How do you explain that? The pacs power \Nour weapons, the barrier cities...
@@ -348,262 +348,261 @@ Dialogue: 0,00:40:15.91,00:40:19.04,Default,,0,0,0,,Barrier breached in Sector 3
 Dialogue: 0,00:40:19.21,00:40:22.42,Default,,0,0,0,,Oh I think we can easily handle \Na few Phantoms in a contained space.
 Dialogue: 0,00:40:23.38,00:40:28.30,Default,,0,0,0,,Relax, major. When this night's over, \Nyou're going to be a hero.
 Dialogue: 0,00:40:30.09,00:40:33.89,Default,,0,0,0,,Alright. Why do you think \Nwe've never been able to determine...
-Dialogue: 0,00:40:34.10,00:40:38.27,Default,,0,0,0,,...a relationship between the human-sized Phantoms \Nand the giant ones roaming the wastelands?
-Dialogue: 0,00:40:38.56,00:40:41.48,Default,,0,0,0,,He's right. If you've spent as much time \Nin the field as we had...
-Dialogue: 0,00:40:41.69,00:40:45.19,Default,,0,0,0,,...you know there is no relationship. \NIt's like a zoo out there.
-Dialogue: 0,00:40:45.40,00:40:49.07,Default,,0,0,0,,Precisely. I think the giant ones are \Nlike our whales or elephants.
-Dialogue: 0,00:40:49.28,00:40:53.58,Default,,0,0,0,,But why would an invading army bring \Na bunch of whales and elephants along for the ride?
-Dialogue: 0,00:40:53.83,00:40:56.58,Default,,0,0,0,,Unless their ship was kind of \Na crazy Noah's Ark?
-Dialogue: 0,00:40:57.16,00:40:59.54,Default,,0,0,0,,We have always assumed that the meteor...
-Dialogue: 0,00:40:59.79,00:41:02.96,Default,,0,0,0,,...was intended as a form of transportation. \NPerhaps it wasn't.
-Dialogue: 0,00:41:03.63,00:41:06.46,Default,,0,0,0,,The meteor is a chunk of their planet \Nthat got thrown into space...
-Dialogue: 0,00:41:06.67,00:41:07.84,Default,,0,0,0,,...when they destroyed their world.
-Dialogue: 0,00:41:08.09,00:41:12.55,Default,,0,0,0,,But how could they survive the trip \Nacross outer space on a hunk of rock?
-Dialogue: 0,00:41:12.76,00:41:14.26,Default,,0,0,0,,They didn't.
-Dialogue: 0,00:41:18.47,00:41:22.15,Default,,0,0,0,,I think that explains why we never had a chance.
-Dialogue: 0,00:41:22.44,00:41:25.94,Default,,0,0,0,,All our strategies are based on one assumption:
-Dialogue: 0,00:41:26.23,00:41:29.15,Default,,0,0,0,,That we were fighting alien invaders.
-Dialogue: 0,00:41:29.36,00:41:32.20,Default,,0,0,0,,Think of the dream, Gray. How they died.
-Dialogue: 0,00:41:32.41,00:41:35.24,Default,,0,0,0,,Since then, all they've known is suffering.
-Dialogue: 0,00:41:35.45,00:41:37.33,Default,,0,0,0,,They're not an invading army.
-Dialogue: 0,00:41:37.54,00:41:39.25,Default,,0,0,0,,They're ghosts.
-Dialogue: 0,00:41:41.08,00:41:42.33,Default,,0,0,0,,How many Phantoms?
-Dialogue: 0,00:41:42.58,00:41:44.38,Default,,0,0,0,,More than enough to convince the council, sir.
-Dialogue: 0,00:41:44.63,00:41:48.00,Default,,0,0,0,,Excellent. Sound an alert. Send \Na squad out to eliminate them.
-Dialogue: 0,00:41:48.00,00:41:48.92,Default,,0,0,0,,Yes sir.
-Dialogue: 0,00:41:49.17,00:41:51.72,Default,,0,0,0,,Alert status. Full deployment.
-Dialogue: 0,00:41:51.97,00:41:53.68,Default,,0,0,0,,Sir. I have numerous Phantom contacts!
-Dialogue: 0,00:41:53.93,00:41:55.39,Default,,0,0,0,,Well, of course you do.
-Dialogue: 0,00:41:55.60,00:41:58.43,Default,,0,0,0,,Outside of Sector 31, sir. \NAnd moving at incredible speed.
-Dialogue: 0,00:41:58.64,00:42:00.43,Default,,0,0,0,,Major, What the hell is going on here?
-Dialogue: 0,00:42:00.64,00:42:02.02,Default,,0,0,0,,They're in the pipes.
-Dialogue: 0,00:42:02.23,00:42:04.77,Default,,0,0,0,,They're moving with the bio-etheric energy flow.
-Dialogue: 0,00:42:05.02,00:42:08.90,Default,,0,0,0,,That's impossible. No living thing \Ncould survive in those pipes.
-Dialogue: 0,00:42:09.40,00:42:13.45,Default,,0,0,0,,Well, we've got a big one heading this way. \NMeta class, sir.
-Dialogue: 0,00:42:20.83,00:42:22.21,Default,,0,0,0,,Oh, my God.
-Dialogue: 0,00:42:22.91,00:42:24.21,Default,,0,0,0,,Hold your fire!
-Dialogue: 0,00:43:10.92,00:43:12.55,Default,,0,0,0,,What have I done?
-Dialogue: 0,00:43:59.93,00:44:02.56,Default,,0,0,0,,- Here they come. \N- But the others! Dr. Sid!
-Dialogue: 0,00:44:02.76,00:44:05.06,Default,,0,0,0,,Deep Eyes'll take care of him. \NCome on.
-Dialogue: 0,00:44:12.52,00:44:14.65,Default,,0,0,0,,What's happening. Why can we see them now?
-Dialogue: 0,00:44:14.90,00:44:18.24,Default,,0,0,0,,They must be carrying a residual charge \Nfrom passing through the barrier.
-Dialogue: 0,00:44:23.16,00:44:24.45,Default,,0,0,0,,Behind you!
-Dialogue: 0,00:45:26.56,00:45:28.14,Default,,0,0,0,,All aboard, captain!
-Dialogue: 0,00:46:36.00,00:46:37.04,Default,,0,0,0,,We need to find my ship.
-Dialogue: 0,00:46:37.25,00:46:39.92,Default,,0,0,0,,If it was towed inside the city, \Nit would be in the military hangar.
-Dialogue: 0,00:46:40.13,00:46:41.88,Default,,0,0,0,,That's a big "if. "
-Dialogue: 0,00:46:50.85,00:46:52.06,Default,,0,0,0,,Look out!
-Dialogue: 0,00:46:59.98,00:47:02.07,Default,,0,0,0,,- Get us onto the platform. \N- You got it.
-Dialogue: 0,00:47:17.79,00:47:18.88,Default,,0,0,0,,Hang on, everybody!
-Dialogue: 0,00:47:38.19,00:47:38.81,Default,,0,0,0,,- Captain.
-Dialogue: 0,00:47:44.11,00:47:46.57,Default,,0,0,0,,Oh, God. Talk to me, sarge.
-Dialogue: 0,00:47:47.07,00:47:48.11,Default,,0,0,0,,Ouch!
-Dialogue: 0,00:47:48.32,00:47:49.66,Default,,0,0,0,,- Give me a hand, Jane. \N- Right.
-Dialogue: 0,00:47:49.87,00:47:53.95,Default,,0,0,0,,No wait! We're risking further injury. \NWe need the proper tools to cut him out.
-Dialogue: 0,00:47:54.16,00:47:55.45,Default,,0,0,0,,They're in my ship.
-Dialogue: 0,00:47:56.87,00:48:00.33,Default,,0,0,0,,- No. No, doc. No drugs. \N- Captain?
-Dialogue: 0,00:48:00.54,00:48:01.79,Default,,0,0,0,,You heard the man.
-Dialogue: 0,00:48:02.50,00:48:04.09,Default,,0,0,0,,We'll find the ship and be back for you.
-Dialogue: 0,00:48:04.34,00:48:06.09,Default,,0,0,0,,- I'll stay with him. \N- Me too.
-Dialogue: 0,00:48:06.30,00:48:07.88,Default,,0,0,0,,Nobody's staying.
-Dialogue: 0,00:48:09.09,00:48:11.01,Default,,0,0,0,,- Just give me a gun. \N- You got it.
-Dialogue: 0,00:48:11.22,00:48:13.76,Default,,0,0,0,,Give him a weapon. Do it!
-Dialogue: 0,00:48:16.27,00:48:18.06,Default,,0,0,0,,We'll be back for you, sergeant.
-Dialogue: 0,00:48:18.39,00:48:19.48,Default,,0,0,0,,You hear me?
-Dialogue: 0,00:48:19.77,00:48:22.98,Default,,0,0,0,,I hear you, captain. \NNow, get out of here.
-Dialogue: 0,00:48:23.48,00:48:24.82,Default,,0,0,0,,Let's move out.
-Dialogue: 0,00:49:15.83,00:49:18.16,Default,,0,0,0,,A quad-axle ATV. This is good.
-Dialogue: 0,00:49:18.41,00:49:22.46,Default,,0,0,0,,It can be used to retrieve Ryan \Nand transport him safely here.
-Dialogue: 0,00:49:22.67,00:49:25.84,Default,,0,0,0,,However, we'll need to replace \Nthese spent fuel cells.
-Dialogue: 0,00:49:26.13,00:49:28.55,Default,,0,0,0,,There could be some live ovo-pacs in the hangar.
-Dialogue: 0,00:49:40.27,00:49:41.35,Default,,0,0,0,,Gray, be careful.
-Dialogue: 0,00:49:41.56,00:49:42.77,Default,,0,0,0,,You too.
-Dialogue: 0,00:50:25.23,00:50:26.31,Default,,0,0,0,,Oh, yeah.
-Dialogue: 0,00:50:41.100,00:50:43.50,Default,,0,0,0,,Neil, do you read me?
-Dialogue: 0,00:50:43.75,00:50:45.25,Default,,0,0,0,,Loud and clear, captain.
-Dialogue: 0,00:50:45.50,00:50:47.29,Default,,0,0,0,,This baby'll fly itself.
-Dialogue: 0,00:50:54.88,00:50:56.18,Default,,0,0,0,,Flight path is set.
-Dialogue: 0,00:50:56.39,00:50:57.85,Default,,0,0,0,,Beginning rotation.
-Dialogue: 0,00:51:01.39,00:51:03.60,Default,,0,0,0,,Stop the airtray. We have a problem.
-Dialogue: 0,00:51:03.81,00:51:06.40,Default,,0,0,0,,I'm reading an impound tractor \Nattached probably to the ship.
-Dialogue: 0,00:51:20.24,00:51:21.74,Default,,0,0,0,,There's the problem.
-Dialogue: 0,00:51:30.67,00:51:33.17,Default,,0,0,0,,The controls are locked, naturally.
-Dialogue: 0,00:51:47.60,00:51:49.36,Default,,0,0,0,,What's happening down there?
-Dialogue: 0,00:51:49.61,00:51:52.11,Default,,0,0,0,,Nothing we can't handle.
-Dialogue: 0,00:52:04.04,00:52:07.12,Default,,0,0,0,,- Neil, what's your status? \N- Almost there.
-Dialogue: 0,00:52:07.46,00:52:09.00,Default,,0,0,0,,I want you two back inside.
-Dialogue: 0,00:52:09.21,00:52:12.96,Default,,0,0,0,,We're fine, sir. Jane is negotiating \Nwith extreme prejudice.
-Dialogue: 0,00:52:13.17,00:52:14.42,Default,,0,0,0,,Talk to me, Jane.
-Dialogue: 0,00:52:16.01,00:52:18.09,Default,,0,0,0,,No problem here, captain.
-Dialogue: 0,00:52:23.60,00:52:26.23,Default,,0,0,0,,Yes! Captain, we are good to go.
-Dialogue: 0,00:53:06.31,00:53:08.02,Default,,0,0,0,,Jane, get out of there.
-Dialogue: 0,00:53:08.35,00:53:11.48,Default,,0,0,0,,Get out of there now! Go! Jane!
-Dialogue: 0,00:53:11.69,00:53:13.65,Default,,0,0,0,,Get the hell out of there!
-Dialogue: 0,00:54:01.40,00:54:03.61,Default,,0,0,0,,Over here, you son of a bitch!
-Dialogue: 0,00:56:08.57,00:56:10.66,Default,,0,0,0,,Gray, come on!
-Dialogue: 0,00:59:12.38,00:59:14.26,Default,,0,0,0,,I enlarged the scanning perimeter...
-Dialogue: 0,00:59:14.47,00:59:17.26,Default,,0,0,0,,...to include an area that \Nwe had previously overlooked.
-Dialogue: 0,00:59:17.47,00:59:19.26,Default,,0,0,0,,The impact crater.
-Dialogue: 0,00:59:20.31,00:59:22.35,Default,,0,0,0,,That's a strange place to find the eighth spirit.
-Dialogue: 0,00:59:22.56,00:59:24.18,Default,,0,0,0,,Yes, really quite astonishing.
-Dialogue: 0,00:59:24.39,00:59:26.73,Default,,0,0,0,,But nothing could survive in there except Phantoms.
-Dialogue: 0,00:59:26.94,00:59:28.06,Default,,0,0,0,,Precisely.
-Dialogue: 0,00:59:28.40,00:59:31.57,Default,,0,0,0,,Which suggests that \Nthe eighth spirit is a Phantom spirit.
-Dialogue: 0,00:59:31.78,00:59:34.99,Default,,0,0,0,,I can't explain it at the moment, \Nbut once we get down there...
-Dialogue: 0,00:59:35.20,00:59:38.49,Default,,0,0,0,,- ... you will understand... \N- Wait, doctor. That's a one-way trip.
-Dialogue: 0,00:59:38.70,00:59:41.79,Default,,0,0,0,,Yes, I expected that's how \Nyou would evaluate our chances.
-Dialogue: 0,00:59:42.04,00:59:43.45,Default,,0,0,0,,Well, am I wrong?
-Dialogue: 0,00:59:43.66,00:59:44.100,Default,,0,0,0,,No, I agree. We probably...
-Dialogue: 0,00:59:45.25,00:59:48.46,Default,,0,0,0,,...won't live long enough to extract \Nthe eighth spirit from the crater.
-Dialogue: 0,00:59:48.67,00:59:49.33,Default,,0,0,0,,Then why should we even try it?
-Dialogue: 0,00:59:50.46,00:59:52.55,Default,,0,0,0,,Because we don't need to extract the eighth spirit.
-Dialogue: 0,00:59:52.75,00:59:54.55,Default,,0,0,0,,If we can't bring the final spirit here...
-Dialogue: 0,00:59:54.76,00:59:57.30,Default,,0,0,0,,...we can go there and complete \Nthe wave inside the crater.
-Dialogue: 0,00:59:57.51,00:59:58.93,Default,,0,0,0,,Yes, exactly.
-Dialogue: 0,00:59:59.14,01:00:01.10,Default,,0,0,0,,And how do we do that, exactly?
-Dialogue: 0,01:00:01.51,01:00:03.39,Default,,0,0,0,,I can construct a device that...
-Dialogue: 0,01:00:03.60,01:00:07.89,Default,,0,0,0,,...would attach to Aki's chest plate \Nto gather the eighth spirit and then...
-Dialogue: 0,01:00:09.06,01:00:10.19,Default,,0,0,0,,And then what?
-Dialogue: 0,01:00:10.52,01:00:13.69,Default,,0,0,0,,And then we wait \Nand see what happens.
-Dialogue: 0,01:00:43.93,01:00:46.64,Default,,0,0,0,,What caused the barrier \Nto fail, General Hein?
-Dialogue: 0,01:00:48.44,01:00:50.27,Default,,0,0,0,,I'm afraid it was \Nonly a matter of time...
-Dialogue: 0,01:00:50.48,01:00:53.69,Default,,0,0,0,,...before the Phantoms developed \Nan immunity to our barriers.
-Dialogue: 0,01:00:54.11,01:00:56.57,Default,,0,0,0,,But I am relieved to see that you \Nand the rest of the council...
-Dialogue: 0,01:00:56.78,01:01:00.28,Default,,0,0,0,,...were able to evacuate to Houston without incident.
-Dialogue: 0,01:01:00.49,01:01:03.20,Default,,0,0,0,,It was a terrible loss suffered this evening.
-Dialogue: 0,01:01:03.41,01:01:06.45,Default,,0,0,0,,The council has reconsidered \Nyour proposal to fire the Zeus cannon.
-Dialogue: 0,01:01:06.66,01:01:07.87,Default,,0,0,0,,I see.
-Dialogue: 0,01:01:08.25,01:01:10.46,Default,,0,0,0,,We are transmitting the access codes to you now.
-Dialogue: 0,01:01:12.46,01:01:13.75,Default,,0,0,0,,And, general...
-Dialogue: 0,01:01:15.17,01:01:17.34,Default,,0,0,0,,...best of luck to us all.
-Dialogue: 0,01:01:20.34,01:01:21.84,Default,,0,0,0,,Prepare to fire the cannon.
-Dialogue: 0,01:01:22.09,01:01:23.18,Default,,0,0,0,,The target, sir?
-Dialogue: 0,01:01:24.89,01:01:26.68,Default,,0,0,0,,The Phantom crater.
-Dialogue: 0,01:01:53.33,01:01:57.67,Default,,0,0,0,,Preparing to drop in three, two, one.
-Dialogue: 0,01:02:02.22,01:02:03.93,Default,,0,0,0,,Powering the shield.
-Dialogue: 0,01:02:06.89,01:02:08.68,Default,,0,0,0,,Okay, we're over the meteor.
-Dialogue: 0,01:02:08.89,01:02:10.39,Default,,0,0,0,,Do you have it in sight, doctor?
-Dialogue: 0,01:02:11.39,01:02:13.94,Default,,0,0,0,,There are so many of them.
-Dialogue: 0,01:02:15.86,01:02:16.90,Default,,0,0,0,,Wait.
-Dialogue: 0,01:02:17.11,01:02:21.24,Default,,0,0,0,,Yes! I'm tracking the eighth spirit \Nmoving along the crater's surface.
-Dialogue: 0,01:02:21.82,01:02:24.95,Default,,0,0,0,,All right. Now let's take a closer look.
-Dialogue: 0,01:03:05.16,01:03:06.87,Default,,0,0,0,,Ready to fire in three minutes.
-Dialogue: 0,01:03:07.07,01:03:10.87,Default,,0,0,0,,Ovo-pacs at maximum. \NTransferring plasma flow to auto.
-Dialogue: 0,01:03:11.37,01:03:13.37,Default,,0,0,0,,Counter-thrusters are engaged.
-Dialogue: 0,01:03:13.58,01:03:16.42,Default,,0,0,0,,Lox flow de-coupled. Status is green.
-Dialogue: 0,01:03:16.63,01:03:20.42,Default,,0,0,0,,We have something on radar \Nover the impact site, sir.
-Dialogue: 0,01:03:22.59,01:03:23.92,Default,,0,0,0,,It's her.
-Dialogue: 0,01:03:24.17,01:03:25.30,Default,,0,0,0,,Sir?
-Dialogue: 0,01:03:25.51,01:03:28.01,Default,,0,0,0,,Just a traitor under \Nthe influence of the enemy.
-Dialogue: 0,01:03:28.22,01:03:29.97,Default,,0,0,0,,Continue the countdown.
-Dialogue: 0,01:03:30.18,01:03:33.18,Default,,0,0,0,,We'll take them all out at the same time.
-Dialogue: 0,01:03:36.56,01:03:40.57,Default,,0,0,0,,We're closing on the Phantom. \NContact in 30 seconds.
-Dialogue: 0,01:03:41.90,01:03:43.32,Default,,0,0,0,,Target locked.
-Dialogue: 0,01:03:43.57,01:03:46.24,Default,,0,0,0,,Ready to fire on your command.
-Dialogue: 0,01:03:50.03,01:03:52.66,Default,,0,0,0,,It's a match! It's a perfect match!
-Dialogue: 0,01:03:52.87,01:03:54.66,Default,,0,0,0,,- Target scanners ready, sir. \N- Fire.
-Dialogue: 0,01:04:29.61,01:04:30.78,Default,,0,0,0,,What was that?
-Dialogue: 0,01:04:31.03,01:04:33.49,Default,,0,0,0,,It's the Zeus. They're firing on the crater.
-Dialogue: 0,01:04:33.74,01:04:37.16,Default,,0,0,0,,- Aki, Captain, are you all right? \N- A little shaken. Stand by.
-Dialogue: 0,01:04:37.41,01:04:41.92,Default,,0,0,0,,Sid, the eighth spirit is not \Non our scanner. Do you have it?
-Dialogue: 0,01:04:42.50,01:04:44.17,Default,,0,0,0,,The eighth spirit...
-Dialogue: 0,01:04:45.13,01:04:46.63,Default,,0,0,0,,...has been destroyed.
-Dialogue: 0,01:04:47.30,01:04:51.14,Default,,0,0,0,,- What are we going to do now? \N- Nothing. This mission is over.
-Dialogue: 0,01:04:51.47,01:04:53.26,Default,,0,0,0,,- We have to get out of here. \N- Incoming!
-Dialogue: 0,01:05:25.13,01:05:26.84,Default,,0,0,0,,What is that?
-Dialogue: 0,01:05:27.05,01:05:30.38,Default,,0,0,0,,If you're getting us out of here, \Nyou better do it now.
-Dialogue: 0,01:05:42.27,01:05:43.36,Default,,0,0,0,,Hold on!
-Dialogue: 0,01:05:52.70,01:05:54.66,Default,,0,0,0,,I can't hold on to you.
-Dialogue: 0,01:05:59.29,01:06:01.79,Default,,0,0,0,,Unable to maintain altitude.
-Dialogue: 0,01:06:08.92,01:06:11.42,Default,,0,0,0,,Initiate emergency landing procedures.
-Dialogue: 0,01:06:35.24,01:06:37.70,Default,,0,0,0,,Come in. Come in, please.
-Dialogue: 0,01:06:37.95,01:06:40.79,Default,,0,0,0,,Aki, Gray, can you hear me?
-Dialogue: 0,01:06:41.04,01:06:44.96,Default,,0,0,0,,Sid, I need to talk to the station. \NCan you patch us through?
-Dialogue: 0,01:06:47.46,01:06:50.38,Default,,0,0,0,,- What is that thing? \N- I don't know, sir.
-Dialogue: 0,01:06:50.63,01:06:52.84,Default,,0,0,0,,Incoming message, sir.
-Dialogue: 0,01:06:53.09,01:06:55.55,Default,,0,0,0,,General Hein, \NYou must cease fire immediately.
-Dialogue: 0,01:06:55.84,01:07:00.14,Default,,0,0,0,,What you are looking at in the crater is the \Nliving spirit of an alien's home world.
-Dialogue: 0,01:07:00.35,01:07:02.93,Default,,0,0,0,,Their planet was destroyed \Nand part of it landed here.
-Dialogue: 0,01:07:03.18,01:07:05.77,Default,,0,0,0,,This is not an invasion. It never was.
-Dialogue: 0,01:07:05.15,01:07:10.40,Default,,0,0,0,,I see and what have we been fighting \Nall this time, doctor? Ghosts?
-Dialogue: 0,01:07:10.65,01:07:15.24,Default,,0,0,0,,Yes. Spirits that are confused, \Nlost and angry.
-Dialogue: 0,01:07:15.49,01:07:18.16,Default,,0,0,0,,Right. And these spirits are \Ncoming out of this Gaia thing.
-Dialogue: 0,01:07:18.41,01:07:19.99,Default,,0,0,0,,General Hein, you have to listen.
-Dialogue: 0,01:07:20.29,01:07:23.79,Default,,0,0,0,,Alien Gaia, Earth Gaia. \NDoctor, even if I believed in such nonsense...
-Dialogue: 0,01:07:24.12,01:07:26.88,Default,,0,0,0,,...the fact remains the Earth \Nis under attack from an aggressor...
-Dialogue: 0,01:07:27.08,01:07:29.38,Default,,0,0,0,,...who must be destroyed at all costs.
-Dialogue: 0,01:07:29.67,01:07:32.13,Default,,0,0,0,,The cost may be the entire planet, sir.
-Dialogue: 0,01:07:32.46,01:07:35.22,Default,,0,0,0,,Firing on the alien Gaia will only make it stronger.
-Dialogue: 0,01:07:35.51,01:07:39.80,Default,,0,0,0,,Well, since you're under the alien's influence, doctor, \NI will take your protest to mean that we are...
-Dialogue: 0,01:07:40.05,01:07:41.97,Default,,0,0,0,,...in fact pursuing the correct course of actions.
-Dialogue: 0,01:07:42.18,01:07:46.69,Default,,0,0,0,,So i suggest you take your last few moments \Nand prepare to meet your Gaia.
-Dialogue: 0,01:07:46.81,01:07:49.94,Default,,0,0,0,,Continue to fire until the invader has been destroyed.
-Dialogue: 0,01:08:26.52,01:08:28.65,Default,,0,0,0,,General, the system is overheating, sir.
-Dialogue: 0,01:08:28.85,01:08:32.77,Default,,0,0,0,,We're going to hit it again and again \Nand keep on hitting it until it's dead.
-Dialogue: 0,01:08:33.07,01:08:35.61,Default,,0,0,0,,But, sir. We're not even sure \Nif it's having any effect on the creature.
-Dialogue: 0,01:08:35.82,01:08:39.20,Default,,0,0,0,,No effect? We've got them on the run, soldier.
-Dialogue: 0,01:08:39.41,01:08:43.49,Default,,0,0,0,,This is our moment of victory. I order you to fire.
-Dialogue: 0,01:08:43.62,01:08:47.46,Default,,0,0,0,,- The system won't allow us to fire again. \N- We'll see about that.
-Dialogue: 0,01:08:48.67,01:08:52.50,Default,,0,0,0,,Our shield is out. We're sitting ducks in here. \NCome on!
-Dialogue: 0,01:09:13.61,01:09:16.73,Default,,0,0,0,,This is not a good place to be.
-Dialogue: 0,01:09:14.48,01:09:16.73,Default,,0,0,0,,This is not a good place to be.
-Dialogue: 0,01:09:27.08,01:09:28.20,Default,,0,0,0,,Hey, are you all right?
-Dialogue: 0,01:09:28.41,01:09:32.08,Default,,0,0,0,,I'm fine. I have to talk to Dr. Sid.
-Dialogue: 0,01:10:10.91,01:10:13.46,Default,,0,0,0,,Sid, do you read me?
-Dialogue: 0,01:10:14.13,01:10:16.25,Default,,0,0,0,,Go ahead, I'm still here.
-Dialogue: 0,01:10:16.54,01:10:20.88,Default,,0,0,0,,We're looking at Gaia. \NDo you hear me, Sid? Gaia.
-Dialogue: 0,01:10:21.09,01:10:25.18,Default,,0,0,0,,I think this explains why \Nthe eighth spirit appeared here.
-Dialogue: 0,01:10:26.35,01:10:27.43,Default,,0,0,0,,Yes.
-Dialogue: 0,01:10:27.97,01:10:29.72,Default,,0,0,0,,Yes, that's it!
-Dialogue: 0,01:10:29.93,01:10:31.77,Default,,0,0,0,,A Phantom must have changed into the eighth spirit...
-Dialogue: 0,01:10:31.77,01:10:35.69,Default,,0,0,0,,...when it touched a new life born from our own Gaia.
-Dialogue: 0,01:10:35.98,01:10:39.23,Default,,0,0,0,,If so, it would've been given \Na different energy signature...
-Dialogue: 0,01:10:39.44,01:10:42.45,Default,,0,0,0,,...that set it apart from the other Phantoms.
-Dialogue: 0,01:10:42.86,01:10:45.91,Default,,0,0,0,,You two could not have hoped \Nfor a better location...
-Dialogue: 0,01:10:46.24,01:10:48.28,Default,,0,0,0,,...to find a new compatible spirit.
-Dialogue: 0,01:10:48.49,01:10:52.87,Default,,0,0,0,,Whatever you do, don't move. \NStay right where you are.
-Dialogue: 0,01:10:53.92,01:10:57.75,Default,,0,0,0,,Staying right where we are \Nmay not be as easy as it sounds.
-Dialogue: 0,01:10:58.00,01:11:00.17,Default,,0,0,0,,Don't shoot any of them!
-Dialogue: 0,01:11:00.38,01:11:03.17,Default,,0,0,0,,You could very well destroy our last hope.
-Dialogue: 0,01:11:03.34,01:11:06.43,Default,,0,0,0,,And what do you suggest I do, doctor? \NAsk them to play nice?
-Dialogue: 0,01:11:06.64,01:11:10.77,Default,,0,0,0,,Combat strategy is your area \Nof expertise, captain, not mine.
-Dialogue: 0,01:11:11.14,01:11:14.52,Default,,0,0,0,,I have a reading here in the fissure. \NDo you see it?
-Dialogue: 0,01:11:12.02,01:11:14.52,Default,,0,0,0,,I have a reading here in the fissure. \NDo you see it?
-Dialogue: 0,01:11:14.77,01:11:19.65,Default,,0,0,0,,Yes! A compatible spirit. \NIt must be very near you.
-Dialogue: 0,01:11:19.82,01:11:23.15,Default,,0,0,0,,Well? Which one is it? Which one?
-Dialogue: 0,01:11:23.36,01:11:27.16,Default,,0,0,0,,I'm having difficulty narrowing it down. \NJust a moment, please.
-Dialogue: 0,01:11:29.58,01:11:33.37,Default,,0,0,0,,Doctor, it's getting crowded in here. \NAki, we don't have much time. Aki.
-Dialogue: 0,01:13:05.21,01:13:07.47,Default,,0,0,0,,With the hope of new life...
-Dialogue: 0,01:13:07.67,01:13:10.72,Default,,0,0,0,,...has Gaia changed \Nthe Phantom within?
-Dialogue: 0,01:13:16.85,01:13:18.14,Default,,0,0,0,,I have it.
-Dialogue: 0,01:13:24.36,01:13:27.15,Default,,0,0,0,,Gray, get in here. I need you!
-Dialogue: 0,01:13:27.94,01:13:30.99,Default,,0,0,0,,Do you hear me, Sid? \NThe wave pattern is complete.
-Dialogue: 0,01:13:31.20,01:13:34.45,Default,,0,0,0,,Yes, I read you. This is wonderful.
-Dialogue: 0,01:13:34.66,01:13:37.54,Default,,0,0,0,,I don't see how you could have found the final spirit.
-Dialogue: 0,01:13:37.79,01:13:40.16,Default,,0,0,0,,It found me, doctor.
-Dialogue: 0,01:13:42.04,01:13:43.67,Default,,0,0,0,,Oh, my word.
-Dialogue: 0,01:13:45.13,01:13:47.00,Default,,0,0,0,,I hope you know \Nwhat you're doing, Aki.
-Dialogue: 0,01:13:47.00,01:13:49.51,Default,,0,0,0,,- We can use the shield to project the wave. \N- What?
-Dialogue: 0,01:13:49.72,01:13:53.22,Default,,0,0,0,,Dr. Sid's theory was right. \NI have it. The eighth spirit.
-Dialogue: 0,01:13:53.68,01:13:55.81,Default,,0,0,0,,That's it. Shield on.
-Dialogue: 0,01:14:21.58,01:14:23.37,Default,,0,0,0,,I'll blast you all to hell.
-Dialogue: 0,01:14:31.05,01:14:32.68,Default,,0,0,0,,Oh, no. No!
-Dialogue: 0,01:14:37.05,01:14:38.31,Default,,0,0,0,,Get down!
-Dialogue: 0,01:14:51.49,01:14:52.95,Default,,0,0,0,,I know!
-Dialogue: 0,01:14:55.53,01:14:57.53,Default,,0,0,0,,But it must be done.
-Dialogue: 0,01:15:40.24,01:15:41.29,Default,,0,0,0,,Fire.
-Dialogue: 0,01:15:41.49,01:15:43.20,Default,,0,0,0,,Fire, damn you!
-Dialogue: 0,01:15:44.25,01:15:45.37,Default,,0,0,0,,Fire!
-Dialogue: 0,01:17:03.58,01:17:05.79,Default,,0,0,0,,Don't leave me, Gray.
-Dialogue: 0,01:17:06.100,01:17:09.62,Default,,0,0,0,,Told Sid this was a one-way trip.
-Dialogue: 0,01:17:10.46,01:17:12.04,Default,,0,0,0,,Looks like I was right.
-Dialogue: 0,01:17:12.42,01:17:14.80,Default,,0,0,0,,No, Gray. Hang on, please.
-Dialogue: 0,01:17:15.00,01:17:16.92,Default,,0,0,0,,I still have the wave.
-Dialogue: 0,01:17:17.13,01:17:19.18,Default,,0,0,0,,We can get through this.
-Dialogue: 0,01:17:37.15,01:17:38.40,Default,,0,0,0,,Help me.
-Dialogue: 0,01:17:48.83,01:17:50.62,Default,,0,0,0,,Listen to me.
-Dialogue: 0,01:17:50.83,01:17:54.96,Default,,0,0,0,,You saved my life once. \NNow I want you to save yourself.
-Dialogue: 0,01:17:55.21,01:17:56.92,Default,,0,0,0,,Gray, no. Please?
-Dialogue: 0,01:17:57.17,01:18:00.42,Default,,0,0,0,,Let me do this, Aki. Trust me.
-Dialogue: 0,01:18:21.03,01:18:22.15,Default,,0,0,0,,I love you.
-Dialogue: 0,01:20:11.68,01:20:13.64,Default,,0,0,0,,Oh, it's warm.
+Dialogue: 0,00:40:34.10,00:40:38.31,Default,,0,0,0,,...a relationship between the human-sized Phantoms \Nand the giant ones roaming the wastelands?
+Dialogue: 0,00:40:38.31,00:40:40.48,Default,,0,0,0,,If you've spent as much time \Nin the field as we had...
+Dialogue: 0,00:40:40.69,00:40:44.19,Default,,0,0,0,,...you know there is no relationship. \NIt's like a zoo out there.
+Dialogue: 0,00:40:44.40,00:40:48.07,Default,,0,0,0,,Precisely. I think the giant ones are \Nlike our whales or elephants.
+Dialogue: 0,00:40:48.28,00:40:52.57,Default,,0,0,0,,But why would an invading army bring \Na bunch of whales and elephants along for the ride?
+Dialogue: 0,00:40:52.82,00:40:55.58,Default,,0,0,0,,Unless their ship was kind of \Na crazy Noah's Ark?
+Dialogue: 0,00:40:56.16,00:40:58.54,Default,,0,0,0,,We have always assumed that the meteor...
+Dialogue: 0,00:40:58.79,00:41:01.96,Default,,0,0,0,,...was intended as a form of transportation. \NPerhaps it wasn't.
+Dialogue: 0,00:41:02.63,00:41:05.46,Default,,0,0,0,,The meteor is a chunk of their planet \Nthat got thrown into space...
+Dialogue: 0,00:41:05.67,00:41:06.84,Default,,0,0,0,,...when they destroyed their world.
+Dialogue: 0,00:41:07.09,00:41:11.55,Default,,0,0,0,,But how could they survive the trip \Nacross outer space on a hunk of rock?
+Dialogue: 0,00:41:11.76,00:41:13.26,Default,,0,0,0,,They didn't.
+Dialogue: 0,00:41:17.47,00:41:21.14,Default,,0,0,0,,I think that explains why we never had a chance.
+Dialogue: 0,00:41:21.44,00:41:24.94,Default,,0,0,0,,All our strategies are based on one assumption:
+Dialogue: 0,00:41:25.23,00:41:28.15,Default,,0,0,0,,That we were fighting alien invaders.
+Dialogue: 0,00:41:28.36,00:41:31.20,Default,,0,0,0,,Think of the dream, Gray. How they died.
+Dialogue: 0,00:41:31.40,00:41:34.24,Default,,0,0,0,,Since then, all they've known is suffering.
+Dialogue: 0,00:41:34.45,00:41:36.33,Default,,0,0,0,,They're not an invading army.
+Dialogue: 0,00:41:36.53,00:41:38.24,Default,,0,0,0,,They're ghosts.
+Dialogue: 0,00:41:40.08,00:41:41.33,Default,,0,0,0,,How many Phantoms?
+Dialogue: 0,00:41:41.58,00:41:43.37,Default,,0,0,0,,More than enough to convince the council, sir.
+Dialogue: 0,00:41:43.63,00:41:47.00,Default,,0,0,0,,Excellent. Sound an alert. Send \Na squad out to eliminate them.
+Dialogue: 0,00:41:47.00,00:41:47.92,Default,,0,0,0,,Yes sir.
+Dialogue: 0,00:41:48.17,00:41:50.72,Default,,0,0,0,,Alert status. Full deployment.
+Dialogue: 0,00:41:50.97,00:41:52.68,Default,,0,0,0,,Sir. I have numerous Phantom contacts!
+Dialogue: 0,00:41:52.93,00:41:54.39,Default,,0,0,0,,Well, of course you do.
+Dialogue: 0,00:41:54.59,00:41:57.43,Default,,0,0,0,,Outside of Sector 31, sir. \NAnd moving at incredible speed.
+Dialogue: 0,00:41:57.64,00:41:59.43,Default,,0,0,0,,Major, What the hell is going on here?
+Dialogue: 0,00:41:59.64,00:42:01.02,Default,,0,0,0,,They're in the pipes.
+Dialogue: 0,00:42:01.23,00:42:03.77,Default,,0,0,0,,They're moving with the bio-etheric energy flow.
+Dialogue: 0,00:42:04.02,00:42:07.90,Default,,0,0,0,,That's impossible. No living thing \Ncould survive in those pipes.
+Dialogue: 0,00:42:08.40,00:42:12.45,Default,,0,0,0,,Well, we've got a big one heading this way. \NMeta class, sir.
+Dialogue: 0,00:42:19.83,00:42:21.20,Default,,0,0,0,,Oh, my God.
+Dialogue: 0,00:42:21.91,00:42:23.21,Default,,0,0,0,,Hold your fire!
+Dialogue: 0,00:43:09.92,00:43:11.55,Default,,0,0,0,,What have I done?
+Dialogue: 0,00:43:58.93,00:44:01.55,Default,,0,0,0,,- Here they come. \N- But the others! Dr. Sid!
+Dialogue: 0,00:44:01.76,00:44:04.06,Default,,0,0,0,,Deep Eyes'll take care of him. \NCome on.
+Dialogue: 0,00:44:11.52,00:44:13.65,Default,,0,0,0,,What's happening. Why can we see them now?
+Dialogue: 0,00:44:13.90,00:44:17.24,Default,,0,0,0,,They must be carrying a residual charge \Nfrom passing through the barrier.
+Dialogue: 0,00:44:22.16,00:44:23.45,Default,,0,0,0,,Behind you!
+Dialogue: 0,00:45:25.56,00:45:27.14,Default,,0,0,0,,All aboard, captain!
+Dialogue: 0,00:46:35.00,00:46:36.04,Default,,0,0,0,,We need to find my ship.
+Dialogue: 0,00:46:36.25,00:46:38.92,Default,,0,0,0,,If it was towed inside the city, \Nit would be in the military hangar.
+Dialogue: 0,00:46:39.13,00:46:40.88,Default,,0,0,0,,That's a big "if. "
+Dialogue: 0,00:46:49.85,00:46:51.06,Default,,0,0,0,,Look out!
+Dialogue: 0,00:46:58.98,00:47:01.07,Default,,0,0,0,,- Get us onto the platform. \N- You got it.
+Dialogue: 0,00:47:16.79,00:47:17.88,Default,,0,0,0,,Hang on, everybody!
+Dialogue: 0,00:47:37.19,00:47:37.81,Default,,0,0,0,,- Captain.
+Dialogue: 0,00:47:43.11,00:47:45.57,Default,,0,0,0,,Oh, God. Talk to me, sarge.
+Dialogue: 0,00:47:46.07,00:47:47.11,Default,,0,0,0,,Ouch!
+Dialogue: 0,00:47:47.32,00:47:48.66,Default,,0,0,0,,- Give me a hand, Jane. \N- Right.
+Dialogue: 0,00:47:48.87,00:47:52.95,Default,,0,0,0,,No wait! We're risking further injury. \NWe need the proper tools to cut him out.
+Dialogue: 0,00:47:53.16,00:47:54.45,Default,,0,0,0,,They're in my ship.
+Dialogue: 0,00:47:55.87,00:47:59.33,Default,,0,0,0,,- No. No, doc. No drugs. \N- Captain?
+Dialogue: 0,00:47:59.54,00:48:00.79,Default,,0,0,0,,You heard the man.
+Dialogue: 0,00:48:01.50,00:48:03.09,Default,,0,0,0,,We'll find the ship and be back for you.
+Dialogue: 0,00:48:03.34,00:48:05.09,Default,,0,0,0,,- I'll stay with him. \N- Me too.
+Dialogue: 0,00:48:05.30,00:48:06.88,Default,,0,0,0,,Nobody's staying.
+Dialogue: 0,00:48:08.09,00:48:10.01,Default,,0,0,0,,- Just give me a gun. \N- You got it.
+Dialogue: 0,00:48:10.22,00:48:12.76,Default,,0,0,0,,Give him a weapon. Do it!
+Dialogue: 0,00:48:15.27,00:48:17.06,Default,,0,0,0,,We'll be back for you, sergeant.
+Dialogue: 0,00:48:17.39,00:48:18.48,Default,,0,0,0,,You hear me?
+Dialogue: 0,00:48:18.77,00:48:21.98,Default,,0,0,0,,I hear you, captain. \NNow, get out of here.
+Dialogue: 0,00:48:22.48,00:48:23.82,Default,,0,0,0,,Let's move out.
+Dialogue: 0,00:49:14.83,00:49:17.16,Default,,0,0,0,,A quad-axle ATV. This is good.
+Dialogue: 0,00:49:17.41,00:49:21.46,Default,,0,0,0,,It can be used to retrieve Ryan \Nand transport him safely here.
+Dialogue: 0,00:49:21.67,00:49:24.84,Default,,0,0,0,,However, we'll need to replace \Nthese spent fuel cells.
+Dialogue: 0,00:49:25.13,00:49:27.55,Default,,0,0,0,,There could be some live ovo-pacs in the hangar.
+Dialogue: 0,00:49:39.27,00:49:40.35,Default,,0,0,0,,Gray, be careful.
+Dialogue: 0,00:49:40.56,00:49:41.77,Default,,0,0,0,,You too.
+Dialogue: 0,00:50:24.23,00:50:25.31,Default,,0,0,0,,Oh, yeah.
+Dialogue: 0,00:50:40.08,00:50:42.50,Default,,0,0,0,,Neil, do you read me?
+Dialogue: 0,00:50:42.75,00:50:44.25,Default,,0,0,0,,Loud and clear, captain.
+Dialogue: 0,00:50:44.50,00:50:46.29,Default,,0,0,0,,This baby'll fly itself.
+Dialogue: 0,00:50:53.88,00:50:55.18,Default,,0,0,0,,Flight path is set.
+Dialogue: 0,00:50:55.38,00:50:56.84,Default,,0,0,0,,Beginning rotation.
+Dialogue: 0,00:51:00.39,00:51:02.60,Default,,0,0,0,,Stop the airtray. We have a problem.
+Dialogue: 0,00:51:02.81,00:51:05.39,Default,,0,0,0,,I'm reading an impound tractor \Nattached probably to the ship.
+Dialogue: 0,00:51:19.24,00:51:20.74,Default,,0,0,0,,There's the problem.
+Dialogue: 0,00:51:29.67,00:51:32.17,Default,,0,0,0,,The controls are locked, naturally.
+Dialogue: 0,00:51:46.60,00:51:48.35,Default,,0,0,0,,What's happening down there?
+Dialogue: 0,00:51:48.60,00:51:51.11,Default,,0,0,0,,Nothing we can't handle.
+Dialogue: 0,00:52:03.04,00:52:06.12,Default,,0,0,0,,- Neil, what's your status? \N- Almost there.
+Dialogue: 0,00:52:06.46,00:52:07.100,Default,,0,0,0,,I want you two back inside.
+Dialogue: 0,00:52:08.21,00:52:11.96,Default,,0,0,0,,We're fine, sir. Jane is negotiating \Nwith extreme prejudice.
+Dialogue: 0,00:52:12.17,00:52:13.42,Default,,0,0,0,,Talk to me, Jane.
+Dialogue: 0,00:52:15.01,00:52:17.09,Default,,0,0,0,,No problem here, captain.
+Dialogue: 0,00:52:22.60,00:52:25.22,Default,,0,0,0,,Yes! Captain, we are good to go.
+Dialogue: 0,00:53:04.05,00:53:05.76,Default,,0,0,0,,Jane, get out of there.
+Dialogue: 0,00:53:06.10,00:53:09.23,Default,,0,0,0,,Get out of there now! Go! Jane!
+Dialogue: 0,00:53:09.44,00:53:11.40,Default,,0,0,0,,Get the hell out of there!
+Dialogue: 0,00:53:59.15,00:54:01.36,Default,,0,0,0,,Over here, you son of a bitch!
+Dialogue: 0,00:56:06.32,00:56:08.41,Default,,0,0,0,,Gray, come on!
+Dialogue: 0,00:59:10.13,00:59:12.01,Default,,0,0,0,,I enlarged the scanning perimeter...
+Dialogue: 0,00:59:12.21,00:59:15.01,Default,,0,0,0,,...to include an area that \Nwe had previously overlooked.
+Dialogue: 0,00:59:15.22,00:59:17.01,Default,,0,0,0,,The impact crater.
+Dialogue: 0,00:59:18.05,00:59:20.10,Default,,0,0,0,,That's a strange place to find the eighth spirit.
+Dialogue: 0,00:59:20.31,00:59:21.93,Default,,0,0,0,,Yes, really quite astonishing.
+Dialogue: 0,00:59:22.14,00:59:24.48,Default,,0,0,0,,But nothing could survive in there except Phantoms.
+Dialogue: 0,00:59:24.69,00:59:25.81,Default,,0,0,0,,Precisely.
+Dialogue: 0,00:59:26.14,00:59:29.31,Default,,0,0,0,,Which suggests that \Nthe eighth spirit is a Phantom spirit.
+Dialogue: 0,00:59:29.52,00:59:32.73,Default,,0,0,0,,I can't explain it at the moment, \Nbut once we get down there...
+Dialogue: 0,00:59:32.94,00:59:36.24,Default,,0,0,0,,- ... you will understand... \N- Wait, doctor. That's a one-way trip.
+Dialogue: 0,00:59:36.45,00:59:39.53,Default,,0,0,0,,Yes, I expected that's how \Nyou would evaluate our chances.
+Dialogue: 0,00:59:39.78,00:59:41.20,Default,,0,0,0,,Well, am I wrong?
+Dialogue: 0,00:59:41.41,00:59:42.100,Default,,0,0,0,,No, I agree. We probably...
+Dialogue: 0,00:59:42.100,00:59:46.21,Default,,0,0,0,,...won't live long enough to extract \Nthe eighth spirit from the crater.
+Dialogue: 0,00:59:46.42,00:59:47.08,Default,,0,0,0,,Then why should we even try it?
+Dialogue: 0,00:59:48.21,00:59:50.29,Default,,0,0,0,,Because we don't need to extract the eighth spirit.
+Dialogue: 0,00:59:50.50,00:59:52.30,Default,,0,0,0,,If we can't bring the final spirit here...
+Dialogue: 0,00:59:52.50,00:59:55.05,Default,,0,0,0,,...we can go there and complete \Nthe wave inside the crater.
+Dialogue: 0,00:59:55.26,00:59:56.68,Default,,0,0,0,,Yes, exactly.
+Dialogue: 0,00:59:56.88,00:59:58.84,Default,,0,0,0,,And how do we do that, exactly?
+Dialogue: 0,00:59:59.26,01:00:01.14,Default,,0,0,0,,I can construct a device that...
+Dialogue: 0,01:00:01.35,01:00:05.64,Default,,0,0,0,,...would attach to Aki's chest plate \Nto gather the eighth spirit and then...
+Dialogue: 0,01:00:06.81,01:00:07.94,Default,,0,0,0,,And then what?
+Dialogue: 0,01:00:08.27,01:00:11.44,Default,,0,0,0,,And then we wait \Nand see what happens.
+Dialogue: 0,01:00:41.68,01:00:44.39,Default,,0,0,0,,What caused the barrier \Nto fail, General Hein?
+Dialogue: 0,01:00:46.18,01:00:48.02,Default,,0,0,0,,I'm afraid it was \Nonly a matter of time...
+Dialogue: 0,01:00:48.23,01:00:51.44,Default,,0,0,0,,...before the Phantoms developed \Nan immunity to our barriers.
+Dialogue: 0,01:00:51.86,01:00:54.32,Default,,0,0,0,,But I am relieved to see that you \Nand the rest of the council...
+Dialogue: 0,01:00:54.52,01:00:58.03,Default,,0,0,0,,...were able to evacuate to Houston without incident.
+Dialogue: 0,01:00:58.24,01:01:00.95,Default,,0,0,0,,It was a terrible loss suffered this evening.
+Dialogue: 0,01:01:01.16,01:01:04.20,Default,,0,0,0,,The council has reconsidered \Nyour proposal to fire the Zeus cannon.
+Dialogue: 0,01:01:04.41,01:01:05.62,Default,,0,0,0,,I see.
+Dialogue: 0,01:01:05.99,01:01:08.21,Default,,0,0,0,,We are transmitting the access codes to you now.
+Dialogue: 0,01:01:10.21,01:01:11.50,Default,,0,0,0,,And, general...
+Dialogue: 0,01:01:12.92,01:01:15.09,Default,,0,0,0,,...best of luck to us all.
+Dialogue: 0,01:01:18.09,01:01:19.59,Default,,0,0,0,,Prepare to fire the cannon.
+Dialogue: 0,01:01:19.84,01:01:20.93,Default,,0,0,0,,The target, sir?
+Dialogue: 0,01:01:22.64,01:01:24.43,Default,,0,0,0,,The Phantom crater.
+Dialogue: 0,01:01:51.08,01:01:55.42,Default,,0,0,0,,Preparing to drop in three, two, one.
+Dialogue: 0,01:01:59.97,01:02:01.68,Default,,0,0,0,,Powering the shield.
+Dialogue: 0,01:02:04.64,01:02:06.43,Default,,0,0,0,,Okay, we're over the meteor.
+Dialogue: 0,01:02:06.64,01:02:08.14,Default,,0,0,0,,Do you have it in sight, doctor?
+Dialogue: 0,01:02:09.14,01:02:11.69,Default,,0,0,0,,There are so many of them.
+Dialogue: 0,01:02:13.60,01:02:14.65,Default,,0,0,0,,Wait.
+Dialogue: 0,01:02:14.86,01:02:18.98,Default,,0,0,0,,Yes! I'm tracking the eighth spirit \Nmoving along the crater's surface.
+Dialogue: 0,01:02:19.57,01:02:22.70,Default,,0,0,0,,All right. Now let's take a closer look.
+Dialogue: 0,01:03:02.90,01:03:04.61,Default,,0,0,0,,Ready to fire in three minutes.
+Dialogue: 0,01:03:04.82,01:03:08.62,Default,,0,0,0,,Ovo-pacs at maximum. \NTransferring plasma flow to auto.
+Dialogue: 0,01:03:09.12,01:03:11.12,Default,,0,0,0,,Counter-thrusters are engaged.
+Dialogue: 0,01:03:11.33,01:03:14.16,Default,,0,0,0,,Lox flow de-coupled. Status is green.
+Dialogue: 0,01:03:14.37,01:03:18.17,Default,,0,0,0,,We have something on radar \Nover the impact site, sir.
+Dialogue: 0,01:03:20.34,01:03:21.67,Default,,0,0,0,,It's her.
+Dialogue: 0,01:03:21.92,01:03:23.05,Default,,0,0,0,,Sir?
+Dialogue: 0,01:03:23.26,01:03:25.76,Default,,0,0,0,,Just a traitor under \Nthe influence of the enemy.
+Dialogue: 0,01:03:25.97,01:03:27.72,Default,,0,0,0,,Continue the countdown.
+Dialogue: 0,01:03:27.93,01:03:30.93,Default,,0,0,0,,We'll take them all out at the same time.
+Dialogue: 0,01:03:34.31,01:03:38.31,Default,,0,0,0,,We're closing on the Phantom. \NContact in 30 seconds.
+Dialogue: 0,01:03:39.65,01:03:41.07,Default,,0,0,0,,Target locked.
+Dialogue: 0,01:03:41.32,01:03:43.99,Default,,0,0,0,,Ready to fire on your command.
+Dialogue: 0,01:03:47.78,01:03:50.41,Default,,0,0,0,,It's a match! It's a perfect match!
+Dialogue: 0,01:03:50.62,01:03:52.41,Default,,0,0,0,,- Target scanners ready, sir. \N- Fire.
+Dialogue: 0,01:04:27.36,01:04:28.53,Default,,0,0,0,,What was that?
+Dialogue: 0,01:04:28.78,01:04:31.24,Default,,0,0,0,,It's the Zeus. They're firing on the crater.
+Dialogue: 0,01:04:31.49,01:04:34.91,Default,,0,0,0,,- Aki, Captain, are you all right? \N- A little shaken. Stand by.
+Dialogue: 0,01:04:35.16,01:04:39.67,Default,,0,0,0,,Sid, the eighth spirit is not \Non our scanner. Do you have it?
+Dialogue: 0,01:04:40.25,01:04:41.92,Default,,0,0,0,,The eighth spirit...
+Dialogue: 0,01:04:42.88,01:04:44.38,Default,,0,0,0,,...has been destroyed.
+Dialogue: 0,01:04:45.05,01:04:48.88,Default,,0,0,0,,- What are we going to do now? \N- Nothing. This mission is over.
+Dialogue: 0,01:04:49.22,01:04:51.01,Default,,0,0,0,,- We have to get out of here. \N- Incoming!
+Dialogue: 0,01:05:22.88,01:05:24.59,Default,,0,0,0,,What is that?
+Dialogue: 0,01:05:24.79,01:05:28.13,Default,,0,0,0,,If you're getting us out of here, \Nyou better do it now.
+Dialogue: 0,01:05:40.02,01:05:41.10,Default,,0,0,0,,Hold on!
+Dialogue: 0,01:05:50.45,01:05:52.41,Default,,0,0,0,,I can't hold on to you.
+Dialogue: 0,01:05:57.04,01:05:59.54,Default,,0,0,0,,Unable to maintain altitude.
+Dialogue: 0,01:06:06.67,01:06:09.17,Default,,0,0,0,,Initiate emergency landing procedures.
+Dialogue: 0,01:06:32.99,01:06:35.45,Default,,0,0,0,,Come in. Come in, please.
+Dialogue: 0,01:06:35.70,01:06:38.54,Default,,0,0,0,,Aki, Gray, can you hear me?
+Dialogue: 0,01:06:38.79,01:06:42.71,Default,,0,0,0,,Sid, I need to talk to the station. \NCan you patch us through?
+Dialogue: 0,01:06:45.21,01:06:48.13,Default,,0,0,0,,- What is that thing? \N- I don't know, sir.
+Dialogue: 0,01:06:48.38,01:06:50.59,Default,,0,0,0,,Incoming message, sir.
+Dialogue: 0,01:06:50.84,01:06:53.30,Default,,0,0,0,,General Hein, \NYou must cease fire immediately.
+Dialogue: 0,01:06:53.59,01:06:57.89,Default,,0,0,0,,What you are looking at in the crater is the \Nliving spirit of an alien's home world.
+Dialogue: 0,01:06:58.10,01:07:00.68,Default,,0,0,0,,Their planet was destroyed \Nand part of it landed here.
+Dialogue: 0,01:07:00.93,01:07:03.52,Default,,0,0,0,,This is not an invasion. It never was.
+Dialogue: 0,01:07:04.02,01:07:08.15,Default,,0,0,0,,I see and what have we been fighting \Nall this time, doctor? Ghosts?
+Dialogue: 0,01:07:08.40,01:07:12.99,Default,,0,0,0,,Yes. Spirits that are confused, \Nlost and angry.
+Dialogue: 0,01:07:13.24,01:07:15.91,Default,,0,0,0,,Right. And these spirits are \Ncoming out of this Gaia thing.
+Dialogue: 0,01:07:16.16,01:07:17.74,Default,,0,0,0,,General Hein, you have to listen.
+Dialogue: 0,01:07:18.03,01:07:21.54,Default,,0,0,0,,Alien Gaia, Earth Gaia. \NDoctor, even if I believed in such nonsense...
+Dialogue: 0,01:07:21.87,01:07:24.62,Default,,0,0,0,,...the fact remains the Earth \Nis under attack from an aggressor...
+Dialogue: 0,01:07:24.83,01:07:27.13,Default,,0,0,0,,...who must be destroyed at all costs.
+Dialogue: 0,01:07:27.42,01:07:29.88,Default,,0,0,0,,The cost may be the entire planet, sir.
+Dialogue: 0,01:07:30.21,01:07:32.96,Default,,0,0,0,,Firing on the alien Gaia will only make it stronger.
+Dialogue: 0,01:07:33.26,01:07:37.55,Default,,0,0,0,,Well, since you're under the alien's influence, doctor, \NI will take your protest to mean that we are...
+Dialogue: 0,01:07:37.80,01:07:39.72,Default,,0,0,0,,...in fact pursuing the correct course of actions.
+Dialogue: 0,01:07:39.93,01:07:44.43,Default,,0,0,0,,So i suggest you take your last few moments \Nand prepare to meet your Gaia.
+Dialogue: 0,01:07:44.56,01:07:47.69,Default,,0,0,0,,Continue to fire until the invader has been destroyed.
+Dialogue: 0,01:08:24.27,01:08:26.39,Default,,0,0,0,,General, the system is overheating, sir.
+Dialogue: 0,01:08:26.60,01:08:30.52,Default,,0,0,0,,We're going to hit it again and again \Nand keep on hitting it until it's dead.
+Dialogue: 0,01:08:30.81,01:08:33.36,Default,,0,0,0,,But, sir. We're not even sure \Nif it's having any effect on the creature.
+Dialogue: 0,01:08:33.57,01:08:36.95,Default,,0,0,0,,No effect? We've got them on the run, soldier.
+Dialogue: 0,01:08:37.15,01:08:41.24,Default,,0,0,0,,This is our moment of victory. I order you to fire.
+Dialogue: 0,01:08:41.37,01:08:45.20,Default,,0,0,0,,- The system won't allow us to fire again. \N- We'll see about that.
+Dialogue: 0,01:08:46.41,01:08:50.25,Default,,0,0,0,,Our shield is out. We're sitting ducks in here. \NCome on!
+Dialogue: 0,01:09:11.35,01:09:14.48,Default,,0,0,0,,This is not a good place to be.
+Dialogue: 0,01:09:12.23,01:09:14.48,Default,,0,0,0,,This is not a good place to be.
+Dialogue: 0,01:09:24.83,01:09:25.95,Default,,0,0,0,,Hey, are you all right?
+Dialogue: 0,01:09:26.16,01:09:29.83,Default,,0,0,0,,I'm fine. I have to talk to Dr. Sid.
+Dialogue: 0,01:10:08.66,01:10:11.21,Default,,0,0,0,,Sid, do you read me?
+Dialogue: 0,01:10:11.87,01:10:14.00,Default,,0,0,0,,Go ahead, I'm still here.
+Dialogue: 0,01:10:14.29,01:10:18.63,Default,,0,0,0,,We're looking at Gaia. \NDo you hear me, Sid? Gaia.
+Dialogue: 0,01:10:18.84,01:10:22.93,Default,,0,0,0,,I think this explains why \Nthe eighth spirit appeared here.
+Dialogue: 0,01:10:24.09,01:10:25.18,Default,,0,0,0,,Yes.
+Dialogue: 0,01:10:25.72,01:10:27.47,Default,,0,0,0,,Yes, that's it!
+Dialogue: 0,01:10:27.68,01:10:29.52,Default,,0,0,0,,A Phantom must have changed into the eighth spirit...
+Dialogue: 0,01:10:29.52,01:10:33.44,Default,,0,0,0,,...when it touched a new life born from our own Gaia.
+Dialogue: 0,01:10:33.73,01:10:36.98,Default,,0,0,0,,If so, it would've been given \Na different energy signature...
+Dialogue: 0,01:10:37.19,01:10:40.19,Default,,0,0,0,,...that set it apart from the other Phantoms.
+Dialogue: 0,01:10:40.61,01:10:43.66,Default,,0,0,0,,You two could not have hoped \Nfor a better location...
+Dialogue: 0,01:10:43.99,01:10:46.03,Default,,0,0,0,,...to find a new compatible spirit.
+Dialogue: 0,01:10:46.24,01:10:50.62,Default,,0,0,0,,Whatever you do, don't move. \NStay right where you are.
+Dialogue: 0,01:10:51.66,01:10:55.50,Default,,0,0,0,,Staying right where we are \Nmay not be as easy as it sounds.
+Dialogue: 0,01:10:55.75,01:10:57.92,Default,,0,0,0,,Don't shoot any of them!
+Dialogue: 0,01:10:58.13,01:11:00.92,Default,,0,0,0,,You could very well destroy our last hope.
+Dialogue: 0,01:11:01.09,01:11:04.18,Default,,0,0,0,,And what do you suggest I do, doctor? \NAsk them to play nice?
+Dialogue: 0,01:11:04.38,01:11:08.51,Default,,0,0,0,,Combat strategy is your area \Nof expertise, captain, not mine.
+Dialogue: 0,01:11:08.89,01:11:12.27,Default,,0,0,0,,I have a reading here in the fissure. \NDo you see it?
+Dialogue: 0,01:11:12.52,01:11:17.40,Default,,0,0,0,,Yes! A compatible spirit. \NIt must be very near you.
+Dialogue: 0,01:11:17.56,01:11:20.90,Default,,0,0,0,,Well? Which one is it? Which one?
+Dialogue: 0,01:11:21.11,01:11:24.90,Default,,0,0,0,,I'm having difficulty narrowing it down. \NJust a moment, please.
+Dialogue: 0,01:11:27.32,01:11:31.12,Default,,0,0,0,,Doctor, it's getting crowded in here. \NAki, we don't have much time. Aki.
+Dialogue: 0,01:13:02.96,01:13:05.21,Default,,0,0,0,,With the hope of new life...
+Dialogue: 0,01:13:05.42,01:13:08.47,Default,,0,0,0,,...has Gaia changed \Nthe Phantom within?
+Dialogue: 0,01:13:14.60,01:13:15.89,Default,,0,0,0,,I have it.
+Dialogue: 0,01:13:22.11,01:13:24.90,Default,,0,0,0,,Gray, get in here. I need you!
+Dialogue: 0,01:13:25.69,01:13:28.74,Default,,0,0,0,,Do you hear me, Sid? \NThe wave pattern is complete.
+Dialogue: 0,01:13:28.95,01:13:32.20,Default,,0,0,0,,Yes, I read you. This is wonderful.
+Dialogue: 0,01:13:32.41,01:13:35.28,Default,,0,0,0,,I don't see how you could have found the final spirit.
+Dialogue: 0,01:13:35.54,01:13:37.91,Default,,0,0,0,,It found me, doctor.
+Dialogue: 0,01:13:39.79,01:13:41.42,Default,,0,0,0,,Oh, my word.
+Dialogue: 0,01:13:42.88,01:13:44.75,Default,,0,0,0,,I hope you know \Nwhat you're doing, Aki.
+Dialogue: 0,01:13:44.75,01:13:47.26,Default,,0,0,0,,- We can use the shield to project the wave. \N- What?
+Dialogue: 0,01:13:47.46,01:13:50.97,Default,,0,0,0,,Dr. Sid's theory was right. \NI have it. The eighth spirit.
+Dialogue: 0,01:13:51.43,01:13:53.55,Default,,0,0,0,,That's it. Shield on.
+Dialogue: 0,01:14:19.33,01:14:21.12,Default,,0,0,0,,I'll blast you all to hell.
+Dialogue: 0,01:14:28.80,01:14:30.42,Default,,0,0,0,,Oh, no. No!
+Dialogue: 0,01:14:34.80,01:14:36.05,Default,,0,0,0,,Get down!
+Dialogue: 0,01:14:49.23,01:14:50.69,Default,,0,0,0,,I know!
+Dialogue: 0,01:14:53.28,01:14:55.28,Default,,0,0,0,,But it must be done.
+Dialogue: 0,01:15:37.99,01:15:39.03,Default,,0,0,0,,Fire.
+Dialogue: 0,01:15:39.24,01:15:40.95,Default,,0,0,0,,Fire, damn you!
+Dialogue: 0,01:15:41.99,01:15:43.12,Default,,0,0,0,,Fire!
+Dialogue: 0,01:17:01.32,01:17:03.53,Default,,0,0,0,,Don't leave me, Gray.
+Dialogue: 0,01:17:03.83,01:17:07.37,Default,,0,0,0,,Told Sid this was a one-way trip.
+Dialogue: 0,01:17:08.21,01:17:09.79,Default,,0,0,0,,Looks like I was right.
+Dialogue: 0,01:17:10.17,01:17:12.54,Default,,0,0,0,,No, Gray. Hang on, please.
+Dialogue: 0,01:17:12.75,01:17:14.67,Default,,0,0,0,,I still have the wave.
+Dialogue: 0,01:17:14.88,01:17:16.92,Default,,0,0,0,,We can get through this.
+Dialogue: 0,01:17:34.90,01:17:36.15,Default,,0,0,0,,Help me.
+Dialogue: 0,01:17:46.58,01:17:48.37,Default,,0,0,0,,Listen to me.
+Dialogue: 0,01:17:48.58,01:17:52.71,Default,,0,0,0,,You saved my life once. \NNow I want you to save yourself.
+Dialogue: 0,01:17:52.96,01:17:54.67,Default,,0,0,0,,Gray, no. Please?
+Dialogue: 0,01:17:54.92,01:17:58.17,Default,,0,0,0,,Let me do this, Aki. Trust me.
+Dialogue: 0,01:18:18.78,01:18:19.90,Default,,0,0,0,,I love you.
+Dialogue: 0,01:20:09.43,01:20:11.39,Default,,0,0,0,,Oh, it's warm.

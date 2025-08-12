@@ -268,7 +268,7 @@ Dialogue: 0,00:21:09.56,00:21:11.85,Default,,0,0,0,,- Holy shit, now what? \N- W
 Dialogue: 0,00:21:11.98,00:21:15.02,Default,,0,0,0,,Haven't got a clue. I feel like \Nthis airport's just gone to shit.
 Dialogue: 0,00:21:24.37,00:21:28.79,Default,,0,0,0,,- All right, give me your passports. \N- We already arranged for a guide.
 Dialogue: 0,00:21:28.95,00:21:30.83,Default,,0,0,0,,- Robertson Reynolds. \N- Yeah, I fired him.
-Dialogue: 0,00:21:30.100,00:21:32.79,Default,,0,0,0,,- You what? \N- Reynolds is a bird-watcher.
+Dialogue: 0,00:21:30.08,00:21:32.79,Default,,0,0,0,,- You what? \N- Reynolds is a bird-watcher.
 Dialogue: 0,00:21:32.96,00:21:35.29,Default,,0,0,0,,- I hired Robertson Reynolds. \N- You would.
 Dialogue: 0,00:21:35.46,00:21:38.96,Default,,0,0,0,,You have any idea what's going on \Nin the Congo as of this morning?
 Dialogue: 0,00:21:39.13,00:21:42.68,Default,,0,0,0,,The Kigani have had it with Zaire \Nand they're eating people.
@@ -357,7 +357,7 @@ Dialogue: 0,00:28:31.21,00:28:36.46,Default,,0,0,0,,Everybody's so afraid of bei
 Dialogue: 0,00:28:37.05,00:28:41.64,Default,,0,0,0,,This is the crazy world we live in. \NOkay, you can go.
 Dialogue: 0,00:28:43.80,00:28:47.56,Default,,0,0,0,,Hit the road, as they say. \NAnd have a nice day.
 Dialogue: 0,00:29:04.95,00:29:06.70,Default,,0,0,0,,- You all right? \N- Yeah.
-Dialogue: 0,00:29:06.87,00:29:08.100,Default,,0,0,0,,Admit it, you're glad to see me.
+Dialogue: 0,00:29:06.87,00:29:08.08,Default,,0,0,0,,Admit it, you're glad to see me.
 Dialogue: 0,00:29:57.96,00:30:00.42,Default,,0,0,0,,- Kahega! \N- Ah, Monroe!
 Dialogue: 0,00:30:03.34,00:30:05.34,Default,,0,0,0,,Kikuyu tribesman, very nice guy.
 Dialogue: 0,00:30:05.47,00:30:08.14,Default,,0,0,0,,- Are we in Zaire? \N- Tanzania.
@@ -461,7 +461,7 @@ Dialogue: 0,00:40:03.61,00:40:05.65,Default,,0,0,0,,I'll get you! I'll get you!
 Dialogue: 0,00:40:06.07,00:40:11.57,Default,,0,0,0,,I'm helping that young scientist \Nreturn his ward to the wild.
 Dialogue: 0,00:40:11.70,00:40:15.95,Default,,0,0,0,,He says the ape may be able to tell us \Nthe thoughts of the wild gorillas.
 Dialogue: 0,00:40:16.12,00:40:17.83,Default,,0,0,0,,Well I can tell you your thoughts.
-Dialogue: 0,00:40:17.100,00:40:21.58,Default,,0,0,0,,You're looking for King Solomon's \Ndiamonds. The lost city of Zinj.
+Dialogue: 0,00:40:17.08,00:40:21.58,Default,,0,0,0,,You're looking for King Solomon's \Ndiamonds. The lost city of Zinj.
 Dialogue: 0,00:40:24.46,00:40:26.76,Default,,0,0,0,,- I've given it up. \N- You'll never give it up.
 Dialogue: 0,00:40:26.92,00:40:29.76,Default,,0,0,0,,The problem is, Herkermer, \Nit doesn't exist.
 Dialogue: 0,00:40:29.93,00:40:34.89,Default,,0,0,0,,Solomon must have gotten his diamonds \Nfrom Cartiers, like everybody else.
@@ -525,323 +525,321 @@ Dialogue: 0,00:46:10.31,00:46:14.60,Default,,0,0,0,,As a young man, \NI found a 
 Dialogue: 0,00:46:14.77,00:46:19.23,Default,,0,0,0,,It contained a detailed drawing \Nof the city of Zinj.
 Dialogue: 0,00:46:19.78,00:46:23.28,Default,,0,0,0,,The drawing contained \Na peculiar decoration.
 Dialogue: 0,00:46:23.86,00:46:26.24,Default,,0,0,0,,An open eye.
-Dialogue: 0,00:46:26.41,00:46:30.100,Default,,0,0,0,,Later, on safari, I found this.
+Dialogue: 0,00:46:26.41,00:46:30.12,Default,,0,0,0,,Later, on safari, I found this.
 Dialogue: 0,00:46:34.33,00:46:36.92,Default,,0,0,0,,It's the same symbol. Now...
 Dialogue: 0,00:46:38.59,00:46:40.30,Default,,0,0,0,,look at this.
 Dialogue: 0,00:46:42.80,00:46:45.05,Default,,0,0,0,,The gorilla drew this.
 Dialogue: 0,00:46:47.43,00:46:52.31,Default,,0,0,0,,It is the same image. It is the open eye.
 Dialogue: 0,00:46:53.02,00:46:58.02,Default,,0,0,0,,That gorilla has seen the city of Zinj.
-Dialogue: 0,00:47:01.19,00:47:05.91,Default,,0,0,0,,- And she will take us there! \N- Have you been taking your medication?
-Dialogue: 0,00:47:09.91,00:47:13.16,Default,,0,0,0,,Have your laughing, and I will have mine.
-Dialogue: 0,00:47:20.63,00:47:21.88,Default,,0,0,0,,Shit...
-Dialogue: 0,00:47:23.55,00:47:26.72,Default,,0,0,0,,- What is it? \N- The signal stopped.
-Dialogue: 0,00:47:26.88,00:47:31.39,Default,,0,0,0,,- Does that mean...? \N- It just means the signal stopped.
-Dialogue: 0,00:47:32.60,00:47:34.27,Default,,0,0,0,,I don't know what it means.
-Dialogue: 0,00:48:34.49,00:48:36.16,Default,,0,0,0,,No problem.
-Dialogue: 0,00:49:03.06,00:49:04.19,Default,,0,0,0,,Oh, my God!
-Dialogue: 0,00:49:14.66,00:49:16.79,Default,,0,0,0,,- Shoot it! \N- Amy!
-Dialogue: 0,00:49:16.95,00:49:20.46,Default,,0,0,0,,- What is it? \N- Turn the boat around, quickly.
-Dialogue: 0,00:49:23.79,00:49:26.09,Default,,0,0,0,,Agh! Aah!
-Dialogue: 0,00:49:26.80,00:49:29.30,Default,,0,0,0,,Shoot it! Oh, my God!
-Dialogue: 0,00:49:31.09,00:49:33.01,Default,,0,0,0,,Turn the boat around!
-Dialogue: 0,00:49:37.18,00:49:39.06,Default,,0,0,0,,Head for shore!
-Dialogue: 0,00:49:55.57,00:49:57.41,Default,,0,0,0,,- How is he? \N- It's just a big cut.
-Dialogue: 0,00:49:57.58,00:49:59.79,Default,,0,0,0,,- I'll stitch it up, he'll be all right. \N- Oh, God.
-Dialogue: 0,00:50:01.33,00:50:04.13,Default,,0,0,0,,- What's that? \N- A plane.
-Dialogue: 0,00:50:05.08,00:50:07.46,Default,,0,0,0,,- Good luck to them. \N- Who are they?
-Dialogue: 0,00:50:07.63,00:50:11.76,Default,,0,0,0,,I don't know, but the Zaire Air Force \Nhas got a piece of their ass.
-Dialogue: 0,00:50:16.18,00:50:19.43,Default,,0,0,0,,Pitch camp. Tomorrow, Mt. Mukenko.
-Dialogue: 0,00:50:39.08,00:50:41.58,Default,,0,0,0,,- She's getting excited. \N- Why, do you think?
-Dialogue: 0,00:50:41.75,00:50:45.42,Default,,0,0,0,,Somewhere on the other side of this \Nmountain is where Amy was born.
-Dialogue: 0,00:51:13.44,00:51:15.65,Default,,0,0,0,,Wow, it's beautiful.
-Dialogue: 0,00:51:17.45,00:51:20.45,Default,,0,0,0,,Is this your valley, Amy? \NIt is, isn't it?
-Dialogue: 0,00:51:20.62,00:51:23.66,Default,,0,0,0,,It's home. That's your home.
-Dialogue: 0,00:51:25.87,00:51:30.00,Default,,0,0,0,,Pretty jungle, that's right.
-Dialogue: 0,00:51:35.63,00:51:37.13,Default,,0,0,0,,What's she doing?
-Dialogue: 0,00:51:37.30,00:51:40.89,Default,,0,0,0,,She wants to go to the place in her heart.
-Dialogue: 0,00:51:41.06,00:51:46.81,Default,,0,0,0,,- You mean the place in your heart, Herkermer. \N- You may call me Mr. Homolka.
-Dialogue: 0,00:51:48.31,00:51:50.65,Default,,0,0,0,,Come on, Amy, let's go.
-Dialogue: 0,00:51:52.73,00:51:54.61,Default,,0,0,0,,- We've lost two porters. \N- Where'd they go?
-Dialogue: 0,00:51:54.78,00:51:58.20,Default,,0,0,0,,- Ran away. \N- And they didn't invite me?
-Dialogue: 0,00:51:58.36,00:52:01.95,Default,,0,0,0,,You want your glove? All right, sit still.
-Dialogue: 0,00:52:05.54,00:52:12.04,Default,,0,0,0,,This, as they say, is a fork in the road. \NWe could go left or we could go right.
-Dialogue: 0,00:52:12.21,00:52:14.38,Default,,0,0,0,,We go the wrong way, \Nwe lose two or three days.
-Dialogue: 0,00:52:14.55,00:52:17.17,Default,,0,0,0,,We must follow the gorilla. \NWhere she leads.
-Dialogue: 0,00:52:19.05,00:52:20.64,Default,,0,0,0,,- That would be left. \N- Best guess...
-Dialogue: 0,00:52:20.80,00:52:22.81,Default,,0,0,0,,off my last coordinates was this way.
-Dialogue: 0,00:52:22.97,00:52:27.89,Default,,0,0,0,,- That would be right. \N- Amy, Peter, <i>go</i> this way.
-Dialogue: 0,00:52:29.10,00:52:34.65,Default,,0,0,0,,Well, I don't have her passion. \NI'll follow the gorilla.
-Dialogue: 0,00:52:41.91,00:52:44.95,Default,,0,0,0,,This doesn't seem \Nlike the right way to me.
-Dialogue: 0,00:53:11.94,00:53:13.44,Default,,0,0,0,,Good Lord.
-Dialogue: 0,00:53:17.32,00:53:21.07,Default,,0,0,0,,- It's that plane we saw burning in \Nthe sky. - Who were they?
-Dialogue: 0,00:53:21.24,00:53:24.87,Default,,0,0,0,,Travis, my boss, thought I wasn't gonna \Nmake it. He sent another expedition.
-Dialogue: 0,00:53:24.99,00:53:29.12,Default,,0,0,0,,Tried to push too far. Looks like a rocket \Ngot them. There's no point going in there.
-Dialogue: 0,00:53:30.92,00:53:35.25,Default,,0,0,0,,- My God, what a waste of life. \N- We'd better keep moving.
-Dialogue: 0,00:54:34.98,00:54:38.57,Default,,0,0,0,,- Oh, shit! Somebody help me. \N- What is it?
-Dialogue: 0,00:54:38.73,00:54:41.74,Default,,0,0,0,,There's something on my... \NLike, a creature, growth or something.
-Dialogue: 0,00:54:41.90,00:54:44.91,Default,,0,0,0,,- Look. \N- Ah. That's a leech.
-Dialogue: 0,00:54:45.07,00:54:48.24,Default,,0,0,0,,- Take it off. \N- It's your leech, you take it off.
-Dialogue: 0,00:54:48.41,00:54:49.83,Default,,0,0,0,,- Need some help? \N- No.
-Dialogue: 0,00:54:49.99,00:54:52.25,Default,,0,0,0,,- Here, burn it off with this. \N- Ha-ha-ha.
-Dialogue: 0,00:54:52.41,00:54:53.83,Default,,0,0,0,,- Ha, ha. \N- Ugh.
-Dialogue: 0,00:54:53.100,00:54:56.13,Default,,0,0,0,,- Mm! \N- This is disgusting.
-Dialogue: 0,00:55:02.76,00:55:04.09,Default,,0,0,0,,Here.
-Dialogue: 0,00:55:12.64,00:55:16.23,Default,,0,0,0,,- Monroe? \N- Don't indicate you see them.
-Dialogue: 0,00:55:17.27,00:55:22.61,Default,,0,0,0,,Mizumu. The ghost tribe. \NThere are probably 20 of them.
-Dialogue: 0,00:55:24.45,00:55:27.53,Default,,0,0,0,,- I only see two. \N- Yes, that's how they are.
-Dialogue: 0,00:55:27.70,00:55:31.24,Default,,0,0,0,,- Are they friendly? \N- They're sensitive. They're forest people.
-Dialogue: 0,00:55:41.63,00:55:45.51,Default,,0,0,0,,- Why are they laughing? \N- They asked who was in charge, I said I was.
-Dialogue: 0,00:55:45.67,00:55:47.80,Default,,0,0,0,,- What's so funny about that? \N- I'm black.
-Dialogue: 0,00:55:47.97,00:55:50.01,Default,,0,0,0,,I should have luggage on my head.
-Dialogue: 0,00:55:58.60,00:56:00.56,Default,,0,0,0,,He says there's a dead white man...
-Dialogue: 0,00:56:00.73,00:56:03.48,Default,,0,0,0,,in this forest with a \Nsymbol on his clothes.
-Dialogue: 0,00:56:08.91,00:56:11.70,Default,,0,0,0,,He's dead? Did they say he's dead?
-Dialogue: 0,00:56:11.87,00:56:16.71,Default,,0,0,0,,- What does "TC" mean? \N- TraviCom. The company I work for.
-Dialogue: 0,00:56:16.87,00:56:19.04,Default,,0,0,0,,They have several levels of "dead."
-Dialogue: 0,00:56:19.21,00:56:22.84,Default,,0,0,0,,Someone's not dead \Nuntil they're completely dead.
-Dialogue: 0,00:57:02.08,00:57:05.42,Default,,0,0,0,,They haven't moved him. \NThey believe his soul has left his body.
-Dialogue: 0,00:57:05.63,00:57:09.05,Default,,0,0,0,,If they move him, his soul will be lost, \Nnever finding his body again.
-Dialogue: 0,00:57:09.22,00:57:12.01,Default,,0,0,0,,They're calling to his soul, \Nasking it to come back.
-Dialogue: 0,00:57:39.41,00:57:40.71,Default,,0,0,0,,Where is the man?
-Dialogue: 0,00:57:54.97,00:57:56.26,Default,,0,0,0,,- It's not him. \N- Not who?
-Dialogue: 0,00:57:56.43,00:57:58.85,Default,,0,0,0,,It's Bob Driscoll. What happened to him?
-Dialogue: 0,00:57:59.02,00:58:01.39,Default,,0,0,0,,Bob? Bob?
-Dialogue: 0,00:58:01.52,00:58:03.52,Default,,0,0,0,,- Let's sit him up. \N- Who is this man?
-Dialogue: 0,00:58:03.69,00:58:07.82,Default,,0,0,0,,My company sent an expedition to \Nthe Virungas. This man was with them.
-Dialogue: 0,00:58:09.03,00:58:10.28,Default,,0,0,0,,Lay him over there.
-Dialogue: 0,00:58:10.44,00:58:13.20,Default,,0,0,0,,- What happened to him? \N- I don't know.
-Dialogue: 0,00:58:14.74,00:58:16.24,Default,,0,0,0,,Bob?
-Dialogue: 0,00:58:46.65,00:58:48.65,Default,,0,0,0,,- He's dead. \N- God, no.
-Dialogue: 0,00:58:57.99,00:59:00.08,Default,,0,0,0,,That region of the Congo is uninhabited.
-Dialogue: 0,00:59:00.24,00:59:02.41,Default,,0,0,0,,- Something inhabits it. \N- What did you see?
-Dialogue: 0,00:59:02.58,00:59:05.29,Default,,0,0,0,,Camp destroyed. People dead. \NA gray gorilla or something.
-Dialogue: 0,00:59:05.46,00:59:07.50,Default,,0,0,0,,- No such thing as a gray gorilla. \N- I saw one.
-Dialogue: 0,00:59:07.67,00:59:10.17,Default,,0,0,0,,- That's hard to believe. \N- Two men are unaccounted for.
-Dialogue: 0,00:59:10.34,00:59:12.84,Default,,0,0,0,,Jeffrey Weems \Nand Charles Travis, my fiancé.
-Dialogue: 0,00:59:13.01,00:59:14.51,Default,,0,0,0,,- My former fiancé. \N- Former?
-Dialogue: 0,00:59:14.68,00:59:16.13,Default,,0,0,0,,We'd better get to him, then.
-Dialogue: 0,00:59:32.03,00:59:34.03,Default,,0,0,0,,- What the hell is that? \N- Perimeter alarm.
-Dialogue: 0,00:59:34.19,00:59:36.53,Default,,0,0,0,,They had it around their camp.
-Dialogue: 0,00:59:36.91,00:59:39.74,Default,,0,0,0,,But where's the camp, their equipment?
-Dialogue: 0,00:59:57.26,01:00:02.01,Default,,0,0,0,,I don't understand it. There had to be \N300 pounds of equipment.
-Dialogue: 0,01:00:02.18,01:00:04.89,Default,,0,0,0,,And the bodies. \NThere's no sign of the bodies.
-Dialogue: 0,01:00:32.96,01:00:35.55,Default,,0,0,0,,- It's a dead end? \N- Maybe, maybe not.
-Dialogue: 0,01:00:46.48,01:00:47.81,Default,,0,0,0,,Yes. Bingo!
-Dialogue: 0,01:01:40.32,01:01:43.66,Default,,0,0,0,,- Son of a bitch. \N- Jesus.
-Dialogue: 0,01:01:43.82,01:01:45.78,Default,,0,0,0,,What is this?
-Dialogue: 0,01:01:47.41,01:01:50.37,Default,,0,0,0,,It is the city of Zinj...
-Dialogue: 0,01:01:52.58,01:01:56.50,Default,,0,0,0,,that I have looked for all my life.
-Dialogue: 0,01:02:02.05,01:02:05.10,Default,,0,0,0,,See, the eyes.
-Dialogue: 0,01:02:06.35,01:02:08.52,Default,,0,0,0,,It is the same.
-Dialogue: 0,01:02:11.23,01:02:13.85,Default,,0,0,0,,Kahega, guns up. Stay alert.
-Dialogue: 0,01:02:19.69,01:02:22.32,Default,,0,0,0,,Come here, Amy. Stay with me.
-Dialogue: 0,01:04:11.35,01:04:16.56,Default,,0,0,0,,First they found the diamonds, \NSolomon's men.
-Dialogue: 0,01:04:18.27,01:04:21.69,Default,,0,0,0,,A diamond mine of incredible bounty.
-Dialogue: 0,01:04:22.94,01:04:29.20,Default,,0,0,0,,Then they built the city around \Nthe mine, so that it should be protected.
-Dialogue: 0,01:04:29.74,01:04:32.66,Default,,0,0,0,,The savagery of the guards was legend.
-Dialogue: 0,01:04:32.83,01:04:37.12,Default,,0,0,0,,They instantly fell upon \Nany thief, any transgressor.
-Dialogue: 0,01:04:37.29,01:04:41.42,Default,,0,0,0,,The diamonds flowed \Nto the kingdom of Solomon.
-Dialogue: 0,01:04:41.59,01:04:43.71,Default,,0,0,0,,What happened? Why did the city die?
-Dialogue: 0,01:04:43.88,01:04:46.13,Default,,0,0,0,,- I don't know. \N- Maybe the mines ran dry.
-Dialogue: 0,01:04:46.30,01:04:49.47,Default,,0,0,0,,No! No, the diamonds are here!
-Dialogue: 0,01:04:49.63,01:04:52.72,Default,,0,0,0,,- Monroe, over here! \N- What is it?
-Dialogue: 0,01:04:56.68,01:04:58.60,Default,,0,0,0,,On the step, by the hood.
-Dialogue: 0,01:04:58.77,01:05:00.65,Default,,0,0,0,,I found this.
-Dialogue: 0,01:05:07.61,01:05:09.32,Default,,0,0,0,,Don't go in there. I'll check it out.
-Dialogue: 0,01:05:09.49,01:05:13.95,Default,,0,0,0,,- Give me a gun and a flashlight. \N- Don't be so John Wayne, you could get killed.
-Dialogue: 0,01:05:15.58,01:05:18.75,Default,,0,0,0,,Now that I've said that, \NI'm not going in there alone, either.
-Dialogue: 0,01:05:18.91,01:05:21.75,Default,,0,0,0,,- I must go. \N- Let's all look.
-Dialogue: 0,01:05:21.88,01:05:23.46,Default,,0,0,0,,I'll just stay out here with Amy.
-Dialogue: 0,01:05:23.63,01:05:25.75,Default,,0,0,0,,Not alone you won't. Kahega!
-Dialogue: 0,01:05:51.82,01:05:54.62,Default,,0,0,0,,Stay close together. Homolka...
-Dialogue: 0,01:06:01.04,01:06:06.04,Default,,0,0,0,,- Homolka! \N- The same hieroglyphics, over and over.
-Dialogue: 0,01:06:07.67,01:06:11.22,Default,,0,0,0,,- What do they mean? \N- Homolka!
-Dialogue: 0,01:06:16.64,01:06:17.97,Default,,0,0,0,,Amy, don't wander off!
-Dialogue: 0,01:06:19.10,01:06:22.10,Default,,0,0,0,,- So do you speak English? \N- Yes.
-Dialogue: 0,01:06:22.69,01:06:24.90,Default,,0,0,0,,- What's your name? \N- Claude.
-Dialogue: 0,01:06:25.06,01:06:31.40,Default,,0,0,0,,Claude? Heh. That's an unusual name for \Nsomebody from, um... Where are you from?
-Dialogue: 0,01:06:31.57,01:06:36.28,Default,,0,0,0,,- Mombasa. \N- It's an unusual name for Mombasa.
-Dialogue: 0,01:06:38.41,01:06:41.96,Default,,0,0,0,,- Have you ever been to Mombasa? \N- Uh, no.
-Dialogue: 0,01:06:43.79,01:06:46.42,Default,,0,0,0,,Then what do you know about it?
-Dialogue: 0,01:06:51.55,01:06:53.30,Default,,0,0,0,,I want to go home.
-Dialogue: 0,01:06:58.22,01:06:59.56,Default,,0,0,0,,Amy?
-Dialogue: 0,01:07:02.02,01:07:04.10,Default,,0,0,0,,Amy, come here.
-Dialogue: 0,01:07:04.27,01:07:08.48,Default,,0,0,0,,Where are you, girl? \NCome on, I'm not fooling around.
-Dialogue: 0,01:07:11.57,01:07:12.82,Default,,0,0,0,,Amy.
-Dialogue: 0,01:07:13.90,01:07:15.49,Default,,0,0,0,,Amy?
-Dialogue: 0,01:07:18.07,01:07:21.54,Default,,0,0,0,,Come here, girl. Amy.
-Dialogue: 0,01:07:33.88,01:07:35.63,Default,,0,0,0,,Charles!
-Dialogue: 0,01:07:37.89,01:07:39.55,Default,,0,0,0,,Charlie!
-Dialogue: 0,01:07:41.60,01:07:43.81,Default,,0,0,0,,- What are those holes? \N- Lava tubes.
-Dialogue: 0,01:07:43.98,01:07:46.85,Default,,0,0,0,,Molten rock must be flowing \Nthrough this whole place.
-Dialogue: 0,01:07:47.02,01:07:49.40,Default,,0,0,0,,This must lead to the mine.
-Dialogue: 0,01:07:50.98,01:07:54.53,Default,,0,0,0,,Please, bring a light.
-Dialogue: 0,01:07:56.65,01:07:58.07,Default,,0,0,0,,Here.
-Dialogue: 0,01:08:00.70,01:08:04.20,Default,,0,0,0,,Now here. Come on.
-Dialogue: 0,01:08:04.37,01:08:07.71,Default,,0,0,0,,Up here. No...!
-Dialogue: 0,01:08:07.87,01:08:11.46,Default,,0,0,0,,- That's not going anywhere. \N- Where could they be? What happened?
-Dialogue: 0,01:08:13.76,01:08:16.97,Default,,0,0,0,,Shit! Let's get out of \Nhere while we still can.
-Dialogue: 0,01:08:17.13,01:08:18.13,Default,,0,0,0,,Help me!
-Dialogue: 0,01:08:19.05,01:08:21.39,Default,,0,0,0,,- What's that? \N- Richard!
-Dialogue: 0,01:08:22.01,01:08:24.97,Default,,0,0,0,,- Richard? \N- Help me!
-Dialogue: 0,01:08:27.35,01:08:28.19,Default,,0,0,0,,- Richard! \N-
-Dialogue: 0,01:08:28.27,01:08:30.65,Default,,0,0,0,,No! Richard! Oh, my God! Something...
-Dialogue: 0,01:09:03.89,01:09:05.35,Default,,0,0,0,,- Richard. \N- Come on.
-Dialogue: 0,01:09:05.52,01:09:07.60,Default,,0,0,0,,Let's get out of here.
-Dialogue: 0,01:09:11.27,01:09:14.02,Default,,0,0,0,,- It's okay. \N- Peter.
-Dialogue: 0,01:09:28.87,01:09:31.37,Default,,0,0,0,,They're gorillas. \NThey're some kind of gorillas.
-Dialogue: 0,01:09:34.04,01:09:38.80,Default,,0,0,0,,I never saw an animal move like \Nthat. They just... Look. They just kill.
-Dialogue: 0,01:09:38.97,01:09:43.80,Default,,0,0,0,,That's why the diamonds were never \Nfound. The myth of the killer ape is true.
-Dialogue: 0,01:09:43.97,01:09:45.64,Default,,0,0,0,,I can't believe it.
-Dialogue: 0,01:10:12.17,01:10:14.17,Default,,0,0,0,,<i>Bad gorillas.</i>
-Dialogue: 0,01:10:15.42,01:10:18.46,Default,,0,0,0,,Let me turn your volume down.
-Dialogue: 0,01:10:22.30,01:10:24.22,Default,,0,0,0,,Here's your lovey.
-Dialogue: 0,01:10:27.31,01:10:29.06,Default,,0,0,0,,Shh.
-Dialogue: 0,01:10:29.22,01:10:33.52,Default,,0,0,0,,<i>- It's</i> okay. \N<i>- Mother. Mother.</i>
-Dialogue: 0,01:10:33.69,01:10:35.15,Default,,0,0,0,,Yes, you're okay now.
-Dialogue: 0,01:10:44.16,01:10:48.03,Default,,0,0,0,,- See anything? \N- No, but I'm the last line of defense.
-Dialogue: 0,01:10:48.16,01:10:50.83,Default,,0,0,0,,They have sensor-operated machine pistols \Non tripods.
-Dialogue: 0,01:10:50.100,01:10:53.75,Default,,0,0,0,,Anything comes within 40 ft., \Nget ready to the 4th of July.
-Dialogue: 0,01:10:53.92,01:10:56.13,Default,,0,0,0,,What can I say, you \Nreally know how to pack.
-Dialogue: 0,01:11:07.14,01:11:09.22,Default,,0,0,0,,- I don't see anything. \N- Put that out.
-Dialogue: 0,01:11:30.16,01:11:32.08,Default,,0,0,0,,They're testing their perimeter.
-Dialogue: 0,01:11:40.34,01:11:41.75,Default,,0,0,0,,How intelligent are they?
-Dialogue: 0,01:11:41.92,01:11:44.30,Default,,0,0,0,,Gorillas are very smart, \Nbut they're not aggressive.
-Dialogue: 0,01:11:44.47,01:11:48.01,Default,,0,0,0,,- These things are very aggressive. \N- I'd say they're smart. Too damn smart.
-Dialogue: 0,01:11:48.18,01:11:51.14,Default,,0,0,0,,They're out there, but what are they doing?
-Dialogue: 0,01:11:51.81,01:11:53.10,Default,,0,0,0,,Monroe!
-Dialogue: 0,01:12:51.78,01:12:52.99,Default,,0,0,0,,Get down!
-Dialogue: 0,01:13:03.80,01:13:06.80,Default,,0,0,0,,- They're gone. \N- Couple of hours until first light.
-Dialogue: 0,01:13:06.92,01:13:08.97,Default,,0,0,0,,Then we're out of here.
-Dialogue: 0,01:13:11.39,01:13:16.77,Default,,0,0,0,,Those hieroglyphics \Nwe saw inscribed everywhere?
-Dialogue: 0,01:13:17.27,01:13:19.48,Default,,0,0,0,,- I have translated them. \N- What do they say?
-Dialogue: 0,01:13:19.64,01:13:23.69,Default,,0,0,0,,"We are watching you."
-Dialogue: 0,01:13:37.29,01:13:40.42,Default,,0,0,0,,We must have hit some of them. \NWhere are the bodies?
-Dialogue: 0,01:13:40.58,01:13:42.54,Default,,0,0,0,,- Have you seen Amy? She's gone. \N- No.
-Dialogue: 0,01:13:42.71,01:13:47.38,Default,,0,0,0,,She's joined the club, then. We've got two \Nporters missing and Homolka's run off, too.
-Dialogue: 0,01:13:47.55,01:13:51.38,Default,,0,0,0,,- I'm going to find her. \N- People come first, then gorillas.
-Dialogue: 0,01:13:51.55,01:13:52.89,Default,,0,0,0,,- Do you agree? \N- Yes.
-Dialogue: 0,01:13:53.05,01:13:58.02,Default,,0,0,0,,Good. We'll retrieve our comrades, \Nthen we'll retrieve your missing gorilla.
-Dialogue: 0,01:13:58.18,01:14:01.77,Default,,0,0,0,,Then we'll get the hell out of here. \NMount up!
-Dialogue: 0,01:15:10.46,01:15:11.80,Default,,0,0,0,,What's that?
-Dialogue: 0,01:15:35.82,01:15:38.95,Default,,0,0,0,,Here's the story. \NThey domesticated gorillas.
-Dialogue: 0,01:15:39.12,01:15:41.87,Default,,0,0,0,,You call that \Ndomesticated? They're killing a man.
-Dialogue: 0,01:15:42.04,01:15:46.58,Default,,0,0,0,,They taught them to be this way. \NThey bred them to violence.
-Dialogue: 0,01:15:46.71,01:15:49.92,Default,,0,0,0,,They looked for the trait \Nand they encouraged it.
-Dialogue: 0,01:15:50.46,01:15:53.80,Default,,0,0,0,,Guard dogs, and they \Nturned on their masters.
-Dialogue: 0,01:15:55.68,01:15:57.84,Default,,0,0,0,,What's that smell?
-Dialogue: 0,01:15:59.72,01:16:01.51,Default,,0,0,0,,These are all the bones of gorillas.
-Dialogue: 0,01:16:01.68,01:16:04.89,Default,,0,0,0,,- You mean, these are...? \N- No, these are normal gorillas.
-Dialogue: 0,01:16:07.44,01:16:10.11,Default,,0,0,0,,- This one's skull was crushed. \N- Feel that?
-Dialogue: 0,01:16:10.27,01:16:11.44,Default,,0,0,0,,Feel what?
-Dialogue: 0,01:16:27.50,01:16:28.96,Default,,0,0,0,,Hang on!
-Dialogue: 0,01:16:36.88,01:16:40.26,Default,,0,0,0,,- Everybody okay? \N- Yeah, let's go.
-Dialogue: 0,01:16:43.18,01:16:47.06,Default,,0,0,0,,Don't go this way. It's all caved in. \NGod, I'm so glad to see you.
-Dialogue: 0,01:16:47.18,01:16:51.27,Default,,0,0,0,,- I was trying to find the mines... \N- Be quiet. Got any flares, Kahega?
-Dialogue: 0,01:16:51.44,01:16:52.86,Default,,0,0,0,,Yeah!
-Dialogue: 0,01:16:55.53,01:16:58.24,Default,,0,0,0,,- What's making my eyes burn? \N- Sulfur fumes.
-Dialogue: 0,01:16:58.40,01:17:00.70,Default,,0,0,0,,Let's hope there's another way out of here.
-Dialogue: 0,01:17:14.09,01:17:15.50,Default,,0,0,0,,Careful.
-Dialogue: 0,01:17:35.73,01:17:40.32,Default,,0,0,0,,- What the hell...? \N- It's the mines!
-Dialogue: 0,01:17:40.49,01:17:45.33,Default,,0,0,0,,"We are watching you." It's the trainers \Ntalking. The teacher is watching you.
-Dialogue: 0,01:17:45.83,01:17:47.37,Default,,0,0,0,,Dead teachers.
-Dialogue: 0,01:17:52.75,01:17:53.96,Default,,0,0,0,,Look.
-Dialogue: 0,01:17:59.09,01:18:03.80,Default,,0,0,0,,Yes, yes, yes. I knew it was true!
-Dialogue: 0,01:18:05.22,01:18:09.02,Default,,0,0,0,,The city of Zinj, the diamonds...
-Dialogue: 0,01:18:12.65,01:18:17.73,Default,,0,0,0,,Every word of it was absolutely true.
-Dialogue: 0,01:18:19.99,01:18:21.74,Default,,0,0,0,,I'd leave those alone.
-Dialogue: 0,01:18:28.16,01:18:30.100,Default,,0,0,0,,- Any other way out of here? \N- Not that I've noticed.
-Dialogue: 0,01:18:32.79,01:18:35.71,Default,,0,0,0,,Help me. Fill up everything.
-Dialogue: 0,01:18:46.35,01:18:49.35,Default,,0,0,0,,- You've got to get me out of here! \N- Take a number.
-Dialogue: 0,01:18:49.52,01:18:52.64,Default,,0,0,0,,- But we're going to be rich! \N- ls that a way out?
-Dialogue: 0,01:18:52.81,01:18:53.85,Default,,0,0,0,,Maybe.
-Dialogue: 0,01:19:28.93,01:19:30.47,Default,,0,0,0,,Look out!
-Dialogue: 0,01:19:52.29,01:19:54.62,Default,,0,0,0,,- Let's go. \N- Stay close together.
-Dialogue: 0,01:20:01.30,01:20:05.38,Default,,0,0,0,,- What is it? \N- It's a geode. A giant diamond.
-Dialogue: 0,01:20:07.09,01:20:10.93,Default,,0,0,0,,- They cut him off. Kahega! \N- Check if there's a way out back there.
-Dialogue: 0,01:20:20.40,01:20:21.98,Default,,0,0,0,,Kahega!
-Dialogue: 0,01:20:46.72,01:20:48.51,Default,,0,0,0,,Jeffrey...
-Dialogue: 0,01:20:50.26,01:20:51.97,Default,,0,0,0,,Charlie!
-Dialogue: 0,01:20:53.10,01:20:54.56,Default,,0,0,0,,Charlie!
-Dialogue: 0,01:20:55.85,01:20:57.77,Default,,0,0,0,,- It's him? \N- It's him.
-Dialogue: 0,01:21:02.86,01:21:04.44,Default,,0,0,0,,Come on.
-Dialogue: 0,01:21:18.21,01:21:20.62,Default,,0,0,0,,- Is there a way out back there? \N- No, nothing.
-Dialogue: 0,01:21:22.04,01:21:26.13,Default,,0,0,0,,- We're almost out of rounds. \N- Buy me two minutes.
-Dialogue: 0,01:21:53.78,01:21:55.03,Default,,0,0,0,,Let me try.
-Dialogue: 0,01:21:56.58,01:21:58.08,Default,,0,0,0,,Aah!
-Dialogue: 0,01:22:29.49,01:22:31.86,Default,,0,0,0,,Ugly gorillas. Ugly. Go</i> away.
-Dialogue: 0,01:22:35.99,01:22:37.99,Default,,0,0,0,,They don't know what to make of it.
-Dialogue: 0,01:22:48.75,01:22:52.34,Default,,0,0,0,,<i>- Amy. \N- Mother. Mother.</i>
-Dialogue: 0,01:22:57.26,01:23:01.27,Default,,0,0,0,,- Peter hug <i>Amy.</i> \N- Maternal instinct, long may she reign.
-Dialogue: 0,01:23:01.43,01:23:04.10,Default,,0,0,0,,- What are you doing? \N- What am I doing? I'll tell you.
-Dialogue: 0,01:23:04.23,01:23:06.15,Default,,0,0,0,,- We're getting out. \N- What about them?
-Dialogue: 0,01:23:06.31,01:23:09.11,Default,,0,0,0,,Put them on \Nthe endangered species list.
-Dialogue: 0,01:23:16.37,01:23:20.24,Default,,0,0,0,,Come on, Monroe. Let's go! Move!
-Dialogue: 0,01:23:20.41,01:23:23.54,Default,,0,0,0,,- What the hell is that? \N- The latest thing in communication.
-Dialogue: 0,01:23:23.66,01:23:25.58,Default,,0,0,0,,- Climb! \N- Up here.
-Dialogue: 0,01:23:27.58,01:23:30.17,Default,,0,0,0,,- Go! Go! \N- Come on.
-Dialogue: 0,01:24:08.38,01:24:09.79,Default,,0,0,0,,Come on!
-Dialogue: 0,01:24:16.63,01:24:18.76,Default,,0,0,0,,Come on, girl. Come on!
-Dialogue: 0,01:24:29.90,01:24:31.11,Default,,0,0,0,,GO, Amy!
-Dialogue: 0,01:24:53.55,01:24:55.42,Default,,0,0,0,,Keep going!
-Dialogue: 0,01:24:57.80,01:25:00.51,Default,,0,0,0,,- Unh. \N- Come on, come on.
-Dialogue: 0,01:25:04.31,01:25:05.56,Default,,0,0,0,,Wait!
-Dialogue: 0,01:25:08.35,01:25:10.06,Default,,0,0,0,,- Where are they? \N- I don't know.
-Dialogue: 0,01:25:29.37,01:25:31.00,Default,,0,0,0,,Hang on!
-Dialogue: 0,01:25:34.67,01:25:36.55,Default,,0,0,0,,Watch out!
-Dialogue: 0,01:25:38.30,01:25:41.09,Default,,0,0,0,,- Go, Amy! \N- Hurry!
-Dialogue: 0,01:25:41.26,01:25:44.18,Default,,0,0,0,,Just hurry! Come on!
-Dialogue: 0,01:25:52.10,01:25:55.02,Default,,0,0,0,,- Come on! \N- You can do it!
-Dialogue: 0,01:25:56.78,01:25:58.07,Default,,0,0,0,,Keep moving.
-Dialogue: 0,01:25:59.07,01:26:00.82,Default,,0,0,0,,Head for higher ground.
-Dialogue: 0,01:26:01.70,01:26:03.45,Default,,0,0,0,,Keep going, Amy!
-Dialogue: 0,01:26:34.15,01:26:37.23,Default,,0,0,0,,Should be a big yellow case \Nwith a red stripe on that plane.
-Dialogue: 0,01:26:37.40,01:26:40.28,Default,,0,0,0,,It's a balloon. I'll get the transmitter.
-Dialogue: 0,01:26:42.28,01:26:43.41,Default,,0,0,0,,Amy!
-Dialogue: 0,01:26:48.16,01:26:49.83,Default,,0,0,0,,Amy!
-Dialogue: 0,01:26:50.91,01:26:53.08,Default,,0,0,0,,- How close is the border? \N- Not far.
-Dialogue: 0,01:26:53.25,01:26:55.17,Default,,0,0,0,,This is Karen Ross, 81452.
-Dialogue: 0,01:26:55.33,01:27:00.55,Default,,0,0,0,,That is KR 81452. \NHouston, Travis, do you read?
-Dialogue: 0,01:27:00.71,01:27:03.80,Default,,0,0,0,,<i>KR 81452.</i>
-Dialogue: 0,01:27:03.97,01:27:06.51,Default,,0,0,0,,Houston, Travis, do you read?
-Dialogue: 0,01:27:06.72,01:27:13.64,Default,,0,0,0,,81452, that is KR 81452. \NHouston, Travis, do you read?
-Dialogue: 0,01:27:15.85,01:27:19.73,Default,,0,0,0,,- Karen, is that you? \N<i>- It's</i> me, Travis.
-Dialogue: 0,01:27:19.90,01:27:22.90,Default,,0,0,0,,I thought I'd lost you. \NI sent another expedition.
-Dialogue: 0,01:27:23.03,01:27:29.20,Default,,0,0,0,,<i>- Did</i> you get <i>it?</i> \N- I have bad news. Charles was killed.
-Dialogue: 0,01:27:29.58,01:27:34.08,Default,,0,0,0,,Did you get the diamond? Did you?
-Dialogue: 0,01:27:37.54,01:27:41.67,Default,,0,0,0,,<i>- Yes.</i> \N- Good girl.
-Dialogue: 0,01:27:43.88,01:27:49.55,Default,,0,0,0,,Do you remember when I told you \Nthat if I ever knew you sent me here...
-Dialogue: 0,01:27:49.72,01:27:54.52,Default,,0,0,0,,for some diamond, \Nand not for Charlie, I'd make you sorry?
-Dialogue: 0,01:27:54.98,01:27:57.90,Default,,0,0,0,,<i>Karen, of course I'm upset.</i>
-Dialogue: 0,01:27:58.02,01:28:03.15,Default,,0,0,0,,<i>- But what's done is done. I could...</i> \N- I <i>know. You need</i> a <i>new</i> cash <i>machine.</i>
-Dialogue: 0,01:28:03.32,01:28:05.03,Default,,0,0,0,,<i>What would happen to the satellite...</i>
-Dialogue: 0,01:28:05.20,01:28:08.20,Default,,0,0,0,,if I put its phone number in the laser \Nand pulled the trigger?
-Dialogue: 0,01:28:08.37,01:28:11.45,Default,,0,0,0,,The chip from the transmitter's \Ngot the satellite's number.
-Dialogue: 0,01:28:15.58,01:28:21.46,Default,,0,0,0,,It's a 12,000 channel chip. \NIf you put it through the diamond... Karen!
-Dialogue: 0,01:28:26.55,01:28:28.39,Default,,0,0,0,,This is for you, Charlie.
-Dialogue: 0,01:28:32.22,01:28:33.64,Default,,0,0,0,,No!
-Dialogue: 0,01:28:36.94,01:28:38.23,Default,,0,0,0,,Amy!
-Dialogue: 0,01:28:41.23,01:28:42.69,Default,,0,0,0,,There you are.
-Dialogue: 0,01:28:51.74,01:28:53.99,Default,,0,0,0,,Amy, you saved me.
-Dialogue: 0,01:28:56.58,01:28:58.25,Default,,0,0,0,,It's okay.
-Dialogue: 0,01:29:15.93,01:29:17.48,Default,,0,0,0,,Thank you.
-Dialogue: 0,01:29:21.56,01:29:23.61,Default,,0,0,0,,I love you, too.
-Dialogue: 0,01:29:25.57,01:29:27.11,Default,,0,0,0,,Mother?
-Dialogue: 0,01:29:30.57,01:29:33.24,Default,,0,0,0,,Oh, I see. It's Africa. It's your mother.
-Dialogue: 0,01:29:35.24,01:29:38.33,Default,,0,0,0,,Amy, where did you go?
-Dialogue: 0,01:29:40.21,01:29:43.71,Default,,0,0,0,,Good gorillas? What good gorillas?
-Dialogue: 0,01:29:52.18,01:29:53.43,Default,,0,0,0,,Handsome fella.
-Dialogue: 0,01:30:19.29,01:30:20.75,Default,,0,0,0,,Amy...
-Dialogue: 0,01:30:27.38,01:30:29.92,Default,,0,0,0,,Look at that. \Nls that Amy with the...?
-Dialogue: 0,01:30:30.09,01:30:33.76,Default,,0,0,0,,The silverback. So she's...
-Dialogue: 0,01:30:35.76,01:30:38.81,Default,,0,0,0,,I see. I see.
-Dialogue: 0,01:30:43.02,01:30:44.90,Default,,0,0,0,,She's home.
-Dialogue: 0,01:31:02.21,01:31:04.58,Default,,0,0,0,,- Will she be all right? \N- They know what to do.
-Dialogue: 0,01:31:04.75,01:31:06.04,Default,,0,0,0,,It's us I'm worried about.
-Dialogue: 0,01:31:06.21,01:31:09.80,Default,,0,0,0,,- We've got to go. Come on. \N- Bye, Amy.
-Dialogue: 0,01:31:44.92,01:31:47.50,Default,,0,0,0,,- Peter, would you do me a favor? \N- What?
-Dialogue: 0,01:31:47.67,01:31:49.59,Default,,0,0,0,,Would you throw this away for me.
-Dialogue: 0,01:31:50.38,01:31:52.05,Default,,0,0,0,,You sure?
-Dialogue: 0,01:31:55.26,01:31:56.26,Default,,0,0,0,,Ouch.
-Dialogue: 0,01:32:02.89,01:32:06.65,Default,,0,0,0,,- There's a wind. \N- I hope it blows us someplace good.
-Dialogue: 0,01:32:06.81,01:32:08.44,Default,,0,0,0,,Me too.
+Dialogue: 0,00:46:59.82,00:47:03.07,Default,,0,0,0,,Have your laughing, and I will have mine.
+Dialogue: 0,00:47:10.54,00:47:11.79,Default,,0,0,0,,Shit...
+Dialogue: 0,00:47:13.45,00:47:16.62,Default,,0,0,0,,- What is it? \N- The signal stopped.
+Dialogue: 0,00:47:16.79,00:47:21.30,Default,,0,0,0,,- Does that mean...? \N- It just means the signal stopped.
+Dialogue: 0,00:47:22.51,00:47:24.17,Default,,0,0,0,,I don't know what it means.
+Dialogue: 0,00:48:24.40,00:48:26.07,Default,,0,0,0,,No problem.
+Dialogue: 0,00:48:52.97,00:48:54.10,Default,,0,0,0,,Oh, my God!
+Dialogue: 0,00:49:04.57,00:49:06.69,Default,,0,0,0,,- Shoot it! \N- Amy!
+Dialogue: 0,00:49:06.86,00:49:10.36,Default,,0,0,0,,- What is it? \N- Turn the boat around, quickly.
+Dialogue: 0,00:49:13.70,00:49:15.99,Default,,0,0,0,,Agh! Aah!
+Dialogue: 0,00:49:16.70,00:49:19.21,Default,,0,0,0,,Shoot it! Oh, my God!
+Dialogue: 0,00:49:20.100,00:49:22.92,Default,,0,0,0,,Turn the boat around!
+Dialogue: 0,00:49:27.09,00:49:28.97,Default,,0,0,0,,Head for shore!
+Dialogue: 0,00:49:45.48,00:49:47.32,Default,,0,0,0,,- How is he? \N- It's just a big cut.
+Dialogue: 0,00:49:47.48,00:49:49.69,Default,,0,0,0,,- I'll stitch it up, he'll be all right. \N- Oh, God.
+Dialogue: 0,00:49:51.24,00:49:54.03,Default,,0,0,0,,- What's that? \N- A plane.
+Dialogue: 0,00:49:54.99,00:49:57.37,Default,,0,0,0,,- Good luck to them. \N- Who are they?
+Dialogue: 0,00:49:57.54,00:50:01.66,Default,,0,0,0,,I don't know, but the Zaire Air Force \Nhas got a piece of their ass.
+Dialogue: 0,00:50:06.09,00:50:09.34,Default,,0,0,0,,Pitch camp. Tomorrow, Mt. Mukenko.
+Dialogue: 0,00:50:28.98,00:50:31.49,Default,,0,0,0,,- She's getting excited. \N- Why, do you think?
+Dialogue: 0,00:50:31.65,00:50:35.32,Default,,0,0,0,,Somewhere on the other side of this \Nmountain is where Amy was born.
+Dialogue: 0,00:51:03.35,00:51:05.56,Default,,0,0,0,,Wow, it's beautiful.
+Dialogue: 0,00:51:07.35,00:51:10.36,Default,,0,0,0,,Is this your valley, Amy? \NIt is, isn't it?
+Dialogue: 0,00:51:10.52,00:51:13.57,Default,,0,0,0,,It's home. That's your home.
+Dialogue: 0,00:51:15.78,00:51:19.91,Default,,0,0,0,,Pretty jungle, that's right.
+Dialogue: 0,00:51:25.54,00:51:27.04,Default,,0,0,0,,What's she doing?
+Dialogue: 0,00:51:27.21,00:51:30.80,Default,,0,0,0,,She wants to go to the place in her heart.
+Dialogue: 0,00:51:30.96,00:51:36.72,Default,,0,0,0,,- You mean the place in your heart, Herkermer. \N- You may call me Mr. Homolka.
+Dialogue: 0,00:51:38.22,00:51:40.55,Default,,0,0,0,,Come on, Amy, let's go.
+Dialogue: 0,00:51:42.64,00:51:44.52,Default,,0,0,0,,- We've lost two porters. \N- Where'd they go?
+Dialogue: 0,00:51:44.68,00:51:48.10,Default,,0,0,0,,- Ran away. \N- And they didn't invite me?
+Dialogue: 0,00:51:48.27,00:51:51.86,Default,,0,0,0,,You want your glove? All right, sit still.
+Dialogue: 0,00:51:55.44,00:52:01.95,Default,,0,0,0,,This, as they say, is a fork in the road. \NWe could go left or we could go right.
+Dialogue: 0,00:52:02.12,00:52:04.29,Default,,0,0,0,,We go the wrong way, \Nwe lose two or three days.
+Dialogue: 0,00:52:04.45,00:52:07.08,Default,,0,0,0,,We must follow the gorilla. \NWhere she leads.
+Dialogue: 0,00:52:08.96,00:52:10.54,Default,,0,0,0,,- That would be left. \N- Best guess...
+Dialogue: 0,00:52:10.71,00:52:12.71,Default,,0,0,0,,off my last coordinates was this way.
+Dialogue: 0,00:52:12.88,00:52:17.80,Default,,0,0,0,,- That would be right. \N- Amy, Peter, <i>go</i> this way.
+Dialogue: 0,00:52:19.01,00:52:24.56,Default,,0,0,0,,Well, I don't have her passion. \NI'll follow the gorilla.
+Dialogue: 0,00:52:31.81,00:52:34.86,Default,,0,0,0,,This doesn't seem \Nlike the right way to me.
+Dialogue: 0,00:53:01.84,00:53:03.35,Default,,0,0,0,,Good Lord.
+Dialogue: 0,00:53:07.22,00:53:10.98,Default,,0,0,0,,- It's that plane we saw burning in \Nthe sky. - Who were they?
+Dialogue: 0,00:53:11.15,00:53:14.77,Default,,0,0,0,,Travis, my boss, thought I wasn't gonna \Nmake it. He sent another expedition.
+Dialogue: 0,00:53:14.90,00:53:19.03,Default,,0,0,0,,Tried to push too far. Looks like a rocket \Ngot them. There's no point going in there.
+Dialogue: 0,00:53:20.82,00:53:25.16,Default,,0,0,0,,- My God, what a waste of life. \N- We'd better keep moving.
+Dialogue: 0,00:54:24.89,00:54:28.47,Default,,0,0,0,,- Oh, shit! Somebody help me. \N- What is it?
+Dialogue: 0,00:54:28.64,00:54:31.64,Default,,0,0,0,,There's something on my... \NLike, a creature, growth or something.
+Dialogue: 0,00:54:31.81,00:54:34.81,Default,,0,0,0,,- Look. \N- Ah. That's a leech.
+Dialogue: 0,00:54:34.98,00:54:38.15,Default,,0,0,0,,- Take it off. \N- It's your leech, you take it off.
+Dialogue: 0,00:54:38.32,00:54:39.73,Default,,0,0,0,,- Need some help? \N- No.
+Dialogue: 0,00:54:39.90,00:54:42.15,Default,,0,0,0,,- Here, burn it off with this. \N- Ha-ha-ha.
+Dialogue: 0,00:54:42.32,00:54:43.74,Default,,0,0,0,,- Ha, ha. \N- Ugh.
+Dialogue: 0,00:54:42.99,00:54:46.03,Default,,0,0,0,,- Mm! \N- This is disgusting.
+Dialogue: 0,00:54:52.66,00:54:53.100,Default,,0,0,0,,Here.
+Dialogue: 0,00:55:02.55,00:55:06.14,Default,,0,0,0,,- Monroe? \N- Don't indicate you see them.
+Dialogue: 0,00:55:07.18,00:55:12.52,Default,,0,0,0,,Mizumu. The ghost tribe. \NThere are probably 20 of them.
+Dialogue: 0,00:55:14.35,00:55:17.44,Default,,0,0,0,,- I only see two. \N- Yes, that's how they are.
+Dialogue: 0,00:55:17.60,00:55:21.15,Default,,0,0,0,,- Are they friendly? \N- They're sensitive. They're forest people.
+Dialogue: 0,00:55:31.54,00:55:35.41,Default,,0,0,0,,- Why are they laughing? \N- They asked who was in charge, I said I was.
+Dialogue: 0,00:55:35.58,00:55:37.71,Default,,0,0,0,,- What's so funny about that? \N- I'm black.
+Dialogue: 0,00:55:37.88,00:55:39.92,Default,,0,0,0,,I should have luggage on my head.
+Dialogue: 0,00:55:48.51,00:55:50.47,Default,,0,0,0,,He says there's a dead white man...
+Dialogue: 0,00:55:50.64,00:55:53.39,Default,,0,0,0,,in this forest with a \Nsymbol on his clothes.
+Dialogue: 0,00:55:58.81,00:56:01.61,Default,,0,0,0,,He's dead? Did they say he's dead?
+Dialogue: 0,00:56:01.77,00:56:06.61,Default,,0,0,0,,- What does "TC" mean? \N- TraviCom. The company I work for.
+Dialogue: 0,00:56:06.78,00:56:08.95,Default,,0,0,0,,They have several levels of "dead."
+Dialogue: 0,00:56:09.11,00:56:12.74,Default,,0,0,0,,Someone's not dead \Nuntil they're completely dead.
+Dialogue: 0,00:56:51.99,00:56:55.33,Default,,0,0,0,,They haven't moved him. \NThey believe his soul has left his body.
+Dialogue: 0,00:56:55.54,00:56:58.96,Default,,0,0,0,,If they move him, his soul will be lost, \Nnever finding his body again.
+Dialogue: 0,00:56:59.12,00:57:01.92,Default,,0,0,0,,They're calling to his soul, \Nasking it to come back.
+Dialogue: 0,00:57:29.32,00:57:30.61,Default,,0,0,0,,Where is the man?
+Dialogue: 0,00:57:44.88,00:57:46.17,Default,,0,0,0,,- It's not him. \N- Not who?
+Dialogue: 0,00:57:46.34,00:57:48.76,Default,,0,0,0,,It's Bob Driscoll. What happened to him?
+Dialogue: 0,00:57:48.92,00:57:51.30,Default,,0,0,0,,Bob? Bob?
+Dialogue: 0,00:57:51.43,00:57:53.43,Default,,0,0,0,,- Let's sit him up. \N- Who is this man?
+Dialogue: 0,00:57:53.59,00:57:57.72,Default,,0,0,0,,My company sent an expedition to \Nthe Virungas. This man was with them.
+Dialogue: 0,00:57:58.93,00:58:00.18,Default,,0,0,0,,Lay him over there.
+Dialogue: 0,00:58:00.35,00:58:03.10,Default,,0,0,0,,- What happened to him? \N- I don't know.
+Dialogue: 0,00:58:04.65,00:58:06.15,Default,,0,0,0,,Bob?
+Dialogue: 0,00:58:36.55,00:58:38.56,Default,,0,0,0,,- He's dead. \N- God, no.
+Dialogue: 0,00:58:47.90,00:58:49.98,Default,,0,0,0,,That region of the Congo is uninhabited.
+Dialogue: 0,00:58:50.15,00:58:52.32,Default,,0,0,0,,- Something inhabits it. \N- What did you see?
+Dialogue: 0,00:58:52.49,00:58:55.20,Default,,0,0,0,,Camp destroyed. People dead. \NA gray gorilla or something.
+Dialogue: 0,00:58:55.36,00:58:57.41,Default,,0,0,0,,- No such thing as a gray gorilla. \N- I saw one.
+Dialogue: 0,00:58:57.57,00:59:00.08,Default,,0,0,0,,- That's hard to believe. \N- Two men are unaccounted for.
+Dialogue: 0,00:59:00.24,00:59:02.75,Default,,0,0,0,,Jeffrey Weems \Nand Charles Travis, my fiancé.
+Dialogue: 0,00:59:02.91,00:59:04.41,Default,,0,0,0,,- My former fiancé. \N- Former?
+Dialogue: 0,00:59:04.58,00:59:06.04,Default,,0,0,0,,We'd better get to him, then.
+Dialogue: 0,00:59:21.93,00:59:23.93,Default,,0,0,0,,- What the hell is that? \N- Perimeter alarm.
+Dialogue: 0,00:59:24.10,00:59:26.44,Default,,0,0,0,,They had it around their camp.
+Dialogue: 0,00:59:26.81,00:59:29.65,Default,,0,0,0,,But where's the camp, their equipment?
+Dialogue: 0,00:59:47.17,00:59:51.92,Default,,0,0,0,,I don't understand it. There had to be \N300 pounds of equipment.
+Dialogue: 0,00:59:52.09,00:59:54.80,Default,,0,0,0,,And the bodies. \NThere's no sign of the bodies.
+Dialogue: 0,01:00:22.87,01:00:25.45,Default,,0,0,0,,- It's a dead end? \N- Maybe, maybe not.
+Dialogue: 0,01:00:36.38,01:00:37.72,Default,,0,0,0,,Yes. Bingo!
+Dialogue: 0,01:01:30.23,01:01:33.56,Default,,0,0,0,,- Son of a bitch. \N- Jesus.
+Dialogue: 0,01:01:33.73,01:01:35.69,Default,,0,0,0,,What is this?
+Dialogue: 0,01:01:37.32,01:01:40.28,Default,,0,0,0,,It is the city of Zinj...
+Dialogue: 0,01:01:42.49,01:01:46.41,Default,,0,0,0,,that I have looked for all my life.
+Dialogue: 0,01:01:51.96,01:01:55.00,Default,,0,0,0,,See, the eyes.
+Dialogue: 0,01:01:56.25,01:01:58.42,Default,,0,0,0,,It is the same.
+Dialogue: 0,01:02:01.13,01:02:03.76,Default,,0,0,0,,Kahega, guns up. Stay alert.
+Dialogue: 0,01:02:09.60,01:02:12.23,Default,,0,0,0,,Come here, Amy. Stay with me.
+Dialogue: 0,01:04:03.34,01:04:08.55,Default,,0,0,0,,First they found the diamonds, \NSolomon's men.
+Dialogue: 0,01:04:10.26,01:04:13.68,Default,,0,0,0,,A diamond mine of incredible bounty.
+Dialogue: 0,01:04:14.93,01:04:21.19,Default,,0,0,0,,Then they built the city around \Nthe mine, so that it should be protected.
+Dialogue: 0,01:04:21.73,01:04:24.65,Default,,0,0,0,,The savagery of the guards was legend.
+Dialogue: 0,01:04:24.82,01:04:29.11,Default,,0,0,0,,They instantly fell upon \Nany thief, any transgressor.
+Dialogue: 0,01:04:29.28,01:04:33.41,Default,,0,0,0,,The diamonds flowed \Nto the kingdom of Solomon.
+Dialogue: 0,01:04:33.58,01:04:35.70,Default,,0,0,0,,What happened? Why did the city die?
+Dialogue: 0,01:04:35.87,01:04:38.12,Default,,0,0,0,,- I don't know. \N- Maybe the mines ran dry.
+Dialogue: 0,01:04:38.29,01:04:41.46,Default,,0,0,0,,No! No, the diamonds are here!
+Dialogue: 0,01:04:41.63,01:04:44.71,Default,,0,0,0,,- Monroe, over here! \N- What is it?
+Dialogue: 0,01:04:48.68,01:04:50.59,Default,,0,0,0,,On the step, by the hood.
+Dialogue: 0,01:04:50.76,01:04:52.64,Default,,0,0,0,,I found this.
+Dialogue: 0,01:04:59.60,01:05:01.31,Default,,0,0,0,,Don't go in there. I'll check it out.
+Dialogue: 0,01:05:01.48,01:05:05.94,Default,,0,0,0,,- Give me a gun and a flashlight. \N- Don't be so John Wayne, you could get killed.
+Dialogue: 0,01:05:07.57,01:05:10.74,Default,,0,0,0,,Now that I've said that, \NI'm not going in there alone, either.
+Dialogue: 0,01:05:10.91,01:05:13.74,Default,,0,0,0,,- I must go. \N- Let's all look.
+Dialogue: 0,01:05:13.87,01:05:15.45,Default,,0,0,0,,I'll just stay out here with Amy.
+Dialogue: 0,01:05:15.62,01:05:17.75,Default,,0,0,0,,Not alone you won't. Kahega!
+Dialogue: 0,01:05:43.81,01:05:46.61,Default,,0,0,0,,Stay close together. Homolka...
+Dialogue: 0,01:05:53.03,01:05:58.04,Default,,0,0,0,,- Homolka! \N- The same hieroglyphics, over and over.
+Dialogue: 0,01:05:59.66,01:06:03.21,Default,,0,0,0,,- What do they mean? \N- Homolka!
+Dialogue: 0,01:06:08.63,01:06:09.97,Default,,0,0,0,,Amy, don't wander off!
+Dialogue: 0,01:06:11.09,01:06:14.09,Default,,0,0,0,,- So do you speak English? \N- Yes.
+Dialogue: 0,01:06:14.68,01:06:16.89,Default,,0,0,0,,- What's your name? \N- Claude.
+Dialogue: 0,01:06:17.06,01:06:23.40,Default,,0,0,0,,Claude? Heh. That's an unusual name for \Nsomebody from, um... Where are you from?
+Dialogue: 0,01:06:23.56,01:06:28.27,Default,,0,0,0,,- Mombasa. \N- It's an unusual name for Mombasa.
+Dialogue: 0,01:06:30.40,01:06:33.95,Default,,0,0,0,,- Have you ever been to Mombasa? \N- Uh, no.
+Dialogue: 0,01:06:35.78,01:06:38.41,Default,,0,0,0,,Then what do you know about it?
+Dialogue: 0,01:06:43.54,01:06:45.29,Default,,0,0,0,,I want to go home.
+Dialogue: 0,01:06:50.21,01:06:51.55,Default,,0,0,0,,Amy?
+Dialogue: 0,01:06:54.01,01:06:56.09,Default,,0,0,0,,Amy, come here.
+Dialogue: 0,01:06:56.26,01:07:00.47,Default,,0,0,0,,Where are you, girl? \NCome on, I'm not fooling around.
+Dialogue: 0,01:07:03.56,01:07:04.81,Default,,0,0,0,,Amy.
+Dialogue: 0,01:07:05.90,01:07:07.48,Default,,0,0,0,,Amy?
+Dialogue: 0,01:07:10.07,01:07:13.53,Default,,0,0,0,,Come here, girl. Amy.
+Dialogue: 0,01:07:25.87,01:07:27.63,Default,,0,0,0,,Charles!
+Dialogue: 0,01:07:29.88,01:07:31.55,Default,,0,0,0,,Charlie!
+Dialogue: 0,01:07:33.59,01:07:35.80,Default,,0,0,0,,- What are those holes? \N- Lava tubes.
+Dialogue: 0,01:07:35.97,01:07:38.85,Default,,0,0,0,,Molten rock must be flowing \Nthrough this whole place.
+Dialogue: 0,01:07:39.01,01:07:41.39,Default,,0,0,0,,This must lead to the mine.
+Dialogue: 0,01:07:42.97,01:07:46.52,Default,,0,0,0,,Please, bring a light.
+Dialogue: 0,01:07:48.65,01:07:50.06,Default,,0,0,0,,Here.
+Dialogue: 0,01:07:52.69,01:07:56.20,Default,,0,0,0,,Now here. Come on.
+Dialogue: 0,01:07:56.36,01:07:59.70,Default,,0,0,0,,Up here. No...!
+Dialogue: 0,01:07:59.87,01:08:03.45,Default,,0,0,0,,- That's not going anywhere. \N- Where could they be? What happened?
+Dialogue: 0,01:08:05.75,01:08:08.96,Default,,0,0,0,,Shit! Let's get out of \Nhere while we still can.
+Dialogue: 0,01:08:09.13,01:08:10.13,Default,,0,0,0,,Help me!
+Dialogue: 0,01:08:11.04,01:08:13.38,Default,,0,0,0,,- What's that? \N- Richard!
+Dialogue: 0,01:08:14.01,01:08:16.97,Default,,0,0,0,,- Richard? \N- Help me!
+Dialogue: 0,01:08:19.34,01:08:20.18,Default,,0,0,0,,- Richard! \N-
+Dialogue: 0,01:08:20.26,01:08:22.64,Default,,0,0,0,,No! Richard! Oh, my God! Something...
+Dialogue: 0,01:08:55.88,01:08:57.34,Default,,0,0,0,,- Richard. \N- Come on.
+Dialogue: 0,01:08:57.51,01:08:59.59,Default,,0,0,0,,Let's get out of here.
+Dialogue: 0,01:09:03.26,01:09:06.02,Default,,0,0,0,,- It's okay. \N- Peter.
+Dialogue: 0,01:09:20.86,01:09:23.37,Default,,0,0,0,,They're gorillas. \NThey're some kind of gorillas.
+Dialogue: 0,01:09:26.04,01:09:30.79,Default,,0,0,0,,I never saw an animal move like \Nthat. They just... Look. They just kill.
+Dialogue: 0,01:09:30.96,01:09:35.80,Default,,0,0,0,,That's why the diamonds were never \Nfound. The myth of the killer ape is true.
+Dialogue: 0,01:09:35.96,01:09:37.63,Default,,0,0,0,,I can't believe it.
+Dialogue: 0,01:10:04.16,01:10:06.16,Default,,0,0,0,,<i>Bad gorillas.</i>
+Dialogue: 0,01:10:07.41,01:10:10.46,Default,,0,0,0,,Let me turn your volume down.
+Dialogue: 0,01:10:14.29,01:10:16.21,Default,,0,0,0,,Here's your lovey.
+Dialogue: 0,01:10:19.30,01:10:21.05,Default,,0,0,0,,Shh.
+Dialogue: 0,01:10:21.22,01:10:25.51,Default,,0,0,0,,<i>- It's</i> okay. \N<i>- Mother. Mother.</i>
+Dialogue: 0,01:10:25.68,01:10:27.14,Default,,0,0,0,,Yes, you're okay now.
+Dialogue: 0,01:10:36.15,01:10:40.03,Default,,0,0,0,,- See anything? \N- No, but I'm the last line of defense.
+Dialogue: 0,01:10:40.15,01:10:42.82,Default,,0,0,0,,They have sensor-operated machine pistols \Non tripods.
+Dialogue: 0,01:10:42.07,01:10:45.74,Default,,0,0,0,,Anything comes within 40 ft., \Nget ready to the 4th of July.
+Dialogue: 0,01:10:45.91,01:10:48.12,Default,,0,0,0,,What can I say, you \Nreally know how to pack.
+Dialogue: 0,01:10:59.13,01:11:01.21,Default,,0,0,0,,- I don't see anything. \N- Put that out.
+Dialogue: 0,01:11:22.15,01:11:24.07,Default,,0,0,0,,They're testing their perimeter.
+Dialogue: 0,01:11:32.33,01:11:33.75,Default,,0,0,0,,How intelligent are they?
+Dialogue: 0,01:11:33.91,01:11:36.29,Default,,0,0,0,,Gorillas are very smart, \Nbut they're not aggressive.
+Dialogue: 0,01:11:36.46,01:11:40.00,Default,,0,0,0,,- These things are very aggressive. \N- I'd say they're smart. Too damn smart.
+Dialogue: 0,01:11:40.17,01:11:43.13,Default,,0,0,0,,They're out there, but what are they doing?
+Dialogue: 0,01:11:43.80,01:11:45.09,Default,,0,0,0,,Monroe!
+Dialogue: 0,01:12:43.78,01:12:44.98,Default,,0,0,0,,Get down!
+Dialogue: 0,01:12:55.79,01:12:58.79,Default,,0,0,0,,- They're gone. \N- Couple of hours until first light.
+Dialogue: 0,01:12:58.92,01:13:00.96,Default,,0,0,0,,Then we're out of here.
+Dialogue: 0,01:13:03.38,01:13:08.76,Default,,0,0,0,,Those hieroglyphics \Nwe saw inscribed everywhere?
+Dialogue: 0,01:13:09.26,01:13:11.47,Default,,0,0,0,,- I have translated them. \N- What do they say?
+Dialogue: 0,01:13:11.64,01:13:15.68,Default,,0,0,0,,"We are watching you."
+Dialogue: 0,01:13:29.28,01:13:32.41,Default,,0,0,0,,We must have hit some of them. \NWhere are the bodies?
+Dialogue: 0,01:13:32.57,01:13:34.53,Default,,0,0,0,,- Have you seen Amy? She's gone. \N- No.
+Dialogue: 0,01:13:34.70,01:13:39.37,Default,,0,0,0,,She's joined the club, then. We've got two \Nporters missing and Homolka's run off, too.
+Dialogue: 0,01:13:39.54,01:13:43.38,Default,,0,0,0,,- I'm going to find her. \N- People come first, then gorillas.
+Dialogue: 0,01:13:43.54,01:13:44.88,Default,,0,0,0,,- Do you agree? \N- Yes.
+Dialogue: 0,01:13:45.04,01:13:50.01,Default,,0,0,0,,Good. We'll retrieve our comrades, \Nthen we'll retrieve your missing gorilla.
+Dialogue: 0,01:13:50.17,01:13:53.76,Default,,0,0,0,,Then we'll get the hell out of here. \NMount up!
+Dialogue: 0,01:15:28.61,01:15:31.73,Default,,0,0,0,,Here's the story. \NThey domesticated gorillas.
+Dialogue: 0,01:15:31.90,01:15:34.65,Default,,0,0,0,,You call that \Ndomesticated? They're killing a man.
+Dialogue: 0,01:15:34.82,01:15:39.37,Default,,0,0,0,,They taught them to be this way. \NThey bred them to violence.
+Dialogue: 0,01:15:39.49,01:15:42.70,Default,,0,0,0,,They looked for the trait \Nand they encouraged it.
+Dialogue: 0,01:15:43.25,01:15:46.58,Default,,0,0,0,,Guard dogs, and they \Nturned on their masters.
+Dialogue: 0,01:15:48.46,01:15:50.63,Default,,0,0,0,,What's that smell?
+Dialogue: 0,01:15:52.51,01:15:54.30,Default,,0,0,0,,These are all the bones of gorillas.
+Dialogue: 0,01:15:54.47,01:15:57.68,Default,,0,0,0,,- You mean, these are...? \N- No, these are normal gorillas.
+Dialogue: 0,01:16:00.22,01:16:02.89,Default,,0,0,0,,- This one's skull was crushed. \N- Feel that?
+Dialogue: 0,01:16:03.06,01:16:04.23,Default,,0,0,0,,Feel what?
+Dialogue: 0,01:16:20.28,01:16:21.74,Default,,0,0,0,,Hang on!
+Dialogue: 0,01:16:29.67,01:16:33.05,Default,,0,0,0,,- Everybody okay? \N- Yeah, let's go.
+Dialogue: 0,01:16:35.97,01:16:39.84,Default,,0,0,0,,Don't go this way. It's all caved in. \NGod, I'm so glad to see you.
+Dialogue: 0,01:16:39.97,01:16:44.06,Default,,0,0,0,,- I was trying to find the mines... \N- Be quiet. Got any flares, Kahega?
+Dialogue: 0,01:16:44.22,01:16:45.64,Default,,0,0,0,,Yeah!
+Dialogue: 0,01:16:48.31,01:16:51.02,Default,,0,0,0,,- What's making my eyes burn? \N- Sulfur fumes.
+Dialogue: 0,01:16:51.19,01:16:53.48,Default,,0,0,0,,Let's hope there's another way out of here.
+Dialogue: 0,01:17:06.87,01:17:08.29,Default,,0,0,0,,Careful.
+Dialogue: 0,01:17:28.52,01:17:33.11,Default,,0,0,0,,- What the hell...? \N- It's the mines!
+Dialogue: 0,01:17:33.27,01:17:38.11,Default,,0,0,0,,"We are watching you." It's the trainers \Ntalking. The teacher is watching you.
+Dialogue: 0,01:17:38.61,01:17:40.15,Default,,0,0,0,,Dead teachers.
+Dialogue: 0,01:17:45.53,01:17:46.74,Default,,0,0,0,,Look.
+Dialogue: 0,01:17:51.87,01:17:56.59,Default,,0,0,0,,Yes, yes, yes. I knew it was true!
+Dialogue: 0,01:17:58.01,01:18:01.80,Default,,0,0,0,,The city of Zinj, the diamonds...
+Dialogue: 0,01:18:05.43,01:18:10.52,Default,,0,0,0,,Every word of it was absolutely true.
+Dialogue: 0,01:18:12.77,01:18:14.52,Default,,0,0,0,,I'd leave those alone.
+Dialogue: 0,01:18:20.95,01:18:22.86,Default,,0,0,0,,- Any other way out of here? \N- Not that I've noticed.
+Dialogue: 0,01:18:25.57,01:18:28.49,Default,,0,0,0,,Help me. Fill up everything.
+Dialogue: 0,01:18:39.13,01:18:42.13,Default,,0,0,0,,- You've got to get me out of here! \N- Take a number.
+Dialogue: 0,01:18:42.30,01:18:45.43,Default,,0,0,0,,- But we're going to be rich! \N- ls that a way out?
+Dialogue: 0,01:18:45.59,01:18:46.64,Default,,0,0,0,,Maybe.
+Dialogue: 0,01:19:21.71,01:19:23.26,Default,,0,0,0,,Look out!
+Dialogue: 0,01:19:45.07,01:19:47.41,Default,,0,0,0,,- Let's go. \N- Stay close together.
+Dialogue: 0,01:19:54.08,01:19:58.17,Default,,0,0,0,,- What is it? \N- It's a geode. A giant diamond.
+Dialogue: 0,01:19:59.88,01:20:03.71,Default,,0,0,0,,- They cut him off. Kahega! \N- Check if there's a way out back there.
+Dialogue: 0,01:20:13.18,01:20:14.77,Default,,0,0,0,,Kahega!
+Dialogue: 0,01:20:39.50,01:20:41.29,Default,,0,0,0,,Jeffrey...
+Dialogue: 0,01:20:43.05,01:20:44.76,Default,,0,0,0,,Charlie!
+Dialogue: 0,01:20:45.88,01:20:47.34,Default,,0,0,0,,Charlie!
+Dialogue: 0,01:20:48.63,01:20:50.55,Default,,0,0,0,,- It's him? \N- It's him.
+Dialogue: 0,01:20:55.64,01:20:57.23,Default,,0,0,0,,Come on.
+Dialogue: 0,01:21:10.99,01:21:13.41,Default,,0,0,0,,- Is there a way out back there? \N- No, nothing.
+Dialogue: 0,01:21:14.83,01:21:18.91,Default,,0,0,0,,- We're almost out of rounds. \N- Buy me two minutes.
+Dialogue: 0,01:21:46.57,01:21:47.82,Default,,0,0,0,,Let me try.
+Dialogue: 0,01:21:49.36,01:21:50.86,Default,,0,0,0,,Aah!
+Dialogue: 0,01:22:22.27,01:22:24.65,Default,,0,0,0,,Ugly gorillas. Ugly. Go</i> away.
+Dialogue: 0,01:22:28.78,01:22:30.78,Default,,0,0,0,,They don't know what to make of it.
+Dialogue: 0,01:22:41.54,01:22:45.13,Default,,0,0,0,,<i>- Amy. \N- Mother. Mother.</i>
+Dialogue: 0,01:22:50.05,01:22:54.05,Default,,0,0,0,,- Peter hug <i>Amy.</i> \N- Maternal instinct, long may she reign.
+Dialogue: 0,01:22:54.22,01:22:56.89,Default,,0,0,0,,- What are you doing? \N- What am I doing? I'll tell you.
+Dialogue: 0,01:22:57.01,01:22:58.93,Default,,0,0,0,,- We're getting out. \N- What about them?
+Dialogue: 0,01:22:59.10,01:23:01.89,Default,,0,0,0,,Put them on \Nthe endangered species list.
+Dialogue: 0,01:23:09.15,01:23:13.03,Default,,0,0,0,,Come on, Monroe. Let's go! Move!
+Dialogue: 0,01:23:13.20,01:23:16.32,Default,,0,0,0,,- What the hell is that? \N- The latest thing in communication.
+Dialogue: 0,01:23:16.45,01:23:18.37,Default,,0,0,0,,- Climb! \N- Up here.
+Dialogue: 0,01:23:20.37,01:23:22.96,Default,,0,0,0,,- Go! Go! \N- Come on.
+Dialogue: 0,01:24:01.16,01:24:02.58,Default,,0,0,0,,Come on!
+Dialogue: 0,01:24:09.42,01:24:11.55,Default,,0,0,0,,Come on, girl. Come on!
+Dialogue: 0,01:24:22.68,01:24:23.89,Default,,0,0,0,,GO, Amy!
+Dialogue: 0,01:24:46.33,01:24:48.21,Default,,0,0,0,,Keep going!
+Dialogue: 0,01:24:50.58,01:24:53.30,Default,,0,0,0,,- Unh. \N- Come on, come on.
+Dialogue: 0,01:24:57.09,01:24:58.34,Default,,0,0,0,,Wait!
+Dialogue: 0,01:25:01.14,01:25:02.85,Default,,0,0,0,,- Where are they? \N- I don't know.
+Dialogue: 0,01:25:22.16,01:25:23.78,Default,,0,0,0,,Hang on!
+Dialogue: 0,01:25:27.45,01:25:29.33,Default,,0,0,0,,Watch out!
+Dialogue: 0,01:25:31.08,01:25:33.88,Default,,0,0,0,,- Go, Amy! \N- Hurry!
+Dialogue: 0,01:25:34.04,01:25:36.96,Default,,0,0,0,,Just hurry! Come on!
+Dialogue: 0,01:25:44.89,01:25:47.81,Default,,0,0,0,,- Come on! \N- You can do it!
+Dialogue: 0,01:25:49.56,01:25:50.85,Default,,0,0,0,,Keep moving.
+Dialogue: 0,01:25:51.85,01:25:53.61,Default,,0,0,0,,Head for higher ground.
+Dialogue: 0,01:25:54.48,01:25:56.23,Default,,0,0,0,,Keep going, Amy!
+Dialogue: 0,01:26:26.93,01:26:30.02,Default,,0,0,0,,Should be a big yellow case \Nwith a red stripe on that plane.
+Dialogue: 0,01:26:30.18,01:26:33.06,Default,,0,0,0,,It's a balloon. I'll get the transmitter.
+Dialogue: 0,01:26:35.06,01:26:36.19,Default,,0,0,0,,Amy!
+Dialogue: 0,01:26:40.94,01:26:42.61,Default,,0,0,0,,Amy!
+Dialogue: 0,01:26:43.70,01:26:45.87,Default,,0,0,0,,- How close is the border? \N- Not far.
+Dialogue: 0,01:26:46.03,01:26:47.95,Default,,0,0,0,,This is Karen Ross, 81452.
+Dialogue: 0,01:26:48.12,01:26:53.33,Default,,0,0,0,,That is KR 81452. \NHouston, Travis, do you read?
+Dialogue: 0,01:26:53.50,01:26:56.59,Default,,0,0,0,,<i>KR 81452.</i>
+Dialogue: 0,01:26:56.75,01:26:59.30,Default,,0,0,0,,Houston, Travis, do you read?
+Dialogue: 0,01:26:59.50,01:27:06.43,Default,,0,0,0,,81452, that is KR 81452. \NHouston, Travis, do you read?
+Dialogue: 0,01:27:08.64,01:27:12.52,Default,,0,0,0,,- Karen, is that you? \N<i>- It's</i> me, Travis.
+Dialogue: 0,01:27:12.68,01:27:15.69,Default,,0,0,0,,I thought I'd lost you. \NI sent another expedition.
+Dialogue: 0,01:27:15.81,01:27:21.99,Default,,0,0,0,,<i>- Did</i> you get <i>it?</i> \N- I have bad news. Charles was killed.
+Dialogue: 0,01:27:22.36,01:27:26.87,Default,,0,0,0,,Did you get the diamond? Did you?
+Dialogue: 0,01:27:30.33,01:27:34.46,Default,,0,0,0,,<i>- Yes.</i> \N- Good girl.
+Dialogue: 0,01:27:36.67,01:27:42.34,Default,,0,0,0,,Do you remember when I told you \Nthat if I ever knew you sent me here...
+Dialogue: 0,01:27:42.51,01:27:47.30,Default,,0,0,0,,for some diamond, \Nand not for Charlie, I'd make you sorry?
+Dialogue: 0,01:27:47.76,01:27:50.68,Default,,0,0,0,,<i>Karen, of course I'm upset.</i>
+Dialogue: 0,01:27:50.81,01:27:55.94,Default,,0,0,0,,<i>- But what's done is done. I could...</i> \N- I <i>know. You need</i> a <i>new</i> cash <i>machine.</i>
+Dialogue: 0,01:27:56.10,01:27:57.81,Default,,0,0,0,,<i>What would happen to the satellite...</i>
+Dialogue: 0,01:27:57.98,01:28:00.98,Default,,0,0,0,,if I put its phone number in the laser \Nand pulled the trigger?
+Dialogue: 0,01:28:01.15,01:28:04.24,Default,,0,0,0,,The chip from the transmitter's \Ngot the satellite's number.
+Dialogue: 0,01:28:08.37,01:28:14.25,Default,,0,0,0,,It's a 12,000 channel chip. \NIf you put it through the diamond... Karen!
+Dialogue: 0,01:28:19.33,01:28:21.17,Default,,0,0,0,,This is for you, Charlie.
+Dialogue: 0,01:28:25.01,01:28:26.43,Default,,0,0,0,,No!
+Dialogue: 0,01:28:29.72,01:28:31.01,Default,,0,0,0,,Amy!
+Dialogue: 0,01:28:34.02,01:28:35.48,Default,,0,0,0,,There you are.
+Dialogue: 0,01:28:44.53,01:28:46.78,Default,,0,0,0,,Amy, you saved me.
+Dialogue: 0,01:28:49.36,01:28:51.03,Default,,0,0,0,,It's okay.
+Dialogue: 0,01:29:08.72,01:29:10.26,Default,,0,0,0,,Thank you.
+Dialogue: 0,01:29:14.35,01:29:16.39,Default,,0,0,0,,I love you, too.
+Dialogue: 0,01:29:18.35,01:29:19.90,Default,,0,0,0,,Mother?
+Dialogue: 0,01:29:23.36,01:29:26.03,Default,,0,0,0,,Oh, I see. It's Africa. It's your mother.
+Dialogue: 0,01:29:28.03,01:29:31.11,Default,,0,0,0,,Amy, where did you go?
+Dialogue: 0,01:29:32.99,01:29:36.50,Default,,0,0,0,,Good gorillas? What good gorillas?
+Dialogue: 0,01:29:44.96,01:29:46.21,Default,,0,0,0,,Handsome fella.
+Dialogue: 0,01:30:12.07,01:30:13.53,Default,,0,0,0,,Amy...
+Dialogue: 0,01:30:20.16,01:30:22.71,Default,,0,0,0,,Look at that. \Nls that Amy with the...?
+Dialogue: 0,01:30:22.87,01:30:26.55,Default,,0,0,0,,The silverback. So she's...
+Dialogue: 0,01:30:28.55,01:30:31.59,Default,,0,0,0,,I see. I see.
+Dialogue: 0,01:30:35.80,01:30:37.68,Default,,0,0,0,,She's home.
+Dialogue: 0,01:30:54.99,01:30:57.37,Default,,0,0,0,,- Will she be all right? \N- They know what to do.
+Dialogue: 0,01:30:57.53,01:30:58.83,Default,,0,0,0,,It's us I'm worried about.
+Dialogue: 0,01:30:58.99,01:31:02.58,Default,,0,0,0,,- We've got to go. Come on. \N- Bye, Amy.
+Dialogue: 0,01:31:37.70,01:31:40.29,Default,,0,0,0,,- Peter, would you do me a favor? \N- What?
+Dialogue: 0,01:31:40.45,01:31:42.37,Default,,0,0,0,,Would you throw this away for me.
+Dialogue: 0,01:31:43.16,01:31:44.83,Default,,0,0,0,,You sure?
+Dialogue: 0,01:31:48.04,01:31:49.04,Default,,0,0,0,,Ouch.
+Dialogue: 0,01:31:55.68,01:31:59.43,Default,,0,0,0,,- There's a wind. \N- I hope it blows us someplace good.
+Dialogue: 0,01:31:59.60,01:32:01.22,Default,,0,0,0,,Me too.
