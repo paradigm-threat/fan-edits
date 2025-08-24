@@ -2800,7 +2800,7 @@ Thwarting your evil plan!
 - Agreed.
 
 639
-00:54:50,996 --> 00:54:53,707
+00:54:50,120 --> 00:54:53,707
 Let go on three. 
 One, two, three!
 
@@ -2823,7 +2823,7 @@ But now there won't
 be a Comic-Con!
 
 644
-00:55:32,996 --> 00:55:36,041
+00:55:32,120 --> 00:55:36,041
 Why are you alone? 
 Where are your friends?
 
@@ -3256,7 +3256,7 @@ to one very special henchman:
 No, no. Doctor, wait!
 
 744
-01:06:00,998 --> 01:06:03,376
+01:06:00,081 --> 01:06:03,376
 <i>If I can't rule the world...</i>
 
 745
