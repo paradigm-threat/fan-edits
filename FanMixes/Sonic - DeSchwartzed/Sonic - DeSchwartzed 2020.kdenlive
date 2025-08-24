@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Sonic - DeSchwartzed" version="7.33.0">
  <profile colorspace="709" description="3840x1608 23.98fps" display_aspect_den="67" display_aspect_num="160" frame_rate_den="1001" frame_rate_num="24000" height="1608" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain3" out="01:38:52.928">
   <property name="length">142248</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2020/Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG.mkv</property>
+  <property name="resource">/Kids Movies/Sonic/Sonic 2020/Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">28</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -19,7 +19,7 @@
   <property name="meta.media.0.codec.name">h264</property>
   <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
   <property name="meta.media.0.codec.bit_rate">0</property>
-  <property name="meta.attr.0.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.0.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.0.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.0.stream.BPS-eng.markup">22949273</property>
   <property name="meta.attr.0.stream.DURATION-eng.markup">01:38:52.885000000</property>
@@ -38,7 +38,7 @@
   <property name="meta.media.1.codec.long_name">ATSC A/52B (AC-3, E-AC-3)</property>
   <property name="meta.media.1.codec.bit_rate">320000</property>
   <property name="meta.attr.1.stream.language.markup">eng</property>
-  <property name="meta.attr.1.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.1.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.1.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.1.stream.BPS-eng.markup">4188342</property>
   <property name="meta.attr.1.stream.DURATION-eng.markup">01:38:52.918000000</property>
@@ -52,7 +52,7 @@
   <property name="meta.media.2.codec.long_name">SubRip subtitle</property>
   <property name="meta.media.2.codec.bit_rate">0</property>
   <property name="meta.attr.2.stream.language.markup">eng</property>
-  <property name="meta.attr.2.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.2.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.2.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.2.stream.BPS-eng.markup">65</property>
   <property name="meta.attr.2.stream.DURATION-eng.markup">01:31:25.473000000</property>
@@ -386,8 +386,8 @@
   <property name="meta.attr.27.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2020-05-10 09:21:13</property>
   <property name="meta.attr.27.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.27.stream.DURATION.markup">01:38:47.719000000</property>
-  <property name="meta.attr.title.markup">GalaxyRG 4K - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
-  <property name="meta.attr.COMMENT.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
+  <property name="meta.attr.COMMENT.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.ENCODER.markup">Lavf58.20.100</property>
   <property name="seekable">1</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -5772,7 +5772,7 @@
  <chain id="chain0" out="00:03:11.845">
   <property name="length">4600</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Still_in_Your_Marble_Zone_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Still_in_Your_Marble_Zone_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -5893,7 +5893,7 @@ http://diggidis.com</property>
  <chain id="chain1" out="00:03:09.092">
   <property name="length">4534</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Green_Hill_Zone_(Euroclub_'95_Mix)_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Green_Hill_Zone_(Euroclub_'95_Mix)_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -5975,7 +5975,7 @@ https://twitter.com/_rayza</property>
  <chain id="chain2" out="00:05:25.400">
   <property name="length">7802</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Green_Lane_Avenue_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Green_Lane_Avenue_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -6059,7 +6059,7 @@ https://facebook.com/bluesatellitemusic</property>
  <chain id="chain4" out="00:04:43.543">
   <property name="length">6799</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Live_at_the_Springyard_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Live_at_the_Springyard_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -6266,7 +6266,7 @@ Sonic's on a roll</property>
  <chain id="chain5" out="01:38:52.928">
   <property name="length">142248</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2020/Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG.mkv</property>
+  <property name="resource">/Kids Movies/Sonic/Sonic 2020/Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -6292,7 +6292,7 @@ Sonic's on a roll</property>
   <property name="meta.media.0.codec.name">h264</property>
   <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
   <property name="meta.media.0.codec.bit_rate">0</property>
-  <property name="meta.attr.0.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.0.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.0.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.0.stream.BPS-eng.markup">22949273</property>
   <property name="meta.attr.0.stream.DURATION-eng.markup">01:38:52.885000000</property>
@@ -6311,7 +6311,7 @@ Sonic's on a roll</property>
   <property name="meta.media.1.codec.long_name">ATSC A/52B (AC-3, E-AC-3)</property>
   <property name="meta.media.1.codec.bit_rate">320000</property>
   <property name="meta.attr.1.stream.language.markup">eng</property>
-  <property name="meta.attr.1.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.1.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.1.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.1.stream.BPS-eng.markup">4188342</property>
   <property name="meta.attr.1.stream.DURATION-eng.markup">01:38:52.918000000</property>
@@ -6325,7 +6325,7 @@ Sonic's on a roll</property>
   <property name="meta.media.2.codec.long_name">SubRip subtitle</property>
   <property name="meta.media.2.codec.bit_rate">0</property>
   <property name="meta.attr.2.stream.language.markup">eng</property>
-  <property name="meta.attr.2.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.2.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.2.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.2.stream.BPS-eng.markup">65</property>
   <property name="meta.attr.2.stream.DURATION-eng.markup">01:31:25.473000000</property>
@@ -6659,8 +6659,8 @@ Sonic's on a roll</property>
   <property name="meta.attr.27.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2020-05-10 09:21:13</property>
   <property name="meta.attr.27.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.27.stream.DURATION.markup">01:38:47.719000000</property>
-  <property name="meta.attr.title.markup">GalaxyRG 4K - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
-  <property name="meta.attr.COMMENT.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
+  <property name="meta.attr.COMMENT.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.ENCODER.markup">Lavf58.20.100</property>
   <property name="meta.media.sample_aspect_num">1</property>
   <property name="meta.media.sample_aspect_den">1</property>
@@ -6892,7 +6892,7 @@ Sonic's on a roll</property>
  <chain id="chain6" out="01:38:52.928">
   <property name="length">142248</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2020/Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG.mkv</property>
+  <property name="resource">/Kids Movies/Sonic/Sonic 2020/Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -17585,7 +17585,7 @@ Sonic's on a roll</property>
   <property name="meta.media.0.codec.name">h264</property>
   <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
   <property name="meta.media.0.codec.bit_rate">0</property>
-  <property name="meta.attr.0.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.0.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.0.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.0.stream.BPS-eng.markup">22949273</property>
   <property name="meta.attr.0.stream.DURATION-eng.markup">01:38:52.885000000</property>
@@ -17604,7 +17604,7 @@ Sonic's on a roll</property>
   <property name="meta.media.1.codec.long_name">ATSC A/52B (AC-3, E-AC-3)</property>
   <property name="meta.media.1.codec.bit_rate">320000</property>
   <property name="meta.attr.1.stream.language.markup">eng</property>
-  <property name="meta.attr.1.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.1.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.1.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.1.stream.BPS-eng.markup">4188342</property>
   <property name="meta.attr.1.stream.DURATION-eng.markup">01:38:52.918000000</property>
@@ -17618,7 +17618,7 @@ Sonic's on a roll</property>
   <property name="meta.media.2.codec.long_name">SubRip subtitle</property>
   <property name="meta.media.2.codec.bit_rate">0</property>
   <property name="meta.attr.2.stream.language.markup">eng</property>
-  <property name="meta.attr.2.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.2.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.2.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.2.stream.BPS-eng.markup">65</property>
   <property name="meta.attr.2.stream.DURATION-eng.markup">01:31:25.473000000</property>
@@ -17952,8 +17952,8 @@ Sonic's on a roll</property>
   <property name="meta.attr.27.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2020-05-10 09:21:13</property>
   <property name="meta.attr.27.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.27.stream.DURATION.markup">01:38:47.719000000</property>
-  <property name="meta.attr.title.markup">GalaxyRG 4K - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
-  <property name="meta.attr.COMMENT.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
+  <property name="meta.attr.COMMENT.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.ENCODER.markup">Lavf58.20.100</property>
   <property name="meta.media.sample_aspect_num">1</property>
   <property name="meta.media.sample_aspect_den">1</property>
@@ -18783,7 +18783,7 @@ Sonic's on a roll</property>
  <chain id="chain7" out="01:38:52.928">
   <property name="length">142248</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2020/Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG.mkv</property>
+  <property name="resource">/Kids Movies/Sonic/Sonic 2020/Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -18809,7 +18809,7 @@ Sonic's on a roll</property>
   <property name="meta.media.0.codec.name">h264</property>
   <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
   <property name="meta.media.0.codec.bit_rate">0</property>
-  <property name="meta.attr.0.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.0.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.0.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.0.stream.BPS-eng.markup">22949273</property>
   <property name="meta.attr.0.stream.DURATION-eng.markup">01:38:52.885000000</property>
@@ -18828,7 +18828,7 @@ Sonic's on a roll</property>
   <property name="meta.media.1.codec.long_name">ATSC A/52B (AC-3, E-AC-3)</property>
   <property name="meta.media.1.codec.bit_rate">320000</property>
   <property name="meta.attr.1.stream.language.markup">eng</property>
-  <property name="meta.attr.1.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.1.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.1.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.1.stream.BPS-eng.markup">4188342</property>
   <property name="meta.attr.1.stream.DURATION-eng.markup">01:38:52.918000000</property>
@@ -18842,7 +18842,7 @@ Sonic's on a roll</property>
   <property name="meta.media.2.codec.long_name">SubRip subtitle</property>
   <property name="meta.media.2.codec.bit_rate">0</property>
   <property name="meta.attr.2.stream.language.markup">eng</property>
-  <property name="meta.attr.2.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.2.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.2.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.2.stream.BPS-eng.markup">65</property>
   <property name="meta.attr.2.stream.DURATION-eng.markup">01:31:25.473000000</property>
@@ -19176,8 +19176,8 @@ Sonic's on a roll</property>
   <property name="meta.attr.27.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2020-05-10 09:21:13</property>
   <property name="meta.attr.27.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.27.stream.DURATION.markup">01:38:47.719000000</property>
-  <property name="meta.attr.title.markup">GalaxyRG 4K - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
-  <property name="meta.attr.COMMENT.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
+  <property name="meta.attr.COMMENT.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.ENCODER.markup">Lavf58.20.100</property>
   <property name="meta.media.sample_aspect_num">1</property>
   <property name="meta.media.sample_aspect_den">1</property>
@@ -19211,7 +19211,7 @@ Sonic's on a roll</property>
     <property name="transition.rect">00:03:49.508=-545 -42 4910 2056</property>
     <property name="transition.distort">0</property>
     <property name="use_normalised">0</property>
-    <property name="producer.resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/0x00000000</property>
+    <property name="producer.resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/0x00000000</property>
     <property name="transition.repeat_off">1</property>
     <property name="transition.mirror_off">1</property>
     <property name="kdenlive:collapsed">0</property>
@@ -19299,7 +19299,7 @@ Sonic's on a roll</property>
     <property name="transition.rect">00:34:09.885=-874 -49 5674 2376</property>
     <property name="transition.distort">0</property>
     <property name="use_normalised">0</property>
-    <property name="producer.resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/0x00000000</property>
+    <property name="producer.resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/0x00000000</property>
     <property name="transition.repeat_off">1</property>
     <property name="transition.mirror_off">1</property>
     <property name="kdenlive:collapsed">0</property>
@@ -19486,7 +19486,7 @@ Sonic's on a roll</property>
  <chain id="chain8" out="01:38:52.928">
   <property name="length">142248</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2020/Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG.mkv</property>
+  <property name="resource">/Kids Movies/Sonic/Sonic 2020/Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -30180,7 +30180,7 @@ Sonic's on a roll</property>
   <property name="meta.media.0.codec.name">h264</property>
   <property name="meta.media.0.codec.long_name">H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</property>
   <property name="meta.media.0.codec.bit_rate">0</property>
-  <property name="meta.attr.0.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.0.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.0.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.0.stream.BPS-eng.markup">22949273</property>
   <property name="meta.attr.0.stream.DURATION-eng.markup">01:38:52.885000000</property>
@@ -30199,7 +30199,7 @@ Sonic's on a roll</property>
   <property name="meta.media.1.codec.long_name">ATSC A/52B (AC-3, E-AC-3)</property>
   <property name="meta.media.1.codec.bit_rate">320000</property>
   <property name="meta.attr.1.stream.language.markup">eng</property>
-  <property name="meta.attr.1.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.1.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.1.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.1.stream.BPS-eng.markup">4188342</property>
   <property name="meta.attr.1.stream.DURATION-eng.markup">01:38:52.918000000</property>
@@ -30213,7 +30213,7 @@ Sonic's on a roll</property>
   <property name="meta.media.2.codec.long_name">SubRip subtitle</property>
   <property name="meta.media.2.codec.bit_rate">0</property>
   <property name="meta.attr.2.stream.language.markup">eng</property>
-  <property name="meta.attr.2.stream.title.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.2.stream.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.2.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.2.stream.BPS-eng.markup">65</property>
   <property name="meta.attr.2.stream.DURATION-eng.markup">01:31:25.473000000</property>
@@ -30547,8 +30547,8 @@ Sonic's on a roll</property>
   <property name="meta.attr.27.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2020-05-10 09:21:13</property>
   <property name="meta.attr.27.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
   <property name="meta.attr.27.stream.DURATION.markup">01:38:47.719000000</property>
-  <property name="meta.attr.title.markup">GalaxyRG 4K - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
-  <property name="meta.attr.COMMENT.markup">GalaxyRG - Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.DDP5.1.x264-GalaxyRG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
+  <property name="meta.attr.COMMENT.markup">Sonic.the.Hedgehog.2020.2160p.BluRay.3500MB.1.x264</property>
   <property name="meta.attr.ENCODER.markup">Lavf58.20.100</property>
   <property name="meta.media.sample_aspect_num">1</property>
   <property name="meta.media.sample_aspect_den">1</property>
@@ -30625,7 +30625,7 @@ Sonic's on a roll</property>
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
-   <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/luma01.pgm</property>
+   <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
    <property name="kdenlive:mixcut">12</property>
@@ -30639,7 +30639,7 @@ Sonic's on a roll</property>
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
-   <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/luma01.pgm</property>
+   <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
    <property name="kdenlive:mixcut">5</property>
@@ -30687,7 +30687,7 @@ Sonic's on a roll</property>
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1755214161680-{58164c34-09e5-443a-8843-84b296ff141d}.ass",
+        "file": "AppData/Local/Temp/1755214161680-{58164c34-09e5-443a-8843-84b296ff141d}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -32033,7 +32033,7 @@ Sonic's on a roll</property>
  <chain id="chain9" out="00:03:09.092">
   <property name="length">4534</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Green_Hill_Zone_(Euroclub_'95_Mix)_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Green_Hill_Zone_(Euroclub_'95_Mix)_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -32113,7 +32113,7 @@ https://twitter.com/_rayza</property>
  <chain id="chain10" out="00:04:43.543">
   <property name="length">6799</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Live_at_the_Springyard_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Live_at_the_Springyard_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -32248,7 +32248,7 @@ Sonic's on a roll</property>
  <chain id="chain11" out="00:03:11.845">
   <property name="length">4600</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Still_in_Your_Marble_Zone_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Still_in_Your_Marble_Zone_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -32324,7 +32324,7 @@ http://diggidis.com</property>
  <chain id="chain12" out="00:05:25.400">
   <property name="length">7802</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Green_Lane_Avenue_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost/Sonic_the_Hedgehog_Green_Lane_Avenue_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -32411,7 +32411,7 @@ https://facebook.com/bluesatellitemusic</property>
   <property name="kdenlive:docproperties.activetimeline">{ae2f0b7e-4104-4959-b903-53cf9e0d16d6}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">N:/Videos/General Movies/</property>
+  <property name="kdenlive:docproperties.browserurl">/General Movies/</property>
   <property name="kdenlive:docproperties.documentid">1755214161680</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -32471,7 +32471,7 @@ https://facebook.com/bluesatellitemusic</property>
   <property name="kdenlive:docproperties.opensequences">{ae2f0b7e-4104-4959-b903-53cf9e0d16d6}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile21</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile21</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>

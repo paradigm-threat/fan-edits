@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="C:/Users/kado/Videos/FanEdits/FanMixes/Congo (1995) - Incel Edition" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Congo (1995) - Incel Edition" version="7.33.0">
  <profile colorspace="709" description="1920x1072 23.98fps" display_aspect_den="67" display_aspect_num="120" frame_rate_den="1001" frame_rate_num="24000" height="1072" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1920"/>
  <chain id="chain4" out="01:48:15.682">
   <property name="length">155740</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Congo (1995)/Congo.1995.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4</property>
+  <property name="resource">/General Movies/Congo (1995)/Congo.1995.1080p.BluRay.x264.AAC5.1-.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -110,7 +110,7 @@
  <chain id="chain0" out="01:48:15.682">
   <property name="length">155740</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Congo (1995)/Congo.1995.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4</property>
+  <property name="resource">/General Movies/Congo (1995)/Congo.1995.1080p.BluRay.x264.AAC5.1-.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -266,7 +266,7 @@
  <chain id="chain1" out="01:48:15.682">
   <property name="length">155740</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Congo (1995)/Congo.1995.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4</property>
+  <property name="resource">/General Movies/Congo (1995)/Congo.1995.1080p.BluRay.x264.AAC5.1-.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -689,7 +689,7 @@
  <chain id="chain2" out="01:48:15.682">
   <property name="length">155740</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Congo (1995)/Congo.1995.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4</property>
+  <property name="resource">/General Movies/Congo (1995)/Congo.1995.1080p.BluRay.x264.AAC5.1-.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -872,7 +872,7 @@
  <chain id="chain3" out="01:48:15.682">
   <property name="length">155740</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Congo (1995)/Congo.1995.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4</property>
+  <property name="resource">/General Movies/Congo (1995)/Congo.1995.1080p.BluRay.x264.AAC5.1-.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1034,7 +1034,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">161373</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1753751336090-{6e47e85e-d44d-4d7f-bdb6-9f4b40723125}.ass",
+        "file": "AppData/Local/Temp/1753751336090-{6e47e85e-d44d-4d7f-bdb6-9f4b40723125}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -5763,7 +5763,7 @@
   <property name="kdenlive:docproperties.activetimeline">{2eff404b-ac55-4a01-8e81-71f432cedf0b}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/</property>
+  <property name="kdenlive:docproperties.browserurl">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/</property>
   <property name="kdenlive:docproperties.documentid">1753751336090</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -5823,7 +5823,7 @@
   <property name="kdenlive:docproperties.opensequences">{2eff404b-ac55-4a01-8e81-71f432cedf0b}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile15</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile15</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>
@@ -5856,7 +5856,7 @@
   <property name="kdenlive:docproperties.rendertcoverlay">0</property>
   <property name="kdenlive:docproperties.rendertctype">-1</property>
   <property name="kdenlive:docproperties.rendertwopass">0</property>
-  <property name="kdenlive:docproperties.renderurl">N:/Videos/FanEdits/FanMixes/Congo (1995) - Incel Edition/Congo (1995) - Incel Edition.mkv</property>
+  <property name="kdenlive:docproperties.renderurl">/FanEdits/FanMixes/Congo (1995) - Incel Edition/Congo (1995) - Incel Edition.mkv</property>
   <property name="xml_retain">1</property>
   <entry in="00:00:00.000" out="01:48:15.682" producer="chain4"/>
   <entry in="00:00:00.000" out="01:40:10.177" producer="tractor4"/>

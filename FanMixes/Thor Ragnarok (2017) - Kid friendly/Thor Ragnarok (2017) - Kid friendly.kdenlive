@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/FanEdits/FanMixes/Thor Ragnarok (2017) - Kid friendly" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Thor Ragnarok (2017) - Kid friendly" version="7.33.0">
  <profile colorspace="2020" description="3840x1608 23.98fps" display_aspect_den="67" display_aspect_num="160" frame_rate_den="1001" frame_rate_num="24000" height="1608" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <producer id="producer0" in="00:00:00.000" out="02:14:08.258">
   <property name="length">2147483647</property>
@@ -43,7 +43,7 @@
  <chain id="chain0" out="02:10:30.781">
   <property name="length">187751</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Marvel Films (2008 to 2025)/Thor Ragnarok (2017)/Thor.Ragnarok.2017.REPACK.2160p.UHD.BluRay.X265-IAMABLE/Thor.Ragnarok.2017.REPACK.2160p.UHD.BluRay.X265-IAMABLE.mkv</property>
+  <property name="resource">/General Movies/Marvel Films (2008 to 2025)/Thor Ragnarok (2017)/Thor.Ragnarok.2017.2160p.UHD.BluRay.X265/Thor.Ragnarok.2017.2160p.UHD.BluRay.X265.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -375,7 +375,7 @@
  <chain id="chain1" out="02:10:30.781">
   <property name="length">187751</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Marvel Films (2008 to 2025)/Thor Ragnarok (2017)/Thor.Ragnarok.2017.REPACK.2160p.UHD.BluRay.X265-IAMABLE/Thor.Ragnarok.2017.REPACK.2160p.UHD.BluRay.X265-IAMABLE.mkv</property>
+  <property name="resource">/General Movies/Marvel Films (2008 to 2025)/Thor Ragnarok (2017)/Thor.Ragnarok.2017.2160p.UHD.BluRay.X265/Thor.Ragnarok.2017.2160p.UHD.BluRay.X265.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -752,7 +752,7 @@
  <chain id="chain2" out="02:10:30.781">
   <property name="length">187751</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Marvel Films (2008 to 2025)/Thor Ragnarok (2017)/Thor.Ragnarok.2017.REPACK.2160p.UHD.BluRay.X265-IAMABLE/Thor.Ragnarok.2017.REPACK.2160p.UHD.BluRay.X265-IAMABLE.mkv</property>
+  <property name="resource">/General Movies/Marvel Films (2008 to 2025)/Thor Ragnarok (2017)/Thor.Ragnarok.2017.2160p.UHD.BluRay.X265/Thor.Ragnarok.2017.2160p.UHD.BluRay.X265.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1121,7 +1121,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1750555604340-{8b1f145e-8e2c-4387-b6ce-7f3410c19a6e}.ass",
+        "file": "AppData/Local/Temp/1750555604340-{8b1f145e-8e2c-4387-b6ce-7f3410c19a6e}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -9565,7 +9565,7 @@
  <chain id="chain3" out="02:10:30.781">
   <property name="length">187751</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Marvel Films (2008 to 2025)/Thor Ragnarok (2017)/Thor.Ragnarok.2017.REPACK.2160p.UHD.BluRay.X265-IAMABLE/Thor.Ragnarok.2017.REPACK.2160p.UHD.BluRay.X265-IAMABLE.mkv</property>
+  <property name="resource">/General Movies/Marvel Films (2008 to 2025)/Thor Ragnarok (2017)/Thor.Ragnarok.2017.2160p.UHD.BluRay.X265/Thor.Ragnarok.2017.2160p.UHD.BluRay.X265.mkv</property>
   <property name="mlt_service">avformat</property>
   <property name="meta.media.nb_streams">14</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -9880,7 +9880,7 @@
   <property name="kdenlive:docproperties.activetimeline">{9f80ba47-b135-49e0-a1ac-9bc1b61b37c1}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">N:/Videos/Kids Movies/FernGully The Last Rainforest (1992)/</property>
+  <property name="kdenlive:docproperties.browserurl">/Kids Movies/FernGully The Last Rainforest (1992)/</property>
   <property name="kdenlive:docproperties.documentid">1750555604340</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -9940,7 +9940,7 @@
   <property name="kdenlive:docproperties.opensequences">{9f80ba47-b135-49e0-a1ac-9bc1b61b37c1}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile14</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile14</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>

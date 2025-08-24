@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="C:/Users/kado/Videos/FanEdits/FanMixes/Matrix Reloaded (2003) - Unlinked Edition" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Matrix Reloaded (2003) - Unlinked Edition" version="7.33.0">
  <profile colorspace="2020" description="3840x1600 23.98fps" display_aspect_den="5" display_aspect_num="12" frame_rate_den="1001" frame_rate_num="24000" height="1600" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain2" out="02:09:11.929">
   <property name="length">185861</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Matrix Trilogy Complete (1999-2003) 720p 5.1 BRRiP x264 AAC [Team Nanban]/The.Matrix.Revolutions.2003/The.Matrix.Revolutions.2003.2160p.mp4</property>
+  <property name="resource">/Horror and SciFi/The Matrix Trilogy Complete (1999-2003) 720p 5.1 BRRiP x264 AAC/The.Matrix.Revolutions.2003/The.Matrix.Revolutions.2003.2160p.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">13</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -136,7 +136,7 @@
   <property name="meta.attr.major_brand.markup">isom</property>
   <property name="meta.attr.minor_version.markup">512</property>
   <property name="meta.attr.compatible_brands.markup">isomdby1iso2mp41</property>
-  <property name="meta.attr.title.markup">The.Matrix.Revolutions.2003.2160p.MAX.WEB-DL.DV.HDR[Ben The Men]</property>
+  <property name="meta.attr.title.markup">The.Matrix.Revolutions.2003.2160p.MAX.DV.HDR[Ben The Men]</property>
   <property name="meta.attr.encoder.markup">Lavf60.3.100</property>
   <property name="seekable">1</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -394,7 +394,7 @@
  <chain id="chain0" out="02:09:11.929">
   <property name="length">185861</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Matrix Trilogy Complete (1999-2003) 720p 5.1 BRRiP x264 AAC [Team Nanban]/The.Matrix.Revolutions.2003/The.Matrix.Revolutions.2003.2160p.mp4</property>
+  <property name="resource">/Horror and SciFi/The Matrix Trilogy Complete (1999-2003) 720p 5.1 BRRiP x264 AAC/The.Matrix.Revolutions.2003/The.Matrix.Revolutions.2003.2160p.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -537,7 +537,7 @@
   <property name="meta.attr.major_brand.markup">isom</property>
   <property name="meta.attr.minor_version.markup">512</property>
   <property name="meta.attr.compatible_brands.markup">isomdby1iso2mp41</property>
-  <property name="meta.attr.title.markup">The.Matrix.Revolutions.2003.2160p.MAX.WEB-DL.DV.HDR[Ben The Men]</property>
+  <property name="meta.attr.title.markup">The.Matrix.Revolutions.2003.2160p.MAX.DV.HDR[Ben The Men]</property>
   <property name="meta.attr.encoder.markup">Lavf60.3.100</property>
   <property name="meta.media.sample_aspect_num">1</property>
   <property name="meta.media.sample_aspect_den">1</property>
@@ -598,7 +598,7 @@
  <chain id="chain1" out="02:09:11.929">
   <property name="length">185861</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Matrix Trilogy Complete (1999-2003) 720p 5.1 BRRiP x264 AAC [Team Nanban]/The.Matrix.Revolutions.2003/The.Matrix.Revolutions.2003.2160p.mp4</property>
+  <property name="resource">/Horror and SciFi/The Matrix Trilogy Complete (1999-2003) 720p 5.1 BRRiP x264 AAC/The.Matrix.Revolutions.2003/The.Matrix.Revolutions.2003.2160p.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -743,7 +743,7 @@
   <property name="meta.attr.major_brand.markup">isom</property>
   <property name="meta.attr.minor_version.markup">512</property>
   <property name="meta.attr.compatible_brands.markup">isomdby1iso2mp41</property>
-  <property name="meta.attr.title.markup">The.Matrix.Revolutions.2003.2160p.MAX.WEB-DL.DV.HDR[Ben The Men]</property>
+  <property name="meta.attr.title.markup">The.Matrix.Revolutions.2003.2160p.MAX.DV.HDR[Ben The Men]</property>
   <property name="meta.attr.encoder.markup">Lavf60.3.100</property>
   <property name="meta.media.sample_aspect_num">1</property>
   <property name="meta.media.sample_aspect_den">1</property>
@@ -918,7 +918,7 @@
  <chain id="chain3" out="02:09:11.929">
   <property name="length">185861</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Matrix Trilogy Complete (1999-2003) 720p 5.1 BRRiP x264 AAC [Team Nanban]/The.Matrix.Revolutions.2003/The.Matrix.Revolutions.2003.2160p.mp4</property>
+  <property name="resource">/Horror and SciFi/The Matrix Trilogy Complete (1999-2003) 720p 5.1 BRRiP x264 AAC/The.Matrix.Revolutions.2003/The.Matrix.Revolutions.2003.2160p.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1061,7 +1061,7 @@
   <property name="meta.attr.major_brand.markup">isom</property>
   <property name="meta.attr.minor_version.markup">512</property>
   <property name="meta.attr.compatible_brands.markup">isomdby1iso2mp41</property>
-  <property name="meta.attr.title.markup">The.Matrix.Revolutions.2003.2160p.MAX.WEB-DL.DV.HDR[Ben The Men]</property>
+  <property name="meta.attr.title.markup">The.Matrix.Revolutions.2003.2160p.MAX.DV.HDR[Ben The Men]</property>
   <property name="meta.attr.encoder.markup">Lavf60.3.100</property>
   <property name="meta.media.sample_aspect_num">1</property>
   <property name="meta.media.sample_aspect_den">1</property>
@@ -1175,7 +1175,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">9699</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1754139357211-{5a6a68cc-80bc-47e3-b4af-58ad91ba1914}.ass",
+        "file": "AppData/Local/Temp/1754139357211-{5a6a68cc-80bc-47e3-b4af-58ad91ba1914}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -1549,7 +1549,7 @@
   <property name="kdenlive:docproperties.activetimeline">{2f22aef7-6ac1-4e11-8364-15dfa6b9d756}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/</property>
+  <property name="kdenlive:docproperties.browserurl">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/</property>
   <property name="kdenlive:docproperties.documentid">1754139357211</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -1609,7 +1609,7 @@
   <property name="kdenlive:docproperties.opensequences">{2f22aef7-6ac1-4e11-8364-15dfa6b9d756}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile16</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile16</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>
@@ -1633,7 +1633,7 @@
   <property name="kdenlive:docproperties.rendertcoverlay">0</property>
   <property name="kdenlive:docproperties.rendertctype">-1</property>
   <property name="kdenlive:docproperties.rendertwopass">0</property>
-  <property name="kdenlive:docproperties.renderurl">C:/Users/kado/Videos/Matrix Revolutions (2003) - Unlinked Edition.mkv</property>
+  <property name="kdenlive:docproperties.renderurl">/Matrix Revolutions (2003) - Unlinked Edition.mkv</property>
   <property name="kdenlive:docproperties.seekOffset">30000</property>
   <property name="kdenlive:docproperties.sessionid">{09fcd3f1-8efd-4ede-b388-31317de1e35a}</property>
   <property name="kdenlive:docproperties.uuid">{2f22aef7-6ac1-4e11-8364-15dfa6b9d756}</property>

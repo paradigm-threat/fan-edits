@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Sonic - DeSchwartzed" version="7.33.0">
  <profile colorspace="709" description="3840x1606 23.98fps" display_aspect_den="803" display_aspect_num="1920" frame_rate_den="1001" frame_rate_num="24000" height="1606" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain4" out="02:04:23.941">
   <property name="length">178956</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -1226,7 +1226,7 @@ https://youtube.com/analoq</property>
  <chain id="chain11" out="02:04:23.941">
   <property name="length">178956</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">2</property>
@@ -1688,7 +1688,7 @@ http://timsheehy.com</property>
  <chain id="chain14" out="02:04:23.941">
   <property name="length">178956</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">2</property>
@@ -2777,7 +2777,7 @@ http://timsheehy.com</property>
  <chain id="chain15" out="02:04:23.941">
   <property name="length">178956</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -3284,7 +3284,7 @@ http://timsheehy.com</property>
  <chain id="chain16" out="02:04:23.941">
   <property name="length">178956</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -3424,7 +3424,7 @@ http://timsheehy.com</property>
  <producer id="producer1" in="00:00:00.000" out="01:39:31.198">
   <property name="length">143165</property>
   <property name="eof">pause</property>
-  <property name="resource">1.250000:N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">1.250000:/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -3538,7 +3538,7 @@ http://timsheehy.com</property>
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">1.25</property>
-  <property name="warp_resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="warp_resource">/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{8662ceb9-f96f-4607-812c-ea78d123d3ef}</property>
   <property name="vstream">0</property>
@@ -4005,7 +4005,7 @@ http://timsheehy.com</property>
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/Sonic - DeSchwartzed 2022.kdenlive.ass",
+        "file": "/FanEdits/FanMixes/Sonic - DeSchwartzed/Sonic - DeSchwartzed 2022.kdenlive.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -7121,7 +7121,7 @@ http://timsheehy.com</property>
   <property name="kdenlive:docproperties.activetimeline">{a1c6ff07-0e79-459a-9520-a33d3eb81031}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">N:/Videos/General Movies/</property>
+  <property name="kdenlive:docproperties.browserurl">/General Movies/</property>
   <property name="kdenlive:docproperties.documentid">1755349010297</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -7181,7 +7181,7 @@ http://timsheehy.com</property>
   <property name="kdenlive:docproperties.opensequences">{a1c6ff07-0e79-459a-9520-a33d3eb81031}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile22</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile22</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>

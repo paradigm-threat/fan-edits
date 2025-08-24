@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="C:/Users/kado/Videos/FanEdits/FanMixes/Matrix Reloaded (2003) - Unlinked Edition" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Matrix Reloaded (2003) - Unlinked Edition" version="7.33.0">
  <profile colorspace="2020" description="3840x1600 23.98fps" display_aspect_den="5" display_aspect_num="12" frame_rate_den="1001" frame_rate_num="24000" height="1600" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain4" out="02:18:13.430">
   <property name="length">198844</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/The.Matrix.Reloaded.2003.2160p.MAX.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS[TGx]/The.Matrix.Reloaded.2003.2160p.MAX.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS.mkv</property>
+  <property name="resource">/The.Matrix.Reloaded.2003.2160p.MAX.DDPA.5.1.DV.HDR.H.265/The.Matrix.Reloaded.2003.2160p.MAX.DDPA.5.1.DV.HDR.H.265.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">3</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -133,7 +133,7 @@
  <chain id="chain0" out="02:18:13.430">
   <property name="length">198844</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/The.Matrix.Reloaded.2003.2160p.MAX.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS[TGx]/The.Matrix.Reloaded.2003.2160p.MAX.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS.mkv</property>
+  <property name="resource">/The.Matrix.Reloaded.2003.2160p.MAX.DDPA.5.1.DV.HDR.H.265/The.Matrix.Reloaded.2003.2160p.MAX.DDPA.5.1.DV.HDR.H.265.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -264,7 +264,7 @@
  <chain id="chain1" out="02:18:13.430">
   <property name="length">198844</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/The.Matrix.Reloaded.2003.2160p.MAX.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS[TGx]/The.Matrix.Reloaded.2003.2160p.MAX.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS.mkv</property>
+  <property name="resource">/The.Matrix.Reloaded.2003.2160p.MAX.DDPA.5.1.DV.HDR.H.265/The.Matrix.Reloaded.2003.2160p.MAX.DDPA.5.1.DV.HDR.H.265.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -630,7 +630,7 @@
  <chain id="chain2" out="02:18:13.430">
   <property name="length">198844</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/The.Matrix.Reloaded.2003.2160p.MAX.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS[TGx]/The.Matrix.Reloaded.2003.2160p.MAX.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS.mkv</property>
+  <property name="resource">/The.Matrix.Reloaded.2003.2160p.MAX.DDPA.5.1.DV.HDR.H.265/The.Matrix.Reloaded.2003.2160p.MAX.DDPA.5.1.DV.HDR.H.265.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -776,7 +776,7 @@
  <chain id="chain3" out="02:18:13.430">
   <property name="length">198844</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/The.Matrix.Reloaded.2003.2160p.MAX.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS[TGx]/The.Matrix.Reloaded.2003.2160p.MAX.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS.mkv</property>
+  <property name="resource">/The.Matrix.Reloaded.2003.2160p.MAX.DDPA.5.1.DV.HDR.H.265/The.Matrix.Reloaded.2003.2160p.MAX.DDPA.5.1.DV.HDR.H.265.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -881,7 +881,7 @@
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
-   <property name="resource">C:/Users/kado/AppData/Local/stalefiles/kdenlive/luma01.pgm</property>
+   <property name="resource">AppData/Local/stalefiles/kdenlive/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
    <property name="kdenlive:mixcut">5</property>
@@ -895,7 +895,7 @@
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
-   <property name="resource">C:/Users/kado/AppData/Local/stalefiles/kdenlive/luma01.pgm</property>
+   <property name="resource">AppData/Local/stalefiles/kdenlive/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
    <property name="kdenlive:mixcut">5</property>
@@ -943,7 +943,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">109027</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1753878354668-{e0372f34-2e7c-4360-8e7f-b7d8f0d71dab}.ass",
+        "file": "AppData/Local/Temp/1753878354668-{e0372f34-2e7c-4360-8e7f-b7d8f0d71dab}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -6407,7 +6407,7 @@
   <property name="kdenlive:docproperties.activetimeline">{23a3bcdb-ebe8-4874-b09b-bd18d889f1db}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/</property>
+  <property name="kdenlive:docproperties.browserurl">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/</property>
   <property name="kdenlive:docproperties.documentid">1753878354668</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -6467,7 +6467,7 @@
   <property name="kdenlive:docproperties.opensequences">{23a3bcdb-ebe8-4874-b09b-bd18d889f1db}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile16</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile16</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>

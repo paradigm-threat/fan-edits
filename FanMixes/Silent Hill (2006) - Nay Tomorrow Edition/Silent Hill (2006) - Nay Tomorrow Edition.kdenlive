@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="C:/Users/kado/Videos/FanEdits/FanMixes/Silent Hill (2006) - Nay Tomorrow Edition" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Silent Hill (2006) - Nay Tomorrow Edition" version="7.33.0">
  <profile colorspace="709" description="1920x816 23.98fps" display_aspect_den="17" display_aspect_num="40" frame_rate_den="1001" frame_rate_num="24000" height="816" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1920"/>
  <chain id="chain3" out="02:05:19.478">
   <property name="length">180287</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.YIFY.mp4</property>
+  <property name="resource">/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -3453,7 +3453,7 @@
  <chain id="chain66" out="02:05:19.478">
   <property name="length">180287</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.YIFY.mp4</property>
+  <property name="resource">/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -3708,7 +3708,7 @@
  <chain id="chain67" out="02:05:19.478">
   <property name="length">180287</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.YIFY.mp4</property>
+  <property name="resource">/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -4057,7 +4057,7 @@
  <chain id="chain68" out="02:05:19.478">
   <property name="length">180287</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.YIFY.mp4</property>
+  <property name="resource">/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -4122,7 +4122,7 @@
  <producer id="producer1" in="00:00:00.000" out="04:10:38.956">
   <property name="length">360574</property>
   <property name="eof">pause</property>
-  <property name="resource">0.500000:N:/Videos/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.YIFY.mp4</property>
+  <property name="resource">0.500000:/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.mp4</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -4161,7 +4161,7 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.5</property>
-  <property name="warp_resource">Silent.Hill.2006.BluRay.1080p.x264.YIFY.mp4</property>
+  <property name="warp_resource">Silent.Hill.2006.BluRay.1080p.x264.mp4</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{ea7104ff-e9c6-4dd5-8ec1-c0db79af6f56}</property>
   <property name="vstream">0</property>
@@ -4185,7 +4185,7 @@
  <producer id="producer2" in="00:00:00.000" out="41:46:29.404">
   <property name="length">3605740</property>
   <property name="eof">pause</property>
-  <property name="resource">0.050000:N:/Videos/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.YIFY.mp4</property>
+  <property name="resource">0.050000:/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.mp4</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -4224,7 +4224,7 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.05</property>
-  <property name="warp_resource">Silent.Hill.2006.BluRay.1080p.x264.YIFY.mp4</property>
+  <property name="warp_resource">Silent.Hill.2006.BluRay.1080p.x264.mp4</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{ea7104ff-e9c6-4dd5-8ec1-c0db79af6f56}</property>
   <property name="vstream">0</property>
@@ -4248,7 +4248,7 @@
  <producer id="producer4" in="00:00:00.000" out="02:47:05.964">
   <property name="length">240383</property>
   <property name="eof">pause</property>
-  <property name="resource">0.750000:N:/Videos/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.YIFY.mp4</property>
+  <property name="resource">0.750000:/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.mp4</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -4287,7 +4287,7 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.75</property>
-  <property name="warp_resource">Silent.Hill.2006.BluRay.1080p.x264.YIFY.mp4</property>
+  <property name="warp_resource">Silent.Hill.2006.BluRay.1080p.x264.mp4</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{ea7104ff-e9c6-4dd5-8ec1-c0db79af6f56}</property>
   <property name="vstream">0</property>
@@ -4536,7 +4536,7 @@
  <chain id="chain69" out="02:05:19.478">
   <property name="length">180287</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.YIFY.mp4</property>
+  <property name="resource">/Horror and SciFi/Silent Hill (2006) [1080p]/Silent.Hill.2006.BluRay.1080p.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -4685,7 +4685,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">4001</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1751575450196-{92d388ea-2528-484b-8077-15a62b3bb964}.ass",
+        "file": "AppData/Local/Temp/1751575450196-{92d388ea-2528-484b-8077-15a62b3bb964}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -5192,7 +5192,7 @@
   <property name="kdenlive:docproperties.activetimeline">{862b8d98-0fe9-4d64-a73e-c9c464fa434b}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">C:/Users/kado/Videos/</property>
+  <property name="kdenlive:docproperties.browserurl">/</property>
   <property name="kdenlive:docproperties.documentid">1751575450196</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -5252,7 +5252,7 @@
   <property name="kdenlive:docproperties.opensequences">{862b8d98-0fe9-4d64-a73e-c9c464fa434b}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile9</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile9</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>
@@ -5276,7 +5276,7 @@
   <property name="kdenlive:docproperties.rendertcoverlay">0</property>
   <property name="kdenlive:docproperties.rendertctype">-1</property>
   <property name="kdenlive:docproperties.rendertwopass">0</property>
-  <property name="kdenlive:docproperties.renderurl">C:/Users/kado/Videos/Silent Hill - Nay Tomorrow Edition.mkv</property>
+  <property name="kdenlive:docproperties.renderurl">/Silent Hill - Nay Tomorrow Edition.mkv</property>
   <property name="kdenlive:docproperties.seekOffset">30000</property>
   <property name="kdenlive:docproperties.sessionid">{d88950de-5085-4dc8-b8ee-19c51565be2e}</property>
   <property name="kdenlive:docproperties.uuid">{862b8d98-0fe9-4d64-a73e-c9c464fa434b}</property>

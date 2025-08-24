@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="C:/Users/kado/Videos/FanEdits/FanMixes/Terminator 3 (2003) - Brass Monkey Edition" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Terminator 3 (2003) - Brass Monkey Edition" version="7.33.0">
  <profile colorspace="709" description="1920x790 23.98fps" display_aspect_den="79" display_aspect_num="192" frame_rate_den="1001" frame_rate_num="24000" height="790" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1920"/>
  <chain id="chain19" out="01:49:06.215">
   <property name="length">156952</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -90,7 +90,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="seekable">1</property>
@@ -113,7 +113,7 @@
   <property name="meta.media.progressive">1</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -598,7 +598,7 @@
  <chain id="chain2" out="01:49:06.215">
   <property name="length">156952</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -607,7 +607,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -698,7 +698,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -988,7 +988,7 @@
  <chain id="chain6" out="01:49:06.215">
   <property name="length">156952</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -997,7 +997,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -1088,7 +1088,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -1111,7 +1111,7 @@
  <producer id="producer1" in="00:00:00.000" out="02:45:18.268">
   <property name="length">237806</property>
   <property name="eof">pause</property>
-  <property name="resource">0.660000:N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">0.660000:/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -1197,7 +1197,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="seekable">1</property>
@@ -1206,11 +1206,11 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.66</property>
-  <property name="warp_resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="warp_resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
   <property name="set.test_audio">0</property>
@@ -1230,7 +1230,7 @@
  <producer id="producer2" in="00:00:00.000" out="02:45:18.268">
   <property name="length">237806</property>
   <property name="eof">pause</property>
-  <property name="resource">0.660000:N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">0.660000:/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -1316,7 +1316,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="seekable">1</property>
@@ -1325,11 +1325,11 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.66</property>
-  <property name="warp_resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="warp_resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
   <property name="set.test_audio">0</property>
@@ -1349,7 +1349,7 @@
  <producer id="producer3" in="00:00:00.000" out="02:45:18.268">
   <property name="length">237806</property>
   <property name="eof">pause</property>
-  <property name="resource">0.660000:N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">0.660000:/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -1435,7 +1435,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="seekable">1</property>
@@ -1444,11 +1444,11 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.66</property>
-  <property name="warp_resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="warp_resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
   <property name="set.test_audio">0</property>
@@ -1751,7 +1751,7 @@
  <chain id="chain7" out="01:49:06.215">
   <property name="length">156952</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1760,7 +1760,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -1851,7 +1851,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -2509,7 +2509,7 @@
  <chain id="chain10" out="01:49:06.215">
   <property name="length">156952</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -2518,7 +2518,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -2609,7 +2609,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -2632,7 +2632,7 @@
  <producer id="producer4" in="00:00:00.000" out="02:45:18.268">
   <property name="length">237806</property>
   <property name="eof">pause</property>
-  <property name="resource">0.660000:N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">0.660000:/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -2718,7 +2718,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="seekable">1</property>
@@ -2727,11 +2727,11 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.66</property>
-  <property name="warp_resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="warp_resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
   <property name="set.test_audio">1</property>
@@ -2753,7 +2753,7 @@
  <producer id="producer5" in="00:00:00.000" out="02:45:18.268">
   <property name="length">237806</property>
   <property name="eof">pause</property>
-  <property name="resource">0.660000:N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">0.660000:/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -2839,7 +2839,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="seekable">1</property>
@@ -2848,11 +2848,11 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.66</property>
-  <property name="warp_resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="warp_resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
   <property name="set.test_audio">1</property>
@@ -2874,7 +2874,7 @@
  <producer id="producer6" in="00:00:00.000" out="02:45:18.268">
   <property name="length">237806</property>
   <property name="eof">pause</property>
-  <property name="resource">0.660000:N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">0.660000:/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -2960,7 +2960,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="seekable">1</property>
@@ -2969,11 +2969,11 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.66</property>
-  <property name="warp_resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="warp_resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
   <property name="set.test_audio">1</property>
@@ -3178,7 +3178,7 @@
  <chain id="chain13" out="01:49:06.215">
   <property name="length">156952</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="resource">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -3187,7 +3187,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{8a480ecc-b631-4a2f-b493-6a744a94365a}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT.mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/The Terminator DVD Boxset Part 1, 2, 3 &amp; 4/Terminator III - The Rise of the Machines (2003)/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264/Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -3278,7 +3278,7 @@
   <property name="meta.media.6.codec.bit_rate">0</property>
   <property name="meta.attr.6.stream.filename.markup">cover.jpg</property>
   <property name="meta.attr.6.stream.mimetype.markup">image/jpeg</property>
-  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264.DTS-FGT</property>
+  <property name="meta.attr.title.markup">Terminator.3.Rise.of.the.Machines.2003.1080p.BluRay.x264</property>
   <property name="meta.attr.encoder.markup">libebml v1.3.1 + libmatroska v1.4.2</property>
   <property name="meta.attr.creation_time.markup">2015-06-21T10:42:15.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -3403,7 +3403,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">157798</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1753232034577-{dd0f6fed-f100-494a-aeed-5a9746ac5754}.ass",
+        "file": "AppData/Local/Temp/1753232034577-{dd0f6fed-f100-494a-aeed-5a9746ac5754}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -4359,7 +4359,7 @@
   <property name="kdenlive:docproperties.activetimeline">{efc1d1de-85b4-43f7-8721-dc7b633cac55}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/</property>
+  <property name="kdenlive:docproperties.browserurl">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/</property>
   <property name="kdenlive:docproperties.documentid">1753232034577</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -4419,7 +4419,7 @@
   <property name="kdenlive:docproperties.opensequences">{efc1d1de-85b4-43f7-8721-dc7b633cac55}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile13</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile13</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>

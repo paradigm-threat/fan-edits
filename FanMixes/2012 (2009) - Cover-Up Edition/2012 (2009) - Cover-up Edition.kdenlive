@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/FanEdits/FanMixes/2012 (2009) - Cover-Up Edition" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/2012 (2009) - Cover-Up Edition" version="7.33.0">
  <profile colorspace="709" description="3840x1600 23.98fps" display_aspect_den="5" display_aspect_num="12" frame_rate_den="1001" frame_rate_num="24000" height="1600" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain6" out="02:37:50.509">
   <property name="length">227065</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">6</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -93,7 +93,7 @@
   <property name="meta.media.progressive">1</property>
   <property name="kdenlive:control_uuid">{b9467d2e-3b2d-4f8f-898e-3bb8e56c4339}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">N:/Videos/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -151,7 +151,7 @@
  <chain id="chain0" out="02:37:50.509">
   <property name="length">227065</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -160,7 +160,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{b9467d2e-3b2d-4f8f-898e-3bb8e56c4339}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -261,7 +261,7 @@
  <chain id="chain1" out="02:37:50.509">
   <property name="length">227065</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -270,7 +270,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{b9467d2e-3b2d-4f8f-898e-3bb8e56c4339}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -420,7 +420,7 @@
  <chain id="chain2" out="02:37:50.509">
   <property name="length">227065</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -429,7 +429,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{b9467d2e-3b2d-4f8f-898e-3bb8e56c4339}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -739,7 +739,7 @@
  <chain id="chain3" out="02:37:50.509">
   <property name="length">227065</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -748,7 +748,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{b9467d2e-3b2d-4f8f-898e-3bb8e56c4339}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -1500,7 +1500,7 @@
  <chain id="chain4" out="02:37:50.509">
   <property name="length">227065</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1509,7 +1509,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{b9467d2e-3b2d-4f8f-898e-3bb8e56c4339}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -1852,7 +1852,7 @@
  <chain id="chain5" out="02:37:50.509">
   <property name="length">227065</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1861,7 +1861,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{b9467d2e-3b2d-4f8f-898e-3bb8e56c4339}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">2012 (2009) [2160p] [4K] [BluRay] [5.1]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -1978,7 +1978,7 @@
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
-   <property name="resource">N:/Videos/Horror and SciFi/2012 (2009) [1080p]/luma01.pgm</property>
+   <property name="resource">/Horror and SciFi/2012 (2009) [1080p]/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
    <property name="kdenlive:mixcut">5</property>
@@ -1992,7 +1992,7 @@
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
-   <property name="resource">N:/Videos/Horror and SciFi/2012 (2009) [1080p]/luma01.pgm</property>
+   <property name="resource">/Horror and SciFi/2012 (2009) [1080p]/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
    <property name="kdenlive:mixcut">5</property>
@@ -2054,7 +2054,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1752782070395-{41979ba0-31d1-4472-b3c9-9ac0240986a9}.ass",
+        "file": "AppData/Local/Temp/1752782070395-{41979ba0-31d1-4472-b3c9-9ac0240986a9}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -3299,7 +3299,7 @@
   <property name="kdenlive:docproperties.activetimeline">{ac7bbb03-e4db-4fd0-9877-f5536cbd9e39}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/</property>
+  <property name="kdenlive:docproperties.browserurl">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/</property>
   <property name="kdenlive:docproperties.documentid">1752782070395</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>

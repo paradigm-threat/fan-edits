@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace" version="7.33.0">
  <profile colorspace="709" description="1916x1036 23.98fps" display_aspect_den="259" display_aspect_num="479" frame_rate_den="1001" frame_rate_num="24000" height="1036" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1916"/>
  <chain id="chain4" out="01:45:58.350">
   <property name="length">152448</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
+  <property name="resource">/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">37</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -494,7 +494,7 @@
  <chain id="chain5" out="00:01:50.133">
   <property name="length">2641</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_A_Temple_of_Chaos_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_A_Temple_of_Chaos_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -568,7 +568,7 @@ http://timsheehy.com</property>
  <chain id="chain14" out="00:04:05.797">
   <property name="length">5894</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_4_Hymn_to_the_Crystals_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_4_Hymn_to_the_Crystals_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -648,7 +648,7 @@ https://youtube.com/rebeccaetripp</property>
  <chain id="chain17" out="00:03:36.870">
   <property name="length">5200</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_10_Lake_in_Ontario_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_10_Lake_in_Ontario_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -722,7 +722,7 @@ http://last.fm/music/ilp0</property>
  <chain id="chain8" out="01:46:27.402">
   <property name="length">153144</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/DVD/A1_t00_Audio03.JPN.ac3</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/DVD/A1_t00_Audio03.JPN.ac3</property>
   <property name="mlt_service">avformat</property>
   <property name="meta.media.nb_streams">1</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -738,7 +738,7 @@ http://last.fm/music/ilp0</property>
   <property name="video_index">-1</property>
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{e2839f57-3e08-482a-8683-710c59cd7d06}</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/DVD/A1_t00_Audio03.JPN.ac3</property>
+  <property name="kdenlive:originalurl">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/DVD/A1_t00_Audio03.JPN.ac3</property>
   <property name="kdenlive:id">9</property>
   <property name="kdenlive:clip_type">1</property>
   <property name="kdenlive:file_size">306594816</property>
@@ -831,7 +831,7 @@ http://last.fm/music/ilp0</property>
  <chain id="chain1" out="00:01:50.133">
   <property name="length">2641</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_A_Temple_of_Chaos_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_A_Temple_of_Chaos_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -1062,7 +1062,7 @@ http://timsheehy.com</property>
  <chain id="chain3" out="00:01:50.133">
   <property name="length">2641</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_A_Temple_of_Chaos_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_A_Temple_of_Chaos_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -1138,7 +1138,7 @@ http://timsheehy.com</property>
  <chain id="chain0" out="01:45:58.350">
   <property name="length">152448</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
+  <property name="resource">/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1631,7 +1631,7 @@ http://timsheehy.com</property>
  <chain id="chain2" out="01:45:58.350">
   <property name="length">152448</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
+  <property name="resource">/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -2124,7 +2124,7 @@ http://timsheehy.com</property>
  <chain id="chain6" out="00:04:05.797">
   <property name="length">5894</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_4_Hymn_to_the_Crystals_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/ost/Final_Fantasy_4_Hymn_to_the_Crystals_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -2348,7 +2348,7 @@ https://youtube.com/rebeccaetripp</property>
  <chain id="chain7" out="01:46:27.402">
   <property name="length">153144</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/DVD/A1_t00_Audio03.JPN.ac3</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/DVD/A1_t00_Audio03.JPN.ac3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -2547,7 +2547,7 @@ https://youtube.com/rebeccaetripp</property>
  <chain id="chain9" out="01:46:27.402">
   <property name="length">153144</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/DVD/A1_t00_Audio03.JPN.ac3</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/DVD/A1_t00_Audio03.JPN.ac3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -3199,7 +3199,7 @@ https://youtube.com/rebeccaetripp</property>
  <chain id="chain10" out="01:45:58.350">
   <property name="length">152448</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
+  <property name="resource">/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -3877,7 +3877,7 @@ https://youtube.com/rebeccaetripp</property>
  <chain id="chain11" out="01:45:58.350">
   <property name="length">152448</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
+  <property name="resource">/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -5001,7 +5001,7 @@ https://youtube.com/rebeccaetripp</property>
  <chain id="chain16" out="01:45:58.350">
   <property name="length">152448</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
+  <property name="resource">/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -5822,7 +5822,7 @@ https://youtube.com/rebeccaetripp</property>
  <chain id="chain12" out="01:45:58.350">
   <property name="length">152448</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
+  <property name="resource">/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -6338,7 +6338,7 @@ https://youtube.com/rebeccaetripp</property>
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
-   <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/luma01.pgm</property>
+   <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
    <property name="kdenlive:mixcut">5</property>
@@ -6380,7 +6380,7 @@ https://youtube.com/rebeccaetripp</property>
  <chain id="chain13" out="01:45:58.350">
   <property name="length">152448</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
+  <property name="resource">/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -6955,7 +6955,7 @@ https://youtube.com/rebeccaetripp</property>
   <property name="kdenlive:sequenceproperties.scrollPos">678523</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1753192907790-{5a4fb020-dfb8-4678-ae51-410861766279}.ass",
+        "file": "AppData/Local/Temp/1753192907790-{5a4fb020-dfb8-4678-ae51-410861766279}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -11606,7 +11606,7 @@ https://youtube.com/rebeccaetripp</property>
   <property name="kdenlive:docproperties.activetimeline">{1db74e36-f274-4325-a5be-2dc513831cf7}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/</property>
+  <property name="kdenlive:docproperties.browserurl">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/</property>
   <property name="kdenlive:docproperties.documentid">1753192907790</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -11666,7 +11666,7 @@ https://youtube.com/rebeccaetripp</property>
   <property name="kdenlive:docproperties.opensequences">{1db74e36-f274-4325-a5be-2dc513831cf7}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile12</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile12</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>
@@ -11690,7 +11690,7 @@ https://youtube.com/rebeccaetripp</property>
   <property name="kdenlive:docproperties.rendertcoverlay">0</property>
   <property name="kdenlive:docproperties.rendertctype">-1</property>
   <property name="kdenlive:docproperties.rendertwopass">0</property>
-  <property name="kdenlive:docproperties.renderurl">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace Japan.ac3</property>
+  <property name="kdenlive:docproperties.renderurl">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace Japan.ac3</property>
   <property name="kdenlive:docproperties.seekOffset">30000</property>
   <property name="kdenlive:docproperties.sessionid">{31377a10-640d-4632-a6bf-fb286238789f}</property>
   <property name="kdenlive:docproperties.uuid">{1db74e36-f274-4325-a5be-2dc513831cf7}</property>

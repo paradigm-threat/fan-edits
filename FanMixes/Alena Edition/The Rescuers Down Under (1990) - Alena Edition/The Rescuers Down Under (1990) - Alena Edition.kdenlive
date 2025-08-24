@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/Kids Movies/The Rescuers Down Under (1990) - 1080p" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/Kids Movies/The Rescuers Down Under (1990) - 1080p" version="7.33.0">
  <profile colorspace="709" description="1806x1080 23.98fps" display_aspect_den="180" display_aspect_num="301" frame_rate_den="1001" frame_rate_num="24000" height="1080" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1806"/>
  <chain id="chain4" out="01:17:08.300">
   <property name="length">110968</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.VPPV-constant.mp4</property>
+  <property name="resource">/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -61,7 +61,7 @@
   <property name="meta.media.progressive">1</property>
   <property name="kdenlive:control_uuid">{ab3b4808-38ae-4f78-811d-3554698b74b9}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.VPPV-constant.mp4</property>
+  <property name="kdenlive:originalurl">/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.mp4</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -82,7 +82,7 @@
  <chain id="chain0" out="01:17:08.300">
   <property name="length">110968</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.VPPV-constant.mp4</property>
+  <property name="resource">/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -91,7 +91,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{ab3b4808-38ae-4f78-811d-3554698b74b9}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.VPPV-constant.mp4</property>
+  <property name="kdenlive:originalurl">/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.mp4</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -175,7 +175,7 @@
  <chain id="chain1" out="01:17:08.300">
   <property name="length">110968</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.VPPV-constant.mp4</property>
+  <property name="resource">/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -184,7 +184,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{ab3b4808-38ae-4f78-811d-3554698b74b9}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.VPPV-constant.mp4</property>
+  <property name="kdenlive:originalurl">/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.mp4</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -371,7 +371,7 @@
  <chain id="chain2" out="01:17:08.300">
   <property name="length">110968</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.VPPV-constant.mp4</property>
+  <property name="resource">/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -380,7 +380,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{ab3b4808-38ae-4f78-811d-3554698b74b9}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.VPPV-constant.mp4</property>
+  <property name="kdenlive:originalurl">/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.mp4</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -463,7 +463,7 @@
  <chain id="chain3" out="01:17:08.300">
   <property name="length">110968</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.VPPV-constant.mp4</property>
+  <property name="resource">/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -472,7 +472,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{ab3b4808-38ae-4f78-811d-3554698b74b9}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.VPPV-constant.mp4</property>
+  <property name="kdenlive:originalurl">/The Rescuers Down Under (1990) - 1080p/The.Rescuers.Down.Under.1990.1080p.BluRay.x264.mp4</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -697,12 +697,12 @@
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1750469390780-{886fbfe5-9a68-4ca0-b6f6-3f9ef453e34d}.ass",
+        "file": "AppData/Local/Temp/1750469390780-{886fbfe5-9a68-4ca0-b6f6-3f9ef453e34d}.ass",
         "id": 0,
         "name": "Subtitles"
     },
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1750469390780-1-{886fbfe5-9a68-4ca0-b6f6-3f9ef453e34d}.ass",
+        "file": "AppData/Local/Temp/1750469390780-1-{886fbfe5-9a68-4ca0-b6f6-3f9ef453e34d}.ass",
         "id": 1,
         "name": "Subtitle 2"
     }
@@ -908,7 +908,7 @@
   <property name="kdenlive:docproperties.activetimeline">{b8259fd7-f4fa-4f79-ba6d-9372eb35d5fc}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">C:/Users/kado/dev/paradigm-threat-site/app/mudflood/</property>
+  <property name="kdenlive:docproperties.browserurl">dev/paradigm-threat-site/app/mudflood/</property>
   <property name="kdenlive:docproperties.documentid">1750469390780</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -968,7 +968,7 @@
   <property name="kdenlive:docproperties.opensequences">{b8259fd7-f4fa-4f79-ba6d-9372eb35d5fc}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile2</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile2</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>

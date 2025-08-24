@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/FanEdits/FanMixes/Alena Edition/Flow - Alena Edition" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Alena Edition/Flow - Alena Edition" version="7.33.0">
  <profile colorspace="2020" description="3840x2160 24.00fps" display_aspect_den="9" display_aspect_num="16" frame_rate_den="1" frame_rate_num="24" height="2160" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain7" out="01:23:34.042">
   <property name="length">120338</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Flow (2024) [1080p] [WEBRip] [YTS.MX]/Flow.2024.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mkv</property>
+  <property name="resource">/General Movies/Flow (2024) [1080p]/Flow.2024.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">5</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -160,7 +160,7 @@
  <chain id="chain2" out="01:23:34.042">
   <property name="length">120338</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Flow (2024) [1080p] [WEBRip] [YTS.MX]/Flow.2024.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mkv</property>
+  <property name="resource">/General Movies/Flow (2024) [1080p]/Flow.2024.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -288,7 +288,7 @@
  <chain id="chain3" out="01:23:34.042">
   <property name="length">120338</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Flow (2024) [1080p] [WEBRip] [YTS.MX]/Flow.2024.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mkv</property>
+  <property name="resource">/General Movies/Flow (2024) [1080p]/Flow.2024.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -499,7 +499,7 @@
  <chain id="chain4" out="01:23:34.042">
   <property name="length">120338</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Flow (2024) [1080p] [WEBRip] [YTS.MX]/Flow.2024.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mkv</property>
+  <property name="resource">/General Movies/Flow (2024) [1080p]/Flow.2024.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -642,7 +642,7 @@
  <chain id="chain5" out="01:23:34.042">
   <property name="length">120338</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/General Movies/Flow (2024) [1080p] [WEBRip] [YTS.MX]/Flow.2024.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.HYBRID.REMUX-FraMeSToR.mkv</property>
+  <property name="resource">/General Movies/Flow (2024) [1080p]/Flow.2024.UHD.BluRay.2160p.DTS-HD.MA.5.1.HEVC.REMUX.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -798,7 +798,7 @@
    <property name="transition.rect">00:00:00.000=2185 1185 1366 768</property>
    <property name="transition.distort">0</property>
    <property name="use_normalised">0</property>
-   <property name="producer.resource">C:/Users/kado/Videos/FanEdits/FanMixes/Alena Edition/Flow - Alena Edition/0x00000000</property>
+   <property name="producer.resource">/FanEdits/FanMixes/Alena Edition/Flow - Alena Edition/0x00000000</property>
    <property name="transition.repeat_off">1</property>
    <property name="transition.mirror_off">1</property>
    <property name="kdenlive:collapsed">0</property>
@@ -995,7 +995,7 @@
   <property name="kdenlive:docproperties.activetimeline">{a5b55865-e438-420b-b8d4-3f1eec94145e}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">N:/Videos/General Movies/Lost in Translation (2003)/</property>
+  <property name="kdenlive:docproperties.browserurl">/General Movies/Lost in Translation (2003)/</property>
   <property name="kdenlive:docproperties.documentid">1754958410068</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -1055,7 +1055,7 @@
   <property name="kdenlive:docproperties.opensequences">{a5b55865-e438-420b-b8d4-3f1eec94145e}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile19</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile19</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>
@@ -1079,7 +1079,7 @@
   <property name="kdenlive:docproperties.rendertcoverlay">0</property>
   <property name="kdenlive:docproperties.rendertctype">-1</property>
   <property name="kdenlive:docproperties.rendertwopass">0</property>
-  <property name="kdenlive:docproperties.renderurl">C:/Users/kado/Videos/Flow - Alena Edition.mkv</property>
+  <property name="kdenlive:docproperties.renderurl">/Flow - Alena Edition.mkv</property>
   <property name="kdenlive:docproperties.seekOffset">30000</property>
   <property name="kdenlive:docproperties.sessionid">{7c25b6ce-55dc-40e5-8423-8b913e4b7fb1}</property>
   <property name="kdenlive:docproperties.uuid">{a5b55865-e438-420b-b8d4-3f1eec94145e}</property>

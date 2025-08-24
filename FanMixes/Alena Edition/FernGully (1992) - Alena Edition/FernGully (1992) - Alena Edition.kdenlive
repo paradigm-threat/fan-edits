@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/Kids Movies/FernGully The Last Rainforest (1992)" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/Kids Movies/FernGully The Last Rainforest (1992)" version="7.33.0">
  <profile colorspace="709" description="1280x700 23.98fps" display_aspect_den="65" display_aspect_num="119" frame_rate_den="1001" frame_rate_num="24000" height="700" progressive="1" sample_aspect_den="832" sample_aspect_num="833" width="1280"/>
  <producer id="producer0" in="00:00:00.000" out="00:58:24.608">
   <property name="length">2147483647</property>
@@ -14,7 +14,7 @@
  <chain id="chain0" out="01:15:52.594">
   <property name="length">109153</property>
   <property name="eof">pause</property>
-  <property name="resource">FernGully.The.Last.Rainforest.1992.720p.BluRay.x264-[YTS.AM].mp4</property>
+  <property name="resource">FernGully.The.Last.Rainforest.1992.720p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -91,7 +91,7 @@
  <chain id="chain1" out="01:15:52.594">
   <property name="length">109153</property>
   <property name="eof">pause</property>
-  <property name="resource">FernGully.The.Last.Rainforest.1992.720p.BluRay.x264-[YTS.AM].mp4</property>
+  <property name="resource">FernGully.The.Last.Rainforest.1992.720p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -235,7 +235,7 @@
  <chain id="chain2" out="01:15:52.594">
   <property name="length">109153</property>
   <property name="eof">pause</property>
-  <property name="resource">FernGully.The.Last.Rainforest.1992.720p.BluRay.x264-[YTS.AM].mp4</property>
+  <property name="resource">FernGully.The.Last.Rainforest.1992.720p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -311,7 +311,7 @@
  <chain id="chain3" out="01:15:52.594">
   <property name="length">109153</property>
   <property name="eof">pause</property>
-  <property name="resource">FernGully.The.Last.Rainforest.1992.720p.BluRay.x264-[YTS.AM].mp4</property>
+  <property name="resource">FernGully.The.Last.Rainforest.1992.720p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -471,7 +471,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">14864</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1750552758923-{f39d3169-1856-44da-9918-f5cf0388929f}.ass",
+        "file": "AppData/Local/Temp/1750552758923-{f39d3169-1856-44da-9918-f5cf0388929f}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -613,7 +613,7 @@
  <chain id="chain4" out="01:15:52.594">
   <property name="length">109153</property>
   <property name="eof">pause</property>
-  <property name="resource">FernGully.The.Last.Rainforest.1992.720p.BluRay.x264-[YTS.AM].mp4</property>
+  <property name="resource">FernGully.The.Last.Rainforest.1992.720p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -674,7 +674,7 @@
   <property name="kdenlive:sequenceFolder">2</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">N:/Videos/Kids Movies/Aladdin (1992)/</property>
+  <property name="kdenlive:docproperties.browserurl">/Kids Movies/Aladdin (1992)/</property>
   <property name="kdenlive:docproperties.documentid">1750552758923</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -733,7 +733,7 @@
   <property name="kdenlive:docproperties.kdenliveversion">25.04.2</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile4</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile4</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>

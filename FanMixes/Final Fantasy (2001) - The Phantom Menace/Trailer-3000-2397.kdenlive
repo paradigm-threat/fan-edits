@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace" version="7.33.0">
  <profile colorspace="709" description="HD 1:1 23.98 fps" display_aspect_den="16" display_aspect_num="16" frame_rate_den="1001" frame_rate_num="24000" height="1280" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1280"/>
  <chain id="chain5" out="01:29:50.433">
   <property name="length">01:29:50.450</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">4</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -104,7 +104,7 @@
  <chain id="chain6" out="01:45:58.333">
   <property name="length">01:45:58.358</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
+  <property name="resource">/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">37</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -594,7 +594,7 @@
  <producer id="producer2" in="00:00:00.000" out="00:00:34.433">
   <property name="length">00:00:34.468</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/img/fftpmea.png</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/img/fftpmea.png</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.progressive">1</property>
@@ -616,7 +616,7 @@
  <producer id="producer3" in="00:00:00.000" out="00:00:34.000">
   <property name="length">00:00:34.034</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/img/fftpmja.png</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/img/fftpmja.png</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.progressive">1</property>
@@ -638,7 +638,7 @@
  <producer id="producer1" in="00:00:00.000" out="00:00:56.833">
   <property name="length">00:00:56.857</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/img/ffo.png</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/img/ffo.png</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.progressive">1</property>
@@ -670,7 +670,7 @@
  <chain id="chain0" out="01:29:50.433">
   <property name="length">01:29:50.450</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">2</property>
@@ -812,7 +812,7 @@
  <chain id="chain1" out="01:45:58.333">
   <property name="length">01:45:58.358</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
+  <property name="resource">/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1304,7 +1304,7 @@
  <chain id="chain2" out="01:29:50.433">
   <property name="length">01:29:50.450</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1448,7 +1448,7 @@
  <chain id="chain3" out="01:45:58.333">
   <property name="length">01:45:58.358</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv</property>
+  <property name="resource">/Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1940,7 +1940,7 @@
  <chain id="chain4" out="01:29:50.433">
   <property name="length">01:29:50.450</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv</property>
+  <property name="resource">/FanEdits/FanMixes/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -2133,7 +2133,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1753996696524-{7e7d991a-f770-4791-9032-d1b792212f4b}.ass",
+        "file": "AppData/Local/Temp/1753996696524-{7e7d991a-f770-4791-9032-d1b792212f4b}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -2232,7 +2232,7 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">C:/Users/kado/AppData/Local/Temp/1753996696524-{0eb8e5e7-df05-4664-847c-d3586926440c}.ass</property>
+   <property name="av.filename">AppData/Local/Temp/1753996696524-{0eb8e5e7-df05-4664-847c-d3586926440c}.ass</property>
   </filter>
  </tractor>
  <playlist id="main_bin">
@@ -2241,7 +2241,7 @@
   <property name="kdenlive:docproperties.activetimeline">{d474e1aa-b0bc-4f8e-9d79-bf610b2e77c0}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">C:/Users/kado/Videos/The.Matrix.Reloaded.2003.2160p.MAX.WEB-DL.DDPA.5.1.DV.HDR.H.265-PiRaTeS[TGx]/</property>
+  <property name="kdenlive:docproperties.browserurl">/The.Matrix.Reloaded.2003.2160p.MAX.DDPA.5.1.DV.HDR.H.265/</property>
   <property name="kdenlive:docproperties.documentid">1753996696524</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -2301,7 +2301,7 @@
   <property name="kdenlive:docproperties.opensequences">{d474e1aa-b0bc-4f8e-9d79-bf610b2e77c0}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile17</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile17</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>

@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="C:/Users/kado/Videos/Alien Resurrection" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/Alien Resurrection" version="7.33.0">
  <profile colorspace="709" description="1920x820 30.00fps" display_aspect_den="41" display_aspect_num="96" frame_rate_den="1" frame_rate_num="30" height="820" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1920"/>
  <chain id="chain5" out="01:48:48.533">
   <property name="length">195857</property>
@@ -968,12 +968,12 @@
   <property name="kdenlive:sequenceproperties.scrollPos">3125</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1750641602352-{c2c51fe4-16cc-4da7-a9b4-01ae47dda03a}.ass",
+        "file": "AppData/Local/Temp/1750641602352-{c2c51fe4-16cc-4da7-a9b4-01ae47dda03a}.ass",
         "id": 0,
         "name": "Subtitles"
     },
     {
-        "file": "C:/Users/kado/Videos/Alien Resurrection/Alien Resurrection - DeJoss.kdenlive-1.ass",
+        "file": "/Alien Resurrection/Alien Resurrection - DeJoss.kdenlive-1.ass",
         "id": 1,
         "name": "Subtitle 2"
     }
@@ -1311,7 +1311,7 @@
   <property name="kdenlive:docproperties.opensequences">{67610be2-a351-4e5a-b7eb-c698163f29ce}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile6</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile6</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>

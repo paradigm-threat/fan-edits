@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/FanEdits/FanMixes/The Day After Tomorrow (2004) - Chemtrail Edition" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/The Day After Tomorrow (2004) - Chemtrail Edition" version="7.33.0">
  <profile colorspace="709" description="4K UHD 2160p 23.98 fps" display_aspect_den="9" display_aspect_num="16" frame_rate_den="1001" frame_rate_num="24000" height="2160" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain2" out="02:03:40.457">
   <property name="length">177913</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/The.Day.After.Tomorrow.2004.2160p.4K.WEB.x265.10bit.HDR.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/The.Day.After.Tomorrow.2004.2160p.4K.x265.10bit.HDR.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">19</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -173,7 +173,7 @@
  <chain id="chain0" out="02:03:40.457">
   <property name="length">177913</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/The.Day.After.Tomorrow.2004.2160p.4K.WEB.x265.10bit.HDR.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/The.Day.After.Tomorrow.2004.2160p.4K.x265.10bit.HDR.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -411,7 +411,7 @@
  <chain id="chain1" out="02:03:40.457">
   <property name="length">177913</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/The.Day.After.Tomorrow.2004.2160p.4K.WEB.x265.10bit.HDR.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/The.Day.After.Tomorrow.2004.2160p.4K.x265.10bit.HDR.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -674,7 +674,7 @@
  <chain id="chain3" out="02:03:40.457">
   <property name="length">177913</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/The.Day.After.Tomorrow.2004.2160p.4K.WEB.x265.10bit.HDR.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/The.Day.After.Tomorrow.2004.2160p.4K.x265.10bit.HDR.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1332,7 +1332,7 @@
  <chain id="chain4" out="02:03:40.457">
   <property name="length">177913</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/The.Day.After.Tomorrow.2004.2160p.4K.WEB.x265.10bit.HDR.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/The.Day.After.Tomorrow.2004.2160p.4K.x265.10bit.HDR.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1619,7 +1619,7 @@
  <chain id="chain5" out="02:03:40.457">
   <property name="length">177913</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/The.Day.After.Tomorrow.2004.2160p.4K.WEB.x265.10bit.HDR.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/The.Day.After.Tomorrow.2004.2160p.4K.x265.10bit.HDR.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1811,7 +1811,7 @@
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
-   <property name="resource">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/luma01.pgm</property>
+   <property name="resource">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
    <property name="kdenlive:mixcut">5</property>
@@ -1825,7 +1825,7 @@
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
-   <property name="resource">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/luma01.pgm</property>
+   <property name="resource">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
    <property name="kdenlive:mixcut">4</property>
@@ -1839,7 +1839,7 @@
    <property name="a_track">0</property>
    <property name="b_track">1</property>
    <property name="factory">loader</property>
-   <property name="resource">N:/Videos/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1] [YTS.MX]/luma01.pgm</property>
+   <property name="resource">/Horror and SciFi/The Day After Tomorrow (2004) [2160p] [4K] [WEB] [HDR] [5.1]/luma01.pgm</property>
    <property name="mlt_service">luma</property>
    <property name="kdenlive_id">luma</property>
    <property name="kdenlive:mixcut">4</property>
@@ -1915,7 +1915,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">18993</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1752357145352-{78bc9435-ed06-44df-9858-1312bf7fd2a7}.ass",
+        "file": "AppData/Local/Temp/1752357145352-{78bc9435-ed06-44df-9858-1312bf7fd2a7}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -6434,7 +6434,7 @@
   <property name="kdenlive:docproperties.activetimeline">{616d4122-cb01-43dd-8764-e9ee648a931b}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">C:/Users/kado/Videos/</property>
+  <property name="kdenlive:docproperties.browserurl">/</property>
   <property name="kdenlive:docproperties.documentid">1752357145352</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>

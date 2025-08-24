@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/Kids Movies/Aladdin (1992)" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/Kids Movies/Aladdin (1992)" version="7.33.0">
  <profile colorspace="709" description="HD 720p 25 fps" display_aspect_den="9" display_aspect_num="16" frame_rate_den="1" frame_rate_num="25" height="720" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1280"/>
  <chain id="chain4" out="01:26:42.760">
   <property name="length">130070</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Aladdin (1992)/Aladdin.1992.720p.BRrip.x264.GAZ.YIFY.mp4</property>
+  <property name="resource">/Aladdin (1992)/Aladdin.1992.720p.BRrip.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -76,7 +76,7 @@
  <chain id="chain0" out="01:26:42.760">
   <property name="length">130070</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Aladdin (1992)/Aladdin.1992.720p.BRrip.x264.GAZ.YIFY.mp4</property>
+  <property name="resource">/Aladdin (1992)/Aladdin.1992.720p.BRrip.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -168,7 +168,7 @@
  <chain id="chain1" out="01:26:42.760">
   <property name="length">130070</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Aladdin (1992)/Aladdin.1992.720p.BRrip.x264.GAZ.YIFY.mp4</property>
+  <property name="resource">/Aladdin (1992)/Aladdin.1992.720p.BRrip.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -347,7 +347,7 @@
  <chain id="chain2" out="01:26:42.760">
   <property name="length">130070</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Aladdin (1992)/Aladdin.1992.720p.BRrip.x264.GAZ.YIFY.mp4</property>
+  <property name="resource">/Aladdin (1992)/Aladdin.1992.720p.BRrip.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -429,7 +429,7 @@
  <chain id="chain3" out="01:26:42.760">
   <property name="length">130070</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Aladdin (1992)/Aladdin.1992.720p.BRrip.x264.GAZ.YIFY.mp4</property>
+  <property name="resource">/Aladdin (1992)/Aladdin.1992.720p.BRrip.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -625,12 +625,12 @@
   <property name="kdenlive:sequenceproperties.scrollPos">2368</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1750526084390-{6e59466b-2caf-4266-a681-d1ea31cafae9}.ass",
+        "file": "AppData/Local/Temp/1750526084390-{6e59466b-2caf-4266-a681-d1ea31cafae9}.ass",
         "id": 0,
         "name": "Subtitles"
     },
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1750526084390-1-{6e59466b-2caf-4266-a681-d1ea31cafae9}.ass",
+        "file": "AppData/Local/Temp/1750526084390-1-{6e59466b-2caf-4266-a681-d1ea31cafae9}.ass",
         "id": 1,
         "name": "Subtitle 2"
     }
@@ -806,7 +806,7 @@
   <property name="kdenlive:docproperties.activetimeline">{85c3c143-1480-488c-b965-e9bd8d58ccd9}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">C:/Users/kado/Videos/The Rescuers Down Under (1990) - 1080p/</property>
+  <property name="kdenlive:docproperties.browserurl">/The Rescuers Down Under (1990) - 1080p/</property>
   <property name="kdenlive:docproperties.documentid">1750526084390</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>

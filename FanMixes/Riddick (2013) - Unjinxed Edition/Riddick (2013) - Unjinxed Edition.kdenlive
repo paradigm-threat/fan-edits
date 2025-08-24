@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/Horror and SciFi/Riddick Movies/Riddick (2013) [1080p]" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/Horror and SciFi/Riddick Movies/Riddick (2013) [1080p]" version="7.33.0">
  <profile colorspace="709" description="1920x800 23.98fps" display_aspect_den="5" display_aspect_num="12" frame_rate_den="1001" frame_rate_num="24000" height="800" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1920"/>
  <chain id="chain3" out="02:06:47.631">
   <property name="length">182401</property>
   <property name="eof">pause</property>
-  <property name="resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
+  <property name="resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -78,7 +78,7 @@
  <chain id="chain0" out="02:06:47.631">
   <property name="length">182401</property>
   <property name="eof">pause</property>
-  <property name="resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
+  <property name="resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -144,7 +144,7 @@
  <producer id="producer1" in="00:00:00.000" out="04:13:35.285">
   <property name="length">364802</property>
   <property name="eof">pause</property>
-  <property name="resource">0.500000:Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
+  <property name="resource">0.500000:Riddick.2013.1080p.BluRay.x264.mp4</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -184,7 +184,7 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.5</property>
-  <property name="warp_resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
+  <property name="warp_resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{e80b47a4-3b8d-4a5d-b2cf-1ee175c48bb2}</property>
   <property name="vstream">0</property>
@@ -296,7 +296,7 @@
  <chain id="chain1" out="02:06:47.631">
   <property name="length">182401</property>
   <property name="eof">pause</property>
-  <property name="resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
+  <property name="resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -569,7 +569,7 @@
  <chain id="chain2" out="02:06:47.631">
   <property name="length">182401</property>
   <property name="eof">pause</property>
-  <property name="resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
+  <property name="resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -635,7 +635,7 @@
  <producer id="producer2" in="00:00:00.000" out="04:13:35.285">
   <property name="length">364802</property>
   <property name="eof">pause</property>
-  <property name="resource">0.500000:Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
+  <property name="resource">0.500000:Riddick.2013.1080p.BluRay.x264.mp4</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -675,7 +675,7 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.5</property>
-  <property name="warp_resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
+  <property name="warp_resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{e80b47a4-3b8d-4a5d-b2cf-1ee175c48bb2}</property>
   <property name="vstream">0</property>
@@ -870,7 +870,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">6155</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1750806985643-{77a78c80-31ff-4353-9b51-8a7a55d34f04}.ass",
+        "file": "AppData/Local/Temp/1750806985643-{77a78c80-31ff-4353-9b51-8a7a55d34f04}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -2236,7 +2236,7 @@
   <property name="kdenlive:docproperties.activetimeline">{4b126a86-8850-45da-8263-caa46739adeb}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">C:/Users/kado/Videos/Alien Resurrection/</property>
+  <property name="kdenlive:docproperties.browserurl">/Alien Resurrection/</property>
   <property name="kdenlive:docproperties.documentid">1750806985643</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -2296,7 +2296,7 @@
   <property name="kdenlive:docproperties.opensequences">{4b126a86-8850-45da-8263-caa46739adeb}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile7</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile7</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>

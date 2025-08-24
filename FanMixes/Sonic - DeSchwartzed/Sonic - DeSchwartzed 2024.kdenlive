@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="C:/Users/kado/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/FanEdits/FanMixes/Sonic - DeSchwartzed" version="7.33.0">
  <profile colorspace="709" description="3840x1600 23.98fps" display_aspect_den="5" display_aspect_num="12" frame_rate_den="1001" frame_rate_num="24000" height="1600" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain18" out="00:03:15.682">
   <property name="length">4692</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_LatinSphere_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_LatinSphere_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -82,7 +82,7 @@ https://soundcloud.com/mike-vaff</property>
  <chain id="chain23" out="00:03:31.949">
   <property name="length">5082</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_Sonik_Elektronik_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_Sonik_Elektronik_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -198,7 +198,7 @@ Sonik Elektronik, yeaaah</property>
  <chain id="chain24" out="00:03:45.587">
   <property name="length">5409</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_The_Outer_Space_Machine_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_The_Outer_Space_Machine_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -274,7 +274,7 @@ http://adamlederer.com</property>
  <chain id="chain27" out="00:04:31.198">
   <property name="length">6503</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_Walk_on_Water_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_Walk_on_Water_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">audio</property>
@@ -401,7 +401,7 @@ https://soundcloud.com/alexanderliss</property>
  <producer id="producer1" in="00:00:00.000" out="07:21:09.468">
   <property name="length">634632</property>
   <property name="eof">pause</property>
-  <property name="resource">0.250000:C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="resource">0.250000:/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">9</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -525,7 +525,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_APP.markup">mkvmerge v93.0 ('Goblu') 64-bit</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_DATE_UTC.markup">2025-08-24 01:18:26</property>
   <property name="meta.attr.8.stream._STATISTICS_TAGS.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.H.265.TRIAL YG</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.5 + libmatroska v1.7.1</property>
   <property name="meta.attr.creation_time.markup">2025-08-24T01:18:26.000000Z</property>
   <property name="seekable">1</property>
@@ -534,11 +534,11 @@ https://soundcloud.com/alexanderliss</property>
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.25</property>
-  <property name="warp_resource">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="warp_resource">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{d966ce4c-f83e-4d0f-9af2-9deb051dfa2e}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="kdenlive:originalurl">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
   <property name="kdenlive:markers">[
@@ -9292,7 +9292,7 @@ https://soundcloud.com/alexanderliss</property>
  <chain id="chain0" out="00:03:45.587">
   <property name="length">5409</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_The_Outer_Space_Machine_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_The_Outer_Space_Machine_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -9410,7 +9410,7 @@ http://adamlederer.com</property>
  <chain id="chain2" out="00:03:45.587">
   <property name="length">5409</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_The_Outer_Space_Machine_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_The_Outer_Space_Machine_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -9563,7 +9563,7 @@ http://adamlederer.com</property>
  <chain id="chain1" out="01:50:17.351">
   <property name="length">158658</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="resource">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -9572,7 +9572,7 @@ http://adamlederer.com</property>
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{d966ce4c-f83e-4d0f-9af2-9deb051dfa2e}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="kdenlive:originalurl">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="kdenlive:markers">[
     {
         "comment": "Scene 1",
@@ -18444,7 +18444,7 @@ http://adamlederer.com</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_APP.markup">mkvmerge v93.0 ('Goblu') 64-bit</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_DATE_UTC.markup">2025-08-24 01:18:26</property>
   <property name="meta.attr.8.stream._STATISTICS_TAGS.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.H.265.TRIAL YG</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.5 + libmatroska v1.7.1</property>
   <property name="meta.attr.creation_time.markup">2025-08-24T01:18:26.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -18467,7 +18467,7 @@ http://adamlederer.com</property>
  <producer id="producer2" in="00:00:00.000" out="03:40:34.701">
   <property name="length">317316</property>
   <property name="eof">pause</property>
-  <property name="resource">0.500000:C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="resource">0.500000:/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">9</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -18591,7 +18591,7 @@ http://adamlederer.com</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_APP.markup">mkvmerge v93.0 ('Goblu') 64-bit</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_DATE_UTC.markup">2025-08-24 01:18:26</property>
   <property name="meta.attr.8.stream._STATISTICS_TAGS.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.H.265.TRIAL YG</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.5 + libmatroska v1.7.1</property>
   <property name="meta.attr.creation_time.markup">2025-08-24T01:18:26.000000Z</property>
   <property name="seekable">1</property>
@@ -18600,11 +18600,11 @@ http://adamlederer.com</property>
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.5</property>
-  <property name="warp_resource">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="warp_resource">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{d966ce4c-f83e-4d0f-9af2-9deb051dfa2e}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="kdenlive:originalurl">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
   <property name="kdenlive:markers">[
@@ -27358,7 +27358,7 @@ http://adamlederer.com</property>
  <producer id="producer3" in="00:00:00.000" out="02:37:33.200">
   <property name="length">226654</property>
   <property name="eof">pause</property>
-  <property name="resource">0.700000:C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="resource">0.700000:/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">9</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -27482,7 +27482,7 @@ http://adamlederer.com</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_APP.markup">mkvmerge v93.0 ('Goblu') 64-bit</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_DATE_UTC.markup">2025-08-24 01:18:26</property>
   <property name="meta.attr.8.stream._STATISTICS_TAGS.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.H.265.TRIAL YG</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.5 + libmatroska v1.7.1</property>
   <property name="meta.attr.creation_time.markup">2025-08-24T01:18:26.000000Z</property>
   <property name="seekable">1</property>
@@ -27491,11 +27491,11 @@ http://adamlederer.com</property>
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.7</property>
-  <property name="warp_resource">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="warp_resource">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{d966ce4c-f83e-4d0f-9af2-9deb051dfa2e}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="kdenlive:originalurl">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
   <property name="kdenlive:markers">[
@@ -36249,7 +36249,7 @@ http://adamlederer.com</property>
  <chain id="chain4" out="00:03:31.949">
   <property name="length">5082</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_Sonik_Elektronik_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_Sonik_Elektronik_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -36367,7 +36367,7 @@ Sonik Elektronik, yeaaah</property>
  <chain id="chain5" out="00:03:15.682">
   <property name="length">4692</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_LatinSphere_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_LatinSphere_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -36447,7 +36447,7 @@ https://soundcloud.com/mike-vaff</property>
  <chain id="chain3" out="00:04:31.198">
   <property name="length">6503</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_Walk_on_Water_OC_ReMix.mp3</property>
+  <property name="resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/ost3/Sonic_the_Hedgehog_3_Walk_on_Water_OC_ReMix.mp3</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">0</property>
@@ -36685,7 +36685,7 @@ https://soundcloud.com/alexanderliss</property>
  <chain id="chain6" out="01:50:17.351">
   <property name="length">158658</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="resource">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -36694,7 +36694,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{d966ce4c-f83e-4d0f-9af2-9deb051dfa2e}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="kdenlive:originalurl">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="kdenlive:markers">[
     {
         "comment": "Scene 1",
@@ -45566,7 +45566,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_APP.markup">mkvmerge v93.0 ('Goblu') 64-bit</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_DATE_UTC.markup">2025-08-24 01:18:26</property>
   <property name="meta.attr.8.stream._STATISTICS_TAGS.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.H.265.TRIAL YG</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.5 + libmatroska v1.7.1</property>
   <property name="meta.attr.creation_time.markup">2025-08-24T01:18:26.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -45589,7 +45589,7 @@ https://soundcloud.com/alexanderliss</property>
  <producer id="producer4" in="00:00:00.000" out="03:40:34.701">
   <property name="length">317316</property>
   <property name="eof">pause</property>
-  <property name="resource">0.500000:C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="resource">0.500000:/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">9</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -45713,7 +45713,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_APP.markup">mkvmerge v93.0 ('Goblu') 64-bit</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_DATE_UTC.markup">2025-08-24 01:18:26</property>
   <property name="meta.attr.8.stream._STATISTICS_TAGS.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.H.265.TRIAL YG</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.5 + libmatroska v1.7.1</property>
   <property name="meta.attr.creation_time.markup">2025-08-24T01:18:26.000000Z</property>
   <property name="seekable">1</property>
@@ -45722,11 +45722,11 @@ https://soundcloud.com/alexanderliss</property>
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.5</property>
-  <property name="warp_resource">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="warp_resource">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{d966ce4c-f83e-4d0f-9af2-9deb051dfa2e}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="kdenlive:originalurl">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
   <property name="kdenlive:markers">[
@@ -54480,7 +54480,7 @@ https://soundcloud.com/alexanderliss</property>
  <chain id="chain7" out="01:50:17.351">
   <property name="length">158658</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Sonic 2024/Sonic3-720p.mp4</property>
+  <property name="resource">/Sonic 2024/Sonic3-720p.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -54489,7 +54489,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{d966ce4c-f83e-4d0f-9af2-9deb051dfa2e}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/Sonic 2024/Sonic3-720p.mp4</property>
+  <property name="kdenlive:originalurl">/Sonic 2024/Sonic3-720p.mp4</property>
   <property name="kdenlive:markers">[
     {
         "comment": "Scene 1",
@@ -63272,7 +63272,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="meta.attr.minor_version.markup">512</property>
   <property name="meta.attr.compatible_brands.markup">mp42iso2avc1mp41</property>
   <property name="meta.attr.creation_time.markup">2025-08-20T21:05:34.000000Z</property>
-  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.H.265.TRIAL YG</property>
   <property name="meta.attr.encoder.markup">HandBrake 1.9.2 2025022300</property>
   <property name="meta.media.sample_aspect_num">27</property>
   <property name="meta.media.sample_aspect_den">20</property>
@@ -63636,7 +63636,7 @@ https://soundcloud.com/alexanderliss</property>
  <chain id="chain8" out="01:50:17.351">
   <property name="length">158658</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="resource">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -63645,7 +63645,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{d966ce4c-f83e-4d0f-9af2-9deb051dfa2e}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="kdenlive:originalurl">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="kdenlive:markers">[
     {
         "comment": "Scene 1",
@@ -72517,7 +72517,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_APP.markup">mkvmerge v93.0 ('Goblu') 64-bit</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_DATE_UTC.markup">2025-08-24 01:18:26</property>
   <property name="meta.attr.8.stream._STATISTICS_TAGS.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.H.265.TRIAL YG</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.5 + libmatroska v1.7.1</property>
   <property name="meta.attr.creation_time.markup">2025-08-24T01:18:26.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -73580,7 +73580,7 @@ https://soundcloud.com/alexanderliss</property>
  <chain id="chain9" out="01:50:17.351">
   <property name="length">158658</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="resource">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -73589,7 +73589,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{d966ce4c-f83e-4d0f-9af2-9deb051dfa2e}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="kdenlive:originalurl">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="kdenlive:markers">[
     {
         "comment": "Scene 1",
@@ -82461,7 +82461,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_APP.markup">mkvmerge v93.0 ('Goblu') 64-bit</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_DATE_UTC.markup">2025-08-24 01:18:26</property>
   <property name="meta.attr.8.stream._STATISTICS_TAGS.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.H.265.TRIAL YG</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.5 + libmatroska v1.7.1</property>
   <property name="meta.attr.creation_time.markup">2025-08-24T01:18:26.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -82542,7 +82542,7 @@ https://soundcloud.com/alexanderliss</property>
     <property name="transition.rect">00:14:39.915=-37 -165 6583 2743</property>
     <property name="transition.distort">0</property>
     <property name="use_normalised">0</property>
-    <property name="producer.resource">N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/0x00000000</property>
+    <property name="producer.resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/0x00000000</property>
     <property name="transition.repeat_off">1</property>
     <property name="transition.mirror_off">1</property>
     <property name="kdenlive:collapsed">0</property>
@@ -82557,7 +82557,7 @@ https://soundcloud.com/alexanderliss</property>
     <property name="transition.rect">00:14:43.085=-4318 -1183 11154 4647</property>
     <property name="transition.distort">0</property>
     <property name="use_normalised">0</property>
-    <property name="producer.resource">N:/Videos/FanEdits/FanMixes/Sonic - DeSchwartzed/0x00000000</property>
+    <property name="producer.resource">/FanEdits/FanMixes/Sonic - DeSchwartzed/0x00000000</property>
     <property name="transition.repeat_off">1</property>
     <property name="transition.mirror_off">1</property>
     <property name="kdenlive:collapsed">0</property>
@@ -82874,7 +82874,7 @@ https://soundcloud.com/alexanderliss</property>
  <chain id="chain10" out="01:50:17.351">
   <property name="length">158658</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="resource">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -82883,7 +82883,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{d966ce4c-f83e-4d0f-9af2-9deb051dfa2e}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="kdenlive:originalurl">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="kdenlive:markers">[
     {
         "comment": "Scene 1",
@@ -91755,7 +91755,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_APP.markup">mkvmerge v93.0 ('Goblu') 64-bit</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_DATE_UTC.markup">2025-08-24 01:18:26</property>
   <property name="meta.attr.8.stream._STATISTICS_TAGS.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.H.265.TRIAL YG</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.5 + libmatroska v1.7.1</property>
   <property name="meta.attr.creation_time.markup">2025-08-24T01:18:26.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -91842,7 +91842,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="kdenlive:sequenceproperties.scrollPos">79156</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1755645990116-{f61bad57-83cb-4b0b-adf9-05d2b25355ec}.ass",
+        "file": "AppData/Local/Temp/1755645990116-{f61bad57-83cb-4b0b-adf9-05d2b25355ec}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -96760,7 +96760,7 @@ https://soundcloud.com/alexanderliss</property>
  <chain id="chain11" out="01:50:17.351">
   <property name="length">158658</property>
   <property name="eof">pause</property>
-  <property name="resource">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="resource">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">9</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -96884,7 +96884,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_APP.markup">mkvmerge v93.0 ('Goblu') 64-bit</property>
   <property name="meta.attr.8.stream._STATISTICS_WRITING_DATE_UTC.markup">2025-08-24 01:18:26</property>
   <property name="meta.attr.8.stream._STATISTICS_TAGS.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG</property>
+  <property name="meta.attr.title.markup">Sonic.the.Hedgehog.3.2024.2160p.H.265.TRIAL YG</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.5 + libmatroska v1.7.1</property>
   <property name="meta.attr.creation_time.markup">2025-08-24T01:18:26.000000Z</property>
   <property name="seekable">1</property>
@@ -96907,7 +96907,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="meta.media.progressive">1</property>
   <property name="kdenlive:control_uuid">{d966ce4c-f83e-4d0f-9af2-9deb051dfa2e}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">C:/Users/kado/Videos/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.WEB-DL.H.265.TRIAL YG ENG.mkv</property>
+  <property name="kdenlive:originalurl">/Sonic 2024/Sonic.the.Hedgehog.3.2024.2160p.H.265.ENG.mkv</property>
   <property name="kdenlive:markers">[
     {
         "comment": "Scene 1",
@@ -105666,7 +105666,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="kdenlive:docproperties.activetimeline">{294ec749-e9e0-48cb-bf08-aa7bf147ddd6}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">N:/Videos/General Movies/</property>
+  <property name="kdenlive:docproperties.browserurl">/General Movies/</property>
   <property name="kdenlive:docproperties.documentid">1755645990116</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -105726,7 +105726,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="kdenlive:docproperties.opensequences">{294ec749-e9e0-48cb-bf08-aa7bf147ddd6}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile11</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile11</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>
@@ -105750,7 +105750,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="kdenlive:docproperties.rendertcoverlay">0</property>
   <property name="kdenlive:docproperties.rendertctype">-1</property>
   <property name="kdenlive:docproperties.rendertwopass">0</property>
-  <property name="kdenlive:docproperties.renderurl">C:/Users/kado/Videos/Sonic - DeSchwartzed 2024.mkv</property>
+  <property name="kdenlive:docproperties.renderurl">/Sonic - DeSchwartzed 2024.mkv</property>
   <property name="kdenlive:docproperties.seekOffset">30000</property>
   <property name="kdenlive:docproperties.sessionid">{cf46a2c3-6cfc-489b-ac79-56d684657a13}</property>
   <property name="kdenlive:docproperties.uuid">{294ec749-e9e0-48cb-bf08-aa7bf147ddd6}</property>

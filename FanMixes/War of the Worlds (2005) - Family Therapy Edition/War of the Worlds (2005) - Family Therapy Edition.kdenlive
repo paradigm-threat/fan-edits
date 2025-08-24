@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/Horror and SciFi/War of the Worlds (2005) [1080p]" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/Horror and SciFi/War of the Worlds (2005) [1080p]" version="7.33.0">
  <profile colorspace="709" description="1920x1040 23.98fps" display_aspect_den="13" display_aspect_num="24" frame_rate_den="1001" frame_rate_num="24000" height="1040" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="1920"/>
  <chain id="chain14" out="01:56:31.823">
   <property name="length">167636</property>
   <property name="eof">pause</property>
-  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">31</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -175,7 +175,7 @@
   <property name="meta.media.progressive">1</property>
   <property name="kdenlive:control_uuid">{f9f6007e-8e24-413c-a48a-093c5dbed24d}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -346,7 +346,7 @@
  <producer id="producer1" in="00:00:00.000" out="00:00:30.906">
   <property name="length">742</property>
   <property name="eof">pause</property>
-  <property name="resource">album-cover.webp</property>
+  <property name="resource">album-coverp</property>
   <property name="ttl">25</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.progressive">1</property>
@@ -901,7 +901,7 @@
  <chain id="chain5" out="01:56:31.823">
   <property name="length">167636</property>
   <property name="eof">pause</property>
-  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -910,7 +910,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{f9f6007e-8e24-413c-a48a-093c5dbed24d}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -1227,7 +1227,7 @@
  <chain id="chain6" out="01:56:31.823">
   <property name="length">167636</property>
   <property name="eof">pause</property>
-  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1236,7 +1236,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{f9f6007e-8e24-413c-a48a-093c5dbed24d}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -1620,7 +1620,7 @@
  <chain id="chain7" out="01:56:31.823">
   <property name="length">167636</property>
   <property name="eof">pause</property>
-  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1629,7 +1629,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{f9f6007e-8e24-413c-a48a-093c5dbed24d}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -2191,7 +2191,7 @@
  <chain id="chain9" out="01:56:31.823">
   <property name="length">167636</property>
   <property name="eof">pause</property>
-  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -2200,7 +2200,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{f9f6007e-8e24-413c-a48a-093c5dbed24d}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -2672,7 +2672,7 @@
  <chain id="chain10" out="01:56:31.823">
   <property name="length">167636</property>
   <property name="eof">pause</property>
-  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -2681,7 +2681,7 @@
   <property name="astream">0</property>
   <property name="kdenlive:control_uuid">{f9f6007e-8e24-413c-a48a-093c5dbed24d}</property>
   <property name="kdenlive:proxy">-</property>
-  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="kdenlive:originalurl">War.Of.The.Worlds.2005.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="kdenlive:id">4</property>
   <property name="mute_on_pause">0</property>
   <property name="kdenlive:clip_type">0</property>
@@ -3045,7 +3045,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">1687</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1751492183169-{2a3de343-714d-4058-a74b-e61f52c03d19}.ass",
+        "file": "AppData/Local/Temp/1751492183169-{2a3de343-714d-4058-a74b-e61f52c03d19}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -3866,7 +3866,7 @@
   <property name="kdenlive:docproperties.activetimeline">{335a7faf-9e03-43df-9f34-7ec415a253af}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">C:/Users/kado/Videos/</property>
+  <property name="kdenlive:docproperties.browserurl">/</property>
   <property name="kdenlive:docproperties.documentid">1751492183169</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -3926,7 +3926,7 @@
   <property name="kdenlive:docproperties.opensequences">{335a7faf-9e03-43df-9f34-7ec415a253af}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile0</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile0</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>
@@ -3965,7 +3965,7 @@ hr { height: 1px; border-width: 0; }
 li.unchecked::marker { content: "\2610"; }
 li.checked::marker { content: "\2612"; }
 &lt;/style>&lt;/head>&lt;body style=" font-family:'Segoe UI'; font-size:9pt; font-weight:400; font-style:normal;">
-&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Errors found when opening project file (Sat Jul 5 18:17:27 2025)&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!5432?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:03:46:14&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!14815?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:10:17:22&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!31037?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:21:34:12&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!33199?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:23:04:17&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!33721?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:23:26:11&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!33975?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:23:37:01&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!61871?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:43:00:13&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!62004?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:43:06:02&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!101090?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 01:10:16:08&lt;/span>&lt;/a> Clip (chain6) with missing mix found and resized&lt;br />Incorrect Mix, clip War.of.the.Worlds.2005.1080p.BluRay.x264.YIFY.mp4 was removed at &lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!101066?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 01:10:16:08&lt;/span>&lt;/a>.&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!61926?4">&lt;span style=" text-decoration: underline; color:#1d99f3;">V1 00:43:02:20&lt;/span>&lt;/a> Clip (chain10) on incorrect subtrack found and fixed / 745Errors found when opening project file (Tue Jul 8 10:37:02 2025)&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!1979?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:01:22:13&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;/p>&lt;/body>&lt;/html></property>
+&lt;p style=" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;">Errors found when opening project file (Sat Jul 5 18:17:27 2025)&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!5432?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:03:46:14&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!14815?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:10:17:22&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!31037?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:21:34:12&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!33199?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:23:04:17&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!33721?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:23:26:11&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!33975?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:23:37:01&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!61871?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:43:00:13&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!62004?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:43:06:02&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!101090?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 01:10:16:08&lt;/span>&lt;/a> Clip (chain6) with missing mix found and resized&lt;br />Incorrect Mix, clip War.of.the.Worlds.2005.1080p.BluRay.x264.mp4 was removed at &lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!101066?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 01:10:16:08&lt;/span>&lt;/a>.&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!61926?4">&lt;span style=" text-decoration: underline; color:#1d99f3;">V1 00:43:02:20&lt;/span>&lt;/a> Clip (chain10) on incorrect subtrack found and fixed / 745Errors found when opening project file (Tue Jul 8 10:37:02 2025)&lt;br />&lt;a href="{335a7faf-9e03-43df-9f34-7ec415a253af}!1979?3">&lt;span style=" text-decoration: underline; color:#1d99f3;">A1 00:01:22:13&lt;/span>&lt;/a> Clip (chain6) on incorrect subtrack found and fixed / 684&lt;/p>&lt;/body>&lt;/html></property>
   <property name="kdenlive:documentnotesversion">2</property>
   <property name="xml_retain">1</property>
   <entry in="00:00:00.000" out="01:56:31.823" producer="chain14"/>

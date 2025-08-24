@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/Horror and SciFi/Riddick Movies/The Chronicles Of Riddick (2004) - Carolyn Fry Edition" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/Horror and SciFi/Riddick Movies/The Chronicles Of Riddick (2004) - Carolyn Fry Edition" version="7.33.0">
  <profile colorspace="709" description="3840x1600 23.98fps" display_aspect_den="5" display_aspect_num="12" frame_rate_den="1001" frame_rate_num="24000" height="1600" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain5" out="02:14:05.339">
   <property name="length">192895</property>
   <property name="eof">pause</property>
-  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">3</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -71,7 +71,7 @@
  <chain id="chain6" out="01:59:13.013">
   <property name="length">171501</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
+  <property name="resource">/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">6</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -164,7 +164,7 @@
  <chain id="chain1" out="01:59:13.013">
   <property name="length">171501</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
+  <property name="resource">/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -247,7 +247,7 @@
  <chain id="chain2" out="02:14:05.339">
   <property name="length">192895</property>
   <property name="eof">pause</property>
-  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -443,7 +443,7 @@
  <chain id="chain3" out="02:14:05.339">
   <property name="length">192895</property>
   <property name="eof">pause</property>
-  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -510,7 +510,7 @@
  <chain id="chain4" out="01:59:13.013">
   <property name="length">171501</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
+  <property name="resource">/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -824,7 +824,7 @@
  <chain id="chain7" out="02:14:05.339">
   <property name="length">192895</property>
   <property name="eof">pause</property>
-  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -892,7 +892,7 @@
  <chain id="chain8" out="01:59:13.013">
   <property name="length">171501</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
+  <property name="resource">/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1674,7 +1674,7 @@
  <chain id="chain9" out="02:14:05.339">
   <property name="length">192895</property>
   <property name="eof">pause</property>
-  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1741,7 +1741,7 @@
  <producer id="producer1" in="00:00:00.000" out="04:28:10.677">
   <property name="length">385790</property>
   <property name="eof">pause</property>
-  <property name="resource">0.500000:The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">0.500000:The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">3</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -1782,7 +1782,7 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.5</property>
-  <property name="warp_resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="warp_resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{ac7bda44-c658-4b40-abc9-5320f0ce3407}</property>
   <property name="vstream">0</property>
@@ -1806,7 +1806,7 @@
  <producer id="producer2" in="00:00:00.000" out="03:26:17.392">
   <property name="length">296762</property>
   <property name="eof">pause</property>
-  <property name="resource">0.650000:The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">0.650000:The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">3</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -1847,7 +1847,7 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.65</property>
-  <property name="warp_resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="warp_resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{ac7bda44-c658-4b40-abc9-5320f0ce3407}</property>
   <property name="vstream">0</property>
@@ -1871,7 +1871,7 @@
  <producer id="producer3" in="00:00:00.000" out="04:28:10.677">
   <property name="length">385790</property>
   <property name="eof">pause</property>
-  <property name="resource">0.500000:The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">0.500000:The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">3</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -1912,7 +1912,7 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.5</property>
-  <property name="warp_resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="warp_resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{ac7bda44-c658-4b40-abc9-5320f0ce3407}</property>
   <property name="vstream">0</property>
@@ -1936,7 +1936,7 @@
  <chain id="chain0" out="01:59:13.013">
   <property name="length">171501</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
+  <property name="resource">/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -2022,7 +2022,7 @@
  <producer id="producer4" in="00:00:00.000" out="05:19:15.307">
   <property name="length">459274</property>
   <property name="eof">pause</property>
-  <property name="resource">0.420000:The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">0.420000:The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">3</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -2063,7 +2063,7 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.42</property>
-  <property name="warp_resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="warp_resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{ac7bda44-c658-4b40-abc9-5320f0ce3407}</property>
   <property name="vstream">0</property>
@@ -2368,7 +2368,7 @@
  <chain id="chain10" out="02:14:05.339">
   <property name="length">192895</property>
   <property name="eof">pause</property>
-  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -2573,7 +2573,7 @@
  <chain id="chain11" out="02:14:05.339">
   <property name="length">192895</property>
   <property name="eof">pause</property>
-  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="resource">The.Chronicles.Of.Riddick.2004.2160p.4K.BluRay.x265.10bit.AAC5.1.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -2681,7 +2681,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">8571</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1752160203865-{798fb75f-4ef6-4538-beef-eb4763f4a352}.ass",
+        "file": "AppData/Local/Temp/1752160203865-{798fb75f-4ef6-4538-beef-eb4763f4a352}.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -4050,7 +4050,7 @@
   <property name="kdenlive:docproperties.activetimeline">{88824fe2-40ba-4d43-afa3-36eb40e9078a}</property>
   <property name="kdenlive:docproperties.audioChannels">2</property>
   <property name="kdenlive:docproperties.binsort">0</property>
-  <property name="kdenlive:docproperties.browserurl">C:/Users/kado/Videos/Alien Resurrection/</property>
+  <property name="kdenlive:docproperties.browserurl">/Alien Resurrection/</property>
   <property name="kdenlive:docproperties.documentid">1752160203865</property>
   <property name="kdenlive:docproperties.enableTimelineZone">0</property>
   <property name="kdenlive:docproperties.enableexternalproxy">0</property>
@@ -4110,7 +4110,7 @@
   <property name="kdenlive:docproperties.opensequences">{88824fe2-40ba-4d43-afa3-36eb40e9078a}</property>
   <property name="kdenlive:docproperties.previewextension"/>
   <property name="kdenlive:docproperties.previewparameters"/>
-  <property name="kdenlive:docproperties.profile">C:/Users/kado/AppData/Roaming/kdenlive/profiles/customprofile11</property>
+  <property name="kdenlive:docproperties.profile">AppData/Roaming/kdenlive/profiles/customprofile11</property>
   <property name="kdenlive:docproperties.proxyextension"/>
   <property name="kdenlive:docproperties.proxyimageminsize">2000</property>
   <property name="kdenlive:docproperties.proxyimagesize">800</property>
