@@ -12,4 +12,4 @@ DM me for a copy of the whole movie.
 
 ## Trailer
 
-[Terminator 3 - Brass Monkey Edition](https://youtu.be/h0aUj_RPQ_U)
+[![Terminator 3 - Brass Monkey Edition](https://img.youtube.com/vi/h0aUj_RPQ_U/0.jpg)](https://www.youtube.com/watch?v=h0aUj_RPQ_U)
