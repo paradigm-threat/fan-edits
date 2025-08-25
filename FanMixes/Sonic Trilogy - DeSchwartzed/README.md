@@ -5,27 +5,27 @@
 
 ## Description
 
-The Sonic Movie Trilogy (2020-2024) is quite unwatchable
-due decisions by Ben Schwartz and other editors to add
-distracting, unamusing, racist, and otherwise agenda-driven dialog
-during post-production.
-This project aims to restore the original vision of the live action Sonic Trilogy
-before the project was sabotaged.
+The Sonic Movie Trilogy (2020-2024) is quite unwatchable 
+due decisions by Ben Schwartz and other editors to add 
+distracting, unamusing, racist, and otherwise agenda-driven dialog 
+during post-production. 
+This project aims to restore the original vision of the live action Sonic Trilogy 
+before the project was sabotaged. 
 
 ## Changes
 
-All distracting or overly sappy dialog was removed, while all plot points are retained.
-The credit vocal songs (which had nothing to do with Sonic games or movies)
-have been replaced with actual remixes of sonic game music.
-I added four remixes to each movie from the corresponding Sonic game.
-Sonic 3 2024 included remixes from both Sonic 3 game and Sonic and Knuckles.
+All distracting or overly sappy dialog was removed, while all plot points are retained. 
+The credit vocal songs (which had nothing to do with Sonic games or movies) 
+have been replaced with actual remixes of sonic game music. 
+I added four remixes to each movie from the corresponding Sonic game. 
+Sonic 3 2024 included remixes from both Sonic 3 game and Sonic and Knuckles. 
 
 ### Removals
 
-Much of the Sonic sardonic commentary dialogue (voiced by Ben Schwartz) has been removed.
-Some dialog of Knuckles, Tales, has been removed.
-Nearly all dialogue and scenes with Wade and Rachel were removed.
-Many sappy family scenes were removed.
+Much of the Sonic sardonic commentary dialogue (voiced by Ben Schwartz) has been removed. 
+Some dialog of Knuckles, Tales, has been removed. 
+Nearly all dialogue and scenes with Wade and Rachel were removed. 
+Many sappy family scenes were removed. 
 
 ### Credits for Sonic 1 (2020)
 
