@@ -10,7 +10,9 @@ before the project was sabotaged.
 
 ## Changes
 All distracting dialogs are removed, while all plot points are retained.
-I added four remixes to each movie from the corresponding Sonic game. 
+The credit vocal songs (which had nothing to do with Sonic games or movies) 
+have been replaced with actual remixes of sonic game music.
+I added four remixes to each movie from the corresponding Sonic game.
 Sonic 3 2024 included remixes from both Sonic 3 game and Sonic and Knuckles.
 
 ### Removals
