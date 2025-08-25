@@ -37,7 +37,7 @@ They belong to **us**.
 
 [Silent Hill (2006) - Nay Tomorrow Edition](FanMixes/Silent%20Hill%20%282006%29%20-%20Nay%20Tomorrow%20Edition)
 
-[Sonic Trilogy (2020-2024) - DeShwartzed Edition](FanMixes/Sonic%20-%20DeSchwartzed)
+[Sonic Trilogy (2020-2024) - DeSchwartzed Edition](FanMixes/Sonic%20Trilogy%20-%20DeSchwartzed)
 
 [Terminator 3 (2003) - Brass Monkey Edition](FanMixes/Terminator%203%20%282003%29%20-%20Brass%20Monkey%20Edition)
 
