@@ -46,12 +46,15 @@ by Sir_NutS
 [Chemical Blip OC ReMix](https://ocremix.org/remix/OCR02337)
 by Anti-Syne
 
-### Credits for Sonic 3
-[LatinSphere OC ReMix](https://ocremix.org/remix/OCR00246)
-by MkVaff
+### Credits for Sonic 
 
 [Sonik Elektronik OC ReMix](https://ocremix.org/remix/OCR01181)
 by Rayza
+
+[![Credits Trailer #1](https://img.youtube.com/vi/37vFHrV3aNY/0.jpg)](https://www.youtube.com/watch?v=37vFHrV3aNY)
+
+[LatinSphere OC ReMix](https://ocremix.org/remix/OCR00246)
+by MkVaff
 
 [The Outer Space Machine OC ReMix](https://ocremix.org/remix/OCR01196)
 by Rellik
@@ -59,5 +62,5 @@ by Rellik
 [Walk on Water OC ReMix](https://ocremix.org/remix/OCR01527)
 by housethegrate
 
-## Trailer
-TBD
+[![Credits Trailer #2](https://img.youtube.com/vi/Y-2jS-OnWP8/0.jpg)](https://www.youtube.com/watch?v=Y-2jS-OnWP8)
+
