@@ -21,9 +21,9 @@ I added four remixes to each movie from the corresponding Sonic game.
 Sonic 3 2024 included remixes from both Sonic 3 game and Sonic and Knuckles. 
 Much [predictive programming](https://joyoffaith.com/predictive-programming.html) (PP) has been removed where it doesn't tie directly to the plot.
 
-I do blame Ben Schwartz for nearly all the jokes he came up with. I don't think they were just 'bad' or 'annoying' or any such thing. 
-The decisions Schwartz and others made in all 3 movies *during post production* also ruined the continuity.
-They should have cast a normal child voice actor like they did with Tails who was voiced by Colleen O'Shaughnessey.
+I do blame Ben Schwartz for nearly all the jokes he came up with. I don't think they were just 'bad' or 'annoying';
+The decisions Schwartz and others made in all 3 movies during post production also ruined the *continuity*.
+In post, they should have cast a normal 'child voice' actor like they did with Tails who was voiced by Colleen O'Shaughnessey.
 Aside from distracting dialog, he portrayed the main character as a sarcastic adult rather than an orphaned child from another planet. 
 I'll remind everyone that Sonic was a child in the first movie, and that none of his commentary should be 'Family guy' style pop references. 
 It should be something a child says. 
