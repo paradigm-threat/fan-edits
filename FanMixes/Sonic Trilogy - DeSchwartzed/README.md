@@ -19,6 +19,7 @@ The credit vocal songs (which had nothing to do with Sonic games or movies)
 have been replaced with actual remixes of sonic game music. 
 I added four remixes to each movie from the corresponding Sonic game. 
 Sonic 3 2024 included remixes from both Sonic 3 game and Sonic and Knuckles. 
+As always, all [predictive programming](https://joyoffaith.com/predictive-programming.html) (PP) has been removed.
 
 ### Removals
 
@@ -26,6 +27,15 @@ Much of the Sonic sardonic commentary dialogue (voiced by Ben Schwartz) has been
 Some dialog of Knuckles, Tales, has been removed. 
 Nearly all dialogue and scenes with Wade and Rachel were removed. 
 Many sappy family scenes were removed. 
+
+### Predictive Programming
+
+Most people don't know what PP is, and some who do think they cannot fall for it. 
+Sometimes it's subtle, like in this movie where Rachel is constantly telling Maddie to divorce Tom, right from the first scene, and with absolutely no reason or context.
+If anyone can please point me to a single scene in all 3 movies where Tom legitimately did something to upset Rachel, 
+and I'll re-add those scenes, but if otherwise they remain removed. 
+More information: https://joyoffaith.com/predictive-programming.html
+
 
 ### Credits for Sonic 1 (2020)
 
