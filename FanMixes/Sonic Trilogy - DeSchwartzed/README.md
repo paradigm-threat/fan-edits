@@ -19,7 +19,7 @@ The credit vocal songs (which had nothing to do with Sonic games or movies)
 have been replaced with actual remixes of sonic game music. 
 I added four remixes to each movie from the corresponding Sonic game. 
 Sonic 3 2024 included remixes from both Sonic 3 game and Sonic and Knuckles. 
-As always, all [predictive programming](https://joyoffaith.com/predictive-programming.html) (PP) has been removed.
+Much [predictive programming](https://joyoffaith.com/predictive-programming.html) (PP) has been removed where it doesn't tie directly to the plot.
 
 ### Removals
 
