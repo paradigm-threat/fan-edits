@@ -7,8 +7,8 @@
 
 The Sonic Movie Trilogy (2020-2024) is quite unwatchable 
 due decisions by Ben Schwartz and other editors to add 
-distracting, unamusing, racist, and otherwise agenda-driven dialog 
-during post-production. 
+distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), 
+and otherwise agenda-driven dialog during post-production. 
 This project aims to restore the original vision of the live action Sonic Trilogy 
 before the project was sabotaged. 
 
