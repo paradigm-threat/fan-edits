@@ -35,7 +35,7 @@ Sometimes it's subtle, like in this movie where Rachel is constantly telling Mad
 If anyone can please point me to a single scene in all 3 movies where Tom legitimately did something to upset Rachel, 
 and I'll re-add those scenes, but if otherwise they remain removed. 
 
-[More information](https://joyoffaith.com/predictive-programming.html)
+[Predictive Programming Explained](https://joyoffaith.com/predictive-programming.html)
 
 [Top 33 PP Movies](https://www.imdb.com/list/ls086291084/)
 
