@@ -12,3 +12,8 @@
 *.sub
 *.lnk
 .idea
+desktop.ini
+gmail/output
+
+package-lock.json
+node_modules

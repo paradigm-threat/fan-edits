@@ -4,7 +4,7 @@
  <chain id="chain4" out="02:04:23.941">
   <property name="length">178956</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -109,7 +109,7 @@
   <property name="meta.attr.6.stream._STATISTICS_WRITING_APP-eng.markup">mkvmerge v49.0.0 ('Sick Of Losing Soulmates') 64-bit</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2022-05-31 19:08:19</property>
   <property name="meta.attr.6.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">UHD 4K - iDN_CreW</property>
+  <property name="meta.attr.title.markup">UHD 4K</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.0 + libmatroska v1.6.1</property>
   <property name="meta.attr.creation_time.markup">2022-05-31T19:08:19.000000Z</property>
   <property name="seekable">1</property>
@@ -962,7 +962,7 @@ Get ready for the flow!</property>
  <chain id="chain11" out="02:04:23.941">
   <property name="length">178956</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">2</property>
@@ -1078,7 +1078,7 @@ Get ready for the flow!</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_APP-eng.markup">mkvmerge v49.0.0 ('Sick Of Losing Soulmates') 64-bit</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2022-05-31 19:08:19</property>
   <property name="meta.attr.6.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">UHD 4K - iDN_CreW</property>
+  <property name="meta.attr.title.markup">UHD 4K</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.0 + libmatroska v1.6.1</property>
   <property name="meta.attr.creation_time.markup">2022-05-31T19:08:19.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -1428,7 +1428,7 @@ http://timsheehy.com</property>
  <chain id="chain16" out="02:04:23.941">
   <property name="length">178956</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">2</property>
@@ -1544,7 +1544,7 @@ http://timsheehy.com</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_APP-eng.markup">mkvmerge v49.0.0 ('Sick Of Losing Soulmates') 64-bit</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2022-05-31 19:08:19</property>
   <property name="meta.attr.6.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">UHD 4K - iDN_CreW</property>
+  <property name="meta.attr.title.markup">UHD 4K</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.0 + libmatroska v1.6.1</property>
   <property name="meta.attr.creation_time.markup">2022-05-31T19:08:19.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -2527,7 +2527,7 @@ http://timsheehy.com</property>
  <chain id="chain18" out="02:04:23.941">
   <property name="length">178956</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -2649,7 +2649,7 @@ http://timsheehy.com</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_APP-eng.markup">mkvmerge v49.0.0 ('Sick Of Losing Soulmates') 64-bit</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2022-05-31 19:08:19</property>
   <property name="meta.attr.6.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">UHD 4K - iDN_CreW</property>
+  <property name="meta.attr.title.markup">UHD 4K</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.0 + libmatroska v1.6.1</property>
   <property name="meta.attr.creation_time.markup">2022-05-31T19:08:19.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -3043,7 +3043,7 @@ http://timsheehy.com</property>
  <chain id="chain20" out="02:04:23.941">
   <property name="length">178956</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng.mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -3159,7 +3159,7 @@ http://timsheehy.com</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_APP-eng.markup">mkvmerge v49.0.0 ('Sick Of Losing Soulmates') 64-bit</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2022-05-31 19:08:19</property>
   <property name="meta.attr.6.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">UHD 4K - iDN_CreW</property>
+  <property name="meta.attr.title.markup">UHD 4K</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.0 + libmatroska v1.6.1</property>
   <property name="meta.attr.creation_time.markup">2022-05-31T19:08:19.000000Z</property>
   <property name="meta.media.sample_aspect_num">1</property>
@@ -3183,7 +3183,7 @@ http://timsheehy.com</property>
  <producer id="producer1" in="00:00:00.000" out="01:45:25.108">
   <property name="length">151658</property>
   <property name="eof">pause</property>
-  <property name="resource">1.180000:N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">1.180000:N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -3288,7 +3288,7 @@ http://timsheehy.com</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_APP-eng.markup">mkvmerge v49.0.0 ('Sick Of Losing Soulmates') 64-bit</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2022-05-31 19:08:19</property>
   <property name="meta.attr.6.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">UHD 4K - iDN_CreW</property>
+  <property name="meta.attr.title.markup">UHD 4K</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.0 + libmatroska v1.6.1</property>
   <property name="meta.attr.creation_time.markup">2022-05-31T19:08:19.000000Z</property>
   <property name="seekable">1</property>
@@ -3297,7 +3297,7 @@ http://timsheehy.com</property>
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">1.18</property>
-  <property name="warp_resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="warp_resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{8662ceb9-f96f-4607-812c-ea78d123d3ef}</property>
   <property name="vstream">0</property>
@@ -3324,7 +3324,7 @@ http://timsheehy.com</property>
  <producer id="producer2" in="00:00:00.000" out="01:59:36.578">
   <property name="length">172073</property>
   <property name="eof">pause</property>
-  <property name="resource">1.040000:N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="resource">1.040000:N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng.mkv</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">7</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -3429,7 +3429,7 @@ http://timsheehy.com</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_APP-eng.markup">mkvmerge v49.0.0 ('Sick Of Losing Soulmates') 64-bit</property>
   <property name="meta.attr.6.stream._STATISTICS_WRITING_DATE_UTC-eng.markup">2022-05-31 19:08:19</property>
   <property name="meta.attr.6.stream._STATISTICS_TAGS-eng.markup">BPS DURATION NUMBER_OF_FRAMES NUMBER_OF_BYTES</property>
-  <property name="meta.attr.title.markup">UHD 4K - iDN_CreW</property>
+  <property name="meta.attr.title.markup">UHD 4K</property>
   <property name="meta.attr.encoder.markup">libebml v1.4.0 + libmatroska v1.6.1</property>
   <property name="meta.attr.creation_time.markup">2022-05-31T19:08:19.000000Z</property>
   <property name="seekable">1</property>
@@ -3438,7 +3438,7 @@ http://timsheehy.com</property>
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">1.04</property>
-  <property name="warp_resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit WEB-DL iTA ENG AC3 5.1 Sub Ita Eng - iDN_CreW.mkv</property>
+  <property name="warp_resource">N:/Videos/Kids Movies/Sonic/Sonic 2022/Sonic 2 Il Film (2023) 2160p 4K H265 10 Bit iTA ENG AC3 5.1 Sub Ita Eng.mkv</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{8662ceb9-f96f-4607-812c-ea78d123d3ef}</property>
   <property name="vstream">0</property>

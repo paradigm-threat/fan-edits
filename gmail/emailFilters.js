@@ -1,27 +1,25 @@
 const fs = require('fs');
 const path = require('path');
+const MarkdownIt = require('markdown-it');
+const { encode } = require('html-entities');
 
-// Example array of objects with variables
-const dataArray = [
-  {
-    name: 'John Doe',
-    email: 'john.doe@example.com',
-    id: '001',
-    department: 'Engineering'
-  },
-  {
-    name: 'Jane Smith',
-    email: 'jane.smith@example.com',
-    id: '002',
-    department: 'Marketing'
-  },
-  {
-    name: 'Bob Johnson',
-    email: 'bob.johnson@example.com',
-    id: '003',
-    department: 'Sales'
-  }
-];
+const md = new MarkdownIt();
+
+const links = require('./links.json');
+const dataArray = Object.keys(links).map(movie => {
+  return {
+    movie,
+    downloadURL: links[movie],
+    movieInfo: getMovieInfo(movie)
+  };
+});
+
+function getMovieInfo(movie) {
+  const info = fs.readFileSync(`../FanMixes/${movie}/README.md`, 'utf8');
+  const html = md.render(info);
+  console.log(html);
+  return encode(html);
+}
 
 function processTemplate(templatePath, outputDir, dataArray) {
   try {
@@ -44,7 +42,7 @@ function processTemplate(templatePath, outputDir, dataArray) {
       });
       
       // Generate output filename
-      const outputFileName = `output_${data.id || index}.xml`;
+      const outputFileName = `filter_${data.movie.replaceAll(/\W/g, '') || index}.xml`;
       const outputPath = path.join(outputDir, outputFileName);
       
       // Write the processed file

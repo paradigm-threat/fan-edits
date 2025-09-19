@@ -11,7 +11,7 @@ This repo only contains KDENLive project files. No media files are contained wit
 No links are given to any copyright or pirated content. No clues are given as to how to find those links either.
 I have one or more legitimate copies of every movie I edit. I'm hoping those who view my edits do as well.
 Reminder: **We paid for all of this**. 
-None of these movies would even exist, had we not paid full price for them in the past.
+None of these movies would even exist had we not paid full price for them in the past.
 They belong to **us**. 
 
 ## Steps to render a movie edit from this repo
