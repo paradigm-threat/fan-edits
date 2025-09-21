@@ -1,16 +1,19 @@
 {
-  "Alien Resurrection (1997) - UnJossed": "https://drive.google.com/drive/folders/1x3d-051h15JqnpIw0mVi1FOdn-tI1h8i?usp=drive_link",
-  "Congo (1995) - Incel": "https://drive.google.com/drive/folders/1ovdyyfUufyBw-168KbRl9YWMSjDSpxEQ?usp=drive_link",
-  "Final Fantasy (2001) - The Phantom Menace": "https://drive.google.com/drive/folders/1kSxirEf2iK2hQWZKVioe61Shup6V99W3?usp=drive_link",
-  "Matrix Reloaded (2003) - Unlinked": "https://drive.google.com/drive/folders/1NWQjQyUXL7BBH_v8CcKdRRuJk9LYLOWy?usp=drive_link",
-  "Matrix Revolutions (2003) - Unlinked": "https://drive.google.com/drive/folders/1MZUnqPi7GJFW1Vgmq2aGdLBeb8dYgJ8e?usp=drive_link",
-  "Riddick (2013) - Unjinxed": "https://drive.google.com/drive/folders/1nOE4hEWJmFOhmKRTwdDuL8ecCYXqWUpL?usp=drive_link",
-  "Silent Hill (2006) - Nay Tomorrow": "https://drive.google.com/drive/folders/1gSDWYYHbyn25NEWnChrtwfpgrmTXrONV?usp=drive_link",
-  "Sonic (2020) - DeSchwartzed": "https://drive.google.com/drive/folders/1PJsSUq4MGtTBE5O6y3gUXy2y88YCucXb?usp=drive_link",
-  "Sonic 2 (2022) - DeSchwartzed": "https://drive.google.com/drive/folders/1SrXyU9a6IW5aAwTkbuBTzSSCtht2dW1e?usp=drive_link",
-  "Sonic 3 (2024) - DeSchwartzed": "https://drive.google.com/drive/folders/1aRNQi_34WDdiffURCSgyRSnYmubNHKax?usp=drive_link",
-  "Terminator 3 (2003) - Brass Monkey": "https://drive.google.com/drive/folders/12exHsbQHXRGxq4OdXaIGN6bkpxsYsZ3-?usp=drive_link",
-  "The Chronicles Of Riddick (2004) - Fry's Edition": "https://drive.google.com/drive/folders/1MVg8HlolJECDWUYY2GdFCL1I1c6oTVfJ?usp=drive_link",
-  "The Day After Tomorrow (2004) - Yuppocolypse": "https://drive.google.com/drive/folders/1MhZKdLwAEGq_MlQgiaRnMF7nQKBN79V_?usp=drive_link",
-  "War of the Worlds (2005) - Family Therapy": "https://drive.google.com/drive/folders/1B2ryOWkhDf0Q5pA8BL2PDL2HIIp4TZjD?usp=drive_link"
+  "movies": {
+    "Alien Resurrection UnJossed": "https://drive.google.com/drive/folders/1x3d-051h15JqnpIw0mVi1FOdn-tI1h8i?usp=drive_link",
+    "Congo Incel": "https://drive.google.com/drive/folders/1ovdyyfUufyBw-168KbRl9YWMSjDSpxEQ?usp=drive_link",
+    "Final Fantasy The Phantom Menace": "https://drive.google.com/drive/folders/1kSxirEf2iK2hQWZKVioe61Shup6V99W3?usp=drive_link",
+    "Matrix Reloaded Unlinked": "https://drive.google.com/drive/folders/1NWQjQyUXL7BBH_v8CcKdRRuJk9LYLOWy?usp=drive_link",
+    "Matrix Revolutions Unlinked": "https://drive.google.com/drive/folders/1MZUnqPi7GJFW1Vgmq2aGdLBeb8dYgJ8e?usp=drive_link",
+    "Riddick Unjinxed": "https://drive.google.com/drive/folders/1nOE4hEWJmFOhmKRTwdDuL8ecCYXqWUpL?usp=drive_link",
+    "Silent Hill Nay Tomorrow": "https://drive.google.com/drive/folders/1gSDWYYHbyn25NEWnChrtwfpgrmTXrONV?usp=drive_link",
+    "Sonic DeSchwartzed": "https://drive.google.com/drive/folders/1PJsSUq4MGtTBE5O6y3gUXy2y88YCucXb?usp=drive_link",
+    "Sonic 2 DeSchwartzed": "https://drive.google.com/drive/folders/1SrXyU9a6IW5aAwTkbuBTzSSCtht2dW1e?usp=drive_link",
+    "Sonic 3 DeSchwartzed": "https://drive.google.com/drive/folders/1aRNQi_34WDdiffURCSgyRSnYmubNHKax?usp=drive_link",
+    "Terminator 3 Brass Monkey": "https://drive.google.com/drive/folders/12exHsbQHXRGxq4OdXaIGN6bkpxsYsZ3-?usp=drive_link",
+    "The Chronicles Of Riddick Fry's Edition": "https://drive.google.com/drive/folders/1MVg8HlolJECDWUYY2GdFCL1I1c6oTVfJ?usp=drive_link",
+    "The Day After Tomorrow Yuppocolypse": "https://drive.google.com/drive/folders/1MhZKdLwAEGq_MlQgiaRnMF7nQKBN79V_?usp=drive_link",
+    "War of the Worlds Family Therapy": "https://drive.google.com/drive/folders/1B2ryOWkhDf0Q5pA8BL2PDL2HIIp4TZjD?usp=drive_link"
+  },
+  "downloadAll": "https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"
 }

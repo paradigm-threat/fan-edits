@@ -1,3 +1,4 @@
+
 .tmp*
 *.mkv
 *.mkv.log
@@ -17,3 +18,4 @@ gmail/output
 
 package-lock.json
 node_modules
+.env.local

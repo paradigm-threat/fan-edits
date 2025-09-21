@@ -54,3 +54,39 @@ They belong to **us**.
 Sharing fan edits of movies between people who both own a copy of the original movie is 
 **still illegal** however there has never been any real enforcement of this rule, and so the easiest way
 to get a copy of my movies is to ask my in private message (on any social network). 
+
+## Automative Movie Request Link
+
+To automatically request a download link to any of my movies, please click on the email link below 
+which should open your email client. Email me with the subject 'Request: ${title}' exactly.
+
+[Alien Resurrection UnJossed](mailto:ari@asu.edu?subject=Request:%20Alien%20Resurrection%20UnJossed)
+[Congo Incel](mailto:ari@asu.edu?subject=Request:%20Congo%20Incel)
+[Final Fantasy The Phantom Menace](mailto:ari@asu.edu?subject=Request:%20Final%20Fantasy%20The%20Phantom%20Menace)
+[Matrix Reloaded Unlinked](mailto:ari@asu.edu?subject=Request:%20Matrix%20Reloaded%20Unlinked)
+[Matrix Revolutions Unlinked](mailto:ari@asu.edu?subject=Request:%20Matrix%20Revolutions%20Unlinked)
+[Riddick Unjinxed](mailto:ari@asu.edu?subject=Request:%20Riddick%20Unjinxed)
+[Silent Hill Nay Tomorrow](mailto:ari@asu.edu?subject=Request:%20Silent%20Hill%20Nay%20Tomorrow)
+[Sonic DeSchwartzed](mailto:ari@asu.edu?subject=Request:%20Sonic%20DeSchwartzed)
+[Sonic 2 DeSchwartzed](mailto:ari@asu.edu?subject=Request:%20Sonic%202%20DeSchwartzed)
+[Sonic 3 DeSchwartzed](mailto:ari@asu.edu?subject=Request:%20Sonic%203%20DeSchwartzed)
+[Terminator 3 Brass Monkey](mailto:ari@asu.edu?subject=Request:%20Terminator%203%20Brass%20Monkey)
+[The Chronicles Of Riddick Fry's Edition](mailto:ari@asu.edu?subject=Request:%20The%20Chronicles%20Of%20Riddick%20Fry's%20Edition)
+[The Day After Tomorrow Yuppocolypse](mailto:ari@asu.edu?subject=Request:%20The%20Day%20After%20Tomorrow%20Yuppocolypse)
+[War of the Worlds Family Therapy](mailto:ari@asu.edu?subject=Request:%20War%20of%20the%20Worlds%20Family%20Therapy)
+
+## How to make Chrome open the "mailto" links in Gmail Desktop
+Step 1: Enable your Gmail protocols. 
+Click the triple-dot menu in the upper-right corner and select Settings. 
+In the sidebar, select Privacy and security. 
+Click Site settings. 
+Open Additional permissions. 
+Click Protocol handlers. 
+Enable Sites can ask to handle protocols. 
+
+
+Step 2: Allow links to open in Gmail. 
+Open Gmail.com in a separate tab. Important to use JUST gmail.com. 
+In the address bar, click on the double diamonds. 
+When you see “Allow mail.google.com to open all links?”, click Allow. 
+Now the email links should open a pre-filled email for you to simply hit send. 
