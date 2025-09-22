@@ -89,4 +89,19 @@ Step 2: Allow links to open in Gmail.
 Open Gmail.com in a separate tab. Important to use JUST gmail.com. 
 In the address bar, click on the double diamonds. 
 When you see “Allow mail.google.com to open all links?”, click Allow. 
-Now the email links should open a pre-filled email for you to simply hit send. 
+Now the email links should open a pre-filled email for you to simply hit send.
+
+
+## How to open the "mailto" links in Windows 10:
+
+Set Default App by Protocol:
+Go to Start > Settings > Apps > Default apps.
+Scroll down and click Choose default apps by protocol.
+Find the MAILTO protocol and set its handler to Google Chrome. 
+
+## How to open the "mailto" links in Firefox:
+
+Adjust Application Settings:
+Open the Firefox menu and go to Options or Preferences.
+Navigate to the Applications section.
+Find mailto in the list and select Use Gmail from the dropdown menu.
