@@ -1,6 +1,6 @@
 # Sonic 3 (2024) - DeSchwartzed Edition
 
-![Sonic DeSchwartzed Edition Poster.png](Sonic%202%20(2022)%20-%20DeSchwartzed.png)
+![Sonic DeSchwartzed Edition Poster.png](Sonic%203%20(2024)%20-%20DeSchwartzed.png)
 
 ## Description
 
