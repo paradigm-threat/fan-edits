@@ -39,11 +39,13 @@ New Runtime: 89
 
 [![Mobile Trailer: Final Fantasy The Phantom Menace](https://img.youtube.com/vi/RiI_2LCRXBc/0.jpg)](https://www.youtube.com/watch?v=RiI_2LCRXBc)
 
-# Banned from /r/FanEdit Subreddit for accusation of piracy.
+# Banned from r/FanEdit Subreddit for accusation of piracy.
 
-Within the 2nd day of posting my fan-edits I got perm banned, and they won't let me appeal.
-I can prove my copies weren't pirated. In fact I bought a copy of the Spiritual Edition DVD from Ebay for $60 
-specifically to make this fan-edits, and in accordance with the rules.
+Within the 2nd day of posting my fan-edits I got perm-banned from the subreddit, and they won't let me appeal.
+I was accused of pirating my copy of Final Fantasy The Spirits Within either the Spiritual Edition DVD, or the BluRay.
+They never specified any details, nor asked me for proof - which is required for them to do according to their rules.
+I can prove my copies weren't pirated. In fact I bought a copy of the Spiritual Edition DVD from Ebay for $60
+specifically to make this fan-edit, and in accordance with the rules.
 The deletion of my Sonic Trilogy edit was so blatant I had to wonder if they admins were doing the bidding of the hecklers,
 since they followed the heckler's extreme interpretation of racism in hollywood movies as some kind of conspiracy theory.
 But this ban over piracy without asking me for a copy or checking with me at all is more than blatant -

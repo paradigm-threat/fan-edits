@@ -1,5 +1,5 @@
 
-# Banned from /r/FanEdit Subreddit for accusation of piracy.
+# Banned from r/FanEdit Subreddit for accusation of piracy.
 
 Within the 2nd day of posting my fan-edits I got perm banned, and they won't let me appeal.
 I can prove my copies weren't pirated. In fact I bought a copy of the Spiritual Edition DVD from Ebay for $60
