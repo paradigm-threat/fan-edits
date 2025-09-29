@@ -22,4 +22,15 @@ Cybil's death sequence is slightly shortened. Christabella's death is removed
 (I'd rather not ever see some of these scenes again, ever).
 
 ## Special Thanks:
-Tamimi for an awesome remix in the old days that made pay attention to SH
+Tamimi for an awesome remix in the old days that made pay attention to SH.
+
+[Link to Nay Tomorrow Remix](https://ocremix.org/remix/OCR00756)
+
+## Stats
+```
+Original: Silent Hill (2006)
+Type: FanMix
+FanEdit Release Date: 9/27/2025
+Original Runtime: 125
+New Runtime: 110
+```
