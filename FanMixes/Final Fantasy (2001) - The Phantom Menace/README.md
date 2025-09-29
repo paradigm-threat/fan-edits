@@ -25,7 +25,30 @@ I cut scenes on the transition frame, and then mix the audio between the recombi
 ## Poster
 ![Final Fantasy The Spirits Within (2001) - Phantom Menace Edition](https://raw.githubusercontent.com/clevertree/video-edits/refs/heads/main/FanMixes/Final%20Fantasy%20(2001)%20-%20The%20Phantom%20Menace/img/poster.jpg)
 
+## Stats
+```
+Original: Final Fanatasy (2001)
+Type: FanMix
+FanEdit Release Date: 9/28/2025
+Original Runtime: 106
+New Runtime: 89
+```
+
 ## Trailer
 [![Desktop Trailer: Final Fantasy The Phantom Menace](https://img.youtube.com/vi/supOKvLaGWY/0.jpg)](https://www.youtube.com/watch?v=supOKvLaGWY)
 
 [![Mobile Trailer: Final Fantasy The Phantom Menace](https://img.youtube.com/vi/RiI_2LCRXBc/0.jpg)](https://www.youtube.com/watch?v=RiI_2LCRXBc)
+
+# Banned from /r/FanEdit Subreddit for accusation of piracy.
+
+Within the 2nd day of posting my fan-edits I got perm banned, and they won't let me appeal.
+I can prove my copies weren't pirated. In fact I bought a copy of the Spiritual Edition DVD from Ebay for $60 
+specifically to make this fan-edits, and in accordance with the rules.
+The deletion of my Sonic Trilogy edit was so blatant I had to wonder if they admins were doing the bidding of the hecklers,
+since they followed the heckler's extreme interpretation of racism in hollywood movies as some kind of conspiracy theory.
+But this ban over piracy without asking me for a copy or checking with me at all is more than blatant -
+it's systematic, like the Combine-style destruction of Gaza. Alrighty then!
+Now I see how locked-down the forum/discord/reddit channels are.
+I figure there are industry agents at work here. I don't think that's much of a conspiracy really.
+As hollywood continues to get worse, they are more afraid that we will eventually compete with them.
+They don't even want us making edits. That much is clear.
