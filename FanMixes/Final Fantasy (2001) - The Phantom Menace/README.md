@@ -39,6 +39,11 @@ New Runtime: 89
 
 [![Mobile Trailer: Final Fantasy The Phantom Menace](https://img.youtube.com/vi/RiI_2LCRXBc/0.jpg)](https://www.youtube.com/watch?v=RiI_2LCRXBc)
 
+## Distribution
+
+Feel free to email/dm me for a copy. 
+[Final Fantasy The Phantom Menace](mailto:ari@asu.edu?subject=Request:%20Final%20Fantasy%20The%20Phantom%20Menace)
+
 # Banned from r/FanEdit Subreddit for accusation of piracy.
 
 Within the 2nd day of posting my fan-edits I got perm-banned from the subreddit, and they won't let me appeal.
