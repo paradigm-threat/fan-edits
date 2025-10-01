@@ -57,5 +57,5 @@ But this ban over piracy without asking me for a copy or checking with me at all
 it's systematic, like the Combine-style destruction of Gaza. Alrighty then!
 Now I see how locked-down the forum/discord/reddit channels are.
 I figure there are industry agents at work here. I don't think that's much of a conspiracy really.
-As hollywood continues to get worse, they are more afraid that we will eventually compete with them.
+As Hollywood continues to get worse, they are more afraid that we will eventually compete with them.
 They don't even want us making edits. That much is clear.
