@@ -3,7 +3,7 @@ Final Fantasy The Spirits Within (2001) - Phantom Menace Edition
 
 ## Description
 I was looking forward to this movie when it came out, as I imagine many people in Japan were as well. 
-I have yet to meet anyone who didn't agree that much of the acting by Baldwin and Buscemi and Wen was distracting, 
+I have yet to meet anyone who didn't agree that much of the acting by Baldwin, Buscemi, and Ming-Na Wen (Mulan?! Really?) was distracting, 
 nevertheless director Hironobu Sakaguchi insisted that he would not change one scene and so far no edits of this movie have ever come out.
 To make things worse, the Blu-Ray edition of the Japan Release (Spiritual Edition) was never released. 
 
