@@ -431,7 +431,7 @@ Dialogue: 0,00:51:29.67,00:51:32.17,Default,,0,0,0,,The controls are locked, nat
 Dialogue: 0,00:51:46.60,00:51:48.35,Default,,0,0,0,,What's happening down there?
 Dialogue: 0,00:51:48.60,00:51:51.11,Default,,0,0,0,,Nothing we can't handle.
 Dialogue: 0,00:52:03.04,00:52:06.12,Default,,0,0,0,,- Neil, what's your status? \N- Almost there.
-Dialogue: 0,00:52:06.46,00:52:07.100,Default,,0,0,0,,I want you two back inside.
+Dialogue: 0,00:52:06.46,00:52:07.08,Default,,0,0,0,,I want you two back inside.
 Dialogue: 0,00:52:08.21,00:52:11.96,Default,,0,0,0,,We're fine, sir. Jane is negotiating \Nwith extreme prejudice.
 Dialogue: 0,00:52:12.17,00:52:13.42,Default,,0,0,0,,Talk to me, Jane.
 Dialogue: 0,00:52:15.01,00:52:17.09,Default,,0,0,0,,No problem here, captain.
@@ -453,8 +453,8 @@ Dialogue: 0,00:59:29.52,00:59:32.73,Default,,0,0,0,,I can't explain it at the mo
 Dialogue: 0,00:59:32.94,00:59:36.24,Default,,0,0,0,,- ... you will understand... \N- Wait, doctor. That's a one-way trip.
 Dialogue: 0,00:59:36.45,00:59:39.53,Default,,0,0,0,,Yes, I expected that's how \Nyou would evaluate our chances.
 Dialogue: 0,00:59:39.78,00:59:41.20,Default,,0,0,0,,Well, am I wrong?
-Dialogue: 0,00:59:41.41,00:59:42.100,Default,,0,0,0,,No, I agree. We probably...
-Dialogue: 0,00:59:42.100,00:59:46.21,Default,,0,0,0,,...won't live long enough to extract \Nthe eighth spirit from the crater.
+Dialogue: 0,00:59:41.41,00:59:42.12,Default,,0,0,0,,No, I agree. We probably...
+Dialogue: 0,00:59:42.12,00:59:46.21,Default,,0,0,0,,...won't live long enough to extract \Nthe eighth spirit from the crater.
 Dialogue: 0,00:59:46.42,00:59:47.08,Default,,0,0,0,,Then why should we even try it?
 Dialogue: 0,00:59:48.21,00:59:50.29,Default,,0,0,0,,Because we don't need to extract the eighth spirit.
 Dialogue: 0,00:59:50.50,00:59:52.30,Default,,0,0,0,,If we can't bring the final spirit here...
