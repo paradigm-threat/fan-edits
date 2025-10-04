@@ -3,6 +3,7 @@
 *.mkv
 *.mkv.log
 *.mp3
+*.web*
 *.flac
 *.mp4*
 *.resume.xml

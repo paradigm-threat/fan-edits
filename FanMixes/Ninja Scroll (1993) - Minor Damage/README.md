@@ -1,5 +1,7 @@
 # Ninja Scroll: Minor Damage
 
+A FanEdit featuring additional songs from Ninja Gaiden OST (Xbox)
+
 ## Description
 Ninja Scroll is a classic with few flaws, but one of them is how women are portrayed loaded with stereotypical 
 character flaws. This contrasts with how the men are established as honorable and righteous for better or worse.
@@ -30,15 +32,17 @@ I cut scenes on the transition frame and then mix the audio between the recombin
 ![Ninja Scroll Poster](Ninja%20Scroll%20(1993)%20-%20Minor%20Damage.jpg)
 
 ## Trailer
-[![Desktop Trailer: Ninja Scroll Minor Damage](https://img.youtube.com/vi/SO4dlHNt6MU/0.jpg)](https://www.youtube.com/watch?v=SO4dlHNt6MU)
+[Amazon S3](https://paradigm-threat.s3.us-east-1.amazonaws.com/fanedits/trailers/TrailerDesktop.webm)
+
+[Bitchute](https://www.bitchute.com/video/mkqE6VBLC9mu/)
 
 ## Stats
 ```
 Original: Ninja Scroll (1993)
 Type: FanMix
-FanEdit Release Date: 9/28/2025
+FanEdit Release Date: 10/01/2025
 Original Runtime: 91
-New Runtime: 79
+New Runtime: 78
 ```
 ## Distribution
 
