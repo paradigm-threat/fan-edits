@@ -322,2594 +322,2570 @@ What the...?!
 There!
 
 73
-00:08:10,281 --> 00:08:11,282
+00:08:07,195 --> 00:08:07,987
 Shit!
 
 74
-00:08:21,459 --> 00:08:22,793
-Tessai!
-
-75
-00:08:27,673 --> 00:08:29,342
-You are indeed a sorry sight.
-
-76
-00:08:30,927 --> 00:08:32,345
-Shall we go?
-
-77
-00:08:45,399 --> 00:08:47,568
+00:08:20,041 --> 00:08:22,210
 Who was that freak?
 
-78
-00:08:48,819 --> 00:08:51,364
+75
+00:08:23,461 --> 00:08:26,005
 Forget it. I don't want 
 to see him again, anyway.
 
-79
-00:08:52,406 --> 00:08:56,619
-I'm grateful to you. I am 
+76
+00:08:27,256 --> 00:08:29,217
+I am 
 Kagero of the Koga ninja.
 
-80
-00:08:57,954 --> 00:09:01,290
+77
+00:08:30,551 --> 00:08:33,888
 Jubei. Kibagami Jubei.
 
-81
-00:09:02,500 --> 00:09:05,670
+78
+00:08:35,097 --> 00:08:38,267
 The town of Kakio is to the west. 
 Our paths part here.
 
-82
-00:09:56,178 --> 00:09:57,513
+79
+00:09:28,776 --> 00:09:30,111
 Oh, hi...
 
-83
-00:09:59,557 --> 00:10:02,184
+80
+00:09:32,154 --> 00:09:34,782
 I know the way now, so...
 
-84
-00:10:05,563 --> 00:10:07,106
+81
+00:09:38,160 --> 00:09:39,704
 Ow...
 
-85
-00:10:07,106 --> 00:10:10,693
+82
+00:09:39,704 --> 00:09:43,291
 Okay, I got it. Are we done now?
 
-86
-00:10:11,611 --> 00:10:15,031
+83
+00:09:44,208 --> 00:09:47,628
 There's no reason we 
 should kill each other.
 
-87
-00:10:19,327 --> 00:10:21,120
+84
+00:09:51,924 --> 00:09:53,718
 If you're not going to end this... 
 I will!
 
-88
-00:10:23,080 --> 00:10:24,165
+85
+00:09:55,678 --> 00:09:56,762
 Like hell!
 
-89
-00:10:34,216 --> 00:10:38,387
+86
+00:10:06,814 --> 00:10:10,985
 Strange skill you have. But 
 it can't hurt my body.
 
-90
-00:10:40,097 --> 00:10:41,057
+87
+00:10:12,695 --> 00:10:13,654
 Seems that way.
 
-91
-00:10:55,488 --> 00:10:59,408
+88
+00:10:28,085 --> 00:10:32,006
 What's wrong, Monster? Your 
 skin's starting to crumble!
 
-92
-00:11:02,578 --> 00:11:03,871
+89
+00:10:35,176 --> 00:10:36,469
 Die!
 
-93
-00:11:28,646 --> 00:11:30,773
+90
+00:11:01,243 --> 00:11:03,371
 Splendid !
 
-94
-00:11:30,773 --> 00:11:34,235
+91
+00:11:03,371 --> 00:11:06,832
 Your sword flew swift 
 as the wind itself and
 
-95
-00:11:34,235 --> 00:11:37,571
+92
+00:11:06,832 --> 00:11:10,169
 slashed your enemy like 
 a cyclone's touch.
 
-96
-00:11:38,864 --> 00:11:42,618
+93
+00:11:11,462 --> 00:11:15,216
 He was no match for you. 
 Why don't you join me?
 
-97
-00:11:42,618 --> 00:11:47,456
+94
+00:11:15,216 --> 00:11:20,054
 Your skills will be of great help 
 for me to fight the likes of him.
 
-98
-00:11:48,082 --> 00:11:52,628
+95
+00:11:20,680 --> 00:11:25,226
 You're joking. Who'd want to 
 fight a monster like him again?
 
-99
-00:11:53,671 --> 00:11:56,632
+96
+00:11:26,268 --> 00:11:29,230
 You'll have to. They 
 won't leave you alone.
 
-100
-00:11:56,632 --> 00:12:00,719
+97
+00:11:29,230 --> 00:11:33,317
 You just killed one of the 
 Eight Devils of Kimon.
 
-101
-00:12:02,263 --> 00:12:06,267
+98
+00:11:34,860 --> 00:11:38,864
 You didn't beat him 
 by yourself, though.
 
-102
-00:12:07,685 --> 00:12:12,189
+99
+00:11:40,282 --> 00:11:44,787
 That Koga ninja woman... 
 Interesting technique she uses.
 
-103
-00:12:28,956 --> 00:12:32,668
+100
+00:12:01,554 --> 00:12:05,266
 Lord Genma. All is 
 proceeding as planned.
 
-104
-00:12:38,716 --> 00:12:43,429
+101
+00:12:11,313 --> 00:12:16,026
 It arrives from the Shogun of the 
 Dark by six tomorrow evening.
 
-105
-00:12:44,638 --> 00:12:48,809
+102
+00:12:17,236 --> 00:12:21,407
 Very well. Write 
 to him in return.
 
-106
-00:12:49,602 --> 00:12:55,357
+103
+00:12:22,199 --> 00:12:27,955
 "We return in three days. There's 
 nothing to worry about."
 
-107
-00:12:55,357 --> 00:12:56,942
+104
+00:12:27,955 --> 00:12:29,123
 At once.
 
-108
-00:13:41,779 --> 00:13:45,407
+105
+00:13:13,167 --> 00:13:16,795
 Where are you headed?
 
-109
-00:13:46,700 --> 00:13:49,370
+106
+00:13:18,088 --> 00:13:20,758
 No place in particular. You?
 
-110
-00:13:49,995 --> 00:13:56,043
+107
+00:13:21,383 --> 00:13:27,431
 I'm looking for somebody, and you 
 look exactly like him, so...
 
-111
-00:13:56,752 --> 00:14:00,756
+108
+00:13:28,140 --> 00:13:32,144
 Strangers can look alike. I'm 
 Kibagami Jubei, a wanderer...
 
-112
-00:14:13,227 --> 00:14:15,062
+109
+00:13:44,615 --> 00:13:46,450
 It was most certainly your face.
 
-113
-00:14:15,396 --> 00:14:19,316
+110
+00:13:46,784 --> 00:13:50,704
 Tessai was able to make 
 an impression of it.
 
-114
-00:14:35,958 --> 00:14:37,793
+111
+00:14:07,346 --> 00:14:09,181
 Just leave me the hell alone!
 
-115
-00:14:46,635 --> 00:14:48,762
+112
+00:14:18,023 --> 00:14:20,150
 A cast-off skin.
 
-116
-00:14:48,762 --> 00:14:52,224
+113
+00:14:20,150 --> 00:14:23,612
 She shed it like a 
 snake and escaped.
 
-117
-00:14:54,310 --> 00:14:56,979
+114
+00:14:25,698 --> 00:14:28,367
 A gang of freaks, one and all.
 
-118
-00:14:59,189 --> 00:15:03,652
+115
+00:14:30,578 --> 00:14:35,040
 You've no obligation. I just 
 didn't want you to die yet.
 
-119
-00:15:04,612 --> 00:15:06,947
+116
+00:14:36,000 --> 00:14:38,335
 Who are these Eight 
 Devils of Kimon?
 
-120
-00:15:07,906 --> 00:15:10,075
+117
+00:14:39,295 --> 00:14:41,463
 A group of ninja who work 
 for the Shogun of the Dark.
 
-121
-00:15:10,075 --> 00:15:12,036
+118
+00:14:41,463 --> 00:14:43,424
 You know of the 
 Shogun of the Dark?
 
-122
-00:15:11,702 --> 00:15:15,122
+119
+00:14:43,090 --> 00:14:46,510
 He wants to rebuild the Toyotomi 
 clan, the former rulers of Japan.
 
-123
-00:15:15,122 --> 00:15:19,460
+120
+00:14:46,510 --> 00:14:50,848
 He has 16 lords behind him and is 
 trying to expand his influence.
 
-124
-00:15:19,460 --> 00:15:22,630
+121
+00:14:50,848 --> 00:14:54,018
 The most dangerous enemy 
 of the Tokugawa Shogunate.
 
-125
-00:15:22,963 --> 00:15:27,092
+122
+00:14:54,351 --> 00:14:58,480
 His power is supported in the 
 shadows by the Eight Devils.
 
-126
-00:15:27,092 --> 00:15:29,637
+123
+00:14:58,480 --> 00:15:01,025
 What are they up to 
 here in Mochizuki?
 
-127
-00:15:30,679 --> 00:15:34,016
+124
+00:15:02,067 --> 00:15:05,404
 That's what I came here to find out. 
 It's a tough job.
 
-128
-00:15:35,517 --> 00:15:38,687
+125
+00:15:06,906 --> 00:15:10,075
 Why don't you work for 
 me, for 100 ryo?
 
-129
-00:15:39,730 --> 00:15:42,650
+126
+00:15:11,118 --> 00:15:14,038
 A Tokugawa spy wants 
 to hire a ninja?
 
-130
-00:15:44,318 --> 00:15:46,820
+127
+00:15:15,706 --> 00:15:18,208
 I'm afraid I have no choice. 
 It's an emergency.
 
-131
-00:15:46,820 --> 00:15:50,240
+128
+00:15:18,208 --> 00:15:21,629
 Only I managed to make 
 it here to Mochizuki.
 
-132
-00:15:50,532 --> 00:15:53,118
+129
+00:15:21,920 --> 00:15:24,506
 The Eight Devils killed everyone 
 else in my party on our way here.
 
-133
-00:15:53,118 --> 00:15:55,746
+130
+00:15:24,506 --> 00:15:27,134
 I need your help by all means!
 
-134
-00:15:56,747 --> 00:15:59,750
+131
+00:15:28,135 --> 00:15:31,138
 You'll never get away from them.
 
-135
-00:15:59,750 --> 00:16:02,086
+132
+00:15:31,138 --> 00:15:33,474
 You'll have to fight 
 them sooner or later.
 
-136
-00:16:02,086 --> 00:16:05,297
+133
+00:15:33,474 --> 00:15:36,685
 Join me. You can kill two 
 birds with one stone, right?
 
-137
-00:16:05,881 --> 00:16:09,760
+134
+00:15:37,269 --> 00:15:41,148
 I don't think so. Now why don't 
 you just leave me alone?
 
-138
-00:16:12,388 --> 00:16:14,723
+135
+00:15:43,776 --> 00:15:46,111
 I see. Too bad.
 
-139
-00:16:15,516 --> 00:16:17,434
+136
+00:15:46,904 --> 00:15:48,822
 Such a pity...
 
-140
-00:16:20,062 --> 00:16:24,525
+137
+00:15:51,450 --> 00:15:54,995
 You'll lose your precious life.
 
-141
-00:16:24,983 --> 00:16:26,110
+138
+00:15:56,372 --> 00:15:57,498
 You're stubborn.
 
-142
-00:16:26,610 --> 00:16:30,197
+139
+00:15:57,998 --> 00:16:01,585
 No, what I speak of is literally of 
 life or death importance to you.
 
-143
-00:16:30,197 --> 00:16:34,743
+140
+00:16:01,585 --> 00:16:06,131
 You see, that shuriken 
 was poisoned.
 
-144
-00:16:34,743 --> 00:16:37,287
+141
+00:16:06,131 --> 00:16:08,676
 It won't kill you instantly, 
 but in a day and a
 
-145
-00:16:37,287 --> 00:16:40,082
+142
+00:16:08,676 --> 00:16:11,470
 night, when it starts to 
 work, nothing can stop it.
 
-146
-00:16:41,709 --> 00:16:46,171
+143
+00:16:13,097 --> 00:16:17,559
 Unless you get the antidote. 
 And only I know what it is.
 
-147
-00:16:46,171 --> 00:16:49,007
+144
+00:16:17,559 --> 00:16:20,396
 Work for me and I'll tell 
 you the antidote along
 
-148
-00:16:49,007 --> 00:16:51,468
+145
+00:16:20,396 --> 00:16:22,856
 with the hundred ryo 
 when the job is done.
 
-149
-00:16:52,636 --> 00:16:54,513
+146
+00:16:24,024 --> 00:16:25,901
 You're bluffing.
 
-150
-00:17:00,018 --> 00:17:01,687
+147
+00:16:31,407 --> 00:16:33,075
 I speak the truth.
 
-151
-00:17:01,687 --> 00:17:05,607
+148
+00:16:33,075 --> 00:16:36,120
 Tell me now. What's 
 the antidote?
 
-152
-00:17:05,607 --> 00:17:09,820
+149
+00:16:36,996 --> 00:16:41,208
 Not until you work for me. Kill 
 me and you've killed yourself!
 
-153
-00:17:15,576 --> 00:17:17,494
+150
+00:16:46,964 --> 00:16:48,882
 Now you'll need the 
 antidote for yourself.
 
-154
-00:17:17,995 --> 00:17:20,956
+151
+00:16:49,383 --> 00:16:52,344
 Poor boy... You've 
 so much to learn.
 
-155
-00:17:20,956 --> 00:17:23,751
+152
+00:16:52,344 --> 00:16:55,139
 That isn't the one that hit you.
 
-156
-00:17:24,460 --> 00:17:27,087
+153
+00:16:55,848 --> 00:16:58,475
 I threw THAT one away.
 
-157
-00:17:30,382 --> 00:17:31,216
+154
+00:17:01,770 --> 00:17:02,604
 Shit!
 
-158
-00:17:32,259 --> 00:17:36,805
+155
+00:17:03,647 --> 00:17:08,193
 Kibagami Jubei... You've lost... 
 amateur!
 
-159
-00:17:38,140 --> 00:17:41,560
+156
+00:17:09,528 --> 00:17:12,948
 My name is Dakuan. 
 How do you do?
 
-160
-00:17:46,231 --> 00:17:47,232
+157
+00:17:17,619 --> 00:17:18,620
 So, Benisato...
 
-161
-00:17:47,232 --> 00:17:51,737
+158
+00:17:18,620 --> 00:17:23,125
 This man, Kibagami Jubei, is a 
 remnant of the Shogunate's spies?
 
-162
-00:17:52,362 --> 00:17:53,697
+159
+00:17:23,751 --> 00:17:25,085
 Possibly.
 
-163
-00:17:53,697 --> 00:17:55,741
+160
+00:17:25,085 --> 00:17:27,129
 Why didn't you kill him?
 
-164
-00:17:55,908 --> 00:17:57,493
+161
+00:17:27,296 --> 00:17:28,881
 Someone interfered.
 
-165
-00:17:57,493 --> 00:17:58,744
+162
+00:17:28,881 --> 00:17:30,132
 No excuses!
 
-166
-00:18:01,955 --> 00:18:06,085
+163
+00:17:33,343 --> 00:17:37,473
 If he's a government spy, 
 he'll show up here soon.
 
-167
-00:18:06,376 --> 00:18:08,128
+164
+00:17:37,765 --> 00:17:39,516
 Be sure to kill him this time.
 
-168
-00:18:08,587 --> 00:18:10,631
+165
+00:17:39,975 --> 00:17:42,019
 I don't need your 
 advice to do that.
 
-169
-00:18:15,594 --> 00:18:17,137
+166
+00:17:46,982 --> 00:17:48,525
 Jubei...
 
-170
-00:18:17,554 --> 00:18:21,517
+167
+00:17:48,942 --> 00:17:52,905
 There's something 
 I've been wondering.
 
-171
-00:18:22,226 --> 00:18:25,354
+168
+00:17:53,614 --> 00:17:56,742
 Are you, by chance, the 
 ninja who killed the chief
 
-172
-00:18:25,354 --> 00:18:28,273
+169
+00:17:56,742 --> 00:17:59,661
 retainers of the Yamashiro 
 clan five years ago?
 
-173
-00:18:29,191 --> 00:18:32,778
+170
+00:18:00,579 --> 00:18:04,166
 He was supposedly a master 
 swordsman, like you.
 
-174
-00:18:35,823 --> 00:18:38,700
+171
+00:18:07,211 --> 00:18:10,089
 The retainers had 
 gorged themselves with
 
-175
-00:18:38,700 --> 00:18:41,870
+172
+00:18:10,089 --> 00:18:13,258
 gold they secretly dug 
 out of a hidden mine.
 
-176
-00:18:42,120 --> 00:18:45,707
+173
+00:18:13,509 --> 00:18:17,096
 The ninja must have killed 
 them by order of the lord
 
-177
-00:18:45,707 --> 00:18:47,376
+174
+00:18:17,096 --> 00:18:18,764
 who wanted to report the 
 mine to the government.
 
-178
-00:18:47,376 --> 00:18:51,296
+175
+00:18:18,764 --> 00:18:22,684
 Because if the government found 
 the hidden gold mine first...
 
-179
-00:18:51,296 --> 00:18:53,215
+176
+00:18:22,684 --> 00:18:24,603
 the lord would have 
 lost his fief.
 
-180
-00:18:53,924 --> 00:18:58,470
+177
+00:18:25,312 --> 00:18:29,858
 But does that ninja know that after 
 the retainers were killed...
 
-181
-00:18:58,470 --> 00:19:01,056
+178
+00:18:29,858 --> 00:18:32,444
 the government received 
 no report about the mine?
 
-182
-00:19:01,890 --> 00:19:03,016
+179
+00:18:33,278 --> 00:18:34,404
 Why?
 
-183
-00:19:03,016 --> 00:19:08,647
+180
+00:18:34,404 --> 00:18:40,035
 If a government spy like you knows all 
 that, then why don't you do something?
 
-184
-00:19:09,398 --> 00:19:14,319
+181
+00:18:40,786 --> 00:18:45,707
 No... Even the government can't 
 move without definite evidence.
 
-185
-00:19:14,319 --> 00:19:17,447
+182
+00:18:45,707 --> 00:18:48,836
 Our spies tried many 
 times to infiltrate the
 
-186
-00:19:17,447 --> 00:19:20,826
+183
+00:18:48,836 --> 00:18:52,214
 clan to find evidence, 
 but none returned alive.
 
-187
-00:19:20,993 --> 00:19:22,369
+184
+00:18:52,381 --> 00:18:53,757
 The Shogun of the Dark...
 
-188
-00:19:22,369 --> 00:19:25,664
+185
+00:18:53,757 --> 00:18:57,052
 He stopped them by 
 using the Kimon ninja.
 
-189
-00:19:26,456 --> 00:19:29,751
+186
+00:18:57,845 --> 00:19:01,139
 Why is the Shogun of the Dark 
 helping the Yamashiro clan?
 
-190
-00:19:30,335 --> 00:19:34,214
+187
+00:19:01,723 --> 00:19:05,602
 Simple. He wants the 
 gold mine for himself.
 
-191
-00:19:35,591 --> 00:19:40,596
+188
+00:19:06,979 --> 00:19:11,984
 Do you know how he found the 
 mine before the government?
 
-192
-00:19:41,221 --> 00:19:43,765
+189
+00:19:12,609 --> 00:19:15,154
 Somebody gave him 
 the information.
 
-193
-00:19:43,765 --> 00:19:47,352
+190
+00:19:15,154 --> 00:19:18,740
 Somebody who was the leader of 
 the ninja of the Yamashiro clan.
 
-194
-00:19:48,604 --> 00:19:50,314
+191
+00:19:19,992 --> 00:19:21,702
 Himuro... Genma?!
 
-195
-00:19:51,815 --> 00:19:53,317
+192
+00:19:23,203 --> 00:19:24,705
 Precisely.
 
-196
-00:19:54,526 --> 00:19:57,988
+193
+00:19:25,914 --> 00:19:29,376
 I doubt that. He isn't 
 in this world anymore.
 
-197
-00:19:58,572 --> 00:20:02,075
+194
+00:19:29,960 --> 00:19:33,463
 No, he's still very much alive. 
 And you'll see him soon.
 
-198
-00:20:02,075 --> 00:20:05,329
+195
+00:19:33,463 --> 00:19:36,717
 Himuro Genma is the boss 
 of the Kimon monsters.
 
-199
-00:20:05,329 --> 00:00:00,000
-
-
-200
-00:20:06,330 --> 00:20:08,415
+196
+00:19:37,718 --> 00:19:39,803
 Shh! Not so loud !
 
-201
-00:20:08,415 --> 00:20:10,459
+197
+00:19:39,803 --> 00:19:41,847
 You can't trick me 
 the same way again!
 
-202
-00:20:10,459 --> 00:20:14,713
+198
+00:19:41,847 --> 00:19:46,101
 Don't be hasty. You'll 
 soon know the truth.
 
-203
-00:20:14,713 --> 00:20:20,260
+199
+00:19:46,101 --> 00:19:51,648
 But you must admit that you 
 and he share a strange fate.
 
-204
-00:20:25,807 --> 00:20:28,644
+200
+00:19:57,196 --> 00:20:00,032
 Stop! You'd kill 
 your own friend?!
 
-205
-00:20:28,644 --> 00:20:32,105
+201
+00:20:00,032 --> 00:20:03,493
 The lord orders it! 
 As did our leader!
 
-206
-00:20:33,607 --> 00:20:35,150
+202
+00:20:04,995 --> 00:20:06,538
 It's a trick!
 
-207
-00:20:35,150 --> 00:20:37,694
+203
+00:20:06,538 --> 00:20:09,082
 Now that we know the 
 traitors' secret they want
 
-208
-00:20:37,694 --> 00:20:40,155
+204
+00:20:09,082 --> 00:20:11,543
 to get rid of us by making 
 us kill each other.
 
-209
-00:20:40,572 --> 00:20:44,451
+205
+00:20:11,960 --> 00:20:15,839
 This is a trap for all of us. 
 Shinkuro, believe me!
 
-210
-00:20:45,494 --> 00:20:47,162
+206
+00:20:16,882 --> 00:20:18,550
 Jubei... Forgive me.
 
-211
-00:20:47,537 --> 00:20:48,747
+207
+00:20:18,926 --> 00:20:20,135
 Shinkuro!
 
-212
-00:20:49,706 --> 00:20:51,041
+208
+00:20:21,094 --> 00:20:22,429
 His word...
 
-213
-00:20:51,458 --> 00:20:52,459
+209
+00:20:22,846 --> 00:20:23,847
 ...is law!
 
-214
-00:21:31,748 --> 00:21:36,753
+210
+00:21:03,136 --> 00:21:08,141
 I avenged Shinkuro and the others myself. 
 Genma can't be alive.
 
-215
-00:21:38,296 --> 00:21:42,342
+211
+00:21:09,685 --> 00:21:13,730
 We're getting close. This place 
 is thick with ghosts and blood.
 
-216
-00:21:42,509 --> 00:21:44,970
+212
+00:21:13,897 --> 00:21:16,358
 Beyond lies Hell itself.
 
-217
-00:21:49,224 --> 00:21:53,228
+213
+00:21:20,612 --> 00:21:24,616
 Heaven must have sent 
 this mist to help us.
 
-218
-00:22:08,410 --> 00:22:09,619
+214
+00:21:39,798 --> 00:21:41,008
 Hey!
 
-219
-00:22:17,794 --> 00:22:19,629
+215
+00:21:49,182 --> 00:21:51,018
 Double damned mist!
 
-220
-00:22:43,487 --> 00:22:46,990
+216
+00:22:14,875 --> 00:22:18,378
 How could he have 
 dodged Shijima's claw?
 
-221
-00:23:15,352 --> 00:23:16,478
+217
+00:22:46,740 --> 00:22:47,866
 Who are you?
 
-222
-00:23:16,478 --> 00:23:19,898
+218
+00:22:47,866 --> 00:22:51,286
 I heard a voice 
 chanting the sutra.
 
-223
-00:23:20,232 --> 00:23:23,443
+219
+00:22:51,620 --> 00:22:54,831
 I was praying for 
 the dead villagers.
 
-224
-00:23:24,444 --> 00:23:28,198
+220
+00:22:55,832 --> 00:22:59,586
 Don't you know an epidemic 
 plagues this village?
 
-225
-00:23:29,741 --> 00:23:34,538
+221
+00:23:01,129 --> 00:23:05,926
 Poor soul! You'll never 
 leave this village alive.
 
-226
-00:23:34,830 --> 00:23:38,375
+222
+00:23:06,218 --> 00:23:09,763
 Here now, let us go to the 
 land of Buddha together.
 
-227
-00:23:44,464 --> 00:23:48,009
+223
+00:23:15,852 --> 00:23:19,398
 Have you seen a 
 traveling monk here?
 
-228
-00:23:49,052 --> 00:23:54,141
+224
+00:23:20,440 --> 00:23:25,529
 He'll meet Buddha soon enough. 
 I'll send him there.
 
-229
-00:23:54,933 --> 00:23:56,601
+225
+00:23:26,321 --> 00:23:27,989
 Such a benevolent nun...
 
-230
-00:24:05,068 --> 00:24:06,903
+226
+00:23:36,456 --> 00:23:38,291
 Shit! Another cast-off skin!
 
-231
-00:24:17,497 --> 00:24:21,418
+227
+00:23:48,885 --> 00:23:52,806
 Gone... He uses a 
 strange technique...
 
-232
-00:24:32,137 --> 00:24:34,347
+228
+00:24:03,525 --> 00:24:05,735
 As do you. Very strange indeed !
 
-233
-00:24:43,565 --> 00:24:50,363
+229
+00:24:14,953 --> 00:24:21,751
 Answer me. Are there any others 
 with you besides the monk?
 
-234
-00:24:51,239 --> 00:24:54,743
+230
+00:24:22,627 --> 00:24:26,131
 Of course. And not 
 just ten or twenty.
 
-235
-00:24:54,743 --> 00:24:57,120
+231
+00:24:26,131 --> 00:24:28,508
 You can send a snake for 
 each and it won't be enough.
 
-236
-00:24:59,581 --> 00:25:00,832
+232
+00:24:30,969 --> 00:24:32,220
 Liar!
 
-237
-00:25:01,416 --> 00:25:04,211
+233
+00:24:32,804 --> 00:24:35,599
 All right! I'll 
 tell you the truth.
 
-238
-00:25:05,295 --> 00:25:09,007
+234
+00:24:36,683 --> 00:24:40,395
 There's two. One's the traveling monk. 
 The other...
 
-239
-00:25:09,132 --> 00:25:10,467
+235
+00:24:40,520 --> 00:24:41,855
 ...is right behind you.
 
-240
-00:25:12,928 --> 00:25:15,764
+236
+00:24:44,316 --> 00:24:47,152
 Lose the snakes. Down 
 to the last one!
 
-241
-00:25:21,978 --> 00:25:23,230
+237
+00:24:53,366 --> 00:24:54,618
 You'll be dead soon.
 
-242
-00:25:27,776 --> 00:25:28,777
+238
+00:24:59,164 --> 00:25:00,165
 Get rid of them!
 
-243
-00:25:47,254 --> 00:25:49,589
+239
+00:25:18,642 --> 00:25:20,977
 Now it's your turn to answer.
 
-244
-00:25:49,589 --> 00:25:52,425
+240
+00:25:20,977 --> 00:25:23,813
 What are you doing in this village? 
 Talk!
 
-245
-00:26:10,986 --> 00:26:13,989
+241
+00:25:42,374 --> 00:25:45,377
 Twice failed. Unforgivable.
 
-246
-00:26:13,989 --> 00:26:17,993
+242
+00:25:45,377 --> 00:25:49,381
 I cast another line onto your 
 neck, but you didn't notice.
 
-247
-00:26:17,993 --> 00:26:20,745
-Ln the end, just a 
+243
+00:25:49,381 --> 00:25:52,133
+In the end, just a 
 foolish amateur.
 
-248
-00:26:39,472 --> 00:26:41,433
+244
+00:26:10,860 --> 00:26:12,821
 Idiot! There's still time 
 to suck the poison out!
 
-249
-00:26:42,976 --> 00:26:45,854
+245
+00:26:14,364 --> 00:26:17,242
 Poison doesn't work on me. 
 My body's immune to it.
 
-250
-00:26:48,607 --> 00:26:51,109
+246
+00:26:19,995 --> 00:26:22,497
 I think I've cleared 
 my debt to you.
 
-251
-00:26:51,109 --> 00:26:53,820
+247
+00:26:22,497 --> 00:26:25,208
 Yes. You saved me.
 
-252
-00:26:54,070 --> 00:26:58,325
+248
+00:26:25,458 --> 00:26:29,713
 Your name's Kagero, right? 
 What are you going to do now?
 
-253
-00:26:58,325 --> 00:27:00,702
+249
+00:26:29,713 --> 00:26:32,090
 That's none of your concern.
 
-254
-00:27:01,620 --> 00:27:03,788
+250
+00:26:33,008 --> 00:26:35,176
 If it isn't, then what the 
 hell am I doing here?!
 
-255
-00:27:05,165 --> 00:27:07,459
+251
+00:26:36,553 --> 00:26:38,847
 I have to discover their plan.
 
-256
-00:27:08,418 --> 00:27:10,629
+252
+00:26:39,806 --> 00:26:42,017
 By yourself? Impossible!
 
-257
-00:27:10,629 --> 00:27:12,797
+253
+00:26:42,017 --> 00:26:44,185
 They're too strong. 
 Think this over.
 
-258
-00:27:13,298 --> 00:27:15,008
+254
+00:26:44,686 --> 00:26:46,396
 Stay out of my way.
 
-259
-00:27:15,008 --> 00:27:18,178
+255
+00:26:46,396 --> 00:26:49,566
 I've no reason to 
 take orders from you.
 
-260
-00:27:21,848 --> 00:27:24,267
+256
+00:26:53,236 --> 00:26:55,655
 Hold a moment, Kunoichi of Koga.
 
-261
-00:27:24,267 --> 00:27:29,189
+257
+00:26:55,655 --> 00:27:00,577
 My name is Dakuan. Why 
 don't you join me?
 
-262
-00:27:29,189 --> 00:27:32,984
+258
+00:27:00,577 --> 00:27:04,372
 This man is my 
 trustworthy assistant.
 
-263
-00:27:33,485 --> 00:27:35,987
+259
+00:27:04,873 --> 00:27:07,375
 I wasn't planning on 
 helping a government spy.
 
-264
-00:27:35,987 --> 00:27:38,156
+260
+00:27:07,375 --> 00:27:09,544
 Oh, quit complaining !
 
-265
-00:27:38,281 --> 00:27:39,532
+261
+00:27:09,669 --> 00:27:10,920
 What do you say, woman?
 
-266
-00:27:39,741 --> 00:27:44,204
+262
+00:27:11,129 --> 00:27:15,592
 Our aims may differ, but we 
 three share a common enemy.
 
-267
-00:27:44,204 --> 00:27:47,165
+263
+00:27:15,592 --> 00:27:18,553
 And three is mightier than one.
 
-268
-00:27:47,165 --> 00:27:50,585
+264
+00:27:18,553 --> 00:27:21,973
 And I happen to have some 
 information you don't know.
 
-269
-00:27:50,585 --> 00:27:53,630
+265
+00:27:21,973 --> 00:27:25,018
 Such as who is giving 
 them their orders.
 
-270
-00:27:53,630 --> 00:27:55,715
+266
+00:27:25,018 --> 00:27:27,103
 I'll tell you on the way.
 
-271
-00:27:59,719 --> 00:28:00,845
+267
+00:27:31,107 --> 00:27:32,233
 I need no friends.
 
-272
-00:28:01,471 --> 00:28:05,350
+268
+00:27:32,859 --> 00:27:36,738
 But I may need your information.
 
-273
-00:28:05,350 --> 00:28:06,893
+269
+00:27:36,738 --> 00:27:38,281
 Very well.
 
-274
-00:28:13,066 --> 00:28:17,737
+270
+00:27:44,454 --> 00:27:49,125
 My, she's a lovely, sexy 
 little thing, isn't she!
 
-275
-00:28:18,196 --> 00:28:21,032
+271
+00:27:49,584 --> 00:27:52,420
 What's running through that 
 twisted skull of yours?
 
-276
-00:28:21,491 --> 00:28:25,245
+272
+00:27:52,879 --> 00:27:56,633
 Well now, that Kunoichi 
 could prove very useful.
 
-277
-00:28:25,245 --> 00:28:29,040
+273
+00:27:56,633 --> 00:28:00,428
 She has a technique to poison 
 the man she sleeps with.
 
-278
-00:28:29,582 --> 00:28:34,379
+274
+00:28:00,970 --> 00:28:05,684
 The big guy you killed had 
 been poisoned by her.
 
-279
-00:29:20,216 --> 00:29:22,927
+275
+00:28:05,684 --> 00:28:05,767
+The big guy you killed had 
+been poisoned by her.
+
+276
+00:28:53,690 --> 00:28:56,401
 Your skill is as 
 marvelous as ever.
 
-280
-00:29:22,927 --> 00:29:26,347
+277
+00:28:56,401 --> 00:28:59,821
 No... He was able to kill a 
 mighty ninja like Tessai.
 
-281
-00:29:26,347 --> 00:29:30,393
+278
+00:28:59,821 --> 00:29:03,867
 Don't be off guard. It's 
 possible he got away.
 
-282
-00:29:30,977 --> 00:29:33,229
+279
+00:29:04,451 --> 00:29:06,703
 The four of you 
 will check it out.
 
-283
-00:29:33,229 --> 00:29:35,398
+280
+00:29:06,703 --> 00:29:08,872
 You're a cautious one, Yurimaru.
 
-284
-00:29:35,565 --> 00:29:40,653
+281
+00:29:09,038 --> 00:29:14,127
 We have an important mission. 
 We take every precaution.
 
-285
-00:29:40,778 --> 00:29:42,614
+282
+00:29:14,252 --> 00:29:16,087
 I know, I know. Don't worry.
 
-286
-00:29:43,281 --> 00:29:44,908
-Then go.
-
-287
-00:29:47,619 --> 00:29:51,080
-Yurimaru, Benisato's death... 
-How fortunate for you!
-
-288
-00:30:01,424 --> 00:30:03,635
+283
+00:29:23,595 --> 00:29:25,805
 Only things he killed 
 were the fish.
 
-289
-00:30:03,635 --> 00:30:06,179
+284
+00:29:25,805 --> 00:29:28,349
 Good. Otherwise we 
 wouldn't get our chance.
 
-290
-00:30:06,179 --> 00:30:08,431
+285
+00:29:28,349 --> 00:29:30,602
 It's getting quite 
 interesting, isn't it?
 
-291
-00:30:23,238 --> 00:30:26,407
+286
+00:29:45,408 --> 00:29:48,578
 How is it? Just as we thought?
 
-292
-00:30:27,367 --> 00:30:30,286
+287
+00:29:49,537 --> 00:29:52,457
 They poisoned the wells 
 and killed the villagers.
 
-293
-00:30:30,286 --> 00:30:32,372
+288
+00:29:52,457 --> 00:29:54,542
 And then blamed it on plague.
 
-294
-00:30:33,039 --> 00:30:36,292
+289
+00:29:55,210 --> 00:29:58,463
 A trick to keep the 
 villagers away.
 
-295
-00:30:37,168 --> 00:30:41,965
+290
+00:29:59,339 --> 00:30:04,135
 They're planning something... 
 quite extraordinary.
 
-296
-00:30:52,809 --> 00:30:55,353
+291
+00:30:14,979 --> 00:30:17,524
 I'd like to know what it is.
 
-297
-00:30:55,853 --> 00:30:58,898
+292
+00:30:18,024 --> 00:30:21,069
 That's fine, just don't get 
 yourself involved too deeply.
 
-298
-00:30:58,898 --> 00:31:00,608
+293
+00:30:21,069 --> 00:30:22,779
 It could prove fatal.
 
-299
-00:31:22,255 --> 00:31:24,299
+294
+00:30:44,425 --> 00:30:46,469
 I see. Guide the others.
 
-300
-00:31:42,233 --> 00:31:43,443
+295
+00:31:04,404 --> 00:31:05,613
 Run for it!
 
-301
-00:32:05,548 --> 00:32:07,508
+296
+00:31:27,719 --> 00:31:29,679
 We can't outrun them.
 
-302
-00:32:09,385 --> 00:32:10,553
+297
+00:31:31,556 --> 00:31:32,724
 Kagero...
 
-303
-00:32:28,947 --> 00:32:31,574
+298
+00:31:51,117 --> 00:31:53,745
 So, the pollen is mixed 
 with a sleeping potion.
 
-304
-00:32:31,574 --> 00:32:33,493
+299
+00:31:53,745 --> 00:31:55,663
 But how long will 
 it hold them back?
 
-305
-00:32:34,577 --> 00:32:35,954
+300
+00:31:56,748 --> 00:31:58,124
 Why, you!
 
-306
-00:32:36,746 --> 00:32:37,747
+301
+00:31:58,917 --> 00:31:59,918
 Girl!
 
-307
-00:32:37,956 --> 00:32:40,291
+302
+00:32:00,126 --> 00:32:02,462
 You have to hold them off 
 till Jubei kills him!
 
-308
-00:32:40,291 --> 00:32:42,251
+303
+00:32:02,462 --> 00:32:04,422
 Do whatever it takes!
 
-309
-00:32:56,516 --> 00:32:58,267
+304
+00:32:18,686 --> 00:32:20,438
 Call off your bees!
 
-310
-00:32:59,394 --> 00:33:01,979
+305
+00:32:21,564 --> 00:32:24,150
 I'm afraid you must 
 beat me first.
 
-311
-00:33:03,982 --> 00:33:06,109
+306
+00:32:26,152 --> 00:32:28,279
 You don't know anything, do you?
 
-312
-00:33:06,109 --> 00:33:09,028
+307
+00:32:28,279 --> 00:32:31,199
 Do you think I ran in 
 here to escape you?
 
-313
-00:33:09,612 --> 00:33:10,613
+308
+00:32:31,783 --> 00:32:32,784
 No, I don't.
 
-314
-00:33:10,613 --> 00:33:13,324
+309
+00:32:32,784 --> 00:32:35,495
 I have lots of questions for 
 you, but no time to ask them.
 
-315
-00:33:13,616 --> 00:33:17,370
+310
+00:32:35,787 --> 00:32:39,540
 No, just one thing. Tell 
 me, is Himuro Genma alive?
 
-316
-00:33:17,537 --> 00:33:19,247
+311
+00:32:39,707 --> 00:32:41,417
 So what if he is?
 
-317
-00:33:19,247 --> 00:33:21,916
+312
+00:32:41,417 --> 00:32:44,087
 I ask because I sent 
 him to Hell before.
 
-318
-00:33:22,041 --> 00:33:24,711
+313
+00:32:44,212 --> 00:32:46,881
 Is that so? Then I'll 
 have to be careful.
 
-319
-00:33:24,836 --> 00:33:29,298
+314
+00:32:47,006 --> 00:32:51,469
 Unlike Genma, I don't have the 
 technique to reincarnate myself.
 
-320
-00:33:29,632 --> 00:33:30,925
+315
+00:32:51,803 --> 00:32:53,096
 Reincarnation?
 
-321
-00:33:39,684 --> 00:33:42,019
+316
+00:33:01,854 --> 00:33:04,190
 Fool! You've damaged the hive!
 
-322
-00:33:58,870 --> 00:34:01,622
+317
+00:33:21,040 --> 00:33:23,793
 The second you come up for 
 air is the second you die!
 
-323
-00:34:04,500 --> 00:34:07,754
+318
+00:33:26,671 --> 00:33:29,924
 He's mine! Keep 
 your hands off him!
 
-324
-00:34:08,045 --> 00:34:09,797
+319
+00:33:30,216 --> 00:33:31,968
 What about the 
 Kunoichi and the monk?
 
-325
-00:34:09,797 --> 00:34:13,593
+320
+00:33:31,968 --> 00:33:35,763
 My bees should finish 
 them off soon.
 
-326
-00:34:23,102 --> 00:34:26,814
+321
+00:33:45,273 --> 00:33:48,985
 How far is he trying to run? 
 What a poor loser!
 
-327
-00:34:41,662 --> 00:34:44,457
+322
+00:34:03,833 --> 00:34:06,627
 Do you think he's fallen 
 victim to the throat needle?
 
-328
-00:34:55,134 --> 00:34:59,764
+323
+00:34:17,305 --> 00:34:21,934
 No... The bees in the hive are 
 trying to escape the water.
 
-329
-00:34:59,764 --> 00:35:04,102
+324
+00:34:21,934 --> 00:34:26,272
 Desperately stinging his body as 
 they do so... Mushizo's lost.
 
-330
-00:35:15,780 --> 00:35:18,324
+325
+00:34:37,950 --> 00:34:40,495
 Took his time about it, but 
 he finally killed him.
 
-331
-00:35:32,755 --> 00:35:38,344
+326
+00:34:54,926 --> 00:35:00,515
 Reincarnation? Did he mean Himuro 
 Genma's come back to life?
 
-332
-00:35:39,387 --> 00:35:41,180
+327
+00:35:01,557 --> 00:35:03,351
 Impossible!
 
-333
-00:35:54,068 --> 00:35:57,989
+328
+00:35:16,239 --> 00:35:20,159
 Reincarnation? I've heard 
 about the technique.
 
-334
-00:35:59,115 --> 00:36:04,370
+329
+00:35:21,285 --> 00:35:26,541
 You must control your flesh and 
 blood down to the tiniest bones.
 
-335
-00:36:04,495 --> 00:36:10,293
+330
+00:35:26,666 --> 00:35:32,463
 If your limbs or even your head were 
 cut off, you'd be able to rejoin them.
 
-336
-00:36:10,793 --> 00:36:14,005
+331
+00:35:32,964 --> 00:35:36,175
 Reincarnation... That's a 
 technique of immortality.
 
-337
-00:36:14,005 --> 00:36:16,132
+332
+00:35:36,175 --> 00:35:38,302
 It can never be achieved 
 by a human being.
 
-338
-00:36:16,549 --> 00:36:19,260
+333
+00:35:38,719 --> 00:35:41,430
 Well, well... That's 
 a hell of a trick!
 
-339
-00:36:19,260 --> 00:36:23,723
+334
+00:35:41,430 --> 00:35:45,893
 Anyway, the Kimon monsters 
 are now all after you.
 
-340
-00:36:23,723 --> 00:36:26,017
+335
+00:35:45,893 --> 00:35:48,187
 That means I can move easily.
 
-341
-00:36:28,978 --> 00:36:31,397
+336
+00:35:51,149 --> 00:35:53,568
 If you're lucky, 
 we'll meet again.
 
-342
-00:36:34,275 --> 00:36:36,611
+337
+00:35:56,445 --> 00:35:58,781
 Why did you join him?
 
-343
-00:36:37,236 --> 00:36:40,406
+338
+00:35:59,407 --> 00:36:02,577
 He hired me... For 100 ryo.
 
-344
-00:36:40,615 --> 00:36:43,492
+339
+00:36:02,785 --> 00:36:05,663
 You're a mercenary ninja? One 
 who'd do anything for money?
 
-345
-00:36:44,368 --> 00:36:46,245
+340
+00:36:06,539 --> 00:36:08,416
 You could say that.
 
-346
-00:36:46,245 --> 00:36:50,291
+341
+00:36:08,416 --> 00:36:12,461
 But he suckered me into it. 
 Trapped me.
 
-347
-00:36:50,917 --> 00:36:53,753
+342
+00:36:13,087 --> 00:36:15,923
 I'll die of his 
 poison in half a day.
 
-348
-00:36:55,046 --> 00:36:58,883
+343
+00:36:17,216 --> 00:36:21,053
 He promised me an antidote 
 along with the gold.
 
-349
-00:36:58,883 --> 00:37:03,012
+344
+00:36:21,053 --> 00:36:25,183
 That's why I work for him. 
 I can't back out now.
 
-350
-00:37:03,346 --> 00:37:06,432
+345
+00:36:25,516 --> 00:36:28,603
 You'd better run for it while 
 I divert their attention.
 
-351
-00:37:07,099 --> 00:37:10,269
+346
+00:36:29,270 --> 00:36:32,440
 I can't do that. I'd 
 owe you another debt.
 
-352
-00:37:10,728 --> 00:37:12,230
+347
+00:36:32,899 --> 00:36:34,400
 Forget about any debts.
 
-353
-00:37:12,230 --> 00:37:15,608
+348
+00:36:34,400 --> 00:36:37,778
 And I told you I don't have 
 to take orders from you.
 
-354
-00:37:15,608 --> 00:37:18,152
+349
+00:36:37,778 --> 00:36:40,323
 Besides, I'm ready 
 to die any moment.
 
-355
-00:37:18,236 --> 00:37:20,196
+350
+00:36:40,406 --> 00:36:42,366
 Relax. Stop pretending 
 you're so tough.
 
-356
-00:37:20,196 --> 00:37:21,447
+351
+00:36:42,366 --> 00:36:43,618
 What?!
 
-357
-00:37:22,907 --> 00:37:25,243
+352
+00:36:45,077 --> 00:36:47,413
 It's this humid weather!
 
-358
-00:37:25,243 --> 00:37:29,705
+353
+00:36:47,413 --> 00:36:51,876
 I wish a storm would come and 
 cool off that hot head of yours.
 
-359
-00:37:33,876 --> 00:37:35,920
+354
+00:36:56,047 --> 00:36:58,090
 You're in no position 
 to worry about me.
 
-360
-00:37:42,468 --> 00:37:43,719
+355
+00:37:04,639 --> 00:37:05,890
 Storm...
 
-361
-00:37:45,763 --> 00:37:49,976
+356
+00:37:07,934 --> 00:37:12,146
 They came on the night 
 of that big storm...
 
-362
-00:37:54,563 --> 00:37:57,441
+357
+00:37:16,734 --> 00:37:19,612
 Hey, where can I get a 
 good look at this area?
 
-363
-00:38:04,031 --> 00:38:05,408
+358
+00:37:26,202 --> 00:37:27,578
 How about there?
 
-364
-00:38:05,408 --> 00:38:06,659
+359
+00:37:27,578 --> 00:37:28,829
 Nothing.
 
-365
-00:38:06,659 --> 00:38:08,327
+360
+00:37:28,829 --> 00:37:30,498
 Keep looking !
 
-366
-00:38:21,299 --> 00:38:22,299
+361
+00:37:43,469 --> 00:37:44,470
 Hanza...
 
-367
-00:38:22,299 --> 00:38:23,009
+362
+00:37:44,470 --> 00:37:45,179
 Wait!
 
-368
-00:38:24,093 --> 00:38:24,802
+363
+00:37:46,263 --> 00:37:46,973
 Hanza!
 
-369
-00:38:29,765 --> 00:38:32,435
+364
+00:37:51,936 --> 00:37:54,605
 There's a cliff in front of you! 
 Stop!
 
-370
-00:38:33,394 --> 00:38:34,478
+365
+00:37:55,564 --> 00:37:56,649
 Damn!
 
-371
-00:38:48,492 --> 00:38:49,618
+366
+00:38:10,663 --> 00:38:11,789
 Gotcha!
 
-372
-00:38:49,618 --> 00:38:50,119
+367
+00:38:11,789 --> 00:38:12,290
 Shit!
 
-373
-00:38:58,544 --> 00:39:02,798
+368
+00:38:20,715 --> 00:38:24,969
 Fool! They got you so soon? 
 We still had a lot to do.
 
-374
-00:39:08,137 --> 00:39:11,140
+369
+00:38:30,308 --> 00:38:33,310
 The scent of blasted flesh, 
 grilled to perfection...
 
-375
-00:39:11,140 --> 00:39:13,059
+370
+00:38:33,310 --> 00:38:35,229
 Such a lovely smell.
 
-376
-00:39:37,792 --> 00:39:39,168
+371
+00:38:59,962 --> 00:39:01,339
 Don't... move...
 
-377
-00:39:39,460 --> 00:39:41,629
+372
+00:39:01,630 --> 00:39:03,799
 That's enough. Let me go.
 
-378
-00:39:41,629 --> 00:39:43,672
+373
+00:39:03,799 --> 00:39:05,843
 It's my fault I fell 
 for their trap.
 
-379
-00:39:44,048 --> 00:39:45,716
+374
+00:39:06,218 --> 00:39:07,887
 Shut up! Don't talk!
 
-380
-00:39:46,717 --> 00:39:49,011
+375
+00:39:08,888 --> 00:39:11,182
 Let go of me! I don't 
 want your help.
 
-381
-00:39:49,345 --> 00:39:50,971
+376
+00:39:11,515 --> 00:39:13,142
 Shut up!
 
-382
-00:39:59,105 --> 00:40:01,816
+377
+00:39:21,275 --> 00:39:23,986
 Go on, grab it!
 
-383
-00:40:14,286 --> 00:40:17,206
-Just gonna hang onto me all day?
-
-384
-00:40:34,140 --> 00:40:39,019
+378
+00:39:50,054 --> 00:39:54,934
 I am Utsutsu Mujuro. I've been 
 longing to challenge you.
 
-385
-00:40:45,526 --> 00:40:47,945
+379
+00:40:01,440 --> 00:40:03,859
 He's here for me. Stay here.
 
-386
-00:41:00,791 --> 00:41:05,129
+380
+00:40:16,705 --> 00:40:21,043
 You lured me here because I'm blind? 
 Is that your plan?
 
-387
-00:41:19,602 --> 00:41:22,188
+381
+00:40:35,516 --> 00:40:38,102
 If you want to kill me, 
 then don't make a sound.
 
-388
-00:41:23,355 --> 00:41:27,193
+382
+00:40:39,270 --> 00:40:43,107
 That's impossible. But maybe I can 
 turn your skill to my advantage.
 
-389
-00:42:02,478 --> 00:42:03,979
+383
+00:41:18,392 --> 00:41:19,894
 I told you to stay back!
 
-390
-00:42:10,903 --> 00:42:13,155
+384
+00:41:26,817 --> 00:41:29,069
 Your sight is your weakness.
 
-391
-00:42:16,825 --> 00:42:17,576
+385
+00:41:32,740 --> 00:41:33,491
 Outta the way!
 
-392
-00:42:30,172 --> 00:42:31,131
+386
+00:41:46,086 --> 00:41:47,046
 Impossible...
 
-393
-00:43:16,302 --> 00:43:19,596
+387
+00:42:32,216 --> 00:42:35,511
 The cargo from the ship that ran 
 aground in the storm two days ago.
 
-394
-00:43:19,596 --> 00:43:21,724
+388
+00:42:35,511 --> 00:42:37,638
 That's what they're after.
 
-395
-00:43:21,724 --> 00:43:25,060
+389
+00:42:37,638 --> 00:42:40,975
 They butchered the villagers 
 like animals for it.
 
-396
-00:43:38,741 --> 00:43:40,909
+390
+00:42:54,655 --> 00:42:56,824
 Where does this road lead?
 
-397
-00:43:46,999 --> 00:43:48,083
+391
+00:43:01,996 --> 00:43:03,080
 Chamberlain!
 
-398
-00:43:48,917 --> 00:43:50,336
+392
+00:43:04,832 --> 00:43:06,250
 Lord Hyobu, is it true?
 
-399
-00:43:50,336 --> 00:43:55,883
+393
+00:43:06,250 --> 00:43:11,797
 That the Koga ninja who went to investigate 
 Shimoda Village were wiped out?
 
-400
-00:43:56,133 --> 00:43:57,468
+394
+00:43:12,047 --> 00:43:13,382
 Exactly.
 
-401
-00:43:57,468 --> 00:44:01,305
+395
+00:43:13,382 --> 00:43:17,219
 But how?! This is an emergency.
 
-402
-00:44:01,305 --> 00:44:03,599
+396
+00:43:17,219 --> 00:43:19,513
 I'll take my men to the 
 village immediately.
 
-403
-00:44:03,766 --> 00:44:04,933
+397
+00:43:19,680 --> 00:43:20,848
 No!
 
-404
-00:44:04,933 --> 00:44:08,145
+398
+00:43:20,848 --> 00:43:24,059
 If this is serious 
 enough to jeopardize the
 
-405
-00:44:08,145 --> 00:44:11,690
+399
+00:43:24,059 --> 00:43:27,605
 safety of our clan, we 
 must move very carefully.
 
-406
-00:44:12,441 --> 00:44:14,860
+400
+00:43:28,355 --> 00:43:30,774
 That's how small clans 
 like ours survive.
 
-407
-00:44:14,860 --> 00:44:15,903
+401
+00:43:30,774 --> 00:43:31,817
 But...
 
-408
-00:44:16,236 --> 00:44:19,698
+402
+00:43:32,151 --> 00:43:35,613
 The Kunoichi who survived is 
 continuing the investigation.
 
-409
-00:44:19,823 --> 00:44:21,742
+403
+00:43:35,738 --> 00:43:37,656
 Wait for her report.
 
-410
-00:45:21,844 --> 00:45:25,639
+404
+00:44:37,758 --> 00:44:41,553
 Those wheel tracks lead 
 to Kashima Harbor.
 
-411
-00:45:25,639 --> 00:45:28,183
+405
+00:44:41,553 --> 00:44:44,098
 They're probably going to 
 transport the cargo out by boat.
 
-412
-00:45:28,517 --> 00:45:29,059
+406
+00:44:44,431 --> 00:44:44,973
 If I don't stop them...
 
-413
-00:45:29,059 --> 00:45:32,980
+407
+00:44:44,973 --> 00:44:48,894
 those dead villagers and the Koga 
 ninja will never rest in peace.
 
-414
-00:45:39,528 --> 00:45:43,574
+408
+00:44:55,442 --> 00:44:59,488
 Listen well, you who labor 
 for the Shogun of the Dark.
 
-415
-00:45:43,574 --> 00:45:47,119
+409
+00:44:59,488 --> 00:45:03,033
 This mission could very 
 well decide our fate!
 
-416
-00:45:47,411 --> 00:45:50,497
+410
+00:45:03,325 --> 00:45:06,412
 This ship will reach 
 Mochizuki in a few hours.
 
-417
-00:45:50,497 --> 00:45:53,625
+411
+00:45:06,412 --> 00:45:09,540
 We must retrieve the 
 cargo at any cost!
 
-418
-00:45:53,917 --> 00:45:56,253
+412
+00:45:09,832 --> 00:45:12,167
 Understood? At any cost!
 
-419
-00:46:16,023 --> 00:46:18,609
+413
+00:45:31,937 --> 00:45:34,523
 The towns must have cleared out 
 out of fear of the epidemic.
 
-420
-00:46:19,443 --> 00:46:22,362
+414
+00:45:35,357 --> 00:45:38,277
 One horse was enough to 
 scare them all away.
 
-421
-00:46:27,075 --> 00:46:30,287
+415
+00:45:42,990 --> 00:45:46,201
 So, you're still alive. 
 I've been worried.
 
-422
-00:46:31,079 --> 00:46:33,290
+416
+00:45:46,994 --> 00:45:49,204
 It's nice to see you, too.
 
-423
-00:46:33,540 --> 00:46:36,835
+417
+00:45:49,455 --> 00:45:52,750
 They're waiting for a boat 
 to transport the cargo.
 
-424
-00:46:37,377 --> 00:46:39,338
+418
+00:45:53,292 --> 00:45:55,252
 Did you check what the cargo is?
 
-425
-00:46:39,463 --> 00:46:44,218
+419
+00:45:55,377 --> 00:46:00,132
 No, I couldn't reach it. But 
 I can guess what it is.
 
-426
-00:46:44,218 --> 00:46:46,303
+420
+00:46:00,132 --> 00:46:02,217
 Actually, I guessed before 
 I came to Mochizuki.
 
-427
-00:46:46,845 --> 00:46:47,846
+421
+00:46:02,759 --> 00:46:03,761
 What?!
 
-428
-00:46:47,846 --> 00:46:49,973
+422
+00:46:03,761 --> 00:46:05,888
 You haven't figured it out?
 
-429
-00:46:49,181 --> 00:46:52,518
+423
+00:46:05,095 --> 00:46:08,432
 It's something that has 
 to do with your past.
 
-430
-00:46:53,435 --> 00:46:55,437
+424
+00:46:09,349 --> 00:46:10,434
 It's gold, boy.
 
-431
-00:46:55,437 --> 00:46:59,149
+425
+00:46:10,434 --> 00:46:15,063
 Gold produced from that 
 secret Yamashiro mine.
 
-432
-00:47:01,068 --> 00:47:03,237
+426
+00:46:16,982 --> 00:46:19,151
 The ship ran aground 
 during the storm...
 
-433
-00:47:03,237 --> 00:47:07,407
+427
+00:46:19,151 --> 00:46:23,322
 Probably on its way to the Shogun 
 of the Dark with caskets of gold.
 
-434
-00:47:07,574 --> 00:47:11,912
+428
+00:46:23,489 --> 00:46:27,826
 Gold that's probably been 
 hidden for the last five years.
 
-435
-00:47:12,162 --> 00:47:14,373
+429
+00:46:28,076 --> 00:46:30,287
 If it reaches his hands,
 
-436
-00:47:14,373 --> 00:47:17,042
+430
+00:46:30,287 --> 00:46:32,956
 he'll be powerful enough to 
 topple the Tokugawa government...
 
-437
-00:47:17,042 --> 00:47:19,211
+431
+00:46:32,956 --> 00:46:35,125
 ...and plunge the country 
 into another civil war.
 
-438
-00:47:19,419 --> 00:47:21,463
+432
+00:46:35,334 --> 00:46:37,377
 We have to stop it at any cost!
 
-439
-00:47:25,884 --> 00:47:28,512
+433
+00:46:41,799 --> 00:46:44,426
 Dakuan, you've got a tail.
 
-440
-00:47:28,512 --> 00:47:29,263
+434
+00:46:44,426 --> 00:46:45,177
 What?!
 
-441
-00:47:39,815 --> 00:47:41,692
+435
+00:46:55,729 --> 00:46:57,606
 Kunoichi, what are you doing?!
 
-442
-00:47:42,025 --> 00:47:45,445
+436
+00:46:57,940 --> 00:47:01,360
 I'm calling a Koga ninja 
 bird that's in this village.
 
-443
-00:47:46,071 --> 00:47:47,531
+437
+00:47:01,985 --> 00:47:03,445
 Calling a bird? What for?
 
-444
-00:47:48,031 --> 00:47:50,617
+438
+00:47:03,946 --> 00:47:06,532
 It'll carry my message to 
 the castle chamberlain.
 
-445
-00:47:50,868 --> 00:47:52,870
+439
+00:47:06,782 --> 00:47:08,784
 I've discovered 
 what they're after.
 
-446
-00:47:52,870 --> 00:47:56,665
+440
+00:47:08,784 --> 00:47:12,579
 Ln two hours, his army 
 will surround the town.
 
-447
-00:47:57,082 --> 00:47:58,667
+441
+00:47:12,996 --> 00:47:14,581
 It's not as easy as you think.
 
-448
-00:47:59,001 --> 00:48:02,129
+442
+00:47:14,915 --> 00:47:18,043
 The Mochizuki clan will probably 
 ignore this whole thing.
 
-449
-00:48:02,588 --> 00:48:03,130
+443
+00:47:18,502 --> 00:47:19,044
 Why?!
 
-450
-00:48:07,884 --> 00:48:09,720
+444
+00:47:23,799 --> 00:47:25,634
 The future of the 
 clan is at stake.
 
-451
-00:48:09,720 --> 00:48:12,806
+445
+00:47:25,634 --> 00:47:28,720
 This is a power struggle between the 
 Tokugawa and the Shogun of the Dark.
 
-452
-00:48:12,806 --> 00:48:17,019
+446
+00:47:28,720 --> 00:47:32,933
 If a small clan like the Mochizuki 
 got involved, it'd be smashed !
 
-453
-00:48:20,147 --> 00:48:23,692
+447
+00:47:36,061 --> 00:47:39,606
 See nothing, hear nothing. That's 
 the best course for the clan.
 
-454
-00:48:35,412 --> 00:48:37,956
+448
+00:47:51,326 --> 00:47:53,870
 We'll find out soon whether or 
 not the Mochizuki will move.
 
-455
-00:48:59,645 --> 00:49:00,520
+449
+00:48:15,559 --> 00:48:16,435
 Shit!
 
-456
-00:49:01,521 --> 00:49:02,272
+450
+00:48:17,436 --> 00:48:18,186
 Uh-oh!
 
-457
-00:49:22,793 --> 00:49:24,002
+451
+00:48:32,534 --> 00:48:33,744
 Kunoichi in Custody
 
-458
-00:49:24,002 --> 00:49:28,757
+452
+00:48:33,744 --> 00:48:38,498
 Kunoichi in Custody It must have 
 happened when I went off for a moment.
 
-459
-00:49:28,757 --> 00:49:29,633
+453
+00:48:38,498 --> 00:48:39,374
 Kunoichi in Custody
 
-460
-00:49:30,092 --> 00:49:33,053
+454
+00:48:39,833 --> 00:48:42,794
 She's most likely dead.
 
-461
-00:49:33,929 --> 00:49:36,973
+455
+00:48:43,670 --> 00:48:46,715
 Well, we've got work to do.
 
-462
-00:49:36,973 --> 00:49:39,434
+456
+00:48:46,715 --> 00:48:49,176
 We'll get no help from 
 the Mochizuki clan.
 
-463
-00:49:43,021 --> 00:49:45,399
+457
+00:48:52,763 --> 00:48:55,140
 Don't fall for their trap.
 
-464
-00:49:45,816 --> 00:49:46,650
+458
+00:48:55,557 --> 00:48:56,391
 Wait!
 
-465
-00:49:47,984 --> 00:49:50,570
+459
+00:48:57,726 --> 00:49:00,312
 What if their ship comes 
 while you're at it?
 
-466
-00:49:50,570 --> 00:49:54,074
+460
+00:49:00,312 --> 00:49:03,815
 Let her alone! A dead Kunoichi 
 isn't that important!
 
-467
-00:49:55,075 --> 00:49:56,952
+461
+00:49:04,816 --> 00:49:06,693
 Not important compared 
 to the great mission?
 
-468
-00:49:56,952 --> 00:49:58,954
+462
+00:49:06,693 --> 00:49:08,695
 You're as much of a 
 monster as they are!
 
-469
-00:49:58,954 --> 00:50:03,583
+463
+00:49:08,695 --> 00:49:13,325
 Fool! When you fight monsters, you 
 become one yourself or you can't win!
 
-470
-00:50:05,043 --> 00:50:09,589
+464
+00:49:14,785 --> 00:49:19,331
 You damn fool boy! Go ahead ! 
 GO TO HELL!
 
-471
-00:50:09,589 --> 00:50:12,926
+465
+00:49:19,331 --> 00:49:22,668
 Damn you... !
 
-472
-00:50:56,344 --> 00:50:57,137
+466
+00:50:06,086 --> 00:50:06,878
 Are you all right?
 
-473
-00:50:59,723 --> 00:51:00,432
+467
+00:50:09,464 --> 00:50:10,173
 Kagero!
 
-474
-00:51:19,576 --> 00:51:23,455
+468
+00:50:29,317 --> 00:50:33,196
 You're hard to kill, but... 
 Woman, release his pain.
 
-475
-00:51:46,478 --> 00:51:48,814
+469
+00:50:56,219 --> 00:50:58,555
 Kibagami Jubei?
 
-476
-00:51:49,147 --> 00:51:52,150
+470
+00:50:58,889 --> 00:51:01,892
 Yes. But we've already 
 killed them all.
 
-477
-00:51:52,150 --> 00:51:54,903
+471
+00:51:01,892 --> 00:51:04,644
 Idiot! They still live.
 
-478
-00:51:56,238 --> 00:51:57,656
+472
+00:51:05,979 --> 00:51:07,397
 I'll kill him, for sure!
 
-479
-00:51:57,656 --> 00:52:02,118
+473
+00:51:07,397 --> 00:51:11,860
 Stay where you are. Lure 
 them there and kill them.
 
-480
-00:52:02,410 --> 00:52:03,662
+474
+00:51:12,152 --> 00:51:13,403
 Understand?
 
-481
-00:52:03,662 --> 00:52:04,120
+475
+00:51:13,403 --> 00:51:13,862
 Yes.
 
-482
-00:52:10,335 --> 00:52:12,796
+476
+00:51:20,077 --> 00:51:22,537
 Never would I have 
 imagined to see him here.
 
-483
-00:52:13,004 --> 00:52:15,549
+477
+00:51:22,746 --> 00:51:25,290
 I look forward to seeing 
 you again, Jubei.
 
-484
-00:52:17,300 --> 00:52:18,802
+478
+00:51:27,042 --> 00:51:28,543
 Genma!
 
-485
-00:52:23,849 --> 00:52:25,183
+479
+00:51:33,590 --> 00:51:34,925
 I'm sorry.
 
-486
-00:52:26,101 --> 00:52:30,147
+480
+00:51:35,842 --> 00:51:39,888
 Forget it. I take it the castle 
 retainers haven't taken any action?
 
-487
-00:52:31,648 --> 00:52:34,025
+481
+00:51:41,389 --> 00:51:43,767
 It's been two hours.
 
-488
-00:52:34,609 --> 00:52:36,027
+482
+00:51:43,433 --> 00:51:45,769
 I see.
 
-489
-00:52:39,948 --> 00:52:43,660
+483
+00:51:49,689 --> 00:51:53,401
 Why... You knew it was a trap, 
 but you came to help me.
 
-490
-00:52:43,660 --> 00:52:47,080
+484
+00:51:53,401 --> 00:51:56,822
 It was stupid. Why 
 risk your life for me?
 
-491
-00:52:47,080 --> 00:52:49,040
+485
+00:51:56,822 --> 00:51:58,782
 Because I can't just 
 toss aside my comrade.
 
-492
-00:52:49,165 --> 00:52:49,916
+486
+00:51:58,907 --> 00:51:59,658
 Comrade?
 
-493
-00:52:50,625 --> 00:52:54,796
+487
+00:52:00,367 --> 00:52:04,538
 Yes. We've saved each other 
 over and over since yesterday.
 
-494
-00:52:54,796 --> 00:52:56,173
+488
+00:52:04,538 --> 00:52:05,914
 You're a precious friend to me.
 
-495
-00:53:05,432 --> 00:53:06,183
+489
+00:52:15,173 --> 00:52:15,924
 Stay!
 
-496
-00:53:06,725 --> 00:53:09,352
+490
+00:52:16,466 --> 00:52:19,094
 The Mochizuki clan is 
 staying out of this one.
 
-497
-00:53:09,352 --> 00:53:11,187
+491
+00:52:19,094 --> 00:52:20,929
 Your mission is over.
 
-498
-00:53:11,563 --> 00:53:14,941
+492
+00:52:21,304 --> 00:52:24,683
 No, it isn't. I'm 
 still in debt to you.
 
-499
-00:53:16,693 --> 00:53:18,278
+493
+00:52:26,434 --> 00:52:28,019
 You can pay it back later.
 
-500
-00:53:19,154 --> 00:53:21,364
+494
+00:52:28,895 --> 00:52:31,106
 Not if you're dead !
 
-501
-00:53:21,489 --> 00:53:23,283
+495
+00:52:31,231 --> 00:52:33,024
 I'll repay it here!
 
-502
-00:53:33,335 --> 00:53:35,045
+496
+00:52:43,076 --> 00:52:44,786
 What are you doing?
 
-503
-00:53:41,218 --> 00:53:44,679
+497
+00:52:50,959 --> 00:52:54,421
 The old man told me how 
 to counteract the poison.
 
-504
-00:53:45,972 --> 00:53:47,766
+498
+00:52:55,714 --> 00:52:57,507
 "Kill poison with poison."
 
-505
-00:53:48,141 --> 00:53:52,437
+499
+00:52:57,883 --> 00:53:02,178
 He said if you make love to a 
 poison-taster like me, you'll be cured.
 
-506
-00:53:55,106 --> 00:53:56,650
+500
+00:53:04,848 --> 00:53:06,391
 Take me...
 
-507
-00:54:52,914 --> 00:54:55,750
+501
+00:54:02,656 --> 00:54:05,784
 We've been waiting ! Load 
 the ship immediately!
 
-508
-00:55:22,569 --> 00:55:25,864
+502
+00:54:32,310 --> 00:54:35,605
 You! Well, I warned 
 you, didn't I?
 
-509
-00:55:25,864 --> 00:55:29,117
+503
+00:54:35,605 --> 00:54:38,858
 We've lost. We'll never 
 beat that many men.
 
-510
-00:55:29,617 --> 00:55:33,705
+504
+00:54:39,359 --> 00:54:43,446
 I don't intend to let them go. 
 We'll make our stand soon.
 
-511
-00:55:34,581 --> 00:55:35,832
+505
+00:54:44,322 --> 00:54:45,573
 What are you planning?
 
-512
-00:55:35,999 --> 00:55:38,835
+506
+00:54:44,823 --> 00:54:48,576
 When they finish 
 loading the gold...
 
-513
-00:55:38,835 --> 00:55:40,754
+507
+00:54:48,576 --> 00:54:50,495
 ...go to the tower 
 and ring the bell.
 
-514
-00:55:41,046 --> 00:55:44,257
+508
+00:54:50,787 --> 00:54:53,081
 While they're distracted, 
 I'll sneak onboard the ship.
 
-515
-00:55:44,507 --> 00:55:47,385
+509
+00:54:54,249 --> 00:54:57,127
 When we're out at sea, 
 we won't need any storm.
 
-516
-00:55:47,385 --> 00:55:49,137
+510
+00:54:57,127 --> 00:54:58,878
 I'll sink it myself.
 
-517
-00:55:49,262 --> 00:55:50,138
+511
+00:54:59,004 --> 00:54:59,879
 Very well.
 
-518
-00:55:51,014 --> 00:55:54,726
+512
+00:55:00,755 --> 00:55:04,467
 By the way, did you make 
 love to that Kunoichi?
 
-519
-00:55:56,269 --> 00:56:00,190
+513
+00:55:06,011 --> 00:55:09,931
 None of your damn business! 
 Now get going !
 
-520
-00:56:22,420 --> 00:56:25,131
+514
+00:55:32,162 --> 00:55:34,873
 Genma... Where are you?
 
-521
-00:56:25,256 --> 00:56:28,510
+515
+00:55:34,998 --> 00:55:38,251
 When I die, I'll take 
 you to hell with me!
 
-522
-00:57:00,708 --> 00:57:03,169
+516
+00:56:10,450 --> 00:56:11,993
 The Mochizuki clan?! They're 
 moving against them!
 
-523
-00:57:08,591 --> 00:57:10,718
+517
+00:56:18,333 --> 00:56:20,460
 Ah, Kunoichi! You've 
 done a fine job.
 
-524
-00:57:11,094 --> 00:57:13,138
+518
+00:56:20,835 --> 00:56:22,879
 Hurry, before they get away! 
 Where are the others?
 
-525
-00:57:14,639 --> 00:57:17,475
+519
+00:56:24,381 --> 00:56:27,217
 Don't worry. They've got 
 this place surrounded.
 
-526
-00:57:18,017 --> 00:57:19,894
+520
+00:56:27,759 --> 00:56:29,636
 Then hurry!
 
-527
-00:57:38,288 --> 00:57:40,123
+521
+00:56:48,029 --> 00:56:49,864
 Jubei...
 
-528
-00:57:48,131 --> 00:57:49,716
+522
+00:56:57,872 --> 00:56:59,457
 Kagero!
 
-529
-00:57:51,259 --> 00:57:52,594
+523
+00:57:01,000 --> 00:57:02,335
 Stop! It's a trap!
 
-530
-00:57:53,386 --> 00:57:57,724
+524
+00:57:03,128 --> 00:57:07,465
 Fool! Sakaki Hyobu 
 died two days ago.
 
-531
-00:58:11,779 --> 00:58:13,615
+525
+00:57:21,521 --> 00:57:23,356
 I killed him personally.
 
-532
-00:58:14,115 --> 00:58:16,868
+526
+00:57:23,857 --> 00:57:26,609
 Genma!
 
-533
-00:58:40,350 --> 00:58:43,770
+527
+00:57:50,091 --> 00:57:53,511
 Sir, please get aboard 
 the ship quickly.
 
-534
-00:58:43,770 --> 00:58:47,357
+528
+00:57:53,511 --> 00:57:57,098
 The retainers of the Shogun 
 of the Dark are waiting.
 
-535
-00:58:48,191 --> 00:58:52,403
+529
+00:57:57,932 --> 00:58:02,145
 Leave Jubei to me. Upon my 
 honor, I will not fail.
 
-536
-00:58:53,363 --> 00:58:56,699
+530
+00:58:03,104 --> 00:58:06,441
 Please grant me this one wish.
 
-537
-00:59:00,995 --> 00:59:02,789
+531
+00:58:10,737 --> 00:58:12,530
 Very well then. Go.
 
-538
-00:59:30,775 --> 00:59:34,737
+532
+00:58:40,517 --> 00:58:44,479
 Stay out of this. Don't shame me 
 any more than you already have.
 
-539
-00:59:37,240 --> 00:59:38,866
+533
+00:58:46,981 --> 00:58:48,608
 So, you are Genma?
 
-540
-00:59:39,409 --> 00:59:42,912
+534
+00:58:49,150 --> 00:58:52,654
 The Mochizuki clan 
 suspects nothing, correct?
 
-541
-00:59:42,912 --> 00:59:44,914
+535
+00:58:52,654 --> 00:58:54,656
 Yes. All is well.
 
-542
-00:59:44,914 --> 00:59:49,335
+536
+00:58:54,656 --> 00:58:59,077
 You've done a splendid job. I 
 admire you Devils of Kimon.
 
-543
-00:59:49,419 --> 00:59:52,463
+537
+00:58:59,160 --> 00:59:02,205
 The Shogun of the 
 Dark will be pleased.
 
-544
-01:00:25,622 --> 01:00:27,665
+538
+00:59:35,363 --> 00:59:37,407
 Writhe in pain before you die.
 
-545
-01:01:03,618 --> 01:01:06,621
+539
+01:00:13,359 --> 01:00:16,362
 Yurimaru seems to have 
 suffered some ill fortune!
 
-546
-01:01:06,621 --> 01:01:09,082
+540
+01:00:16,362 --> 01:00:18,823
 How careless of him to 
 have fallen into my trap.
 
-547
-01:01:11,459 --> 01:01:13,920
+541
+01:00:21,200 --> 01:00:23,661
 It was your own fault, Yurimaru.
 
-548
-01:01:17,673 --> 01:01:18,716
+542
+01:00:27,415 --> 01:00:28,458
 Let's go.
 
-549
-01:01:21,803 --> 01:01:22,804
+543
+01:00:31,544 --> 01:00:32,545
 Kagero!
 
-550
-01:01:32,647 --> 01:01:34,816
+544
+01:00:42,388 --> 01:00:44,557
 Hang on! Kagero!
 
-551
-01:01:38,694 --> 01:01:39,987
+545
+01:00:48,436 --> 01:00:49,729
 Jubei...
 
-552
-01:01:40,488 --> 01:01:41,823
+546
+01:00:50,229 --> 01:00:51,564
 I told you not to come.
 
-553
-01:01:43,282 --> 01:01:46,994
+547
+01:00:53,024 --> 01:00:56,736
 I wanted... to apologize...
 
-554
-01:01:50,498 --> 01:01:52,917
+548
+01:01:00,239 --> 01:01:02,658
 It was the first time...
 
-555
-01:01:52,917 --> 01:01:56,671
+549
+01:01:02,658 --> 01:01:06,412
 You didn't treat me like 
 some poison-taster...
 
-556
-01:01:56,671 --> 01:01:59,841
+550
+01:01:06,412 --> 01:01:09,582
 ...but like a normal woman.
 
-557
-01:02:52,059 --> 01:02:57,732
+551
+01:02:01,801 --> 01:02:07,473
 Jubei... I'm glad... 
 I met you...
 
-558
-01:04:32,118 --> 01:04:37,748
+552
+01:03:41,859 --> 01:03:47,490
 Genma, with the gold's help our 
 dream will soon be reality.
 
-559
-01:04:37,748 --> 01:04:38,791
+553
+01:03:47,490 --> 01:03:48,533
 "Our" dream?
 
-560
-01:04:38,791 --> 01:04:44,714
+554
+01:03:48,533 --> 01:03:54,455
 Our great dream to topple the Shogunate 
 and restore the reign of the Toyotomi.
 
-561
-01:04:44,922 --> 01:04:46,841
+555
+01:03:54,664 --> 01:03:56,582
 You don't understand...
 
-562
-01:04:46,841 --> 01:04:50,428
+556
+01:03:56,582 --> 01:04:00,169
 How we, the former retainers 
 of Toyotomi, have suffered.
 
-563
-01:04:50,761 --> 01:04:54,348
+557
+01:04:00,503 --> 01:04:04,090
 Now it'll be the Tokugawa who 
 suffer the agony and torment.
 
-564
-01:04:54,348 --> 01:05:00,146
+558
+01:04:04,090 --> 01:04:09,887
 We'll use the gold to buy advanced weapons 
 from Spain and defeat the Tokugawa.
 
-565
-01:05:00,146 --> 01:05:04,650
+559
+01:04:09,887 --> 01:04:14,392
 That is the dream of all of us who 
 work for the Shogun of the Dark.
 
-566
-01:05:05,484 --> 01:05:06,652
+560
+01:04:15,226 --> 01:04:16,394
 Nonsense.
 
-567
-01:05:08,362 --> 01:05:09,614
+561
+01:04:18,104 --> 01:04:19,355
 What did you say?!
 
-568
-01:05:09,822 --> 01:05:11,574
+562
+01:04:19,564 --> 01:04:21,315
 I said nonsense.
 
-569
-01:05:11,574 --> 01:05:14,660
+563
+01:04:21,315 --> 01:04:24,402
 Hold your tongue! 
 You're a mere ninja!
 
-570
-01:05:14,660 --> 01:05:16,621
+564
+01:04:24,402 --> 01:04:26,362
 My dream is different.
 
-571
-01:05:16,621 --> 01:05:19,582
+565
+01:04:26,362 --> 01:04:29,323
 The gold isn't going to 
 the Shogun of the Dark.
 
-572
-01:05:19,582 --> 01:05:20,333
+566
+01:04:29,323 --> 01:04:30,074
 What?!
 
-573
-01:05:20,333 --> 01:05:22,543
+567
+01:04:30,074 --> 01:04:32,285
 We, the Devils of Kimon, 
 will take the gold.
 
-574
-01:05:22,668 --> 01:05:24,211
+568
+01:04:32,410 --> 01:04:33,953
 You impudent... !
 
-575
-01:05:26,213 --> 01:05:30,551
+569
+01:04:35,955 --> 01:04:40,293
 I'll use it to organize the most 
 powerful army of ninja ever.
 
-576
-01:05:30,551 --> 01:05:35,181
+570
+01:04:40,293 --> 01:04:44,922
 And we'll rule the country with 
 terror and power from the shadows.
 
-577
-01:05:35,473 --> 01:05:38,434
+571
+01:04:45,214 --> 01:04:48,175
 Anyone who opposes me, 
 Tokugawa or Toyotomi...
 
-578
-01:05:38,434 --> 01:05:41,479
+572
+01:04:48,175 --> 01:04:51,220
 ...even the Shogun of the 
 Dark himself, shall die.
 
-579
-01:05:42,897 --> 01:05:47,068
+573
+01:04:52,638 --> 01:04:56,809
 Meaning the true Shogun of the Dark... 
 will be me.
 
-580
-01:06:04,543 --> 01:06:10,383
+574
+01:05:14,285 --> 01:05:20,124
 Well now, you're here! I was 
 just wishing you'd come.
 
-581
-01:06:10,383 --> 01:06:11,467
+575
+01:05:20,124 --> 01:05:21,208
 I'm glad to hear that.
 
-582
-01:06:11,968 --> 01:06:13,636
+576
+01:05:21,709 --> 01:05:23,377
 Of course.
 
-583
-01:06:13,636 --> 01:06:19,141
+577
+01:05:23,377 --> 01:05:28,883
 Without your help, sinking a big 
 ship like this would be impossible!
 
-584
-01:06:25,523 --> 01:06:26,607
+578
+01:05:35,264 --> 01:05:36,349
 Pathetic old fool!
 
-585
-01:06:28,234 --> 01:06:29,110
+579
+01:05:37,975 --> 01:05:38,851
 Over here.
 
-586
-01:06:39,787 --> 01:06:40,746
+580
+01:05:49,528 --> 01:05:50,488
 What's wrong?
 
-587
-01:06:41,580 --> 01:06:44,625
+581
+01:05:51,322 --> 01:05:54,367
 Fire in the hold ! 
 We're gonna sink!
 
-588
-01:06:44,750 --> 01:06:46,460
+582
+01:05:54,492 --> 01:05:56,202
 Idiot! Put out the fire!
 
-589
-01:06:46,585 --> 01:06:48,671
+583
+01:05:56,327 --> 01:05:58,412
 Impossible! It's a sea of flame!
 
-590
-01:06:48,796 --> 01:06:51,424
+584
+01:05:58,537 --> 01:06:01,165
 Put it out! Fight it!
 
-591
-01:06:51,549 --> 01:06:53,551
+585
+01:06:01,290 --> 01:06:03,292
 Move it! Move it!
 
-592
-01:06:53,926 --> 01:06:55,386
+586
+01:06:03,668 --> 01:06:05,127
 Forget it! Run!
 
-593
-01:07:04,311 --> 01:07:05,062
+587
+01:06:14,053 --> 01:06:14,804
 Master Genma!
 
-594
-01:07:06,230 --> 01:07:07,690
+588
+01:06:15,971 --> 01:06:17,431
 Pass this message to everyone:
 
-595
-01:07:07,815 --> 01:07:12,987
+589
+01:06:17,556 --> 01:06:22,728
 "Abandon ship and hide yourselves. 
 I'll call for you someday."
 
-596
-01:07:12,987 --> 01:07:13,988
+590
+01:06:22,728 --> 01:06:23,729
 Go.
 
-597
-01:07:53,611 --> 01:07:54,612
+591
+01:07:02,435 --> 01:07:03,436
 Genma!
 
-598
-01:07:56,864 --> 01:07:59,950
+592
+01:07:06,605 --> 01:07:09,692
 I see you brought back some 
 devils from your trip to Hell.
 
-599
-01:08:08,959 --> 01:08:10,795
+593
+01:07:18,701 --> 01:07:20,536
 Kibagami Jubei...
 
-600
-01:08:10,920 --> 01:08:14,256
+594
+01:07:20,661 --> 01:07:23,080
 I should've finished 
 you with my own hands.
 
-601
-01:08:14,548 --> 01:08:17,218
+595
+01:07:24,290 --> 01:07:26,959
 Stop your whining. 
 It's too late.
 
-602
-01:08:19,094 --> 01:08:22,598
+596
+01:07:28,836 --> 01:07:32,339
 You want to avenge 
 the Kunoichi Kagero?
 
-603
-01:08:22,807 --> 01:08:26,018
+597
+01:07:32,548 --> 01:07:35,760
 She was trash in comparison 
 to what I've lost.
 
-604
-01:08:30,064 --> 01:08:31,816
+598
+01:07:39,805 --> 01:07:41,557
 You alone I can't forgive!
 
-605
-01:09:22,491 --> 01:09:25,828
+599
+01:08:32,233 --> 01:08:35,569
 I won't kill you yet. Not 
 before I make you suffer.
 
-606
-01:09:26,161 --> 01:09:28,414
+600
+01:08:35,903 --> 01:08:38,155
 I'll make you pay for 
 smashing my dream.
 
-607
-01:09:28,622 --> 01:09:33,419
+601
+01:08:38,364 --> 01:08:43,160
 Your dream? That you were going to 
 be the true Shogun of the Dark?
 
-608
-01:09:34,378 --> 01:09:35,838
+602
+01:08:44,120 --> 01:08:45,579
 Don't make me laugh.
 
-609
-01:09:36,338 --> 01:09:41,385
+603
+01:08:46,080 --> 01:08:51,126
 If you became shogun, you'd 
 make this a world of devils.
 
-610
-01:09:42,052 --> 01:09:46,807
+604
+01:08:51,794 --> 01:08:56,549
 If you enjoy their company so much... 
 then go back to hell!
 
-611
-01:10:04,033 --> 01:10:05,618
+605
+01:09:13,774 --> 01:09:15,359
 I'll kill you!
 
-612
-01:10:08,954 --> 01:10:11,040
+606
+01:09:18,696 --> 01:09:20,781
 No one can kill me.
 
-613
-01:10:15,461 --> 01:10:18,339
+607
+01:09:25,202 --> 01:09:28,080
 You of all people 
 should know by now...
 
-614
-01:10:21,258 --> 01:10:24,094
+608
+01:09:31,000 --> 01:09:33,836
 I am immortal.
 
-615
-01:10:27,264 --> 01:10:28,641
+609
+01:09:37,006 --> 01:09:38,382
 Is that so?
 
-616
-01:10:40,903 --> 01:10:44,406
+610
+01:09:49,685 --> 01:09:53,188
 If you keep coming 
 back to life...
 
-617
-01:10:44,949 --> 01:10:48,702
+611
+01:09:53,731 --> 01:09:57,484
 ...then I'll kill you as 
 many times as it takes!
 
-618
-01:12:00,566 --> 01:12:02,109
+612
+01:11:09,348 --> 01:11:10,891
 You fool!
 
-619
-01:12:47,488 --> 01:12:50,574
+613
+01:11:56,270 --> 01:11:59,356
 Genma! HERE YOU DIE!
 
-620
-01:13:49,007 --> 01:13:50,384
+614
+01:12:57,790 --> 01:12:59,166
 Jubei!
 
-621
-01:13:50,384 --> 01:13:54,763
+615
+01:12:59,166 --> 01:13:03,545
 You seem to be rid of the 
 poison, thanks to Kagero.
 
-622
-01:13:54,930 --> 01:13:59,351
+616
+01:13:03,712 --> 01:13:08,133
 The combination of a poison-tasting 
 Kunoichi and a talented lone wolf
 
-623
-01:13:59,351 --> 01:14:01,687
+617
+01:13:08,133 --> 01:13:10,469
 worked out even better 
 than I had planned.
 
-624
-01:14:01,895 --> 01:14:03,272
+618
+01:13:10,677 --> 01:13:12,054
 Go away.
 
-625
-01:14:07,860 --> 01:14:12,573
+619
+01:13:16,642 --> 01:13:21,355
 By the way, I'm sorry about losing Kagero. 
 A real pity, that!
 
-626
-01:14:12,656 --> 01:14:15,909
+620
+01:13:21,438 --> 01:13:24,691
 But for a scant few 
 moments, she was able to
 
-627
-01:14:15,909 --> 01:14:19,079
+621
+01:13:24,691 --> 01:13:27,861
 be an ordinary girl and 
 make love with you.
 
-628
-01:14:19,913 --> 01:14:21,915
+622
+01:13:28,695 --> 01:13:30,697
 Was that part of your plan, too?
 
-629
-01:14:21,915 --> 01:14:27,087
+623
+01:13:30,697 --> 01:13:35,869
 Exactly. To read and control peoples' 
 hearts is the true secret of the ninja.
 
-630
-01:14:28,755 --> 01:14:33,385
+624
+01:13:37,538 --> 01:13:42,167
 Still, only true sincerity 
 can move the human heart.
 
-631
-01:14:33,385 --> 01:14:36,263
+625
+01:13:42,167 --> 01:13:45,045
 A twisted old bastard 
 like me couldn't do it.
 
-632
-01:14:36,388 --> 01:14:40,142
+626
+01:13:45,170 --> 01:13:48,924
 You're a hell of a guy. 
 I really admire you.
 
-633
-01:14:40,142 --> 01:14:43,145
+627
+01:13:48,924 --> 01:13:51,927
 As promised, I'll be waiting 
 in Edo with your 100 ryo.
 
-634
-01:14:43,145 --> 01:14:45,063
+628
+01:13:51,927 --> 01:13:53,846
 Come and get it, if 
 you're still alive.
 
-635
-01:14:51,904 --> 01:14:55,407
+629
+01:14:00,686 --> 01:14:04,189
 That makes us even. Now 
 never cross my path again.
 
-636
-01:14:56,408 --> 01:15:00,120
+630
+01:14:05,190 --> 01:14:08,902
 You've beaten me. I thought I'd 
 shut your mouth in Edo, but...
 
-637
-01:15:00,120 --> 01:15:04,166
+631
+01:14:08,902 --> 01:14:12,948
 Still, in your condition you likely 
 won't even make it to the shore.
 
-638
-01:15:04,166 --> 01:15:06,877
+632
+01:14:12,948 --> 01:14:15,659
 Everything will end 
 just as I planned.
 
