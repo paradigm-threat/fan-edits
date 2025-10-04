@@ -29,11 +29,11 @@ I use a minimalist approach with the following rules:
 I cut scenes on the transition frame and then mix the audio between the recombined video. Sometimes a scene is too difficult to cut on the transition frame as the audio may overlap the next shot. In this case, I decouple the audio and video and re-arrange the scene as necessary to get the result I'm looking for. With this trick, I can change who is talking to whom and reduce the tension that exists in many movie dialog scenes. 
 
 ## Poster
-![Ninja Scroll Poster](Ninja%20Scroll%20(1993)%20-%20Minor%20Damage.jpg)
+![Ninja Scroll Poster](img/Ninja%20Scroll%20(1993)%20-%20Minor%20Damage.jpg)
 
 ## Trailer
+[Instagram](https://www.instagram.com/p/DPY5-TKAAk8/)
 [Amazon S3](https://paradigm-threat.s3.us-east-1.amazonaws.com/fanedits/trailers/TrailerDesktop.webm)
-
 [Bitchute](https://www.bitchute.com/video/mkqE6VBLC9mu/)
 
 ## Stats
