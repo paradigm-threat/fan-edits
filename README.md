@@ -23,31 +23,37 @@ They belong to **us**.
 
 ## Current list of completed Fan Edits:
 
-[2012 (2009) - Cover-Up Edition](FanMixes/2012%20%282009%29%20-%20Cover-Up%20Edition)
+[2012 (2009) - Salvation](/FanMixes/2012%20(2009)%20-%20Salvation "2012 (2009) - Salvation")
 
-[Alena Edition](FanMixes/Alena%20Edition)
+[Alien Resurrection (1997) - UnJossed](/FanMixes/Alien%20Resurrection%20(1997)%20-%20UnJossed "Alien Resurrection (1997) - UnJossed")
 
-[Alien Resurrection (1997) - UnJossed Edition](FanMixes/Alien%20Resurrection%20%281997%29%20-%20UnJossed%20Edition)
+[Congo (1995) - Incel](/FanMixes/Congo%20(1995)%20-%20Incel "Congo (1995) - Incel")
 
-[Congo (1995) - Incel Edition](FanMixes/Congo%20%281995%29%20-%20Incel%20Edition)
+[Final Fantasy (2001) - The Phantom Menace](/FanMixes/Final%20Fantasy%20(2001)%20-%20The%20Phantom%20Menace "Final Fantasy (2001) - The Phantom Menace")
 
-[Final Fantasy (2001) - The Phantom Menace](FanMixes/Final%20Fantasy%20%282001%29%20-%20The%20Phantom%20Menace)
+[Matrix Reloaded (2003) - Unlinked](/FanMixes/Matrix%20Reloaded%20(2003)%20-%20Unlinked "Matrix Reloaded (2003) - Unlinked")
 
-[Riddick (2013) - Unjinxed Edition](FanMixes/Riddick%20%282013%29%20-%20Unjinxed%20Edition)
+[Matrix Revolutions (2003) - Unlinked](/FanMixes/Matrix%20Revolutions%20(2003)%20-%20Unlinked "Matrix Revolutions (2003) - Unlinked")
 
-[Silent Hill (2006) - Nay Tomorrow Edition](FanMixes/Silent%20Hill%20%282006%29%20-%20Nay%20Tomorrow%20Edition)
+[Ninja Scroll (1993) - Minor Damage](/FanMixes/Ninja%20Scroll%20(1993)%20-%20Minor%20Damage "Ninja Scroll (1993) - Minor Damage")
 
-[Sonic Trilogy (2020-2024) - DeSchwartzed Edition](FanMixes/Sonic%20Trilogy%20-%20DeSchwartzed)
+[Riddick (2013) - Unjinxed](/FanMixes/Riddick%20(2013)%20-%20Unjinxed "Riddick (2013) - Unjinxed")
 
-[Terminator 3 (2003) - Brass Monkey Edition](FanMixes/Terminator%203%20%282003%29%20-%20Brass%20Monkey%20Edition)
+[Silent Hill (2006) - Nay Tomorrow](/FanMixes/Silent%20Hill%20(2006)%20-%20Nay%20Tomorrow "Silent Hill (2006) - Nay Tomorrow")
 
-[The Chronicles Of Riddick (2004) - Carolyn Fry Edition](FanMixes/The%20Chronicles%20Of%20Riddick%20%282004%29%20-%20Carolyn%20Fry%20Edition)
+[Sonic (2020) - DeSchwartzed](/FanMixes/Sonic%20(2020)%20-%20DeSchwartzed "Sonic (2020) - DeSchwartzed")
 
-[The Day After Tomorrow (2004) - Chemtrail Edition](FanMixes/The%20Day%20After%20Tomorrow%20%282004%29%20-%20Chemtrail%20Edition)
+[Sonic 2 (2022) - DeSchwartzed](/FanMixes/Sonic%202%20(2022)%20-%20DeSchwartzed "Sonic 2 (2022) - DeSchwartzed")
 
-[Thor Ragnarok (2017) - Kid friendly](FanMixes/Thor%20Ragnarok%20%282017%29%20-%20Kid%20friendly)
+[Sonic 3 (2024) - DeSchwartzed](/FanMixes/Sonic%203%20(2024)%20-%20DeSchwartzed "Sonic 3 (2024) - DeSchwartzed")
 
-[War of the Worlds (2005) - Family Therapy Edition](FanMixes/War%20of%20the%20Worlds%20%282005%29%20-%20Family%20Therapy%20Edition)
+[Terminator 3 (2003) - Brass Monkey](/FanMixes/Terminator%203%20(2003)%20-%20Brass%20Monkey "Terminator 3 (2003) - Brass Monkey")
+
+[The Chronicles Of Riddick (2004) - Fry's Edition](/FanMixes/The%20Chronicles%20Of%20Riddick%20(2004)%20-%20Fry's%20Edition "The Chronicles Of Riddick (2004) - Fry's Edition")
+
+[The Day After Tomorrow (2004) - Yuppocolypse](/FanMixes/The%20Day%20After%20Tomorrow%20(2004)%20-%20Yuppocolypse "The Day After Tomorrow (2004) - Yuppocolypse")
+
+[War of the Worlds (2005) - Family Therapy](/FanMixes/War%20of%20the%20Worlds%20(2005)%20-%20Family%20Therapy "War of the Worlds (2005) - Family Therapy")
 
 ## Distribution
 
@@ -61,18 +67,31 @@ To automatically request a download link to any of my movies, please click on th
 which should open your email client. Email me with the subject 'Request: ${title}' exactly.
 
 [Alien Resurrection UnJossed](mailto:ari@asu.edu?subject=Request:%20Alien%20Resurrection%20UnJossed)
+
 [Congo Incel](mailto:ari@asu.edu?subject=Request:%20Congo%20Incel)
+
 [Final Fantasy The Phantom Menace](mailto:ari@asu.edu?subject=Request:%20Final%20Fantasy%20The%20Phantom%20Menace)
+
 [Matrix Reloaded Unlinked](mailto:ari@asu.edu?subject=Request:%20Matrix%20Reloaded%20Unlinked)
+
 [Matrix Revolutions Unlinked](mailto:ari@asu.edu?subject=Request:%20Matrix%20Revolutions%20Unlinked)
+
 [Riddick Unjinxed](mailto:ari@asu.edu?subject=Request:%20Riddick%20Unjinxed)
+
 [Silent Hill Nay Tomorrow](mailto:ari@asu.edu?subject=Request:%20Silent%20Hill%20Nay%20Tomorrow)
+
 [Sonic DeSchwartzed](mailto:ari@asu.edu?subject=Request:%20Sonic%20DeSchwartzed)
+
 [Sonic 2 DeSchwartzed](mailto:ari@asu.edu?subject=Request:%20Sonic%202%20DeSchwartzed)
+
 [Sonic 3 DeSchwartzed](mailto:ari@asu.edu?subject=Request:%20Sonic%203%20DeSchwartzed)
+
 [Terminator 3 Brass Monkey](mailto:ari@asu.edu?subject=Request:%20Terminator%203%20Brass%20Monkey)
+
 [The Chronicles Of Riddick Fry's Edition](mailto:ari@asu.edu?subject=Request:%20The%20Chronicles%20Of%20Riddick%20Fry's%20Edition)
+
 [The Day After Tomorrow Yuppocolypse](mailto:ari@asu.edu?subject=Request:%20The%20Day%20After%20Tomorrow%20Yuppocolypse)
+
 [War of the Worlds Family Therapy](mailto:ari@asu.edu?subject=Request:%20War%20of%20the%20Worlds%20Family%20Therapy)
 
 ## How to make Chrome open the "mailto" links in Gmail Desktop
