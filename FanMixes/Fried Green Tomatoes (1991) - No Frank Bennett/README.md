@@ -28,6 +28,17 @@ This runs `scripts/kdenlive_from_subs.py` with:
 
 It also passes **`--join-fade-sec 0.35`** and **`--join-fade-min-gap 72`**: at seams where **more than 72 seconds** of source were removed (likely a location/time jump), a short **dip-to-black / audio fade** is written on the playlist entries. Ranges with **`"join_fade": false`** in `remove-frank-bennett-ranges.json` never get that treatment at their seams (used for the Ninny gossip cut in the same room).
 
+## Render final MKV (ffmpeg, two-pass HEVC, embedded subs)
+
+`render_final_mkv.py` reads **`playlist2`** trim points from the `.kdenlive`, builds an ffmpeg `trim`/`concat` graph from your rip, runs **libx265 two-pass** targeting ~**source-format bitrate** (video ≈ format average minus AAC 224 kb/s), re-encodes **5.1 AAC**, then muxes **`*.kdenlive.shifted.srt`** as a default English subtitle track.
+
+```bash
+python3 "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/render_final_mkv.py" \
+  --out "/path/to/Fried Green Tomatoes (1991) - No Frank Bennett - final.mkv"
+```
+
+Paths default to the FanMix folder; override with `--kdenlive`, `--video`, `--subs`, `--passlog`. Expect **many hours** on CPU (full pass over ~1.9 h of output). Logs: `render_final_mkv.log`. Intermediate files: `/tmp/fgt_no_frank_filter.txt`, `/tmp/x265_fgt_pass.log*`, `/tmp/fgt_no_frank_nosubs.mkv` (deleted after mux).
+
 ## Citations used to scope Frank / Ruth / trial material
 
 These are **plot and cast references**, not timing sources (timings are from the local SRT + `ffprobe` duration).
