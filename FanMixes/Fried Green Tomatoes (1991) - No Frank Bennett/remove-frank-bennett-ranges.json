@@ -1,7 +1,7 @@
 {
-  "description": "Auto-clustered SRT cues matching Frank Bennett plot + dialogue (see README). Plus manual removal: Ninny 'murdered that man' gossip (~6:54–7:04 ASS timeline = source ~414.85–424.34 s on extended rip). With --snap, kdenlive_from_subs expands each removal to last keyframe ≤ start and first keyframe ≥ end.",
+  "description": "Auto-clustered SRT cues matching Frank Bennett plot + dialogue (see README). Plus manual removal: Ninny 'murdered that man' gossip (~6:54–7:04 ASS timeline = source ~414.85–424.34 s on extended rip). With --snap, GOP-safe bounds. Use {\"join_fade\": false} on a range to force hard cuts at its seams; other large jumps get optional dip-fades when regenerating with --join-fade-sec.",
   "ranges": [
-    [414.85, 424.34],
+    {"start": 414.85, "end": 424.34, "join_fade": false},
     [435.31, 454.29],
     [1375.48, 1480.34],
     [1607.62, 1625.79],

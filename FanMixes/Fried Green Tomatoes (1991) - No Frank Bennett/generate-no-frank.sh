@@ -13,6 +13,8 @@ python3 "${ROOT}/scripts/kdenlive_from_subs.py" \
   --subs "${DIR}/Fried-Green-Tomatoes.en.srt" \
   --keep-full-timeline \
   --snap \
+  --join-fade-sec 0.35 \
+  --join-fade-min-gap 72 \
   --remove-ranges-json "${DIR}/remove-frank-bennett-ranges.json" \
   --out "${OUT}"
 echo "Wrote ${OUT}"

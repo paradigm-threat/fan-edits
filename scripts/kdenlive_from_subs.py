@@ -335,6 +335,23 @@ def parse_time_arg(s: str) -> float:
     return h * 3600 + mi * 60 + se + ms / 1000.0
 
 
+def merge_removal_specs(specs: List[Tuple[float, float, bool]]) -> List[Tuple[float, float, bool]]:
+    """Merge overlapping [start,end); join_fade is AND of overlapping flags (any False → False)."""
+    if not specs:
+        return []
+    cleaned = [(float(a), float(b), bool(jf)) for a, b, jf in specs if b > a]
+    cleaned.sort(key=lambda x: x[0])
+    merged: List[List[float | bool]] = [[cleaned[0][0], cleaned[0][1], cleaned[0][2]]]
+    for a, b, jf in cleaned[1:]:
+        pm = merged[-1]
+        if a < float(pm[1]):
+            pm[1] = max(float(pm[1]), b)
+            pm[2] = bool(pm[2]) and jf
+        else:
+            merged.append([a, b, jf])
+    return [(float(x[0]), float(x[1]), bool(x[2])) for x in merged]
+
+
 def merge_time_ranges(ranges: List[Tuple[float, float]]) -> List[Tuple[float, float]]:
     if not ranges:
         return []
@@ -382,18 +399,93 @@ def apply_cuts_to_cues_multi(cues: List[Cue], removals: List[Tuple[float, float]
     return out
 
 
-def load_remove_ranges_json(path: Path) -> List[Tuple[float, float]]:
+def load_remove_ranges_json(path: Path) -> List[Tuple[float, float, bool]]:
+    """
+    Each entry is (start, end, join_fade).
+    join_fade: if False, never add cross-fade at the timeline seam(s) for this removal.
+    Arrays [start,end] default join_fade True.
+    Objects may set \"join_fade\": false.
+    """
     raw = json.loads(path.read_text(encoding="utf-8"))
     if isinstance(raw, dict) and "ranges" in raw:
         raw = raw["ranges"]
     if not isinstance(raw, list):
         raise SystemExit("--remove-ranges-json must be a JSON array or {\"ranges\": [...]}")
-    out: List[Tuple[float, float]] = []
+    out: List[Tuple[float, float, bool]] = []
     for item in raw:
         if isinstance(item, (list, tuple)) and len(item) == 2:
-            out.append((float(item[0]), float(item[1])))
+            out.append((float(item[0]), float(item[1]), True))
+        elif isinstance(item, dict) and "start" in item and "end" in item:
+            jf = item.get("join_fade", True)
+            if isinstance(jf, str):
+                jf = jf.strip().lower() not in ("0", "false", "no", "off")
+            out.append((float(item["start"]), float(item["end"]), bool(jf)))
         else:
             raise SystemExit(f"Invalid range entry in JSON: {item!r}")
+    return out
+
+
+def snap_removal_edges_to_keyframes_meta(
+    specs: List[Tuple[float, float, bool]],
+    keyframes: List[float],
+    source_duration: float,
+) -> List[Tuple[float, float, bool]]:
+    """Same as snap_removal_edges_to_keyframes but preserves per-range join_fade flags."""
+    kf = sorted(set(keyframes))
+    merged = merge_removal_specs(specs)
+    if not kf:
+        return merged
+    out: List[Tuple[float, float, bool]] = []
+    prev_ce: Optional[float] = None
+    eps = 1e-4
+    for cs, ce, jf in merged:
+        if prev_ce is None:
+            kb = keyframe_at_or_before(kf, cs)
+            cs2 = float(kb if kb is not None else cs)
+        else:
+            lo = max(cs, prev_ce + eps)
+            ka0 = keyframe_at_or_after(kf, lo)
+            cs2 = float(ka0 if ka0 is not None else lo)
+        ka = keyframe_at_or_after(kf, ce)
+        ce2 = float(ka if ka is not None else ce)
+        cs2 = max((prev_ce or 0.0) + eps if prev_ce is not None else 0.0, min(cs2, source_duration))
+        ce2 = max(0.0, min(ce2, source_duration))
+        if ce2 <= cs2:
+            ce2 = min(source_duration, cs2 + 1.0 / 24.0)
+        out.append((cs2, ce2, jf))
+        prev_ce = ce2
+    return out
+
+
+def compute_join_fade_seconds(
+    segments: List[Segment],
+    removal_specs: List[Tuple[float, float, bool]],
+    fade_sec: float,
+    min_gap: float,
+) -> List[float]:
+    """
+    For each seam between consecutive keep segments, optional dip-to-black duration (seconds).
+    - Suppressed if the removed source gap overlaps any removal with join_fade False.
+    - Otherwise applied when the source gap (jump length) >= min_gap (background-change heuristic).
+    """
+    n = max(0, len(segments) - 1)
+    if fade_sec <= 0 or n == 0:
+        return [0.0] * n
+    out: List[float] = []
+    for j in range(n):
+        lo = segments[j].end
+        hi = segments[j + 1].start
+        gap = hi - lo
+        suppress = any(
+            (not join_fade) and rs < hi and re > lo for rs, re, join_fade in removal_specs
+        )
+        if suppress or gap < min_gap:
+            out.append(0.0)
+            continue
+        left_len = segments[j].end - segments[j].start
+        right_len = segments[j + 1].end - segments[j + 1].start
+        fd = min(fade_sec, gap * 0.45, left_len * 0.45, right_len * 0.45)
+        out.append(max(0.0, fd))
     return out
 
 
@@ -529,46 +621,6 @@ def keyframe_at_or_after(sorted_kf: List[float], t: float) -> Optional[float]:
     return None
 
 
-def snap_removal_edges_to_keyframes(
-    ranges: List[Tuple[float, float]],
-    keyframes: List[float],
-    source_duration: float,
-) -> List[Tuple[float, float]]:
-    """
-    GOP-safe removal bounds for playlist splices.
-
-    - First removal **start**: last keyframe <= cs (may extend slightly earlier).
-    - Every removal **end**: first keyframe >= ce (may extend slightly later).
-    - Later removal **starts**: first keyframe strictly after the previous
-      removal's end, and not before ``cs``, so a keep bridge between adjacent
-      JSON ranges is preserved.
-    """
-    kf = sorted(set(keyframes))
-    if not kf:
-        return merge_time_ranges(ranges)
-    merged = merge_time_ranges(ranges)
-    out: List[Tuple[float, float]] = []
-    prev_ce: Optional[float] = None
-    eps = 1e-4
-    for cs, ce in merged:
-        if prev_ce is None:
-            kb = keyframe_at_or_before(kf, cs)
-            cs2 = float(kb if kb is not None else cs)
-        else:
-            lo = max(cs, prev_ce + eps)
-            ka0 = keyframe_at_or_after(kf, lo)
-            cs2 = float(ka0 if ka0 is not None else lo)
-        ka = keyframe_at_or_after(kf, ce)
-        ce2 = float(ka if ka is not None else ce)
-        cs2 = max((prev_ce or 0.0) + eps if prev_ce is not None else 0.0, min(cs2, source_duration))
-        ce2 = max(0.0, min(ce2, source_duration))
-        if ce2 <= cs2:
-            ce2 = min(source_duration, cs2 + 1.0 / 24.0)
-        out.append((cs2, ce2))
-        prev_ce = ce2
-    return merge_time_ranges(out)
-
-
 def snap_to_nearest(sorted_times: List[float], t: float, window: float) -> Optional[float]:
     if not sorted_times:
         return None
@@ -635,6 +687,7 @@ def build_kdenlive_project(
     doc_uuid: str,
     fade_to_black: Optional[Tuple[float, float]] = None,
     fade_from_black: Optional[Tuple[float, float]] = None,
+    join_fade_secs: Optional[List[float]] = None,
 ) -> ET.ElementTree:
     """
     Builds a Kdenlive .kdenlive file shaped like the simpler KidFriendly projects:
@@ -729,6 +782,8 @@ def build_kdenlive_project(
     playlist_video = ET.SubElement(mlt, "playlist", {"id": "playlist3"})
     ET.SubElement(playlist_video, "property", {"name": "kdenlive:audio_track"}).text = "1"
 
+    last_e1: Optional[ET.Element] = None
+    last_e2: Optional[ET.Element] = None
     for idx, seg in enumerate(segments):
         a = seconds_to_timecode(seg.start)
         b = seconds_to_timecode(seg.end)
@@ -736,6 +791,75 @@ def build_kdenlive_project(
         ET.SubElement(e1, "property", {"name": "kdenlive:id"}).text = "5"
         e2 = ET.SubElement(playlist_video, "entry", {"in": a, "out": b, "producer": "chain0"})
         ET.SubElement(e2, "property", {"name": "kdenlive:id"}).text = "5"
+
+        if join_fade_secs and idx > 0 and last_e1 is not None and last_e2 is not None:
+            fd = join_fade_secs[idx - 1]
+            if fd > 0:
+                pseg = segments[idx - 1]
+                cseg = segments[idx]
+                p_end = pseg.end
+                p_start_f = max(pseg.start, p_end - fd)
+                c_start = cseg.start
+                c_end_f = min(cseg.end, c_start + fd)
+                if p_end > p_start_f and c_end_f > c_start:
+                    uid = str(uuid.uuid4())[:8]
+                    fv = ET.SubElement(
+                        last_e2,
+                        "filter",
+                        {"id": f"vjfadeout_{idx}_{uid}", "in": seconds_to_timecode(p_start_f), "out": seconds_to_timecode(p_end)},
+                    )
+                    for k, v in [
+                        ("start", "1"),
+                        ("level", "1"),
+                        ("mlt_service", "brightness"),
+                        ("kdenlive_id", "fade_to_black"),
+                        ("alpha", f"00:00:00.000=1;{seconds_to_timecode(p_end - p_start_f)}=0"),
+                    ]:
+                        ET.SubElement(fv, "property", {"name": k}).text = v
+                    fa = ET.SubElement(
+                        last_e1,
+                        "filter",
+                        {"id": f"ajfadeout_{idx}_{uid}", "in": seconds_to_timecode(p_start_f), "out": seconds_to_timecode(p_end)},
+                    )
+                    for k, v in [
+                        ("window", "75"),
+                        ("max_gain", "20dB"),
+                        ("mlt_service", "volume"),
+                        ("kdenlive_id", "fadeout"),
+                        ("gain", "1"),
+                        ("end", "0"),
+                        ("kdenlive:collapsed", "0"),
+                    ]:
+                        ET.SubElement(fa, "property", {"name": k}).text = v
+                    fv2 = ET.SubElement(
+                        e2,
+                        "filter",
+                        {"id": f"vjfadein_{idx}_{uid}", "in": seconds_to_timecode(c_start), "out": seconds_to_timecode(c_end_f)},
+                    )
+                    for k, v in [
+                        ("start", "1"),
+                        ("level", "1"),
+                        ("mlt_service", "brightness"),
+                        ("kdenlive_id", "fade_from_black"),
+                        ("alpha", f"00:00:00.000=0;{seconds_to_timecode(c_end_f - c_start)}=1"),
+                    ]:
+                        ET.SubElement(fv2, "property", {"name": k}).text = v
+                    fa2 = ET.SubElement(
+                        e1,
+                        "filter",
+                        {"id": f"ajfadein_{idx}_{uid}", "in": seconds_to_timecode(c_start), "out": seconds_to_timecode(c_end_f)},
+                    )
+                    for k, v in [
+                        ("window", "75"),
+                        ("max_gain", "20dB"),
+                        ("mlt_service", "volume"),
+                        ("kdenlive_id", "fadein"),
+                        ("gain", "0"),
+                        ("end", "1"),
+                    ]:
+                        ET.SubElement(fa2, "property", {"name": k}).text = v
+
+        last_e1, last_e2 = e1, e2
 
         # Optional fades for a cut join (source-domain times like existing projects).
         if fade_to_black and idx == 0:
@@ -911,7 +1035,7 @@ def main(argv: List[str]) -> int:
     )
     ap.add_argument(
         "--remove-ranges-json",
-        help="JSON file: [[start,end],...] or {\"ranges\":[[start,end],...]} (merged with --remove-range)",
+        help='JSON file: [[start,end],...] or {"ranges":[...]}; objects may set "join_fade": false (merged with --remove-range)',
     )
     ap.add_argument(
         "--keep-full-timeline",
@@ -919,6 +1043,18 @@ def main(argv: List[str]) -> int:
         help="Do not compress to dialog-only spans; keep full source except explicit --remove-range(s)",
     )
     ap.add_argument("--fade", type=float, default=0.0, help="Fade duration (seconds) at cut join (single cut only)")
+    ap.add_argument(
+        "--join-fade-sec",
+        type=float,
+        default=0.0,
+        help="Cross-fade (dip) duration at keep-segment seams when source jump >= --join-fade-min-gap (keep-full + removals only); 0 disables",
+    )
+    ap.add_argument(
+        "--join-fade-min-gap",
+        type=float,
+        default=72.0,
+        help="Minimum removed source seconds between clips to apply --join-fade-sec (same-room short jumps stay hard-cut)",
+    )
     ap.add_argument("--out", required=True, help="Output .kdenlive path")
     ap.add_argument("--debug-json", help="Optional debug JSON output path")
     args = ap.parse_args(argv)
@@ -938,24 +1074,23 @@ def main(argv: List[str]) -> int:
     source_duration = prof["duration"]
     timeline_duration = source_duration
 
-    remove_pairs: List[Tuple[float, float]] = []
+    remove_specs: List[Tuple[float, float, bool]] = []
     if args.remove_ranges_json:
-        remove_pairs.extend(load_remove_ranges_json(Path(args.remove_ranges_json).expanduser().resolve()))
+        remove_specs.extend(load_remove_ranges_json(Path(args.remove_ranges_json).expanduser().resolve()))
     if args.remove_range:
         for pair in args.remove_range:
-            remove_pairs.append((parse_time_arg(pair[0]), parse_time_arg(pair[1])))
-    for cs, ce in remove_pairs:
+            remove_specs.append((parse_time_arg(pair[0]), parse_time_arg(pair[1]), True))
+    for cs, ce, _jf in remove_specs:
         if cs < 0 or ce < 0 or ce <= cs:
             raise SystemExit("Each remove range must have START < END and both >= 0")
-    remove_pairs = [(cs, min(ce, source_duration)) for cs, ce in remove_pairs]
-    remove_pairs = [(cs, ce) for cs, ce in remove_pairs if ce > cs]
-    cut_ranges_merged = merge_time_ranges(remove_pairs)
+    remove_specs = [(cs, min(ce, source_duration), jf) for cs, ce, jf in remove_specs]
+    remove_specs = [(cs, ce, jf) for cs, ce, jf in remove_specs if ce > cs]
+    merged_specs = merge_removal_specs(remove_specs)
     keyframes_cache: Optional[List[float]] = None
-    if args.snap and cut_ranges_merged:
+    if args.snap and merged_specs:
         keyframes_cache = ffprobe_keyframes(video)
-        cut_ranges_merged = snap_removal_edges_to_keyframes(
-            cut_ranges_merged, keyframes_cache, source_duration
-        )
+        merged_specs = snap_removal_edges_to_keyframes_meta(merged_specs, keyframes_cache, source_duration)
+    cut_ranges_merged = [(a, b) for a, b, _ in merged_specs]
     if len(cut_ranges_merged) > 1 and not args.keep_full_timeline:
         raise SystemExit("Multiple --remove-range entries require --keep-full-timeline (dialog+multi-cut is unsupported).")
 
@@ -969,6 +1104,7 @@ def main(argv: List[str]) -> int:
     fade_from_black = None
     boundaries: List[Tuple[float, float]] = []
     snap_debug: List[dict] = []
+    join_fade_secs_list: Optional[List[float]] = None
 
     if args.keep_full_timeline:
         if cut_ranges_merged:
@@ -982,6 +1118,14 @@ def main(argv: List[str]) -> int:
                 fade_from_black = (ce, min(ce + f, source_duration))
         else:
             segments = [Segment(start=0.0, end=source_duration, note="full")]
+        if (
+            len(segments) > 1
+            and cut_ranges_merged
+            and args.join_fade_sec > 0
+        ):
+            join_fade_secs_list = compute_join_fade_seconds(
+                segments, merged_specs, args.join_fade_sec, args.join_fade_min_gap
+            )
     else:
         if cut_ranges_merged:
             cs, ce = cut_ranges_merged[0]
@@ -1027,6 +1171,7 @@ def main(argv: List[str]) -> int:
         doc_uuid=doc_uuid,
         fade_to_black=fade_to_black,
         fade_from_black=fade_from_black,
+        join_fade_secs=join_fade_secs_list,
     )
     indent(tree.getroot())
     tree.write(out_kdenlive, encoding="utf-8", xml_declaration=True)

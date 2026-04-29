@@ -24,7 +24,9 @@ This runs `scripts/kdenlive_from_subs.py` with:
 - `--remove-ranges-json` — `remove-frank-bennett-ranges.json`.
 - Outputs `.kdenlive`, `.kdenlive.ass`, and `.kdenlive.shifted.srt` for the edited timeline.
 
-`generate-no-frank.sh` passes **`--snap`**: removal windows are expanded to **GOP-safe** cuts — each range starts at the **last keyframe ≤** the JSON start time and ends at the **first keyframe ≥** the JSON end time (see `snap_removal_edges_to_keyframes` in `scripts/kdenlive_from_subs.py`). This is slower (one `ffprobe` keyframe pass on the whole file).
+`generate-no-frank.sh` passes **`--snap`**: removal windows are expanded to **GOP-safe** cuts — each range starts at the **last keyframe ≤** the JSON start time and ends at the **first keyframe ≥** the JSON end time (see `snap_removal_edges_to_keyframes_meta` in `scripts/kdenlive_from_subs.py`). This is slower (one `ffprobe` keyframe pass on the whole file).
+
+It also passes **`--join-fade-sec 0.35`** and **`--join-fade-min-gap 72`**: at seams where **more than 72 seconds** of source were removed (likely a location/time jump), a short **dip-to-black / audio fade** is written on the playlist entries. Ranges with **`"join_fade": false`** in `remove-frank-bennett-ranges.json` never get that treatment at their seams (used for the Ninny gossip cut in the same room).
 
 ## Citations used to scope Frank / Ruth / trial material
 
