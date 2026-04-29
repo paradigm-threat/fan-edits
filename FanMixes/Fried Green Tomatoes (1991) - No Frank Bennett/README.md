@@ -24,7 +24,7 @@ This runs `scripts/kdenlive_from_subs.py` with:
 - `--remove-ranges-json` — `remove-frank-bennett-ranges.json`.
 - Outputs `.kdenlive`, `.kdenlive.ass`, and `.kdenlive.shifted.srt` for the edited timeline.
 
-Optional: add `--snap` to the script invocation for keyframe-aligned cuts (slower; uses `ffprobe` on the whole file).
+`generate-no-frank.sh` passes **`--snap`**: removal windows are expanded to **GOP-safe** cuts — each range starts at the **last keyframe ≤** the JSON start time and ends at the **first keyframe ≥** the JSON end time (see `snap_removal_edges_to_keyframes` in `scripts/kdenlive_from_subs.py`). This is slower (one `ffprobe` keyframe pass on the whole file).
 
 ## Citations used to scope Frank / Ruth / trial material
 

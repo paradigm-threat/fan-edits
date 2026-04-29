@@ -346,7 +346,9 @@ def merge_time_ranges(ranges: List[Tuple[float, float]]) -> List[Tuple[float, fl
     cleaned.sort(key=lambda x: x[0])
     merged: List[List[float]] = [[cleaned[0][0], cleaned[0][1]]]
     for a, b in cleaned[1:]:
-        if a <= merged[-1][1]:
+        # Strict overlap only: do not merge [0,5] with [5,10] so a keep bridge at a single
+        # instant can exist between adjacent removals (half-open [cs,ce) semantics).
+        if a < merged[-1][1]:
             merged[-1][1] = max(merged[-1][1], b)
         else:
             merged.append([a, b])
@@ -511,6 +513,60 @@ def ffprobe_keyframes(video: Path) -> List[float]:
             continue
     out.sort()
     return out
+
+
+def keyframe_at_or_before(sorted_kf: List[float], t: float) -> Optional[float]:
+    i = bisect.bisect_right(sorted_kf, t) - 1
+    if i >= 0:
+        return sorted_kf[i]
+    return None
+
+
+def keyframe_at_or_after(sorted_kf: List[float], t: float) -> Optional[float]:
+    i = bisect.bisect_left(sorted_kf, t)
+    if i < len(sorted_kf):
+        return sorted_kf[i]
+    return None
+
+
+def snap_removal_edges_to_keyframes(
+    ranges: List[Tuple[float, float]],
+    keyframes: List[float],
+    source_duration: float,
+) -> List[Tuple[float, float]]:
+    """
+    GOP-safe removal bounds for playlist splices.
+
+    - First removal **start**: last keyframe <= cs (may extend slightly earlier).
+    - Every removal **end**: first keyframe >= ce (may extend slightly later).
+    - Later removal **starts**: first keyframe strictly after the previous
+      removal's end, and not before ``cs``, so a keep bridge between adjacent
+      JSON ranges is preserved.
+    """
+    kf = sorted(set(keyframes))
+    if not kf:
+        return merge_time_ranges(ranges)
+    merged = merge_time_ranges(ranges)
+    out: List[Tuple[float, float]] = []
+    prev_ce: Optional[float] = None
+    eps = 1e-4
+    for cs, ce in merged:
+        if prev_ce is None:
+            kb = keyframe_at_or_before(kf, cs)
+            cs2 = float(kb if kb is not None else cs)
+        else:
+            lo = max(cs, prev_ce + eps)
+            ka0 = keyframe_at_or_after(kf, lo)
+            cs2 = float(ka0 if ka0 is not None else lo)
+        ka = keyframe_at_or_after(kf, ce)
+        ce2 = float(ka if ka is not None else ce)
+        cs2 = max((prev_ce or 0.0) + eps if prev_ce is not None else 0.0, min(cs2, source_duration))
+        ce2 = max(0.0, min(ce2, source_duration))
+        if ce2 <= cs2:
+            ce2 = min(source_duration, cs2 + 1.0 / 24.0)
+        out.append((cs2, ce2))
+        prev_ce = ce2
+    return merge_time_ranges(out)
 
 
 def snap_to_nearest(sorted_times: List[float], t: float, window: float) -> Optional[float]:
@@ -843,8 +899,8 @@ def main(argv: List[str]) -> int:
     ap.add_argument("--merge-gap", type=float, default=0.25, help="Merge adjacent spans with gap <= this (sec)")
     ap.add_argument("--pad-in", type=float, default=0.25)
     ap.add_argument("--pad-out", type=float, default=0.35)
-    ap.add_argument("--snap", action="store_true", help="Snap boundaries to nearest keyframes")
-    ap.add_argument("--snap-window", type=float, default=0.5, help="Snap window +/- seconds")
+    ap.add_argument("--snap", action="store_true", help="Snap to keyframes (dialog boundaries and/or removal edges)")
+    ap.add_argument("--snap-window", type=float, default=0.5, help="Snap window +/- seconds (dialog mode only)")
     ap.add_argument(
         "--remove-range",
         nargs=2,
@@ -894,6 +950,12 @@ def main(argv: List[str]) -> int:
     remove_pairs = [(cs, min(ce, source_duration)) for cs, ce in remove_pairs]
     remove_pairs = [(cs, ce) for cs, ce in remove_pairs if ce > cs]
     cut_ranges_merged = merge_time_ranges(remove_pairs)
+    keyframes_cache: Optional[List[float]] = None
+    if args.snap and cut_ranges_merged:
+        keyframes_cache = ffprobe_keyframes(video)
+        cut_ranges_merged = snap_removal_edges_to_keyframes(
+            cut_ranges_merged, keyframes_cache, source_duration
+        )
     if len(cut_ranges_merged) > 1 and not args.keep_full_timeline:
         raise SystemExit("Multiple --remove-range entries require --keep-full-timeline (dialog+multi-cut is unsupported).")
 
@@ -929,8 +991,8 @@ def main(argv: List[str]) -> int:
         spans = merge_spans(spans, max_gap=args.merge_gap)
         boundaries = build_dialog_boundaries(spans, pad_in=args.pad_in, pad_out=args.pad_out, duration=timeline_duration)
         if args.snap and boundaries:
-            keyframes = ffprobe_keyframes(video)
-            boundaries, snap_debug = apply_snapping(boundaries, keyframes=keyframes, window=args.snap_window)
+            kf = keyframes_cache if keyframes_cache is not None else ffprobe_keyframes(video)
+            boundaries, snap_debug = apply_snapping(boundaries, keyframes=kf, window=args.snap_window)
         segments = boundaries_to_segments(boundaries, duration=timeline_duration)
         if cut_ranges_merged:
             cs, ce = cut_ranges_merged[0]

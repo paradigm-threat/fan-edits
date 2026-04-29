@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/home/ari/dev/fan-edits/FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett" version="7.33.0">
  <profile colorspace="709" description="1920x1040 23.98fps" display_aspect_num="1" display_aspect_den="1" frame_rate_num="24000" frame_rate_den="1001" height="1040" progressive="1" sample_aspect_num="1" sample_aspect_den="1" width="1920" />
- <producer id="producer0" in="00:00:00.000" out="01:56:43.015">
+ <producer id="producer0" in="00:00:00.000" out="01:56:14.685">
   <property name="length">2147483647</property>
   <property name="eof">continue</property>
   <property name="resource">black</property>
@@ -30,144 +30,150 @@
   <property name="video_index">0</property>
   <property name="vstream">0</property>
   <property name="astream">0</property>
-  <property name="kdenlive:control_uuid">{d864e2c6-ca19-4c5c-a285-dbbeea14ff77}</property>
+  <property name="kdenlive:control_uuid">{dee32f49-532e-4d8a-ba5f-627ebe386fa6}</property>
   <property name="kdenlive:id">5</property>
   <property name="kdenlive:clip_type">0</property>
   <property name="kdenlive:folderid">-1</property>
   </chain>
  <playlist id="playlist2">
   <property name="kdenlive:audio_track">1</property>
-  <entry in="00:00:00.000" out="00:07:15.310" producer="chain0">
+  <entry in="00:00:00.000" out="00:06:48.533" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:07:34.290" out="00:22:55.480" producer="chain0">
+  <entry in="00:07:06.343" out="00:07:15.352" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:24:40.340" out="00:26:47.620" producer="chain0">
+  <entry in="00:07:35.955" out="00:22:56.000" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:27:05.790" out="00:29:36.580" producer="chain0">
+  <entry in="00:24:49.238" out="00:26:52.986" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:29:55.220" out="00:38:43.400" producer="chain0">
+  <entry in="00:27:06.333" out="00:29:41.196" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:39:03.810" out="00:42:55.380" producer="chain0">
+  <entry in="00:29:57.587" out="00:38:49.994" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:43:45.290" out="00:50:22.460" producer="chain0">
+  <entry in="00:39:05.593" out="00:43:00.870" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:50:41.380" out="01:05:31.770" producer="chain0">
+  <entry in="00:43:52.421" out="00:50:28.400" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:06:39.730" out="01:09:43.690" producer="chain0">
+  <entry in="00:50:43.666" out="01:05:36.099" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:10:52.980" out="01:12:55.410" producer="chain0">
+  <entry in="01:06:42.707" out="01:09:49.310" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:13:14.590" out="01:14:42.090" producer="chain0">
+  <entry in="01:10:58.087" out="01:12:55.830" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:16:01.960" out="01:17:47.740" producer="chain0">
+  <entry in="01:13:22.523" out="01:14:45.022" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:20:34.900" out="01:23:33.520" producer="chain0">
+  <entry in="01:16:05.436" out="01:17:55.713" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:23:52.000" out="01:25:41.410" producer="chain0">
+  <entry in="01:20:43.505" out="01:23:40.265" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:27:25.130" out="01:28:52.130" producer="chain0">
+  <entry in="01:24:01.119" out="01:25:42.054" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:32:09.060" out="01:33:23.570" producer="chain0">
+  <entry in="01:27:27.284" out="01:28:56.289" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:34:59.390" out="01:36:40.230" producer="chain0">
+  <entry in="01:32:18.575" out="01:33:31.523" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:37:03.720" out="01:38:23.700" producer="chain0">
+  <entry in="01:35:07.243" out="01:36:44.674" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:38:51.220" out="02:03:59.440" producer="chain0">
+  <entry in="01:37:05.278" out="01:38:32.240" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="02:04:18.780" out="02:08:46.290" producer="chain0">
+  <entry in="01:38:52.760" out="02:04:00.016" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="02:09:36.860" out="02:16:32.235" producer="chain0">
+  <entry in="02:04:26.125" out="02:08:52.391" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   </entry>
+  <entry in="02:09:44.527" out="02:16:32.235" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
   </playlist>
  <playlist id="playlist3">
   <property name="kdenlive:audio_track">1</property>
-  <entry in="00:00:00.000" out="00:07:15.310" producer="chain0">
+  <entry in="00:00:00.000" out="00:06:48.533" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:07:34.290" out="00:22:55.480" producer="chain0">
+  <entry in="00:07:06.343" out="00:07:15.352" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:24:40.340" out="00:26:47.620" producer="chain0">
+  <entry in="00:07:35.955" out="00:22:56.000" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:27:05.790" out="00:29:36.580" producer="chain0">
+  <entry in="00:24:49.238" out="00:26:52.986" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:29:55.220" out="00:38:43.400" producer="chain0">
+  <entry in="00:27:06.333" out="00:29:41.196" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:39:03.810" out="00:42:55.380" producer="chain0">
+  <entry in="00:29:57.587" out="00:38:49.994" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:43:45.290" out="00:50:22.460" producer="chain0">
+  <entry in="00:39:05.593" out="00:43:00.870" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="00:50:41.380" out="01:05:31.770" producer="chain0">
+  <entry in="00:43:52.421" out="00:50:28.400" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:06:39.730" out="01:09:43.690" producer="chain0">
+  <entry in="00:50:43.666" out="01:05:36.099" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:10:52.980" out="01:12:55.410" producer="chain0">
+  <entry in="01:06:42.707" out="01:09:49.310" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:13:14.590" out="01:14:42.090" producer="chain0">
+  <entry in="01:10:58.087" out="01:12:55.830" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:16:01.960" out="01:17:47.740" producer="chain0">
+  <entry in="01:13:22.523" out="01:14:45.022" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:20:34.900" out="01:23:33.520" producer="chain0">
+  <entry in="01:16:05.436" out="01:17:55.713" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:23:52.000" out="01:25:41.410" producer="chain0">
+  <entry in="01:20:43.505" out="01:23:40.265" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:27:25.130" out="01:28:52.130" producer="chain0">
+  <entry in="01:24:01.119" out="01:25:42.054" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:32:09.060" out="01:33:23.570" producer="chain0">
+  <entry in="01:27:27.284" out="01:28:56.289" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:34:59.390" out="01:36:40.230" producer="chain0">
+  <entry in="01:32:18.575" out="01:33:31.523" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:37:03.720" out="01:38:23.700" producer="chain0">
+  <entry in="01:35:07.243" out="01:36:44.674" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="01:38:51.220" out="02:03:59.440" producer="chain0">
+  <entry in="01:37:05.278" out="01:38:32.240" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="02:04:18.780" out="02:08:46.290" producer="chain0">
+  <entry in="01:38:52.760" out="02:04:00.016" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
-  <entry in="02:09:36.860" out="02:16:32.235" producer="chain0">
+  <entry in="02:04:26.125" out="02:08:52.391" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   </entry>
+  <entry in="02:09:44.527" out="02:16:32.235" producer="chain0">
    <property name="kdenlive:id">5</property>
    </entry>
   </playlist>
- <tractor id="tractor1" in="00:00:00.000" out="01:56:43.015">
+ <tractor id="tractor1" in="00:00:00.000" out="01:56:14.685">
   <property name="kdenlive:audio_track">1</property>
   <property name="kdenlive:trackheight">84</property>
   <property name="kdenlive:timeline_active">1</property>
@@ -176,7 +182,7 @@
   <property name="kdenlive:audio_rec" />
   <track hide="video" producer="playlist2" />
   </tractor>
- <tractor id="tractor2" in="00:00:00.000" out="01:56:43.015">
+ <tractor id="tractor2" in="00:00:00.000" out="01:56:14.685">
   <property name="kdenlive:trackheight">84</property>
   <property name="kdenlive:timeline_active">1</property>
   <property name="kdenlive:collapsed">0</property>
@@ -184,12 +190,12 @@
   <property name="kdenlive:audio_rec" />
   <track hide="audio" producer="playlist3" />
   </tractor>
- <tractor id="tractor3" in="00:00:00.000" out="01:56:43.015">
-  <property name="kdenlive:duration">01:56:43.015</property>
+ <tractor id="tractor3" in="00:00:00.000" out="01:56:14.685">
+  <property name="kdenlive:duration">01:56:14.685</property>
   <property name="kdenlive:clipname">Sequence 1</property>
-  <property name="kdenlive:uuid">{8a730917-44ac-487f-8e22-53b8c23b6d40}</property>
+  <property name="kdenlive:uuid">{3a185d31-40e9-4afc-ba37-efced59d1bc2}</property>
   <property name="kdenlive:producer_type">17</property>
-  <property name="kdenlive:control_uuid">{8a730917-44ac-487f-8e22-53b8c23b6d40}</property>
+  <property name="kdenlive:control_uuid">{3a185d31-40e9-4afc-ba37-efced59d1bc2}</property>
   <property name="kdenlive:id">3</property>
   <property name="kdenlive:clip_type">0</property>
   <property name="kdenlive:sequenceproperties.hidesubtitle">0</property>
@@ -235,8 +241,8 @@
    </filter>
   </tractor>
  <playlist id="main_bin">
-  <property name="kdenlive:docproperties.uuid">{8a730917-44ac-487f-8e22-53b8c23b6d40}</property>
+  <property name="kdenlive:docproperties.uuid">{3a185d31-40e9-4afc-ba37-efced59d1bc2}</property>
   <property name="kdenlive:docproperties.kdenliveversion">25.04.2</property>
-  <property name="kdenlive:docproperties.documentid">4309910480</property>
+  <property name="kdenlive:docproperties.documentid">4310620580</property>
   </playlist>
  </mlt>

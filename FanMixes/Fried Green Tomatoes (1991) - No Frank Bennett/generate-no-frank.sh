@@ -12,6 +12,7 @@ python3 "${ROOT}/scripts/kdenlive_from_subs.py" \
   --video "${VIDEO}" \
   --subs "${DIR}/Fried-Green-Tomatoes.en.srt" \
   --keep-full-timeline \
+  --snap \
   --remove-ranges-json "${DIR}/remove-frank-bennett-ranges.json" \
   --out "${OUT}"
 echo "Wrote ${OUT}"
