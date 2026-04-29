@@ -11,7 +11,7 @@ Click the link below to download the requested movie:
 
 [All of my FanEdit downloads](http://%7BdownloadAllURL%7D)
 
-[All FanEdit movie descriptions and source files](https://github.com/clevertree/fan-edits/tree/main/FanMixes)
+[All FanEdit movie descriptions and source files](https://gitlab.com/clevertree/fan-edits/-/tree/main/FanMixes)
 
 Thanks for watching! All feedback is appreciated :)
 
