@@ -2,6 +2,8 @@
 
 ## Description
 
+**Strategy, phases, and replacement-asset search plan:** [PLAN.md](PLAN.md).
+
 This cut removes **Frank Bennett** (Nick Searcy): his on-screen scenes, the **Valdosta / river-club / abuse / kidnapping / investigation / trial** thread, and **dialogue that names or explains him**, so the runtime stays continuous where possible. The automated ranges come from the bundled English `.srt` (keyword clustering + padding); **review every join in Kdenlive** — subtitles miss silent reaction shots and some establishing shots may need manual handles.
 
 ## Source media (not in git)
