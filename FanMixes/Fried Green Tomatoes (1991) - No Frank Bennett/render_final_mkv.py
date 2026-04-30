@@ -77,6 +77,12 @@ def main() -> int:
         help="Target video bitrate kbps (0 = derive from source ffprobe format bit_rate)",
     )
     ap.add_argument("--audio-kbps", type=int, default=224, help="AAC bitrate for 5.1 output")
+    ap.add_argument(
+        "--threads",
+        type=int,
+        default=4,
+        help="ffmpeg -threads for libx265 (0 = encoder default, often all cores; use 4–6 if thermals/OOM crash)",
+    )
     args = ap.parse_args()
 
     here = Path(__file__).resolve().parent
@@ -128,6 +134,10 @@ def main() -> int:
     else:
         v_kbps = max(800, int((float(fmt_br) / 1000.0) - args.audio_kbps - 80))
     print(f"target video {v_kbps} kbps (format avg {int(fmt_br/1000)} kbps)", file=sys.stderr)
+    thread_opts: list[str] = []
+    if args.threads > 0:
+        thread_opts = ["-threads", str(args.threads)]
+        print(f"encoder thread cap: {args.threads}", file=sys.stderr)
 
     fps_num, fps_den = 24000, 1001
     fc = build_filter_complex(segs, fps_num, fps_den)
@@ -154,6 +164,7 @@ def main() -> int:
         "[outv]",
         "-map",
         "[outa]",
+        *thread_opts,
         "-pix_fmt",
         "yuv420p10le",
         "-c:v",
@@ -188,6 +199,7 @@ def main() -> int:
         "[outv]",
         "-map",
         "[outa]",
+        *thread_opts,
         "-pix_fmt",
         "yuv420p10le",
         "-c:v",

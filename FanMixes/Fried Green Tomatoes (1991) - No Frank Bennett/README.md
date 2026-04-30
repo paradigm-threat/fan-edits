@@ -37,7 +37,7 @@ python3 "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/render_final_mk
   --out "/path/to/Fried Green Tomatoes (1991) - No Frank Bennett - final.mkv"
 ```
 
-Paths default to the FanMix folder; override with `--kdenlive`, `--video`, `--subs`, `--passlog`. Expect **many hours** on CPU (full pass over ~1.9 h of output). Logs: `render_final_mkv.log`. Intermediate files: `/tmp/fgt_no_frank_filter.txt`, `/tmp/x265_fgt_pass.log*`, `/tmp/fgt_no_frank_nosubs.mkv` (deleted after mux).
+Paths default to the FanMix folder; override with `--kdenlive`, `--video`, `--subs`, `--passlog`. **`--threads 4`** (default) caps libx265 parallelism to ease thermals/RAM; use **`--threads 0`** only if the machine stays stable at full load. Run under **`nice -n 10`** if other work needs headroom. Expect **many hours** on CPU (full pass over ~1.9 h of output). Logs: `render_final_mkv.log`. Intermediate files: `/tmp/fgt_no_frank_filter.txt`, `/tmp/x265_fgt_pass.log*`, `/tmp/fgt_no_frank_nosubs.mkv` (deleted after mux).
 
 ## Citations used to scope Frank / Ruth / trial material
 
