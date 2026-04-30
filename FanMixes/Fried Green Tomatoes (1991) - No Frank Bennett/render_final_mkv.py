@@ -81,7 +81,7 @@ def main() -> int:
         "--threads",
         type=int,
         default=4,
-        help="ffmpeg -threads for libx265 (0 = encoder default, often all cores; use 4–6 if thermals/OOM crash)",
+        help="x265 pools=N worker threads (0 = default, often all cores; use 4–6 if thermals/OOM crash)",
     )
     args = ap.parse_args()
 
@@ -134,10 +134,9 @@ def main() -> int:
     else:
         v_kbps = max(800, int((float(fmt_br) / 1000.0) - args.audio_kbps - 80))
     print(f"target video {v_kbps} kbps (format avg {int(fmt_br/1000)} kbps)", file=sys.stderr)
-    thread_opts: list[str] = []
+    x265_pool = f":pools={args.threads}" if args.threads > 0 else ""
     if args.threads > 0:
-        thread_opts = ["-threads", str(args.threads)]
-        print(f"encoder thread cap: {args.threads}", file=sys.stderr)
+        print(f"x265 worker pool cap: pools={args.threads}", file=sys.stderr)
 
     fps_num, fps_den = 24000, 1001
     fc = build_filter_complex(segs, fps_num, fps_den)
@@ -164,7 +163,6 @@ def main() -> int:
         "[outv]",
         "-map",
         "[outa]",
-        *thread_opts,
         "-pix_fmt",
         "yuv420p10le",
         "-c:v",
@@ -176,7 +174,7 @@ def main() -> int:
         "-bufsize",
         f"{int(v_kbps * 2)}k",
         "-x265-params",
-        f"pass=1:stats={stats}:log-level=info:strong-intra-smoothing=1:rect=1:aq-mode=3",
+        f"pass=1:stats={stats}:log-level=info:strong-intra-smoothing=1:rect=1:aq-mode=3{x265_pool}",
         "-an",
         "-f",
         "null",
@@ -199,7 +197,6 @@ def main() -> int:
         "[outv]",
         "-map",
         "[outa]",
-        *thread_opts,
         "-pix_fmt",
         "yuv420p10le",
         "-c:v",
@@ -211,7 +208,7 @@ def main() -> int:
         "-bufsize",
         f"{int(v_kbps * 2)}k",
         "-x265-params",
-        f"pass=2:stats={stats}:log-level=info:strong-intra-smoothing=1:rect=1:aq-mode=3",
+        f"pass=2:stats={stats}:log-level=info:strong-intra-smoothing=1:rect=1:aq-mode=3{x265_pool}",
         "-c:a",
         "aac",
         "-b:a",
