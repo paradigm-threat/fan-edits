@@ -4,7 +4,7 @@
  <chain id="chain3" out="02:06:47.631">
   <property name="length">182401</property>
   <property name="eof">pause</property>
-  <property name="resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
+  <property name="resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -78,7 +78,7 @@
  <chain id="chain0" out="02:06:47.631">
   <property name="length">182401</property>
   <property name="eof">pause</property>
-  <property name="resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
+  <property name="resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -144,7 +144,7 @@
  <producer id="producer1" in="00:00:00.000" out="04:13:35.285">
   <property name="length">364802</property>
   <property name="eof">pause</property>
-  <property name="resource">0.500000:Riddick.2013.1080p.BluRay.x264.mp4</property>
+  <property name="resource">0.500000:Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -184,7 +184,7 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.5</property>
-  <property name="warp_resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
+  <property name="warp_resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{e80b47a4-3b8d-4a5d-b2cf-1ee175c48bb2}</property>
   <property name="vstream">0</property>
@@ -296,7 +296,7 @@
  <chain id="chain1" out="02:06:47.631">
   <property name="length">182401</property>
   <property name="eof">pause</property>
-  <property name="resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
+  <property name="resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -569,7 +569,7 @@
  <chain id="chain2" out="02:06:47.631">
   <property name="length">182401</property>
   <property name="eof">pause</property>
-  <property name="resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
+  <property name="resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -635,7 +635,7 @@
  <producer id="producer2" in="00:00:00.000" out="04:13:35.285">
   <property name="length">364802</property>
   <property name="eof">pause</property>
-  <property name="resource">0.500000:Riddick.2013.1080p.BluRay.x264.mp4</property>
+  <property name="resource">0.500000:Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
   <property name="aspect_ratio">1</property>
   <property name="meta.media.nb_streams">2</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -675,7 +675,7 @@
   <property name="audio_index">1</property>
   <property name="video_index">0</property>
   <property name="warp_speed">0.5</property>
-  <property name="warp_resource">Riddick.2013.1080p.BluRay.x264.mp4</property>
+  <property name="warp_resource">Riddick.2013.1080p.BluRay.x264.YIFY.mp4</property>
   <property name="mlt_service">timewarp</property>
   <property name="kdenlive:control_uuid">{e80b47a4-3b8d-4a5d-b2cf-1ee175c48bb2}</property>
   <property name="vstream">0</property>
@@ -697,10 +697,34 @@
   <property name="meta.media.progressive">1</property>
  </producer>
  <playlist id="playlist2">
-  <entry in="00:00:00.000" out="00:13:25.067" producer="chain2">
+  <entry in="00:10:54.487" out="00:13:25.067" producer="chain2">
    <property name="kdenlive:id">4</property>
   </entry>
-  <entry in="00:15:50.717" out="00:40:50.342" producer="chain2">
+  <entry in="00:15:50.717" out="00:22:51.536" producer="chain2">
+   <property name="kdenlive:id">4</property>
+   <filter id="filter12" in="00:22:49.076" out="00:22:51.536">
+    <property name="start">1</property>
+    <property name="level">1</property>
+    <property name="mlt_service">brightness</property>
+    <property name="kdenlive_id">fade_to_black</property>
+    <property name="alpha">00:00:00.000=1;00:00:02.460=0</property>
+   </filter>
+  </entry>
+  <entry in="00:01:13.573" out="00:10:54.487" producer="chain2">
+   <property name="kdenlive:id">4</property>
+   <filter id="filter13" in="00:01:13.573" out="00:01:16.659">
+    <property name="start">1</property>
+    <property name="level">1</property>
+    <property name="mlt_service">brightness</property>
+    <property name="kdenlive_id">fade_from_black</property>
+    <property name="alpha">00:00:00.000=0;00:00:03.086=1</property>
+    <property name="kdenlive:collapsed">0</property>
+   </filter>
+  </entry>
+  <entry in="00:22:51.536" out="00:24:03.733" producer="chain2">
+   <property name="kdenlive:id">4</property>
+  </entry>
+  <entry in="00:24:03.733" out="00:40:50.342" producer="chain2">
    <property name="kdenlive:id">4</property>
    <filter id="filter6" in="00:40:48.882" out="00:40:50.342">
     <property name="start">1</property>
@@ -710,6 +734,7 @@
     <property name="alpha">00:00:00.000=1;00:00:01.460=0</property>
    </filter>
   </entry>
+
   <entry in="00:44:11.094" out="00:55:17.893" producer="chain2">
    <property name="kdenlive:id">4</property>
    <filter id="filter7" in="00:44:11.094" out="00:44:18.060">
@@ -835,7 +860,7 @@
   </entry>
  </playlist>
  <playlist id="playlist3"/>
- <tractor id="tractor1" in="00:00:00.000" out="01:46:56.890">
+ <tractor id="tractor1" in="00:00:00.000" out="01:45:40.403">
   <property name="kdenlive:trackheight">84</property>
   <property name="kdenlive:timeline_active">1</property>
   <property name="kdenlive:collapsed">0</property>
@@ -844,8 +869,8 @@
   <track hide="audio" producer="playlist2"/>
   <track hide="audio" producer="playlist3"/>
  </tractor>
- <tractor id="tractor2" in="00:00:00.000" out="01:46:56.890">
-  <property name="kdenlive:duration">01:46:56.932</property>
+ <tractor id="tractor2" in="00:00:00.000" out="01:45:40.403">
+  <property name="kdenlive:duration">01:45:40.403</property>
   <property name="kdenlive:maxduration">153851</property>
   <property name="kdenlive:clipname">Sequence 1</property>
   <property name="kdenlive:description"/>
@@ -2334,8 +2359,8 @@
   <entry in="00:00:00.000" out="02:06:47.631" producer="chain3"/>
   <entry in="00:00:00.000" out="03:57:46.088" producer="tractor2"/>
  </playlist>
- <tractor id="tractor3" in="00:00:00.000" out="01:46:56.890">
+ <tractor id="tractor3" in="00:00:00.000" out="01:45:40.403">
   <property name="kdenlive:projectTractor">1</property>
-  <track in="00:00:00.000" out="01:46:56.890" producer="tractor2"/>
+  <track in="00:00:00.000" out="01:45:40.403" producer="tractor2"/>
  </tractor>
 </mlt>

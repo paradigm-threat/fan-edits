@@ -1,0 +1,25 @@
+{
+  "description": "Kid-friendly (approx age 3): no Man scares, mother death, Ronno fight, or forest-fire climax. Manual scenes from YIFY SRT; pad 6s, merge 45s.",
+  "ranges": [
+    {
+      "start": 1824.0,
+      "end": 1959.0,
+      "join_fade": false
+    },
+    {
+      "start": 2413.0,
+      "end": 2606.0,
+      "join_fade": false
+    },
+    {
+      "start": 3227.0,
+      "end": 3346.0,
+      "join_fade": false
+    },
+    {
+      "start": 3517.0,
+      "end": 4050.0,
+      "join_fade": false
+    }
+  ]
+}

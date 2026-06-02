@@ -1,0 +1,356 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 3840
+PlayResY: 1632
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,40,40,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:12.14,0:00:17.81,Default,,0,0,0,,Love is a song that never ends
+Dialogue: 0,0:00:17.89,0:00:23.69,Default,,0,0,0,,Life may be swift and fleeting
+Dialogue: 0,0:00:23.77,0:00:29.20,Default,,0,0,0,,Hope may die\NYet love's beautiful music
+Dialogue: 0,0:00:29.28,0:00:34.91,Default,,0,0,0,,Comes each day like the dawn
+Dialogue: 0,0:00:34.99,0:00:40.50,Default,,0,0,0,,Love is a song that never ends
+Dialogue: 0,0:00:40.58,0:00:46.34,Default,,0,0,0,,One simple theme repeating
+Dialogue: 0,0:00:46.42,0:00:52.09,Default,,0,0,0,,Like the voice of a heavenly choir
+Dialogue: 0,0:00:52.18,0:00:58.77,Default,,0,0,0,,Love's sweet music flows on
+Dialogue: 0,0:01:06.11,0:01:11.65,Default,,0,0,0,,Like the voice of a heavenly choir
+Dialogue: 0,0:01:12.49,0:02:55.13,Default,,0,0,0,,Love's sweet music flows on
+Dialogue: 0,0:04:49.16,0:04:50.100,Default,,0,0,0,,Wake up.
+Dialogue: 0,0:04:52.17,0:04:54.54,Default,,0,0,0,,-What now?\N-Wake up, Friend Owl.
+Dialogue: 0,0:04:54.63,0:04:56.80,Default,,0,0,0,,What's going on around here?
+Dialogue: 0,0:04:56.88,0:04:59.21,Default,,0,0,0,,-Wake up.\N-It's happened.
+Dialogue: 0,0:04:59.30,0:05:01.26,Default,,0,0,0,,The new prince is born.
+Dialogue: 0,0:05:01.34,0:05:04.85,Default,,0,0,0,,-We're going to see him.\N-Come on. You better hurry up.
+Dialogue: 0,0:05:17.78,0:05:19.78,Default,,0,0,0,,Well, look.
+Dialogue: 0,0:05:21.99,0:05:24.62,Default,,0,0,0,,-Well.\N-Isn't he cute?
+Dialogue: 0,0:05:28.41,0:05:32.04,Default,,0,0,0,,Well, this is quite an occasion.
+Dialogue: 0,0:05:33.04,0:05:36.96,Default,,0,0,0,,Yes, sir,\Nit isn't every day a prince is born.
+Dialogue: 0,0:05:39.13,0:05:40.80,Default,,0,0,0,,You're to be congratulated.
+Dialogue: 0,0:05:40.88,0:05:44.68,Default,,0,0,0,,-Yes, congratulations.\N-Congratulations.
+Dialogue: 0,0:05:45.14,0:05:46.93,Default,,0,0,0,,Thank you very much.
+Dialogue: 0,0:05:47.39,0:05:51.10,Default,,0,0,0,,Come on. Wake up. We have company.
+Dialogue: 0,0:05:56.90,0:05:58.65,Default,,0,0,0,,Hello. Hello, there.
+Dialogue: 0,0:05:58.73,0:06:01.90,Default,,0,0,0,,-Hello, little prince.\N-Hello. Hello, there.
+Dialogue: 0,0:06:01.99,0:06:03.74,Default,,0,0,0,,Hello, little prince.
+Dialogue: 0,0:06:22.09,0:06:25.51,Default,,0,0,0,,Look. He's trying to get up.
+Dialogue: 0,0:06:48.45,0:06:50.62,Default,,0,0,0,,Kinda wobbly, isn't he?
+Dialogue: 0,0:06:50.70,0:06:52.16,Default,,0,0,0,,Thumper.
+Dialogue: 0,0:06:53.87,0:06:55.87,Default,,0,0,0,,Well, he is.
+Dialogue: 0,0:06:57.63,0:06:59.29,Default,,0,0,0,,Aren't you?
+Dialogue: 0,0:07:06.84,0:07:10.14,Default,,0,0,0,,Looks to me like\Nhe's getting kind of sleepy.
+Dialogue: 0,0:07:13.43,0:07:15.89,Default,,0,0,0,,I think it's time we all left.
+Dialogue: 0,0:07:15.98,0:07:17.69,Default,,0,0,0,,Come on.
+Dialogue: 0,0:07:35.16,0:07:37.83,Default,,0,0,0,,Thumper. Come on.
+Dialogue: 0,0:07:40.75,0:07:42.84,Default,,0,0,0,,Whatcha gonna call him?
+Dialogue: 0,0:07:43.50,0:07:47.76,Default,,0,0,0,,Well, I think I'll call him Bambi.
+Dialogue: 0,0:07:51.68,0:07:54.76,Default,,0,0,0,,Yep, I guess that'll do all right.
+Dialogue: 0,0:07:55.48,0:07:56.64,Default,,0,0,0,,Bambi.
+Dialogue: 0,0:07:57.69,0:07:59.69,Default,,0,0,0,,My little Bambi.
+Dialogue: 0,0:08:29.88,0:08:33.22,Default,,0,0,0,,Walking already.\NWell, what do you know.
+Dialogue: 0,0:08:49.45,0:08:52.41,Default,,0,0,0,,-Good morning.\N-Good morning, Mrs Quail.
+Dialogue: 0,0:08:52.49,0:08:55.08,Default,,0,0,0,,And where's the young prince this...
+Dialogue: 0,0:08:57.87,0:09:01.29,Default,,0,0,0,,-Good morning, Bambi.\N-Good morning, young prince.
+Dialogue: 0,0:09:04.54,0:09:05.88,Default,,0,0,0,,Goodbye.
+Dialogue: 0,0:09:09.59,0:09:11.72,Default,,0,0,0,,Good morning, young prince.
+Dialogue: 0,0:09:18.14,0:09:20.14,Default,,0,0,0,,Good morning, young prince.
+Dialogue: 0,0:09:34.57,0:09:36.03,Default,,0,0,0,,Good morning.
+Dialogue: 0,0:09:37.74,0:09:39.33,Default,,0,0,0,,Nice sunny day.
+Dialogue: 0,0:09:51.63,0:09:53.72,Default,,0,0,0,,-What's the matter?\N-What happened?
+Dialogue: 0,0:09:53.80,0:09:56.76,Default,,0,0,0,,Did the young prince fall down?
+Dialogue: 0,0:09:56.85,0:10:00.26,Default,,0,0,0,,-Is he hurt?\N-No, he's all right.
+Dialogue: 0,0:10:02.14,0:10:04.77,Default,,0,0,0,,He doesn't walk very good, does he?
+Dialogue: 0,0:10:04.85,0:10:06.73,Default,,0,0,0,,Thumper.
+Dialogue: 0,0:10:07.82,0:10:09.15,Default,,0,0,0,,Yes, Mama?
+Dialogue: 0,0:10:10.49,0:10:12.53,Default,,0,0,0,,What did your father tell you\Nthis morning?
+Dialogue: 0,0:10:16.45,0:10:19.53,Default,,0,0,0,,If you can't say something nice,
+Dialogue: 0,0:10:22.83,0:10:25.83,Default,,0,0,0,,don't say nothing at all.
+Dialogue: 0,0:10:27.54,0:10:30.13,Default,,0,0,0,,Come on, Bambi, get up. Try again.
+Dialogue: 0,0:10:31.42,0:10:34.26,Default,,0,0,0,,Come on, get up. Get up.
+Dialogue: 0,0:10:34.34,0:10:46.31,Default,,0,0,0,,-Get up.\N-Try again.
+Dialogue: 0,0:11:09.38,0:11:13.55,Default,,0,0,0,,I'm thumping.\NThat's why they call me Thumper.
+Dialogue: 0,0:11:14.59,0:11:16.59,Default,,0,0,0,,Thumper!
+Dialogue: 0,0:11:34.40,0:11:37.53,Default,,0,0,0,,Come on. You can do it.
+Dialogue: 0,0:11:38.41,0:11:41.37,Default,,0,0,0,,Hop over it. Like this.
+Dialogue: 0,0:11:42.74,0:11:45.87,Default,,0,0,0,,Hop over it.
+Dialogue: 0,0:11:48.08,0:11:49.42,Default,,0,0,0,,Like this.
+Dialogue: 0,0:12:02.47,0:12:04.93,Default,,0,0,0,,You didn't hop far enough.
+Dialogue: 0,0:12:08.31,0:12:10.85,Default,,0,0,0,,That's it. Now the other one.
+Dialogue: 0,0:12:21.41,0:12:24.62,Default,,0,0,0,,Gee whiz, what happened that time?
+Dialogue: 0,0:12:42.47,0:12:44.47,Default,,0,0,0,,Those are birds.
+Dialogue: 0,0:12:49.69,0:12:51.94,Default,,0,0,0,,Look, he's trying to talk.
+Dialogue: 0,0:12:54.36,0:12:56.36,Default,,0,0,0,,He's trying to say "bird."
+Dialogue: 0,0:12:58.74,0:13:00.74,Default,,0,0,0,,Say "bird."
+Dialogue: 0,0:13:04.41,0:13:06.20,Default,,0,0,0,,Bird.
+Dialogue: 0,0:13:10.71,0:13:12.62,Default,,0,0,0,,Bird.
+Dialogue: 0,0:13:12.88,0:13:15.09,Default,,0,0,0,,Come on, say "bird," say "bird."
+Dialogue: 0,0:13:15.17,0:13:18.17,Default,,0,0,0,,Say "bird." Say "bird."\NCome on, say "bird."
+Dialogue: 0,0:13:18.26,0:13:20.26,Default,,0,0,0,,Say "bird."
+Dialogue: 0,0:13:22.38,0:13:23.84,Default,,0,0,0,,Bird.
+Dialogue: 0,0:13:26.01,0:13:29.06,Default,,0,0,0,,He talked. He talked, Mama.
+Dialogue: 0,0:13:29.14,0:13:31.56,Default,,0,0,0,,The young prince said "bird."
+Dialogue: 0,0:13:31.64,0:13:34.52,Default,,0,0,0,,Bird, bird, bird...
+Dialogue: 0,0:13:54.00,0:13:55.29,Default,,0,0,0,,Bird.
+Dialogue: 0,0:13:55.38,0:13:57.59,Default,,0,0,0,,No, that's not a bird.
+Dialogue: 0,0:13:57.67,0:13:59.92,Default,,0,0,0,,That's a butterfly.
+Dialogue: 0,0:14:00.01,0:14:02.13,Default,,0,0,0,,Butterfly?
+Dialogue: 0,0:14:02.22,0:14:03.59,Default,,0,0,0,,Butter...
+Dialogue: 0,0:14:08.06,0:14:09.81,Default,,0,0,0,,Butterfly.
+Dialogue: 0,0:14:09.89,0:14:11.85,Default,,0,0,0,,No, that's a flower.
+Dialogue: 0,0:14:12.56,0:14:16.27,Default,,0,0,0,,-Flower?\N-It's pretty.
+Dialogue: 0,0:14:21.69,0:14:23.03,Default,,0,0,0,,Pretty.
+Dialogue: 0,0:14:30.75,0:14:32.58,Default,,0,0,0,,Flower.
+Dialogue: 0,0:14:32.66,0:14:34.16,Default,,0,0,0,,Me?
+Dialogue: 0,0:14:39.13,0:14:41.38,Default,,0,0,0,,No, no, no, no.
+Dialogue: 0,0:14:42.67,0:14:45.26,Default,,0,0,0,,That's not a flower.
+Dialogue: 0,0:14:45.34,0:14:48.01,Default,,0,0,0,,-He's a little...\N-That's all right.
+Dialogue: 0,0:14:48.10,0:14:52.89,Default,,0,0,0,,He can call me a flower if he wants to.
+Dialogue: 0,0:14:57.15,0:14:59.61,Default,,0,0,0,,I don't mind.
+Dialogue: 0,0:15:03.53,0:15:06.03,Default,,0,0,0,,Pretty. Pretty flower.
+Dialogue: 0,0:15:12.62,0:15:13.100,Default,,0,0,0,,Gosh.
+Dialogue: 0,0:15:25.55,0:15:29.01,Default,,0,0,0,,I think I better go home now.
+Dialogue: 0,0:16:25.48,0:16:27.90,Default,,0,0,0,,Drip, drip, drop\NLittle April shower
+Dialogue: 0,0:16:27.99,0:16:30.15,Default,,0,0,0,,Beating a tune\NAs you fall all around
+Dialogue: 0,0:16:30.70,0:16:33.28,Default,,0,0,0,,Drip, drip, drop\NLittle April shower
+Dialogue: 0,0:16:33.37,0:16:35.95,Default,,0,0,0,,What can compare\NWith your beautiful sound?
+Dialogue: 0,0:16:36.04,0:16:38.79,Default,,0,0,0,,Beautiful sound\NBeautiful sound
+Dialogue: 0,0:16:38.87,0:16:41.17,Default,,0,0,0,,Drip, drop\NDrip, drop
+Dialogue: 0,0:16:41.25,0:16:43.79,Default,,0,0,0,,Drip, drip, drop\NWhen the sky is cloudy
+Dialogue: 0,0:16:43.88,0:16:46.00,Default,,0,0,0,,Your pretty music\NCan brighten the day
+Dialogue: 0,0:16:46.46,0:16:49.01,Default,,0,0,0,,Drip, drip, drop\NWhen the sky is cloudy
+Dialogue: 0,0:16:49.09,0:16:51.72,Default,,0,0,0,,You come along\Nwith a song right away
+Dialogue: 0,0:16:51.80,0:16:53.68,Default,,0,0,0,,Come with your beautiful music
+Dialogue: 0,0:16:53.93,0:16:56.35,Default,,0,0,0,,Drip, drip, drop\NLittle April shower
+Dialogue: 0,0:16:56.43,0:16:59.06,Default,,0,0,0,,Beating a tune\NAs you fall all around
+Dialogue: 0,0:16:59.14,0:17:01.69,Default,,0,0,0,,Drip, drip, drop\NLittle April shower
+Dialogue: 0,0:17:01.77,0:17:04.19,Default,,0,0,0,,What can compare\NWith your beautiful sound?
+Dialogue: 0,0:17:04.44,0:17:06.94,Default,,0,0,0,,Drip, drip, drop\NWhen the sky is cloudy
+Dialogue: 0,0:17:07.03,0:17:09.78,Default,,0,0,0,,You come along\NWith your pretty little song
+Dialogue: 0,0:17:09.86,0:17:12.07,Default,,0,0,0,,Drip, drip, drop\NWhen the sky is cloudy
+Dialogue: 0,0:17:12.16,0:17:14.53,Default,,0,0,0,,You come along\NWith your pretty little song
+Dialogue: 0,0:17:14.62,0:17:17.16,Default,,0,0,0,,-Gay little roundelay\N-Gay little roundelay
+Dialogue: 0,0:17:17.24,0:17:19.75,Default,,0,0,0,,-Song of the rainy day\N-Song of the rainy day
+Dialogue: 0,0:17:19.83,0:17:22.33,Default,,0,0,0,,How I love to hear your patter\NPretty little pitter-patter
+Dialogue: 0,0:17:22.62,0:17:25.04,Default,,0,0,0,,Helter skelter, when you pelter\NTroubles always seem to scatter
+Dialogue: 0,0:17:25.13,0:17:27.50,Default,,0,0,0,,Drip, drip, drop\NLittle April shower
+Dialogue: 0,0:17:27.59,0:17:30.34,Default,,0,0,0,,Beating a sound as you fall all around
+Dialogue: 0,0:17:30.42,0:17:32.68,Default,,0,0,0,,Drip, drip, drop\NLittle April shower
+Dialogue: 0,0:17:32.76,0:17:35.64,Default,,0,0,0,,-Little April shower\N-With your beautiful sound
+Dialogue: 0,0:19:08.02,0:19:10.82,Default,,0,0,0,,Drip, drip, drop\NLittle April shower
+Dialogue: 0,0:19:10.90,0:19:13.44,Default,,0,0,0,,Beating a tune\NAs you fall all around
+Dialogue: 0,0:19:13.53,0:19:16.11,Default,,0,0,0,,Drip, drip, drop\NLittle April shower
+Dialogue: 0,0:19:16.20,0:19:18.78,Default,,0,0,0,,What can compare\NWith your beautiful sound?
+Dialogue: 0,0:19:18.87,0:19:21.91,Default,,0,0,0,,Beautiful sound
+Dialogue: 0,0:19:53.90,0:19:56.74,Default,,0,0,0,,Mother, what we going to do today?
+Dialogue: 0,0:19:56.82,0:19:59.40,Default,,0,0,0,,I'm going to take you to the meadow.
+Dialogue: 0,0:19:59.87,0:20:02.95,Default,,0,0,0,,Meadow? What's the meadow?
+Dialogue: 0,0:20:03.04,0:20:05.91,Default,,0,0,0,,It's a very wonderful place.
+Dialogue: 0,0:20:05.100,0:20:08.83,Default,,0,0,0,,Then why haven't we\Nbeen there before?
+Dialogue: 0,0:20:08.92,0:20:11.54,Default,,0,0,0,,You weren't big enough.
+Dialogue: 0,0:20:11.63,0:20:14.34,Default,,0,0,0,,-Mother, you know what?\N-What?
+Dialogue: 0,0:20:14.42,0:20:17.51,Default,,0,0,0,,We're not the only deer in the forest.
+Dialogue: 0,0:20:17.59,0:20:20.97,Default,,0,0,0,,-Where did you hear that?\N-Thumper told me.
+Dialogue: 0,0:20:21.05,0:20:23.01,Default,,0,0,0,,Well, he's right.
+Dialogue: 0,0:20:23.10,0:20:25.72,Default,,0,0,0,,There are many deer in the forest\Nbesides us.
+Dialogue: 0,0:20:25.81,0:20:28.31,Default,,0,0,0,,Then why don't I ever see them?
+Dialogue: 0,0:20:28.39,0:20:31.44,Default,,0,0,0,,-You will, sometime.\N-On the meadow?
+Dialogue: 0,0:20:31.52,0:20:33.27,Default,,0,0,0,,Perhaps.
+Dialogue: 0,0:20:33.36,0:20:34.65,Default,,0,0,0,,Hush now.
+Dialogue: 0,0:20:36.61,0:20:38.32,Default,,0,0,0,,We're almost there.
+Dialogue: 0,0:20:48.20,0:20:50.21,Default,,0,0,0,,-The meadow.\N-Wait.
+Dialogue: 0,0:20:50.62,0:20:52.79,Default,,0,0,0,,Bambi, wait.
+Dialogue: 0,0:20:54.50,0:20:57.38,Default,,0,0,0,,You must never rush out\Non the meadow.
+Dialogue: 0,0:20:57.46,0:20:59.46,Default,,0,0,0,,There might be danger.
+Dialogue: 0,0:21:00.38,0:21:02.89,Default,,0,0,0,,Out there, we're unprotected.
+Dialogue: 0,0:21:02.97,0:21:05.43,Default,,0,0,0,,The meadow is wide and open,
+Dialogue: 0,0:21:05.51,0:21:08.10,Default,,0,0,0,,and there are no trees or bushes\Nto hide us.
+Dialogue: 0,0:21:08.18,0:21:10.52,Default,,0,0,0,,So we have to be very careful.
+Dialogue: 0,0:21:11.85,0:21:13.52,Default,,0,0,0,,Wait here.
+Dialogue: 0,0:21:14.48,0:21:19.78,Default,,0,0,0,,I'll go out first.\NAnd if the meadow is safe, I'll call you.
+Dialogue: 0,0:22:11.20,0:22:14.21,Default,,0,0,0,,Come on, Bambi. It's all right.
+Dialogue: 0,0:22:18.55,0:22:20.00,Default,,0,0,0,,Come on.
+Dialogue: 0,0:23:11.43,0:23:13.56,Default,,0,0,0,,Good morning, Prince Bambi.
+Dialogue: 0,0:23:14.14,0:23:16.06,Default,,0,0,0,,Good morning, young prince.
+Dialogue: 0,0:23:16.14,0:23:18.86,Default,,0,0,0,,Hello. What ya eatin'?
+Dialogue: 0,0:23:18.94,0:23:22.11,Default,,0,0,0,,-Clover.\N-It's awfully good.
+Dialogue: 0,0:23:22.19,0:23:24.19,Default,,0,0,0,,It's delicious.
+Dialogue: 0,0:23:24.28,0:23:26.78,Default,,0,0,0,,Why don't you try some?
+Dialogue: 0,0:23:29.37,0:23:32.79,Default,,0,0,0,,No, not that green stuff.
+Dialogue: 0,0:23:33.29,0:23:35.50,Default,,0,0,0,,Just eat the blossoms.
+Dialogue: 0,0:23:35.58,0:23:37.58,Default,,0,0,0,,That's the good stuff.
+Dialogue: 0,0:23:39.29,0:23:40.33,Default,,0,0,0,,Thumper.
+Dialogue: 0,0:23:41.80,0:23:45.76,Default,,0,0,0,,-Yes, Mama?\N-What did your father tell you?
+Dialogue: 0,0:23:46.17,0:23:47.72,Default,,0,0,0,,About what?
+Dialogue: 0,0:23:47.80,0:23:51.85,Default,,0,0,0,,About eating the blossoms\Nand leaving the greens?
+Dialogue: 0,0:23:52.22,0:23:54.22,Default,,0,0,0,,Oh, that one.
+Dialogue: 0,0:23:56.35,0:24:00.06,Default,,0,0,0,,Eating greens is a special treat.
+Dialogue: 0,0:24:00.15,0:24:04.36,Default,,0,0,0,,It makes long ears and great big feet.
+Dialogue: 0,0:24:05.65,0:24:09.65,Default,,0,0,0,,But it sure is awful stuff to eat.
+Dialogue: 0,0:24:10.70,0:24:13.66,Default,,0,0,0,,I made that last part up myself.
+Dialogue: 0,0:24:17.33,0:24:20.42,Default,,0,0,0,,Watch out.
+Dialogue: 0,0:25:22.69,0:25:25.19,Default,,0,0,0,,That's little Faline.
+Dialogue: 0,0:25:26.15,0:25:29.11,Default,,0,0,0,,He's kind of bashful, isn't he, Mama?
+Dialogue: 0,0:25:29.19,0:25:32.95,Default,,0,0,0,,Well, maybe he wouldn't be\Nif you'd say hello.
+Dialogue: 0,0:25:36.58,0:25:38.24,Default,,0,0,0,,Hello, Bambi.
+Dialogue: 0,0:25:42.37,0:25:44.92,Default,,0,0,0,,I said hello.
+Dialogue: 0,0:25:45.88,0:25:47.34,Default,,0,0,0,,Well, aren't you going to answer her?
+Dialogue: 0,0:25:50.55,0:25:52.72,Default,,0,0,0,,You're not afraid, are you?
+Dialogue: 0,0:25:56.01,0:25:58.10,Default,,0,0,0,,Well, then, go ahead.
+Dialogue: 0,0:26:04.27,0:26:06.27,Default,,0,0,0,,Go on, say hello.
+Dialogue: 0,0:26:10.40,0:26:22.41,Default,,0,0,0,,Hello.
+Dialogue: 0,0:26:49.90,0:28:27.12,Default,,0,0,0,,You.
+Dialogue: 0,0:29:27.93,0:29:30.52,Default,,0,0,0,,He stopped and looked at me.
+Dialogue: 0,0:29:30.60,0:29:32.64,Default,,0,0,0,,Yes, I know.
+Dialogue: 0,0:29:33.19,0:29:37.23,Default,,0,0,0,,Why was everyone still\Nwhen he came on the meadow?
+Dialogue: 0,0:29:37.32,0:29:39.65,Default,,0,0,0,,Everyone respects him.
+Dialogue: 0,0:29:39.74,0:29:45.62,Default,,0,0,0,,For of all the deer in the forest,\Nnot one has lived half so long.
+Dialogue: 0,0:29:46.33,0:29:50.12,Default,,0,0,0,,He's very brave and very wise.
+Dialogue: 0,0:29:51.29,0:30:17.73,Default,,0,0,0,,That's why he's known as\Nthe Great Prince of the Forest.
+Dialogue: 0,0:31:49.70,0:31:53.54,Default,,0,0,0,,Mother, look.\NWhat's all that white stuff?
+Dialogue: 0,0:31:54.70,0:31:57.16,Default,,0,0,0,,Why, it's snow.
+Dialogue: 0,0:31:57.46,0:31:59.75,Default,,0,0,0,,-Snow?\N-Yes.
+Dialogue: 0,0:31:59.84,0:32:02.30,Default,,0,0,0,,Winter has come.
+Dialogue: 0,0:33:05.69,0:33:07.94,Default,,0,0,0,,Hiya, Bambi.
+Dialogue: 0,0:33:08.53,0:33:10.65,Default,,0,0,0,,Watch what I can do.
+Dialogue: 0,0:33:26.63,0:33:29.34,Default,,0,0,0,,Come on. It's all right.
+Dialogue: 0,0:33:29.42,0:33:30.80,Default,,0,0,0,,Look.
+Dialogue: 0,0:33:31.63,0:33:33.64,Default,,0,0,0,,The water's stiff.
+Dialogue: 0,0:33:49.65,0:33:52.49,Default,,0,0,0,,Some fun, huh, Bambi?
+Dialogue: 0,0:33:55.37,0:34:04.12,Default,,0,0,0,,Come on, get up. Like this.
+Dialogue: 0,0:34:17.18,0:34:19.14,Default,,0,0,0,,No, no, no.
+Dialogue: 0,0:34:38.62,0:34:41.37,Default,,0,0,0,,Kinda wobbly, aren't you?
+Dialogue: 0,0:35:02.56,0:35:06.14,Default,,0,0,0,,Got to watch both ends\Nat the same time.
+Dialogue: 0,0:35:12.07,0:35:30.59,Default,,0,0,0,,Guess you better unwind it.
+Dialogue: 0,0:36:09.12,0:36:11.88,Default,,0,0,0,,Wake up. Wake up, Flower.
+Dialogue: 0,0:36:15.47,0:36:18.38,Default,,0,0,0,,Is it spring yet?
+Dialogue: 0,0:36:18.97,0:36:21.59,Default,,0,0,0,,No. Winter's just started.
+Dialogue: 0,0:36:22.30,0:36:24.97,Default,,0,0,0,,What you doing? Hibernating?
+Dialogue: 0,0:36:30.90,0:36:33.15,Default,,0,0,0,,What do you want to do that for?
+Dialogue: 0,0:36:34.78,0:36:38.65,Default,,0,0,0,,All us flowers sleep in the winter.
+Dialogue: 0,0:36:42.32,0:37:09.31,Default,,0,0,0,,Well, good night.
+Dialogue: 0,0:37:59.57,0:38:02.15,Default,,0,0,0,,Let's sing a gay little spring song
+Dialogue: 0,0:38:03.07,0:38:05.82,Default,,0,0,0,,This is the season to sing
+Dialogue: 0,0:38:05.91,0:38:09.66,Default,,0,0,0,,So I'd like to suggest\NThat we all do our best
+Dialogue: 0,0:38:09.75,0:38:12.71,Default,,0,0,0,,And warble a song about spring
+Dialogue: 0,0:38:12.79,0:38:15.21,Default,,0,0,0,,Spring, spring, spring
+Dialogue: 0,0:38:15.29,0:38:17.50,Default,,0,0,0,,Let's get together and sing
+Dialogue: 0,0:38:22.30,0:38:25.05,Default,,0,0,0,,Let's sing a gay little spring song
+Dialogue: 0,0:38:25.97,0:38:28.85,Default,,0,0,0,,Just like the bird on the wing
+Dialogue: 0,0:38:28.93,0:38:32.48,Default,,0,0,0,,Things always seem right\NWhen you're cheerful and bright
+Dialogue: 0,0:38:32.56,0:38:35.23,Default,,0,0,0,,So let's get together and sing
+Dialogue: 0,0:38:35.31,0:38:37.90,Default,,0,0,0,,Sing, sing, sing
+Dialogue: 0,0:38:37.98,0:38:41.28,Default,,0,0,0,,Let's sing a song about spring
+Dialogue: 0,0:38:41.36,0:38:44.78,Default,,0,0,0,,Let's twitter and tweet\NLike the birdies in May
+Dialogue: 0,0:38:44.86,0:38:48.20,Default,,0,0,0,,Get into the mood\NAnd be merry today
+Dialogue: 0,0:38:48.99,0:38:51.100,Default,,0,0,0,,Forget all your troubles\NAnd warble away...
+Dialogue: 0,0:38:52.08,0:38:53.20,Default,,0,0,0,,Wait.
+Dialogue: 0,0:38:53.83,0:38:55.83,Default,,0,0,0,,What now?
+Dialogue: 0,0:38:58.13,0:39:00.09,Default,,0,0,0,,Hey.
+Dialogue: 0,0:39:01.21,0:39:02.92,Default,,0,0,0,,Stop that racket.
+Dialogue: 0,0:39:03.01,0:39:04.18,Default,,0,0,0,,Scat.
+Dialogue: 0,0:39:06.18,0:39:08.80,Default,,0,0,0,,Let's sing a song about spring
+Dialogue: 0,0:39:09.85,0:39:11.43,Default,,0,0,0,,I'll fix 'em.
+Dialogue: 0,0:39:18.90,0:39:23.44,Default,,0,0,0,,There. I guess that'll teach 'em.
+Dialogue: 0,0:39:28.07,0:39:30.66,Default,,0,0,0,,Oh, what's the use?
+Dialogue: 0,0:39:33.66,0:39:36.33,Default,,0,0,0,,This is the season to sing...
+Dialogue: 0,0:39:40.21,0:39:42.80,Default,,0,0,0,,Same thing every spring.
+Dialogue: 0,0:39:50.18,0:39:52.51,Default,,0,0,0,,Love's sweet song.
+Dialogue: 0,0:39:54.35,0:39:56.81,Default,,0,0,0,,Pain in the pin feathers, I call it.
+Dialogue: 0,0:40:17.50,0:40:18.62,Default,,0,0,0,,Stop it.
+Dialogue: 0,0:40:22.21,0:40:24.38,Default,,0,0,0,,Get out of here. All of you.
+Dialogue: 0,0:40:27.34,0:40:28.93,Default,,0,0,0,,And you, too.
+Dialogue: 0,0:40:30.39,0:40:34.14,Default,,0,0,0,,Hello, Friend Owl.\NDon't you remember me?
+Dialogue: 0,0:40:34.22,0:40:36.52,Default,,0,0,0,,Why, it's the young prince.
+Dialogue: 0,0:40:36.89,0:40:38.27,Default,,0,0,0,,Bambi!
+Dialogue: 0,0:40:39.86,0:40:42.48,Default,,0,0,0,,My, my, how you've changed.
+Dialogue: 0,0:40:42.57,0:40:45.40,Default,,0,0,0,,Turn round there. Let me look at you.
+Dialogue: 0,0:40:45.74,0:40:49.24,Default,,0,0,0,,I see you've traded in your spots\Nfor a pair of antlers.
+Dialogue: 0,0:40:53.16,0:40:57.75,Default,,0,0,0,,You know, just the other day\NI was talking to myself about you.
+Dialogue: 0,0:40:57.83,0:41:00.62,Default,,0,0,0,,And we were wondering\Nwhat had become of you.
+Dialogue: 0,0:41:00.71,0:41:02.71,Default,,0,0,0,,Hello, Bambi.
+Dialogue: 0,0:41:04.17,0:41:05.75,Default,,0,0,0,,Remember me?
+Dialogue: 0,0:41:06.97,0:41:08.01,Default,,0,0,0,,Thumper.
+Dialogue: 0,0:41:09.18,0:41:10.43,Default,,0,0,0,,Right.
+Dialogue: 0,0:41:15.06,0:41:17.06,Default,,0,0,0,,Hi, fellas.
+Dialogue: 0,0:41:17.56,0:41:18.85,Default,,0,0,0,,Flower.
+Dialogue: 0,0:41:19.77,0:41:21.23,Default,,0,0,0,,Yeah.
+Dialogue: 0,0:41:31.95,0:41:34.82,Default,,0,0,0,,Well, what's the matter with them?
+Dialogue: 0,0:41:34.91,0:41:37.24,Default,,0,0,0,,Why are they acting that way?
+Dialogue: 0,0:41:37.83,0:41:39.100,Default,,0,0,0,,Why, don't you know?
+Dialogue: 0,0:41:40.79,0:41:42.46,Default,,0,0,0,,They're "twitterpated."
+Dialogue: 0,0:41:43.79,0:41:45.29,Default,,0,0,0,,Twitterpated?
+Dialogue: 0,0:41:46.63,0:41:50.17,Default,,0,0,0,,Yes. Nearly everybody gets\Ntwitterpated in the spring time.
+Dialogue: 0,0:41:54.72,0:41:55.80,Default,,0,0,0,,For example,
+Dialogue: 0,0:41:57.35,0:42:01.23,Default,,0,0,0,,you're walking along,\Nminding your own business,
+Dialogue: 0,0:42:01.31,0:42:05.19,Default,,0,0,0,,you're looking neither to the left\Nnor to the right,
+Dialogue: 0,0:42:05.27,0:42:07.44,Default,,0,0,0,,when all of a sudden
+Dialogue: 0,0:42:07.53,0:42:10.65,Default,,0,0,0,,you run smack into a pretty face.
+Dialogue: 0,0:42:16.37,0:42:16.78,Default,,0,0,0,,You begin to get weak in the knees.
+Dialogue: 0,0:42:16.78,0:42:19.87,Default,,0,0,0,,You begin to get weak in the knees.
+Dialogue: 0,0:42:20.29,0:42:22.41,Default,,0,0,0,,Your head's in a whirl.
+Dialogue: 0,0:42:23.71,0:42:26.75,Default,,0,0,0,,And then you feel light as a feather.
+Dialogue: 0,0:42:26.84,0:42:29.05,Default,,0,0,0,,And before you know it,
+Dialogue: 0,0:42:29.13,0:42:31.67,Default,,0,0,0,,you're walking on air.
+Dialogue: 0,0:42:35.64,0:42:37.76,Default,,0,0,0,,And then you know what?
+Dialogue: 0,0:42:37.85,0:42:40.43,Default,,0,0,0,,You're knocked for a loop.
+Dialogue: 0,0:42:40.52,0:42:43.85,Default,,0,0,0,,And you completely lose your head.
+Dialogue: 0,0:42:46.11,0:42:47.77,Default,,0,0,0,,Gosh, that's awful.
+Dialogue: 0,0:42:47.86,0:42:50.07,Default,,0,0,0,,-Gee whiz.\N-Terrible.
+Dialogue: 0,0:42:50.15,0:42:51.99,Default,,0,0,0,,And that ain't all.
+Dialogue: 0,0:42:52.07,0:42:55.07,Default,,0,0,0,,It can happen to anybody.
+Dialogue: 0,0:42:55.70,0:42:58.45,Default,,0,0,0,,So you'd better be careful.
+Dialogue: 0,0:42:58.87,0:43:02.41,Default,,0,0,0,,It could happen to you, and you, and...
+Dialogue: 0,0:43:04.92,0:43:07.88,Default,,0,0,0,,Yes, it could even happen to you.
+Dialogue: 0,0:43:10.21,0:43:12.97,Default,,0,0,0,,Well, it's not going to happen to me.
+Dialogue: 0,0:43:13.05,0:43:15.88,Default,,0,0,0,,-Me neither.\N-Me neither.
+Dialogue: 0,0:45:04.74,0:45:06.33,Default,,0,0,0,,Twitterpated.
+Dialogue: 0,0:46:11.10,0:46:12.81,Default,,0,0,0,,Hello.
+Dialogue: 0,0:46:55.81,0:46:57.81,Default,,0,0,0,,Hello, Bambi.
+Dialogue: 0,0:46:59.98,0:47:02.69,Default,,0,0,0,,Don't you remember me?
+Dialogue: 0,0:47:06.62,0:47:08.62,Default,,0,0,0,,I'm Faline.
+Dialogue: 0,0:48:08.34,0:48:09.47,Default,,0,0,0,,For I want you to know
+Dialogue: 0,0:48:09.89,0:48:14.06,Default,,0,0,0,,That I'm looking for romance
+Dialogue: 0,0:48:15.14,0:48:18.90,Default,,0,0,0,,I bring you a song
+Dialogue: 0,0:48:18.98,0:48:22.32,Default,,0,0,0,,In the hope that you'll see
+Dialogue: 0,0:48:22.82,0:48:25.57,Default,,0,0,0,,When you're looking at me
+Dialogue: 0,0:48:25.65,0:48:28.99,Default,,0,0,0,,That I'm looking for love
+Dialogue: 0,0:48:31.28,0:48:34.08,Default,,0,0,0,,I'm seeking that glow
+Dialogue: 0,0:48:34.16,0:48:36.95,Default,,0,0,0,,Only found when you're young\Nand it's May
+Dialogue: 0,0:48:37.04,0:48:40.08,Default,,0,0,0,,Only found on that wonderful day
+Dialogue: 0,0:48:40.17,0:48:43.21,Default,,0,0,0,,When all longing is through
+Dialogue: 0,0:48:44.51,0:48:47.51,Default,,0,0,0,,I'm seeking that glow
+Dialogue: 0,0:48:47.59,0:48:50.76,Default,,0,0,0,,Only found when a thrill is complete
+Dialogue: 0,0:48:50.84,0:48:54.14,Default,,0,0,0,,Only found when two hearts\Ngently beat
+Dialogue: 0,0:48:54.22,0:49:00.73,Default,,0,0,0,,To the strains of a waltz\NThat's both tender and new
+Dialogue: 0,0:49:01.52,0:49:04.61,Default,,0,0,0,,I bring you a song
+Dialogue: 0,0:49:04.69,0:49:08.36,Default,,0,0,0,,For I'm seeking romance
+Dialogue: 0,0:49:08.45,0:49:11.32,Default,,0,0,0,,You're by my side\NThere's a moon up above
+Dialogue: 0,0:49:11.41,0:49:14.45,Default,,0,0,0,,It shines with a light\NThat's so mellow and bright
+Dialogue: 0,0:49:14.53,0:49:20.33,Default,,0,0,0,,It's easy to see\NThat tonight we shall fall in love
+Dialogue: 0,0:49:30.13,0:49:34.39,Default,,0,0,0,,I bring you a song
+Dialogue: 0,0:49:34.47,0:49:38.22,Default,,0,0,0,,For I'm seeking romance
+Dialogue: 0,0:49:38.31,0:49:41.27,Default,,0,0,0,,And you
+Dialogue: 0,0:50:49.38,0:50:51.01,Default,,0,0,0,,Wake up, Friend Owl.
+Dialogue: 0,0:50:52.34,0:50:54.26,Default,,0,0,0,,What now?
+Dialogue: 0,0:50:55.76,0:50:58.35,Default,,0,0,0,,Hey, what's going on around here?
+Dialogue: 0,0:50:58.43,0:51:00.22,Default,,0,0,0,,-It's happened.\N-Happened?
+Dialogue: 0,0:51:00.31,0:51:02.27,Default,,0,0,0,,Yes. In the thicket.
+Dialogue: 0,0:51:02.35,0:51:04.23,Default,,0,0,0,,Hurry up, Bambi.
+Dialogue: 0,0:51:04.31,0:51:07.61,Default,,0,0,0,,Yes, Papa. I'm coming.
+Dialogue: 0,0:51:36.76,0:51:39.39,Default,,0,0,0,,Oh. Well.
+Dialogue: 0,0:51:46.35,0:51:47.77,Default,,0,0,0,,Look.
+Dialogue: 0,0:51:49.11,0:51:50.61,Default,,0,0,0,,Two of them.
+Dialogue: 0,0:51:57.70,0:52:01.66,Default,,0,0,0,,Well, I don't believe I've ever seen\Na more likely looking pair of fawns.
+Dialogue: 0,0:52:03.87,0:52:06.100,Default,,0,0,0,,Prince Bambi ought to be mighty proud.
+Dialogue: 0,0:52:11.21,0:52:14.01,Default,,0,0,0,,Love is a song
+Dialogue: 0,0:52:14.09,0:52:19.34,Default,,0,0,0,,That never ends
+Dialogue: 0,0:52:19.43,0:52:22.64,Default,,0,0,0,,One simple theme
+Dialogue: 0,0:52:22.72,0:52:27.14,Default,,0,0,0,,Repeating
+Dialogue: 0,0:52:28.35,0:52:31.73,Default,,0,0,0,,Like the voice
+Dialogue: 0,0:52:31.82,0:52:35.36,Default,,0,0,0,,Of a heavenly choir
+Dialogue: 0,0:52:38.20,0:52:42.16,Default,,0,0,0,,Love's sweet music
+Dialogue: 0,0:52:42.24,0:53:01.59,Default,,0,0,0,,Flows on

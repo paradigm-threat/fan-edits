@@ -1,0 +1,16 @@
+{
+  "description": "Riddick (2013) Unjinxed: vulture open removal, Vaako block (keep cut), in-body flashback relocated to prologue (implement via playlist2 reorder—not a single delete). Times are seconds on source rip. join_fade false = hard cut at seam when regenerating from JSON.",
+  "ranges": [
+    {"start": 30, "end": 120, "join_fade": false, "note": "vulture/pterosaur kill — QC refine in Kdenlive"},
+    {"start": 805, "end": 950, "join_fade": false, "note": "Vaako / Furya-bait conspiracy — keep removed"},
+    {"start": 654, "end": 805, "note": "flashback block A — plays in prologue only"},
+    {"start": 950, "end": 1371, "note": "flashback block B — plays in prologue only; main omits 654-1371 except savanna 1371-1443"}
+  ],
+  "playlist2_order": [
+    {"in": "00:10:54.487", "out": "00:13:25.067", "label": "prologue_a"},
+    {"in": "00:15:50.717", "out": "00:22:51.536", "label": "prologue_b", "fade_out_black": true},
+    {"in": "00:01:13.573", "out": "00:10:54.487", "label": "main_survival", "fade_in_black": true},
+    {"in": "00:22:51.536", "out": "00:24:03.733", "label": "main_savanna_bridge"},
+    {"in": "00:24:03.733", "out": "00:40:50.342", "label": "main_beacon_mercs", "fade_out_black": true}
+  ]
+}

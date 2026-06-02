@@ -1,0 +1,685 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 3840
+PlayResY: 1632
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,40,40,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:13.81,0:00:17.31,Default,,0,0,0,,Cinderella
+Dialogue: 0,0:00:17.39,0:00:20.85,Default,,0,0,0,,You're as lovely as your name
+Dialogue: 0,0:00:20.94,0:00:24.02,Default,,0,0,0,,Cinderella
+Dialogue: 0,0:00:24.11,0:00:28.65,Default,,0,0,0,,You're a sunset in a frame
+Dialogue: 0,0:00:28.74,0:00:31.53,Default,,0,0,0,,Though you're dressed in rags
+Dialogue: 0,0:00:31.61,0:00:36.54,Default,,0,0,0,,You wear an air of queenly grace
+Dialogue: 0,0:00:36.66,0:00:38.100,Default,,0,0,0,,Anyone can see
+Dialogue: 0,0:00:39.08,0:00:44.71,Default,,0,0,0,,A throne would be your proper place
+Dialogue: 0,0:00:45.30,0:00:48.05,Default,,0,0,0,,Cinderella
+Dialogue: 0,0:00:48.13,0:00:51.55,Default,,0,0,0,,If you give your heart a chance
+Dialogue: 0,0:00:51.63,0:00:54.68,Default,,0,0,0,,It will lead you
+Dialogue: 0,0:00:54.76,0:00:59.10,Default,,0,0,0,,To the kingdom of romance
+Dialogue: 0,0:00:59.94,0:01:05.40,Default,,0,0,0,,There you'll see your dreams unfold
+Dialogue: 0,0:01:07.53,0:01:14.03,Default,,0,0,0,,Cinderella
+Dialogue: 0,0:01:14.12,0:01:16.87,Default,,0,0,0,,In the sweetest story
+Dialogue: 0,0:01:16.95,0:01:21.25,Default,,0,0,0,,Ever told
+Dialogue: 0,0:01:36.60,0:01:40.14,Default,,0,0,0,,Once upon a time,\Nin a faraway land,
+Dialogue: 0,0:01:40.22,0:01:42.19,Default,,0,0,0,,there was a tiny kingdom,
+Dialogue: 0,0:01:44.15,0:01:48.15,Default,,0,0,0,,peaceful, prosperous,\Nand rich in romance and tradition.
+Dialogue: 0,0:01:52.49,0:01:54.49,Default,,0,0,0,,Here, in a stately chateau,
+Dialogue: 0,0:01:54.57,0:01:56.45,Default,,0,0,0,,there lived a widowed gentleman
+Dialogue: 0,0:01:56.53,0:01:58.78,Default,,0,0,0,,and his little daughter, Cinderella.
+Dialogue: 0,0:02:01.04,0:02:03.54,Default,,0,0,0,,Although he was\Na kind and devoted father,
+Dialogue: 0,0:02:03.62,0:02:06.79,Default,,0,0,0,,and gave his beloved child\Nevery luxury and comfort,
+Dialogue: 0,0:02:06.88,0:02:10.09,Default,,0,0,0,,still, he felt she needed\Na mother's care.
+Dialogue: 0,0:02:10.17,0:02:11.92,Default,,0,0,0,,And so, he married again,
+Dialogue: 0,0:02:12.01,0:02:15.59,Default,,0,0,0,,choosing for his second wife\Na woman of good family,
+Dialogue: 0,0:02:15.68,0:02:18.43,Default,,0,0,0,,with two daughters\Njust Cinderella's age,
+Dialogue: 0,0:02:18.51,0:02:21.97,Default,,0,0,0,,by name, Anastasia and Drizella.
+Dialogue: 0,0:02:59.39,0:03:02.51,Default,,0,0,0,,Well, it serves you right,\Nspoiling people's best dreams.
+Dialogue: 0,0:03:03.89,0:03:06.27,Default,,0,0,0,,Yes, I know it's a lovely morning,
+Dialogue: 0,0:03:06.35,0:03:08.98,Default,,0,0,0,,but it was a lovely dream, too.
+Dialogue: 0,0:03:13.57,0:03:15.74,Default,,0,0,0,,What kind of a dream?
+Dialogue: 0,0:03:16.91,0:03:17.99,Default,,0,0,0,,Can't tell.
+Dialogue: 0,0:03:20.28,0:03:23.95,Default,,0,0,0,,'Cause if you tell a wish,\Nit won't come true.
+Dialogue: 0,0:03:24.04,0:03:25.20,Default,,0,0,0,,And, after all...
+Dialogue: 0,0:03:25.62,0:03:30.17,Default,,0,0,0,,A dream is a wish
+Dialogue: 0,0:03:30.29,0:03:34.50,Default,,0,0,0,,Your heart makes
+Dialogue: 0,0:03:34.59,0:03:40.30,Default,,0,0,0,,When you're fast asleep
+Dialogue: 0,0:03:40.39,0:03:44.47,Default,,0,0,0,,In dreams you will lose
+Dialogue: 0,0:03:44.56,0:03:46.89,Default,,0,0,0,,Your heartaches
+Dialogue: 0,0:03:48.44,0:03:52.48,Default,,0,0,0,,Whatever you wish for
+Dialogue: 0,0:03:52.57,0:03:53.77,Default,,0,0,0,,You keep
+Dialogue: 0,0:03:56.57,0:03:58.36,Default,,0,0,0,,Have faith
+Dialogue: 0,0:03:58.45,0:04:04.28,Default,,0,0,0,,In your dreams and someday
+Dialogue: 0,0:04:04.95,0:04:11.62,Default,,0,0,0,,Your rainbow\Nwill come smiling through
+Dialogue: 0,0:04:12.71,0:04:18.13,Default,,0,0,0,,No matter how your heart is grieving
+Dialogue: 0,0:04:19.30,0:04:23.55,Default,,0,0,0,,If you keep on believing
+Dialogue: 0,0:04:24.76,0:04:28.73,Default,,0,0,0,,The dream that you wish
+Dialogue: 0,0:04:28.81,0:04:34.19,Default,,0,0,0,,Will come true
+Dialogue: 0,0:04:35.90,0:04:37.53,Default,,0,0,0,,Oh, that clock.
+Dialogue: 0,0:04:39.15,0:04:40.36,Default,,0,0,0,,Old killjoy.
+Dialogue: 0,0:04:41.41,0:04:44.03,Default,,0,0,0,,I hear you. "Come on, get up," you say.
+Dialogue: 0,0:04:44.99,0:04:47.45,Default,,0,0,0,,Time to start another day.
+Dialogue: 0,0:04:47.54,0:04:49.75,Default,,0,0,0,,Even he orders me around.
+Dialogue: 0,0:04:51.25,0:04:53.12,Default,,0,0,0,,Well, there's one thing.
+Dialogue: 0,0:04:53.21,0:04:56.59,Default,,0,0,0,,They can't order me to stop dreaming.
+Dialogue: 0,0:04:56.67,0:04:59.51,Default,,0,0,0,,And perhaps someday...
+Dialogue: 0,0:04:59.59,0:05:03.43,Default,,0,0,0,,The dreams that I wish
+Dialogue: 0,0:05:03.51,0:05:08.81,Default,,0,0,0,,Will come true
+Dialogue: 0,0:06:14.21,0:06:19.84,Default,,0,0,0,,No matter how your heart is grieving
+Dialogue: 0,0:06:20.80,0:06:25.43,Default,,0,0,0,,If you keep on believing
+Dialogue: 0,0:06:26.68,0:06:29.93,Default,,0,0,0,,The dream that you wish
+Dialogue: 0,0:06:30.01,0:06:35.23,Default,,0,0,0,,Will come true
+Dialogue: 0,0:06:35.31,0:06:38.06,Default,,0,0,0,,- Look what I found.\N- Over there, Cinderella.
+Dialogue: 0,0:06:38.15,0:06:40.19,Default,,0,0,0,,Wait a minute.
+Dialogue: 0,0:06:40.27,0:06:41.98,Default,,0,0,0,,One at a time, please.
+Dialogue: 0,0:06:42.32,0:06:44.74,Default,,0,0,0,,Now, Jaq, what's all the fuss about?
+Dialogue: 0,0:06:44.82,0:06:46.15,Default,,0,0,0,,New mouse in the house.
+Dialogue: 0,0:06:46.24,0:06:48.12,Default,,0,0,0,,Brand-new. Never saw it before.
+Dialogue: 0,0:06:48.20,0:06:50.78,Default,,0,0,0,,- Visitor. Visitor!\N- Oh, a visitor.
+Dialogue: 0,0:06:51.29,0:06:53.33,Default,,0,0,0,,Well, she'll need a dress...
+Dialogue: 0,0:06:54.83,0:06:56.92,Default,,0,0,0,,- No, no, no.\N- It's not a she, it's a he.
+Dialogue: 0,0:06:57.00,0:06:59.71,Default,,0,0,0,,- He, he.\N- Oh, that does make a difference.
+Dialogue: 0,0:07:00.80,0:07:03.71,Default,,0,0,0,,- He'll need a jacket and shoes...\N- Gotta get him out!
+Dialogue: 0,0:07:03.80,0:07:05.84,Default,,0,0,0,,- It's in a rat trap.\N- Where?
+Dialogue: 0,0:07:05.93,0:07:08.47,Default,,0,0,0,,In a trap? Why didn't you say so?
+Dialogue: 0,0:07:23.11,0:07:25.36,Default,,0,0,0,,Now, now, calm down, everybody.
+Dialogue: 0,0:07:27.11,0:07:30.20,Default,,0,0,0,,Oh, the poor little thing's\Nscared to death.
+Dialogue: 0,0:07:30.28,0:07:33.16,Default,,0,0,0,,Jaq, maybe you better\Nexplain things to him.
+Dialogue: 0,0:07:33.24,0:07:35.58,Default,,0,0,0,,Zuk, zuk, Cinderelly.
+Dialogue: 0,0:07:35.66,0:07:38.33,Default,,0,0,0,,Now, now. Look, little guy.
+Dialogue: 0,0:07:38.42,0:07:41.17,Default,,0,0,0,,Take it easy. Nothin' to worry about.
+Dialogue: 0,0:07:41.25,0:07:43.92,Default,,0,0,0,,We like you. Cinderelly likes you, too.
+Dialogue: 0,0:07:44.00,0:07:45.67,Default,,0,0,0,,She's nice, very nice.
+Dialogue: 0,0:07:45.76,0:07:49.13,Default,,0,0,0,,That's better. Come on, now. Zuk, zuk.
+Dialogue: 0,0:07:49.22,0:07:51.18,Default,,0,0,0,,Zuk, zuk.
+Dialogue: 0,0:07:54.01,0:07:55.68,Default,,0,0,0,,Well, that's better.
+Dialogue: 0,0:07:58.35,0:08:00.90,Default,,0,0,0,,Well, let's just slip it on for size.
+Dialogue: 0,0:08:02.86,0:08:05.94,Default,,0,0,0,,It is a little snug.
+Dialogue: 0,0:08:06.03,0:08:07.82,Default,,0,0,0,,But it'll have to do.
+Dialogue: 0,0:08:08.24,0:08:09.86,Default,,0,0,0,,Now, for a name.
+Dialogue: 0,0:08:10.24,0:08:12.78,Default,,0,0,0,,Gus-Gus take the Lucify and look at!
+Dialogue: 0,0:08:12.87,0:08:14.16,Default,,0,0,0,,No, Gus-Gus, no.
+Dialogue: 0,0:08:14.25,0:08:16.45,Default,,0,0,0,,Now, listen here. Lucify not funny.
+Dialogue: 0,0:08:16.54,0:08:18.25,Default,,0,0,0,,Lucify mean.
+Dialogue: 0,0:08:32.72,0:08:33.97,Default,,0,0,0,,Bruno.
+Dialogue: 0,0:08:35.89,0:08:37.10,Default,,0,0,0,,Bruno!
+Dialogue: 0,0:08:44.07,0:08:45.86,Default,,0,0,0,,Dreaming again.
+Dialogue: 0,0:08:45.94,0:08:48.40,Default,,0,0,0,,Chasing Lucifer?
+Dialogue: 0,0:08:48.49,0:08:51.36,Default,,0,0,0,,Catch him this time? That's bad.
+Dialogue: 0,0:08:54.58,0:08:56.66,Default,,0,0,0,,Suppose they heard you upstairs.
+Dialogue: 0,0:08:56.75,0:08:58.33,Default,,0,0,0,,You know the orders.
+Dialogue: 0,0:08:59.08,0:09:02.04,Default,,0,0,0,,So if you don't want\Nto lose that nice, warm bed,
+Dialogue: 0,0:09:02.13,0:09:04.67,Default,,0,0,0,,you'd better get rid of those dreams.
+Dialogue: 0,0:09:05.25,0:09:06.50,Default,,0,0,0,,Know how?
+Dialogue: 0,0:09:08.09,0:09:09.84,Default,,0,0,0,,Just learn to like cats.
+Dialogue: 0,0:09:12.72,0:09:16.35,Default,,0,0,0,,No, I mean it.\NLucifer has his good points, too.
+Dialogue: 0,0:09:16.43,0:09:18.39,Default,,0,0,0,,For one thing, he...
+Dialogue: 0,0:09:21.10,0:09:24.36,Default,,0,0,0,,Well, sometimes he...
+Dialogue: 0,0:09:26.77,0:09:29.03,Default,,0,0,0,,There must be\Nsomething good about him.
+Dialogue: 0,0:09:42.54,0:09:44.38,Default,,0,0,0,,Bruno!
+Dialogue: 0,0:09:44.46,0:09:46.54,Default,,0,0,0,,Oh, Bruno.
+Dialogue: 0,0:09:46.63,0:09:49.59,Default,,0,0,0,,Come on, now. Outside.
+Dialogue: 0,0:09:52.63,0:09:54.80,Default,,0,0,0,,I know it isn't easy,
+Dialogue: 0,0:09:54.89,0:09:58.06,Default,,0,0,0,,but at least we should try\Nto get along together.
+Dialogue: 0,0:09:59.81,0:10:02.81,Default,,0,0,0,,And that includes you, Your Majesty.
+Dialogue: 0,0:10:10.57,0:10:13.07,Default,,0,0,0,,- Cinderella!\N- I'm coming.
+Dialogue: 0,0:10:23.42,0:10:25.83,Default,,0,0,0,,- Cinderella!\N- In a minute.
+Dialogue: 0,0:10:27.21,0:10:43.77,Default,,0,0,0,,Cinderella!
+Dialogue: 0,0:11:07.88,0:11:11.09,Default,,0,0,0,,My son has been avoiding his\Nresponsibilities long enough.
+Dialogue: 0,0:11:11.17,0:11:14.47,Default,,0,0,0,,It's high time he married\Nand settled down.
+Dialogue: 0,0:11:15.09,0:11:17.05,Default,,0,0,0,,Of course, Your Majesty.
+Dialogue: 0,0:11:17.60,0:11:18.85,Default,,0,0,0,,But we must be patient.
+Dialogue: 0,0:11:18.93,0:11:21.14,Default,,0,0,0,,I am patient!
+Dialogue: 0,0:11:23.02,0:11:26.89,Default,,0,0,0,,But I'm not getting any younger,\Nyou know.
+Dialogue: 0,0:11:26.98,0:11:30.19,Default,,0,0,0,,I want to see my grandchildren\Nbefore I go.
+Dialogue: 0,0:11:30.27,0:11:33.03,Default,,0,0,0,,- I understand, Sire.\N- No.
+Dialogue: 0,0:11:33.11,0:11:37.45,Default,,0,0,0,,No, you don't know\Nwhat it means to see your only child
+Dialogue: 0,0:11:37.53,0:11:42.41,Default,,0,0,0,,grow farther, farther,\Nand farther away from you.
+Dialogue: 0,0:11:43.66,0:11:44.91,Default,,0,0,0,,I'm...
+Dialogue: 0,0:11:44.100,0:11:48.12,Default,,0,0,0,,I'm lonely in this desolate old palace.
+Dialogue: 0,0:11:48.21,0:11:50.38,Default,,0,0,0,,I... I want to hear
+Dialogue: 0,0:11:50.46,0:11:53.96,Default,,0,0,0,,the pitter-patter of little feet again.
+Dialogue: 0,0:11:55.47,0:11:57.13,Default,,0,0,0,,Now, now, Your Majesty.
+Dialogue: 0,0:11:58.68,0:12:01.97,Default,,0,0,0,,- Perhaps if we just let him alone...\N- Let him alone?
+Dialogue: 0,0:12:03.35,0:12:05.93,Default,,0,0,0,,With his silly romantic ideas?
+Dialogue: 0,0:12:06.02,0:12:08.90,Default,,0,0,0,,But, Sire, in matters of love...
+Dialogue: 0,0:12:08.98,0:12:10.61,Default,,0,0,0,,Love.
+Dialogue: 0,0:12:10.69,0:12:15.24,Default,,0,0,0,,Just a boy meeting a girl\Nunder the right conditions.
+Dialogue: 0,0:12:15.32,0:12:18.11,Default,,0,0,0,,So, we're arranging the conditions.
+Dialogue: 0,0:12:18.20,0:12:20.99,Default,,0,0,0,,But, Your Majesty,\Nif the Prince should suspect.
+Dialogue: 0,0:12:21.08,0:12:22.87,Default,,0,0,0,,Suspect!
+Dialogue: 0,0:12:22.95,0:12:25.70,Default,,0,0,0,,Look, the boy's coming home today,\Nisn't he?
+Dialogue: 0,0:12:25.79,0:12:26.75,Default,,0,0,0,,Yes, Sire.
+Dialogue: 0,0:12:26.83,0:12:30.96,Default,,0,0,0,,Well, what could be more natural than a\Nball to celebrate his return?
+Dialogue: 0,0:12:31.04,0:12:32.92,Default,,0,0,0,,Nothing, Sire.
+Dialogue: 0,0:12:33.00,0:12:36.97,Default,,0,0,0,,If all the eligible maidens\Nin my kingdom just
+Dialogue: 0,0:12:38.63,0:12:40.34,Default,,0,0,0,,happened to be there,
+Dialogue: 0,0:12:40.43,0:12:44.68,Default,,0,0,0,,why, he's bound to show interest\Nin one of them, isn't he?
+Dialogue: 0,0:12:44.77,0:12:46.43,Default,,0,0,0,,Isn't he?
+Dialogue: 0,0:12:46.52,0:12:48.10,Default,,0,0,0,,Yes, Sire.
+Dialogue: 0,0:12:48.19,0:12:49.69,Default,,0,0,0,,The moment he does...
+Dialogue: 0,0:12:50.61,0:12:53.02,Default,,0,0,0,,Soft lights.
+Dialogue: 0,0:12:53.11,0:12:55.69,Default,,0,0,0,,Romantic music.
+Dialogue: 0,0:12:55.78,0:12:58.20,Default,,0,0,0,,All the trimmings!
+Dialogue: 0,0:12:59.11,0:13:01.03,Default,,0,0,0,,It can't possibly fail.
+Dialogue: 0,0:13:02.12,0:13:03.66,Default,,0,0,0,,Can it?
+Dialogue: 0,0:13:04.28,0:13:06.25,Default,,0,0,0,,Yes, Sire. No, Sire!
+Dialogue: 0,0:13:06.33,0:13:08.62,Default,,0,0,0,,Very well, Sire.
+Dialogue: 0,0:13:08.71,0:13:10.37,Default,,0,0,0,,I shall arrange the ball for...
+Dialogue: 0,0:13:10.46,0:13:13.00,Default,,0,0,0,,- Tonight.\N- Tonight? Tonight!
+Dialogue: 0,0:13:13.09,0:13:14.71,Default,,0,0,0,,- Oh, but, Sire...\N- Tonight!
+Dialogue: 0,0:13:14.80,0:13:18.26,Default,,0,0,0,,And see that every\Neligible maid is there.
+Dialogue: 0,0:13:18.34,0:13:20.80,Default,,0,0,0,,Understand?
+Dialogue: 0,0:13:22.64,0:13:24.72,Default,,0,0,0,,Yes, Your Majesty.
+Dialogue: 0,0:13:26.60,0:13:28.73,Default,,0,0,0,,The pear-shaped toad
+Dialogue: 0,0:13:31.35,0:13:38.44,Default,,0,0,0,,Sing, sweet nightingale
+Dialogue: 0,0:13:38.53,0:13:41.57,Default,,0,0,0,,High
+Dialogue: 0,0:13:41.66,0:13:44.49,Default,,0,0,0,,Above me
+Dialogue: 0,0:13:44.58,0:13:48.66,Default,,0,0,0,,Oh, sing, sweet nightingale
+Dialogue: 0,0:13:48.75,0:13:51.91,Default,,0,0,0,,Sing, sweet nightingale
+Dialogue: 0,0:13:56.00,0:14:00.01,Default,,0,0,0,,Above
+Dialogue: 0,0:14:00.09,0:14:03.51,Default,,0,0,0,,Oh, sing, sweet nightingale
+Dialogue: 0,0:14:03.60,0:14:07.39,Default,,0,0,0,,Sing, sweet nightingale
+Dialogue: 0,0:14:07.47,0:14:12.77,Default,,0,0,0,,High
+Dialogue: 0,0:14:14.94,0:14:18.86,Default,,0,0,0,,Oh, sing, sweet nightingale
+Dialogue: 0,0:14:18.94,0:14:22.40,Default,,0,0,0,,Sing, sweet
+Dialogue: 0,0:14:22.49,0:14:26.20,Default,,0,0,0,,Nightingale
+Dialogue: 0,0:14:26.28,0:14:31.25,Default,,0,0,0,,Oh, sing, sweet nightingale
+Dialogue: 0,0:14:31.33,0:14:35.63,Default,,0,0,0,,Sing, sweet
+Dialogue: 0,0:14:35.71,0:14:39.92,Default,,0,0,0,,Oh, sing, sweet nightingale
+Dialogue: 0,0:14:40.01,0:14:42.67,Default,,0,0,0,,Sing
+Dialogue: 0,0:14:44.47,0:14:48.72,Default,,0,0,0,,Oh, sing, sweet nightingale
+Dialogue: 0,0:14:48.81,0:14:53.81,Default,,0,0,0,,Oh, sing, sweet
+Dialogue: 0,0:14:54.77,0:14:57.11,Default,,0,0,0,,Oh
+Dialogue: 0,0:14:57.69,0:15:00.94,Default,,0,0,0,,Sing
+Dialogue: 0,0:15:01.90,0:15:04.24,Default,,0,0,0,,Lucifer!
+Dialogue: 0,0:15:07.16,0:15:08.87,Default,,0,0,0,,You mean old thing.
+Dialogue: 0,0:15:11.16,0:15:12.100,Default,,0,0,0,,I'm just going to have to\Nteach you a lesson.
+Dialogue: 0,0:15:14.87,0:15:16.10,Default,,0,0,0,,0\NOpen in the name of the King.
+Dialogue: 0,0:15:18.59,0:15:21.21,Default,,0,0,0,,An urgent message\Nfrom His Imperial Majesty.
+Dialogue: 0,0:15:21.30,0:15:23.97,Default,,0,0,0,,- Thank you.\N- From the King!
+Dialogue: 0,0:15:24.05,0:15:26.18,Default,,0,0,0,,What's it say, Cinderelly?
+Dialogue: 0,0:15:26.26,0:15:27.55,Default,,0,0,0,,What's it say, huh?
+Dialogue: 0,0:15:27.64,0:15:29.10,Default,,0,0,0,,I don't know.
+Dialogue: 0,0:15:29.18,0:15:31.31,Default,,0,0,0,,He said it's urgent.
+Dialogue: 0,0:15:33.43,0:15:36.06,Default,,0,0,0,,Maybe I should interrupt\Nthe music lesson.
+Dialogue: 0,0:15:36.14,0:15:42.23,Default,,0,0,0,,Sing, sweet nightingale
+Dialogue: 0,0:15:42.32,0:15:47.70,Default,,0,0,0,,High
+Dialogue: 0,0:15:49.20,0:15:51.53,Default,,0,0,0,,You clumsy! You did it on purpose.
+Dialogue: 0,0:15:51.91,0:15:55.37,Default,,0,0,0,,- It's her fault.\N- Girls, girls. Remember,
+Dialogue: 0,0:15:55.46,0:15:57.71,Default,,0,0,0,,above all, self-control.
+Dialogue: 0,0:15:59.75,0:16:00.96,Default,,0,0,0,,Yes!
+Dialogue: 0,0:16:02.59,0:16:05.13,Default,,0,0,0,,Cinderella!\NI've warned you never to interrupt...
+Dialogue: 0,0:16:05.22,0:16:08.09,Default,,0,0,0,,- This just arrived from the palace.\N- From the palace!
+Dialogue: 0,0:16:08.18,0:16:09.68,Default,,0,0,0,,- Give it here.\N- Let me have it.
+Dialogue: 0,0:16:10.72,0:16:12.10,Default,,0,0,0,,I'll read it.
+Dialogue: 0,0:16:12.76,0:16:15.35,Default,,0,0,0,,Well, there's to be a ball.
+Dialogue: 0,0:16:15.43,0:16:18.10,Default,,0,0,0,,- A ball!\N- In honour of His Highness, the Prince.
+Dialogue: 0,0:16:18.19,0:16:19.60,Default,,0,0,0,,Oh, the Prince!
+Dialogue: 0,0:16:19.69,0:16:21.90,Default,,0,0,0,,And, by royal command,
+Dialogue: 0,0:16:21.98,0:16:24.99,Default,,0,0,0,,every eligible maiden is to attend.
+Dialogue: 0,0:16:25.07,0:16:27.49,Default,,0,0,0,,- Why, that's us!\N- And I'm so eligible.
+Dialogue: 0,0:16:29.87,0:16:32.33,Default,,0,0,0,,That means I can go, too.
+Dialogue: 0,0:16:32.41,0:16:35.45,Default,,0,0,0,,Her, dancing with the Prince.
+Dialogue: 0,0:16:35.54,0:16:37.71,Default,,0,0,0,,I'd be honoured, Your Highness.
+Dialogue: 0,0:16:37.79,0:16:40.54,Default,,0,0,0,,Would you mind holding my broom?
+Dialogue: 0,0:16:43.92,0:16:45.92,Default,,0,0,0,,Well, why not?
+Dialogue: 0,0:16:47.26,0:16:50.05,Default,,0,0,0,,After all, I'm still a member of the family.
+Dialogue: 0,0:16:50.14,0:16:53.01,Default,,0,0,0,,And it says, "By royal command,
+Dialogue: 0,0:16:53.10,0:16:55.81,Default,,0,0,0,,"every eligible maiden is to attend."
+Dialogue: 0,0:16:55.89,0:16:58.64,Default,,0,0,0,,Yes, so it does.
+Dialogue: 0,0:17:00.35,0:17:03.52,Default,,0,0,0,,Well, I see no reason why you can't go.
+Dialogue: 0,0:17:03.61,0:17:05.94,Default,,0,0,0,,If you get all your work done.
+Dialogue: 0,0:17:06.03,0:17:07.82,Default,,0,0,0,,Oh, I will. I promise.
+Dialogue: 0,0:17:07.90,0:17:11.49,Default,,0,0,0,,And if you can find\Nsomething suitable to wear.
+Dialogue: 0,0:17:11.57,0:17:14.04,Default,,0,0,0,,I'm sure I can.\NOh, thank you, Stepmother.
+Dialogue: 0,0:17:14.04,0:17:14.91,Default,,0,0,0,,Well, maybe it is old-fashioned,\Nbut I'll fix that.
+Dialogue: 0,0:17:14.99,0:17:17.87,Default,,0,0,0,,- How do you do it?\N- Wait a minute.
+Dialogue: 0,0:17:18.50,0:17:21.17,Default,,0,0,0,,There ought to be\Nsome good ideas in here.
+Dialogue: 0,0:17:21.92,0:17:23.88,Default,,0,0,0,,This one.
+Dialogue: 0,0:17:23.96,0:17:25.30,Default,,0,0,0,,Oh, very nice. Nice.
+Dialogue: 0,0:17:25.38,0:17:27.13,Default,,0,0,0,,- Like it.\N- It'll be easy.
+Dialogue: 0,0:17:27.21,0:17:30.18,Default,,0,0,0,,I'll have to shorten the sleeves,\NI'll need a sash,
+Dialogue: 0,0:17:30.26,0:17:33.14,Default,,0,0,0,,- a ruffle, something for a collar...\N- Cinderella!
+Dialogue: 0,0:17:33.76,0:17:35.56,Default,,0,0,0,,Oh, now what do they want?
+Dialogue: 0,0:17:35.64,0:17:36.97,Default,,0,0,0,,Cinderella!
+Dialogue: 0,0:17:38.35,0:17:39.52,Default,,0,0,0,,Oh, well.
+Dialogue: 0,0:17:39.60,0:17:41.56,Default,,0,0,0,,I guess my dress will just have to wait.
+Dialogue: 0,0:17:41.65,0:17:44.94,Default,,0,0,0,,Cinderella!
+Dialogue: 0,0:17:45.03,0:17:47.48,Default,,0,0,0,,All right, all right. I'm coming.
+Dialogue: 0,0:17:50.78,0:17:52.87,Default,,0,0,0,,Poor Cinderelly.
+Dialogue: 0,0:17:52.95,0:17:56.62,Default,,0,0,0,,Every time she finds a minute,\Nthat's the time when they begin it.
+Dialogue: 0,0:17:56.70,0:17:58.62,Default,,0,0,0,,Cinderelly, Cinderelly.
+Dialogue: 0,0:17:58.70,0:18:00.50,Default,,0,0,0,,Cinderella!
+Dialogue: 0,0:18:02.21,0:18:05.54,Default,,0,0,0,,Cinderelly, Cinderelly\NNight and day it's Cinderelly
+Dialogue: 0,0:18:05.63,0:18:07.59,Default,,0,0,0,,Make the fire\NFix the breakfast
+Dialogue: 0,0:18:07.67,0:18:09.46,Default,,0,0,0,,Wash the dishes\NDo the moppin'
+Dialogue: 0,0:18:09.55,0:18:11.51,Default,,0,0,0,,And the sweepin' and the dustin'
+Dialogue: 0,0:18:11.59,0:18:13.30,Default,,0,0,0,,They always keep her hoppin'
+Dialogue: 0,0:18:13.39,0:18:14.85,Default,,0,0,0,,She'd go around in circles
+Dialogue: 0,0:18:14.93,0:18:16.76,Default,,0,0,0,,Till she's very, very dizzy
+Dialogue: 0,0:18:16.85,0:18:21.31,Default,,0,0,0,,- Still they holler\N- Keep her busy, Cinderelly
+Dialogue: 0,0:18:21.39,0:18:23.48,Default,,0,0,0,,Yeah. Keep her busy.
+Dialogue: 0,0:18:26.32,0:18:27.98,Default,,0,0,0,,You know what?
+Dialogue: 0,0:18:28.07,0:18:31.15,Default,,0,0,0,,- Cinderelly won't go to the ball.\N- What?
+Dialogue: 0,0:18:31.24,0:18:32.99,Default,,0,0,0,,- Not go?\N- What did you say?
+Dialogue: 0,0:18:33.62,0:18:37.16,Default,,0,0,0,,You'll see. They'll fix her.
+Dialogue: 0,0:18:38.29,0:18:42.66,Default,,0,0,0,,Work, work, work.\NShe'll never get her dress done.
+Dialogue: 0,0:18:43.25,0:18:45.38,Default,,0,0,0,,Poor Cinderelly.
+Dialogue: 0,0:18:47.21,0:18:49.17,Default,,0,0,0,,Hey! We can do it!
+Dialogue: 0,0:18:49.26,0:18:51.34,Default,,0,0,0,,We can do it\NWe can do it
+Dialogue: 0,0:18:51.42,0:18:54.93,Default,,0,0,0,,We can help our Cinderelly\NWe can make the dress so pretty
+Dialogue: 0,0:18:55.01,0:18:56.76,Default,,0,0,0,,There's nothing to it, really
+Dialogue: 0,0:18:56.85,0:19:00.60,Default,,0,0,0,,We'll tie a sash around it\NPut a ribbon through it
+Dialogue: 0,0:19:00.68,0:19:04.10,Default,,0,0,0,,When dancing at the ball\Nshe'll be more beautiful than all
+Dialogue: 0,0:19:04.19,0:19:07.82,Default,,0,0,0,,In the lovely dress\Nwe make for Cinderelly
+Dialogue: 0,0:19:07.94,0:19:09.53,Default,,0,0,0,,Hurry, hurry, hurry
+Dialogue: 0,0:19:09.61,0:19:11.36,Default,,0,0,0,,Gonna help our Cinderelly
+Dialogue: 0,0:19:11.44,0:19:13.19,Default,,0,0,0,,Got no time to dilly-dally
+Dialogue: 0,0:19:13.28,0:19:15.11,Default,,0,0,0,,We got to get it goin'
+Dialogue: 0,0:19:15.20,0:19:17.07,Default,,0,0,0,,I'll cut it with the scissors.
+Dialogue: 0,0:19:17.16,0:19:18.74,Default,,0,0,0,,And I can do the sewing.
+Dialogue: 0,0:19:18.83,0:19:20.87,Default,,0,0,0,,Leave the sewing to the women.
+Dialogue: 0,0:19:20.95,0:19:22.45,Default,,0,0,0,,You go get some trimmin'.
+Dialogue: 0,0:19:22.54,0:19:26.46,Default,,0,0,0,,And we'll make\Na lovely dress for Cinderelly, whoo
+Dialogue: 0,0:19:26.54,0:19:29.30,Default,,0,0,0,,We'll make a lovely dress\Nfor Cinderelly
+Dialogue: 0,0:19:29.38,0:19:31.67,Default,,0,0,0,,Follow me, Gus-Gus.\NI know where to go.
+Dialogue: 0,0:19:31.76,0:19:34.17,Default,,0,0,0,,It's gonna be pretty, this dress.
+Dialogue: 0,0:19:35.43,0:19:37.14,Default,,0,0,0,,Cinderelly will be surprised.
+Dialogue: 0,0:19:37.22,0:19:39.47,Default,,0,0,0,,Surprised, surprised. Very surprised.
+Dialogue: 0,0:19:47.86,0:19:50.52,Default,,0,0,0,,And this, too, my slippers.\NDon't forget...
+Dialogue: 0,0:19:50.61,0:19:52.98,Default,,0,0,0,,- Take my dress.\N- Here, mend the buttonholes.
+Dialogue: 0,0:19:53.07,0:19:56.40,Default,,0,0,0,,- Press my skirt and mind the ruffle.\N- Cinderella?
+Dialogue: 0,0:19:56.49,0:19:58.28,Default,,0,0,0,,- Yes?\N- When you're through,
+Dialogue: 0,0:19:58.37,0:20:01.16,Default,,0,0,0,,and before you begin\Nyour regular chores,
+Dialogue: 0,0:20:01.24,0:20:02.99,Default,,0,0,0,,I have a few little things.
+Dialogue: 0,0:20:03.08,0:20:04.33,Default,,0,0,0,,Very well.
+Dialogue: 0,0:20:04.41,0:20:07.83,Default,,0,0,0,,I don't see why everyone else\Nhas nice things to wear,
+Dialogue: 0,0:20:07.92,0:20:10.00,Default,,0,0,0,,and I always end up in these old rags.
+Dialogue: 0,0:20:10.09,0:20:13.01,Default,,0,0,0,,This sash! I wouldn't be seen dead in it.
+Dialogue: 0,0:20:13.09,0:20:15.34,Default,,0,0,0,,You should talk. These beads!
+Dialogue: 0,0:20:15.42,0:20:16.76,Default,,0,0,0,,I am sick of looking at them.
+Dialogue: 0,0:20:17.26,0:20:19.47,Default,,0,0,0,,- Trash.\N- Oh, I hate this.
+Dialogue: 0,0:20:23.14,0:20:25.18,Default,,0,0,0,,Come on and be careful.
+Dialogue: 0,0:20:25.27,0:20:28.60,Default,,0,0,0,,Yes, yes, yes. Real careful.
+Dialogue: 0,0:20:38.62,0:20:40.57,Default,,0,0,0,,We can use that, Gus-Gus.
+Dialogue: 0,0:20:40.95,0:20:42.70,Default,,0,0,0,,Pretty, pretty.
+Dialogue: 0,0:20:42.79,0:20:44.99,Default,,0,0,0,,Look out. Lucify!
+Dialogue: 0,0:21:31.63,0:21:33.42,Default,,0,0,0,,Beads!
+Dialogue: 0,0:21:33.50,0:21:35.96,Default,,0,0,0,,Very pretty beads!
+Dialogue: 0,0:23:40.09,0:23:43.71,Default,,0,0,0,,A dream is a wish your heart makes
+Dialogue: 0,0:23:43.80,0:23:47.72,Default,,0,0,0,,When you're fast asleep
+Dialogue: 0,0:23:47.80,0:23:49.39,Default,,0,0,0,,In dreams you will lose\Nyour heartaches
+Dialogue: 0,0:23:49.39,0:23:50.72,Default,,0,0,0,,Oh, well.
+Dialogue: 0,0:23:50.81,0:23:52.64,Default,,0,0,0,,What's a royal ball?
+Dialogue: 0,0:23:54.56,0:23:57.65,Default,,0,0,0,,After all, I suppose\Nit would be frightfully dull,
+Dialogue: 0,0:23:57.73,0:24:01.23,Default,,0,0,0,,and boring, and completely...
+Dialogue: 0,0:24:01.98,0:24:03.94,Default,,0,0,0,,Completely wonderful.
+Dialogue: 0,0:24:12.16,0:24:14.12,Default,,0,0,0,,- It's my...\N- Surprise!
+Dialogue: 0,0:24:14.21,0:24:16.04,Default,,0,0,0,,- Surprise!\N- Surprise!
+Dialogue: 0,0:24:17.46,0:24:19.59,Default,,0,0,0,,- Happy birthday!\N- No, no, no, no!
+Dialogue: 0,0:24:19.67,0:24:22.09,Default,,0,0,0,,Well, I never dreamed it.
+Dialogue: 0,0:24:22.17,0:24:24.76,Default,,0,0,0,,It's such a surprise.
+Dialogue: 0,0:24:25.01,0:24:28.34,Default,,0,0,0,,Oh, how can I ever...
+Dialogue: 0,0:24:29.05,0:24:31.47,Default,,0,0,0,,Oh, thank you so much.
+Dialogue: 0,0:24:38.52,0:24:41.11,Default,,0,0,0,,Remember, when you're\Npresented to His Highness,
+Dialogue: 0,0:24:41.19,0:24:42.86,Default,,0,0,0,,- be sure...\N- Wait!
+Dialogue: 0,0:24:43.86,0:24:45.65,Default,,0,0,0,,Please, wait for me.
+Dialogue: 0,0:24:46.53,0:24:49.37,Default,,0,0,0,,Isn't it lovely? Do you like it?
+Dialogue: 0,0:24:49.37,0:24:50.20,Default,,0,0,0,,- Oh, but I'm not...\N- Of course, you are.
+Dialogue: 0,0:24:50.28,0:24:51.66,Default,,0,0,0,,But we have to hurry,
+Dialogue: 0,0:24:51.74,0:24:53.99,Default,,0,0,0,,because even miracles take a little time.
+Dialogue: 0,0:24:54.08,0:24:57.58,Default,,0,0,0,,- Miracles?\N- Watch.
+Dialogue: 0,0:24:57.67,0:25:00.63,Default,,0,0,0,,What in the world did I do\Nwith that magic wand? I was sure...
+Dialogue: 0,0:25:00.71,0:25:01.88,Default,,0,0,0,,Magic wand?
+Dialogue: 0,0:25:01.96,0:25:03.55,Default,,0,0,0,,That's strange.
+Dialogue: 0,0:25:03.63,0:25:06.34,Default,,0,0,0,,- I always...\N- Then you must be...
+Dialogue: 0,0:25:06.42,0:25:09.55,Default,,0,0,0,,Your fairy godmother? Of course.
+Dialogue: 0,0:25:09.64,0:25:12.01,Default,,0,0,0,,Where is that wand? I...
+Dialogue: 0,0:25:12.68,0:25:14.68,Default,,0,0,0,,Oh! I forgot.
+Dialogue: 0,0:25:14.77,0:25:16.27,Default,,0,0,0,,I put it away.
+Dialogue: 0,0:25:18.94,0:25:20.48,Default,,0,0,0,,Look at what she did.
+Dialogue: 0,0:25:20.56,0:25:22.02,Default,,0,0,0,,How'd she do it?
+Dialogue: 0,0:25:22.11,0:25:25.15,Default,,0,0,0,,Now, let's see.
+Dialogue: 0,0:25:25.23,0:25:28.40,Default,,0,0,0,,I'd say the first thing you need is
+Dialogue: 0,0:25:28.49,0:25:30.82,Default,,0,0,0,,- a pumpkin.\N- A pumpkin?
+Dialogue: 0,0:25:30.91,0:25:34.45,Default,,0,0,0,,Now the magic words.
+Dialogue: 0,0:25:39.46,0:25:44.38,Default,,0,0,0,,Sala-gadoola-menchika-boo-la\NBibbidi-bobbidi-boo
+Dialogue: 0,0:25:44.46,0:25:46.55,Default,,0,0,0,,Put 'em together\Nand what have you got?
+Dialogue: 0,0:25:46.63,0:25:48.67,Default,,0,0,0,,Bibbidi-bobbidi-boo
+Dialogue: 0,0:25:48.76,0:25:53.22,Default,,0,0,0,,Sala-gadoola-menchika-boo-la\NBibbidi-bobbidi-boo
+Dialogue: 0,0:25:53.31,0:25:55.56,Default,,0,0,0,,It'll do magic\NBelieve it or not
+Dialogue: 0,0:25:55.64,0:25:57.72,Default,,0,0,0,,Bibbidi-bobbidi-boo
+Dialogue: 0,0:25:57.81,0:26:02.23,Default,,0,0,0,,Now sala-gadoola means\NMenchika-boolaroo
+Dialogue: 0,0:26:02.31,0:26:04.73,Default,,0,0,0,,But the thing-a-ma-bob\Nthat does the job
+Dialogue: 0,0:26:04.82,0:26:07.44,Default,,0,0,0,,Is bibbidi-bobbidi-boo
+Dialogue: 0,0:26:07.53,0:26:12.07,Default,,0,0,0,,Sala-gadoola-menchika-boo-la\NBibbidi-bobbidi-boo
+Dialogue: 0,0:26:12.16,0:26:14.24,Default,,0,0,0,,Put 'em together\Nand what have you got?
+Dialogue: 0,0:26:14.33,0:26:18.20,Default,,0,0,0,,Bibbidi-bobbidi\NBibbidi-bobbidi Bibbidi-bobbidi-boo
+Dialogue: 0,0:26:19.66,0:26:20.96,Default,,0,0,0,,Oh, looky.
+Dialogue: 0,0:26:21.04,0:26:22.83,Default,,0,0,0,,Isn't it wonderful?
+Dialogue: 0,0:26:23.67,0:26:25.96,Default,,0,0,0,,Oh, it's beautiful.
+Dialogue: 0,0:26:26.05,0:26:28.46,Default,,0,0,0,,Yes, isn't it?
+Dialogue: 0,0:26:28.55,0:26:30.97,Default,,0,0,0,,With an elegant coach like that,\Nof course,
+Dialogue: 0,0:26:31.05,0:26:33.84,Default,,0,0,0,,we'll simply have to have
+Dialogue: 0,0:26:34.18,0:26:36.72,Default,,0,0,0,,- mice!\N- Mice?
+Dialogue: 0,0:26:36.81,0:26:39.27,Default,,0,0,0,,Oh, this really is nice.
+Dialogue: 0,0:26:39.35,0:26:42.44,Default,,0,0,0,,Why, we'll have a coach\Nand four when we're through.
+Dialogue: 0,0:26:42.52,0:26:45.98,Default,,0,0,0,,Just a wave of my stick\Nand to finish the trick,
+Dialogue: 0,0:26:46.07,0:26:48.98,Default,,0,0,0,,bibbidi, bobbidi, boo.
+Dialogue: 0,0:26:49.07,0:26:51.11,Default,,0,0,0,,Gracious, what did I do?
+Dialogue: 0,0:26:51.20,0:26:54.99,Default,,0,0,0,,I was sure there were four.\NThere should be one more.
+Dialogue: 0,0:26:55.08,0:26:57.08,Default,,0,0,0,,There you are.
+Dialogue: 0,0:26:58.45,0:27:00.58,Default,,0,0,0,,Bibbidi, bobbidi, boo.
+Dialogue: 0,0:27:10.88,0:27:13.09,Default,,0,0,0,,Oh, poor Lucifer.
+Dialogue: 0,0:27:13.18,0:27:15.47,Default,,0,0,0,,Serves him right, I'd say. Now...
+Dialogue: 0,0:27:15.55,0:27:18.47,Default,,0,0,0,,Where were we? Oh, goodness, yes.
+Dialogue: 0,0:27:18.56,0:27:21.10,Default,,0,0,0,,You can't go to the ball without
+Dialogue: 0,0:27:21.18,0:27:22.64,Default,,0,0,0,,a horse.
+Dialogue: 0,0:27:22.73,0:27:24.23,Default,,0,0,0,,Another one?
+Dialogue: 0,0:27:24.73,0:27:28.40,Default,,0,0,0,,But tonight, for a change,\Nyou will handle the reins,
+Dialogue: 0,0:27:28.48,0:27:30.90,Default,,0,0,0,,and sit in the driver's seat, too.
+Dialogue: 0,0:27:31.36,0:27:34.95,Default,,0,0,0,,For instead of a horse,\Nyou're the coachman, of course.
+Dialogue: 0,0:27:35.03,0:27:36.95,Default,,0,0,0,,Bibbidi, bobbidi, boo.
+Dialogue: 0,0:27:41.04,0:27:44.50,Default,,0,0,0,,That does it, I guess, except for...\NOh, yes!
+Dialogue: 0,0:27:44.58,0:27:47.71,Default,,0,0,0,,The finishing touch. And, that's you.
+Dialogue: 0,0:27:47.79,0:27:51.59,Default,,0,0,0,,Yes, Bruno, that's right,\Nyou'll be footman tonight.
+Dialogue: 0,0:27:51.92,0:27:54.26,Default,,0,0,0,,Bibbidi, bobbidi, boo.
+Dialogue: 0,0:27:55.80,0:27:58.26,Default,,0,0,0,,Well, well, hop in, my dear.\NWe can't waste time.
+Dialogue: 0,0:27:58.35,0:28:01.06,Default,,0,0,0,,- But...\N- No, don't try to thank me.
+Dialogue: 0,0:28:01.14,0:28:04.81,Default,,0,0,0,,Oh, I wasn't... I mean, I do, but...
+Dialogue: 0,0:28:04.89,0:28:06.56,Default,,0,0,0,,But, don't you think my dress...
+Dialogue: 0,0:28:06.65,0:28:09.48,Default,,0,0,0,,Yes, it's lovely, dear.
+Dialogue: 0,0:28:09.57,0:28:13.48,Default,,0,0,0,,Good heavens, child.\NYou can't go in that!
+Dialogue: 0,0:28:15.11,0:28:17.36,Default,,0,0,0,,Now, let's see, dear.
+Dialogue: 0,0:28:17.45,0:28:21.70,Default,,0,0,0,,Your size and the shade of your eyes.
+Dialogue: 0,0:28:21.79,0:28:24.91,Default,,0,0,0,,Something simple, but daring, too.
+Dialogue: 0,0:28:24.100,0:28:28.75,Default,,0,0,0,,Oh, just leave it to me.\NWhat a gown this will be.
+Dialogue: 0,0:28:29.21,0:28:31.46,Default,,0,0,0,,Bibbidi-bobbidi.\NBibbidi-bobbidi.
+Dialogue: 0,0:28:31.55,0:28:33.88,Default,,0,0,0,,Bibbidi-bobbidi-boo.
+Dialogue: 0,0:28:36.13,0:28:39.34,Default,,0,0,0,,Oh, it's a beautiful dress.
+Dialogue: 0,0:28:39.43,0:28:42.64,Default,,0,0,0,,Did you ever see\Nsuch a beautiful dress?
+Dialogue: 0,0:28:42.72,0:28:45.48,Default,,0,0,0,,And, look, glass slippers.
+Dialogue: 0,0:28:47.23,0:28:49.40,Default,,0,0,0,,Why, it's like a dream.
+Dialogue: 0,0:28:49.48,0:28:52.40,Default,,0,0,0,,A wonderful dream come true.
+Dialogue: 0,0:28:52.48,0:28:54.07,Default,,0,0,0,,Yes, my child.
+Dialogue: 0,0:28:54.15,0:28:55.82,Default,,0,0,0,,But, like all dreams,
+Dialogue: 0,0:28:55.90,0:28:58.70,Default,,0,0,0,,well, I'm afraid this can't last forever.
+Dialogue: 0,0:28:58.78,0:29:00.82,Default,,0,0,0,,You'll have only till midnight, and then...
+Dialogue: 0,0:29:00.91,0:29:02.49,Default,,0,0,0,,Midnight? Thank you.
+Dialogue: 0,0:29:02.58,0:29:05.95,Default,,0,0,0,,Now, now, now, just a minute.\NYou must understand, my dear,
+Dialogue: 0,0:29:06.04,0:29:09.25,Default,,0,0,0,,on the stroke of 12:00\Nthe spell will be broken,
+Dialogue: 0,0:29:09.33,0:29:11.92,Default,,0,0,0,,and everything will be as it was before.
+Dialogue: 0,0:29:12.00,0:29:14.25,Default,,0,0,0,,Oh, I understand, but
+Dialogue: 0,0:29:14.34,0:29:17.01,Default,,0,0,0,,it's more than I ever hoped for.
+Dialogue: 0,0:29:17.09,0:29:18.80,Default,,0,0,0,,Bless you, my child.
+Dialogue: 0,0:29:18.88,0:29:21.39,Default,,0,0,0,,I... Goodness me!
+Dialogue: 0,0:29:21.47,0:29:24.72,Default,,0,0,0,,It's getting late.\NHurry up, dear. The ball can't wait.
+Dialogue: 0,0:29:24.85,0:29:27.14,Default,,0,0,0,,Have a good time.\NDance, be gay.
+Dialogue: 0,0:29:27.23,0:29:29.39,Default,,0,0,0,,Now, off you go.\NYou're on your way.
+Dialogue: 0,0:29:29.48,0:29:31.77,Default,,0,0,0,,With a bibbidi-bobbidi\NBibbidi-bobbidi
+Dialogue: 0,0:29:31.86,0:29:33.52,Default,,0,0,0,,Bibbidi-bobbidi-boo
+Dialogue: 0,0:30:01.43,0:30:05.18,Default,,0,0,0,,Princess Frederica\NEugenie de la Fontain.
+Dialogue: 0,0:30:09.56,0:30:12.35,Default,,0,0,0,,Mademoiselle\NAugustina DuBois.
+Dialogue: 0,0:30:12.44,0:30:15.86,Default,,0,0,0,,Daughter of General Pierre DuBois.
+Dialogue: 0,0:30:26.41,0:30:29.25,Default,,0,0,0,,The boy isn't cooperating.
+Dialogue: 0,0:30:30.08,0:30:34.21,Default,,0,0,0,,Mademoiselle Leonora\NMercedes de la Tour.
+Dialogue: 0,0:30:34.29,0:30:38.71,Default,,0,0,0,,Daughter of Colonel\Nand Madame de la Tour.
+Dialogue: 0,0:30:45.26,0:30:47.76,Default,,0,0,0,,I can't understand it.
+Dialogue: 0,0:30:47.85,0:30:50.89,Default,,0,0,0,,There must be at least one\Nwho'd make a suitable mother.
+Dialogue: 0,0:30:50.98,0:30:52.85,Default,,0,0,0,,Sire.
+Dialogue: 0,0:30:52.94,0:30:55.40,Default,,0,0,0,,A suitable wife.
+Dialogue: 0,0:31:14.50,0:31:20.05,Default,,0,0,0,,Mademoiselles\NDrizella and Anastasia Tremaine.
+Dialogue: 0,0:31:20.13,0:31:22.80,Default,,0,0,0,,Daughters of Lady Tremaine.
+Dialogue: 0,0:31:29.10,0:31:32.60,Default,,0,0,0,,I give up.\NEven I couldn't expect the boy to...
+Dialogue: 0,0:31:32.68,0:31:36.23,Default,,0,0,0,,Well, if I may say so,\NYour Majesty, I did try to warn you,
+Dialogue: 0,0:31:36.31,0:31:40.15,Default,,0,0,0,,but you, Sire, are incurably romantic.
+Dialogue: 0,0:31:40.61,0:31:45.20,Default,,0,0,0,,No doubt you saw\Nthe whole pretty picture in detail.
+Dialogue: 0,0:31:45.82,0:31:49.62,Default,,0,0,0,,The young Prince\Nbowing to the assembly.
+Dialogue: 0,0:31:50.41,0:31:53.50,Default,,0,0,0,,Suddenly he stops. He looks up.
+Dialogue: 0,0:31:53.58,0:31:57.12,Default,,0,0,0,,For, lo, there she stands.
+Dialogue: 0,0:31:57.63,0:31:59.50,Default,,0,0,0,,The girl of his dreams.
+Dialogue: 0,0:32:01.26,0:32:03.17,Default,,0,0,0,,Who she is or whence she came,
+Dialogue: 0,0:32:03.76,0:32:06.09,Default,,0,0,0,,he knows not, nor does he care,
+Dialogue: 0,0:32:06.18,0:32:08.97,Default,,0,0,0,,for his heart tells him that here,
+Dialogue: 0,0:32:09.06,0:32:14.10,Default,,0,0,0,,here is the maid\Npredestined to be his bride.
+Dialogue: 0,0:32:15.94,0:32:18.61,Default,,0,0,0,,A pretty plot for fairy tales, Sire.
+Dialogue: 0,0:32:18.69,0:32:20.82,Default,,0,0,0,,But in real life, oh, no.
+Dialogue: 0,0:32:20.90,0:32:24.19,Default,,0,0,0,,No! It was foredoomed to failure.
+Dialogue: 0,0:32:24.53,0:32:27.07,Default,,0,0,0,,Failure, eh?
+Dialogue: 0,0:32:27.16,0:32:30.33,Default,,0,0,0,,Take a look at that,\Nyou pompous windbag.
+Dialogue: 0,0:32:31.62,0:32:32.95,Default,,0,0,0,,Who is she?
+Dialogue: 0,0:32:33.04,0:32:35.12,Default,,0,0,0,,- You know her?\N- No, Sire.
+Dialogue: 0,0:32:35.21,0:32:37.29,Default,,0,0,0,,I've never seen her before.
+Dialogue: 0,0:32:37.38,0:32:39.67,Default,,0,0,0,,That's one thing in her favour.
+Dialogue: 0,0:32:39.75,0:32:41.71,Default,,0,0,0,,The waltz. Quick, the waltz!
+Dialogue: 0,0:32:45.51,0:32:48.59,Default,,0,0,0,,Lights. The lights.
+Dialogue: 0,0:33:07.57,0:33:09.99,Default,,0,0,0,,Failure, eh?
+Dialogue: 0,0:33:13.87,0:33:17.33,Default,,0,0,0,,Well... Now for a good night's sleep.
+Dialogue: 0,0:33:17.41,0:33:20.12,Default,,0,0,0,,Oh, quite so, Sire. I believe I, too...
+Dialogue: 0,0:33:20.21,0:33:22.96,Default,,0,0,0,,You will stay right here.
+Dialogue: 0,0:33:23.05,0:33:26.67,Default,,0,0,0,,See they're not disturbed,\Nand when the boy proposes,
+Dialogue: 0,0:33:26.76,0:33:29.84,Default,,0,0,0,,notify me immediately.
+Dialogue: 0,0:33:29.93,0:33:31.39,Default,,0,0,0,,Notify me immediately.
+Dialogue: 0,0:33:31.47,0:33:33.18,Default,,0,0,0,,And remember,
+Dialogue: 0,0:33:33.26,0:33:35.77,Default,,0,0,0,,if anything goes wrong...
+Dialogue: 0,0:33:52.08,0:33:54.66,Default,,0,0,0,,- Who is she, Mother?\N- Do we know her?
+Dialogue: 0,0:33:54.74,0:33:57.20,Default,,0,0,0,,Well, the Prince certainly seems to.
+Dialogue: 0,0:33:57.29,0:33:59.37,Default,,0,0,0,,I know I've never seen her.
+Dialogue: 0,0:33:59.46,0:34:00.79,Default,,0,0,0,,Nor I.
+Dialogue: 0,0:34:00.88,0:34:03.88,Default,,0,0,0,,But she certainly is... Wait.
+Dialogue: 0,0:34:04.63,0:34:07.21,Default,,0,0,0,,There is something familiar about her.
+Dialogue: 0,0:34:17.64,0:34:18.72,Default,,0,0,0,,Ahem.
+Dialogue: 0,0:34:28.24,0:34:37.24,Default,,0,0,0,,So this is love
+Dialogue: 0,0:34:37.33,0:34:41.25,Default,,0,0,0,,So this is what makes life
+Dialogue: 0,0:34:41.33,0:34:44.46,Default,,0,0,0,,Divine
+Dialogue: 0,0:34:44.54,0:34:48.05,Default,,0,0,0,,I'm all aglow
+Dialogue: 0,0:34:48.13,0:34:52.47,Default,,0,0,0,,- And now I know\N- And now I know
+Dialogue: 0,0:34:52.55,0:34:57.05,Default,,0,0,0,,The key to all Heaven
+Dialogue: 0,0:34:57.14,0:35:00.60,Default,,0,0,0,,Is mine
+Dialogue: 0,0:35:00.68,0:35:04.69,Default,,0,0,0,,My heart has wings
+Dialogue: 0,0:35:04.77,0:35:08.78,Default,,0,0,0,,And I can fly
+Dialogue: 0,0:35:08.86,0:35:12.70,Default,,0,0,0,,I'll touch every star
+Dialogue: 0,0:35:12.78,0:35:16.03,Default,,0,0,0,,In the sky
+Dialogue: 0,0:35:17.28,0:35:22.16,Default,,0,0,0,,So this is the miracle
+Dialogue: 0,0:35:22.25,0:35:28.04,Default,,0,0,0,,That I've been dreaming of
+Dialogue: 0,0:35:37.10,0:35:39.51,Default,,0,0,0,,So this
+Dialogue: 0,0:35:39.60,0:35:42.22,Default,,0,0,0,,Is
+Dialogue: 0,0:35:42.31,0:35:45.73,Default,,0,0,0,,Love
+Dialogue: 0,0:35:49.15,0:35:50.73,Default,,0,0,0,,Oh. Oh, my goodness.
+Dialogue: 0,0:35:50.82,0:35:52.57,Default,,0,0,0,,What's the matter?
+Dialogue: 0,0:35:52.65,0:35:53.90,Default,,0,0,0,,It's midnight.
+Dialogue: 0,0:35:53.99,0:35:55.99,Default,,0,0,0,,Yes, so it is. But why...
+Dialogue: 0,0:35:56.07,0:35:58.37,Default,,0,0,0,,- Goodbye.\N- No, no, wait.
+Dialogue: 0,0:35:58.45,0:36:01.16,Default,,0,0,0,,- You can't go now. It's only...\N- Oh, I must. Please.
+Dialogue: 0,0:36:01.24,0:36:02.87,Default,,0,0,0,,- Please, I must.\N- But why?
+Dialogue: 0,0:36:02.95,0:36:05.21,Default,,0,0,0,,Well, I... Oh, the Prince,
+Dialogue: 0,0:36:05.29,0:36:06.75,Default,,0,0,0,,I haven't met the Prince.
+Dialogue: 0,0:36:06.83,0:36:08.17,Default,,0,0,0,,The Prince?
+Dialogue: 0,0:36:08.25,0:36:09.38,Default,,0,0,0,,But didn't you know...
+Dialogue: 0,0:36:10.67,0:36:12.84,Default,,0,0,0,,- Goodbye.\N- No, wait.
+Dialogue: 0,0:36:12.92,0:36:15.22,Default,,0,0,0,,Come back. Please come back.
+Dialogue: 0,0:36:15.55,0:36:18.14,Default,,0,0,0,,I don't even know your name.\NHow will I find you?
+Dialogue: 0,0:36:18.22,0:36:19.76,Default,,0,0,0,,Wait! Please wait.
+Dialogue: 0,0:36:20.89,0:36:22.22,Default,,0,0,0,,Goodbye.
+Dialogue: 0,0:36:22.81,0:36:25.06,Default,,0,0,0,,Oh, I say. Young lady.
+Dialogue: 0,0:36:25.14,0:36:28.36,Default,,0,0,0,,- Wait!\N- The Prince!
+Dialogue: 0,0:36:53.63,0:36:55.09,Default,,0,0,0,,I'm sorry.
+Dialogue: 0,0:36:55.84,0:36:59.09,Default,,0,0,0,,I guess I forgot about everything.
+Dialogue: 0,0:37:00.05,0:37:01.85,Default,,0,0,0,,Even the time, but...
+Dialogue: 0,0:37:03.31,0:37:06.06,Default,,0,0,0,,But it was so wonderful.
+Dialogue: 0,0:37:07.10,0:37:09.02,Default,,0,0,0,,And he was so handsome,
+Dialogue: 0,0:37:09.11,0:37:11.52,Default,,0,0,0,,and when we danced...
+Dialogue: 0,0:37:11.61,0:37:15.24,Default,,0,0,0,,Oh, I'm sure even the Prince\Nhimself couldn't have been more...
+Dialogue: 0,0:37:15.32,0:37:16.53,Default,,0,0,0,,More...
+Dialogue: 0,0:37:17.70,0:37:20.36,Default,,0,0,0,,- Oh, well, it's over and...\N- Cinderelly.
+Dialogue: 0,0:37:20.45,0:37:22.45,Default,,0,0,0,,Look, look! The slippers!
+Dialogue: 0,0:37:22.58,0:37:23.66,Default,,0,0,0,,Yeah, your slipper.
+Dialogue: 0,0:37:23.74,0:37:25.95,Default,,0,0,0,,Your slipper, Cinderelly.
+Dialogue: 0,0:37:30.08,0:37:31.42,Default,,0,0,0,,Thank you.
+Dialogue: 0,0:37:32.13,0:37:35.05,Default,,0,0,0,,Thank you so much, for everything.
+Dialogue: 0,0:37:44.89,0:37:49.27,Default,,0,0,0,,Your Majesty,\NI see no point in beating about the bush.
+Dialogue: 0,0:37:49.35,0:37:51.31,Default,,0,0,0,,I regret to inform you, Sire,
+Dialogue: 0,0:37:51.40,0:37:53.57,Default,,0,0,0,,that the young lady has disappeared,
+Dialogue: 0,0:37:53.65,0:37:56.44,Default,,0,0,0,,leaving behind only this glass slipper.
+Dialogue: 0,0:37:56.53,0:37:58.32,Default,,0,0,0,,Yes. I'll do it.
+Dialogue: 0,0:38:00.49,0:38:03.66,Default,,0,0,0,,No. I just can't.
+Dialogue: 0,0:38:32.31,0:38:33.98,Default,,0,0,0,,Well, come in.
+Dialogue: 0,0:38:34.52,0:38:36.11,Default,,0,0,0,,Come in!
+Dialogue: 0,0:38:36.19,0:38:39.40,Default,,0,0,0,,- Your Majesty...\N- So, he's proposed already?
+Dialogue: 0,0:38:39.49,0:38:40.95,Default,,0,0,0,,- Tell me about it.\N- Well...
+Dialogue: 0,0:38:41.03,0:38:43.45,Default,,0,0,0,,- Who is she?\N- I didn't get a chance...
+Dialogue: 0,0:38:43.53,0:38:46.16,Default,,0,0,0,,No matter. We've more\Nimportant things to discuss.
+Dialogue: 0,0:38:46.24,0:38:47.91,Default,,0,0,0,,Arrangements for the wedding,
+Dialogue: 0,0:38:47.99,0:38:50.62,Default,,0,0,0,,invitations, a national holiday.
+Dialogue: 0,0:38:51.33,0:38:53.58,Default,,0,0,0,,- All that sort of thing.\N- But, Sire...
+Dialogue: 0,0:38:53.67,0:38:56.34,Default,,0,0,0,,Here. Have a cigar. Take a few more.
+Dialogue: 0,0:38:56.88,0:38:57.92,Default,,0,0,0,,But...
+Dialogue: 0,0:38:58.01,0:39:00.80,Default,,0,0,0,,Better practise passing these out, eh?
+Dialogue: 0,0:39:00.88,0:39:04.14,Default,,0,0,0,,But, if you'd only listen.
+Dialogue: 0,0:39:04.22,0:39:05.97,Default,,0,0,0,,And for you, my friend.
+Dialogue: 0,0:39:06.05,0:39:09.81,Default,,0,0,0,,- Your Majesty, please...\N- A knighthood.
+Dialogue: 0,0:39:09.89,0:39:12.39,Default,,0,0,0,,I hereby dub you Sir...
+Dialogue: 0,0:39:13.69,0:39:16.27,Default,,0,0,0,,By the way, what title would you like?
+Dialogue: 0,0:39:16.77,0:39:19.82,Default,,0,0,0,,- Sire? She got away.\N- Sir "She Got Away"?
+Dialogue: 0,0:39:19.90,0:39:22.07,Default,,0,0,0,,A peculiar title, but if that's what you...
+Dialogue: 0,0:39:22.99,0:39:25.74,Default,,0,0,0,,She what? Why, you...
+Dialogue: 0,0:39:25.87,0:39:27.99,Default,,0,0,0,,You... You traitor!
+Dialogue: 0,0:39:28.08,0:39:30.99,Default,,0,0,0,,Now, Sire.\NRemember, your blood pressure.
+Dialogue: 0,0:39:31.08,0:39:32.96,Default,,0,0,0,,Treason!
+Dialogue: 0,0:39:35.79,0:39:37.34,Default,,0,0,0,,No, Sire. No!
+Dialogue: 0,0:39:37.42,0:39:39.80,Default,,0,0,0,,Sabotage!
+Dialogue: 0,0:39:40.76,0:39:42.67,Default,,0,0,0,,You were in league with the Prince.
+Dialogue: 0,0:39:42.76,0:39:44.80,Default,,0,0,0,,I tried to stop her,
+Dialogue: 0,0:39:44.89,0:39:46.76,Default,,0,0,0,,but she vanished into thin air.
+Dialogue: 0,0:39:46.84,0:39:48.60,Default,,0,0,0,,A likely story.
+Dialogue: 0,0:39:48.68,0:39:52.02,Default,,0,0,0,,But it's true, Sire.\NAll we could find was this glass slipper.
+Dialogue: 0,0:39:52.10,0:39:54.60,Default,,0,0,0,,The whole thing was a plot!
+Dialogue: 0,0:39:55.44,0:39:58.19,Default,,0,0,0,,But, Sire, he loves her.
+Dialogue: 0,0:39:58.27,0:40:00.19,Default,,0,0,0,,He won't rest till he finds her.
+Dialogue: 0,0:40:00.28,0:40:02.19,Default,,0,0,0,,He's determined to marry her.
+Dialogue: 0,0:40:03.57,0:40:06.53,Default,,0,0,0,,What? What did you say?
+Dialogue: 0,0:40:06.91,0:40:09.49,Default,,0,0,0,,The Prince, Sire,\Nswears he'll marry none
+Dialogue: 0,0:40:09.58,0:40:11.70,Default,,0,0,0,,but the girl who fits this slipper.
+Dialogue: 0,0:40:11.79,0:40:13.58,Default,,0,0,0,,He said that, did he?
+Dialogue: 0,0:40:14.62,0:40:17.21,Default,,0,0,0,,We've got him!
+Dialogue: 0,0:40:22.30,0:40:25.72,Default,,0,0,0,,But, Sire, this slipper\Nmay fit one of any number of girls.
+Dialogue: 0,0:40:25.80,0:40:28.68,Default,,0,0,0,,That's his problem. He's given his word.
+Dialogue: 0,0:40:28.76,0:40:31.89,Default,,0,0,0,,- We'll hold him to it.\N- No, Your Highness.
+Dialogue: 0,0:40:31.97,0:40:33.97,Default,,0,0,0,,I'll have nothing to do with it.
+Dialogue: 0,0:40:34.06,0:40:36.77,Default,,0,0,0,,You'll try this\Non every maid in my kingdom.
+Dialogue: 0,0:40:36.85,0:40:38.10,Default,,0,0,0,,And if the shoe fits,
+Dialogue: 0,0:40:39.69,0:40:41.57,Default,,0,0,0,,bring her in.
+Dialogue: 0,0:40:41.65,0:40:44.44,Default,,0,0,0,,Yes, Your Majesty.
+Dialogue: 0,0:40:58.33,0:41:00.54,Default,,0,0,0,,Cinderella? Cinderella?
+Dialogue: 0,0:41:01.42,0:41:03.71,Default,,0,0,0,,- Cinderella! Where is that...\N- Yes?
+Dialogue: 0,0:41:03.80,0:41:05.13,Default,,0,0,0,,Here I am.
+Dialogue: 0,0:41:05.67,0:41:07.09,Default,,0,0,0,,My daughters, where are they?
+Dialogue: 0,0:41:07.18,0:41:08.68,Default,,0,0,0,,I think they're still in bed.
+Dialogue: 0,0:41:10.51,0:41:14.18,Default,,0,0,0,,Don't just stand there!\NBring up the breakfast trays at once.
+Dialogue: 0,0:41:14.27,0:41:15.47,Default,,0,0,0,,And hurry!
+Dialogue: 0,0:41:16.43,0:41:18.69,Default,,0,0,0,,Wow. I wonder what's the matter.
+Dialogue: 0,0:41:18.77,0:41:20.48,Default,,0,0,0,,What's the matter with her?
+Dialogue: 0,0:41:20.56,0:41:22.77,Default,,0,0,0,,I don't know. Let's find out. Come on.
+Dialogue: 0,0:41:30.66,0:41:32.78,Default,,0,0,0,,Drizella. Drizella!
+Dialogue: 0,0:41:32.87,0:41:34.99,Default,,0,0,0,,What?
+Dialogue: 0,0:41:35.08,0:41:37.04,Default,,0,0,0,,Get up. Quick. This instant.
+Dialogue: 0,0:41:37.12,0:41:38.100,Default,,0,0,0,,We haven't a moment to lose.
+Dialogue: 0,0:41:40.21,0:41:43.34,Default,,0,0,0,,Anastasia.
+Dialogue: 0,0:41:46.09,0:41:47.34,Default,,0,0,0,,Get up, Anastasia.
+Dialogue: 0,0:41:48.47,0:41:50.68,Default,,0,0,0,,What for? Why?
+Dialogue: 0,0:41:50.76,0:41:53.60,Default,,0,0,0,,Everyone's talking about it,\Nthe whole kingdom.
+Dialogue: 0,0:41:53.89,0:41:56.18,Default,,0,0,0,,- Hurry now. He'll be here any minute.\N- Who will?
+Dialogue: 0,0:41:56.27,0:41:59.31,Default,,0,0,0,,The Grand Duke.\NHe's been hunting all night.
+Dialogue: 0,0:41:59.39,0:42:01.48,Default,,0,0,0,,- Hunting?\N- For that girl.
+Dialogue: 0,0:42:01.56,0:42:04.11,Default,,0,0,0,,The one who lost\Nher slipper at the ball last night.
+Dialogue: 0,0:42:04.19,0:42:06.15,Default,,0,0,0,,They say he's madly in love with her.
+Dialogue: 0,0:42:06.24,0:42:09.03,Default,,0,0,0,,- The Duke is?\N- No, no, no. The Prince!
+Dialogue: 0,0:42:09.03,0:42:09.90,Default,,0,0,0,,May we offer you some tea?
+Dialogue: 0,0:42:09.99,0:42:12.57,Default,,0,0,0,,What? Tea?
+Dialogue: 0,0:42:12.66,0:42:14.95,Default,,0,0,0,,Thank you, madam, no.
+Dialogue: 0,0:42:15.03,0:42:17.62,Default,,0,0,0,,We must proceed with the fitting.
+Dialogue: 0,0:42:17.70,0:42:20.08,Default,,0,0,0,,Of course. Anastasia, dear.
+Dialogue: 0,0:42:24.34,0:42:27.13,Default,,0,0,0,,There. I knew it was my slipper.
+Dialogue: 0,0:42:27.76,0:42:29.26,Default,,0,0,0,,Exactly my size.
+Dialogue: 0,0:42:29.34,0:42:31.18,Default,,0,0,0,,I always wear the same size.
+Dialogue: 0,0:42:31.34,0:42:33.14,Default,,0,0,0,,As soon as I saw it, I said...
+Dialogue: 0,0:42:33.22,0:42:35.10,Default,,0,0,0,,Oh, well...
+Dialogue: 0,0:42:35.18,0:42:37.93,Default,,0,0,0,,It may be a trifle snug today.
+Dialogue: 0,0:42:38.02,0:42:40.60,Default,,0,0,0,,You know how it is, dancing all night.
+Dialogue: 0,0:42:40.69,0:42:42.56,Default,,0,0,0,,I can't understand why.
+Dialogue: 0,0:42:42.65,0:42:44.69,Default,,0,0,0,,It's always fit perfectly before.
+Dialogue: 0,0:42:45.11,0:42:46.98,Default,,0,0,0,,I don't think you're half trying.
+Dialogue: 0,0:42:47.78,0:42:50.11,Default,,0,0,0,,Mother, can you...
+Dialogue: 0,0:42:50.20,0:42:53.49,Default,,0,0,0,,Quiet, my dear.\NWe mustn't disturb His Grace.
+Dialogue: 0,0:42:53.57,0:42:57.12,Default,,0,0,0,,Young man, are you sure\Nyou're trying it on the right foot?
+Dialogue: 0,0:42:58.87,0:43:02.62,Default,,0,0,0,,Oh, it's the right foot, but...
+Dialogue: 0,0:43:02.71,0:43:04.46,Default,,0,0,0,,These glass shoes\Naren't always reliable.
+Dialogue: 0,0:43:04.54,0:43:06.46,Default,,0,0,0,,Come on, hurry.
+Dialogue: 0,0:43:06.55,0:43:08.42,Default,,0,0,0,,Up the stairs, up the stairs!
+Dialogue: 0,0:43:10.05,0:43:12.26,Default,,0,0,0,,Lucify, Lucify.
+Dialogue: 0,0:43:15.64,0:43:18.05,Default,,0,0,0,,Up, up, up with it.
+Dialogue: 0,0:43:28.07,0:43:29.23,Default,,0,0,0,,Here.
+Dialogue: 0,0:43:45.25,0:43:47.17,Default,,0,0,0,,Why can't you hold still a minute?
+Dialogue: 0,0:43:47.25,0:43:50.30,Default,,0,0,0,,My word. Enough of this!
+Dialogue: 0,0:43:52.97,0:43:55.01,Default,,0,0,0,,The next young lady, please.
+Dialogue: 0,0:43:55.09,0:43:56.72,Default,,0,0,0,,Did you hear that, Gus?
+Dialogue: 0,0:43:56.80,0:43:58.85,Default,,0,0,0,,- Yup.\N- Gotta hurry.
+Dialogue: 0,0:44:04.60,0:44:06.60,Default,,0,0,0,,Come on, come on, hurry.
+Dialogue: 0,0:44:14.15,0:44:17.11,Default,,0,0,0,,Gus-Gus, Gus-Gus, come on.
+Dialogue: 0,0:44:17.20,0:44:20.03,Default,,0,0,0,,Look, look. Just up there. Come on.
+Dialogue: 0,0:44:28.92,0:44:31.09,Default,,0,0,0,,Us is coming, Cinderelly.
+Dialogue: 0,0:44:31.17,0:44:33.76,Default,,0,0,0,,- I can get you out.\N- You've got the key!
+Dialogue: 0,0:44:33.84,0:44:36.76,Default,,0,0,0,,How did you ever manage to...
+Dialogue: 0,0:44:36.84,0:44:38.43,Default,,0,0,0,,Lucifer!
+Dialogue: 0,0:44:38.51,0:44:40.80,Default,,0,0,0,,Let him go, Lucifer.
+Dialogue: 0,0:44:41.64,0:44:43.43,Default,,0,0,0,,Please, let him go.
+Dialogue: 0,0:44:44.06,0:44:46.02,Default,,0,0,0,,- Let him go.\N- Let him go!
+Dialogue: 0,0:44:46.10,0:44:48.56,Default,,0,0,0,,Let him go. Let him out, you hear?
+Dialogue: 0,0:44:48.65,0:44:50.40,Default,,0,0,0,,Lucify, you...
+Dialogue: 0,0:45:28.52,0:45:31.86,Default,,0,0,0,,Bruno. Yes, Bruno!
+Dialogue: 0,0:45:32.27,0:45:35.07,Default,,0,0,0,,Quick, get Bruno. Get Bruno!
+Dialogue: 0,0:45:55.34,0:45:58.55,Default,,0,0,0,,Of all the stupid little idiots.
+Dialogue: 0,0:45:59.38,0:46:01.22,Default,,0,0,0,,I'll do it myself.
+Dialogue: 0,0:46:01.30,0:46:03.01,Default,,0,0,0,,Get away from me.
+Dialogue: 0,0:46:03.10,0:46:06.14,Default,,0,0,0,,I'll make it fit.
+Dialogue: 0,0:46:06.72,0:46:08.56,Default,,0,0,0,,- There.\N- It fits.
+Dialogue: 0,0:46:08.64,0:46:09.89,Default,,0,0,0,,It fits?
+Dialogue: 0,0:46:12.06,0:46:14.11,Default,,0,0,0,,No!
+Dialogue: 0,0:46:20.16,0:46:22.86,Default,,0,0,0,,Oh, Your Grace, I'm dreadfully sorry.
+Dialogue: 0,0:46:23.24,0:46:24.78,Default,,0,0,0,,It shan't happen again.
+Dialogue: 0,0:46:24.87,0:46:26.33,Default,,0,0,0,,Precisely, madam.
+Dialogue: 0,0:46:52.60,0:46:55.61,Default,,0,0,0,,Come on, come on.\NGet up, Gus-Gus, get up.
+Dialogue: 0,0:46:56.15,0:46:58.11,Default,,0,0,0,,Don't, don't, don't, don't.
+Dialogue: 0,0:46:58.78,0:47:00.74,Default,,0,0,0,,Let go, let go.
+Dialogue: 0,0:47:05.37,0:47:08.45,Default,,0,0,0,,You are the only ladies\Nin the household I hope... I presume.
+Dialogue: 0,0:47:08.54,0:47:11.25,Default,,0,0,0,,- There's no one else, Your Grace.\N- Quite so.
+Dialogue: 0,0:47:11.33,0:47:13.92,Default,,0,0,0,,- Good day. Good day.\N- Your Grace?
+Dialogue: 0,0:47:14.29,0:47:17.04,Default,,0,0,0,,Your Grace, please, wait.
+Dialogue: 0,0:47:17.13,0:47:19.26,Default,,0,0,0,,May I try it on?
+Dialogue: 0,0:47:19.34,0:47:22.17,Default,,0,0,0,,- Pay no attention.\N- It's Cinderella.
+Dialogue: 0,0:47:22.26,0:47:24.13,Default,,0,0,0,,- From the kitchen.\N- Ridiculous.
+Dialogue: 0,0:47:24.22,0:47:26.26,Default,,0,0,0,,She's out of her mind.
+Dialogue: 0,0:47:26.35,0:47:28.26,Default,,0,0,0,,Just an imaginative child.
+Dialogue: 0,0:47:28.35,0:47:31.35,Default,,0,0,0,,Madam,\Nmy orders were "every maiden."
+Dialogue: 0,0:47:32.89,0:47:34.44,Default,,0,0,0,,Come, my child.
+Dialogue: 0,0:47:49.49,0:47:51.37,Default,,0,0,0,,Oh, no.
+Dialogue: 0,0:47:51.45,0:47:53.91,Default,,0,0,0,,No, no, no. Oh, no!
+Dialogue: 0,0:47:53.100,0:47:56.04,Default,,0,0,0,,Oh, this is terrible.
+Dialogue: 0,0:47:56.13,0:47:58.34,Default,,0,0,0,,The King, what will he say?
+Dialogue: 0,0:47:59.13,0:48:00.59,Default,,0,0,0,,What will he do?
+Dialogue: 0,0:48:00.67,0:48:02.21,Default,,0,0,0,,Perhaps, if it would help...
+Dialogue: 0,0:48:02.30,0:48:05.72,Default,,0,0,0,,No, no. Nothing can help now. Nothing.
+Dialogue: 0,0:48:05.84,0:48:07.80,Default,,0,0,0,,But, you see, I have the other slipper.
+Dialogue: 0,0:48:46.13,0:48:48.89,Default,,0,0,0,,Have faith in dreams
+Dialogue: 0,0:48:48.97,0:48:51.68,Default,,0,0,0,,And someday
+Dialogue: 0,0:48:51.76,0:48:57.31,Default,,0,0,0,,Your rainbow\Nwill come smiling through
+Dialogue: 0,0:48:57.39,0:49:02.19,Default,,0,0,0,,No matter how your heart is grieving
+Dialogue: 0,0:49:02.28,0:49:06.45,Default,,0,0,0,,If you keep on believing
+Dialogue: 0,0:49:06.53,0:49:09.78,Default,,0,0,0,,The dream that you wish
+Dialogue: 0,0:49:09.87,0:49:13.87,Default,,0,0,0,,Will come true

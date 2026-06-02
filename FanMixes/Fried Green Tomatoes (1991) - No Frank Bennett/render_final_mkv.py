@@ -7,8 +7,10 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import subprocess
 import sys
+import tempfile
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -58,9 +60,9 @@ def build_filter_complex(segments: list[tuple[float, float]], fps_num: int, fps_
     return ";".join(chunks) + ";" + concat
 
 
-def run(cmd: list[str]) -> None:
+def run(cmd: list[str], *, cwd: Path | None = None) -> None:
     print("+", " ".join(cmd[:12]), ("..." if len(cmd) > 12 else ""), file=sys.stderr)
-    subprocess.run(cmd, check=True)
+    subprocess.run(cmd, check=True, cwd=str(cwd) if cwd else None)
 
 
 def main() -> int:
@@ -69,7 +71,11 @@ def main() -> int:
     ap.add_argument("--video", type=Path, help="Source rip (default: resource in kdenlive)")
     ap.add_argument("--subs", type=Path, help="Shifted SRT on output timeline (default: .kdenlive.shifted.srt)")
     ap.add_argument("--out", type=Path, help="Output .mkv (default: edit name - final.mkv)")
-    ap.add_argument("--passlog", type=Path, help="x265 multipass stats prefix")
+    ap.add_argument(
+        "--passlog",
+        type=Path,
+        help="Basename stem for x265 stats files in temp/fgt_no_frank_render (default x265_fgt_pass)",
+    )
     ap.add_argument(
         "--video-kbps",
         type=int,
@@ -77,12 +83,6 @@ def main() -> int:
         help="Target video bitrate kbps (0 = derive from source ffprobe format bit_rate)",
     )
     ap.add_argument("--audio-kbps", type=int, default=224, help="AAC bitrate for 5.1 output")
-    ap.add_argument(
-        "--threads",
-        type=int,
-        default=4,
-        help="x265 pools=N worker threads (0 = default, often all cores; use 4–6 if thermals/OOM crash)",
-    )
     args = ap.parse_args()
 
     here = Path(__file__).resolve().parent
@@ -105,12 +105,17 @@ def main() -> int:
 
     out = args.out or (here / "Fried Green Tomatoes (1991) - No Frank Bennett - final.mkv")
     out.parent.mkdir(parents=True, exist_ok=True)
-    tmp_nosub = Path("/tmp/fgt_no_frank_nosubs.mkv")
-    passlog = args.passlog or Path("/tmp/x265_fgt_pass")
+    tmp_root = Path(tempfile.gettempdir()) / "fgt_no_frank_render"
+    tmp_root.mkdir(parents=True, exist_ok=True)
+    tmp_nosub = tmp_root / "fgt_no_frank_nosubs.mkv"
+    # x265 -x265-params uses ':' separators; avoid absolute Windows paths (drive letters) in stats=.
+    stats_stem = (args.passlog.stem if args.passlog else "x265_fgt_pass")
+    stats_file = tmp_root / f"{stats_stem}.log"
+    mbtree_file = tmp_root / f"{stats_stem}.log.mbtree"
 
     segs = parse_playlist2_segments(kden)
     out_dur = sum(b - a for a, b in segs)
-    print(f"segments={len(segs)} output_duration≈{out_dur:.1f}s", file=sys.stderr)
+    print(f"segments={len(segs)} output_duration~{out_dur:.1f}s", file=sys.stderr)
 
     # Match source format bitrate (video ≈ format - audio - overhead)
     probe = subprocess.run(
@@ -134,18 +139,15 @@ def main() -> int:
     else:
         v_kbps = max(800, int((float(fmt_br) / 1000.0) - args.audio_kbps - 80))
     print(f"target video {v_kbps} kbps (format avg {int(fmt_br/1000)} kbps)", file=sys.stderr)
-    x265_pool = f":pools={args.threads}" if args.threads > 0 else ""
-    if args.threads > 0:
-        print(f"x265 worker pool cap: pools={args.threads}", file=sys.stderr)
 
     fps_num, fps_den = 24000, 1001
     fc = build_filter_complex(segs, fps_num, fps_den)
     # Avoid parentheses in path (ffmpeg filter_complex_script can reject them).
-    fc_path = Path("/tmp/fgt_no_frank_filter.txt")
+    fc_path = tmp_root / "fgt_no_frank_filter.txt"
     fc_path.write_text(fc, encoding="utf-8")
 
-    stats = str(passlog) + ".log"
-    for p in (Path(stats), passlog.with_suffix(".log.mbtree")):
+    stats_name = stats_file.name
+    for p in (stats_file, mbtree_file):
         if p.exists():
             p.unlink()
 
@@ -158,7 +160,7 @@ def main() -> int:
         "-i",
         str(video),
         "-filter_complex_script",
-        str(fc_path),
+        fc_path.name,
         "-map",
         "[outv]",
         "-map",
@@ -174,14 +176,14 @@ def main() -> int:
         "-bufsize",
         f"{int(v_kbps * 2)}k",
         "-x265-params",
-        f"pass=1:stats={stats}:log-level=info:strong-intra-smoothing=1:rect=1:aq-mode=3{x265_pool}",
+        f"pass=1:stats={stats_name}:log-level=info:strong-intra-smoothing=1:rect=1:aq-mode=3",
         "-an",
         "-f",
         "null",
-        "/dev/null",
+        os.devnull,
     ]
     print("Pass 1…", file=sys.stderr)
-    run(common)
+    run(common, cwd=tmp_root)
 
     common2 = [
         "ffmpeg",
@@ -192,7 +194,7 @@ def main() -> int:
         "-i",
         str(video),
         "-filter_complex_script",
-        str(fc_path),
+        fc_path.name,
         "-map",
         "[outv]",
         "-map",
@@ -208,7 +210,7 @@ def main() -> int:
         "-bufsize",
         f"{int(v_kbps * 2)}k",
         "-x265-params",
-        f"pass=2:stats={stats}:log-level=info:strong-intra-smoothing=1:rect=1:aq-mode=3{x265_pool}",
+        f"pass=2:stats={stats_name}:log-level=info:strong-intra-smoothing=1:rect=1:aq-mode=3",
         "-c:a",
         "aac",
         "-b:a",
@@ -217,10 +219,10 @@ def main() -> int:
         "6",
         "-ar",
         "48000",
-        str(tmp_nosub),
+        tmp_nosub.name,
     ]
     print("Pass 2 (video+audio, no subs)…", file=sys.stderr)
-    run(common2)
+    run(common2, cwd=tmp_root)
 
     mux = [
         "ffmpeg",
