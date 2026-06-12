@@ -12,11 +12,21 @@ function findProject(projects, slug) {
 }
 
 function projectsInCategory(projects, category) {
-  const items = []
-  for (let i = 0; i < projects.length; i++) {
-    if (projects[i].category === category) items.push(projects[i])
-  }
-  return items
+  return projects.filter((p) => p.category === category)
+}
+
+function navItem(p, slug, setSlug) {
+  const active = slug === p.slug
+  return (
+    <li key={p.slug}>
+      <button
+        className={active ? 'nav-link nav-link-active' : 'nav-link'}
+        onClick={() => setSlug(p.slug)}
+      >
+        {p.title}
+      </button>
+    </li>
+  )
 }
 
 export default function FanEditsLibrary() {
@@ -66,20 +76,6 @@ export default function FanEditsLibrary() {
   const fanMixes = projectsInCategory(projects, 'FanMixes')
   const kidFriendly = projectsInCategory(projects, 'KidFriendly')
 
-  function navItem(p) {
-    const active = slug === p.slug
-    return (
-      <li key={p.slug}>
-        <button
-          className={active ? 'nav-link nav-link-active' : 'nav-link'}
-          onClick={() => setSlug(p.slug)}
-        >
-          {p.title}
-        </button>
-      </li>
-    )
-  }
-
   return (
     <div className="library-shell">
       <aside className="library-nav">
@@ -91,9 +87,9 @@ export default function FanEditsLibrary() {
           Library home
         </button>
         <h3 className="nav-heading">FanMixes</h3>
-        <ul className="nav-list">{fanMixes.map(navItem)}</ul>
+        <ul className="nav-list">{fanMixes.map((p) => navItem(p, slug, setSlug))}</ul>
         <h3 className="nav-heading">KidFriendly</h3>
-        <ul className="nav-list">{kidFriendly.map(navItem)}</ul>
+        <ul className="nav-list">{kidFriendly.map((p) => navItem(p, slug, setSlug))}</ul>
       </aside>
       <main className="library-main">
         {!slug ? (
