@@ -29,7 +29,9 @@ relay-client-desktop --repo ~/dev/fan-edits --ipfs
 Headless smoke:
 
 ```bash
-relay-client-desktop --verify --repo ~/dev/fan-edits
+./scripts/open-relay-desktop.sh --verify
+# or:
+relay-client-desktop --verify --repo ~/dev/fan-edits --manifest ~/dev/fan-edits/render-manifest.json
 ```
 
 ## Media layout (thin IPFS)
