@@ -1,3 +1,6 @@
+# Relay IPFS thin-repo (see relay-gateway/docs/RELAY_IPFS.md)
+.relay/asset-inbox/
+.relay/local-assets/
 
 .tmp*
 *.mkv

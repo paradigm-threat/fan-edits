@@ -1,0 +1,18 @@
+# fan-edits — thin IPFS catalog + desktop/web client shell
+client:
+  hooks:
+    get:
+      path: hooks/client/get.jsx
+server:
+  hooks:
+    get:
+      path: hooks/server/get.cs
+    pre-commit:
+      path: hooks/server/validation.cs
+    pre-receive:
+      path: hooks/server/validation.cs
+git:
+  branchRules:
+    default:
+      requireSigned: false
+      allowUnsigned: true

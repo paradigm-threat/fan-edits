@@ -1,0 +1,18 @@
+{
+  "projects": [
+    {
+      "slug": "fgt-no-frank-bennett",
+      "category": "FanMixes",
+      "path": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett",
+      "title": "Fried Green Tomatoes — No Frank Bennett",
+      "reel": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/Fried Green Tomatoes (1991) - No Frank Bennett.reel"
+    },
+    {
+      "slug": "spirited-away-kid",
+      "category": "KidFriendly",
+      "path": "KidFriendly/Spirited Away (2001) - Kid friendly",
+      "title": "Spirited Away — Kid friendly",
+      "reel": "KidFriendly/Spirited Away (2001) - Kid friendly/Spirited Away (2001) - Kid friendly.reel"
+    }
+  ]
+}

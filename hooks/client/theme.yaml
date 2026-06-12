@@ -1,0 +1,148 @@
+themes:
+  light:
+    variables:
+      text-primary: "#111827"
+      bg-primary: "#f5f4f0"
+      border-color: "#d1d5db"
+    selectors:
+      ".library-shell":
+        display: "flex"
+        flexDirection: "row"
+        width: "100%"
+        minHeight: "100%"
+        backgroundColor: "#f5f4f0"
+        color: "#111827"
+      ".library-nav":
+        width: "280px"
+        padding: "20px 16px"
+        display: "flex"
+        flexDirection: "column"
+        gap: "8px"
+        backgroundColor: "#ebe9e4"
+        borderRightWidth: "1px"
+        borderRightColor: "#d1d5db"
+        overflow: "auto"
+      ".library-main":
+        flex: "1"
+        padding: "24px"
+        display: "flex"
+        flexDirection: "column"
+        gap: "12px"
+        overflow: "auto"
+      ".library-title":
+        fontSize: "22px"
+        fontWeight: "700"
+        marginBottom: "8px"
+      ".nav-heading":
+        fontSize: "13px"
+        fontWeight: "600"
+        textTransform: "uppercase"
+        opacity: "0.65"
+        marginTop: "12px"
+        marginBottom: "4px"
+      ".nav-list":
+        display: "flex"
+        flexDirection: "column"
+        gap: "4px"
+        padding: "0"
+        listStyleType: "none"
+      ".nav-link":
+        padding: "8px 10px"
+        backgroundColor: "transparent"
+        color: "#111827"
+        borderRadius: "6px"
+        cursor: "pointer"
+        textAlign: "left"
+        fontSize: "14px"
+        width: "100%"
+      ".nav-link-active":
+        backgroundColor: "#2563eb"
+        color: "#ffffff"
+      ".library-home":
+        display: "flex"
+        flexDirection: "column"
+        gap: "12px"
+        maxWidth: "720px"
+      ".project-page":
+        display: "flex"
+        flexDirection: "column"
+        gap: "12px"
+        maxWidth: "900px"
+      ".project-meta":
+        fontSize: "13px"
+        opacity: "0.75"
+      ".catalog-root":
+        padding: "24px"
+        display: "flex"
+        flexDirection: "column"
+        gap: "12px"
+        backgroundColor: "#f5f4f0"
+        color: "#111827"
+        width: "100%"
+        minHeight: "100%"
+      ".catalog-lead":
+        fontSize: "16px"
+        opacity: "0.85"
+      "h1":
+        fontSize: "28px"
+        fontWeight: "700"
+      "h2":
+        fontSize: "22px"
+        fontWeight: "600"
+      "h3":
+        fontSize: "18px"
+        fontWeight: "600"
+      "p":
+        fontSize: "15px"
+        marginBottom: "8px"
+      ".catalog-sections":
+        display: "flex"
+        flexDirection: "row"
+        gap: "8px"
+        flexWrap: "wrap"
+      ".nav-btn":
+        padding: "8px 16px"
+        backgroundColor: "#2563eb"
+        color: "#ffffff"
+        borderRadius: "6px"
+        cursor: "pointer"
+      ".project-list":
+        display: "flex"
+        flexDirection: "column"
+        gap: "6px"
+        padding: "0"
+      ".project-btn":
+        padding: "10px 14px"
+        backgroundColor: "#ffffff"
+        color: "#111827"
+        borderRadius: "6px"
+        cursor: "pointer"
+        textAlign: "left"
+        borderWidth: "1px"
+        borderColor: "#d1d5db"
+      ".project-view":
+        gap: "16px"
+      ".readme-panel":
+        padding: "16px"
+        backgroundColor: "#ffffff"
+        borderRadius: "8px"
+        borderWidth: "1px"
+        borderColor: "#e5e7eb"
+        maxWidth: "900px"
+      ".phase-note":
+        fontSize: "14px"
+        opacity: "0.7"
+      "ul":
+        paddingLeft: "20px"
+      "li":
+        fontSize: "15px"
+        marginBottom: "4px"
+      "code":
+        fontSize: "13px"
+        backgroundColor: "#f3f4f6"
+      "pre":
+        padding: "12px"
+        backgroundColor: "#f3f4f6"
+        borderRadius: "6px"
+        overflow: "auto"
+current_theme: light
