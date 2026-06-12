@@ -1,0 +1,13 @@
+{
+  "entry": "hooks/client/get.jsx",
+  "cases": [
+    {
+      "name": "library-shell",
+      "assertText": ["Fan Edits", "FanMixes", "KidFriendly", "Library home"]
+    },
+    {
+      "name": "catalog-index",
+      "assertText": ["Fried Green Tomatoes", "Salvation"]
+    }
+  ]
+}

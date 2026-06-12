@@ -17,4 +17,19 @@ if [[ ! -x "$BIN" && ! -f "$BIN" ]]; then
 fi
 
 export RELAY_GATEWAY_BIN="$GATEWAY"
-exec "$BIN" --repo "$ROOT" "$@"
+VERIFY=0
+ARGS=()
+for a in "$@"; do
+  if [[ "$a" == "--verify" ]]; then
+    VERIFY=1
+  else
+    ARGS+=("$a")
+  fi
+done
+
+if [[ "$VERIFY" == "1" ]]; then
+  MANIFEST="$ROOT/render-manifest.json"
+  exec "$BIN" --verify --repo "$ROOT" --manifest "$MANIFEST" "${ARGS[@]}"
+fi
+
+exec "$BIN" --repo "$ROOT" "${ARGS[@]}"
