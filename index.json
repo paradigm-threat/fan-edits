@@ -1,18 +1,130 @@
 {
   "projects": [
     {
-      "slug": "fgt-no-frank-bennett",
+      "slug": "2012-2009-salvation",
       "category": "FanMixes",
-      "path": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett",
-      "title": "Fried Green Tomatoes — No Frank Bennett",
-      "reel": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/Fried Green Tomatoes (1991) - No Frank Bennett.reel"
+      "path": "FanMixes/2012 (2009) - Salvation",
+      "title": "2012 - Salvation"
     },
     {
-      "slug": "spirited-away-kid",
+      "slug": "alien-resurrection-1997-unjossed",
+      "category": "FanMixes",
+      "path": "FanMixes/Alien Resurrection (1997) - UnJossed",
+      "title": "Alien Resurrection"
+    },
+    {
+      "slug": "congo-1995-incel",
+      "category": "FanMixes",
+      "path": "FanMixes/Congo (1995) - Incel",
+      "title": "Congo - Incel Edition"
+    },
+    {
+      "slug": "final-fantasy-2001-the-phantom-menace",
+      "category": "FanMixes",
+      "path": "FanMixes/Final Fantasy (2001) - The Phantom Menace",
+      "title": "Final Fantasy - The Phantom Menace"
+    },
+    {
+      "slug": "fried-green-tomatoes-1991-no-frank-bennett",
+      "category": "FanMixes",
+      "path": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett",
+      "title": "Fried Green Tomatoes (1991) \u2014 No Frank Bennett"
+    },
+    {
+      "slug": "matrix-reloaded-2003-unlinked",
+      "category": "FanMixes",
+      "path": "FanMixes/Matrix Reloaded (2003) - Unlinked",
+      "title": "Matrix Reloaded - Unlinked"
+    },
+    {
+      "slug": "matrix-revolutions-2003-unlinked",
+      "category": "FanMixes",
+      "path": "FanMixes/Matrix Revolutions (2003) - Unlinked",
+      "title": "Matrix Revolutions - Unlinked"
+    },
+    {
+      "slug": "ninja-scroll-1993-minor-damage",
+      "category": "FanMixes",
+      "path": "FanMixes/Ninja Scroll (1993) - Minor Damage",
+      "title": "Ninja Scroll: Minor Damage"
+    },
+    {
+      "slug": "riddick-2013-unjinxed",
+      "category": "FanMixes",
+      "path": "FanMixes/Riddick (2013) - Unjinxed",
+      "title": "Riddick (2013) \u2014 Unjinxed"
+    },
+    {
+      "slug": "serenity-2005-unjossed",
+      "category": "FanMixes",
+      "path": "FanMixes/Serenity (2005) - Unjossed",
+      "title": "Serenity (2005) \u2014 Unjossed Edition"
+    },
+    {
+      "slug": "silent-hill-2006-nay-tomorrow",
+      "category": "FanMixes",
+      "path": "FanMixes/Silent Hill (2006) - Nay Tomorrow",
+      "title": "Silent Hill - Nay Tomorrow Edition"
+    },
+    {
+      "slug": "sonic-2020-deschwartzed",
+      "category": "FanMixes",
+      "path": "FanMixes/Sonic (2020) - DeSchwartzed",
+      "title": "Sonic (2020) - DeSchwartzed Edition"
+    },
+    {
+      "slug": "sonic-2-2022-deschwartzed",
+      "category": "FanMixes",
+      "path": "FanMixes/Sonic 2 (2022) - DeSchwartzed",
+      "title": "Sonic 2 (2022) - DeSchwartzed Edition"
+    },
+    {
+      "slug": "sonic-3-2024-deschwartzed",
+      "category": "FanMixes",
+      "path": "FanMixes/Sonic 3 (2024) - DeSchwartzed",
+      "title": "Sonic 3 (2024) - DeSchwartzed Edition"
+    },
+    {
+      "slug": "terminator-3-2003-brass-monkey",
+      "category": "FanMixes",
+      "path": "FanMixes/Terminator 3 (2003) - Brass Monkey",
+      "title": "Terminator 3 (2003) - Brass Monkey Edition"
+    },
+    {
+      "slug": "the-chronicles-of-riddick-2004-fry-s-edition",
+      "category": "FanMixes",
+      "path": "FanMixes/The Chronicles Of Riddick (2004) - Fry's Edition",
+      "title": "The Chronicles of Riddick (2004) - Carolyn Fry Edition"
+    },
+    {
+      "slug": "the-day-after-tomorrow-2004-yuppocolypse",
+      "category": "FanMixes",
+      "path": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse",
+      "title": "The Day After Tomorrow (2004) - Yuppocolypse"
+    },
+    {
+      "slug": "war-of-the-worlds-2005-family-therapy",
+      "category": "FanMixes",
+      "path": "FanMixes/War of the Worlds (2005) - Family Therapy",
+      "title": "War of the Worlds (2004) - Family Therapy Edition"
+    },
+    {
+      "slug": "bambi-1942-kidfriendly-edition",
       "category": "KidFriendly",
-      "path": "KidFriendly/Spirited Away (2001) - Kid friendly",
-      "title": "Spirited Away — Kid friendly",
-      "reel": "KidFriendly/Spirited Away (2001) - Kid friendly/Spirited Away (2001) - Kid friendly.reel"
+      "path": "KidFriendly/Bambi (1942) - KidFriendly Edition",
+      "title": "Bambi (1942) \u2014 KidFriendly Edition"
+    },
+    {
+      "slug": "cinderella-1950-kidfriendly-edition",
+      "category": "KidFriendly",
+      "path": "KidFriendly/Cinderella (1950) - KidFriendly Edition",
+      "title": "Cinderella (1950) \u2014 KidFriendly Edition"
+    },
+    {
+      "slug": "pee-wee-s-big-adventure-1985-kidfriendly-edition",
+      "category": "KidFriendly",
+      "path": "KidFriendly/Pee-wee's Big Adventure (1985) - KidFriendly Edition",
+      "title": "Pee-wee's Big Adventure (1985) \u2014 KidFriendly Edition"
     }
   ]
 }
