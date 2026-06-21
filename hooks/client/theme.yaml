@@ -36,7 +36,7 @@ themes:
         borderRadius: "8px"
         backgroundColor: "#2563eb"
         color: "#ffffff"
-        fontSize: "14px"
+        fontSize: "11px"
         fontWeight: "700"
       ".library-header-title":
         fontSize: "20px"

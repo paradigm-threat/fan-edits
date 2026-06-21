@@ -112,12 +112,10 @@ export default function FanEditsLibrary() {
     <div className="library-app">
       <header className="library-header">
         <div className="library-header-brand">
-          <span className="library-header-icon" aria-hidden="true">
-            ▶
-          </span>
+          <span className="library-header-icon">Play</span>
           <div>
             <h1 className="library-header-title">Fan Edits</h1>
-            <p className="library-header-tagline">Family-safe cuts &amp; fan mixes</p>
+            <p className="library-header-tagline">Family-safe cuts and fan mixes</p>
           </div>
         </div>
         <p className="library-header-meta">{projects.length} titles</p>
@@ -189,7 +187,7 @@ export default function FanEditsLibrary() {
       </div>
       <footer className="library-footer">
         <span className="library-footer-brand">Relay video library</span>
-        <span className="library-footer-note">CleverScript UI · shared theme across web &amp; desktop</span>
+        <span className="library-footer-note">CleverScript UI - shared theme across web and desktop</span>
       </footer>
     </div>
   )
