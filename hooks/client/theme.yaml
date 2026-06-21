@@ -5,6 +5,72 @@ themes:
       bg-primary: "#f5f4f0"
       border-color: "#d1d5db"
     selectors:
+      ".library-app":
+        display: "flex"
+        flexDirection: "column"
+        width: "100%"
+        minHeight: "100%"
+        backgroundColor: "#f5f4f0"
+        color: "#111827"
+      ".library-header":
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "center"
+        justifyContent: "space-between"
+        padding: "14px 20px"
+        backgroundColor: "#0f172a"
+        color: "#f8fafc"
+        borderBottomWidth: "1px"
+        borderBottomColor: "#1e293b"
+      ".library-header-brand":
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "center"
+        gap: "12px"
+      ".library-header-icon":
+        display: "flex"
+        alignItems: "center"
+        justifyContent: "center"
+        width: "36px"
+        height: "36px"
+        borderRadius: "8px"
+        backgroundColor: "#2563eb"
+        color: "#ffffff"
+        fontSize: "14px"
+        fontWeight: "700"
+      ".library-header-title":
+        fontSize: "20px"
+        fontWeight: "700"
+        marginBottom: "2px"
+        color: "#f8fafc"
+      ".library-header-tagline":
+        fontSize: "13px"
+        opacity: "0.75"
+        color: "#cbd5e1"
+      ".library-header-meta":
+        fontSize: "13px"
+        opacity: "0.8"
+        color: "#cbd5e1"
+      ".library-body":
+        display: "flex"
+        flexDirection: "row"
+        flex: "1"
+        minHeight: "0"
+      ".library-footer":
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "center"
+        justifyContent: "space-between"
+        padding: "10px 20px"
+        backgroundColor: "#e8e6e1"
+        borderTopWidth: "1px"
+        borderTopColor: "#d1d5db"
+        fontSize: "12px"
+        color: "#4b5563"
+      ".library-footer-brand":
+        fontWeight: "600"
+      ".library-footer-note":
+        opacity: "0.8"
       ".library-shell":
         display: "flex"
         flexDirection: "row"
@@ -129,6 +195,25 @@ themes:
         borderWidth: "1px"
         borderColor: "#e5e7eb"
         maxWidth: "900px"
+      ".video-panel":
+        display: "flex"
+        flexDirection: "column"
+        gap: "8px"
+        maxWidth: "900px"
+        width: "100%"
+      ".relay-video-player-shell":
+        width: "100%"
+        backgroundColor: "#0f0f12"
+        borderRadius: "8px"
+        overflow: "hidden"
+      ".relay-video-player":
+        width: "100%"
+        maxHeight: "480px"
+        display: "block"
+      ".video-controls":
+        display: "flex"
+        flexDirection: "row"
+        gap: "8px"
       ".phase-note":
         fontSize: "14px"
         opacity: "0.7"
