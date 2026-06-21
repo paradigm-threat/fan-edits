@@ -12,12 +12,17 @@ function mediaSrc(project) {
 
 function subtitleTracks(project) {
   if (!project || !project.subtitles) return []
-  return project.subtitles.map((t) => ({
-    src: t.src.startsWith('/') ? t.src : '/' + t.src,
-    label: t.label || 'Subtitles',
-    lang: t.lang || 'en',
-    default: t.default === true,
-  }))
+  return project.subtitles.map((t) => {
+    const track = {
+      src: t.src.startsWith('/') ? t.src : '/' + t.src,
+      label: t.label || 'Subtitles',
+      lang: t.lang || 'en',
+    }
+    if (t.default === true) {
+      track.default = true
+    }
+    return track
+  })
 }
 
 function findProject(projects, slug) {
