@@ -185,7 +185,7 @@ CARDS: list[tuple[float, float, str]] = [
     (
         parse_ts("01:31:44,000"),
         14.0,
-        "[“Yeah. It’s Mars.” They name the planet. Water world. This is the home they left. Saturnian: humans on Mars in the Golden Age. Same species.]",
+        "[“Yeah. It’s Mars.” Water-world picture. Same description class as the 1984 RV before-catastrophe Mars — habitable wet surface, then the wreck. Crew never says ocean.]",
     ),
     (
         parse_ts("01:32:00,000"),
@@ -205,7 +205,7 @@ CARDS: list[tuple[float, float, str]] = [
     (
         parse_ts("01:32:54,000"),
         16.0,
-        "[1984 Mars RV session (CIA-RDP96-00788R001900760001-9). Public stamp Approved For Release 2000-08-08 — five months after this theatrical (10 Mar 2000). Agency-origin living-Mars text, not a meme.]",
+        "[1984 MARS EXPLORATION. MON: “go back to the time before the geologic problem.” Dirt mountains vanish. Megalithic flats. Aqueducts / basin. Not the word ocean. Same before-cut as this water-world. Stamp 2000-08-08.]",
     ),
     (
         parse_ts("01:33:21,000"),
@@ -295,7 +295,7 @@ CARDS: list[tuple[float, float, str]] = [
     (
         parse_ts("01:46:51,000"),
         10.0,
-        "[Mars RV 1984 session. Approved For Release 2000-08-08. This theatrical 10 Mar 2000. Tightest calendar rhyme on the Mars lane. Living-Mars discourse has agency provenance.]",
+        "[Mars RV 1984. Before-catastrophe Mars = this water-world. Approved For Release 2000-08-08. Theatrical 10 Mar 2000. Same-year rhyme. Living-Mars discourse has agency provenance.]",
     ),
     (
         parse_ts("01:47:02,000"),

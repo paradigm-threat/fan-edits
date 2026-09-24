@@ -17,6 +17,8 @@ Source (nobiserv): `Videos/Horror and SciFi/Mission to Mars (2000) {1080p]/` —
 
 Crew never says “asteroid” or “wrecked.” They say *“It’s Mars.”* / *“That’s where they went.”* / *“One stayed behind. Earth, before the continents separated.”* / *“They seeded Earth.”* / *“They’re us. We’re them.”*
 
+**Water-world:** hologram **before** = 1984 RV **before-catastrophe** (MON: *“go back to the time before the geologic problem”*). Same description class. Transcript does not say ocean.
+
 **Clock A:** continents line = 3147 first deluge / Atlantis fall / first split. Earth stayed; Mars became breakaway.
 
 **Clock B:** Cambrian / millions of years = seed mask. Did not collapse them.
