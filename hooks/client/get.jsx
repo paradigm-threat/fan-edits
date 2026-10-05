@@ -287,17 +287,15 @@ function theaterHostEl() {
   }
 }
 
-function pushTheaterCommand(attrs) {
+function pushTheaterCommand(playingFlag, commandVal, seqVal) {
   try {
     const host = theaterHostEl()
     if (!host || !host.setAttribute) {
       return
     }
-    const keys = Object.keys(attrs)
-    for (let i = 0; i < keys.length; i++) {
-      const k = keys[i]
-      host.setAttribute(k, '' + attrs[k])
-    }
+    host.setAttribute('data-playing', playingFlag)
+    host.setAttribute('data-command', '' + commandVal)
+    host.setAttribute('data-command-seq', '' + seqVal)
   } catch (e) {}
 }
 
@@ -791,11 +789,7 @@ export default function FlashbackApp() {
     setCommand(1)
     setCommandSeq(nextSeq)
     setPlaying(true)
-    pushTheaterCommand({
-      'data-playing': 'true',
-      'data-command': '1',
-      'data-command-seq': nextSeq,
-    })
+    pushTheaterCommand('true', 1, nextSeq)
     try {
       const host = theaterHostEl()
       if (host) {
@@ -831,11 +825,7 @@ export default function FlashbackApp() {
     setCommand(2)
     setCommandSeq(nextSeq)
     setPlaying(false)
-    pushTheaterCommand({
-      'data-playing': 'false',
-      'data-command': '2',
-      'data-command-seq': nextSeq,
-    })
+    pushTheaterCommand('false', 2, nextSeq)
     try {
       const v = mediaVideoEl()
       if (v && v.pause) {
