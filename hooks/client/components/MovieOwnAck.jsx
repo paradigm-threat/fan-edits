@@ -5,6 +5,7 @@
  * script / client consume; no reliance on hydrated onClick.
  */
 import React from 'react'
+import { isClientLive } from '@clevertree/style-internal'
 
 var PREFIX = 'flashback.movieOwn.v1.'
 var WELCOME_KEY = 'flashback.ownershipAck.v1'
@@ -299,8 +300,11 @@ export default function MovieOwnAck(props) {
   }
 
   let fromQuery = ensureMovieOwnAckFromBrowser(slug)
-  if (fromQuery === true || hasMovieOwnAck(slug) === true) {
-    return null
+  // Keep SSR/hydrate markup stable — only skip overlay after client is live.
+  if (isClientLive() === true) {
+    if (fromQuery === true || hasMovieOwnAck(slug) === true) {
+      return null
+    }
   }
 
   let ownName = originalTitle

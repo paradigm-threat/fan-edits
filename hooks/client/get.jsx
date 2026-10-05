@@ -5,6 +5,7 @@ import React, { useState } from 'react'
 import StyleContext from '@clevertree/style'
 import { MarkdownRenderer } from '@clevertree/markdown'
 import manifest from '@hooks'
+import { isClientLive } from '@clevertree/style-internal'
 import { TicketIcon, PlayChevron, MarqueeBulb } from 'hooks/client/components/Icons.jsx'
 import OwnershipGate, { hasOwnershipAck, ensureOwnershipAckFromBrowser } from 'hooks/client/components/OwnershipGate.jsx'
 import MovieOwnAck, { hasMovieOwnAck, ensureMovieOwnAckFromBrowser } from 'hooks/client/components/MovieOwnAck.jsx'
@@ -331,15 +332,24 @@ export default function FlashbackApp() {
   const movieAckStored = movieAckState[0]
   const setMovieAck = movieAckState[1]
   // Re-read localStorage each render (SSR useState stays false; inject/query may set LS).
-  const movieAck =
-    movieAckStored === true ||
-    (kind.kind === 'movie' && kind.slug ? hasMovieOwnAck(kind.slug) === true : false)
+  let movieAckFromLs = false
+  if (kind.kind === 'movie') {
+    if (kind.slug) {
+      if (hasMovieOwnAck(kind.slug) === true) {
+        movieAckFromLs = true
+      }
+    }
+  }
+  const movieAck = movieAckStored === true || movieAckFromLs === true
+
+  // CleverScript soft-hydrate: SSR always paints locked+overlay. Reading LS during the
+  // hydrate pass desyncs vnode vs DOM and freezes updates. Unlock only after live.
+  const live = isClientLive() === true
+  const mediaUnlocked = live === true && ack === true && movieAck === true
+  const showMovieAck = live !== true || movieAck !== true
 
   function sendPlay() {
-    if (ack !== true) {
-      return
-    }
-    if (movieAck !== true) {
+    if (mediaUnlocked !== true) {
       return
     }
     setCommand(1)
@@ -422,7 +432,7 @@ export default function FlashbackApp() {
         {selected && selected.blurb ? <p className="fb-movie-blurb">{selected.blurb}</p> : null}
         {selected && selected.media ? (
           <div className="fb-video-panel">
-            {ack === true && movieAck === true ? (
+            {mediaUnlocked === true ? (
               <RelayMedia
                 src={mediaSrc(selected)}
                 subtitles={subtitleTracks(selected)}
@@ -439,7 +449,7 @@ export default function FlashbackApp() {
                 </p>
               </div>
             )}
-            {movieAck !== true ? (
+            {showMovieAck === true ? (
               <MovieOwnAck
                 slug={selected.slug}
                 originalTitle={projectOriginalTitle(selected)}
@@ -455,7 +465,7 @@ export default function FlashbackApp() {
                 type="button"
                 className="fb-btn fb-btn-primary"
                 onClick={sendPlay}
-                disabled={ack !== true || movieAck !== true}
+                disabled={mediaUnlocked !== true}
               >
                 <PlayChevron className="fb-btn-icon" /> Play
               </button>
@@ -463,7 +473,7 @@ export default function FlashbackApp() {
                 type="button"
                 className="fb-btn"
                 onClick={sendPause}
-                disabled={ack !== true || movieAck !== true}
+                disabled={mediaUnlocked !== true}
               >
                 Pause
               </button>
@@ -516,7 +526,7 @@ export default function FlashbackApp() {
           <div className="fb-screen-glow" />
           <SeatRows />
         </div>
-        {hasOwnershipAck() !== true && kind.kind !== 'movie' ? (
+        {kind.kind !== 'movie' && (live !== true || hasOwnershipAck() !== true) ? (
           <OwnershipGate
             onAck={() => {
               setAck(true)

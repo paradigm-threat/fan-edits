@@ -7,6 +7,7 @@
  * - On return with ?ownershipAck=1, persist to localStorage and hide the gate.
  */
 import React from 'react'
+import { isClientLive } from '@clevertree/style-internal'
 
 var ACK_KEY = 'flashback.ownershipAck.v1'
 
@@ -125,7 +126,8 @@ export default function OwnershipGate(props) {
     hideGateNode()
   }
 
-  if (readAck() === true) {
+  // SSR + hydrate must keep the gate node; hide via inject/CSS until live.
+  if (isClientLive() === true && readAck() === true) {
     return null
   }
 
