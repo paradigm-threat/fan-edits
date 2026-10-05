@@ -5,10 +5,12 @@
 (function (global) {
   'use strict';
 
+  var WKEY = 'flashback.ownershipAck.v1';
+  var MPREF = 'flashback.movieOwn.v1.';
+
   function prop(props, key, fallback) {
     if (!props) return fallback;
     const keys = [key];
-    // data-* from CleverScript stubs (data-mode → also try mode)
     if (key.indexOf('data-') !== 0) {
       keys.push('data-' + key.replace(/[A-Z]/g, (m) => '-' + m.toLowerCase()));
     }
@@ -60,13 +62,124 @@
       } else {
         root.setAttribute('data-fb-welcome-ack', '1');
       }
+      syncDocFlags();
     } catch (_) {}
   }
 
   function slugFromKey(storageKey) {
-    const p = 'flashback.movieOwn.v1.';
-    if (storageKey.indexOf(p) === 0) return storageKey.slice(p.length);
+    if (storageKey.indexOf(MPREF) === 0) return storageKey.slice(MPREF.length);
     return '';
+  }
+
+  function pathSlug() {
+    try {
+      const path = (global.location && global.location.pathname) || '/';
+      if (!path || path === '/') return '';
+      let p = path.charAt(0) === '/' ? path.slice(1) : path;
+      const slash = p.indexOf('/');
+      if (slash >= 0) p = p.slice(0, slash);
+      return p;
+    } catch (_) {
+      return '';
+    }
+  }
+
+  function hasWelcome() {
+    try {
+      return !!(global.localStorage && global.localStorage.getItem && global.localStorage.getItem(WKEY) === '1');
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function hasMovie(slug) {
+    try {
+      return !!(slug && global.localStorage && global.localStorage.getItem && global.localStorage.getItem(MPREF + slug) === '1');
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function syncDocFlags() {
+    try {
+      const el = global.document.documentElement;
+      const ps = pathSlug();
+      if (hasWelcome()) el.setAttribute('data-fb-welcome-ack', '1');
+      else el.removeAttribute('data-fb-welcome-ack');
+      if (ps && hasMovie(ps)) {
+        el.setAttribute('data-fb-movie-ack', ps);
+        if (hasWelcome()) el.classList.add('fb-playback-unlocked');
+      } else {
+        el.removeAttribute('data-fb-movie-ack');
+        el.classList.remove('fb-playback-unlocked');
+      }
+    } catch (_) {}
+  }
+
+  function ensureCss() {
+    try {
+      if (global.document.getElementById('fb-own-unlock-css')) return;
+      const st = global.document.createElement('style');
+      st.id = 'fb-own-unlock-css';
+      st.textContent =
+        '.fb-media-unlock-target{display:none}' +
+        '.fb-video-controls .fb-btn{opacity:.45;pointer-events:none}' +
+        'html[data-fb-welcome-ack="1"] .fb-gate{display:none!important}' +
+        'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-media-locked{display:none!important}' +
+        'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-media-unlock-target{display:block!important}' +
+        'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-movie-ack{display:none!important}' +
+        'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-video-controls .fb-btn{opacity:1;pointer-events:auto}' +
+        'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-affirmation-native[data-fb-affirmation="title"]{display:none!important}';
+      (global.document.head || global.document.documentElement).appendChild(st);
+    } catch (_) {}
+  }
+
+  function consumeQueryAcks() {
+    try {
+      const s = (global.location && global.location.search) || '';
+      const path = (global.location && global.location.pathname) || '/';
+      let dirty = false;
+      if (s.indexOf('ownershipAck=1') >= 0) {
+        try {
+          global.localStorage.setItem(WKEY, '1');
+        } catch (_) {}
+        dirty = true;
+      }
+      const k = 'movieOwnAck=';
+      const i = s.indexOf(k);
+      if (i >= 0) {
+        let slug = s.slice(i + k.length);
+        const a = slug.indexOf('&');
+        if (a >= 0) slug = slug.slice(0, a);
+        try {
+          slug = decodeURIComponent(slug);
+        } catch (_) {}
+        if (slug) {
+          try {
+            global.localStorage.setItem(MPREF + slug, '1');
+            global.localStorage.setItem(WKEY, '1');
+          } catch (_) {}
+          dirty = true;
+        }
+      }
+      syncDocFlags();
+      if (dirty) {
+        try {
+          global.location.replace(path);
+        } catch (_) {
+          try {
+            global.history.replaceState(null, '', path);
+          } catch (_) {}
+          syncDocFlags();
+        }
+      }
+    } catch (_) {}
+  }
+
+  function bootstrapOwnership() {
+    ensureCss();
+    consumeQueryAcks();
+    syncDocFlags();
   }
 
   function buildAffirmation(props, invokeHandler, onAfterInvoke) {
@@ -84,23 +197,27 @@
       'I confirm I own a legal copy of each original film before I play its edit.',
     );
     const confirmLabel = prop(props, 'confirmLabel', 'OK — I confirm');
-    const storageKey = prop(props, 'storageKey', 'flashback.ownershipAck.v1');
+    const storageKey = prop(props, 'storageKey', WKEY);
     const confirmed = prop(props, 'confirmed', 'false') === 'true';
     const onConfirmId = propHandler(props, 'onConfirm');
     const links = parseLinks(props);
     const slugHint = slugFromKey(storageKey);
+
+    // Already acked in LS — stay hidden even if CS soft-hydrate resets confirmed.
+    if (confirmed || (storageKey === WKEY ? hasWelcome() : hasMovie(slugHint))) {
+      const hidden = global.document.createElement('div');
+      hidden.className = 'fb-gate fb-affirmation-native';
+      hidden.setAttribute('data-fb-affirmation', mode);
+      hidden.setAttribute('data-confirmed', '1');
+      hidden.style.display = 'none';
+      return hidden;
+    }
 
     const root = global.document.createElement('div');
     root.className = 'fb-gate fb-affirmation-native';
     root.setAttribute('data-fb-affirmation', mode);
     root.setAttribute('role', 'dialog');
     root.setAttribute('aria-modal', 'true');
-
-    if (confirmed) {
-      root.style.display = 'none';
-      root.setAttribute('data-confirmed', '1');
-      return root;
-    }
 
     const panel = global.document.createElement('div');
     panel.className = 'fb-gate-panel';
@@ -168,11 +285,8 @@
     }
 
     btn.addEventListener('click', doConfirm);
-    btn.addEventListener('pointerdown', (ev) => {
-      if (cb.checked) {
-        // Persist early so soft-hydrate remounts still see ack
-        persist(storageKey, mode, slugHint);
-      }
+    btn.addEventListener('pointerdown', () => {
+      if (cb.checked) persist(storageKey, mode, slugHint);
     });
     panel.appendChild(btn);
 
@@ -181,9 +295,7 @@
       foot.className = 'fb-gate-links';
       links.forEach((link, i) => {
         if (!link || !link.href) return;
-        if (i > 0) {
-          foot.appendChild(global.document.createTextNode(' · '));
-        }
+        if (i > 0) foot.appendChild(global.document.createTextNode(' · '));
         const a = global.document.createElement('a');
         a.href = String(link.href);
         a.textContent = String(link.label || link.href);
@@ -194,6 +306,29 @@
 
     root.appendChild(panel);
     return root;
+  }
+
+  function attrsToProps(el) {
+    const props = {};
+    for (let i = 0; i < el.attributes.length; i++) {
+      const a = el.attributes[i];
+      props[a.name] = a.value;
+    }
+    return props;
+  }
+
+  function upgradePlaceholders() {
+    try {
+      const nodes = global.document.querySelectorAll(
+        '[data-relay-park-native="fb-affirmation"]:not([data-fb-built="1"])',
+      );
+      for (let i = 0; i < nodes.length; i++) {
+        const host = nodes[i];
+        host.setAttribute('data-fb-built', '1');
+        const built = buildAffirmation(attrsToProps(host), null, null);
+        host.replaceChildren(built);
+      }
+    } catch (_) {}
   }
 
   function register() {
@@ -209,13 +344,8 @@
             connectedCallback() {
               if (this._fbBuilt) return;
               this._fbBuilt = true;
-              const props = {};
-              for (let i = 0; i < this.attributes.length; i++) {
-                const a = this.attributes[i];
-                props[a.name] = a.value;
-              }
               const built = buildAffirmation(
-                props,
+                attrsToProps(this),
                 () => {
                   this.dispatchEvent(new Event('confirm'));
                 },
@@ -227,14 +357,32 @@
         );
       }
     } catch (_) {}
+    upgradePlaceholders();
   }
 
-  register();
+  function boot() {
+    bootstrapOwnership();
+    register();
+    let n = 0;
+    const t = global.setInterval(() => {
+      register();
+      n += 1;
+      if (typeof global.__relayRegisterParkNative === 'function' || n > 80) {
+        global.clearInterval(t);
+      }
+    }, 50);
+  }
+
   if (typeof global.document !== 'undefined') {
     if (global.document.readyState === 'loading') {
-      global.document.addEventListener('DOMContentLoaded', register);
+      global.document.addEventListener('DOMContentLoaded', boot);
+    } else {
+      boot();
     }
+  } else {
+    register();
   }
 
   global.__fbBuildAffirmation = buildAffirmation;
+  global.__fbSyncOwnershipFlags = syncDocFlags;
 })(typeof globalThis !== 'undefined' ? globalThis : window);

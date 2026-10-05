@@ -21,6 +21,10 @@ They belong to **us**.
    Make sure to include any additional files. Sometimes OST songs or sound effects are required in the project file.
 4. Optionally make your own changes and then, render the Fan Edit!
 
+## Maintainers: seeding video on IPFS (Flashback Repository)
+
+The public site serves renders from **IPFS**, not from Git. Git only stores `.relay/assets/**/*.ipfs` stubs and `assets.manifest.json`. End-to-end ingest, pin, publish, fleet pin, and verification: **[IPFS-SEEDING.md](IPFS-SEEDING.md)**.
+
 ## Current list of completed Fan Edits:
 
 [2012 (2009) - Salvation](/FanMixes/2012%20(2009)%20-%20Salvation "2012 (2009) - Salvation")

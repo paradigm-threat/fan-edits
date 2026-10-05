@@ -198,6 +198,29 @@
     return root;
   }
 
+  function attrsToProps(el) {
+    const props = {};
+    for (let i = 0; i < el.attributes.length; i++) {
+      const a = el.attributes[i];
+      props[a.name] = a.value;
+    }
+    return props;
+  }
+
+  function upgradePlaceholders() {
+    try {
+      const nodes = global.document.querySelectorAll(
+        '[data-relay-park-native="fb-now-showing"]:not([data-fb-built="1"])',
+      );
+      for (let i = 0; i < nodes.length; i++) {
+        const host = nodes[i];
+        host.setAttribute('data-fb-built', '1');
+        const built = buildNowShowing(attrsToProps(host));
+        host.replaceChildren(built);
+      }
+    } catch (_) {}
+  }
+
   function register() {
     if (typeof global.__relayRegisterParkNative === 'function') {
       global.__relayRegisterParkNative('fb-now-showing', buildNowShowing);
@@ -210,19 +233,36 @@
             connectedCallback() {
               if (this._fbBuilt) return;
               this._fbBuilt = true;
-              const props = {};
-              for (let i = 0; i < this.attributes.length; i++) {
-                const a = this.attributes[i];
-                props[a.name] = a.value;
-              }
-              const built = buildNowShowing(props);
+              const built = buildNowShowing(attrsToProps(this));
               this.replaceChildren(built);
             }
           },
         );
       }
     } catch (_) {}
+    upgradePlaceholders();
   }
-  register();
+
+  function boot() {
+    register();
+    let n = 0;
+    const t = global.setInterval(() => {
+      register();
+      n += 1;
+      if (typeof global.__relayRegisterParkNative === 'function' || n > 80) {
+        global.clearInterval(t);
+      }
+    }, 50);
+  }
+
+  if (typeof global.document !== 'undefined') {
+    if (global.document.readyState === 'loading') {
+      global.document.addEventListener('DOMContentLoaded', boot);
+    } else {
+      boot();
+    }
+  } else {
+    register();
+  }
   global.__fbBuildNowShowing = buildNowShowing;
 })(typeof globalThis !== 'undefined' ? globalThis : window);
