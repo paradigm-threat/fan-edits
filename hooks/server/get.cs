@@ -16,7 +16,7 @@ function wantsSiteShell(ctx) {
 }
 
 // CleverScript SSR strips <script> from client JSX; inject after SSR so the browser
-// can persist ?ownershipAck=1 and hide the gate without relying on hydrate handlers.
+// can persist ?ownershipAck=1 / ?movieOwnAck=<slug> and hide overlays without hydrate.
 function injectOwnershipGateScript(ssr) {
   try {
     if (ssr === null) {
@@ -26,11 +26,11 @@ function injectOwnershipGateScript(ssr) {
     if (typeof html !== 'string') {
       return ssr;
     }
-    if (html.indexOf('flashback.ownershipAck.v1') >= 0) {
+    if (html.indexOf('flashback.movieOwn.v1.') >= 0) {
       return ssr;
     }
     var snip =
-      '<script>(function(){try{var KEY="flashback.ownershipAck.v1";var s=(location&&location.search)||"";var ack=false;if(s.indexOf("ownershipAck=1")>=0){ack=true;}else if(localStorage&&localStorage.getItem&&localStorage.getItem(KEY)==="1"){ack=true;}if(ack!==true){return;}if(localStorage&&localStorage.setItem){localStorage.setItem(KEY,"1");}var g=document.querySelector(".fb-gate");if(g){if(g.remove){g.remove();}else if(g.parentNode){g.parentNode.removeChild(g);}}if(s.indexOf("ownershipAck=1")>=0&&history&&history.replaceState){history.replaceState(null,"",(location&&location.pathname)||"/");}}catch(e){}})();</script>';
+      '<script>(function(){try{var WKEY="flashback.ownershipAck.v1";var MPREF="flashback.movieOwn.v1.";var s=(location&&location.search)||"";var path=(location&&location.pathname)||"/";function param(name){var k=name+"=";var i=s.indexOf(k);if(i<0){return"";}var r=s.slice(i+k.length);var a=r.indexOf("&");if(a>=0){r=r.slice(0,a);}return r;}var own=false;if(s.indexOf("ownershipAck=1")>=0){own=true;}else if(localStorage&&localStorage.getItem&&localStorage.getItem(WKEY)==="1"){own=true;}if(own===true&&localStorage&&localStorage.setItem){localStorage.setItem(WKEY,"1");}var g=document.querySelector(".fb-gate");if(own===true&&g){if(g.remove){g.remove();}else if(g.parentNode){g.parentNode.removeChild(g);}}var slug=param("movieOwnAck");if(slug&&slug.length>0){try{if(typeof decodeURIComponent==="function"){slug=decodeURIComponent(slug);}}catch(e0){}if(localStorage&&localStorage.setItem){localStorage.setItem(MPREF+slug,"1");}var m=document.querySelector(".fb-movie-ack");if(m){if(m.remove){m.remove();}else if(m.parentNode){m.parentNode.removeChild(m);}}}if((s.indexOf("ownershipAck=1")>=0||s.indexOf("movieOwnAck=")>=0)&&history&&history.replaceState){history.replaceState(null,"",path);}}catch(e){}})();</script>';
     var needle = '<script type="application/json" id="relay-embed-config">';
     if (html.indexOf(needle) < 0) {
       return ssr;
@@ -40,7 +40,6 @@ function injectOwnershipGateScript(ssr) {
       return ssr;
     }
     var out = parts[0] + snip + needle + parts[1];
-    // If split produced more than 2 parts, rejoin the rest.
     if (parts.length > 2) {
       var rest = '';
       for (var i = 2; i < parts.length; i++) {

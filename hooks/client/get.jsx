@@ -7,7 +7,7 @@ import { MarkdownRenderer } from '@clevertree/markdown'
 import manifest from '@hooks'
 import { TicketIcon, PlayChevron, MarqueeBulb } from 'hooks/client/components/Icons.jsx'
 import OwnershipGate, { hasOwnershipAck, ensureOwnershipAckFromBrowser } from 'hooks/client/components/OwnershipGate.jsx'
-import MovieOwnAck, { hasMovieOwnAck } from 'hooks/client/components/MovieOwnAck.jsx'
+import MovieOwnAck, { hasMovieOwnAck, ensureMovieOwnAckFromBrowser } from 'hooks/client/components/MovieOwnAck.jsx'
 import RelayMedia from 'hooks/client/components/RelayMedia.jsx'
 import RecentSlideshow from 'hooks/client/components/RecentSlideshow.jsx'
 
@@ -234,6 +234,9 @@ export default function FlashbackApp() {
   ensureOwnershipAckFromBrowser()
   const route = initialRoute()
   const kind = routeKind(route)
+  if (kind.kind === 'movie' && kind.slug) {
+    ensureMovieOwnAckFromBrowser(kind.slug)
+  }
 
   let projects = []
   try {
@@ -407,18 +410,17 @@ export default function FlashbackApp() {
                 onPause={() => { setPlaying(false) }}
               />
             ) : (
-              <div className="fb-media fb-media-locked">
+              <div className="fb-media fb-media-locked" aria-hidden="true">
                 <p className="fb-media-msg">
-                  {ack !== true
-                    ? 'Confirm ownership on the welcome screen to continue.'
-                    : 'One quick check on this title, then Play.'}
+                  {"Playback unlocks after you confirm ownership below."}
                 </p>
               </div>
             )}
-            {ack === true && movieAck !== true ? (
+            {movieAck !== true ? (
               <MovieOwnAck
                 slug={selected.slug}
                 title={selected.title}
+                needWelcome={ack !== true}
                 onAck={() => {
                   setMovieAck(true)
                 }}
@@ -490,7 +492,7 @@ export default function FlashbackApp() {
           <div className="fb-screen-glow" />
           <SeatRows />
         </div>
-        {hasOwnershipAck() !== true ? (
+        {hasOwnershipAck() !== true && kind.kind !== 'movie' ? (
           <OwnershipGate
             onAck={() => {
               setAck(true)
