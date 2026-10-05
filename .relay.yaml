@@ -1,4 +1,8 @@
-# fan-edits — thin IPFS catalog + desktop/web client shell
+# Flashback Repository — thin IPFS catalog + CleverScript theater shell
+name: "Flashback Repository"
+version: "1.0.0"
+description: "Personal fan-edit library. Own the original. Thin IPFS media on Relay."
+canonical: "https://flashbackrepository.org/"
 client:
   hooks:
     get:
@@ -11,6 +15,8 @@ server:
       path: hooks/server/validation.cs
     pre-receive:
       path: hooks/server/validation.cs
+  tls:
+    plugin: park
 git:
   branchRules:
     default:

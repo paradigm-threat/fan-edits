@@ -1,4 +1,13 @@
 {
   "schema": "relay.assets-manifest.v1",
-  "assets": {}
+  "assets": [
+    {
+      "id": "FanMixes_Congo (1995) - Incel_Congo (1995) - Incel Edition.mkv",
+      "path": "FanMixes/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv",
+      "ipfs": "bafybeigyt3pa4sztvncidn7avtkklb5si4am4ufbvtp5wptrn5lhu7uqc4",
+      "contentType": "video/x-matroska",
+      "sha256": "253c4cd5114b067edcf47419617be218560d3e9447735e8c6676d809376d0dd1",
+      "bytes": 1056477295
+    }
+  ]
 }

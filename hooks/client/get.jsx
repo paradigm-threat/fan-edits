@@ -1,9 +1,52 @@
 /**
- * fan-edits library — index.json drives nav; each slug is a viewable project page.
+ * Flashback Repository — theater shell (SSR + hydrate).
  */
 import React, { useState, useEffect } from 'react'
+import StyleContext from '@clevertree/style'
 import { MarkdownRenderer } from '@clevertree/markdown'
-import { VideoPlayer } from '@clevertree/video'
+import manifest from '@hooks'
+import { TicketIcon, PlayChevron, MarqueeBulb } from 'hooks/client/components/Icons.jsx'
+import OwnershipGate, { hasOwnershipAck } from 'hooks/client/components/OwnershipGate.jsx'
+import MovieOwnAck, { hasMovieOwnAck } from 'hooks/client/components/MovieOwnAck.jsx'
+import RelayMedia from 'hooks/client/components/RelayMedia.jsx'
+
+function str(v) {
+  if (v === null) return ''
+  if (typeof v === 'boolean') {
+    if (v) return 'true'
+    return 'false'
+  }
+  if (typeof v === 'number') return '' + v
+  if (typeof v === 'string') return v
+  return ''
+}
+
+function normalizeRoute(raw) {
+  let t = str(raw).trim()
+  if (t.length === 0) return '/'
+  if (t.charAt(0) !== '/') t = '/' + t
+  // strip query
+  const q = t.indexOf('?')
+  if (q >= 0) t = t.slice(0, q)
+  if (t === '/index.md' || t === '/index.html') return '/'
+  // trailing slash
+  if (t.length > 1 && t.charAt(t.length - 1) === '/') t = t.slice(0, t.length - 1)
+  return t
+}
+
+function initialRoute() {
+  try {
+    if (manifest.relayInitialPath && typeof manifest.relayInitialPath === 'string') {
+      return normalizeRoute(manifest.relayInitialPath)
+    }
+  } catch (e) {}
+  try {
+    if (typeof location !== 'undefined' && location.pathname) {
+      return normalizeRoute(location.pathname)
+    }
+  } catch (e2) {}
+  return '/'
+}
 
 function mediaSrc(project) {
   if (!project || !project.media) return ''
@@ -12,15 +55,13 @@ function mediaSrc(project) {
 
 function subtitleTracks(project) {
   if (!project || !project.subtitles) return []
-  return project.subtitles.map((t) => {
+  return project.subtitles.map(function (t) {
     const track = {
       src: t.src.startsWith('/') ? t.src : '/' + t.src,
       label: t.label || 'Subtitles',
       lang: t.lang || 'en',
     }
-    if (t.default === true) {
-      track.default = true
-    }
+    if (t.default === true) track.default = true
     return track
   })
 }
@@ -33,162 +74,346 @@ function findProject(projects, slug) {
 }
 
 function projectsInCategory(projects, category) {
-  return projects.filter((p) => p.category === category)
+  return projects.filter(function (p) {
+    return p.category === category
+  })
 }
 
-function navItem(p, slug, setSlug) {
-  const active = slug === p.slug
+function fetchText(path) {
+  try {
+    const res = fetch('/' + path.replace(/^\//, ''))
+    if (res && res.ok === true && res.text) return res.text
+  } catch (e) {}
+  return ''
+}
+
+function isNarrowViewport() {
+  try {
+    if (typeof window === 'undefined') return true
+    if (!window.matchMedia) return window.innerWidth < 900
+    return window.matchMedia('(max-width: 900px)').matches === true
+  } catch (e) {
+    return true
+  }
+}
+
+function requestFs(el) {
+  try {
+    if (!el) return
+    if (el.requestFullscreen) el.requestFullscreen()
+    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen()
+    else if (el.webkitEnterFullscreen) el.webkitEnterFullscreen()
+  } catch (e) {}
+}
+
+function routeKind(route) {
+  if (route === '/' || route === '') return { kind: 'home' }
+  if (route === '/legal') return { kind: 'md', file: 'content/legal.md', title: 'Ownership policy' }
+  if (route === '/terms') return { kind: 'md', file: 'content/terms.md', title: 'Terms' }
+  if (route === '/motivation' || route === '/why') {
+    return { kind: 'md', file: 'content/motivation.md', title: 'Why we’re doing this' }
+  }
+  // /slug or /movie/slug
+  let slug = route
+  if (slug.charAt(0) === '/') slug = slug.slice(1)
+  if (slug.indexOf('movie/') === 0) slug = slug.slice('movie/'.length)
+  if (slug.indexOf('/') >= 0) return { kind: 'home' }
+  return { kind: 'movie', slug: slug }
+}
+
+function navigate(path) {
+  const p = normalizeRoute(path)
+  try {
+    if (typeof location !== 'undefined') {
+      location.href = p
+      return
+    }
+  } catch (e) {}
+}
+
+function SeatRows() {
   return (
-    <li key={p.slug}>
-      <button
-        className={active ? 'nav-link nav-link-active' : 'nav-link'}
-        onClick={() => setSlug(p.slug)}
-      >
-        {p.title}
-      </button>
-    </li>
+    <div className="fb-seats" aria-hidden="true">
+      <div className="fb-seat-row fb-seat-row-1" />
+      <div className="fb-seat-row fb-seat-row-2" />
+      <div className="fb-seat-row fb-seat-row-3" />
+    </div>
   )
 }
 
-export default function FanEditsLibrary() {
-  const [projects, setProjects] = useState([])
-  const [slug, setSlug] = useState('')
-  const [readme, setReadme] = useState('')
-  const [readmeError, setReadmeError] = useState('')
-  const [playing, setPlaying] = useState(false)
-  const [commandSeq, setCommandSeq] = useState(0)
-  const [command, setCommand] = useState(0)
+function MarqueeLights() {
+  const bulbs = []
+  for (let i = 0; i < 16; i++) {
+    bulbs.push(<MarqueeBulb key={'b' + i} className={'fb-bulb fb-bulb-' + (i % 4)} />)
+  }
+  return <div className="fb-marquee-lights">{bulbs}</div>
+}
 
-  useEffect(() => {
+export default function FlashbackApp() {
+  const route = initialRoute()
+  const kind = routeKind(route)
+
+  const projectsState = useState([])
+  const projects = projectsState[0]
+  const setProjects = projectsState[1]
+
+  const readmeState = useState('')
+  const readme = readmeState[0]
+  const setReadme = readmeState[1]
+
+  const mdState = useState('')
+  const md = mdState[0]
+  const setMd = mdState[1]
+
+  const homeState = useState('')
+  const homeMd = homeState[0]
+  const setHomeMd = homeState[1]
+
+  const playingState = useState(false)
+  const playing = playingState[0]
+  const setPlaying = playingState[1]
+
+  const cmdState = useState(0)
+  const command = cmdState[0]
+  const setCommand = cmdState[1]
+
+  const seqState = useState(0)
+  const commandSeq = seqState[0]
+  const setCommandSeq = seqState[1]
+
+  const ackState = useState(hasOwnershipAck())
+  const ack = ackState[0]
+  const setAck = ackState[1]
+
+  const movieAckState = useState(false)
+  const movieAck = movieAckState[0]
+  const setMovieAck = movieAckState[1]
+
+  useEffect(function () {
+    if (kind.kind === 'movie' && kind.slug) {
+      setMovieAck(hasMovieOwnAck(kind.slug) === true)
+    } else {
+      setMovieAck(false)
+    }
+  }, [kind.kind, kind.slug])
+
+  useEffect(function () {
     const res = fetch('/index.json')
     if (res && res.ok === true && res.text) {
       try {
         const data = JSON.parse(res.text)
-        if (data && data.projects) {
-          setProjects(data.projects)
-        }
+        if (data && data.projects) setProjects(data.projects)
       } catch (e) {}
+    }
+    if (kind.kind === 'home') {
+      setHomeMd(fetchText('content/home.md'))
+    }
+    if (kind.kind === 'md') {
+      setMd(fetchText(kind.file))
     }
   }, [])
 
-  useEffect(() => {
-    if (!slug) {
+  useEffect(function () {
+    if (kind.kind !== 'movie') {
       setReadme('')
-      setReadmeError('')
-      setPlaying(false)
       return
     }
-    const project = findProject(projects, slug)
+    const project = findProject(projects, kind.slug)
     if (!project) {
-      setReadmeError('Project not found')
       setReadme('')
       return
     }
-    const path = project.path + '/README.md'
-    const res = fetch('/' + path)
-    if (res && res.ok === true && res.text) {
-      setReadme(res.text)
-      setReadmeError('')
-    } else {
-      let st = 0
-      if (res && res.status) st = res.status
-      setReadmeError('Could not load README (HTTP ' + st + ')')
-      setReadme('')
-    }
-  }, [slug, projects])
+    setReadme(fetchText(project.path + '/README.md'))
+  }, [projects, kind.kind, kind.slug])
 
-  const selected = slug ? findProject(projects, slug) : null
+  const selected = kind.kind === 'movie' ? findProject(projects, kind.slug) : null
   const fanMixes = projectsInCategory(projects, 'FanMixes')
   const kidFriendly = projectsInCategory(projects, 'KidFriendly')
 
-  function sendPlaybackCommand(cmd) {
-    setCommand(cmd)
+  function sendPlay() {
+    if (ack !== true) return
+    if (movieAck !== true) return
+    setCommand(1)
     setCommandSeq(commandSeq + 1)
-    if (cmd === 1) setPlaying(true)
-    if (cmd === 2) setPlaying(false)
+    setPlaying(true)
+    if (isNarrowViewport()) {
+      try {
+        const root = document.querySelector('.fb-media-ready') || document.querySelector('.fb-video-panel')
+        requestFs(root)
+      } catch (e) {}
+    }
+  }
+
+  function sendPause() {
+    setCommand(2)
+    setCommandSeq(commandSeq + 1)
+    setPlaying(false)
+  }
+
+  function titleCard(p) {
+    const status = p.status || 'wip'
+    return (
+      <button
+        key={p.slug}
+        type="button"
+        className={'fb-title-card fb-status-' + status}
+        onClick={function () {
+          navigate('/' + p.slug)
+        }}
+      >
+        <span className="fb-title-card-mark">
+          <PlayChevron />
+        </span>
+        <span className="fb-title-card-body">
+          <span className="fb-title-card-name">{p.title}</span>
+          {p.blurb ? <span className="fb-title-card-blurb">{p.blurb}</span> : null}
+          <span className="fb-title-card-meta">{status}</span>
+        </span>
+      </button>
+    )
+  }
+
+  let main = null
+  if (kind.kind === 'md') {
+    main = (
+      <article className="fb-doc">
+        <MarkdownRenderer content={md || '# Loading…'} />
+      </article>
+    )
+  } else if (kind.kind === 'movie') {
+    main = (
+      <div className="fb-movie">
+        <button type="button" className="fb-back" onClick={function () { navigate('/') }}>
+          ← Library
+        </button>
+        <h1 className="fb-movie-title">{selected ? selected.title : kind.slug}</h1>
+        {selected && selected.blurb ? <p className="fb-movie-blurb">{selected.blurb}</p> : null}
+        {selected && selected.media ? (
+          <div className="fb-video-panel">
+            {ack === true && movieAck === true ? (
+              <RelayMedia
+                src={mediaSrc(selected)}
+                subtitles={subtitleTracks(selected)}
+                playing={playing}
+                command={command}
+                commandSeq={commandSeq}
+                onPlay={function () { setPlaying(true) }}
+                onPause={function () { setPlaying(false) }}
+              />
+            ) : (
+              <div className="fb-media fb-media-locked">
+                <p className="fb-media-msg">
+                  {ack !== true
+                    ? 'Confirm ownership on the welcome screen to continue.'
+                    : 'Check the box below to unlock this title.'}
+                </p>
+              </div>
+            )}
+            {ack === true ? (
+              <MovieOwnAck
+                slug={selected.slug}
+                title={selected.title}
+                onAck={function () {
+                  setMovieAck(true)
+                }}
+              />
+            ) : null}
+            <div className="fb-video-controls">
+              <button
+                type="button"
+                className="fb-btn fb-btn-primary"
+                onClick={sendPlay}
+                disabled={ack !== true || movieAck !== true}
+              >
+                <PlayChevron className="fb-btn-icon" /> Play
+              </button>
+              <button
+                type="button"
+                className="fb-btn"
+                onClick={sendPause}
+                disabled={ack !== true || movieAck !== true}
+              >
+                Pause
+              </button>
+            </div>
+          </div>
+        ) : (
+          <p className="fb-movie-nomedia">Feature media is not catalogued yet for this title.</p>
+        )}
+        <div className="fb-readme">
+          <MarkdownRenderer content={readme || '# Loading…'} />
+        </div>
+      </div>
+    )
+  } else {
+    main = (
+      <div className="fb-home">
+        <div className="fb-home-copy">
+          <MarkdownRenderer content={homeMd || '# Welcome'} />
+        </div>
+        <section className="fb-catalog">
+          <h2 className="fb-section-title">FanMixes</h2>
+          <div className="fb-title-grid">{fanMixes.map(titleCard)}</div>
+          <h2 className="fb-section-title">KidFriendly</h2>
+          <div className="fb-title-grid">{kidFriendly.map(titleCard)}</div>
+        </section>
+      </div>
+    )
   }
 
   return (
-    <div className="library-app">
-      <header className="library-header">
-        <div className="library-header-brand">
-          <span className="library-header-icon">Play</span>
-          <div>
-            <h1 className="library-header-title">Fan Edits</h1>
-            <p className="library-header-tagline">Family-safe cuts and fan mixes</p>
-          </div>
+    <StyleContext src="hooks/client/theme.yaml">
+      <div className="fb-app">
+        <style>
+          {'@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}@keyframes fb-bulb{0%,100%{opacity:0.4}50%{opacity:1}}@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}.fb-bulb-0{animation:fb-bulb 2.2s ease-in-out infinite}.fb-bulb-1{animation:fb-bulb 2.2s ease-in-out 0.4s infinite}.fb-bulb-2{animation:fb-bulb 2.2s ease-in-out 0.8s infinite}.fb-bulb-3{animation:fb-bulb 2.2s ease-in-out 1.2s infinite}}@media (prefers-reduced-motion:reduce){.fb-screen-glow,.fb-bulb{animation:none!important}}'}
+        </style>
+        <div className="fb-backdrop" aria-hidden="true">
+          <div className="fb-curtain fb-curtain-left" />
+          <div className="fb-curtain fb-curtain-right" />
+          <div className="fb-screen-glow" />
+          <SeatRows />
         </div>
-        <p className="library-header-meta">{projects.length} titles</p>
-      </header>
-      <div className="library-body">
-        <aside className="library-nav">
-          <button
-            className={slug === '' ? 'nav-link nav-link-active' : 'nav-link'}
-            onClick={() => setSlug('')}
-          >
-            Library home
-          </button>
-          <h3 className="nav-heading">FanMixes</h3>
-          <ul className="nav-list">{fanMixes.map((p) => navItem(p, slug, setSlug))}</ul>
-          <h3 className="nav-heading">KidFriendly</h3>
-          <ul className="nav-list">{kidFriendly.map((p) => navItem(p, slug, setSlug))}</ul>
-        </aside>
-        <main className="library-main">
-          {!slug ? (
-            <div className="library-home">
-              <h2>Family-safe and fan-mix projects</h2>
-              <p className="catalog-lead">
-                Select a project in the sidebar. Source media lives in the checkout (gitignored);
-                published assets resolve via IPFS stubs in git.
-              </p>
-              <p>{projects.length} projects in index.json</p>
-            </div>
-          ) : (
-            <div className="project-page">
-              <h2>{selected ? selected.title : slug}</h2>
-              {selected && selected.reel ? (
-                <p className="project-meta">Reel: {selected.reel}</p>
-              ) : null}
-              {selected && selected.media ? (
-                <div className="video-panel">
-                  <VideoPlayer
-                    src={mediaSrc(selected)}
-                    controls={true}
-                    playing={playing}
-                    command={command}
-                    commandSeq={commandSeq}
-                    subtitles={subtitleTracks(selected)}
-                    onPlay={() => setPlaying(true)}
-                    onPause={() => setPlaying(false)}
-                  />
-                  <div className="video-controls">
-                    <button className="nav-btn" onClick={() => sendPlaybackCommand(1)}>
-                      Play
-                    </button>
-                    <button className="nav-btn" onClick={() => sendPlaybackCommand(2)}>
-                      Pause
-                    </button>
-                  </div>
-                </div>
-              ) : null}
-              <div className="readme-panel">
-                <MarkdownRenderer
-                  content={
-                    readmeError
-                      ? '# Error\n\n' + readmeError
-                      : readme || '# Loading…'
-                  }
-                />
-              </div>
-              <p className="phase-note">Phase 3: native timeline editor for this project.</p>
-            </div>
-          )}
-        </main>
+        <OwnershipGate
+          onAck={function () {
+            setAck(true)
+          }}
+        />
+        <header className="fb-header">
+          <a className="fb-brand" href="/" onClick={function (e) {
+            try { e.preventDefault() } catch (err) {}
+            navigate('/')
+          }}>
+            <TicketIcon />
+            <span className="fb-brand-text">
+              <span className="fb-brand-name">Flashback Repository</span>
+              <span className="fb-brand-tag">Own the original · then improve it</span>
+            </span>
+          </a>
+          <nav className="fb-nav">
+            <a href="/" onClick={function (e) { try { e.preventDefault() } catch (err) {} navigate('/') }}>Library</a>
+            <a href="/motivation" onClick={function (e) { try { e.preventDefault() } catch (err) {} navigate('/motivation') }}>Why</a>
+            <a href="/legal" onClick={function (e) { try { e.preventDefault() } catch (err) {} navigate('/legal') }}>Legal</a>
+          </nav>
+        </header>
+        <div className="fb-marquee">
+          <MarqueeLights />
+          <p className="fb-marquee-text">
+            {projects.length} titles · personal fan edits · thin IPFS
+          </p>
+          <MarqueeLights />
+        </div>
+        <main className="fb-main">{main}</main>
+        <footer className="fb-footer">
+          <span className="fb-footer-brand">Flashback Repository</span>
+          <span className="fb-footer-links">
+            <a href="/motivation">Why we’re doing this</a>
+            {' · '}
+            <a href="/legal">Ownership</a>
+            {' · '}
+            <a href="/terms">Terms</a>
+          </span>
+        </footer>
       </div>
-      <footer className="library-footer">
-        <span className="library-footer-brand">Relay video library</span>
-        <span className="library-footer-note">CleverScript UI - shared theme across web and desktop</span>
-      </footer>
-    </div>
+    </StyleContext>
   )
 }

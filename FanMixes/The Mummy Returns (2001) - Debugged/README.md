@@ -6,6 +6,17 @@ Kid-friendlier cut to match *The Mummy (1999) - Debugged*. This film has no SRT-
 
 - First pygmy overrun after “Where’s the boy?”
 - Later pygmy eat/chase beat before “Thank God for that”
+- Credits / extra music beds use metal covers of *Zombies Ate My Neighbors* cues (see below)
+
+## Extra audio
+
+Metal covers by **Larme Genie**, from *[Zombies Ate My Neighbors (The Metal Album)](https://music.youtube.com/playlist?list=OLAK5uy_mBWB5DWMPQXWO_uNHUJW4C47nFHuD97j00)* (2023). Original SNES score is Konami / *Zombies Ate My Neighbors*.
+
+Cues in `music/` (on the timeline):
+
+- *Pyramid of Fear (Metal Version)*
+- *Zombie Panic (Metal Version)*
+- *Evening of the Undead (Metal Version)*
 
 ## Source media (not in git)
 
@@ -47,6 +58,11 @@ bash "FanMixes/The Mummy Returns (2001) - Debugged/generate-mummy-returns-debugg
 
 No `--snap`. QC silent kills and any beetle inserts the SRT missed.
 
+```bash
+python3 scripts/check_kdenlive_sync.py \
+  --project "FanMixes/The Mummy Returns (2001) - Debugged"
+```
+
 ## Render
 
 Copy the rip to local disk first, then:
@@ -65,7 +81,10 @@ bash scripts/ensure-public-permissions.sh "FanMixes/The Mummy Returns (2001) - D
 
 ## Changelog
 
-- 2026-09-24 — AU-062n: twelve-tribes beat card + credits (NSA unity / no bad Arabs; Q2 closed).
+- 2026-09-27 — `seams.mkv` rebuilt from the finished NAS render (output join times + credits from 01:53), not the 4K rip.
+- 2026-09-26 — QC reel is `seams.mkv` (joins + credits from 01:53). Not the feature.
+- 2026-09-26 — Credited Larme Genie metal ZAMN covers in `music/`.
+- 2026-09-25 — Proxy was +1 frame vs the 4K HEVC (same as Mummy 1). See PLAN.md.
 - 2026-09-23 — Dual English tracks; Silvestri/Avengers off default.
 - 2026-09-19 — Replaced wrong SRT (yify-116022, ~2s early) with 490472 matched to embedded eng softsub.
 - 2026-09-19 — Blank cloned from Mummy Debugged; 4K YTS path + embedded SRT.

@@ -2,12 +2,20 @@
   "entry": "hooks/client/get.jsx",
   "cases": [
     {
-      "name": "library-shell",
-      "assertText": ["Fan Edits", "FanMixes", "KidFriendly", "Library home"]
+      "name": "flashback-shell",
+      "assertText": ["Flashback Repository", "Own the original", "FanMixes", "KidFriendly"]
     },
     {
       "name": "catalog-index",
       "assertText": ["Fried Green Tomatoes", "Salvation"]
+    },
+    {
+      "name": "ownership-gate",
+      "assertText": ["I confirm I own a legal copy"]
+    },
+    {
+      "name": "motivation-link",
+      "assertText": ["Why"]
     }
   ]
 }

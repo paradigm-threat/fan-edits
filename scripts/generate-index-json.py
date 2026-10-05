@@ -9,6 +9,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "index.json"
+MANIFEST = ROOT / "assets.manifest.json"
+ASSETS_DIR = ROOT / ".relay" / "assets"
 
 
 def slugify(name: str) -> str:
@@ -28,6 +30,48 @@ def title_from_readme(readme: Path, fallback: str) -> str:
     return fallback
 
 
+def blurb_from_readme(readme: Path) -> str:
+    try:
+        text = readme.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return ""
+    lines = text.splitlines()
+    # Prefer ## Changes / ## Why / ## Goals lead-in
+    for i, line in enumerate(lines):
+        if re.match(r"^##\s+(Changes|Why|Goals|About)\b", line, re.I):
+            for j in range(i + 1, min(i + 12, len(lines))):
+                t = lines[j].strip()
+                if not t or t.startswith("#") or t.startswith("```") or t.startswith("|"):
+                    continue
+                if t.startswith("- ") or t.startswith("* "):
+                    t = t[2:].strip()
+                return t[:280]
+    # First non-heading paragraph after H1
+    past_title = False
+    buf: list[str] = []
+    for line in lines:
+        s = line.strip()
+        if s.startswith("# "):
+            past_title = True
+            continue
+        if not past_title:
+            continue
+        if s.startswith("#"):
+            if buf:
+                break
+            continue
+        if not s:
+            if buf:
+                break
+            continue
+        if s.startswith("```") or s.startswith("|") or s.startswith("!["):
+            continue
+        buf.append(s)
+        if len(" ".join(buf)) > 200:
+            break
+    return " ".join(buf)[:280]
+
+
 def git_readmes() -> list[str]:
     proc = subprocess.run(
         ["git", "ls-files", "FanMixes/*/README.md", "KidFriendly/*/README.md"],
@@ -39,25 +83,136 @@ def git_readmes() -> list[str]:
     return [p for p in proc.stdout.splitlines() if p.strip()]
 
 
+def load_manifest_paths() -> set[str]:
+    paths: set[str] = set()
+    if MANIFEST.is_file():
+        try:
+            data = json.loads(MANIFEST.read_text(encoding="utf-8"))
+            assets = data.get("assets") or []
+            if isinstance(assets, dict):
+                for key, val in assets.items():
+                    if isinstance(val, dict) and val.get("path"):
+                        paths.add(str(val["path"]).lstrip("/"))
+                    else:
+                        paths.add(str(key).lstrip("/"))
+            elif isinstance(assets, list):
+                for val in assets:
+                    if isinstance(val, dict) and val.get("path"):
+                        paths.add(str(val["path"]).lstrip("/"))
+        except (OSError, json.JSONDecodeError):
+            pass
+    if ASSETS_DIR.is_dir():
+        for p in ASSETS_DIR.rglob("*.ipfs"):
+            rel = p.relative_to(ASSETS_DIR).as_posix()
+            if rel.endswith(".ipfs"):
+                paths.add(rel[: -len(".ipfs")])
+    return paths
+
+
+def find_media(folder: Path, folder_rel: str, manifest_paths: set[str]) -> str | None:
+    """Return media basename relative to project folder if stub/manifest exists or local file present."""
+    candidates: list[str] = []
+    # Prefer conventional names
+    for p in sorted(folder.iterdir()) if folder.is_dir() else []:
+        if p.suffix.lower() in (".mkv", ".mp4", ".webm") and p.is_file():
+            # skip seams / preview
+            name = p.name.lower()
+            if "seam" in name or "preview" in name or "proxy" in name or "edit-1080" in name:
+                continue
+            candidates.append(p.name)
+    # Also check manifest for paths under this project
+    prefix = folder_rel.rstrip("/") + "/"
+    for mp in manifest_paths:
+        if mp.startswith(prefix):
+            rest = mp[len(prefix) :]
+            if "/" not in rest and rest.lower().endswith((".mkv", ".mp4", ".webm")):
+                if rest not in candidates:
+                    candidates.insert(0, rest)
+    if not candidates:
+        return None
+    # Prefer non-final naming quirks: *Edition*, *Debugged*, exact folder-ish
+    for c in candidates:
+        cl = c.lower()
+        if "final" in cl or "edition" in cl or "debugged" in cl or "deanna" in cl:
+            return c
+    return candidates[0]
+
+
+def find_subtitles(folder: Path, folder_rel: str) -> list[dict]:
+    subs_dir = folder / "subs"
+    out: list[dict] = []
+    if not subs_dir.is_dir():
+        return out
+    for p in sorted(subs_dir.glob("*.srt")):
+        label = "English"
+        default = False
+        name = p.name.lower()
+        if "enhanced" in name or "citation" in name:
+            label = "Citations"
+        elif "english" in name:
+            label = "English"
+            default = True
+        entry = {
+            "src": f"{folder_rel}/subs/{p.name}",
+            "label": label,
+            "lang": "en",
+        }
+        if default:
+            entry["default"] = True
+        out.append(entry)
+    if out and not any(t.get("default") for t in out):
+        out[0]["default"] = True
+    return out
+
+
+def status_for(folder: Path, media: str | None, readme: Path) -> str:
+    if media:
+        # stub or local file present
+        stub = ASSETS_DIR / folder.relative_to(ROOT).as_posix() / f"{media}.ipfs"
+        local = folder / media
+        if stub.is_file() or (local.is_file() and local.stat().st_size > 50_000_000):
+            return "ready"
+        return "needs-seed"
+    try:
+        text = readme.read_text(encoding="utf-8", errors="replace").lower()
+    except OSError:
+        text = ""
+    if "not rendered" in text or "wip" in text or "work in progress" in text:
+        return "wip"
+    return "wip"
+
+
 def main() -> None:
+    manifest_paths = load_manifest_paths()
     projects = []
     for rel in sorted(git_readmes()):
         path = Path(rel)
         category = path.parts[0]
-        folder = path.parent
-        folder_rel = folder.as_posix()
-        slug = slugify(folder.name)
-        title = title_from_readme(ROOT / rel, folder.name)
-        reel_candidates = list(folder.glob("*.reel"))
+        folder = ROOT / path.parent
+        folder_rel = path.parent.as_posix()
+        slug = slugify(path.parent.name)
+        title = title_from_readme(ROOT / rel, path.parent.name)
+        blurb = blurb_from_readme(ROOT / rel)
+        reel_candidates = list(folder.glob("*.reel")) if folder.is_dir() else []
         reel = reel_candidates[0].as_posix() if len(reel_candidates) == 1 else None
-        entry = {
+        media = find_media(folder, folder_rel, manifest_paths)
+        subs = find_subtitles(folder, folder_rel)
+        status = status_for(folder, media, ROOT / rel)
+        entry: dict = {
             "slug": slug,
             "category": category,
             "path": folder_rel,
             "title": title,
+            "status": status,
         }
+        if blurb:
+            entry["blurb"] = blurb
         if reel:
             entry["reel"] = reel
+        if media:
+            entry["media"] = media
+        if subs:
+            entry["subtitles"] = subs
         projects.append(entry)
 
     doc = {"projects": projects}

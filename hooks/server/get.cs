@@ -1,16 +1,39 @@
 import { fetchIpfsBytesFromGetContext, resolveIpfsFromGetContext } from '@relay/ipfs';
 import { optimizeRasterFromGetContext, queryWidth } from '@relay/image';
+import { ssrClientHookFromGetContext } from '@relay/ssr';
+
+// Parked site shell + thin IPFS media for Flashback Repository.
+function wantsSiteShell(ctx) {
+  try {
+    if (ctx.embedMarkdownRequest === true) return true;
+  } catch (e) {}
+  try {
+    if (ctx.siteShellRequest === true) return true;
+  } catch (e) {}
+  return false;
+}
 
 export default function run(ctx, next) {
+  if (wantsSiteShell(ctx)) {
+    var ssr = ssrClientHookFromGetContext(ctx, {
+      clientHookPath: "hooks/client/get.jsx"
+    });
+    if (ssr !== null) { return ssr; }
+  }
+
   var maxW = queryWidth(ctx);
   if (maxW !== null) {
-    var bytes = fetchIpfsBytesFromGetContext(ctx);
+    var bytes = fetchIpfsBytesFromGetContext(ctx, {
+      sources: ["centralDir", "manifest"]
+    });
     var webp = optimizeRasterFromGetContext(ctx, bytes, { width: maxW });
     if (webp !== null) {
       return webp;
     }
   }
-  var file = resolveIpfsFromGetContext(ctx);
+
+  var ipfsOpts = { sources: ["centralDir", "manifest"] };
+  var file = resolveIpfsFromGetContext(ctx, ipfsOpts);
   if (file !== null) {
     return file;
   }

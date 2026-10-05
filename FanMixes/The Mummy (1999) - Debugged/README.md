@@ -12,6 +12,7 @@ Kid-friendlier cut: **scarabs that kill or eat people** are removed. Adventure, 
 - No camp “ate him alive” / Hom-Dai / 10-plagues lecture (cut 2026-09-23)
 - No Hamunaptra scarab swarm / corridor chase
 - No Cairo scene of Imhotep finishing Burns with scarabs
+- No Beni treasure-chamber death (scarabs eat him after “Goodbye, Beni.”)
 - No Jonathan arm-reset (scarab + knife, then uninjured)
 
 ## Subtitles (two English tracks)
@@ -55,7 +56,12 @@ Import from `subs/` via Project → Subtitles when editing.
 bash "FanMixes/The Mummy (1999) - Debugged/generate-mummy-debugged.sh"
 ```
 
-Sparse kept-runs. No `--snap`. QC every join in Kdenlive (silent beetle shots). Video master is **playlist4**, not playlist2 (audio split).
+Sparse kept-runs. No `--snap`. QC every join on the original (`seams/seam-NN.kdenlive`). Video master is **playlist4**, not playlist2 (audio split).
+
+```bash
+python3 scripts/check_kdenlive_sync.py \
+  --project "FanMixes/The Mummy (1999) - Debugged"
+```
 
 ## Render
 
@@ -79,7 +85,10 @@ bash scripts/ensure-public-permissions.sh "FanMixes/The Mummy (1999) - Debugged"
 
 ## Changelog
 
-- 2026-09-24 — Credits: Returns NSA lock / hangman contrast; Fifth Element vs 2001 pin.
+- 2026-09-27 — `seams.mkv` rebuilt from the finished NAS render (output join times), not the 4K rip.
+- 2026-09-27 — Cut Beni eaten by scarabs (source `01:53:27`–`01:54:36`, after “Goodbye, Beni.”).
+- 2026-09-26 — Per-seam Kdenlive projects in `seams/` (generic names, original 4K, no proxy) for join QC. `seams.mkv` is the short reel, not the feature.
+- 2026-09-25 — Proxy was +1 frame vs the 4K HEVC (`-vsync 1`). See PLAN.md; regenerate proxy with passthrough.
 - 2026-09-23 — Re-render 01:55:29 (flesh-eater + Jonathan in); dual English remuxed; NAS sync.
 - 2026-09-23 — Dual English tracks written; flesh-eater lecture + Jonathan arm cuts; INVESTIGATION.md.
 - 2026-09-19 — Documented as canonical blank for `clone_kdenlive_blank.py`.

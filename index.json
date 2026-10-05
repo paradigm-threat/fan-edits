@@ -4,133 +4,285 @@
       "slug": "2012-2009-salvation",
       "category": "FanMixes",
       "path": "FanMixes/2012 (2009) - Salvation",
-      "title": "2012 - Salvation"
+      "title": "2012 - Salvation",
+      "status": "ready",
+      "blurb": "This FanEdit removes unnecessary death and russiaphobic scenes.",
+      "media": "2012 (2009) - Salvation.mkv"
     },
     {
       "slug": "alien-resurrection-1997-unjossed",
       "category": "FanMixes",
       "path": "FanMixes/Alien Resurrection (1997) - UnJossed",
-      "title": "Alien Resurrection"
+      "title": "Alien Resurrection",
+      "status": "ready",
+      "blurb": "The majority of gross (Joss Whedon-inspired) sequences were removed, including the birth and death",
+      "media": "Alien Resurrection (1997) - UnJossed Edition.mkv"
+    },
+    {
+      "slug": "boogie-nights-1997-no-lookout",
+      "category": "FanMixes",
+      "path": "FanMixes/Boogie Nights (1997) - No Lookout",
+      "title": "Boogie Nights (1997) \u2014 No Lookout",
+      "status": "wip",
+      "blurb": "Removes from PTA\u2019s **whip-pan** out of Reed\u2019s demo-tape office (**1:45:56**) through On the Lookout, the Valley night drive, and the **donut-shop stick-up/kill**, landing on the first fully **black** frame at **2:05:19**. The original black hold and fade-up into the Rahad-plannin"
     },
     {
       "slug": "congo-1995-incel",
       "category": "FanMixes",
       "path": "FanMixes/Congo (1995) - Incel",
-      "title": "Congo - Incel Edition"
+      "title": "Congo - Incel Edition",
+      "status": "ready",
+      "blurb": "In this cut, much of the irritating (incel-ish) dialog by Dr. Elliot was removed along with some screaming scenes by Travis and Captain Wanta.",
+      "media": "Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "slug": "fear-and-loathing-in-las-vegas-1998-no-north-star",
+      "category": "FanMixes",
+      "path": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star",
+      "title": "Fear and Loathing in Las Vegas (1998) \u2014 No North Star",
+      "status": "wip",
+      "blurb": "Removes the **North Star Coffee Lounge** scene (waitress, knife, \u201clemon meringue pie\u201d) between the shot transition at **1:41:44** and the cut back to the Red Shark at **1:47:03**. Duke\u2019s \u201cmassive crime often slips by unrecognized\u201d line stays; the next line is \u201cIt was all over now"
     },
     {
       "slug": "final-fantasy-2001-the-phantom-menace",
       "category": "FanMixes",
       "path": "FanMixes/Final Fantasy (2001) - The Phantom Menace",
-      "title": "Final Fantasy - The Phantom Menace"
+      "title": "Final Fantasy - The Phantom Menace",
+      "status": "wip",
+      "blurb": "In this cut, all distracting or poorly acted scenes have been removed."
     },
     {
       "slug": "fried-green-tomatoes-1991-no-frank-bennett",
       "category": "FanMixes",
       "path": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett",
-      "title": "Fried Green Tomatoes (1991) \u2014 No Frank Bennett"
+      "title": "Fried Green Tomatoes (1991) \u2014 No Frank Bennett",
+      "status": "wip",
+      "blurb": "**Strategy, phases, and replacement-asset search plan:** [PLAN.md](PLAN.md)."
     },
     {
       "slug": "matrix-reloaded-2003-unlinked",
       "category": "FanMixes",
       "path": "FanMixes/Matrix Reloaded (2003) - Unlinked",
-      "title": "Matrix Reloaded - Unlinked"
+      "title": "Matrix Reloaded - Unlinked",
+      "status": "wip",
+      "blurb": "This edit removes many Link establishment sequences. Link was a poor replacement for"
     },
     {
       "slug": "matrix-revolutions-2003-unlinked",
       "category": "FanMixes",
       "path": "FanMixes/Matrix Revolutions (2003) - Unlinked",
-      "title": "Matrix Revolutions - Unlinked"
+      "title": "Matrix Revolutions - Unlinked",
+      "status": "wip",
+      "blurb": "This edit removes many Link establishment sequences. Link was a poor replacement for"
     },
     {
       "slug": "ninja-scroll-1993-minor-damage",
       "category": "FanMixes",
       "path": "FanMixes/Ninja Scroll (1993) - Minor Damage",
-      "title": "Ninja Scroll: Minor Damage"
+      "title": "Ninja Scroll: Minor Damage",
+      "status": "ready",
+      "blurb": "Drama scenes reduced",
+      "media": "Ninja Scroll (1993) - Minor Damage.mkv"
     },
     {
       "slug": "riddick-2013-unjinxed",
       "category": "FanMixes",
       "path": "FanMixes/Riddick (2013) - Unjinxed",
-      "title": "Riddick (2013) \u2014 Unjinxed"
+      "title": "Riddick (2013) \u2014 Unjinxed",
+      "status": "wip",
+      "blurb": "Removes distracting, sexist, and exaggerated dialogue throughout (legacy Unjinxed trims in `playlist2`)."
     },
     {
       "slug": "serenity-2005-unjossed",
       "category": "FanMixes",
       "path": "FanMixes/Serenity (2005) - Unjossed",
-      "title": "Serenity (2005) \u2014 Unjossed Edition"
+      "title": "Serenity (2005) \u2014 Unjossed Edition",
+      "status": "wip",
+      "blurb": "Family/kids cut: **strict on Reaver gore**, keeps action and core plot."
     },
     {
       "slug": "silent-hill-2006-nay-tomorrow",
       "category": "FanMixes",
       "path": "FanMixes/Silent Hill (2006) - Nay Tomorrow",
-      "title": "Silent Hill - Nay Tomorrow Edition"
+      "title": "Silent Hill - Nay Tomorrow Edition",
+      "status": "ready",
+      "blurb": "My wife and I love this movie, but it's quite unwatchable in its current format. We wanted a cut that we could watch without having to turn away or fast-forward through sequences. We also felt, as did many SH fans, that we don't need a scene explaining all the clues in the movie ",
+      "media": "Silent Hill (2006) - Nay Tomorrow Edition.mkv"
     },
     {
       "slug": "sonic-2020-deschwartzed",
       "category": "FanMixes",
       "path": "FanMixes/Sonic (2020) - DeSchwartzed",
-      "title": "Sonic (2020) - DeSchwartzed Edition"
+      "title": "Sonic (2020) - DeSchwartzed Edition",
+      "status": "ready",
+      "blurb": "All distracting or overly sappy dialogs were removed, while all plot points are retained.",
+      "media": "Sonic (2020) - DeSchwartzed Edition.mkv"
     },
     {
       "slug": "sonic-2-2022-deschwartzed",
       "category": "FanMixes",
       "path": "FanMixes/Sonic 2 (2022) - DeSchwartzed",
-      "title": "Sonic 2 (2022) - DeSchwartzed Edition"
+      "title": "Sonic 2 (2022) - DeSchwartzed Edition",
+      "status": "wip",
+      "blurb": "All distracting or overly sappy dialogs were removed, while all plot points are retained."
     },
     {
       "slug": "sonic-3-2024-deschwartzed",
       "category": "FanMixes",
       "path": "FanMixes/Sonic 3 (2024) - DeSchwartzed",
-      "title": "Sonic 3 (2024) - DeSchwartzed Edition"
+      "title": "Sonic 3 (2024) - DeSchwartzed Edition",
+      "status": "wip",
+      "blurb": "All distracting or overly sappy dialogs were removed, while all plot points are retained."
     },
     {
       "slug": "terminator-3-2003-brass-monkey",
       "category": "FanMixes",
       "path": "FanMixes/Terminator 3 (2003) - Brass Monkey",
-      "title": "Terminator 3 (2003) - Brass Monkey Edition"
+      "title": "Terminator 3 (2003) - Brass Monkey Edition",
+      "status": "wip",
+      "blurb": "Nick Stahl was removed as much as possible, along with - his crappy narration, the stripper scene, dialog about Kate worrying over her wedding, and many others distracting or contradictory scenes. For example, in this trailer sequence, I removed a shot with a sign that says 'cash"
     },
     {
       "slug": "the-chronicles-of-riddick-2004-fry-s-edition",
       "category": "FanMixes",
       "path": "FanMixes/The Chronicles Of Riddick (2004) - Fry's Edition",
-      "title": "The Chronicles of Riddick (2004) - Carolyn Fry Edition"
+      "title": "The Chronicles of Riddick (2004) - Carolyn Fry Edition",
+      "status": "wip",
+      "blurb": "This version removes many extended scenes and restores some audio from the Theatrical version. It also removes many poorly acted, sexist, or just irritating scenes with Thandiwe Newton (Dame Vaako) and Alexa Davalos (Kyra)."
     },
     {
       "slug": "the-day-after-tomorrow-2004-yuppocolypse",
       "category": "FanMixes",
       "path": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse",
-      "title": "The Day After Tomorrow (2004) - Yuppocolypse"
+      "title": "The Day After Tomorrow (2004) - Yuppocolypse",
+      "status": "wip",
+      "blurb": "This edit removes many of the establishment scenes for the yuppie protagonists in the movie."
+    },
+    {
+      "slug": "the-mummy-1999-debugged",
+      "category": "FanMixes",
+      "path": "FanMixes/The Mummy (1999) - Debugged",
+      "title": "The Mummy (1999) \u2014 Debugged",
+      "status": "ready",
+      "blurb": "Hom-Dai: no live beetles eating Imhotep",
+      "media": "The Mummy Debugged.mkv",
+      "subtitles": [
+        {
+          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.english.srt",
+          "label": "English",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.enhanced.srt",
+          "label": "Citations",
+          "lang": "en"
+        },
+        {
+          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.srt",
+          "label": "English",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "slug": "the-mummy-returns-2001-debugged",
+      "category": "FanMixes",
+      "path": "FanMixes/The Mummy Returns (2001) - Debugged",
+      "title": "The Mummy Returns (2001) \u2014 Debugged",
+      "status": "wip",
+      "blurb": "First pygmy overrun after \u201cWhere\u2019s the boy?\u201d"
+    },
+    {
+      "slug": "the-pentagon-papers-2003-widescreen",
+      "category": "FanMixes",
+      "path": "FanMixes/The Pentagon Papers (2003) - Widescreen",
+      "title": "The Pentagon Papers (2003) \u2014 Widescreen",
+      "status": "wip",
+      "blurb": "Restore square pixels, then **2\u00d7 Real-ESRGAN** (general / real-world weights).",
+      "subtitles": [
+        {
+          "src": "FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).english.srt",
+          "label": "English",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).enhanced.srt",
+          "label": "Citations",
+          "lang": "en"
+        }
+      ]
+    },
+    {
+      "slug": "van-helsing-deanna-d",
+      "category": "FanMixes",
+      "path": "FanMixes/Van Helsing - DeAnna'd",
+      "title": "Van Helsing (2004) \u2014 DeAnna'd",
+      "status": "ready",
+      "blurb": "First contact was a pirate rip (not a theater night). The surprise was how much **flair and color** the movie had \u2014 ideas that felt new and unique at the time, a Van Helsing who had never quite been *wanted* like this before. Comic-book and tropey, yes, and that was mostly fine. ",
+      "media": "Van Helsing - DeAnna'd.mkv",
+      "subtitles": [
+        {
+          "src": "FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.english.srt",
+          "label": "English",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.enhanced.srt",
+          "label": "Citations",
+          "lang": "en"
+        }
+      ]
     },
     {
       "slug": "war-of-the-worlds-2005-family-therapy",
       "category": "FanMixes",
       "path": "FanMixes/War of the Worlds (2005) - Family Therapy",
-      "title": "War of the Worlds (2004) - Family Therapy Edition"
+      "title": "War of the Worlds (2004) - Family Therapy Edition",
+      "status": "wip",
+      "blurb": "This FanMix eliminates nearly all the toxic family behavior featured in the movie, so that WotW (2005) becomes a movie about aliens and not allusions to Spielberg's trouble raising his own children. Any scenes with tense, abrasive and/or childish behavior have been shortened wher"
     },
     {
       "slug": "bambi-1942-kidfriendly-edition",
       "category": "KidFriendly",
       "path": "KidFriendly/Bambi (1942) - KidFriendly Edition",
-      "title": "Bambi (1942) \u2014 KidFriendly Edition"
+      "title": "Bambi (1942) \u2014 KidFriendly Edition",
+      "status": "wip",
+      "blurb": "Cut first meadow stampede and \"Man was in the forest\" (join to snow)"
     },
     {
       "slug": "cinderella-1950-kidfriendly-edition",
       "category": "KidFriendly",
       "path": "KidFriendly/Cinderella (1950) - KidFriendly Edition",
-      "title": "Cinderella (1950) \u2014 KidFriendly Edition"
+      "title": "Cinderella (1950) \u2014 KidFriendly Edition",
+      "status": "wip",
+      "blurb": "Cut father\u2019s death and \u201ccold, cruel\u201d stepmother setup narration"
     },
     {
       "slug": "pee-wee-s-big-adventure-1985-kidfriendly-edition",
       "category": "KidFriendly",
       "path": "KidFriendly/Pee-wee's Big Adventure (1985) - KidFriendly Edition",
-      "title": "Pee-wee's Big Adventure (1985) \u2014 KidFriendly Edition"
+      "title": "Pee-wee's Big Adventure (1985) \u2014 KidFriendly Edition",
+      "status": "wip",
+      "blurb": "**Francis:** breakfast, pool, and basement removed; **premiere confrontation kept**"
+    },
+    {
+      "slug": "spirited-away-2001-alena-edition",
+      "category": "KidFriendly",
+      "path": "KidFriendly/Spirited Away (2001) - Alena Edition",
+      "title": "Spirited Away (2001) \u2014 Alena Edition",
+      "status": "wip",
+      "blurb": "Parents-to-pigs arc removed (food stalls \u2192 Haku helping Chihiro)"
     },
     {
       "slug": "spirited-away-2001-kid-friendly",
       "category": "KidFriendly",
       "path": "KidFriendly/Spirited Away (2001) - Kid friendly",
-      "title": "Spirited Away (2001) \u2014 Kid friendly"
+      "title": "Spirited Away (2001) \u2014 Kid friendly",
+      "status": "wip",
+      "blurb": "Parents-to-pigs arc removed entirely (jump from ghost-town food stalls to Haku helping Chihiro)"
     }
   ]
 }

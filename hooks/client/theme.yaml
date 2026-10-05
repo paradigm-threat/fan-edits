@@ -1,233 +1,417 @@
 themes:
-  light:
+  dark:
     variables:
-      text-primary: "#111827"
-      bg-primary: "#f5f4f0"
-      border-color: "#d1d5db"
+      house: "#0a0708"
+      velvet: "#3a1018"
+      velvetDeep: "#1a080c"
+      gold: "#d4a574"
+      goldDim: "#8a6a45"
+      cream: "#f0e6d4"
+      creamMuted: "#c4b49a"
+      seat: "#120a0c"
+      screen: "#1c1410"
+      border: "#4a3028"
+      warn: "#c45c4a"
+      ok: "#6a9a6a"
+    breakpoints:
+      sm: "640px"
+      md: "900px"
+      lg: "1100px"
     selectors:
-      ".library-app":
+      body:
+        margin: "0"
+        backgroundColor: "var(house)"
+        color: "var(cream)"
+        fontFamily: "Georgia, 'Times New Roman', Times, serif"
+        lineHeight: "1.55"
+      ".fb-app":
+        position: "relative"
+        minHeight: "100%"
         display: "flex"
         flexDirection: "column"
-        width: "100%"
-        minHeight: "100%"
-        backgroundColor: "#f5f4f0"
-        color: "#111827"
-      ".library-header":
+        color: "var(cream)"
+        backgroundColor: "var(house)"
+        overflow: "hidden"
+      ".fb-backdrop":
+        position: "fixed"
+        inset: "0"
+        zIndex: "0"
+        pointerEvents: "none"
+        background: "radial-gradient(ellipse 80% 50% at 50% 28%, #2a1810 0%, var(house) 70%)"
+      ".fb-curtain":
+        position: "absolute"
+        top: "0"
+        bottom: "0"
+        width: "18%"
+        maxWidth: "220px"
+        background: "linear-gradient(90deg, var(velvetDeep), var(velvet) 40%, var(velvetDeep))"
+        opacity: "0.85"
+        boxShadow: "inset -20px 0 40px rgba(0,0,0,0.45)"
+      ".fb-curtain-left":
+        left: "0"
+        borderRight: "1px solid var(border)"
+      ".fb-curtain-right":
+        right: "0"
+        borderLeft: "1px solid var(border)"
+        background: "linear-gradient(270deg, var(velvetDeep), var(velvet) 40%, var(velvetDeep))"
+        boxShadow: "inset 20px 0 40px rgba(0,0,0,0.45)"
+      ".fb-screen-glow":
+        position: "absolute"
+        left: "50%"
+        top: "12%"
+        width: "56%"
+        height: "28%"
+        transform: "translateX(-50%)"
+        background: "radial-gradient(ellipse at center, rgba(212,165,116,0.18) 0%, transparent 70%)"
+        opacity: "0.9"
+      ".fb-seats":
+        position: "absolute"
+        left: "10%"
+        right: "10%"
+        bottom: "0"
+        height: "28%"
+      ".fb-seat-row":
+        position: "absolute"
+        left: "0"
+        right: "0"
+        height: "28%"
+        borderRadius: "50% 50% 0 0"
+        background: "linear-gradient(180deg, transparent, var(seat))"
+        borderTop: "2px solid #2a1418"
+        opacity: "0.9"
+      ".fb-seat-row-1":
+        bottom: "0"
+        transform: "scaleX(1.05)"
+      ".fb-seat-row-2":
+        bottom: "22%"
+        opacity: "0.75"
+        transform: "scaleX(0.95)"
+      ".fb-seat-row-3":
+        bottom: "42%"
+        opacity: "0.55"
+        transform: "scaleX(0.85)"
+      ".fb-header":
+        position: "relative"
+        zIndex: "2"
         display: "flex"
         flexDirection: "row"
+        flexWrap: "wrap"
         alignItems: "center"
         justifyContent: "space-between"
-        padding: "14px 20px"
-        backgroundColor: "#0f172a"
-        color: "#f8fafc"
-        borderBottomWidth: "1px"
-        borderBottomColor: "#1e293b"
-      ".library-header-brand":
+        gap: "12px"
+        padding: "16px 20px"
+        borderBottom: "1px solid var(border)"
+        background: "linear-gradient(180deg, rgba(26,8,12,0.92), rgba(10,7,8,0.75))"
+      ".fb-brand":
         display: "flex"
         flexDirection: "row"
         alignItems: "center"
         gap: "12px"
-      ".library-header-icon":
+        color: "var(gold)"
+        textDecoration: "none"
+      ".fb-brand-text":
         display: "flex"
+        flexDirection: "column"
+        gap: "2px"
+      ".fb-brand-name":
+        fontSize: "1.35rem"
+        fontWeight: "700"
+        letterSpacing: "0.04em"
+        color: "var(cream)"
+      ".fb-brand-tag":
+        fontSize: "0.78rem"
+        color: "var(creamMuted)"
+        fontStyle: "italic"
+      ".fb-nav":
+        display: "flex"
+        flexDirection: "row"
+        gap: "16px"
+        fontSize: "0.95rem"
+      ".fb-nav a":
+        color: "var(gold)"
+        textDecoration: "none"
+        borderBottom: "1px solid transparent"
+      ".fb-nav a:hover":
+        borderBottomColor: "var(goldDim)"
+      ".fb-marquee":
+        position: "relative"
+        zIndex: "2"
+        display: "flex"
+        flexDirection: "row"
         alignItems: "center"
         justifyContent: "center"
-        width: "36px"
-        height: "36px"
-        borderRadius: "8px"
-        backgroundColor: "#2563eb"
-        color: "#ffffff"
-        fontSize: "11px"
-        fontWeight: "700"
-      ".library-header-title":
-        fontSize: "20px"
-        fontWeight: "700"
-        marginBottom: "2px"
-        color: "#f8fafc"
-      ".library-header-tagline":
-        fontSize: "13px"
+        gap: "10px"
+        padding: "8px 12px"
+        background: "linear-gradient(90deg, #1a1008, #2a1c10, #1a1008)"
+        borderBottom: "1px solid var(border)"
+      ".fb-marquee-lights":
+        display: "flex"
+        flexDirection: "row"
+        gap: "4px"
+        color: "var(gold)"
+      ".fb-bulb":
+        opacity: "0.55"
+      ".fb-bulb-0":
+        opacity: "0.95"
+      ".fb-bulb-2":
         opacity: "0.75"
-        color: "#cbd5e1"
-      ".library-header-meta":
-        fontSize: "13px"
-        opacity: "0.8"
-        color: "#cbd5e1"
-      ".library-body":
-        display: "flex"
-        flexDirection: "row"
-        flex: "1"
-        minHeight: "0"
-      ".library-footer":
-        display: "flex"
-        flexDirection: "row"
-        alignItems: "center"
-        justifyContent: "space-between"
-        padding: "10px 20px"
-        backgroundColor: "#e8e6e1"
-        borderTopWidth: "1px"
-        borderTopColor: "#d1d5db"
-        fontSize: "12px"
-        color: "#4b5563"
-      ".library-footer-brand":
-        fontWeight: "600"
-      ".library-footer-note":
-        opacity: "0.8"
-      ".library-shell":
-        display: "flex"
-        flexDirection: "row"
-        width: "100%"
-        minHeight: "100%"
-        backgroundColor: "#f5f4f0"
-        color: "#111827"
-      ".library-nav":
-        width: "280px"
-        padding: "20px 16px"
-        display: "flex"
-        flexDirection: "column"
-        gap: "8px"
-        backgroundColor: "#ebe9e4"
-        borderRightWidth: "1px"
-        borderRightColor: "#d1d5db"
-        overflow: "auto"
-      ".library-main":
-        flex: "1"
-        padding: "24px"
-        display: "flex"
-        flexDirection: "column"
-        gap: "12px"
-        overflow: "auto"
-      ".library-title":
-        fontSize: "22px"
-        fontWeight: "700"
-        marginBottom: "8px"
-      ".nav-heading":
-        fontSize: "13px"
-        fontWeight: "600"
+      ".fb-marquee-text":
+        margin: "0"
+        fontSize: "0.8rem"
+        letterSpacing: "0.12em"
         textTransform: "uppercase"
-        opacity: "0.65"
-        marginTop: "12px"
-        marginBottom: "4px"
-      ".nav-list":
+        color: "var(gold)"
+      ".fb-main":
+        position: "relative"
+        zIndex: "2"
+        flex: "1"
+        padding: "20px 18px 40px"
+        maxWidth: "960px"
+        width: "100%"
+        marginLeft: "auto"
+        marginRight: "auto"
+        boxSizing: "border-box"
+      ".fb-footer":
+        position: "relative"
+        zIndex: "2"
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        justifyContent: "space-between"
+        gap: "8px"
+        padding: "14px 20px"
+        borderTop: "1px solid var(border)"
+        background: "rgba(10,7,8,0.9)"
+        fontSize: "0.82rem"
+        color: "var(creamMuted)"
+      ".fb-footer a":
+        color: "var(gold)"
+        textDecoration: "none"
+      ".fb-section-title":
+        marginTop: "28px"
+        marginBottom: "12px"
+        fontSize: "1.15rem"
+        color: "var(gold)"
+        letterSpacing: "0.06em"
+        textTransform: "uppercase"
+      ".fb-title-grid":
+        display: "flex"
+        flexDirection: "column"
+        gap: "10px"
+      ".fb-title-card":
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "flex-start"
+        gap: "12px"
+        width: "100%"
+        textAlign: "left"
+        padding: "14px 16px"
+        background: "linear-gradient(135deg, rgba(42,24,16,0.9), rgba(18,10,12,0.95))"
+        border: "1px solid var(border)"
+        borderRadius: "2px"
+        color: "var(cream)"
+        cursor: "pointer"
+        fontFamily: "inherit"
+      ".fb-title-card:hover":
+        borderColor: "var(goldDim)"
+        transform: "translateY(-1px)"
+      ".fb-title-card-mark":
+        color: "var(gold)"
+        flexShrink: "0"
+        marginTop: "2px"
+      ".fb-title-card-body":
         display: "flex"
         flexDirection: "column"
         gap: "4px"
-        padding: "0"
-        listStyleType: "none"
-      ".nav-link":
-        padding: "8px 10px"
-        backgroundColor: "transparent"
-        color: "#111827"
-        borderRadius: "6px"
-        cursor: "pointer"
-        textAlign: "left"
-        fontSize: "14px"
-        width: "100%"
-      ".nav-link-active":
-        backgroundColor: "#2563eb"
-        color: "#ffffff"
-      ".library-home":
-        display: "flex"
-        flexDirection: "column"
-        gap: "12px"
-        maxWidth: "720px"
-      ".project-page":
-        display: "flex"
-        flexDirection: "column"
-        gap: "12px"
-        maxWidth: "900px"
-      ".project-meta":
-        fontSize: "13px"
-        opacity: "0.75"
-      ".catalog-root":
-        padding: "24px"
-        display: "flex"
-        flexDirection: "column"
-        gap: "12px"
-        backgroundColor: "#f5f4f0"
-        color: "#111827"
-        width: "100%"
-        minHeight: "100%"
-      ".catalog-lead":
-        fontSize: "16px"
-        opacity: "0.85"
-      "h1":
-        fontSize: "28px"
+        minWidth: "0"
+      ".fb-title-card-name":
+        fontSize: "1.05rem"
         fontWeight: "700"
-      "h2":
-        fontSize: "22px"
-        fontWeight: "600"
-      "h3":
-        fontSize: "18px"
-        fontWeight: "600"
-      "p":
-        fontSize: "15px"
+      ".fb-title-card-blurb":
+        fontSize: "0.88rem"
+        color: "var(creamMuted)"
+        lineHeight: "1.4"
+      ".fb-title-card-meta":
+        fontSize: "0.72rem"
+        letterSpacing: "0.08em"
+        textTransform: "uppercase"
+        color: "var(goldDim)"
+      ".fb-status-ready .fb-title-card-meta":
+        color: "var(ok)"
+      ".fb-status-needs-seed .fb-title-card-meta":
+        color: "var(warn)"
+      ".fb-home-copy":
         marginBottom: "8px"
-      ".catalog-sections":
-        display: "flex"
-        flexDirection: "row"
-        gap: "8px"
-        flexWrap: "wrap"
-      ".nav-btn":
-        padding: "8px 16px"
-        backgroundColor: "#2563eb"
-        color: "#ffffff"
-        borderRadius: "6px"
+      ".fb-home-copy a":
+        color: "var(gold)"
+      ".fb-movie-title":
+        margin: "8px 0 10px"
+        fontSize: "1.75rem"
+        color: "var(cream)"
+      ".fb-movie-blurb":
+        color: "var(creamMuted)"
+        marginBottom: "16px"
+      ".fb-back":
+        background: "transparent"
+        border: "none"
+        color: "var(gold)"
+        fontFamily: "inherit"
+        fontSize: "0.9rem"
         cursor: "pointer"
-      ".project-list":
-        display: "flex"
-        flexDirection: "column"
-        gap: "6px"
         padding: "0"
-      ".project-btn":
-        padding: "10px 14px"
-        backgroundColor: "#ffffff"
-        color: "#111827"
-        borderRadius: "6px"
-        cursor: "pointer"
-        textAlign: "left"
-        borderWidth: "1px"
-        borderColor: "#d1d5db"
-      ".project-view":
-        gap: "16px"
-      ".readme-panel":
-        padding: "16px"
-        backgroundColor: "#ffffff"
-        borderRadius: "8px"
-        borderWidth: "1px"
-        borderColor: "#e5e7eb"
-        maxWidth: "900px"
-      ".video-panel":
-        display: "flex"
-        flexDirection: "column"
-        gap: "8px"
-        maxWidth: "900px"
-        width: "100%"
-      ".relay-video-player-shell":
-        width: "100%"
-        backgroundColor: "#0f0f12"
-        borderRadius: "8px"
-        overflow: "hidden"
-      ".relay-video-player":
-        width: "100%"
-        maxHeight: "480px"
-        display: "block"
-      ".video-controls":
+        marginBottom: "8px"
+      ".fb-video-panel":
+        position: "relative"
+        marginBottom: "24px"
+        padding: "12px"
+        background: "var(screen)"
+        border: "1px solid var(border)"
+      ".fb-movie-ack":
+        marginTop: "10px"
+        marginBottom: "4px"
+      ".fb-movie-ack-card":
+        padding: "12px 14px"
+        background: "linear-gradient(160deg, rgba(58,16,24,0.95), rgba(18,10,12,0.98))"
+        border: "1px solid var(goldDim)"
+      ".fb-movie-ack-check":
         display: "flex"
         flexDirection: "row"
+        alignItems: "flex-start"
+        gap: "10px"
+        margin: "0"
+        fontSize: "0.95rem"
+        color: "var(cream)"
+        cursor: "pointer"
+      ".fb-video-controls":
+        display: "flex"
+        flexDirection: "row"
+        gap: "10px"
+        marginTop: "12px"
+      ".fb-btn":
+        display: "inline-flex"
+        flexDirection: "row"
+        alignItems: "center"
         gap: "8px"
-      ".phase-note":
-        fontSize: "14px"
+        padding: "10px 16px"
+        background: "rgba(26,8,12,0.9)"
+        border: "1px solid var(border)"
+        color: "var(cream)"
+        fontFamily: "inherit"
+        fontSize: "0.95rem"
+        cursor: "pointer"
+      ".fb-btn-primary":
+        background: "linear-gradient(180deg, #5a2030, #3a1018)"
+        borderColor: "var(goldDim)"
+        color: "var(cream)"
+      ".fb-btn:disabled":
+        opacity: "0.45"
+        cursor: "not-allowed"
+      ".fb-btn-icon":
+        width: "20px"
+        height: "20px"
+      ".fb-media":
+        minHeight: "120px"
+        display: "flex"
+        flexDirection: "column"
+        alignItems: "stretch"
+        justifyContent: "center"
+        gap: "8px"
+        padding: "16px"
+        background: "#0c0a09"
+        color: "var(creamMuted)"
+      ".fb-media-msg":
+        margin: "0"
+        color: "var(cream)"
+      ".fb-media-hint":
+        margin: "0"
+        fontSize: "0.88rem"
+      ".fb-media-cid":
+        fontSize: "0.75rem"
+        wordBreak: "break-all"
         opacity: "0.7"
-      "ul":
-        paddingLeft: "20px"
-      "li":
-        fontSize: "15px"
-        marginBottom: "4px"
-      "code":
-        fontSize: "13px"
-        backgroundColor: "#f3f4f6"
-      "pre":
-        padding: "12px"
-        backgroundColor: "#f3f4f6"
-        borderRadius: "6px"
-        overflow: "auto"
-current_theme: light
+      ".fb-media-bar":
+        height: "6px"
+        background: "#2a1c18"
+        borderRadius: "3px"
+        overflow: "hidden"
+      ".fb-media-bar-fill":
+        height: "100%"
+        background: "var(gold)"
+      ".fb-readme":
+        marginTop: "8px"
+        paddingTop: "16px"
+        borderTop: "1px solid var(border)"
+        fontSize: "0.95rem"
+      ".fb-doc":
+        fontSize: "1.02rem"
+      ".fb-doc a":
+        color: "var(gold)"
+      ".fb-gate":
+        position: "fixed"
+        inset: "0"
+        zIndex: "50"
+        display: "flex"
+        alignItems: "center"
+        justifyContent: "center"
+        padding: "20px"
+        background: "rgba(6,4,5,0.88)"
+      ".fb-gate-card":
+        maxWidth: "440px"
+        width: "100%"
+        padding: "24px 22px"
+        background: "linear-gradient(160deg, #2a1418, #120a0c)"
+        border: "1px solid var(goldDim)"
+        boxShadow: "0 20px 60px rgba(0,0,0,0.55)"
+      ".fb-gate-kicker":
+        margin: "0 0 6px"
+        fontSize: "0.75rem"
+        letterSpacing: "0.14em"
+        textTransform: "uppercase"
+        color: "var(gold)"
+      ".fb-gate-title":
+        margin: "0 0 12px"
+        fontSize: "1.45rem"
+        color: "var(cream)"
+      ".fb-gate-body":
+        margin: "0 0 12px"
+        color: "var(creamMuted)"
+        fontSize: "0.95rem"
+      ".fb-gate-check":
+        display: "flex"
+        flexDirection: "row"
+        gap: "10px"
+        alignItems: "flex-start"
+        margin: "16px 0"
+        fontSize: "0.92rem"
+        color: "var(cream)"
+      ".fb-gate-actions":
+        display: "flex"
+        flexDirection: "row"
+        gap: "10px"
+      ".fb-gate-links":
+        margin: "14px 0 0"
+        fontSize: "0.82rem"
+      ".fb-gate-links a":
+        color: "var(gold)"
+      ".fb-icon":
+        display: "block"
+        flexShrink: "0"
+      "@media (min-width: 900px)":
+        ".fb-title-grid":
+          display: "grid"
+          gridTemplateColumns: "1fr 1fr"
+          gap: "12px"
+        ".fb-main":
+          padding: "28px 28px 56px"
+        ".fb-curtain":
+          width: "14%"
+      "@media (max-width: 640px)":
+        ".fb-brand-name":
+          fontSize: "1.1rem"
+        ".fb-header":
+          padding: "12px 14px"
+        ".fb-curtain":
+          width: "8%"
+          opacity: "0.55"
+        ".fb-movie-title":
+          fontSize: "1.35rem"
