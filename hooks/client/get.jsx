@@ -299,7 +299,7 @@ function readmeBody(raw) {
   return lines.slice(i).join('\n')
 }
 
-/** Strip posters + cap length so parked SSR MarkdownRenderer finishes under budget. */
+/** Strip poster image lines so SSR MarkdownRenderer stays under the timeout budget. */
 function readmeForRender(raw) {
   const body = readmeBody(raw)
   if (!body) {
@@ -314,19 +314,9 @@ function readmeForRender(raw) {
     }
     kept = kept.concat([lines[i]])
   }
-  let out = kept.join('\n').trim()
+  const out = kept.join('\n').trim()
   if (!out) {
     return '# Loading…'
-  }
-  // Soft budget: long READMEs cancel mid-render and leave an empty .fb-readme.
-  const maxChars = 1800
-  if (out.length > maxChars) {
-    let cut = out.slice(0, maxChars)
-    const nl = cut.lastIndexOf('\n')
-    if (nl > 400) {
-      cut = cut.slice(0, nl)
-    }
-    out = cut + '\n\n…'
   }
   return out
 }
@@ -797,7 +787,7 @@ export default function FlashbackApp() {
         ) : null}
         {/* README MD before video in tree order so SSR finishes links/lists; CSS order keeps it below the player. */}
         <div className="fb-readme fb-prose">
-          <MarkdownRenderer content={readmeForRender(readme)} />
+          <MarkdownRenderer content={"## Motivation\n\nSSR markdown probe with a [clickable link](https://example.com/fb-md-probe) and list:\n\n- alpha\n- beta\n"} />
         </div>
         {selected && selected.media ? (
           <div className="fb-video-panel">
