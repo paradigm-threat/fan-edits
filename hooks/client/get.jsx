@@ -75,7 +75,7 @@ function subtitleTracks(project) {
   if (!project || !project.subtitles) {
     return []
   }
-  const out = []
+  let out = []
   const list = project.subtitles
   for (let i = 0; i < list.length; i++) {
     const t = list[i]
@@ -102,7 +102,7 @@ function findProject(projects, slug) {
 }
 
 function projectsInCategory(projects, category) {
-  const out = []
+  let out = []
   for (let i = 0; i < projects.length; i++) {
     if (projects[i].category === category) {
       out = out.concat([projects[i]])
@@ -222,7 +222,7 @@ function SeatRows() {
 }
 
 function MarqueeLights() {
-  const bulbs = []
+  let bulbs = []
   for (let i = 0; i < 16; i++) {
     bulbs = bulbs.concat([<MarqueeBulb key={'b' + i} className={'fb-bulb fb-bulb-' + (i % 4)} />])
   }
@@ -357,15 +357,15 @@ export default function FlashbackApp() {
     )
   }
 
-  const fanCards = []
+  let fanCards = []
   for (let i = 0; i < fanMixes.length; i++) {
     fanCards = fanCards.concat([titleCard(fanMixes[i])])
   }
-  const kidCards = []
+  let kidCards = []
   for (let i = 0; i < kidFriendly.length; i++) {
     kidCards = kidCards.concat([titleCard(kidFriendly[i])])
   }
-  const blogCards = []
+  let blogCards = []
   for (let i = 0; i < blogPosts.length; i++) {
     const post = blogPosts[i]
     blogCards = blogCards.concat([
