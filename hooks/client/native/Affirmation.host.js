@@ -51,8 +51,8 @@
     try {
       if (global.localStorage && global.localStorage.setItem) {
         global.localStorage.setItem(storageKey, '1');
-        // Title ack also satisfies site-wide welcome (unlock CSS needs both flags).
-        if (mode === 'title') {
+        // Any movie-title ack also satisfies site-wide welcome (unlock CSS needs both).
+        if (mode === 'title' || storageKey.indexOf(MPREF) === 0) {
           global.localStorage.setItem(WKEY, '1');
         }
       }
@@ -60,12 +60,11 @@
     try {
       const root = global.document && global.document.documentElement;
       if (!root) return;
-      if (mode === 'title' && slugHint) {
-        root.setAttribute('data-fb-movie-ack', slugHint);
-        root.setAttribute('data-fb-welcome-ack', '1');
-      } else {
-        root.setAttribute('data-fb-welcome-ack', '1');
+      const slug = slugHint || slugFromKey(storageKey);
+      if (slug) {
+        root.setAttribute('data-fb-movie-ack', slug);
       }
+      root.setAttribute('data-fb-welcome-ack', '1');
       syncDocFlags();
     } catch (_) {}
   }
