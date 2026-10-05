@@ -498,6 +498,9 @@ export default function FlashbackApp() {
             }}
           />
         ) : null}
+        <script>
+          {'(function(){function run(){try{var KEY="flashback.ownershipAck.v1";var s=(location&&location.search)||"";var ack=false;if(s.indexOf("ownershipAck=1")>=0){ack=true;}else if(localStorage&&localStorage.getItem&&localStorage.getItem(KEY)==="1"){ack=true;}if(ack!==true){return;}if(localStorage&&localStorage.setItem){localStorage.setItem(KEY,"1");}var g=document.querySelector(".fb-gate");if(g){if(g.remove){g.remove();}else if(g.parentNode){g.parentNode.removeChild(g);}}if(s.indexOf("ownershipAck=1")>=0&&history&&history.replaceState){history.replaceState(null,"",(location&&location.pathname)||"/");}}catch(e){}}if(document.readyState==="loading"){document.addEventListener("DOMContentLoaded",run);}else{run();}})();'}
+        </script>
         <header className="fb-header">
           <a className="fb-brand" href="/" onClick={(e) => {
             try { e.preventDefault() } catch (err) {}
