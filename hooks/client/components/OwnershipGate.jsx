@@ -1,5 +1,8 @@
 /**
  * First-visit ownership acknowledgment — must confirm before browsing/playing.
+ *
+ * CleverScript note: controlled checkboxes often fail to sync React state on
+ * hydrate, so this gate uses an uncontrolled input and reads .checked on OK.
  */
 import React, { useState } from 'react'
 
@@ -31,6 +34,25 @@ function writeAck() {
   } catch (e) {}
 }
 
+function gateCheckboxChecked() {
+  try {
+    if (typeof globalThis === 'undefined' || !globalThis.document) {
+      return false
+    }
+    let doc = globalThis.document
+    if (!doc.querySelector) {
+      return false
+    }
+    let el = doc.querySelector('input.fb-gate-checkbox')
+    if (!el) {
+      return false
+    }
+    return el.checked === true
+  } catch (e) {
+    return false
+  }
+}
+
 export function hasOwnershipAck() {
   return readAck() === true
 }
@@ -39,9 +61,6 @@ export default function OwnershipGate(props) {
   const openState = useState(readAck() !== true)
   const open = openState[0]
   const setOpen = openState[1]
-  const checkedState = useState(false)
-  const checked = checkedState[0]
-  const setChecked = checkedState[1]
 
   if (open !== true) {
     return null
@@ -50,40 +69,29 @@ export default function OwnershipGate(props) {
   return (
     <div className="fb-gate" role="dialog" aria-modal="true" aria-labelledby="fb-gate-title">
       <div className="fb-gate-card">
-        <p className="fb-gate-kicker">Flashback Repository</p>
+        <p className="fb-gate-kicker">Welcome</p>
         <h2 id="fb-gate-title" className="fb-gate-title">
-          Own the original
+          Own the original — then enjoy the edit
         </h2>
         <p className="fb-gate-body">
-          Before you play any fan edit here, you must own a legal commercial copy of the
-          corresponding original film. This is the same rule used by fanedit communities for
-          years: the edit is for people who already have the movie.
+          {"Before you play any fan edit here, please confirm you own a legal commercial copy of the corresponding original film. Same house rule fanedit communities have used for years: the edit is for people who already have the movie."}
         </p>
         <p className="fb-gate-body">
-          This site is a personal catalog of projects — not a pirate archive and not a substitute
-          for buying or renting the studio release.
+          {"This site is a personal catalog of projects — not a pirate archive, and not a substitute for buying or renting the studio release."}
         </p>
         <label className="fb-gate-check">
-          <input
-            type="checkbox"
-            checked={checked === true}
-            onChange={(e) => {
-              try {
-                setChecked(e && e.target && e.target.checked === true)
-              } catch (err) {
-                setChecked(false)
-              }
-            }}
-          />
-          <span>I confirm I own a legal copy of each original film before I play its edit.</span>
+          <input type="checkbox" className="fb-gate-checkbox" />
+          <span>
+            {"I confirm I own a legal copy of each original film before I play its edit."}
+          </span>
         </label>
+        <p className="fb-gate-hint">Check the box above, then continue.</p>
         <div className="fb-gate-actions">
           <button
             type="button"
-            className="fb-btn fb-btn-primary"
-            disabled={checked !== true}
+            className="fb-btn fb-btn-primary fb-gate-ok"
             onClick={() => {
-              if (checked !== true) {
+              if (gateCheckboxChecked() !== true) {
                 return
               }
               writeAck()
