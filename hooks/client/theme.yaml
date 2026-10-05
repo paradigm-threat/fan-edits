@@ -421,6 +421,9 @@ themes:
         border: "1px solid var(border)"
       ".fb-media-unlock-target":
         display: "none"
+      ".fb-video-controls .fb-btn":
+        opacity: "0.45"
+        pointerEvents: "none"
       "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-media-locked":
         display: "none"
       "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-media-unlock-target":

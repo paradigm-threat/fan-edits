@@ -490,7 +490,6 @@ export default function FlashbackApp() {
                 type="button"
                 className="fb-btn fb-btn-primary"
                 onClick={sendPlay}
-                disabled={mediaUnlocked !== true}
               >
                 <PlayChevron className="fb-btn-icon" /> Play
               </button>
@@ -498,7 +497,6 @@ export default function FlashbackApp() {
                 type="button"
                 className="fb-btn"
                 onClick={sendPause}
-                disabled={mediaUnlocked !== true}
               >
                 Pause
               </button>
