@@ -279,7 +279,7 @@ function renderIpfsInspect(cidRaw) {
   )
 }
 
-/** Drop leading H1 — the movie page already shows the title. */
+/** Drop leading H1 — the movie page already shows the title. CleverScript: no Array.slice. */
 function readmeBody(raw) {
   const text = str(raw)
   if (!text) {
@@ -296,29 +296,12 @@ function readmeBody(raw) {
       i++
     }
   }
-  return lines.slice(i).join('\n')
-}
-
-/** Strip poster image lines so SSR MarkdownRenderer stays under the timeout budget. */
-function readmeForRender(raw) {
-  const body = readmeBody(raw)
-  if (!body) {
-    return '# Loading…'
+  let out = []
+  while (i < lines.length) {
+    out = out.concat([lines[i]])
+    i++
   }
-  const lines = body.split('\n')
-  let kept = []
-  for (let i = 0; i < lines.length; i++) {
-    const t = lines[i].trim()
-    if (t.indexOf('![') === 0) {
-      continue
-    }
-    kept = kept.concat([lines[i]])
-  }
-  const out = kept.join('\n').trim()
-  if (!out) {
-    return '# Loading…'
-  }
-  return out
+  return out.join('\n')
 }
 
 function isNarrowViewport() {
