@@ -1,0 +1,24 @@
+# Flashback Repository — thin IPFS catalog + CleverScript theater shell
+name: "Flashback Repository"
+version: "1.0.0"
+description: "Personal fan-edit library. Own the original. Thin IPFS media on Relay."
+canonical: "https://flashbackrepository.org/"
+client:
+  hooks:
+    get:
+      path: hooks/client/get.jsx
+server:
+  hooks:
+    get:
+      path: hooks/server/get.cs
+    pre-commit:
+      path: hooks/server/validation.cs
+    pre-receive:
+      path: hooks/server/validation.cs
+  tls:
+    plugin: park
+git:
+  branchRules:
+    default:
+      requireSigned: false
+      allowUnsigned: true
