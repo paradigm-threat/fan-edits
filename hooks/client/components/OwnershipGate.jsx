@@ -99,6 +99,19 @@ export function hasOwnershipAck() {
   return false
 }
 
+/**
+ * Call from the root client hook on every render. Persists ?ownershipAck=1 and
+ * strips the SSR gate node when the browser already acknowledged.
+ */
+export function ensureOwnershipAckFromBrowser() {
+  let fromQuery = consumeAckQuery()
+  if (readAck() === true || fromQuery === true) {
+    removeGateNode()
+    return true
+  }
+  return false
+}
+
 export default function OwnershipGate(props) {
   // Persist query ack on client (and when hydrate re-runs).
   let fromQuery = consumeAckQuery()

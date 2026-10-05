@@ -6,7 +6,7 @@ import StyleContext from '@clevertree/style'
 import { MarkdownRenderer } from '@clevertree/markdown'
 import manifest from '@hooks'
 import { TicketIcon, PlayChevron, MarqueeBulb } from 'hooks/client/components/Icons.jsx'
-import OwnershipGate, { hasOwnershipAck } from 'hooks/client/components/OwnershipGate.jsx'
+import OwnershipGate, { hasOwnershipAck, ensureOwnershipAckFromBrowser } from 'hooks/client/components/OwnershipGate.jsx'
 import MovieOwnAck, { hasMovieOwnAck } from 'hooks/client/components/MovieOwnAck.jsx'
 import RelayMedia from 'hooks/client/components/RelayMedia.jsx'
 
@@ -230,6 +230,7 @@ function MarqueeLights() {
 }
 
 export default function FlashbackApp() {
+  ensureOwnershipAckFromBrowser()
   const route = initialRoute()
   const kind = routeKind(route)
 
@@ -490,11 +491,13 @@ export default function FlashbackApp() {
           <div className="fb-screen-glow" />
           <SeatRows />
         </div>
-        <OwnershipGate
-          onAck={() => {
-            setAck(true)
-          }}
-        />
+        {hasOwnershipAck() !== true ? (
+          <OwnershipGate
+            onAck={() => {
+              setAck(true)
+            }}
+          />
+        ) : null}
         <header className="fb-header">
           <a className="fb-brand" href="/" onClick={(e) => {
             try { e.preventDefault() } catch (err) {}
