@@ -1,14 +1,15 @@
 themes:
   dark:
     variables:
-      house: "#0a0708"
+      house: "#0d0505"
       velvet: "#3a1018"
       velvetDeep: "#1a080c"
-      gold: "#d4a574"
-      goldDim: "#8a6a45"
-      cream: "#f0e6d4"
+      gold: "#e8c872"
+      goldMid: "#d4a84b"
+      goldDim: "#b8860b"
+      cream: "#f5e6be"
       creamMuted: "#c4b49a"
-      seat: "#120a0c"
+      seat: "#120808"
       screen: "#1c1410"
       border: "#4a3028"
       warn: "#c45c4a"
@@ -113,6 +114,19 @@ themes:
         gap: "12px"
         color: "var(gold)"
         textDecoration: "none"
+        minWidth: "0"
+      ".fb-brand-logo":
+        display: "block"
+        height: "52px"
+        width: "auto"
+        maxWidth: "min(280px, 72vw)"
+        objectFit: "contain"
+      ".fb-brand-mark":
+        display: "block"
+        height: "28px"
+        width: "28px"
+        flexShrink: "0"
+        objectFit: "contain"
       ".fb-brand-text":
         display: "flex"
         flexDirection: "column"
@@ -126,6 +140,12 @@ themes:
         fontSize: "0.78rem"
         color: "var(creamMuted)"
         fontStyle: "italic"
+      ".fb-footer-brand":
+        display: "inline-flex"
+        flexDirection: "row"
+        alignItems: "center"
+        gap: "8px"
+        color: "var(gold)"
       ".fb-nav":
         display: "flex"
         flexDirection: "row"
@@ -245,6 +265,7 @@ themes:
         flexDirection: "row"
         flexWrap: "wrap"
         justifyContent: "space-between"
+        alignItems: "center"
         gap: "8px"
         padding: "14px 20px"
         borderTop: "1px solid var(border)"
@@ -254,6 +275,29 @@ themes:
       ".fb-footer a":
         color: "var(gold)"
         textDecoration: "none"
+      ".fb-footer-ipfs":
+        flex: "1 1 100%"
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        alignItems: "center"
+        gap: "8px"
+        marginTop: "4px"
+        paddingTop: "8px"
+        borderTop: "1px solid rgba(74,48,40,0.55)"
+      ".fb-footer-ipfs-label":
+        letterSpacing: "0.08em"
+        textTransform: "uppercase"
+        fontSize: "0.72rem"
+        color: "var(goldDim)"
+      ".fb-footer-ipfs-cid":
+        fontFamily: "ui-monospace, 'Courier New', monospace"
+        fontSize: "0.72rem"
+        color: "var(gold)"
+        wordBreak: "break-all"
+      ".fb-footer-ipfs-copy":
+        padding: "4px 10px"
+        fontSize: "0.75rem"
       ".fb-section-title":
         marginTop: "28px"
         marginBottom: "12px"
@@ -378,7 +422,7 @@ themes:
         border: "1px solid var(goldDim)"
         borderRadius: "2px"
         overflow: "hidden"
-        background: "linear-gradient(145deg, #2a1418 0%, #12080a 55%, #0a0708 100%)"
+        background: "linear-gradient(145deg, #2a1418 0%, #12080a 55%, #0d0505 100%)"
         boxShadow: "0 12px 36px rgba(0,0,0,0.45)"
         minHeight: "220px"
       ".fb-slide:hover":
@@ -386,7 +430,7 @@ themes:
       ".fb-slide-art":
         flex: "0 0 42%"
         maxWidth: "280px"
-        background: "#0a0708"
+        background: "#0d0505"
         display: "flex"
         alignItems: "center"
         justifyContent: "center"
@@ -848,6 +892,9 @@ themes:
         ".fb-curtain":
           width: "14%"
       "@media (max-width: 640px)":
+        ".fb-brand-logo":
+          height: "42px"
+          maxWidth: "min(220px, 68vw)"
         ".fb-brand-name":
           fontSize: "1.1rem"
         ".fb-header":

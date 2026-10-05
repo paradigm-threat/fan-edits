@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import StyleContext from '@clevertree/style'
 import { MarkdownRenderer } from '@clevertree/markdown'
 import manifest from '@hooks'
-import { TicketIcon, PlayChevron } from 'hooks/client/components/Icons.jsx'
+import { PlayChevron } from 'hooks/client/components/Icons.jsx'
 import Affirmation, {
   hasOwnershipAck,
   ensureOwnershipAckFromBrowser,
@@ -196,6 +196,29 @@ function resolveProjectCid(project) {
   return parseCidFromStub(stub)
 }
 
+/** mediaRoot from assets.manifest.json (UnixFS DAG of all thin assets). */
+function resolveMediaRootCid() {
+  const raw = fetchText('assets.manifest.json')
+  if (!raw || raw.length === 0) {
+    return ''
+  }
+  try {
+    const data = JSON.parse(raw)
+    if (data && typeof data.mediaRoot === 'string') {
+      const c = str(data.mediaRoot).trim()
+      if (looksLikeCid(c)) {
+        return c
+      }
+    }
+  } catch (e) {}
+  const tip = fetchText('IPFS_ROOT')
+  const line = str(tip).split('\n')[0]
+  if (looksLikeCid(line)) {
+    return line
+  }
+  return ''
+}
+
 function copyCidText(cid) {
   const t = str(cid)
   if (t.length === 0) {
@@ -272,15 +295,9 @@ function renderIpfsInspect(cidRaw) {
         <a href={'https://check.ipfs.network/?cid=' + enc} target="_blank" rel="noopener noreferrer">
           Providers
         </a>
-        <a href={'https://ipfs.io/ipfs/' + enc} target="_blank" rel="noopener noreferrer">
-          ipfs.io
-        </a>
-        <a href={'https://dweb.link/ipfs/' + enc} target="_blank" rel="noopener noreferrer">
-          dweb.link
-        </a>
       </div>
       <p className="fb-media-inspect-note">
-        Open a link to inspect the hash. Public gateway fetches from this page are often CORS-blocked.
+        Playback is same-origin only. The server pins this CID into local IPFS; public gateways are not used for video.
       </p>
     </div>
   )
@@ -727,6 +744,8 @@ export default function FlashbackApp() {
     )
   }
 
+  const mediaRootCid = resolveMediaRootCid()
+
   return (
     <StyleContext src="hooks/client/theme.yaml">
       <div className="fb-app">
@@ -762,11 +781,13 @@ export default function FlashbackApp() {
             try { e.preventDefault() } catch (err) {}
             navigate('/')
           }}>
-            <TicketIcon />
-            <span className="fb-brand-text">
-              <span className="fb-brand-name">Flashback Repository</span>
-              <span className="fb-brand-tag">Watchable Fan-Edits of New and Classic Movies</span>
-            </span>
+            <img
+              className="fb-brand-logo"
+              src="/hooks/client/brand/svg/logo-compact.svg"
+              alt="Flashback Repository"
+              width="220"
+              height="66"
+            />
           </a>
           <nav className="fb-nav">
             <a href="/" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/') }}>Library</a>
@@ -777,7 +798,16 @@ export default function FlashbackApp() {
         <NowShowing variant="lcd" itemsJson={nowShowingItemsJson(projects)} ariaLabel="Now showing titles" />
         <main className="fb-main">{main}</main>
         <footer className="fb-footer">
-          <span className="fb-footer-brand">Flashback Repository</span>
+          <span className="fb-footer-brand">
+            <img
+              className="fb-brand-mark"
+              src="/hooks/client/brand/svg/icon-mark.svg"
+              alt=""
+              width="28"
+              height="28"
+            />
+            Flashback Repository
+          </span>
           <span className="fb-footer-links">
             <a href="/motivation">Why we’re doing this</a>
             {' · '}
@@ -785,6 +815,30 @@ export default function FlashbackApp() {
             {' · '}
             <a href="/terms">Terms</a>
           </span>
+          {looksLikeCid(mediaRootCid) ? (
+              <div className="fb-footer-ipfs">
+                <span className="fb-footer-ipfs-label">Media root (IPFS)</span>
+                <code className="fb-footer-ipfs-cid" title="UnixFS DAG of all thin media">
+                  {mediaRootCid}
+                </code>
+                <button
+                  type="button"
+                  className="fb-btn fb-footer-ipfs-copy"
+                  onClick={() => {
+                    copyCidText(mediaRootCid)
+                  }}
+                >
+                  Copy
+                </button>
+                <a
+                  href={'https://cid.ipfs.tech/#' + mediaRootCid}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Inspect
+                </a>
+              </div>
+            ) : null}
         </footer>
       </div>
     </StyleContext>

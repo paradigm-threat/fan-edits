@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "npm run test:native-hosts",
-    "test:native-hosts": "node hooks/client/native/inject-park-hosts.test.mjs && playwright test -c hooks/client/native/playwright.config.mjs",
+    "test:native-hosts": "node hooks/client/native/inject-park-hosts.test.mjs && node hooks/client/native/android-hosts.test.mjs && playwright test -c hooks/client/native/playwright.config.mjs",
     "test:native-hosts:install": "playwright install chromium"
   },
   "repository": {

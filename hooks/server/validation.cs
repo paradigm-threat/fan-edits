@@ -58,10 +58,14 @@ function isBlockedMedia(p) {
 function isAllowedPath(p) {
   if (p === 'index.json') return true
   if (p === 'assets.manifest.json') return true
+  if (p === 'IPFS_ROOT') return true
+  if (p === 'site.webmanifest') return true
+  if (p === 'package.json') return true
   if (p === '.relay.yaml') return true
   if (startsWith(p, '.relay/assets/') && endsWith(p, '.ipfs')) return true
   if (startsWith(p, 'hooks/')) return true
   if (startsWith(p, 'scripts/')) return true
+  if (startsWith(p, 'docs/') && (endsWith(p, '.md') || endsWith(p, '.MD'))) return true
   if (endsWith(p, '.md') || endsWith(p, '.MD')) return true
   if (endsWith(p, '.reel')) return true
   if (endsWith(p, '.srt') || endsWith(p, '.SRT')) return true

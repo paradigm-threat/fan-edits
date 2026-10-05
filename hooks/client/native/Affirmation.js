@@ -19,6 +19,11 @@ export function movieStorageKey(slug) {
 }
 
 export function hasStoredAck(storageKey) {
+  try {
+    if (typeof globalThis !== 'undefined' && globalThis.__relaySkipAffirmations === true) {
+      return true
+    }
+  } catch (eSkip) {}
   let key = ''
   if (storageKey !== null) {
     key = '' + storageKey

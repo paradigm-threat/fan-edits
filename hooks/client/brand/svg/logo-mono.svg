@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200">
+  <!-- Monochrome white version for dark backgrounds -->
+  <g transform="translate(20, 30)">
+    <path d="M10 10 L50 10 L55 20 L55 120 L50 130 L10 130 L5 120 L5 20 Z" 
+          fill="none" stroke="#FFFFFF" stroke-width="3"/>
+    <rect x="12" y="25" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="12" y="40" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="12" y="55" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="12" y="70" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="12" y="85" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="12" y="100" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="40" y="25" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="40" y="40" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="40" y="55" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="40" y="70" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="40" y="85" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="40" y="100" width="8" height="6" rx="1" fill="#FFFFFF"/>
+    <rect x="27" y="30" width="6" height="80" rx="1" fill="#FFFFFF"/>
+    <rect x="18" y="48" width="24" height="6" rx="1" fill="#FFFFFF"/>
+    <path d="M30 22 L34 30 L30 38 L26 30 Z" fill="#FFFFFF"/>
+  </g>
+  <text x="95" y="85" font-family="Georgia, 'Times New Roman', serif" font-size="42" font-weight="600" 
+        fill="#FFFFFF" letter-spacing="1.5">Flashback</text>
+  <text x="95" y="130" font-family="Georgia, 'Times New Roman', serif" font-size="36" font-weight="400" 
+        fill="#E0E0E0" letter-spacing="3">Repository</text>
+  <text x="95" y="165" font-family="Helvetica, Arial, sans-serif" font-size="12" 
+        fill="#AAAAAA" letter-spacing="1.2">OWN THE ORIGINAL  ·  THEN IMPROVE IT</text>
+</svg>

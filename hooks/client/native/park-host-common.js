@@ -8,9 +8,42 @@
   'use strict';
 
   var CSS_ID = 'fb-park-native-css';
+  var BRAND_LINKS_ID = 'fb-brand-head-links';
+
+  function ensureBrandHeadLinks() {
+    try {
+      if (!global.document || global.document.getElementById(BRAND_LINKS_ID)) return;
+      var head = global.document.head || global.document.getElementsByTagName('head')[0];
+      if (!head) return;
+      var mark = global.document.createElement('meta');
+      mark.id = BRAND_LINKS_ID;
+      mark.name = 'fb-brand-links';
+      mark.content = '1';
+      head.appendChild(mark);
+
+      function addLink(attrs) {
+        var el = global.document.createElement('link');
+        for (var k in attrs) {
+          if (Object.prototype.hasOwnProperty.call(attrs, k)) el.setAttribute(k, attrs[k]);
+        }
+        head.appendChild(el);
+      }
+      addLink({ rel: 'icon', href: '/hooks/client/favicon.svg', type: 'image/svg+xml' });
+      addLink({ rel: 'icon', href: '/favicon.ico', sizes: 'any' });
+      addLink({ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' });
+      addLink({ rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' });
+      addLink({ rel: 'apple-touch-icon', href: '/apple-touch-icon.png' });
+      addLink({ rel: 'manifest', href: '/site.webmanifest' });
+      var theme = global.document.createElement('meta');
+      theme.name = 'theme-color';
+      theme.content = '#0D0505';
+      head.appendChild(theme);
+    } catch (_) {}
+  }
 
   function ensureParkNativeCss() {
     try {
+      ensureBrandHeadLinks();
       if (!global.document || global.document.getElementById(CSS_ID)) return;
       var st = global.document.createElement('style');
       st.id = CSS_ID;
@@ -19,19 +52,19 @@
         '.fb-gate{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(6,4,5,.9)}',
         /* Movie title ack is inline under the player — not a fullscreen overlay. */
         '.fb-affirmation-native[data-fb-affirmation="title"]{position:relative;inset:auto;z-index:auto;display:block;padding:0;background:transparent;margin:12px 0 16px}',
-        '.fb-gate-panel,.fb-gate-card{max-width:480px;width:100%;padding:28px 26px 24px;background:linear-gradient(165deg,#3a1820 0%,#1a0c10 55%,#12080a 100%);border:1px solid #d4a574;box-shadow:0 24px 70px rgba(0,0,0,.6);border-radius:4px;color:#f3e6d4}',
+        '.fb-gate-panel,.fb-gate-card{max-width:480px;width:100%;padding:28px 26px 24px;background:linear-gradient(165deg,#3a1820 0%,#1a0c10 55%,#12080a 100%);border:1px solid #e8c872;box-shadow:0 24px 70px rgba(0,0,0,.6);border-radius:4px;color:#f5e6be}',
         '.fb-affirmation-native[data-fb-affirmation="title"] .fb-gate-panel,.fb-affirmation-native[data-fb-affirmation="title"] .fb-gate-card{max-width:100%;box-shadow:none}',
-        '.fb-gate-eyebrow,.fb-gate-kicker{margin:0 0 8px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#d4a574}',
-        '.fb-gate-title{margin:0 0 14px;font-size:1.5rem;line-height:1.25;color:#f3e6d4}',
-        '.fb-gate-body{margin:0 0 14px;color:#c9b8a4;font-size:1rem;line-height:1.55}',
+        '.fb-gate-eyebrow,.fb-gate-kicker{margin:0 0 8px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#e8c872}',
+        '.fb-gate-title{margin:0 0 14px;font-size:1.5rem;line-height:1.25;color:#f5e6be}',
+        '.fb-gate-body{margin:0 0 14px;color:#c4b49a;font-size:1rem;line-height:1.55}',
         '.fb-gate-body p{margin:0 0 .7em}',
-        '.fb-gate-check-box,.fb-gate-check{display:flex;flex-direction:row;gap:14px;align-items:flex-start;margin:20px 0 8px;padding:14px;background:rgba(0,0,0,.28);border:1px solid #a67c52;border-radius:4px;font-size:1rem;line-height:1.45;color:#f3e6d4;cursor:pointer}',
-        '.fb-gate-check-box input,.fb-gate input[type=checkbox]{width:24px;height:24px;min-width:24px;flex-shrink:0;margin-top:1px;accent-color:#d4a574;cursor:pointer}',
+        '.fb-gate-check-box,.fb-gate-check{display:flex;flex-direction:row;gap:14px;align-items:flex-start;margin:20px 0 8px;padding:14px;background:rgba(0,0,0,.28);border:1px solid #b8860b;border-radius:4px;font-size:1rem;line-height:1.45;color:#f5e6be;cursor:pointer}',
+        '.fb-gate-check-box input,.fb-gate input[type=checkbox]{width:24px;height:24px;min-width:24px;flex-shrink:0;margin-top:1px;accent-color:#e8c872;cursor:pointer}',
         '.fb-gate-check-box-warn{outline:2px solid #c44;outline-offset:2px}',
-        '.fb-gate-hint{margin:0 0 16px;font-size:.88rem;color:#c9b8a4}',
-        '.fb-gate-ok{width:100%;justify-content:center;padding:12px 18px;font-size:1.02rem;cursor:pointer;border:1px solid #d4a574;background:linear-gradient(180deg,#5a2430,#2a1018);color:#f3e6d4;border-radius:4px}',
+        '.fb-gate-hint{margin:0 0 16px;font-size:.88rem;color:#c4b49a}',
+        '.fb-gate-ok{width:100%;justify-content:center;padding:12px 18px;font-size:1.02rem;cursor:pointer;border:1px solid #e8c872;background:linear-gradient(180deg,#5a2430,#2a1018);color:#f5e6be;border-radius:4px}',
         '.fb-gate-links{margin:16px 0 0;font-size:.85rem;text-align:center}',
-        '.fb-gate-links a{color:#d4a574}',
+        '.fb-gate-links a{color:#e8c872}',
         /* Only hide welcome overlay after site-wide ack — never hide movie title ack via this rule. */
         'html[data-fb-welcome-ack="1"] .fb-affirmation-native[data-fb-affirmation="welcome"]{display:none!important}',
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-media-locked{display:none!important}',
@@ -41,10 +74,10 @@
         '.fb-media-unlock-target{display:none}',
         '.fb-video-controls .fb-btn{opacity:.45;pointer-events:none}',
         /* NowShowing LCD marquee */
-        '.fb-marquee{position:relative;z-index:2;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:8px;padding:7px 12px;background:linear-gradient(180deg,#14100a 0%,#0a0806 55%,#100c08 100%);border-bottom:1px solid #3a2a1a;box-shadow:inset 0 0 18px rgba(0,0,0,.7);font-family:ui-monospace,"Courier New",Courier,monospace;color:#d4a574}',
+        '.fb-marquee{position:relative;z-index:2;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:8px;padding:7px 12px;background:linear-gradient(180deg,#14100a 0%,#0a0806 55%,#100c08 100%);border-bottom:1px solid #3a2a1a;box-shadow:inset 0 0 18px rgba(0,0,0,.7);font-family:ui-monospace,"Courier New",Courier,monospace;color:#e8c872}',
         '.fb-marquee-board{flex:1;min-width:0;display:flex;flex-direction:row;align-items:center;max-width:920px;gap:8px}',
         '.fb-marquee-wing{max-width:22%;overflow:hidden;flex-shrink:0;display:flex;flex-direction:row;align-items:center;flex-wrap:nowrap}',
-        '.fb-marquee-wing-letter{display:inline-block;font-size:.62rem;letter-spacing:.08em;text-transform:lowercase;color:#d4a574;text-shadow:0 0 6px rgba(212,165,116,.55);line-height:1;padding:0 1px}',
+        '.fb-marquee-wing-letter{display:inline-block;font-size:.62rem;letter-spacing:.08em;text-transform:lowercase;color:#e8c872;text-shadow:0 0 6px rgba(232,200,114,.55);line-height:1;padding:0 1px}',
         '.fb-marquee-wing-gap{display:inline-block;width:4px}',
         '.fb-marquee-bulb{opacity:.55;flex-shrink:0;font-size:.45rem}',
         '.fb-bulb-0{opacity:.95}',
@@ -52,24 +85,32 @@
         '.fb-lcd{flex:1;min-width:0;display:flex;flex-direction:row;align-items:center}',
         '.fb-lcd-window{flex:1;min-width:0;overflow:hidden;white-space:nowrap;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}',
         '.fb-lcd-track{display:inline-block;white-space:nowrap;font-size:.78rem;letter-spacing:.04em;line-height:1.35;will-change:transform}',
-        '.fb-lcd-link{color:#d4a574;text-decoration:none;text-shadow:0 0 5px rgba(212,165,116,.35)}',
-        '.fb-lcd-link:hover{color:#f3e6d4;text-decoration:underline}',
+        '.fb-lcd-link{color:#e8c872;text-decoration:none;text-shadow:0 0 5px rgba(232,200,114,.35)}',
+        '.fb-lcd-link:hover{color:#f5e6be;text-decoration:underline}',
         '.fb-lcd-star{opacity:.9}',
         /* Carousel */
-        '.fb-now-showing-carousel{margin:12px 0 24px;color:#f3e6d4}',
-        '.fb-slideshow-count{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#a67c52;margin:0 0 8px}',
+        '.fb-now-showing-carousel{margin:12px 0 24px;color:#f5e6be}',
+        '.fb-slideshow-count{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#b8860b;margin:0 0 8px}',
         '.fb-slideshow-row{display:flex;flex-direction:row;align-items:stretch;gap:8px}',
         '.fb-slideshow-frame{flex:1;min-width:0;border:1px solid #3a2a1a;background:rgba(0,0,0,.35);padding:12px 14px}',
-        '.fb-slideshow-media{display:block;color:#d4a574;text-decoration:none}',
-        '.fb-slideshow-title{font-size:1.05rem;color:#f3e6d4}',
-        '.fb-slideshow-next{flex-shrink:0;width:42px;border:1px solid #a67c52;background:linear-gradient(180deg,rgba(58,16,24,.95),rgba(18,8,10,.98));color:#d4a574;font-size:1.4rem;cursor:pointer}',
-        /* Theater player shell */
+        '.fb-slideshow-media{display:block;color:#e8c872;text-decoration:none}',
+        '.fb-slideshow-title{font-size:1.05rem;color:#f5e6be}',
+        '.fb-slideshow-next{flex-shrink:0;width:42px;border:1px solid #b8860b;background:linear-gradient(180deg,rgba(58,16,24,.95),rgba(18,8,10,.98));color:#e8c872;font-size:1.4rem;cursor:pointer}',
+        /* Theater player shell + seed status */
         '.fb-theater-player{margin:12px 0}',
-        '.fb-media-locked,.fb-media-pending{padding:16px;border:1px solid #3a2a1a;background:rgba(0,0,0,.35);color:#c9b8a4}',
+        '.fb-media-locked,.fb-media-pending,.fb-media-failed{padding:16px;border:1px solid #3a2a1a;background:rgba(0,0,0,.35);color:#c4b49a}',
+        '.fb-media-failed{border-color:#6a3030}',
+        '.fb-media-msg{margin:0 0 8px;font-size:1rem;line-height:1.4;color:#f5e6be}',
+        '.fb-media-hint{margin:0 0 12px;font-size:.88rem;line-height:1.45;color:#c4b49a}',
+        '.fb-media-bar{height:8px;margin:0 0 12px;background:rgba(0,0,0,.45);border:1px solid #3a2a1a;border-radius:2px;overflow:hidden}',
+        '.fb-media-bar-fill{height:100%;background:linear-gradient(90deg,#b8860b,#e8c872);transition:width .35s ease}',
         '.fb-media-video{width:100%;max-height:70vh;background:#000}',
         '.fb-media-inspect{margin-top:12px;font-size:.85rem}',
-        '.fb-media-inspect-cid{word-break:break-all;color:#d4a574}',
-        '.fb-media-inspect-links a{color:#d4a574;margin-right:10px}',
+        '.fb-media-inspect-label{margin:0 0 6px;letter-spacing:.08em;text-transform:uppercase;color:#b8860b;font-size:.72rem}',
+        '.fb-media-inspect-cid-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 8px}',
+        '.fb-media-inspect-cid{word-break:break-all;color:#e8c872}',
+        '.fb-media-inspect-links a{color:#e8c872;margin-right:10px}',
+        '.fb-media-inspect-note{margin:6px 0 0;font-size:.8rem;color:#a69788}',
       ].join('');
       (global.document.head || global.document.documentElement).appendChild(st);
     } catch (_) {}

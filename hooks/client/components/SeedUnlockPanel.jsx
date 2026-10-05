@@ -161,8 +161,6 @@ function IpfsInspectRow(props) {
   const enc = encodeCid(cid)
   const inspector = 'https://cid.ipfs.tech/#' + cid
   const check = 'https://check.ipfs.network/?cid=' + enc
-  const gatewayIo = 'https://ipfs.io/ipfs/' + enc
-  const gatewayDweb = 'https://dweb.link/ipfs/' + enc
   let noteParts = []
   if (typeof bytesTotal === 'number' && bytesTotal > 0) {
     noteParts = noteParts.concat(['Reported size ' + formatBytes(bytesTotal)])
@@ -201,16 +199,10 @@ function IpfsInspectRow(props) {
         <a href={check} target="_blank" rel="noopener noreferrer">
           Providers
         </a>
-        <a href={gatewayIo} target="_blank" rel="noopener noreferrer">
-          ipfs.io
-        </a>
-        <a href={gatewayDweb} target="_blank" rel="noopener noreferrer">
-          dweb.link
-        </a>
       </div>
       {providerNote ? <p className="fb-media-inspect-note">{providerNote}</p> : null}
       <p className="fb-media-inspect-note">
-        Public gateway fetches from this page are often CORS-blocked; use the links. Seed status is from Relay.
+        Playback is same-origin only. The server pins this CID into local IPFS; public gateways are not used for video.
       </p>
     </div>
   )
@@ -368,12 +360,12 @@ function statusHint(st) {
     )
   }
   if (st && st.seedState === 'fetching') {
-    return 'Gateway is pulling blocks from IPFS peers…'
+    return 'This Relay node is pinning the CID into its local IPFS, then will serve the file same-origin.'
   }
   if (st && typeof st.providers === 'number' && st.providers === 0) {
-    return 'No peer currently advertises this CID. Seeding is stalled until a node pins and announces it.'
+    return 'No peer currently advertises this CID. The server queued a local pin; playback starts once blocks arrive.'
   }
-  return 'The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.'
+  return 'Playback uses this site only. The server fetches the CID into its local IPFS — the browser never talks to public gateways.'
 }
 
 function statusLabel(st) {
@@ -397,7 +389,7 @@ function statusLabel(st) {
     )
   }
   if (st.seedState === 'fetching') {
-    let line = 'Seeding… ' + pct + '%'
+    let line = 'Server fetching… ' + pct + '%'
     if (typeof st.bytesReceived === 'number' && typeof st.bytesTotal === 'number' && st.bytesTotal > 0) {
       line = line + ' · ' + formatBytes(st.bytesReceived) + ' / ' + formatBytes(st.bytesTotal)
     }
@@ -407,10 +399,10 @@ function statusLabel(st) {
     return line
   }
   if (st.seedState === 'unavailable' || st.error === 'ipfs-not-found') {
-    return 'Needs seed · ' + pct + '%' + (prov ? ' · ' + prov : ' · 0 providers')
+    return 'Waiting for this node’s IPFS… ' + pct + '%' + (prov ? ' · ' + prov : ' · 0 providers')
   }
   if (st.seedState === 'missing' || st.error === 'ipfs-pending') {
-    return 'Waiting for seed · ' + pct + '%' + (prov ? ' · ' + prov : '') + ' — retrying…'
+    return 'Waiting for this node’s IPFS… ' + pct + '%' + (prov ? ' · ' + prov : '') + ' — retrying…'
   }
   if (st.error === 'ipfs-busy') {
     return 'Busy · ' + pct + '% — retrying…'
@@ -421,7 +413,7 @@ function statusLabel(st) {
   if (st.message) {
     return st.message + ' · ' + pct + '%'
   }
-  return 'Needs seed · ' + pct + '%'
+  return 'Waiting for this node’s IPFS… ' + pct + '%'
 }
 
 function logicalFromSrc(src) {

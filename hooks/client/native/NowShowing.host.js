@@ -121,15 +121,13 @@
     const style = doc.createElement('style');
     const n = Math.max(24, (track.textContent || '').length);
     const secs = Math.max(40, Math.min(180, n * 0.08));
-    const steps = Math.max(40, Math.min(400, Math.floor(n / 4)));
     style.textContent =
       '@keyframes fb-lcd-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}' +
-      '.fb-lcd-track{display:inline-block;white-space:nowrap;animation:fb-lcd-scroll ' +
+      '.fb-lcd-track{display:inline-block;white-space:nowrap;will-change:transform;' +
+      'animation:fb-lcd-scroll ' +
       secs +
-      's steps(' +
-      steps +
-      ') infinite;}' +
-      '@media (prefers-reduced-motion:reduce){.fb-lcd-track{animation:none!important}}';
+      's linear infinite;}' +
+      '@media (prefers-reduced-motion:reduce){.fb-lcd-track{animation:none!important;transform:none}}';
     root.appendChild(style);
   }
 

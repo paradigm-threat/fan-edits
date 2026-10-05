@@ -25,6 +25,10 @@ They belong to **us**.
 
 The public site serves renders from **IPFS**, not from Git. Git only stores `.relay/assets/**/*.ipfs` stubs and `assets.manifest.json`. End-to-end ingest, pin, publish, fleet pin, and verification: **[IPFS-SEEDING.md](IPFS-SEEDING.md)**.
 
+## Android
+
+The Flashback APK loads this site from `https://flashbackrepository.org`. It does not ship the client hook or the movies. A second, generic Relay APK can open any Relay origin and is the one with the server list and shell settings. Goals, flavors, offline saves, and the 24h hook reload: **[docs/ANDROID_APK.md](docs/ANDROID_APK.md)**.
+
 ## Current list of completed Fan Edits:
 
 [2012 (2009) - Salvation](/FanMixes/2012%20(2009)%20-%20Salvation "2012 (2009) - Salvation")

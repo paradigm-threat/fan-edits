@@ -68,7 +68,7 @@
   }
 
   function statusLabel(st) {
-    if (!st) return 'Checking seed status… 0%';
+    if (!st) return 'Checking this node’s IPFS… 0%';
     if (st.ok) return 'Ready';
     const pct = displayPct(st);
     const prov =
@@ -81,7 +81,7 @@
       );
     }
     if (st.seedState === 'fetching') {
-      let line = 'Seeding… ' + pct + '%';
+      let line = 'Server fetching… ' + pct + '%';
       if (st.bytesReceived != null && st.bytesTotal != null && st.bytesTotal > 0) {
         line += ' · ' + formatBytes(st.bytesReceived) + ' / ' + formatBytes(st.bytesTotal);
       }
@@ -89,15 +89,15 @@
       return line;
     }
     if (st.seedState === 'unavailable' || st.error === 'ipfs-not-found') {
-      return 'Needs seed · ' + pct + '%' + (prov ? ' · ' + prov : ' · 0 providers');
+      return 'Waiting for this node’s IPFS… ' + pct + '%' + (prov ? ' · ' + prov : ' · 0 providers');
     }
     if (st.seedState === 'missing' || st.error === 'ipfs-pending') {
-      return 'Waiting for seed · ' + pct + '%' + (prov ? ' · ' + prov : '') + ' — retrying…';
+      return 'Waiting for this node’s IPFS… ' + pct + '%' + (prov ? ' · ' + prov : '') + ' — retrying…';
     }
     if (st.error === 'ipfs-busy') return 'Busy · ' + pct + '% — retrying…';
     if (st.error === 'ipfs-gateway-timeout') return 'Gateway timeout · ' + pct + '% — retrying…';
     if (st.message) return st.message + ' · ' + pct + '%';
-    return 'Needs seed · ' + pct + '%';
+    return 'Waiting for this node’s IPFS… ' + pct + '%';
   }
 
   function statusHint(st) {
@@ -109,12 +109,12 @@
       );
     }
     if (st && st.seedState === 'fetching') {
-      return 'Gateway is pulling blocks from IPFS peers…';
+      return 'This Relay node is pinning the CID into its local IPFS, then will serve the file same-origin.';
     }
     if (st && typeof st.providers === 'number' && st.providers === 0) {
-      return 'No peer currently advertises this CID. Seeding is stalled until a node pins and announces it.';
+      return 'No peer currently advertises this CID. The server queued a local pin; playback starts once blocks arrive.';
     }
-    return 'The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.';
+    return 'Playback uses this site only. The server fetches the CID into its local IPFS — the browser never talks to public gateways.';
   }
 
   function parseStatusJson(j) {
@@ -172,8 +172,6 @@
     const specs = [
       ['CID Inspector', 'https://cid.ipfs.tech/#' + cid],
       ['Providers', 'https://check.ipfs.network/?cid=' + enc],
-      ['ipfs.io', 'https://ipfs.io/ipfs/' + enc],
-      ['dweb.link', 'https://dweb.link/ipfs/' + enc],
     ];
     specs.forEach((pair) => {
       const a = global.document.createElement('a');
@@ -184,6 +182,12 @@
       links.appendChild(a);
     });
     wrap.appendChild(links);
+
+    const playNote = global.document.createElement('p');
+    playNote.className = 'fb-media-inspect-note';
+    playNote.textContent =
+      'Playback is same-origin only. Public gateways are not used for video.';
+    wrap.appendChild(playNote);
 
     if (providers != null || (typeof bytesTotal === 'number' && bytesTotal > 0)) {
       const note = global.document.createElement('p');

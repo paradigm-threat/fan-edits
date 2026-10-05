@@ -2,7 +2,21 @@
 
 Flashback Repository ([flashbackrepository.org](https://flashbackrepository.org/)) is a **thin IPFS** Relay catalog repo: Git holds CleverScript, metadata, and **text pointer stubs** under `.relay/assets/`. The actual `.mkv` files live on IPFS and are pinned by whoever seeds them (your workstation and/or the Relay fleet).
 
+**Playback is same-origin only.** The browser requests `/FanMixes/…/….mkv` on this site. Relay resolves the CID, pins it into the **node’s local Kubo**, and serves bytes (Range) from that Kubo. The browser does **not** talk to `ipfs.io` / Helia / public gateways for video.
+
 See also: [docs/RELAY_DESKTOP.md](docs/RELAY_DESKTOP.md), [docs/PARKED_THIN_VIDEO.md](docs/PARKED_THIN_VIDEO.md), and **`relay-gateway/docs/RELAY_IPFS.md`** in your relay-gateway checkout (Kubo install, gateway env, status JSON).
+
+## Fleet fetch limits (movie exception)
+
+For multi‑GB fan-edits, gateway defaults are raised:
+
+| Env | Default (thin-video) |
+|-----|----------------------|
+| `RELAY_IPFS_MAX_FETCH_BYTES` | **8 GiB** |
+| `RELAY_IPFS_MAX_RANGE_BYTES` | **64 MiB** (per Range response) |
+| `RELAY_IPFS_CACHE_MAX_BYTES` | **200 GiB** |
+
+Prefer **Kubo pin + Range** over stuffing every mkv into the relay file cache.
 
 ## Prerequisites
 

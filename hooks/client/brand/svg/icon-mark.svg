@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8C872"/>
+      <stop offset="50%" stop-color="#D4A84B"/>
+      <stop offset="100%" stop-color="#B8860B"/>
+    </linearGradient>
+    <linearGradient id="darkGold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F0D78C"/>
+      <stop offset="100%" stop-color="#A67C00"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a0a0a"/>
+      <stop offset="100%" stop-color="#0d0505"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded dark background for app icon feel -->
+  <rect x="4" y="4" width="152" height="152" rx="28" fill="url(#bgGrad)"/>
+  <rect x="4" y="4" width="152" height="152" rx="28" fill="none" stroke="url(#goldGrad)" stroke-width="3"/>
+  
+  <!-- Mark centered -->
+  <g transform="translate(50, 20) scale(1.1)">
+    <path d="M10 10 L50 10 L55 20 L55 120 L50 130 L10 130 L5 120 L5 20 Z" 
+          fill="none" stroke="url(#goldGrad)" stroke-width="3.5"/>
+    <rect x="12" y="25" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="12" y="40" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="12" y="55" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="12" y="70" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="12" y="85" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="12" y="100" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="40" y="25" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="40" y="40" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="40" y="55" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="40" y="70" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="40" y="85" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="40" y="100" width="8" height="6" rx="1" fill="url(#goldGrad)"/>
+    <rect x="27" y="30" width="6" height="80" rx="1" fill="url(#darkGold)"/>
+    <rect x="18" y="48" width="24" height="6" rx="1" fill="url(#darkGold)"/>
+    <path d="M30 22 L34 30 L30 38 L26 30 Z" fill="url(#goldGrad)"/>
+  </g>
+</svg>

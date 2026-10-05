@@ -46,5 +46,13 @@ export default function run(ctx, next) {
     }
   }
 
+  // Thin IPFS: logical media paths are absent from Git; serve via central .ipfs stubs.
+  var ipfsFile = resolveIpfsFromGetContext(ctx, {
+    sources: ["centralDir", "manifest"]
+  });
+  if (ipfsFile !== null) {
+    return ipfsFile;
+  }
+
   return next(ctx);
 }

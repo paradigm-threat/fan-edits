@@ -127,6 +127,18 @@ def main() -> int:
         if r.returncode != 0:
             failed += 1
             print("FAIL", rel, file=sys.stderr, flush=True)
+
+    build = ROOT / "scripts" / "build-ipfs-media-root.py"
+    if build.is_file():
+        print("Building IPFS mediaRoot DAG…", flush=True)
+        cmd = [sys.executable, str(build)]
+        # Partial OK while some titles still pending; re-run without --skip-missing before publish.
+        if failed:
+            cmd.append("--skip-missing")
+        br = subprocess.run(cmd, cwd=ROOT)
+        if br.returncode != 0:
+            print("FAIL build-ipfs-media-root", file=sys.stderr, flush=True)
+            failed += 1
     return 1 if failed else 0
 
 
