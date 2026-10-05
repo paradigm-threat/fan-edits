@@ -57,7 +57,7 @@ function subtitleTracks(project) {
   if (!project || !project.subtitles) return []
   return project.subtitles.map(function (t) {
     const track = {
-      src: t.src.startsWith('/') ? t.src : '/' + t.src,
+      src: t.src.charAt(0) === '/' ? t.src : '/' + t.src,
       label: t.label || 'Subtitles',
       lang: t.lang || 'en',
     }
@@ -81,7 +81,9 @@ function projectsInCategory(projects, category) {
 
 function fetchText(path) {
   try {
-    const res = fetch('/' + path.replace(/^\//, ''))
+    let p = str(path)
+    if (p.charAt(0) === '/') p = p.slice(1)
+    const res = fetch('/' + p)
     if (res && res.ok === true && res.text) return res.text
   } catch (e) {}
   return ''
