@@ -374,17 +374,62 @@ function SeatRows() {
   )
 }
 
-function MarqueeLights() {
-  let bulbs = []
-  for (let i = 0; i < 16; i++) {
-    bulbs = bulbs.concat([<MarqueeBulb key={'b' + i} className={'fb-bulb fb-bulb-' + (i % 4)} />])
-  }
-  return <div className="fb-marquee-lights">{bulbs}</div>
+function projectSlug(p) {
+  try {
+    if (p && p.slug) {
+      return str(p.slug)
+    }
+  } catch (e) {}
+  return ''
 }
 
-/** Catalog titles joined with stars for the LCD billboard. CleverScript-safe. */
-function marqueeBoardText(projects) {
-  let board = ''
+/** Wing of glowing dots with letters of `phrase` woven between stars (no separate label row). */
+function MarqueeWing(props) {
+  let phrase = str(props.phrase)
+  let prefix = str(props.prefix)
+  if (prefix.length === 0) {
+    prefix = 'w'
+  }
+  let out = []
+  let bi = 0
+  let lead = 2
+  while (bi < lead) {
+    out = out.concat([
+      <MarqueeBulb key={prefix + 'lb' + bi} className={'fb-bulb fb-bulb-' + (bi % 4)} />,
+    ])
+    bi = bi + 1
+  }
+  let ci = 0
+  while (ci < phrase.length) {
+    let ch = phrase.charAt(ci)
+    out = out.concat([
+      <MarqueeBulb key={prefix + 'b' + ci} className={'fb-bulb fb-bulb-' + ((bi + ci) % 4)} />,
+    ])
+    if (ch === ' ') {
+      out = out.concat([<span key={prefix + 'sp' + ci} className="fb-wing-gap" aria-hidden="true" />])
+    } else {
+      out = out.concat([
+        <span key={prefix + 'c' + ci} className="fb-wing-letter">
+          {ch}
+        </span>,
+      ])
+    }
+    ci = ci + 1
+  }
+  out = out.concat([
+    <MarqueeBulb key={prefix + 'tb0'} className={'fb-bulb fb-bulb-' + ((bi + ci) % 4)} />,
+    <MarqueeBulb key={prefix + 'tb1'} className={'fb-bulb fb-bulb-' + ((bi + ci + 1) % 4)} />,
+  ])
+  return (
+    <div className="fb-marquee-lights fb-marquee-wing" aria-hidden="true">
+      {out}
+    </div>
+  )
+}
+
+/** Catalog title+slug pairs for the LCD billboard. CleverScript-safe. */
+function marqueeEntries(projects) {
+  let out = []
   let list = []
   try {
     if (projects) {
@@ -395,12 +440,22 @@ function marqueeBoardText(projects) {
   }
   for (let i = 0; i < list.length; i++) {
     let t = projectTitle(list[i])
-    if (t.length > 0) {
-      if (board.length === 0) {
-        board = '★ ' + t
-      } else {
-        board = board + ' ★ ' + t
-      }
+    let s = projectSlug(list[i])
+    if (t.length > 0 && s.length > 0) {
+      out = out.concat([{ title: t, slug: s }])
+    }
+  }
+  return out
+}
+
+function marqueePlainText(entries) {
+  let board = ''
+  for (let i = 0; i < entries.length; i++) {
+    let t = entries[i].title
+    if (board.length === 0) {
+      board = '★ ' + t
+    } else {
+      board = board + ' ★ ' + t
     }
   }
   if (board.length === 0) {
@@ -409,14 +464,44 @@ function marqueeBoardText(projects) {
   return board + ' ★ '
 }
 
+function marqueeTrackNodes(entries, keyPrefix) {
+  let nodes = []
+  if (entries.length === 0) {
+    return [
+      <span key={keyPrefix + 'empty'} className="fb-lcd-star">
+        ★ no titles yet ★
+      </span>,
+    ]
+  }
+  for (let i = 0; i < entries.length; i++) {
+    let e = entries[i]
+    nodes = nodes.concat([
+      <span key={keyPrefix + 's' + i} className="fb-lcd-star">
+        {' ★ '}
+      </span>,
+      <a key={keyPrefix + 'a' + i} className="fb-lcd-link" href={'/' + e.slug}>
+        {e.title}
+      </a>,
+    ])
+  }
+  nodes = nodes.concat([
+    <span key={keyPrefix + 'end'} className="fb-lcd-star">
+      {' ★ '}
+    </span>,
+  ])
+  return nodes
+}
+
 function MarqueeBoard(props) {
-  let board = marqueeBoardText(props.projects)
+  let entries = marqueeEntries(props.projects)
+  let board = marqueePlainText(entries)
   let n = board.length
   if (n < 1) {
     n = 1
   }
   let dur = n * 0.42
-  let track = board + board
+  let half = marqueeTrackNodes(entries, 'a')
+  let track = half.concat(marqueeTrackNodes(entries, 'b'))
   let css =
     '@keyframes fb-lcd-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}' +
     '@media (prefers-reduced-motion:no-preference){.fb-lcd-track{animation:fb-lcd-scroll ' +
@@ -428,17 +513,10 @@ function MarqueeBoard(props) {
   return (
     <div className="fb-marquee-board">
       <style>{css}</style>
-      <p className="fb-marquee-label">now showing</p>
       <div className="fb-lcd" aria-label={board}>
-        <span className="fb-lcd-end" aria-hidden="true">
-          ★
-        </span>
-        <div className="fb-lcd-window" aria-hidden="true">
+        <div className="fb-lcd-window">
           <div className="fb-lcd-track">{track}</div>
         </div>
-        <span className="fb-lcd-end" aria-hidden="true">
-          ★
-        </span>
       </div>
     </div>
   )
@@ -804,9 +882,9 @@ export default function FlashbackApp() {
           </nav>
         </header>
         <div className="fb-marquee">
-          <MarqueeLights />
+          <MarqueeWing phrase="now" prefix="L" />
           <MarqueeBoard projects={projects} />
-          <MarqueeLights />
+          <MarqueeWing phrase="showing" prefix="R" />
         </div>
         <main className="fb-main">{main}</main>
         <footer className="fb-footer">
