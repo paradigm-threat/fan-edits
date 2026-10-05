@@ -231,7 +231,14 @@ function IpfsInspectRow(props) {
   if (!looksLikeCid(cid)) {
     return null
   }
-  const enc = encodeURIComponent(cid)
+  let enc = cid
+  try {
+    if (typeof globalThis !== 'undefined' && globalThis.encodeURIComponent) {
+      enc = globalThis.encodeURIComponent(cid)
+    }
+  } catch (e3) {
+    enc = cid
+  }
   const inspector = 'https://cid.ipfs.tech/#' + cid
   const check = 'https://check.ipfs.network/?cid=' + enc
   const gatewayIo = 'https://ipfs.io/ipfs/' + enc
