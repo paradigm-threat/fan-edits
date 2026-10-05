@@ -466,6 +466,9 @@ export default function FlashbackApp() {
               </p>
             </div>
             <div className="fb-media-unlock-target">
+              <div className="fb-media fb-media-pending" data-relay-media="pending">
+                <p className="fb-media-msg">This file needs to be seeded</p>
+              </div>
               <RelayMedia
                 src={mediaSrc(selected)}
                 subtitles={subtitleTracks(selected)}
