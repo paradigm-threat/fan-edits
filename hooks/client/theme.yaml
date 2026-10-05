@@ -447,6 +447,8 @@ themes:
         lineHeight: "1.45"
         color: "var(cream)"
         cursor: "pointer"
+      ".fb-gate-form":
+        margin: "0"
       ".fb-gate-checkbox":
         width: "24px"
         height: "24px"

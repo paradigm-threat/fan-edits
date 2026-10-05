@@ -1,14 +1,12 @@
 /**
  * First-visit ownership acknowledgment — must confirm before browsing/playing.
  *
- * CleverScript notes:
- * - Controlled checkboxes often fail to sync React state on hydrate.
- * - useState(open) is unreliable: SSR always renders the gate (no localStorage),
- *   and runtime re-runs can resurrect that SSR tree after setState(false).
- * - Visibility is derived from localStorage on every render; OK also removes the
- *   gate node so the UI dismisses even if a re-run races.
+ * CleverScript / park notes:
+ * - Hydrated onClick is unreliable (SSR gate can resurrect; hid handlers flake).
+ * - Use a native GET form + required checkbox so confirm works even without JS.
+ * - On return with ?ownershipAck=1, persist to localStorage and hide the gate.
  */
-import React, { useState } from 'react'
+import React from 'react'
 
 var ACK_KEY = 'flashback.ownershipAck.v1'
 
@@ -38,23 +36,36 @@ function writeAck() {
   } catch (e) {}
 }
 
-function gateCheckboxChecked() {
+function searchHasOwnershipAck() {
   try {
-    if (typeof globalThis === 'undefined' || !globalThis.document) {
+    if (typeof globalThis === 'undefined' || !globalThis.location) {
       return false
     }
-    let doc = globalThis.document
-    if (!doc.querySelector) {
-      return false
+    let search = '' + (globalThis.location.search || '')
+    if (search.indexOf('ownershipAck=1') >= 0) {
+      return true
     }
-    let el = doc.querySelector('input.fb-gate-checkbox')
-    if (!el) {
-      return false
-    }
-    return el.checked === true
-  } catch (e) {
+  } catch (e) {}
+  return false
+}
+
+function consumeAckQuery() {
+  if (searchHasOwnershipAck() !== true) {
     return false
   }
+  writeAck()
+  try {
+    if (typeof globalThis !== 'undefined' && globalThis.history && globalThis.history.replaceState) {
+      let path = '/'
+      try {
+        if (globalThis.location && globalThis.location.pathname) {
+          path = '' + globalThis.location.pathname
+        }
+      } catch (e2) {}
+      globalThis.history.replaceState(null, '', path)
+    }
+  } catch (e3) {}
+  return true
 }
 
 function removeGateNode() {
@@ -79,14 +90,21 @@ function removeGateNode() {
 }
 
 export function hasOwnershipAck() {
-  return readAck() === true
+  if (readAck() === true) {
+    return true
+  }
+  if (searchHasOwnershipAck() === true) {
+    return true
+  }
+  return false
 }
 
 export default function OwnershipGate(props) {
-  // Tick only forces a client re-render after OK; visibility comes from readAck().
-  const tickState = useState(0)
-  const tick = tickState[0]
-  const setTick = tickState[1]
+  // Persist query ack on client (and when hydrate re-runs).
+  let fromQuery = consumeAckQuery()
+  if (fromQuery === true) {
+    removeGateNode()
+  }
 
   if (readAck() === true) {
     return null
@@ -105,38 +123,29 @@ export default function OwnershipGate(props) {
         <p className="fb-gate-body">
           {"This site is a personal catalog of projects — not a pirate archive, and not a substitute for buying or renting the studio release."}
         </p>
-        <label className="fb-gate-check">
-          <input type="checkbox" className="fb-gate-checkbox" />
-          <span>
-            {"I confirm I own a legal copy of each original film before I play its edit."}
-          </span>
-        </label>
-        <p className="fb-gate-hint">
-          {"Check the box above, then tap OK to continue."}
-        </p>
-        <div className="fb-gate-actions">
-          <button
-            type="button"
-            className="fb-btn fb-btn-primary fb-gate-ok"
-            onClick={() => {
-              if (gateCheckboxChecked() !== true) {
-                return
-              }
-              writeAck()
-              removeGateNode()
-              try {
-                if (props && typeof props.onAck === 'function') {
-                  props.onAck()
-                }
-              } catch (e) {}
-              try {
-                setTick(tick + 1)
-              } catch (e2) {}
-            }}
-          >
-            OK — I confirm
-          </button>
-        </div>
+        <form className="fb-gate-form" method="get" action="/">
+          <input type="hidden" name="ownershipAck" value="1" />
+          <label className="fb-gate-check">
+            <input
+              type="checkbox"
+              className="fb-gate-checkbox"
+              name="confirm"
+              value="1"
+              required
+            />
+            <span>
+              {"I confirm I own a legal copy of each original film before I play its edit."}
+            </span>
+          </label>
+          <p className="fb-gate-hint">
+            {"Check the box above, then tap OK to continue."}
+          </p>
+          <div className="fb-gate-actions">
+            <button type="submit" className="fb-btn fb-btn-primary fb-gate-ok">
+              OK — I confirm
+            </button>
+          </div>
+        </form>
         <p className="fb-gate-links">
           <a href="/legal">Ownership policy</a>
           {' · '}

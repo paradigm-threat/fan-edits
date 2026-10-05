@@ -297,8 +297,9 @@ export default function FlashbackApp() {
   const setCommandSeq = seqState[1]
 
   const ackState = useState(hasOwnershipAck())
-  const ack = ackState[0]
+  const ackStored = ackState[0]
   const setAck = ackState[1]
+  const ack = ackStored === true || hasOwnershipAck() === true
 
   const initialMovieAck =
     kind.kind === 'movie' && kind.slug ? hasMovieOwnAck(kind.slug) === true : false
