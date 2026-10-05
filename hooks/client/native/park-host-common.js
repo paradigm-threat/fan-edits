@@ -48,12 +48,9 @@
       var st = global.document.createElement('style');
       st.id = CSS_ID;
       st.textContent = [
-        /* Affirmation / ownership gate */
-        '.fb-gate{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(6,4,5,.9)}',
-        /* Movie title ack is inline under the player — not a fullscreen overlay. */
-        '.fb-affirmation-native[data-fb-affirmation="title"]{position:relative;inset:auto;z-index:auto;display:block;padding:0;background:transparent;margin:12px 0 16px}',
+        /* Affirmation / ownership gate — fullscreen modal for welcome AND title */
+        '.fb-gate,.fb-affirmation-native{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(6,4,5,.9);box-sizing:border-box}',
         '.fb-gate-panel,.fb-gate-card{max-width:480px;width:100%;padding:28px 26px 24px;background:linear-gradient(165deg,#3a1820 0%,#1a0c10 55%,#12080a 100%);border:1px solid #e8c872;box-shadow:0 24px 70px rgba(0,0,0,.6);border-radius:4px;color:#f5e6be}',
-        '.fb-affirmation-native[data-fb-affirmation="title"] .fb-gate-panel,.fb-affirmation-native[data-fb-affirmation="title"] .fb-gate-card{max-width:100%;box-shadow:none}',
         '.fb-gate-eyebrow,.fb-gate-kicker{margin:0 0 8px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#e8c872}',
         '.fb-gate-title{margin:0 0 14px;font-size:1.5rem;line-height:1.25;color:#f5e6be}',
         '.fb-gate-body{margin:0 0 14px;color:#c4b49a;font-size:1rem;line-height:1.55}',
@@ -111,6 +108,9 @@
         '.fb-media-inspect-cid{word-break:break-all;color:#e8c872}',
         '.fb-media-inspect-links a{color:#e8c872;margin-right:10px}',
         '.fb-media-inspect-note{margin:6px 0 0;font-size:.8rem;color:#a69788}',
+        '.fb-media-playback-note{margin:0 0 8px;padding:8px 10px;border:1px solid #3a2a1a;background:rgba(0,0,0,.4);color:#e8c872;font-size:.9rem}',
+        '.fb-media-playback-error{margin:0 0 10px}',
+        '.fb-media-play-requested{outline:1px solid #e8c872;outline-offset:2px}',
       ].join('');
       (global.document.head || global.document.documentElement).appendChild(st);
     } catch (_) {}

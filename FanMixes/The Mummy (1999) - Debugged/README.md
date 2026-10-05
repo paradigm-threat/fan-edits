@@ -17,11 +17,11 @@ Removals are usually **violence** — live beetles eating people, swarm close-up
 - No Beni treasure-chamber death (scarabs eat him after “Goodbye, Beni.”)
 - No Jonathan arm-reset (scarab under the skin, dirty hunting knife, next shot uninjured)
 - Hom-Dai: live scarabs poured onto wrapped Imhotep. Resume Magi narration 'He was to remain sealed'.
-- Camp lecture: scarab skeletons / ate him alive / Hom-Dai / 10 plagues (source 00:58:02.836–00:59:01.793, cut 2026-09-23). Wider than the original 20s eat-talk window.
+- Camp lecture: scarab skeletons / ate him alive / Hom-Dai / 10 plagues (source 00:58:02.836–00:59:01.793, cut 2026-09-23). Wider than the original 20s eat-talk window. · [play 00:58:02.836–00:59:01.793](?t=00:58:02.836&end=00:59:01.793)
 - Hamunaptra: curse scarab swarm after Book of the Dead. Resume search 'Evelyn?'
 - Cairo: Imhotep/Beni finish Burns with scarabs. Resume biblical plague 'rivers and waters of Egypt ran red'.
-- Jonathan arm: scarab under the skin, dirty hunting knife, next shot uninjured (source 01:36:32.908–01:37:33.283).
-- Beni treasure-chamber death: scarabs eat him after 'Goodbye, Beni.' (source 01:53:27.236–01:54:36.203). Resume 'Look out!'
+- Jonathan arm: scarab under the skin, dirty hunting knife, next shot uninjured (source 01:36:32.908–01:37:33.283). · [play 01:36:32.908–01:37:33.283](?t=01:36:32.908&end=01:37:33.283)
+- Beni treasure-chamber death: scarabs eat him after 'Goodbye, Beni.' (source 01:53:27.236–01:54:36.203). Resume 'Look out!' · [play 01:53:27.236–01:54:36.203](?t=01:53:27.236&end=01:54:36.203)
 
 ## Subtitles (two English tracks)
 

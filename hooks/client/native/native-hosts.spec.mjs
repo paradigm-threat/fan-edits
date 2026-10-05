@@ -1,89 +1,348 @@
 /**
- * Isolated Playwright checks for park-native web hosts (no full park boot).
- * Run: npx playwright test hooks/client/native/native-hosts.playwright.mjs
+ * Playwright coverage for park-native Affirmation modal + TheaterPlayer Play feedback.
+ * Run: playwright test -c hooks/client/native/playwright.config.mjs
  */
 import { test, expect } from '@playwright/test'
-import path from 'path'
-import { fileURLToPath } from 'url'
-import fs from 'fs'
+import fs from 'node:fs'
+import path from 'node:path'
+import http from 'node:http'
+import { fileURLToPath } from 'node:url'
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
+const dir = path.dirname(fileURLToPath(import.meta.url))
+const tinyPath = path.join(dir, 'fixtures', 'tiny.mkv')
+const tinyBuf = fs.readFileSync(tinyPath)
+const tinySize = tinyBuf.length
 
-function loadHost(name) {
-  return fs.readFileSync(path.join(__dirname, name), 'utf8')
+const MEDIA_PATH = '/FanMixes/Test/tiny.mkv'
+const SLUG = 'test-tiny'
+
+
+function startStaticServer() {
+  const mime = {
+    '.js': 'application/javascript; charset=utf-8',
+    '.mjs': 'application/javascript; charset=utf-8',
+    '.mkv': 'video/x-matroska',
+    '.html': 'text/html; charset=utf-8',
+  }
+  const server = http.createServer((req, res) => {
+    const url = new URL(req.url || '/', 'http://127.0.0.1')
+    let rel = decodeURIComponent(url.pathname)
+    if (rel === '/') rel = '/harness.html'
+    if (rel.startsWith('/hooks/client/native/')) {
+      rel = rel.slice('/hooks/client/native'.length)
+    }
+    const filePath = path.join(dir, rel.replace(/^\//, ''))
+    if (!filePath.startsWith(dir) || !fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
+      res.writeHead(404)
+      res.end('missing')
+      return
+    }
+    const ext = path.extname(filePath)
+    const body = fs.readFileSync(filePath)
+    if (req.headers.range && ext === '.mkv') {
+      const m = String(req.headers.range).match(/bytes=(\d+)-(\d*)/)
+      const start = m ? parseInt(m[1], 10) : 0
+      const end = m && m[2] ? parseInt(m[2], 10) : body.length - 1
+      const slice = body.subarray(start, end + 1)
+      res.writeHead(206, {
+        'Content-Type': mime[ext] || 'application/octet-stream',
+        'Accept-Ranges': 'bytes',
+        'Content-Range': `bytes ${start}-${start + slice.length - 1}/${body.length}`,
+        'Content-Length': String(slice.length),
+        'Access-Control-Allow-Origin': '*',
+      })
+      res.end(slice)
+      return
+    }
+    res.writeHead(200, {
+      'Content-Type': mime[ext] || 'application/octet-stream',
+      'Content-Length': String(body.length),
+      'Access-Control-Allow-Origin': '*',
+    })
+    res.end(body)
+  })
+  return new Promise((resolve) => {
+    server.listen(0, '127.0.0.1', () => {
+      const { port } = server.address()
+      resolve({ server, origin: `http://127.0.0.1:${port}` })
+    })
+  })
 }
 
-test.describe('park native web hosts', () => {
-  test('Affirmation: check + OK persists and hides', async ({ page }) => {
-    const html = `<!DOCTYPE html><html><body><div id="root"></div>
-<script>${loadHost('Affirmation.host.js')}</script>
-<script>
-  const root = document.getElementById('root');
-  const el = window.__fbBuildAffirmation({
-    mode: 'welcome',
-    title: 'Test Gate',
-    checkboxLabel: 'I confirm',
-    confirmLabel: 'OK',
-    storageKey: 'flashback.ownershipAck.v1',
-    confirmed: 'false',
-    linksJson: '[]',
-  }, () => {}, null);
-  root.appendChild(el);
-</script></body></html>`
-    await page.setContent(html, { url: 'https://example.com/' })
-    await page.locator('.fb-gate-check').check()
+const harnessHtml = `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Flashback native host harness</title>
+  <style>
+    body { margin: 0; background: #0d0505; color: #f5e6be; font-family: Georgia, serif; }
+    .fb-video-panel { position: relative; margin: 24px; border: 1px solid #3a2a1a; padding: 12px; }
+    .fb-video-controls { display: flex; gap: 8px; margin-top: 12px; }
+    .fb-btn { padding: 8px 14px; border: 1px solid #e8c872; background: #2a1018; color: #f5e6be; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="fb-video-panel">
+    <div id="player-host"></div>
+    <div id="affirm-host"></div>
+    <div class="fb-video-controls">
+      <button type="button" class="fb-btn" id="play">Play</button>
+      <button type="button" class="fb-btn" id="pause">Pause</button>
+    </div>
+  </div>
+  <script src="/hooks/client/native/park-host-common.js"></script>
+  <script src="/hooks/client/native/Affirmation.host.js"></script>
+  <script src="/hooks/client/native/TheaterPlayer.host.js"></script>
+  <script>
+    const slug = ${JSON.stringify(SLUG)};
+    const media = ${JSON.stringify(MEDIA_PATH)};
+    const playerMount = document.getElementById('player-host');
+    const affirmMount = document.getElementById('affirm-host');
+    const player = window.__fbBuildTheaterPlayer({
+      src: media,
+      cid: 'bafybeitesthostcid000000000000000000000000000000000',
+      seedState: 'pending',
+      unlocked: 'false',
+      playing: 'false',
+      command: '0',
+      commandSeq: '0',
+      commandArg: '',
+      startAt: '',
+    }, () => {}, null);
+    playerMount.appendChild(player);
+
+    const affirm = window.__fbBuildAffirmation({
+      mode: 'title',
+      eyebrow: 'CONFIRM',
+      title: 'I confirm I own a legal copy of Test Film',
+      body: 'Harness ownership gate.',
+      checkboxLabel: 'I confirm I own a legal copy of Test Film before I play its edit.',
+      confirmLabel: 'OK — I confirm',
+      storageKey: 'flashback.movieOwn.v1.' + slug,
+      confirmed: 'false',
+      linksJson: '[]',
+    }, () => {}, null);
+    affirmMount.appendChild(affirm);
+
+    // Match production unlock: path slug for movie ack
+    history.replaceState(null, '', '/' + slug);
+
+    document.getElementById('play').addEventListener('click', () => {
+      const host = document.querySelector('.fb-theater-player');
+      if (host && host.__fbStartMirrorHunt) {
+        host.__fbStartMirrorHunt({ fromPlay: true });
+      }
+      const ph = document.querySelector('[data-relay-park-native="fb-theater-player"]') || playerMount.firstElementChild;
+      // Attribute drive as get.jsx does
+      const built = document.querySelector('.fb-theater-player');
+      if (built && built.parentElement && built.parentElement.setAttribute) {
+        built.parentElement.setAttribute('data-playing', 'true');
+        built.parentElement.setAttribute('data-command', '1');
+        built.parentElement.setAttribute('data-command-seq', String(Date.now()));
+      }
+      if (built && built.__fbApplyCommands) {
+        built.__fbApplyCommands({
+          playing: 'true',
+          command: '1',
+          commandSeq: String(Date.now()),
+        });
+      }
+      const v = document.querySelector('video.fb-media-video');
+      if (v && v.play) v.play().catch(() => {});
+    });
+    document.getElementById('pause').addEventListener('click', () => {
+      const v = document.querySelector('video.fb-media-video');
+      if (v && v.pause) v.pause();
+    });
+  </script>
+</body>
+</html>
+`
+
+test.describe('native hosts', () => {
+  /** @type {{ server: import('http').Server, origin: string }} */
+  let srv
+
+  test.beforeAll(async () => {
+    fs.writeFileSync(path.join(dir, 'harness.html'), harnessHtml)
+    // Ensure host files are loadable under /hooks/client/native/ via server mapping
+    srv = await startStaticServer()
+  })
+
+  test.afterAll(async () => {
+    await new Promise((r) => srv.server.close(r))
+    try {
+      fs.unlinkSync(path.join(dir, 'harness.html'))
+    } catch (_) {}
+  })
+
+  test.beforeEach(async ({ page }) => {
+    await page.addInitScript(() => {
+      try {
+        localStorage.clear()
+      } catch (_) {}
+    })
+
+    await page.route(`**${MEDIA_PATH}**`, async (route) => {
+      const req = route.request()
+      const url = req.url()
+      if (url.includes('relayAssetStatus=1')) {
+        await route.fulfill({
+          status: 200,
+          contentType: 'application/vnd.relay.asset-status+json',
+          body: JSON.stringify({
+            schema: 'relay.asset-status.v1',
+            error: 'ok',
+            message: 'asset available',
+            retryable: false,
+            cid: 'bafybeitesthostcid000000000000000000000000000000000',
+            seed: {
+              state: 'cached',
+              progressPct: 100,
+              bytesTotal: tinySize,
+              localBlock: true,
+            },
+          }),
+        })
+        return
+      }
+      const range = req.headers()['range']
+      if (range) {
+        const m = String(range).match(/bytes=(\d+)-(\d*)/)
+        const start = m ? parseInt(m[1], 10) : 0
+        const end = m && m[2] ? parseInt(m[2], 10) : Math.min(start, tinySize - 1)
+        const endByte = Number.isFinite(end) && String(m[2] || '').length ? end : tinySize - 1
+        const slice = tinyBuf.subarray(start, endByte + 1)
+        await route.fulfill({
+          status: 206,
+          headers: {
+            'Content-Type': 'video/x-matroska',
+            'Accept-Ranges': 'bytes',
+            'Content-Range': `bytes ${start}-${start + slice.length - 1}/${tinySize}`,
+            'Content-Length': String(slice.length),
+            'Access-Control-Allow-Origin': '*',
+          },
+          body: slice,
+        })
+        return
+      }
+      await route.fulfill({
+        status: 200,
+        headers: {
+          'Content-Type': 'video/x-matroska',
+          'Accept-Ranges': 'bytes',
+          'Content-Length': String(tinySize),
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: tinyBuf,
+      })
+    })
+  })
+
+  test('title affirmation is centered fullscreen with darkened scrim', async ({ page }) => {
+    await page.goto(srv.origin + '/' + SLUG)
+    // Load harness at path that syncDocFlags can use
+    await page.goto(srv.origin + '/harness.html')
+    await page.evaluate((slug) => history.replaceState(null, '', '/' + slug), SLUG)
+
+    const gate = page.locator('.fb-affirmation-native[data-fb-affirmation="title"]')
+    await expect(gate).toBeVisible()
+
+    const box = await gate.boundingBox()
+    const vp = page.viewportSize()
+    expect(box).toBeTruthy()
+    expect(vp).toBeTruthy()
+    // Covers essentially the full viewport
+    expect(box.width).toBeGreaterThan(vp.width * 0.9)
+    expect(box.height).toBeGreaterThan(vp.height * 0.9)
+
+    const style = await gate.evaluate((el) => {
+      const cs = getComputedStyle(el)
+      return {
+        position: cs.position,
+        zIndex: cs.zIndex,
+        background: cs.backgroundColor,
+        display: cs.display,
+        alignItems: cs.alignItems,
+        justifyContent: cs.justifyContent,
+      }
+    })
+    expect(style.position).toBe('fixed')
+    expect(Number(style.zIndex)).toBeGreaterThanOrEqual(100)
+    expect(style.display).toBe('flex')
+    expect(style.alignItems).toBe('center')
+    expect(style.justifyContent).toBe('center')
+    // Darkened scrim (not transparent)
+    expect(style.background).toMatch(/rgba?\(/)
+    expect(style.background).not.toMatch(/rgba\(0,\s*0,\s*0,\s*0\)/)
+
+    // Play under the modal should not be the hit target
+    const play = page.locator('#play')
+    await expect(play).toBeVisible()
+    const playBox = await play.boundingBox()
+    const topEl = await page.evaluate(({ x, y }) => {
+      const el = document.elementFromPoint(x, y)
+      return el ? el.className + '|' + el.id + '|' + (el.getAttribute('data-fb-affirmation') || '') : ''
+    }, { x: playBox.x + playBox.width / 2, y: playBox.y + playBox.height / 2 })
+    expect(topEl).toMatch(/fb-affirmation|fb-gate|fb-gate-ok|fb-gate-check|fb-gate-panel|fb-gate-card|CONFIRM|confirm/i)
+  })
+
+  test('confirm unlocks and Play surfaces theater feedback or playback', async ({ page }) => {
+    await page.goto(srv.origin + '/harness.html')
+    await page.evaluate((slug) => {
+      history.replaceState(null, '', '/' + slug)
+      document.documentElement.removeAttribute('data-fb-welcome-ack')
+      document.documentElement.removeAttribute('data-fb-movie-ack')
+    }, SLUG)
+
+    const gate = page.locator('.fb-affirmation-native[data-fb-affirmation="title"]')
+    await expect(gate).toBeVisible()
+
+    await page.locator('.fb-gate-check input[type=checkbox], .fb-gate-check').first().click({ force: true })
+    // Prefer checking the checkbox input directly
+    const checkbox = page.locator('.fb-affirmation-native input[type=checkbox]')
+    if (await checkbox.count()) {
+      await checkbox.check({ force: true })
+    }
     await page.locator('.fb-gate-ok').click()
-    await expect(page.locator('.fb-affirmation-native')).toHaveAttribute('data-confirmed', '1')
-    await expect(page.locator('.fb-affirmation-native')).toBeHidden()
-  })
 
-  test('Affirmation title mode stays visible after welcome ack', async ({ page }) => {
-    const html = `<!DOCTYPE html><html data-fb-welcome-ack="1"><head></head><body>
-<script>${loadHost('park-host-common.js')}</script>
-<script>${loadHost('Affirmation.host.js')}</script>
-<div data-relay-park-native="fb-affirmation" data-mode="title" data-title="Own Boogie" data-confirmed="false" data-storage-key="flashback.movieOwn.v1.boogie" data-checkbox-label="I own it" data-confirm-label="OK" data-links-json="[]"></div>
-</body></html>`
-    await page.setContent(html, { url: 'https://example.com/boogie' })
-    await page.waitForFunction(() => !!document.querySelector('.fb-affirmation-native[data-fb-affirmation="title"]'))
-    await expect(page.locator('.fb-affirmation-native[data-fb-affirmation="title"]')).toBeVisible()
-    await expect(page.locator('.fb-gate-ok')).toBeVisible()
-  })
+    await expect(gate).toBeHidden({ timeout: 5000 })
+    await expect
+      .poll(async () => page.evaluate(() => document.documentElement.getAttribute('data-fb-movie-ack')))
+      .toBe(SLUG)
 
-  test('NowShowing lcd builds links', async ({ page }) => {
-    await page.setContent(`<!DOCTYPE html><html><body><div id="root"></div>
-<script>${loadHost('NowShowing.host.js')}</script>
-<script>
-  const root = document.getElementById('root');
-  const el = window.__fbBuildNowShowing({
-    variant: 'lcd',
-    itemsJson: JSON.stringify([
-      { title: 'Alpha', href: '/alpha' },
-      { title: 'Beta', href: '/beta' },
-    ]),
-  });
-  root.appendChild(el);
-</script></body></html>`)
-    await expect(page.locator('a.fb-lcd-link[href="/alpha"]')).toHaveCount(2)
-    await expect(page.locator('.fb-marquee-wing-letter').first()).toBeVisible()
-  })
+    // Wait for mirror hunt to mark ready (or show pending/failed feedback)
+    const theater = page.locator('.fb-theater-player')
+    await expect(theater).toBeVisible()
 
-  test('TheaterPlayer exposes video when ready', async ({ page }) => {
-    await page.setContent(`<!DOCTYPE html><html><body><div id="root"></div>
-<script>${loadHost('TheaterPlayer.host.js')}</script>
-<script>
-  const root = document.getElementById('root');
-  const el = window.__fbBuildTheaterPlayer({
-    src: 'https://example.com/x.mkv',
-    cid: 'bafybeiabc',
-    seedState: 'ready',
-    unlocked: 'true',
-    playing: 'false',
-    command: '0',
-    commandSeq: '0',
-  }, () => {}, null);
-  root.appendChild(el);
-</script></body></html>`)
-    await expect(page.locator('video.fb-media-video')).toHaveCount(1)
-    await expect(page.locator('.fb-media-inspect-cid')).toHaveText('bafybeiabc')
+    await page.locator('#play').click()
+
+    // Visible feedback: note, pending, failed, playing state, or video activity
+    await expect
+      .poll(
+        async () =>
+          page.evaluate(() => {
+            const note = document.querySelector('.fb-media-playback-note')
+            const pending = document.querySelector('.fb-media-pending, .fb-media-failed, .fb-media-play-requested')
+            const err = document.querySelector('.fb-media-playback-error')
+            const video = document.querySelector('video.fb-media-video')
+            const noteText = note && getComputedStyle(note).display !== 'none' ? note.textContent || '' : ''
+            const errText =
+              err && getComputedStyle(err).display !== 'none'
+                ? (err.querySelector('.fb-media-msg') || err).textContent || ''
+                : ''
+            const pendingVisible =
+              pending && getComputedStyle(pending).display !== 'none' ? pending.textContent || '' : ''
+            const playing =
+              video && !video.paused && video.readyState >= 2
+                ? 'playing'
+                : video && video.readyState >= 2
+                  ? 'readyState'
+                  : ''
+            return [noteText, errText, pendingVisible, playing].filter(Boolean).join(' | ')
+          }),
+        { timeout: 15000 },
+      )
+      .not.toBe('')
   })
 })

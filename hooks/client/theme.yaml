@@ -60,6 +60,37 @@ themes:
         borderLeft: "1px solid var(border)"
         background: "linear-gradient(270deg, var(velvetDeep), var(velvet) 40%, var(velvetDeep))"
         boxShadow: "inset 20px 0 40px rgba(0,0,0,0.45)"
+      ".fb-wall-lights":
+        position: "absolute"
+        top: "14%"
+        bottom: "22%"
+        width: "16%"
+        maxWidth: "200px"
+        display: "flex"
+        flexDirection: "column"
+        justifyContent: "space-evenly"
+        alignItems: "center"
+        pointerEvents: "none"
+        zIndex: "1"
+        opacity: "1"
+        transition: "opacity 1.6s ease"
+      ".fb-wall-lights-left":
+        left: "0"
+      ".fb-wall-lights-right":
+        right: "0"
+      ".fb-sconce":
+        display: "block"
+        width: "72px"
+        height: "110px"
+        borderRadius: "50%"
+        opacity: "0.34"
+        background: "radial-gradient(ellipse 55% 42% at 50% 28%, rgba(255,210,140,0.55) 0%, rgba(232,140,60,0.22) 38%, transparent 70%), radial-gradient(ellipse 55% 42% at 50% 72%, rgba(255,200,120,0.42) 0%, rgba(180,80,40,0.18) 40%, transparent 72%), radial-gradient(circle at 50% 50%, rgba(255,230,180,0.35) 0%, transparent 28%)"
+        filter: "blur(0.4px)"
+        mixBlendMode: "screen"
+      ".fb-wall-lights-right .fb-sconce":
+        transform: "scaleX(-1)"
+      ".fb-backdrop-playing .fb-wall-lights":
+        opacity: "0"
       ".fb-screen-glow":
         position: "absolute"
         left: "50%"
@@ -118,9 +149,10 @@ themes:
       ".fb-brand-logo":
         display: "block"
         height: "52px"
-        width: "auto"
-        maxWidth: "min(280px, 72vw)"
-        objectFit: "contain"
+        width: "52px"
+        flexShrink: "0"
+        borderRadius: "10px"
+        objectFit: "cover"
       ".fb-brand-mark":
         display: "block"
         height: "28px"
@@ -894,14 +926,23 @@ themes:
       "@media (max-width: 640px)":
         ".fb-brand-logo":
           height: "42px"
-          maxWidth: "min(220px, 68vw)"
+          width: "42px"
+          borderRadius: "8px"
         ".fb-brand-name":
           fontSize: "1.1rem"
+        ".fb-brand-tag":
+          display: "none"
         ".fb-header":
           padding: "12px 14px"
         ".fb-curtain":
           width: "8%"
           opacity: "0.55"
+        ".fb-wall-lights":
+          width: "10%"
+          opacity: "0.7"
+        ".fb-sconce":
+          width: "48px"
+          height: "72px"
         ".fb-movie-title":
           fontSize: "1.35rem"
         ".fb-slide":

@@ -1,23 +1,29 @@
 # Flashback Repository — Logo & Icon Set
 
-Antique gold on near-black; film-strip + stake mark. Source vectors under `svg/`.
+Antique gold on near-black. **Header logo** = cinematic three-frame film strip (Relay path). **App / favicon** = flat three-node mark. Source under `svg/` and `png/`.
 
 ## In repo
 
 | Path | Role |
 |------|------|
-| `svg/logo-primary.svg` | Full logo + tagline |
-| `svg/logo-compact.svg` | Header wordmark |
-| `svg/logo-mono.svg` | White mono |
-| `svg/icon-mark.svg` | Square app mark |
+| `png/logo-header.png` | Header mark (film-strip / landmarks) |
+| `png/logo-primary-800.png` | Large logo still |
+| `png/icon-512.png` | App / PWA icon |
+| `png/icon-192.png` | PWA icon |
+| `svg/logo-primary.svg` | Legacy full wordmark (optional) |
+| `svg/logo-compact.svg` | Legacy header wordmark (optional) |
+| `svg/logo-mono.svg` | Legacy white mono |
+| `svg/icon-mark.svg` | Square app mark (flat Relay film) |
 | `svg/favicon.svg` | Small mark |
 | `../favicon.svg` | Site favicon (same art) |
 
-Raster favicons / OG image are **thin IPFS** (stubs under `.relay/assets/`):
+Raster root favicons / OG image may also live as **thin IPFS** (stubs under `.relay/assets/` / local under `.relay/local-assets/`):
 
 - `/favicon.ico`, `/favicon-16x16.png`, `/favicon-32x32.png`
 - `/apple-touch-icon.png`, `/android-chrome-192x192.png`, `/android-chrome-512x512.png`
 - `/og-image.png`
+
+`site.webmanifest` points at tip `hooks/client/brand/png/icon-*.png`.
 
 ## Palette
 
@@ -28,3 +34,7 @@ Raster favicons / OG image are **thin IPFS** (stubs under `.relay/assets/`):
 | Gold Dark | `#B8860B` |
 | Cream | `#F5E6BE` |
 | BG Dark | `#0D0505` |
+
+## Motif
+
+Three vertical film nodes linked by two bridges = Relay’s three-point / two-line path woven into Flashback’s film language.

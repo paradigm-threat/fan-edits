@@ -9,10 +9,10 @@ Theatrical *Riddick* dumps you into desert survival and only later explains why 
 ## Changes
 
 - Removes distracting, sexist, and exaggerated dialogue throughout (legacy Unjinxed trims in `playlist2`).
-- Opening vulture/pterosaur kill removed (~30s–120s on source); main desert story starts at **00:01:13** VO.
-- Vaako / Furya-bait conspiracy block stays cut (`00:13:25`–`00:15:50` / ~805s–950s).
-- Necromonger / wrong-planet flashback (`~10:54`–`22:51` on source) plays **before** the desert survival plot (prologue A + B; in-body flashback omitted from main).
-- Savanna bridge (`00:22:51`–`00:24:03`) kept once after main survival; Necromonger epilogue (`~1:41+`) remains at the **end**.
+- Opening vulture/pterosaur kill removed (~30s–120s on source); main desert story starts at **00:01:13** VO. · [play 30–120](?t=30&end=120)
+- Vaako / Furya-bait conspiracy block stays cut (`00:13:25`–`00:15:50` / ~805s–950s). · [play 00:13:25–00:15:50](?t=00:13:25&end=00:15:50)
+- Necromonger / wrong-planet flashback (`~10:54`–`22:51` on source) plays **before** the desert survival plot (prologue A + B; in-body flashback omitted from main). · [play 10:54–22:51](?t=10:54&end=22:51)
+- Savanna bridge (`00:22:51`–`00:24:03`) kept once after main survival; Necromonger epilogue (`~1:41+`) remains at the **end**. · [play 00:22:51–00:24:03](?t=00:22:51&end=00:24:03)
 - vulture/pterosaur kill — QC refine in Kdenlive
 - Vaako / Furya-bait conspiracy — keep removed
 - flashback block A — plays in prologue only

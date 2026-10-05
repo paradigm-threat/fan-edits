@@ -12,19 +12,19 @@ Frank Bennett’s antagonist thread (abuse, kidnapping, river dump, trial, barbe
 
 - Removes Frank Bennett on-screen scenes and the Valdosta / river-club / abuse / kidnapping / investigation / trial thread.
 - Removes dialogue that names or explains Frank (SRT keyword clustering: Frank, Bennett, Valdosta, river club, trial, Scroggins, barbecue Frank, etc.).
-- Manual removal: Ninny “murdered that man” gossip (~414.85s–424.34s; hard cut, no join fade).
-- TODO: removal ~435.3s–454.3s (describe from timeline/subs)
-- TODO: removal ~1375.5s–1480.3s (describe from timeline/subs)
-- TODO: removal ~1607.6s–1625.8s (describe from timeline/subs)
-- TODO: removal ~1776.6s–1795.2s (describe from timeline/subs)
-- TODO: removal ~2323.4s–2343.8s (describe from timeline/subs)
-- TODO: removal ~2575.4s–2625.3s (describe from timeline/subs)
-- TODO: removal ~3022.5s–3041.4s (describe from timeline/subs)
-- TODO: removal ~3931.8s–3999.7s (describe from timeline/subs)
-- TODO: removal ~4183.7s–4253.0s (describe from timeline/subs)
-- TODO: removal ~4375.4s–4394.6s (describe from timeline/subs)
-- TODO: removal ~4482.1s–4562.0s (describe from timeline/subs)
-- TODO: removal ~4667.7s–4834.9s (describe from timeline/subs)
+- Manual removal: Ninny “murdered that man” gossip (~414.85s–424.34s; hard cut, no join fade). · [play 414.85–424.34](?t=414.85&end=424.34)
+- TODO: removal ~435.3s–454.3s (describe from timeline/subs) · [play 435.3–454.3](?t=435.3&end=454.3)
+- TODO: removal ~1375.5s–1480.3s (describe from timeline/subs) · [play 1375.5–1480.3](?t=1375.5&end=1480.3)
+- TODO: removal ~1607.6s–1625.8s (describe from timeline/subs) · [play 1607.6–1625.8](?t=1607.6&end=1625.8)
+- TODO: removal ~1776.6s–1795.2s (describe from timeline/subs) · [play 1776.6–1795.2](?t=1776.6&end=1795.2)
+- TODO: removal ~2323.4s–2343.8s (describe from timeline/subs) · [play 2323.4–2343.8](?t=2323.4&end=2343.8)
+- TODO: removal ~2575.4s–2625.3s (describe from timeline/subs) · [play 2575.4–2625.3](?t=2575.4&end=2625.3)
+- TODO: removal ~3022.5s–3041.4s (describe from timeline/subs) · [play 3022.5–3041.4](?t=3022.5&end=3041.4)
+- TODO: removal ~3931.8s–3999.7s (describe from timeline/subs) · [play 3931.8–3999.7](?t=3931.8&end=3999.7)
+- TODO: removal ~4183.7s–4253.0s (describe from timeline/subs) · [play 4183.7–4253](?t=4183.7&end=4253)
+- TODO: removal ~4375.4s–4394.6s (describe from timeline/subs) · [play 4375.4–4394.6](?t=4375.4&end=4394.6)
+- TODO: removal ~4482.1s–4562.0s (describe from timeline/subs) · [play 4482.1–4562](?t=4482.1&end=4562)
+- TODO: removal ~4667.7s–4834.9s (describe from timeline/subs) · [play 4667.7–4834.9](?t=4667.7&end=4834.9)
 - TODO: 8 further Frank-plot removals — describe from timeline/subs; see [remove-frank-bennett-ranges.json](remove-frank-bennett-ranges.json)
 
 ## Source media (not in git)

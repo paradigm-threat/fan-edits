@@ -217,13 +217,10 @@
     }
 
     const root = global.document.createElement('div');
-    root.className =
-      mode === 'title'
-        ? 'fb-movie-ack fb-affirmation-native'
-        : 'fb-gate fb-affirmation-native';
+    root.className = 'fb-gate fb-affirmation-native';
     root.setAttribute('data-fb-affirmation', mode);
     root.setAttribute('role', 'dialog');
-    root.setAttribute('aria-modal', mode === 'welcome' ? 'true' : 'false');
+    root.setAttribute('aria-modal', 'true');
 
     const panel = global.document.createElement('div');
     panel.className = 'fb-gate-panel fb-gate-card';

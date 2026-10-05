@@ -3,7 +3,7 @@
  */
 import React from 'react'
 
-/** Film-strip + stake mark (matches brand/svg/icon-mark.svg), for small chrome. */
+/** Flat 3-node Relay film mark (matches brand/svg/icon-mark.svg), for small chrome. */
 export function BrandMark(props) {
   let className = 'fb-icon fb-icon-brand'
   try {
@@ -13,23 +13,18 @@ export function BrandMark(props) {
   } catch (e) {}
   return (
     <svg className={className} viewBox="0 0 120 120" width="32" height="32" aria-hidden="true">
-      <rect x="4" y="4" width="112" height="112" rx="18" fill="none" stroke="currentColor" strokeWidth="4" />
-      <path
-        d="M34 22 L86 22 L92 30 L92 90 L86 98 L34 98 L28 90 L28 30 Z"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth="4"
-      />
-      <rect x="36" y="36" width="8" height="6" rx="1" fill="currentColor" />
-      <rect x="36" y="50" width="8" height="6" rx="1" fill="currentColor" />
-      <rect x="36" y="64" width="8" height="6" rx="1" fill="currentColor" />
-      <rect x="36" y="78" width="8" height="6" rx="1" fill="currentColor" />
-      <rect x="76" y="36" width="8" height="6" rx="1" fill="currentColor" />
-      <rect x="76" y="50" width="8" height="6" rx="1" fill="currentColor" />
-      <rect x="76" y="64" width="8" height="6" rx="1" fill="currentColor" />
-      <rect x="76" y="78" width="8" height="6" rx="1" fill="currentColor" />
-      <rect x="56" y="38" width="8" height="48" rx="2" fill="currentColor" />
-      <rect x="46" y="54" width="28" height="8" rx="2" fill="currentColor" />
+      <rect x="6" y="6" width="108" height="108" rx="18" fill="none" stroke="currentColor" strokeWidth="5" />
+      <rect x="18" y="22" width="24" height="76" rx="8" fill="none" stroke="currentColor" strokeWidth="4.5" />
+      <circle cx="30" cy="38" r="5.5" fill="currentColor" />
+      <circle cx="30" cy="82" r="5.5" fill="currentColor" />
+      <rect x="48" y="22" width="24" height="76" rx="8" fill="none" stroke="currentColor" strokeWidth="4.5" />
+      <circle cx="60" cy="38" r="5.5" fill="currentColor" />
+      <circle cx="60" cy="82" r="5.5" fill="currentColor" />
+      <rect x="78" y="22" width="24" height="76" rx="8" fill="none" stroke="currentColor" strokeWidth="4.5" />
+      <circle cx="90" cy="38" r="5.5" fill="currentColor" />
+      <circle cx="90" cy="82" r="5.5" fill="currentColor" />
+      <rect x="40" y="56" width="10" height="8" rx="2" fill="currentColor" />
+      <rect x="70" y="56" width="10" height="8" rx="2" fill="currentColor" />
     </svg>
   )
 }

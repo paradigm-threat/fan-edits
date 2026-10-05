@@ -22,6 +22,14 @@ export default function TheaterPlayer(props) {
   if (p.commandSeq !== null) {
     commandSeq = '' + p.commandSeq
   }
+  let commandArg = ''
+  if (p.commandArg !== null) {
+    commandArg = '' + p.commandArg
+  }
+  let startAt = ''
+  if (p.startAt !== null) {
+    startAt = '' + p.startAt
+  }
   return (
     <div
       className="fb-theater-player-host"
@@ -35,7 +43,8 @@ export default function TheaterPlayer(props) {
       data-playing={playing}
       data-command={command}
       data-command-seq={commandSeq}
-      data-command-arg=""
+      data-command-arg={commandArg}
+      data-start-at={startAt}
       data-unlocked={unlocked}
     />
   )

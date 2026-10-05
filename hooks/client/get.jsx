@@ -78,6 +78,186 @@ function mediaSrc(project) {
   return '/' + project.path + '/' + project.media
 }
 
+/** Last path segment — folder name fallback when README has no `#` title. */
+function folderNameFromPath(projectPath) {
+  const p = str(projectPath)
+  if (p.length === 0) {
+    return ''
+  }
+  const parts = p.split('/')
+  let last = ''
+  for (let i = 0; i < parts.length; i++) {
+    if (parts[i].length > 0) {
+      last = parts[i]
+    }
+  }
+  return last
+}
+
+/**
+ * Scan README for leading `# title` + next lead paragraph (subtitle/blurb).
+ * Returns { title, blurb, body } with hero lines excluded from body.
+ * No `#` → title = folderName, body = full README.
+ * CleverScript-safe.
+ */
+function parseReadmeHero(readme, folderName) {
+  const raw = str(readme)
+  const fallbackTitle = str(folderName)
+  if (raw.length === 0) {
+    return { title: fallbackTitle, blurb: '', body: '' }
+  }
+  const lines = raw.split('\n')
+  let i = 0
+  while (i < lines.length && str(lines[i]).trim().length === 0) {
+    i = i + 1
+  }
+  if (i >= lines.length) {
+    return { title: fallbackTitle, blurb: '', body: '' }
+  }
+  const first = str(lines[i]).trim()
+  if (first.indexOf('# ') !== 0) {
+    return { title: fallbackTitle, blurb: '', body: raw }
+  }
+  const title = first.slice(2).trim()
+  i = i + 1
+  while (i < lines.length && str(lines[i]).trim().length === 0) {
+    i = i + 1
+  }
+  // Next line / lead paragraph until blank or ## heading
+  const lead = []
+  while (i < lines.length) {
+    const s = str(lines[i]).trim()
+    if (s.length === 0) {
+      if (lead.length > 0) {
+        break
+      }
+      i = i + 1
+      continue
+    }
+    if (s.charAt(0) === '#') {
+      break
+    }
+    if (s.indexOf('```') === 0 || s.indexOf('|') === 0 || s.indexOf('![') === 0) {
+      break
+    }
+    if (s.indexOf('- ') === 0 || s.indexOf('* ') === 0) {
+      break
+    }
+    lead.push(s)
+    i = i + 1
+    if (lead.join(' ').length > 280) {
+      break
+    }
+  }
+  while (i < lines.length && str(lines[i]).trim().length === 0) {
+    i = i + 1
+  }
+  let body = ''
+  for (let j = i; j < lines.length; j++) {
+    if (body.length > 0) {
+      body = body + '\n'
+    }
+    body = body + lines[j]
+  }
+  return {
+    title: title.length > 0 ? title : fallbackTitle,
+    blurb: lead.join(' '),
+    body: body,
+  }
+}
+
+/** Parse ?t= / #t= / 1:23 / 90s — CleverScript-safe (no optional chaining). */
+function parseMediaTime(raw) {
+  let s = str(raw).trim()
+  if (s.length === 0) {
+    return -1
+  }
+  if (s.indexOf('t=') === 0) {
+    s = s.slice(2)
+  }
+  const comma = s.indexOf(',')
+  if (comma >= 0) {
+    s = s.slice(0, comma)
+  }
+  if (/^\d+(\.\d+)?$/.test(s)) {
+    return parseFloat(s)
+  }
+  const parts = s.split(':')
+  if (parts.length === 2) {
+    return parseInt(parts[0], 10) * 60 + parseFloat(parts[1])
+  }
+  if (parts.length === 3) {
+    return parseInt(parts[0], 10) * 3600 + parseInt(parts[1], 10) * 60 + parseFloat(parts[2])
+  }
+  return -1
+}
+
+function startAtFromLocation() {
+  try {
+    if (typeof globalThis === 'undefined' || !globalThis.location) {
+      return -1
+    }
+    const loc = globalThis.location
+    if (loc.search) {
+      const q = loc.search
+      // Manual parse — URLSearchParams may be fine but keep CS-simple.
+      const keys = ['t', 'start', 'time']
+      for (let i = 0; i < keys.length; i++) {
+        const key = keys[i]
+        const m = q.match(new RegExp('[?&]' + key + '=([^&]+)'))
+        if (m && m[1]) {
+          const n = parseMediaTime(decodeURIComponent(m[1]))
+          if (n >= 0) {
+            return n
+          }
+        }
+      }
+    }
+    if (loc.hash) {
+      let h = loc.hash
+      if (h.charAt(0) === '#') {
+        h = h.slice(1)
+      }
+      if (h.indexOf('t=') === 0) {
+        const n = parseMediaTime(h)
+        if (n >= 0) {
+          return n
+        }
+      }
+    }
+  } catch (e) {}
+  return -1
+}
+
+function theaterHostEl() {
+  try {
+    if (typeof globalThis === 'undefined' || !globalThis.document) {
+      return null
+    }
+    const doc = globalThis.document
+    if (!doc.querySelector) {
+      return null
+    }
+    return doc.querySelector('[data-relay-park-native="fb-theater-player"]')
+  } catch (e) {
+    return null
+  }
+}
+
+function pushTheaterCommand(attrs) {
+  try {
+    const host = theaterHostEl()
+    if (!host || !host.setAttribute) {
+      return
+    }
+    const keys = Object.keys(attrs)
+    for (let i = 0; i < keys.length; i++) {
+      const k = keys[i]
+      host.setAttribute(k, '' + attrs[k])
+    }
+  } catch (e) {}
+}
+
 function subtitleTracks(project) {
   if (!project || !project.subtitles) {
     return []
@@ -564,13 +744,31 @@ export default function FlashbackApp() {
     if (mediaUnlocked !== true) {
       return
     }
+    const nextSeq = commandSeq + 1
     setCommand(1)
-    setCommandSeq(commandSeq + 1)
+    setCommandSeq(nextSeq)
     setPlaying(true)
+    pushTheaterCommand({
+      'data-playing': 'true',
+      'data-command': '1',
+      'data-command-seq': nextSeq,
+    })
+    try {
+      const host = theaterHostEl()
+      if (host) {
+        const built = host.querySelector ? host.querySelector('.fb-theater-player') : null
+        if (built && built.__fbStartMirrorHunt) {
+          built.__fbStartMirrorHunt({ fromPlay: true })
+        }
+      }
+    } catch (eHunt) {}
     try {
       const v = mediaVideoEl()
       if (v && v.play) {
-        v.play()
+        const p = v.play()
+        if (p && p.catch) {
+          p.catch(function () {})
+        }
       }
     } catch (ePlay) {}
     if (isNarrowViewport()) {
@@ -586,9 +784,15 @@ export default function FlashbackApp() {
   }
 
   function sendPause() {
+    const nextSeq = commandSeq + 1
     setCommand(2)
-    setCommandSeq(commandSeq + 1)
+    setCommandSeq(nextSeq)
     setPlaying(false)
+    pushTheaterCommand({
+      'data-playing': 'false',
+      'data-command': '2',
+      'data-command-seq': nextSeq,
+    })
     try {
       const v = mediaVideoEl()
       if (v && v.pause) {
@@ -648,20 +852,36 @@ export default function FlashbackApp() {
     )
   } else if (kind.kind === 'movie') {
     const movieCid = selected && selected.media ? resolveProjectCid(selected) : ''
+    const folderName = selected
+      ? folderNameFromPath(selected.path)
+      : str(kind.slug)
+    const hero = parseReadmeHero(readme || '', folderName)
+    const displayTitle =
+      hero.title.length > 0
+        ? hero.title
+        : selected && selected.title
+          ? selected.title
+          : folderName
+    const displayBlurb =
+      hero.blurb.length > 0
+        ? hero.blurb
+        : selected && selected.blurb
+          ? selected.blurb
+          : ''
     main = (
       <div className="fb-movie">
         <button type="button" className="fb-back" onClick={() => { navigate('/') }}>
           ← Library
         </button>
-        <h1 className="fb-movie-title">{selected ? selected.title : kind.slug}</h1>
-        {selected && selected.blurb ? (
+        <h1 className="fb-movie-title">{displayTitle}</h1>
+        {displayBlurb.length > 0 ? (
           <div className="fb-movie-blurb fb-prose">
-            <MarkdownRenderer content={selected.blurb} />
+            <MarkdownRenderer content={displayBlurb} />
           </div>
         ) : null}
         {/* README MD before video in tree order so SSR finishes links/lists; CSS order keeps it below the player. */}
         <div className="fb-readme fb-prose">
-          <MarkdownRenderer content={readme || '# Loading…'} />
+          <MarkdownRenderer content={hero.body || ''} />
         </div>
         {selected && selected.media ? (
           <div className="fb-video-panel">
@@ -673,6 +893,8 @@ export default function FlashbackApp() {
               playing={playing === true}
               command={command}
               commandSeq={commandSeq}
+              commandArg=""
+              startAt={startAtFromLocation() >= 0 ? startAtFromLocation() : ''}
             />
             <Affirmation
               mode="title"
@@ -750,11 +972,21 @@ export default function FlashbackApp() {
     <StyleContext src="hooks/client/theme.yaml">
       <div className="fb-app">
         <style>
-          {'@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}@keyframes fb-bulb{0%,100%{opacity:0.4}50%{opacity:1}}@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}.fb-bulb-0{animation:fb-bulb 2.2s ease-in-out infinite}.fb-bulb-1{animation:fb-bulb 2.2s ease-in-out 0.4s infinite}.fb-bulb-2{animation:fb-bulb 2.2s ease-in-out 0.8s infinite}.fb-bulb-3{animation:fb-bulb 2.2s ease-in-out 1.2s infinite}}@media (prefers-reduced-motion:reduce){.fb-screen-glow,.fb-bulb{animation:none!important}}'}
+          {'@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}@keyframes fb-bulb{0%,100%{opacity:0.4}50%{opacity:1}}@keyframes fb-sconce-breathe{0%,100%{opacity:0.28}50%{opacity:0.48}}@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}.fb-bulb-0{animation:fb-bulb 2.2s ease-in-out infinite}.fb-bulb-1{animation:fb-bulb 2.2s ease-in-out 0.4s infinite}.fb-bulb-2{animation:fb-bulb 2.2s ease-in-out 0.8s infinite}.fb-bulb-3{animation:fb-bulb 2.2s ease-in-out 1.2s infinite}.fb-sconce-1{animation:fb-sconce-breathe 7.5s ease-in-out infinite}.fb-sconce-2{animation:fb-sconce-breathe 7.5s ease-in-out 1.6s infinite}.fb-sconce-3{animation:fb-sconce-breathe 7.5s ease-in-out 3.2s infinite}}@media (prefers-reduced-motion:reduce){.fb-screen-glow,.fb-bulb,.fb-sconce{animation:none!important}}'}
         </style>
-        <div className="fb-backdrop" aria-hidden="true">
+        <div className={playing === true ? 'fb-backdrop fb-backdrop-playing' : 'fb-backdrop'} aria-hidden="true">
           <div className="fb-curtain fb-curtain-left" />
           <div className="fb-curtain fb-curtain-right" />
+          <div className="fb-wall-lights fb-wall-lights-left">
+            <span className="fb-sconce fb-sconce-1" />
+            <span className="fb-sconce fb-sconce-2" />
+            <span className="fb-sconce fb-sconce-3" />
+          </div>
+          <div className="fb-wall-lights fb-wall-lights-right">
+            <span className="fb-sconce fb-sconce-1" />
+            <span className="fb-sconce fb-sconce-2" />
+            <span className="fb-sconce fb-sconce-3" />
+          </div>
           <div className="fb-screen-glow" />
           <SeatRows />
         </div>
@@ -777,17 +1009,21 @@ export default function FlashbackApp() {
           />
         ) : null}
         <header className="fb-header">
-          <a className="fb-brand" href="/" onClick={(e) => {
+          <a className="fb-brand" href="/" aria-label="Flashback Repository" onClick={(e) => {
             try { e.preventDefault() } catch (err) {}
             navigate('/')
           }}>
             <img
               className="fb-brand-logo"
-              src="/hooks/client/brand/svg/logo-compact.svg"
-              alt="Flashback Repository"
-              width="220"
-              height="66"
+              src="/hooks/client/brand/png/logo-header.png"
+              alt=""
+              width="64"
+              height="64"
             />
+            <span className="fb-brand-text">
+              <span className="fb-brand-name">Flashback Repository</span>
+              <span className="fb-brand-tag">Own the original. Then improve it.</span>
+            </span>
           </a>
           <nav className="fb-nav">
             <a href="/" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/') }}>Library</a>

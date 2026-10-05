@@ -8,13 +8,13 @@ Built for an audience that wants the Firefly movie without Reaver shock cuts. Di
 
 ## Changes
 
-- Opening: Reaver attack on screen (gore only) (~95s–185s).
-- Whole Kaylee/Jayne “nethers / batteries” beat removed (~1870s–1919s).
-- Haven massacre shortened to Mal’s reaction — bodies on posts / gore out (~3055s–3320s).
-- Maidenhead: reaver-gore inserts only; martial arts fight kept (~3780s–3865s).
-- Lab: reaver specimen / gore visuals trimmed (~5280s–5385s).
-- Mr. Universe reaver horror reduced (~5580s–5680s).
-- Reaver fleet / corpse shock beats trimmed (~5850s–5920s).
+- Opening: Reaver attack on screen (gore only) (~95s–185s). · [play 95–185](?t=95&end=185)
+- Whole Kaylee/Jayne “nethers / batteries” beat removed (~1870s–1919s). · [play 1870–1919](?t=1870&end=1919)
+- Haven massacre shortened to Mal’s reaction — bodies on posts / gore out (~3055s–3320s). · [play 3055–3320](?t=3055&end=3320)
+- Maidenhead: reaver-gore inserts only; martial arts fight kept (~3780s–3865s). · [play 3780–3865](?t=3780&end=3865)
+- Lab: reaver specimen / gore visuals trimmed (~5280s–5385s). · [play 5280–5385](?t=5280&end=5385)
+- Mr. Universe reaver horror reduced (~5580s–5680s). · [play 5580–5680](?t=5580&end=5680)
+- Reaver fleet / corpse shock beats trimmed (~5850s–5920s). · [play 5850–5920](?t=5850&end=5920)
 - “Leaf on the wind” and final Operative / Serenity fight **kept**.
 - Opening: Reaver attack on screen (gore only)
 - Whole Kaylee/Jayne batteries beat; batteries beat (cont.); batteries beat (cont.)

@@ -8,9 +8,9 @@ The On the Lookout / Valley night-drive / donut-shop kill stretch is a long bad-
 
 ## Changes
 
-- Removes from PTA’s whip-pan out of Reed’s demo-tape office (~1:45:56) through Amber/Dirk, bank loan, custody, On the Lookout, the Valley night drive, and the donut-shop stick-up/kill; resumes on the first fully black frame at 2:05:19 (original black hold and fade-up into Rahad planning stay).
+- Removes from PTA’s whip-pan out of Reed’s demo-tape office (~1:45:56) through Amber/Dirk, bank loan, custody, On the Lookout, the Valley night drive, and the donut-shop stick-up/kill; resumes on the first fully black frame at 2:05:19 (original black hold and fade-up into Rahad planning stay). · [play 1:45:56–2:05:19](?t=1:45:56&end=2:05:19)
 - Large jump joined with `fadeblack` 0.50 s + audio crossfade (no GOP snap).
-- Office whip-pan through Amber/Dirk, bank loan, custody, On the Lookout, night-drive, donut shop, Buck stick-up/kill; first held black frame 2:05:19.000, next picture 2:05:24.5 Rahad planning
+- Office whip-pan through Amber/Dirk, bank loan, custody, On the Lookout, night-drive, donut shop, Buck stick-up/kill; first held black frame 2:05:19.000, next picture 2:05:24.5 Rahad planning · [play 2:05:19](?t=2:05:19)
 
 
 ## Source media (not in git)
