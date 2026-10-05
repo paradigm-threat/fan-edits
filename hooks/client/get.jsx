@@ -554,7 +554,7 @@ export default function FlashbackApp() {
         <div className="fb-marquee">
           <MarqueeLights />
           <p className="fb-marquee-text">
-            {projects.length + ' titles · personal fan edits · thin IPFS'}
+            {'showing now: ' + projects.length + ' fan edits'}
           </p>
           <MarqueeLights />
         </div>
