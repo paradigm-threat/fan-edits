@@ -30,9 +30,9 @@ function injectParkNativeHosts(ssr) {
       return ssr;
     }
     var snip =
-      '<script data-fb-park-native="1" src="/hooks/client/native/Affirmation.web.js"></script>' +
-      '<script data-fb-park-native="1" src="/hooks/client/native/TheaterPlayer.web.js"></script>' +
-      '<script data-fb-park-native="1" src="/hooks/client/native/NowShowing.web.js"></script>';
+      '<script data-fb-park-native="1" src="/hooks/client/native/Affirmation.host.js"></script>' +
+      '<script data-fb-park-native="1" src="/hooks/client/native/TheaterPlayer.host.js"></script>' +
+      '<script data-fb-park-native="1" src="/hooks/client/native/NowShowing.host.js"></script>';
     var needle = '<script type="module" src="';
     var emb = html.indexOf('/assets/');
     var embJs = html.indexOf('embed.js');

@@ -1,5 +1,5 @@
 /**
- * Headless smoke for Affirmation.web.js without Playwright package.
+ * Headless smoke for Affirmation.host.js without Playwright package.
  * node hooks/client/native/smoke-affirmation.mjs
  */
 import { chromium } from 'playwright-core'
@@ -8,7 +8,7 @@ import path from 'path'
 import { fileURLToPath } from 'url'
 
 const dir = path.dirname(fileURLToPath(import.meta.url))
-const host = fs.readFileSync(path.join(dir, 'Affirmation.web.js'), 'utf8')
+const host = fs.readFileSync(path.join(dir, 'Affirmation.host.js'), 'utf8')
 
 const browser = await chromium.launch({ channel: 'chrome', headless: true }).catch(() =>
   chromium.launch({ headless: true }),

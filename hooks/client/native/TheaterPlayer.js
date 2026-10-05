@@ -5,6 +5,26 @@ import React from 'react'
 
 export default function TheaterPlayer(props) {
   const p = props || {}
+  let playing = 'false'
+  if (p.playing === true) {
+    playing = 'true'
+  }
+  let unlocked = 'false'
+  if (p.unlocked === true) {
+    unlocked = 'true'
+  }
+  let command = '0'
+  if (p.command !== null) {
+    command = '' + p.command
+  }
+  let commandSeq = '0'
+  if (p.commandSeq !== null) {
+    commandSeq = '' + p.commandSeq
+  }
+  let commandArg = ''
+  if (p.commandArg !== null) {
+    commandArg = '' + p.commandArg
+  }
   return (
     <div
       className="fb-theater-player-host"
@@ -18,11 +38,11 @@ export default function TheaterPlayer(props) {
         p.seedHint ||
         'The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.'
       }
-      data-playing={p.playing === true ? 'true' : 'false'}
-      data-command={p.command !== null && p.command !== undefined ? String(p.command) : '0'}
-      data-command-seq={p.commandSeq !== null && p.commandSeq !== undefined ? String(p.commandSeq) : '0'}
-      data-command-arg={p.commandArg !== null && p.commandArg !== undefined ? String(p.commandArg) : ''}
-      data-unlocked={p.unlocked === true ? 'true' : 'false'}
+      data-playing={playing}
+      data-command={command}
+      data-command-seq={commandSeq}
+      data-command-arg={commandArg}
+      data-unlocked={unlocked}
       onPlay={p.onPlay}
       onPause={p.onPause}
       onEnded={p.onEnded}

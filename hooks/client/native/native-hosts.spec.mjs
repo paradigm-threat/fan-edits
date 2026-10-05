@@ -16,7 +16,7 @@ function loadHost(name) {
 test.describe('park native web hosts', () => {
   test('Affirmation: check + OK persists and hides', async ({ page }) => {
     await page.setContent(`<!DOCTYPE html><html><body><div id="root"></div>
-<script>${loadHost('Affirmation.web.js')}</script>
+<script>${loadHost('Affirmation.host.js')}</script>
 <script>
   const root = document.getElementById('root');
   const el = window.__fbBuildAffirmation({
@@ -39,7 +39,7 @@ test.describe('park native web hosts', () => {
 
   test('NowShowing lcd builds links', async ({ page }) => {
     await page.setContent(`<!DOCTYPE html><html><body><div id="root"></div>
-<script>${loadHost('NowShowing.web.js')}</script>
+<script>${loadHost('NowShowing.host.js')}</script>
 <script>
   const root = document.getElementById('root');
   const el = window.__fbBuildNowShowing({
@@ -57,7 +57,7 @@ test.describe('park native web hosts', () => {
 
   test('TheaterPlayer exposes video when ready', async ({ page }) => {
     await page.setContent(`<!DOCTYPE html><html><body><div id="root"></div>
-<script>${loadHost('TheaterPlayer.web.js')}</script>
+<script>${loadHost('TheaterPlayer.host.js')}</script>
 <script>
   const root = document.getElementById('root');
   const el = window.__fbBuildTheaterPlayer({
