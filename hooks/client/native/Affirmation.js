@@ -1,7 +1,6 @@
 /**
- * CleverScript stub — emits park-native tag `fb-affirmation`.
- * Host UI: Affirmation.web.js (register via registry.web.js).
- * See relay-runtime/docs/PARK_NATIVE_COMPONENTS.md
+ * CleverScript stub — emits div[data-relay-park-native=fb-affirmation].
+ * Host UI: Affirmation.web.js (register via inject + __relayRegisterParkNative).
  */
 import React from 'react'
 
@@ -79,7 +78,7 @@ export function ensureMovieOwnAckFromBrowser(slug) {
     }
     const search = '' + (globalThis.location.search || '')
     const needle = 'movieOwnAck=' + s
-    if (search.indexOf(needle) >= 0 || search.indexOf('movieOwnAck=' + encodeURIComponent(s)) >= 0) {
+    if (search.indexOf(needle) >= 0) {
       try {
         localStorage.setItem(movieStorageKey(s), '1')
       } catch (e) {}
@@ -92,34 +91,32 @@ export function ensureMovieOwnAckFromBrowser(slug) {
   return hasMovieOwnAck(s)
 }
 
-/**
- * @param {object} props
- * mode, title, eyebrow, body, checkboxLabel, confirmLabel, linksJson|links, storageKey, confirmed, onConfirm
- */
 export default function Affirmation(props) {
   const p = props || {}
-  const links = p.links
   let linksJson = ''
   if (typeof p.linksJson === 'string') {
     linksJson = p.linksJson
-  } else if (links) {
+  } else if (p.links) {
     try {
-      linksJson = JSON.stringify(links)
+      linksJson = JSON.stringify(p.links)
     } catch (e) {
       linksJson = '[]'
     }
   }
-  return React.createElement('fb-affirmation', {
-    className: 'fb-affirmation-host',
-    mode: p.mode || 'welcome',
-    title: p.title || '',
-    eyebrow: p.eyebrow || '',
-    body: typeof p.body === 'string' ? p.body : '',
-    checkboxLabel: p.checkboxLabel || '',
-    confirmLabel: p.confirmLabel || 'OK — I confirm',
-    storageKey: p.storageKey || WELCOME_KEY,
-    confirmed: p.confirmed === true ? 'true' : 'false',
-    linksJson: linksJson,
-    onConfirm: p.onConfirm,
-  })
+  return (
+    <div
+      className="fb-affirmation-host"
+      data-relay-park-native="fb-affirmation"
+      data-mode={p.mode || 'welcome'}
+      data-title={p.title || ''}
+      data-eyebrow={p.eyebrow || ''}
+      data-body={typeof p.body === 'string' ? p.body : ''}
+      data-checkbox-label={p.checkboxLabel || ''}
+      data-confirm-label={p.confirmLabel || 'OK — I confirm'}
+      data-storage-key={p.storageKey || WELCOME_KEY}
+      data-confirmed={p.confirmed === true ? 'true' : 'false'}
+      data-links-json={linksJson}
+      onConfirm={p.onConfirm}
+    />
+  )
 }
