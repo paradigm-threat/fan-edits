@@ -127,7 +127,7 @@
       st.textContent =
         '.fb-media-unlock-target{display:none}' +
         '.fb-video-controls .fb-btn{opacity:.45;pointer-events:none}' +
-        'html[data-fb-welcome-ack="1"] .fb-gate{display:none!important}' +
+        'html[data-fb-welcome-ack="1"] .fb-affirmation-native[data-fb-affirmation="welcome"]{display:none!important}' +
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-media-locked{display:none!important}' +
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-media-unlock-target{display:block!important}' +
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-movie-ack{display:none!important}' +
@@ -217,10 +217,13 @@
     }
 
     const root = global.document.createElement('div');
-    root.className = 'fb-gate fb-affirmation-native';
+    root.className =
+      mode === 'title'
+        ? 'fb-movie-ack fb-affirmation-native'
+        : 'fb-gate fb-affirmation-native';
     root.setAttribute('data-fb-affirmation', mode);
     root.setAttribute('role', 'dialog');
-    root.setAttribute('aria-modal', 'true');
+    root.setAttribute('aria-modal', mode === 'welcome' ? 'true' : 'false');
 
     const panel = global.document.createElement('div');
     panel.className = 'fb-gate-panel fb-gate-card';

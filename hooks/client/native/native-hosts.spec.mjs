@@ -37,6 +37,18 @@ test.describe('park native web hosts', () => {
     await expect(page.locator('.fb-affirmation-native')).toBeHidden()
   })
 
+  test('Affirmation title mode stays visible after welcome ack', async ({ page }) => {
+    const html = `<!DOCTYPE html><html data-fb-welcome-ack="1"><head></head><body>
+<script>${loadHost('park-host-common.js')}</script>
+<script>${loadHost('Affirmation.host.js')}</script>
+<div data-relay-park-native="fb-affirmation" data-mode="title" data-title="Own Boogie" data-confirmed="false" data-storage-key="flashback.movieOwn.v1.boogie" data-checkbox-label="I own it" data-confirm-label="OK" data-links-json="[]"></div>
+</body></html>`
+    await page.setContent(html, { url: 'https://example.com/boogie' })
+    await page.waitForFunction(() => !!document.querySelector('.fb-affirmation-native[data-fb-affirmation="title"]'))
+    await expect(page.locator('.fb-affirmation-native[data-fb-affirmation="title"]')).toBeVisible()
+    await expect(page.locator('.fb-gate-ok')).toBeVisible()
+  })
+
   test('NowShowing lcd builds links', async ({ page }) => {
     await page.setContent(`<!DOCTYPE html><html><body><div id="root"></div>
 <script>${loadHost('NowShowing.host.js')}</script>
