@@ -693,7 +693,7 @@
     let mirrors = buildMirrorList(logicalPathFromSrc(src), DEFAULT_PEER_FQDNS);
     let activeMirror = mirrors[0] || null;
     let probeLog = [];
-    const maxRounds = 8;
+    const maxRounds = 2;
 
     function setVideoSource(mediaUrl) {
       try {
