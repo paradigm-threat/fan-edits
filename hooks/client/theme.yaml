@@ -20,6 +20,9 @@ themes:
     selectors:
       body:
         margin: "0"
+        minHeight: "100%"
+        overflowX: "hidden"
+        overflowY: "auto"
         backgroundColor: "var(house)"
         color: "var(cream)"
         fontFamily: "Georgia, 'Times New Roman', Times, serif"
@@ -31,7 +34,8 @@ themes:
         flexDirection: "column"
         color: "var(cream)"
         backgroundColor: "var(house)"
-        overflow: "hidden"
+        overflowX: "hidden"
+        overflowY: "visible"
       ".fb-backdrop":
         position: "fixed"
         inset: "0"
