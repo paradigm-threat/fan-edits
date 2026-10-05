@@ -249,7 +249,13 @@ function startAtFromLocation() {
       for (let i = 0; i < keys.length; i++) {
         const rawVal = queryParam(q, keys[i])
         if (rawVal.length > 0) {
-          const n = parseMediaTime(decodeURIComponent(rawVal))
+          let decoded = rawVal
+          try {
+            if (typeof globalThis !== 'undefined' && globalThis.decodeURIComponent) {
+              decoded = globalThis.decodeURIComponent(rawVal)
+            }
+          } catch (eDec) {}
+          const n = parseMediaTime(decoded)
           if (n >= 0) {
             return n
           }
