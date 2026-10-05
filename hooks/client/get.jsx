@@ -279,29 +279,34 @@ function renderIpfsInspect(cidRaw) {
   )
 }
 
-/** Drop leading H1 — the movie page already shows the title. CleverScript: no Array.slice. */
+/** Drop leading H1 — movie page already shows the title. String-only (CleverScript-safe). */
 function readmeBody(raw) {
-  const text = str(raw)
-  if (!text) {
-    return ''
-  }
-  const lines = text.split('\n')
-  let i = 0
-  while (i < lines.length && lines[i].trim() === '') {
-    i++
-  }
-  if (i < lines.length && lines[i].indexOf('# ') === 0) {
-    i++
-    while (i < lines.length && lines[i].trim() === '') {
-      i++
+  let text = str(raw)
+  // Trim leading newlines without Array.split/slice.
+  while (text.length > 0) {
+    const c = text.charAt(0)
+    if (c === '\n' || c === '\r' || c === ' ' || c === '\t') {
+      text = text.substring(1)
+    } else {
+      break
     }
   }
-  let out = []
-  while (i < lines.length) {
-    out = out.concat([lines[i]])
-    i++
+  if (text.indexOf('# ') === 0) {
+    const nl = text.indexOf('\n')
+    if (nl < 0) {
+      return ''
+    }
+    text = text.substring(nl + 1)
   }
-  return out.join('\n')
+  while (text.length > 0) {
+    const c2 = text.charAt(0)
+    if (c2 === '\n' || c2 === '\r') {
+      text = text.substring(1)
+    } else {
+      break
+    }
+  }
+  return text
 }
 
 function isNarrowViewport() {
