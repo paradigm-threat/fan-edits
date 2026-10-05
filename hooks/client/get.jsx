@@ -787,6 +787,9 @@ export default function FlashbackApp() {
         ) : null}
         {/* README MD before video in tree order so SSR finishes links/lists; CSS order keeps it below the player. */}
         <div className="fb-readme fb-prose">
+          <p className="fb-readme-probe">
+            {'readmeChars=' + str(readme.length) + ' path=' + str(selected ? selected.path : '')}
+          </p>
           <MarkdownRenderer content={readmeForRender(readme)} />
         </div>
         {selected && selected.media ? (
