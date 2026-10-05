@@ -279,36 +279,6 @@ function renderIpfsInspect(cidRaw) {
   )
 }
 
-/** Drop leading H1 — movie page already shows the title. String-only (CleverScript-safe). */
-function readmeBody(raw) {
-  let text = str(raw)
-  // Trim leading newlines without Array.split/slice.
-  while (text.length > 0) {
-    const c = text.charAt(0)
-    if (c === '\n' || c === '\r' || c === ' ' || c === '\t') {
-      text = text.substring(1)
-    } else {
-      break
-    }
-  }
-  if (text.indexOf('# ') === 0) {
-    const nl = text.indexOf('\n')
-    if (nl < 0) {
-      return ''
-    }
-    text = text.substring(nl + 1)
-  }
-  while (text.length > 0) {
-    const c2 = text.charAt(0)
-    if (c2 === '\n' || c2 === '\r') {
-      text = text.substring(1)
-    } else {
-      break
-    }
-  }
-  return text
-}
-
 function isNarrowViewport() {
   try {
     if (typeof globalThis === 'undefined') {
@@ -775,7 +745,7 @@ export default function FlashbackApp() {
         ) : null}
         {/* README MD before video in tree order so SSR finishes links/lists; CSS order keeps it below the player. */}
         <div className="fb-readme fb-prose">
-          <MarkdownRenderer content={readmeBody(readme) || '# Loading…'} />
+          <MarkdownRenderer content={readme || '# Loading…'} />
         </div>
         {selected && selected.media ? (
           <div className="fb-video-panel">
