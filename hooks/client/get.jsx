@@ -915,18 +915,23 @@ export default function FlashbackApp() {
       ? folderNameFromPath(selected.path)
       : str(kind.slug)
     const hero = parseReadmeHero(readme || '', folderName)
-    const displayTitle =
-      hero.title.length > 0
-        ? hero.title
-        : selected && selected.title
-          ? selected.title
-          : folderName
-    const displayBlurb =
-      hero.blurb.length > 0
-        ? hero.blurb
-        : selected && selected.blurb
-          ? selected.blurb
-          : ''
+    let displayTitle = folderName
+    if (hero.title.length > 0) {
+      displayTitle = hero.title
+    } else if (selected && selected.title) {
+      displayTitle = selected.title
+    }
+    let displayBlurb = ''
+    if (hero.blurb.length > 0) {
+      displayBlurb = hero.blurb
+    } else if (selected && selected.blurb) {
+      displayBlurb = selected.blurb
+    }
+    let startAtVal = ''
+    const startAtNum = startAtFromLocation()
+    if (startAtNum >= 0) {
+      startAtVal = startAtNum
+    }
     main = (
       <div className="fb-movie">
         <button type="button" className="fb-back" onClick={() => { navigate('/') }}>
@@ -953,7 +958,7 @@ export default function FlashbackApp() {
               command={command}
               commandSeq={commandSeq}
               commandArg=""
-              startAt={startAtFromLocation() >= 0 ? startAtFromLocation() : ''}
+              startAt={startAtVal}
             />
             <Affirmation
               mode="title"
