@@ -59,7 +59,26 @@ function writeWelcomeAck() {
   } catch (e) {}
 }
 
+function readMovieAckFromDocFlag(slug) {
+  try {
+    let s = str(slug)
+    if (s.length === 0) {
+      return false
+    }
+    if (typeof globalThis !== 'undefined' && globalThis.document && globalThis.document.documentElement) {
+      let got = globalThis.document.documentElement.getAttribute('data-fb-movie-ack')
+      if (got === s) {
+        return true
+      }
+    }
+  } catch (e) {}
+  return false
+}
+
 function readMovieAckFromHostBridge(slug) {
+  if (readMovieAckFromDocFlag(slug) === true) {
+    return true
+  }
   try {
     let s = str(slug)
     if (s.length === 0) {

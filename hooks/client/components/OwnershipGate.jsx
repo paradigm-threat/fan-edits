@@ -10,7 +10,21 @@ import React from 'react'
 
 var ACK_KEY = 'flashback.ownershipAck.v1'
 
+function readAckFromDocFlag() {
+  try {
+    if (typeof globalThis !== 'undefined' && globalThis.document && globalThis.document.documentElement) {
+      if (globalThis.document.documentElement.getAttribute('data-fb-welcome-ack') === '1') {
+        return true
+      }
+    }
+  } catch (e) {}
+  return false
+}
+
 function readAckFromHostBridge() {
+  if (readAckFromDocFlag() === true) {
+    return true
+  }
   try {
     if (typeof globalThis !== 'undefined' && globalThis.__fbHasWelcome) {
       if (globalThis.__fbHasWelcome() === true) {

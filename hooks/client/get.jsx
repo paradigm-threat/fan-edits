@@ -360,14 +360,19 @@ export default function FlashbackApp() {
     } catch (e) {}
   }
   let hydratedReady = false
+  let clientReadyFlag = false
   try {
     if (typeof globalThis !== 'undefined' && globalThis.document && globalThis.document.documentElement) {
-      if (globalThis.document.documentElement.getAttribute('data-pt-hydrated') === '1') {
+      let rootEl = globalThis.document.documentElement
+      if (rootEl.getAttribute('data-pt-hydrated') === '1') {
         hydratedReady = true
+      }
+      if (rootEl.getAttribute('data-fb-client-ready') === '1') {
+        clientReadyFlag = true
       }
     }
   } catch (eHydrated) {}
-  const live = pastHydrate === true || hydratedReady === true
+  const live = pastHydrate === true || hydratedReady === true || clientReadyFlag === true
   const mediaUnlocked = live === true && ack === true && movieAck === true
   const showMovieAck = mediaUnlocked !== true
 
