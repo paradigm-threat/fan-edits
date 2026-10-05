@@ -110,19 +110,24 @@
       makeSeg(parts);
     }
 
-    lcd.appendChild(track);
+    const win = doc.createElement('div');
+    win.className = 'fb-lcd-window';
+    win.appendChild(track);
+    lcd.appendChild(win);
     board.appendChild(lcd);
     board.appendChild(wing(doc, 'showing'));
     root.appendChild(board);
 
     const style = doc.createElement('style');
     const n = Math.max(24, (track.textContent || '').length);
+    const secs = Math.max(40, Math.min(180, n * 0.08));
+    const steps = Math.max(40, Math.min(400, Math.floor(n / 4)));
     style.textContent =
       '@keyframes fb-lcd-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}' +
       '.fb-lcd-track{display:inline-block;white-space:nowrap;animation:fb-lcd-scroll ' +
-      n * 0.42 +
+      secs +
       's steps(' +
-      n +
+      steps +
       ') infinite;}' +
       '@media (prefers-reduced-motion:reduce){.fb-lcd-track{animation:none!important}}';
     root.appendChild(style);
