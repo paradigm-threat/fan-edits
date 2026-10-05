@@ -787,7 +787,7 @@ export default function FlashbackApp() {
         ) : null}
         {/* README MD before video in tree order so SSR finishes links/lists; CSS order keeps it below the player. */}
         <div className="fb-readme fb-prose">
-          <MarkdownRenderer content={"## Motivation\n\nSSR markdown probe with a [clickable link](https://example.com/fb-md-probe) and list:\n\n- alpha\n- beta\n"} />
+          <MarkdownRenderer content={readmeBody(readme).slice(0, 900) || '# Loading…'} />
         </div>
         {selected && selected.media ? (
           <div className="fb-video-panel">
