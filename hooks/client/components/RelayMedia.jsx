@@ -1,12 +1,11 @@
 /**
- * Video wrapper with Relay IPFS seed-status polling.
- * Prefer SeedUnlockPanel in get.jsx for parked SSR — @clevertree/video
- * import drops this whole tree from CleverScript SSR output.
+ * Optional VideoPlayer-based media wrapper.
+ * Parked flashback pages use SeedUnlockPanel instead — @clevertree/video
+ * import drops this tree from CleverScript SSR.
  */
 import React, { useState } from 'react'
 import { VideoPlayer } from '@clevertree/video'
 import { isClientLive } from '@clevertree/style-internal'
-import IpfsInspectRow, { looksLikeCid } from 'hooks/client/components/IpfsInspect.jsx'
 
 function str(v) {
   if (v === null) {
@@ -25,6 +24,23 @@ function str(v) {
     return v
   }
   return ''
+}
+
+function looksLikeCid(raw) {
+  const s = str(raw).trim()
+  if (s.length < 10) {
+    return false
+  }
+  if (s.indexOf(' ') >= 0 || s.indexOf('/') >= 0 || s.indexOf('#') >= 0) {
+    return false
+  }
+  if (s.indexOf('baf') === 0) {
+    return true
+  }
+  if (s.indexOf('Qm') === 0) {
+    return true
+  }
+  return s.length >= 46
 }
 
 function statusUrl(src) {
@@ -58,12 +74,6 @@ function parseStatus(resp) {
         if (data && data.error && data.error !== 'ok') {
           /* fall through */
         } else {
-          let cidReady = ''
-          try {
-            if (data && typeof data.cid === 'string') {
-              cidReady = data.cid
-            }
-          } catch (eCid) {}
           return {
             ok: true,
             retryable: false,
@@ -72,7 +82,7 @@ function parseStatus(resp) {
             progressPct: 100,
             seedState: 'cached',
             providers: null,
-            cid: cidReady,
+            cid: '',
           }
         }
       } else {
@@ -248,7 +258,7 @@ export default function RelayMedia(props) {
         <p className="fb-media-hint">
           The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.
         </p>
-        <IpfsInspectRow cid={cid} providers={st.providers} />
+        {cid ? <p className="fb-media-cid">{cid}</p> : null}
         <button
           type="button"
           className="fb-btn"
@@ -290,7 +300,6 @@ export default function RelayMedia(props) {
           <div className="fb-media-bar-fill" style={{ width: pct + '%' }} />
         </div>
       ) : null}
-      <IpfsInspectRow cid={cid} providers={st.providers} />
     </div>
   )
 }
