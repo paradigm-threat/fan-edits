@@ -305,11 +305,11 @@ export default function FlashbackApp() {
                 <p className="fb-media-msg">
                   {ack !== true
                     ? 'Confirm ownership on the welcome screen to continue.'
-                    : 'Check the box below to unlock this title.'}
+                    : 'One quick check on this title, then Play.'}
                 </p>
               </div>
             )}
-            {ack === true ? (
+            {ack === true && movieAck !== true ? (
               <MovieOwnAck
                 slug={selected.slug}
                 title={selected.title}

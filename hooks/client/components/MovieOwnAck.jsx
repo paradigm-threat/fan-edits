@@ -72,7 +72,7 @@ export default function MovieOwnAck(props) {
               } catch (e2) {}
             }}
           />
-          <span>I own a copy of {title} — happy to watch this edit.</span>
+          <span>I already read the disclaimer, and I own {title}.</span>
         </label>
       </div>
     </div>
