@@ -57,8 +57,8 @@ function initialRoute() {
     }
   } catch (e) {}
   try {
-    if (typeof location !== 'undefined' && location.pathname) {
-      return normalizeRoute(location.pathname)
+    if (typeof globalThis !== 'undefined' && globalThis.location && globalThis.location.pathname) {
+      return normalizeRoute(globalThis.location.pathname)
     }
   } catch (e2) {}
   return '/'
@@ -147,13 +147,14 @@ function readmeBody(raw) {
 
 function isNarrowViewport() {
   try {
-    if (typeof window === 'undefined') {
+    if (typeof globalThis === 'undefined') {
       return true
     }
-    if (!window.matchMedia) {
-      return window.innerWidth < 900
+    if (!globalThis.matchMedia) {
+      const w = typeof globalThis.innerWidth === 'number' ? globalThis.innerWidth : 0
+      return w < 900
     }
-    return window.matchMedia('(max-width: 900px)').matches === true
+    return globalThis.matchMedia('(max-width: 900px)').matches === true
   } catch (e) {
     return true
   }
@@ -203,8 +204,8 @@ function routeKind(route) {
 function navigate(path) {
   const p = normalizeRoute(path)
   try {
-    if (typeof location !== 'undefined') {
-      location.href = p
+    if (typeof globalThis !== 'undefined' && globalThis.location) {
+      globalThis.location.href = p
       return
     }
   } catch (e) {}
@@ -317,7 +318,11 @@ export default function FlashbackApp() {
     setPlaying(true)
     if (isNarrowViewport()) {
       try {
-        const root = document.querySelector('.fb-media-ready') || document.querySelector('.fb-video-panel')
+        const doc = typeof globalThis !== 'undefined' ? globalThis.document : null
+        if (!doc || !doc.querySelector) {
+          return
+        }
+        const root = doc.querySelector('.fb-media-ready') || doc.querySelector('.fb-video-panel')
         requestFs(root)
       } catch (e) {}
     }

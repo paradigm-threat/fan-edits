@@ -14,13 +14,13 @@ export function hasMovieOwnAck(slug) {
     if (!slug) {
       return false
     }
-    if (typeof localStorage === 'undefined') {
+    if (typeof globalThis === 'undefined' || !globalThis.localStorage) {
       return false
     }
-    if (!localStorage.getItem) {
+    if (!globalThis.localStorage.getItem) {
       return false
     }
-    return localStorage.getItem(ackKey(slug)) === '1'
+    return globalThis.localStorage.getItem(ackKey(slug)) === '1'
   } catch (e) {
     return false
   }
@@ -31,13 +31,13 @@ function writeMovieOwnAck(slug) {
     if (!slug) {
       return
     }
-    if (typeof localStorage === 'undefined') {
+    if (typeof globalThis === 'undefined' || !globalThis.localStorage) {
       return
     }
-    if (!localStorage.setItem) {
+    if (!globalThis.localStorage.setItem) {
       return
     }
-    localStorage.setItem(ackKey(slug), '1')
+    globalThis.localStorage.setItem(ackKey(slug), '1')
   } catch (e) {}
 }
 

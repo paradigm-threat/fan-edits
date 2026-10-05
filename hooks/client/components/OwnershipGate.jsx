@@ -7,13 +7,13 @@ var ACK_KEY = 'flashback.ownershipAck.v1'
 
 function readAck() {
   try {
-    if (typeof localStorage === 'undefined') {
+    if (typeof globalThis === 'undefined' || !globalThis.localStorage) {
       return false
     }
-    if (!localStorage.getItem) {
+    if (!globalThis.localStorage.getItem) {
       return false
     }
-    return localStorage.getItem(ACK_KEY) === '1'
+    return globalThis.localStorage.getItem(ACK_KEY) === '1'
   } catch (e) {
     return false
   }
@@ -21,13 +21,13 @@ function readAck() {
 
 function writeAck() {
   try {
-    if (typeof localStorage === 'undefined') {
+    if (typeof globalThis === 'undefined' || !globalThis.localStorage) {
       return
     }
-    if (!localStorage.setItem) {
+    if (!globalThis.localStorage.setItem) {
       return
     }
-    localStorage.setItem(ACK_KEY, '1')
+    globalThis.localStorage.setItem(ACK_KEY, '1')
   } catch (e) {}
 }
 
