@@ -249,6 +249,68 @@ function MarqueeLights() {
   return <div className="fb-marquee-lights">{bulbs}</div>
 }
 
+/** Catalog titles joined with stars for the LCD billboard. CleverScript-safe. */
+function marqueeBoardText(projects) {
+  let board = ''
+  let list = []
+  try {
+    if (projects) {
+      list = projects
+    }
+  } catch (e) {
+    list = []
+  }
+  for (let i = 0; i < list.length; i++) {
+    let t = projectTitle(list[i])
+    if (t.length > 0) {
+      if (board.length === 0) {
+        board = '★ ' + t
+      } else {
+        board = board + ' ★ ' + t
+      }
+    }
+  }
+  if (board.length === 0) {
+    return '★ no titles yet ★ '
+  }
+  return board + ' ★ '
+}
+
+function MarqueeBoard(props) {
+  let board = marqueeBoardText(props.projects)
+  let n = board.length
+  if (n < 1) {
+    n = 1
+  }
+  let dur = n * 0.42
+  let track = board + board
+  let css =
+    '@keyframes fb-lcd-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}' +
+    '@media (prefers-reduced-motion:no-preference){.fb-lcd-track{animation:fb-lcd-scroll ' +
+    dur +
+    's steps(' +
+    n +
+    ') infinite}}' +
+    '@media (prefers-reduced-motion:reduce){.fb-lcd-track{animation:none!important;transform:none!important}}'
+  return (
+    <div className="fb-marquee-board">
+      <style>{css}</style>
+      <p className="fb-marquee-label">now showing</p>
+      <div className="fb-lcd" aria-label={board}>
+        <span className="fb-lcd-end" aria-hidden="true">
+          ★
+        </span>
+        <div className="fb-lcd-window" aria-hidden="true">
+          <div className="fb-lcd-track">{track}</div>
+        </div>
+        <span className="fb-lcd-end" aria-hidden="true">
+          ★
+        </span>
+      </div>
+    </div>
+  )
+}
+
 export default function FlashbackApp() {
   ensureOwnershipAckFromBrowser()
   const route = initialRoute()
@@ -578,9 +640,7 @@ export default function FlashbackApp() {
         </header>
         <div className="fb-marquee">
           <MarqueeLights />
-          <p className="fb-marquee-text">
-            {'showing now: ' + projects.length + ' fan edits'}
-          </p>
+          <MarqueeBoard projects={projects} />
           <MarqueeLights />
         </div>
         <main className="fb-main">{main}</main>
