@@ -390,24 +390,38 @@ export default function SeedUnlockPanel(props) {
   }
 
   if (st.ok) {
+    // CleverScript cannot parse JSX attr name `default` (reserved). Prefer default
+    // tracks first; browsers treat the first <track> as the usual pick without `default`.
     let tracks = []
+    let rest = []
     let ti = 0
     while (ti < subtitles.length) {
       const t = subtitles[ti]
       if (t && t.src) {
-        tracks = tracks.concat([
+        const el = (
           <track
             key={'sub-' + ti}
             kind="subtitles"
             src={str(t.src)}
             srcLang={str(t.lang) || 'en'}
             label={str(t.label) || 'Subtitles'}
-            default={t.default === true}
-          />,
-        ])
+          />
+        )
+        let isDef = false
+        try {
+          if (t.default === true) {
+            isDef = true
+          }
+        } catch (eDef) {}
+        if (isDef) {
+          tracks = tracks.concat([el])
+        } else {
+          rest = rest.concat([el])
+        }
       }
       ti = ti + 1
     }
+    tracks = tracks.concat(rest)
     return (
       <div className="fb-media fb-media-ready" data-relay-media="ready">
         <video
