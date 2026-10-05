@@ -1,0 +1,53 @@
+{
+  "schema": "relay.assets-manifest.v1",
+  "assets": [
+    {
+      "id": "FanMixes_2012 (2009) - Salvation_2012 (2009) - Salvation.mkv",
+      "path": "FanMixes/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv",
+      "ipfs": "bafybeib3sod5auzyuugvh46moy2qhzvwhzkgfeybjhi4odbhrijerlnlhm",
+      "contentType": "video/x-matroska",
+      "sha256": "aabbf95182b8799e41cf30dce7e2b827be85c8ce8bcb343957c364625d65f070",
+      "bytes": 1298748370
+    },
+    {
+      "id": "FanMixes_Alien Resurrection (1997) - UnJossed_Alien Resurrection (1997) - UnJossed Edition.mkv",
+      "path": "FanMixes/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv",
+      "ipfs": "bafybeiaeubo2zv7smzn4yd2b2kdtgm6olrblvdbl2cdujeu3dnmsoiogi4",
+      "contentType": "video/x-matroska",
+      "sha256": "bcbc22b2993e493ff822801c5ef36301cecdb6d317b84668184c35919e9f6084",
+      "bytes": 0
+    },
+    {
+      "id": "FanMixes_Congo (1995) - Incel_Congo (1995) - Incel Edition.mkv",
+      "path": "FanMixes/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv",
+      "ipfs": "bafybeigyt3pa4sztvncidn7avtkklb5si4am4ufbvtp5wptrn5lhu7uqc4",
+      "contentType": "video/x-matroska",
+      "sha256": "253c4cd5114b067edcf47419617be218560d3e9447735e8c6676d809376d0dd1",
+      "bytes": 0
+    },
+    {
+      "id": "FanMixes_Ninja Scroll (1993) - Minor Damage_Ninja Scroll (1993) - Minor Damage.mkv",
+      "path": "FanMixes/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv",
+      "ipfs": "bafybeiaatjmc63jdnezkcbtnb5meqq7segm36kgclupgi7kb3plin7oola",
+      "contentType": "video/x-matroska",
+      "sha256": "4dbe2501e996995e6430d6c427677ff9aba0e7d4522f2061a84731ff7da5472f",
+      "bytes": 0
+    },
+    {
+      "id": "FanMixes_Sonic (2020) - DeSchwartzed_Sonic (2020) - DeSchwartzed Edition.mkv",
+      "path": "FanMixes/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv",
+      "ipfs": "bafybeigi7hkh7yvpsfpy5y7gat5uwabdigk2desm4nqg7qox2sxbh3m34e",
+      "contentType": "video/x-matroska",
+      "sha256": "c34bff0159795549d83995917fed71495c3e45bf553cac5fac42a7dc7f859653",
+      "bytes": 0
+    },
+    {
+      "id": "FanMixes_Van Helsing - DeAnna'd_Van Helsing - DeAnna'd.mkv",
+      "path": "FanMixes/Van Helsing - DeAnna'd/Van Helsing - DeAnna'd.mkv",
+      "ipfs": "bafybeide6nxlq656ljg3qzwfxxujmagqjs46e5y5zwo2sejeot4exj332i",
+      "contentType": "video/x-matroska",
+      "sha256": "cfc89f0157ed7b07e3120004c88c2cbe4c30af17153738a867aba489b49cc9e3",
+      "bytes": 0
+    }
+  ]
+}
