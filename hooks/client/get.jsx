@@ -87,7 +87,7 @@ function subtitleTracks(project) {
     if (t.default === true) {
       track.default = true
     }
-    out.push(track)
+    out = out.concat([track])
   }
   return out
 }
@@ -105,7 +105,7 @@ function projectsInCategory(projects, category) {
   const out = []
   for (let i = 0; i < projects.length; i++) {
     if (projects[i].category === category) {
-      out.push(projects[i])
+      out = out.concat([projects[i]])
     }
   }
   return out
@@ -224,7 +224,7 @@ function SeatRows() {
 function MarqueeLights() {
   const bulbs = []
   for (let i = 0; i < 16; i++) {
-    bulbs.push(<MarqueeBulb key={'b' + i} className={'fb-bulb fb-bulb-' + (i % 4)} />)
+    bulbs = bulbs.concat([<MarqueeBulb key={'b' + i} className={'fb-bulb fb-bulb-' + (i % 4)} />])
   }
   return <div className="fb-marquee-lights">{bulbs}</div>
 }
@@ -261,12 +261,12 @@ export default function FlashbackApp() {
         if (!meta || !meta.path) {
           continue
         }
-        blogPosts.push({
+        blogPosts = blogPosts.concat([{
           slug: meta.slug || '',
           date: meta.date || '',
           title: meta.title || 'Post',
           body: fetchText(meta.path) || '',
-        })
+        }])
       }
     } catch (e) {
       blogPosts = []
@@ -359,16 +359,16 @@ export default function FlashbackApp() {
 
   const fanCards = []
   for (let i = 0; i < fanMixes.length; i++) {
-    fanCards.push(titleCard(fanMixes[i]))
+    fanCards = fanCards.concat([titleCard(fanMixes[i])])
   }
   const kidCards = []
   for (let i = 0; i < kidFriendly.length; i++) {
-    kidCards.push(titleCard(kidFriendly[i]))
+    kidCards = kidCards.concat([titleCard(kidFriendly[i])])
   }
   const blogCards = []
   for (let i = 0; i < blogPosts.length; i++) {
     const post = blogPosts[i]
-    blogCards.push(
+    blogCards = blogCards.concat([
       <article key={post.slug || post.title} className="fb-blog-post">
         {post.date ? <p className="fb-blog-date">{post.date}</p> : null}
         <h3 className="fb-blog-title">{post.title}</h3>
@@ -376,7 +376,7 @@ export default function FlashbackApp() {
           <MarkdownRenderer content={post.body || ''} />
         </div>
       </article>
-    )
+    ])
   }
 
   let main = null
