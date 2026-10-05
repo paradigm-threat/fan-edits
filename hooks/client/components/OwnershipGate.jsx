@@ -85,7 +85,9 @@ export default function OwnershipGate(props) {
             {"I confirm I own a legal copy of each original film before I play its edit."}
           </span>
         </label>
-        <p className="fb-gate-hint">Check the box above, then continue.</p>
+        <p className="fb-gate-hint">
+          {"Check the box above, then tap OK to continue."}
+        </p>
         <div className="fb-gate-actions">
           <button
             type="button"

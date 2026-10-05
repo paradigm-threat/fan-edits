@@ -1,6 +1,8 @@
 import { fetchIpfsBytesFromGetContext, resolveIpfsFromGetContext } from '@relay/ipfs';
 import { optimizeRasterFromGetContext, queryWidth } from '@relay/image';
 import { ssrClientHookFromGetContext } from '@relay/ssr';
+// Opt into framework /assets + /wasm (embed.js hydrate). Scanned statically by the gateway.
+import { pinnedPrefix } from '@relay/web-assets';
 
 // Parked site shell + thin IPFS media for Flashback Repository.
 function wantsSiteShell(ctx) {
