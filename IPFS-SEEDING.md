@@ -6,7 +6,16 @@ See also: [docs/RELAY_DESKTOP.md](docs/RELAY_DESKTOP.md), [docs/PARKED_THIN_VIDE
 
 ## Prerequisites
 
-1. **Kubo** — `ipfs` CLI installed; **`ipfs daemon`** running (HTTP API on **`:5001`** by default). Ingest and pre-commit pin checks fail without it.
+1. **Kubo** — `ipfs` CLI installed; **`ipfs daemon`** running (HTTP API on **`:5001`** by default). Ingest and pre-commit pin checks fail without it. On this workstation the repo lives on the **local HDD** (`/media/ari/HD/ipfs-kubo`, symlinked from `~/.ipfs`) so multi‑GB pins do not fill the NVMe root.
+
+   **Boot (this machine):** user unit `~/.config/systemd/user/ipfs.service` is **enabled** with **linger** so Kubo starts at boot (after `/media/ari/HD` mounts), not only when you open a terminal:
+
+   ```bash
+   systemctl --user status ipfs
+   systemctl --user restart ipfs   # only if you need a clean restart
+   ```
+
+   **Web UI:** open [http://127.0.0.1:5001/webui](http://127.0.0.1:5001/webui) in a browser on this computer (API is bound to localhost only).
 2. **`relay-ipfs-ingest`** — from a **relay-gateway** checkout, typically:
    `~/dev/relay/relay-gateway/scripts/relay-ipfs-ingest`
    (must be on `PATH` or invoked by full path; `scripts/ingest-fanedit-renders.py` hardcodes this path).
@@ -58,17 +67,53 @@ video/x-matroska
 sha256=…
 ```
 
-After ingest, refresh the library catalog if READMEs changed:
+After ingest, refresh the library catalog if READMEs changed, then **rebuild the media-root DAG**:
 
 ```bash
 python3 scripts/generate-index-json.py
-git add index.json assets.manifest.json .relay/assets/
+python3 scripts/build-ipfs-media-root.py   # writes mediaRoot + IPFS_ROOT
+git add index.json assets.manifest.json IPFS_ROOT .relay/assets/
 git commit -m "catalog: ingest fan-edit renders to IPFS"
 ```
 
+`scripts/ingest-fanedit-renders.py` runs `build-ipfs-media-root.py` at the end (with `--skip-missing` if some titles failed). Before publish, re-run **without** `--skip-missing` so every manifest CID is in the root.
+
 Pre-commit (with hooks installed) rejects commits if a referenced CID is **not pinned locally**.
 
-## Local pinning and seeding
+## Media-root DAG (clone + one sync)
+
+Per-file CIDs stay in `.relay/assets/**/*.ipfs` and `assets.manifest.json` `assets[]` (what the gateway player resolves). After a successful build, the manifest also has:
+
+```json
+{
+  "schema": "relay.assets-manifest.v1",
+  "mediaRoot": "bafy…",
+  "mediaRootBuiltAt": "2026-10-05T…",
+  "assets": [ … ]
+}
+```
+
+The same CID is written to tip file **`IPFS_ROOT`**. That CID is a **UnixFS directory** whose paths mirror logical media paths only (`FanMixes/…`, favicons, `og-image.png`, …) — not CleverScript or Git history.
+
+### Full library sync after clone
+
+```bash
+git clone … fan-edits && cd fan-edits
+ROOT=$(jq -r .mediaRoot assets.manifest.json)   # or: ROOT=$(cat IPFS_ROOT)
+ipfs get -o .ipfs-media "$ROOT"
+rsync -a .ipfs-media/ ./
+```
+
+Leaf file CIDs are stable when you only add/replace assets; only directory nodes (and thus `mediaRoot`) change when the path→CID set changes.
+
+Rebuild anytime:
+
+```bash
+python3 scripts/build-ipfs-media-root.py
+# flags: --dry-run  --skip-pin  --skip-git  --skip-missing
+```
+
+### Local pinning and seeding
 
 Ingest already pins via `ipfs add --pin`. To (re)pin or verify:
 
@@ -112,6 +157,15 @@ Catalog **`publish_origin`** for this site is **`iad1.relaygateway.net`** ([docs
 ## Fleet pinning
 
 Production nodes run Kubo plus **`relay-ipfs-pin-catalog`** (systemd timer **`relay-ipfs-pin-catalog.timer`**) to pin CIDs referenced from thin repos’ **`.relay/assets/**/*.ipfs`** and **`assets.manifest.json`**. That is **IPFS seeding**, not `git ensure-bare`.
+
+**Preferred:** recursively pin the tip’s **`mediaRoot`** (one pin pulls the whole UnixFS tree of media leaves):
+
+```bash
+ROOT=$(jq -r .mediaRoot /path/to/fan-edits/assets.manifest.json)
+ipfs pin add --recursive "/ipfs/$ROOT"
+```
+
+**Fallback:** pin-catalog still walks per-file stubs / `assets[]` entries until fleet tooling pins `mediaRoot` automatically. Either way, operators can verify with `ipfs pin ls` and `?relayAssetStatus=1` on a logical path.
 
 On a fleet host (paths from install):
 
@@ -163,4 +217,5 @@ curl -sS 'https://iad1.relaygateway.net/ipfs/bafybei…?relayAssetStatus=1' | jq
 - **`missing … relay-ipfs-ingest`** — build/checkout relay-gateway; fix `INGEST` in `scripts/ingest-fanedit-renders.py`.
 - **`NO CAND` / `SKIP` in ingest script** — no matching folder under `FanEditRender`, or filename scored too low; fix folder name or pick the `.mkv` manually and run `relay-ipfs-ingest` on that logical path.
 - **`CID not pinned locally`** — start `ipfs daemon` and re-run ingest, or `ipfs pin add`.
-- Site shows seed message after push — pointers reached Relay, but **IPFS bytes** are not pinned anywhere reachable; pin on your machine and/or confirm fleet **`relay-ipfs-pin-catalog`** ran for `fan-edits`.
+- Site shows seed message after push — pointers reached Relay, but **IPFS bytes** are not pinned anywhere reachable; pin on your machine and/or confirm fleet **`relay-ipfs-pin-catalog`** ran for `fan-edits` (or recursively pin **`mediaRoot`**).
+- **`build-ipfs-media-root.py` exits with missing CIDs** — some manifest entries are not in local Kubo; finish ingest/pin, or use `--skip-missing` only for a temporary partial root (re-run full build before publish).

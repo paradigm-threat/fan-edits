@@ -139,6 +139,7 @@ function encodeCid(cid) {
 function IpfsInspectRow(props) {
   let cid = ''
   let providers = null
+  let bytesTotal = null
   try {
     cid = str(props.cid).trim()
   } catch (e) {
@@ -149,6 +150,11 @@ function IpfsInspectRow(props) {
       providers = props.providers
     }
   } catch (e2) {}
+  try {
+    if (typeof props.bytesTotal === 'number') {
+      bytesTotal = props.bytesTotal
+    }
+  } catch (eBytes) {}
   if (!looksLikeCid(cid)) {
     return null
   }
@@ -157,16 +163,20 @@ function IpfsInspectRow(props) {
   const check = 'https://check.ipfs.network/?cid=' + enc
   const gatewayIo = 'https://ipfs.io/ipfs/' + enc
   const gatewayDweb = 'https://dweb.link/ipfs/' + enc
-  let providerNote = ''
+  let noteParts = []
+  if (typeof bytesTotal === 'number' && bytesTotal > 0) {
+    noteParts = noteParts.concat(['Reported size ' + formatBytes(bytesTotal)])
+  }
   if (providers !== null) {
     if (providers === 0) {
-      providerNote = 'Relay sees 0 providers for this CID.'
+      noteParts = noteParts.concat(['0 providers'])
     } else if (providers === 1) {
-      providerNote = 'Relay sees 1 provider for this CID.'
+      noteParts = noteParts.concat(['1 provider'])
     } else {
-      providerNote = 'Relay sees ' + providers + ' providers for this CID.'
+      noteParts = noteParts.concat([providers + ' providers'])
     }
   }
+  const providerNote = noteParts.length > 0 ? noteParts.join(' · ') : ''
   return (
     <div className="fb-media-inspect" data-ipfs-inspect="1">
       <p className="fb-media-inspect-label">Inspect on IPFS</p>
@@ -303,6 +313,8 @@ function parseStatus(resp) {
       progressPct: typeof seed.progressPct === 'number' ? seed.progressPct : null,
       seedState: typeof seed.state === 'string' ? seed.state : 'unknown',
       providers: typeof seed.providers === 'number' ? seed.providers : null,
+      bytesTotal: typeof seed.bytesTotal === 'number' ? seed.bytesTotal : null,
+      bytesReceived: typeof seed.bytesReceived === 'number' ? seed.bytesReceived : null,
       cid: typeof data.cid === 'string' ? data.cid : '',
     }
   } catch (e2) {
@@ -310,32 +322,106 @@ function parseStatus(resp) {
   }
 }
 
+function formatBytes(n) {
+  if (typeof n !== 'number' || !(n >= 0)) {
+    return ''
+  }
+  if (n < 1000) {
+    return n + ' B'
+  }
+  if (n < 1000000) {
+    return (n / 1000).toFixed(1) + ' KB'
+  }
+  if (n < 1000000000) {
+    return (n / 1000000).toFixed(1) + ' MB'
+  }
+  return (n / 1000000000).toFixed(2) + ' GB'
+}
+
+function displayPct(st) {
+  if (!st) {
+    return 0
+  }
+  if (typeof st.progressPct === 'number') {
+    let p = st.progressPct
+    if (p < 0) {
+      p = 0
+    }
+    if (p > 100) {
+      p = 100
+    }
+    return p
+  }
+  return 0
+}
+
+function isStubCid(st) {
+  return !!(st && typeof st.bytesTotal === 'number' && st.bytesTotal > 0 && st.bytesTotal < 100000)
+}
+
+function statusHint(st) {
+  if (isStubCid(st)) {
+    return (
+      'This content hash points at ' +
+      formatBytes(st.bytesTotal) +
+      ' (a filesystem symlink path), not multi‑GB video bytes. Local re-ingest must follow the symlink, then republish the stub.'
+    )
+  }
+  if (st && st.seedState === 'fetching') {
+    return 'Gateway is pulling blocks from IPFS peers…'
+  }
+  if (st && typeof st.providers === 'number' && st.providers === 0) {
+    return 'No peer currently advertises this CID. Seeding is stalled until a node pins and announces it.'
+  }
+  return 'The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.'
+}
+
 function statusLabel(st) {
   if (st.ok) {
     return 'Ready'
   }
-  if (st.seedState === 'fetching') {
-    if (st.progressPct !== null) {
-      return 'Seeding… ' + st.progressPct + '%'
+  const pct = displayPct(st)
+  let prov = null
+  if (typeof st.providers === 'number') {
+    if (st.providers === 1) {
+      prov = '1 provider'
+    } else {
+      prov = st.providers + ' providers'
     }
-    return 'Seeding from the network…'
+  }
+  if (isStubCid(st)) {
+    return (
+      'Broken CID — only ' +
+      formatBytes(st.bytesTotal) +
+      ' (symlink stub, not the video). Re-ingest required.'
+    )
+  }
+  if (st.seedState === 'fetching') {
+    let line = 'Seeding… ' + pct + '%'
+    if (typeof st.bytesReceived === 'number' && typeof st.bytesTotal === 'number' && st.bytesTotal > 0) {
+      line = line + ' · ' + formatBytes(st.bytesReceived) + ' / ' + formatBytes(st.bytesTotal)
+    }
+    if (prov) {
+      line = line + ' · ' + prov
+    }
+    return line
   }
   if (st.seedState === 'unavailable' || st.error === 'ipfs-not-found') {
-    return 'This file needs to be seeded'
+    return 'Needs seed · ' + pct + '%' + (prov ? ' · ' + prov : ' · 0 providers')
   }
   if (st.seedState === 'missing' || st.error === 'ipfs-pending') {
-    return 'This file needs to be seeded — retrying…'
+    return 'Waiting for seed · ' + pct + '%' + (prov ? ' · ' + prov : '') + ' — retrying…'
   }
   if (st.error === 'ipfs-busy') {
-    return 'Busy — retrying…'
+    return 'Busy · ' + pct + '% — retrying…'
   }
   if (st.error === 'ipfs-gateway-timeout') {
-    return 'Gateway timeout — retrying…'
+    return 'Gateway timeout · ' + pct + '% — retrying…'
   }
   if (st.message) {
-    return st.message
+    return st.message + ' · ' + pct + '%'
   }
-  return 'This file needs to be seeded'
+  return 'Needs seed · ' + pct + '%'
 }
 
 function logicalFromSrc(src) {
@@ -389,7 +475,7 @@ export default function SeedUnlockPanel(props) {
     cid = str(st.cid).trim()
   }
 
-  if (st.ok) {
+  if (st.ok && !isStubCid(st)) {
     // CleverScript cannot parse JSX attr name `default` (reserved). Prefer default
     // tracks first; browsers treat the first <track> as the usual pick without `default`.
     let tracks = []
@@ -437,24 +523,28 @@ export default function SeedUnlockPanel(props) {
     )
   }
 
-  const pct = st.progressPct
+  const pct = displayPct(st)
+  const failed = isStubCid(st)
   return (
     <div
-      className="fb-media fb-media-pending"
-      data-relay-media="pending"
+      className={failed ? 'fb-media fb-media-failed' : 'fb-media fb-media-pending'}
+      data-relay-media={failed ? 'failed' : 'pending'}
       data-seed-state={st.seedState}
       data-error={st.error}
     >
       <p className="fb-media-msg">{statusLabel(st)}</p>
-      <p className="fb-media-hint">
-        The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.
-      </p>
-      {pct !== null ? (
-        <div className="fb-media-bar">
-          <div className="fb-media-bar-fill" style={{ width: pct + '%' }} />
-        </div>
-      ) : null}
-      <IpfsInspectRow cid={cid} providers={st.providers} />
+      <p className="fb-media-hint">{statusHint(st)}</p>
+      <div
+        className="fb-media-bar"
+        role="progressbar"
+        aria-valuenow={pct}
+        aria-valuemin={0}
+        aria-valuemax={100}
+        title={pct + '%'}
+      >
+        <div className="fb-media-bar-fill" style={{ width: pct + '%' }} />
+      </div>
+      <IpfsInspectRow cid={cid} providers={st.providers} bytesTotal={st.bytesTotal} />
     </div>
   )
 }
