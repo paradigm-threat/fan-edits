@@ -97,6 +97,13 @@ function consumeAckQuery() {
 }
 
 export function hasOwnershipAck() {
+  try {
+    if (typeof globalThis !== 'undefined' && typeof globalThis.__fbHasWelcome === 'function') {
+      if (globalThis.__fbHasWelcome() === true) {
+        return true
+      }
+    }
+  } catch (eHost) {}
   if (readAck() === true) {
     return true
   }

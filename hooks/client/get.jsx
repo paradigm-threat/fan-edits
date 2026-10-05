@@ -359,20 +359,19 @@ export default function FlashbackApp() {
       }
     } catch (e) {}
   }
-  let hydratedReady = false
   let clientReadyFlag = false
   try {
     if (typeof globalThis !== 'undefined' && globalThis.document && globalThis.document.documentElement) {
       let rootEl = globalThis.document.documentElement
-      if (rootEl.getAttribute('data-pt-hydrated') === '1') {
-        hydratedReady = true
-      }
+      // Only data-fb-client-ready (set ~150ms post-load by inject). Do NOT use
+      // data-pt-hydrated — it is often already "1" on first client paint and
+      // unlocking then desyncs SSR locked markup (soft-hydrate freeze).
       if (rootEl.getAttribute('data-fb-client-ready') === '1') {
         clientReadyFlag = true
       }
     }
   } catch (eHydrated) {}
-  const live = pastHydrate === true || hydratedReady === true || clientReadyFlag === true
+  const live = pastHydrate === true || clientReadyFlag === true
   const mediaUnlocked = live === true && ack === true && movieAck === true
   const showMovieAck = mediaUnlocked !== true
 
