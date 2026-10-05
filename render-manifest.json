@@ -3,7 +3,7 @@
   "cases": [
     {
       "name": "flashback-shell",
-      "assertText": ["Flashback Repository", "Watchable Fan-Edits of New and Classic Movies", "FanMixes", "KidFriendly"]
+      "assertText": ["Flashback Repository", "Watchable Fan-Edits of Recent and Classic Movies", "FanMixes", "KidFriendly"]
     },
     {
       "name": "catalog-index",
