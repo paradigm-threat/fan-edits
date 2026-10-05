@@ -51,6 +51,10 @@
     try {
       if (global.localStorage && global.localStorage.setItem) {
         global.localStorage.setItem(storageKey, '1');
+        // Title ack also satisfies site-wide welcome (unlock CSS needs both flags).
+        if (mode === 'title') {
+          global.localStorage.setItem(WKEY, '1');
+        }
       }
     } catch (_) {}
     try {
