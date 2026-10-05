@@ -4,9 +4,9 @@
  */
 (function () {
   var scripts = [
-    '/hooks/client/native/Affirmation.web.js',
-    '/hooks/client/native/TheaterPlayer.web.js',
-    '/hooks/client/native/NowShowing.web.js',
+    '/hooks/client/native/Affirmation.host.js',
+    '/hooks/client/native/TheaterPlayer.host.js',
+    '/hooks/client/native/NowShowing.host.js',
   ];
   for (var i = 0; i < scripts.length; i++) {
     var s = document.createElement('script');

@@ -1,6 +1,6 @@
 /**
- * CleverScript stub — emits div[data-relay-park-native=fb-affirmation].
- * Host UI: Affirmation.web.js (register via inject + __relayRegisterParkNative).
+ * CleverScript stub — div[data-relay-park-native=fb-affirmation].
+ * Host UI: Affirmation.host.js
  */
 import React from 'react'
 
@@ -11,13 +11,19 @@ export function welcomeStorageKey() {
 }
 
 export function movieStorageKey(slug) {
-  const s = slug === null || slug === undefined ? '' : '' + slug
+  let s = ''
+  if (slug !== null) {
+    s = '' + slug
+  }
   return 'flashback.movieOwn.v1.' + s
 }
 
 export function hasStoredAck(storageKey) {
-  const key = storageKey === null || storageKey === undefined ? '' : '' + storageKey
-  if (!key) {
+  let key = ''
+  if (storageKey !== null) {
+    key = '' + storageKey
+  }
+  if (key.length === 0) {
     return false
   }
   try {
@@ -71,7 +77,10 @@ export function ensureOwnershipAckFromBrowser() {
 }
 
 export function ensureMovieOwnAckFromBrowser(slug) {
-  const s = slug === null || slug === undefined ? '' : '' + slug
+  let s = ''
+  if (slug !== null) {
+    s = '' + slug
+  }
   try {
     if (typeof globalThis === 'undefined' || !globalThis.location) {
       return hasMovieOwnAck(s)
@@ -96,12 +105,14 @@ export default function Affirmation(props) {
   let linksJson = ''
   if (typeof p.linksJson === 'string') {
     linksJson = p.linksJson
-  } else if (p.links) {
-    try {
-      linksJson = JSON.stringify(p.links)
-    } catch (e) {
-      linksJson = '[]'
-    }
+  }
+  let body = ''
+  if (typeof p.body === 'string') {
+    body = p.body
+  }
+  let confirmed = 'false'
+  if (p.confirmed === true) {
+    confirmed = 'true'
   }
   return (
     <div
@@ -110,11 +121,11 @@ export default function Affirmation(props) {
       data-mode={p.mode || 'welcome'}
       data-title={p.title || ''}
       data-eyebrow={p.eyebrow || ''}
-      data-body={typeof p.body === 'string' ? p.body : ''}
+      data-body={body}
       data-checkbox-label={p.checkboxLabel || ''}
       data-confirm-label={p.confirmLabel || 'OK — I confirm'}
       data-storage-key={p.storageKey || WELCOME_KEY}
-      data-confirmed={p.confirmed === true ? 'true' : 'false'}
+      data-confirmed={confirmed}
       data-links-json={linksJson}
       onConfirm={p.onConfirm}
     />

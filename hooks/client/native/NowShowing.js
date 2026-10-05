@@ -5,16 +5,9 @@ import React from 'react'
 
 export default function NowShowing(props) {
   const p = props || {}
-  let itemsJson = typeof p.itemsJson === 'string' ? p.itemsJson : ''
-  if (!itemsJson && p.items) {
-    try {
-      itemsJson = JSON.stringify(p.items)
-    } catch (e) {
-      itemsJson = '[]'
-    }
-  }
-  if (!itemsJson) {
-    itemsJson = '[]'
+  let itemsJson = '[]'
+  if (typeof p.itemsJson === 'string' && p.itemsJson.length > 0) {
+    itemsJson = p.itemsJson
   }
   return (
     <div
