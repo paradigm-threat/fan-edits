@@ -34,11 +34,26 @@ function injectOwnershipGateScript(ssr) {
     var marker = '</body>';
     var idx = html.indexOf(marker);
     if (idx < 0) {
+      marker = '</html>';
+      idx = html.indexOf(marker);
+    }
+    if (idx < 0) {
       return ssr;
     }
-    html = html.slice(0, idx) + snip + html.slice(idx);
-    ssr.bodyUtf8 = html;
-    return ssr;
+    var out = html.slice(0, idx) + snip + html.slice(idx);
+    var headers = null;
+    try {
+      headers = ssr.headers;
+    } catch (e2) {}
+    var file = {
+      kind: 'file',
+      contentType: 'text/html; charset=utf-8',
+      bodyUtf8: out
+    };
+    if (headers !== null) {
+      file.headers = headers;
+    }
+    return file;
   } catch (e) {
     return ssr;
   }
