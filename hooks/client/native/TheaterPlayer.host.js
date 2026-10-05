@@ -1146,6 +1146,20 @@
         }
       } catch (_) {}
     };
+    const syncUnlockFromDoc = () => {
+      try {
+        const doc = global.document.documentElement;
+        const movieAck = doc.getAttribute('data-fb-movie-ack');
+        const welcome = doc.getAttribute('data-fb-welcome-ack');
+        const unlocked =
+          host.getAttribute('data-unlocked') === 'true' ||
+          (movieAck && movieAck.length > 0 && welcome === '1');
+        if (unlocked && built.__fbCtx && typeof built.__fbCtx.setUnlocked === 'function') {
+          host.setAttribute('data-unlocked', 'true');
+          built.__fbCtx.setUnlocked(true);
+        }
+      } catch (_) {}
+    };
     try {
       if (global.MutationObserver) {
         new global.MutationObserver(apply).observe(host, {
@@ -1159,8 +1173,13 @@
             'data-unlocked',
           ],
         });
+        new global.MutationObserver(syncUnlockFromDoc).observe(global.document.documentElement, {
+          attributes: true,
+          attributeFilter: ['data-fb-movie-ack', 'data-fb-welcome-ack'],
+        });
       }
     } catch (_) {}
+    syncUnlockFromDoc();
   }
 
   function needsUpgrade(host) {
