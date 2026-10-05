@@ -151,6 +151,7 @@ themes:
       ".fb-marquee-lights":
         display: "flex"
         flexDirection: "row"
+        flexShrink: "0"
         gap: "4px"
         color: "var(gold)"
       ".fb-bulb":
@@ -159,6 +160,50 @@ themes:
         opacity: "0.95"
       ".fb-bulb-2":
         opacity: "0.75"
+      ".fb-marquee-board":
+        flex: "1"
+        minWidth: "0"
+        display: "flex"
+        flexDirection: "column"
+        alignItems: "stretch"
+        gap: "3px"
+        maxWidth: "640px"
+      ".fb-marquee-label":
+        margin: "0"
+        textAlign: "center"
+        fontSize: "0.72rem"
+        letterSpacing: "0.2em"
+        textTransform: "none"
+        color: "var(gold)"
+      ".fb-lcd":
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "center"
+        gap: "6px"
+        padding: "5px 8px"
+        background: "linear-gradient(180deg, #100c08, #080604 55%, #0c0a06)"
+        border: "1px solid var(border)"
+        boxShadow: "inset 0 0 14px rgba(0,0,0,0.65)"
+        fontFamily: "ui-monospace, 'Courier New', Courier, monospace"
+        color: "var(gold)"
+      ".fb-lcd-end":
+        flexShrink: "0"
+        fontSize: "0.85rem"
+        opacity: "0.95"
+        textShadow: "0 0 6px rgba(212,165,116,0.35)"
+      ".fb-lcd-window":
+        flex: "1"
+        minWidth: "0"
+        overflow: "hidden"
+        whiteSpace: "nowrap"
+        maskImage: "linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent)"
+      ".fb-lcd-track":
+        display: "inline-block"
+        whiteSpace: "nowrap"
+        fontSize: "0.78rem"
+        letterSpacing: "0.04em"
+        lineHeight: "1.35"
+        willChange: "transform"
       ".fb-marquee-text":
         margin: "0"
         fontSize: "0.8rem"
