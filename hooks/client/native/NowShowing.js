@@ -1,7 +1,5 @@
 /**
- * CleverScript stub — tag `fb-now-showing`.
- * itemsJson: [{ title, href, poster? }]
- * variant: lcd | carousel
+ * CleverScript stub — div[data-relay-park-native=fb-now-showing].
  */
 import React from 'react'
 
@@ -18,10 +16,13 @@ export default function NowShowing(props) {
   if (!itemsJson) {
     itemsJson = '[]'
   }
-  return React.createElement('fb-now-showing', {
-    className: 'fb-now-showing-host',
-    variant: p.variant || 'lcd',
-    itemsJson: itemsJson,
-    ariaLabel: p.ariaLabel || 'Now showing',
-  })
+  return (
+    <div
+      className="fb-now-showing-host"
+      data-relay-park-native="fb-now-showing"
+      data-variant={p.variant || 'lcd'}
+      data-items-json={itemsJson}
+      data-aria-label={p.ariaLabel || 'Now showing'}
+    />
+  )
 }

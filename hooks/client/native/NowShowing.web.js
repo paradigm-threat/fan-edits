@@ -6,12 +6,19 @@
 
   function prop(props, key, fallback) {
     if (!props) return fallback;
-    const v = props[key];
-    if (v == null) return fallback;
-    if (typeof v === 'object' && v !== null && 'value' in v) {
-      return v.value != null ? String(v.value) : fallback;
+    const keys = [key];
+    if (key.indexOf('data-') !== 0) {
+      keys.push('data-' + key.replace(/[A-Z]/g, (m) => '-' + m.toLowerCase()));
     }
-    return String(v);
+    for (let i = 0; i < keys.length; i++) {
+      const v = props[keys[i]];
+      if (v == null) continue;
+      if (typeof v === 'object' && v !== null && 'value' in v) {
+        return v.value != null ? String(v.value) : fallback;
+      }
+      return String(v);
+    }
+    return fallback;
   }
 
   function parseItems(props) {
