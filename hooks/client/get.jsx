@@ -87,6 +87,20 @@ function fetchText(path) {
   return ''
 }
 
+/** Drop leading H1 — the movie page already shows the title. */
+function readmeBody(raw) {
+  const text = str(raw)
+  if (!text) return ''
+  const lines = text.split('\n')
+  let i = 0
+  while (i < lines.length && lines[i].trim() === '') i++
+  if (i < lines.length && lines[i].indexOf('# ') === 0) {
+    i++
+    while (i < lines.length && lines[i].trim() === '') i++
+  }
+  return lines.slice(i).join('\n')
+}
+
 function isNarrowViewport() {
   try {
     if (typeof window === 'undefined') return true
@@ -362,7 +376,7 @@ export default function FlashbackApp() {
           <p className="fb-movie-nomedia">Feature media is not catalogued yet for this title.</p>
         )}
         <div className="fb-readme">
-          <MarkdownRenderer content={readme || '# Loading…'} />
+          <MarkdownRenderer content={readmeBody(readme) || '# Loading…'} />
         </div>
       </div>
     )

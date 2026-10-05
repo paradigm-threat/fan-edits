@@ -63,27 +63,43 @@ def pairs() -> list[tuple[Path, Path]]:
             if not proj.is_dir():
                 continue
             name = proj.name
+            # Prefer exact render folder name match only.
+            exact = RENDER / name
             cands: list[Path] = []
-            for d in RENDER.iterdir():
-                if not d.is_dir():
-                    continue
-                if d.name != name and name not in d.name and d.name not in name:
-                    a = set(name.lower().replace("(", " ").replace(")", " ").split())
-                    b = set(d.name.lower().replace("(", " ").replace(")", " ").split())
-                    if len(a & b) < 3:
-                        continue
+            search_dirs: list[Path] = []
+            if exact.is_dir():
+                search_dirs.append(exact)
+            # No fuzzy folder fallback — wrong-sibling matches were too common.
+            for d in search_dirs:
                 for f in d.glob("*.mkv"):
                     if f.stat().st_size < 80_000_000:
                         continue
-                    if "seam" in f.name.lower() or "preview" in f.name.lower():
+                    low = f.name.lower()
+                    if "seam" in low or "preview" in low or "edit-1080" in low:
+                        continue
+                    if is_source_rip(f.name):
                         continue
                     cands.append(f)
             if not cands:
+                print("NO CAND", name, file=sys.stderr)
                 continue
-            cands.sort(key=score, reverse=True)
+            # Prefer filenames that share the project title tokens
+            def name_score(p: Path) -> tuple[int, int, int]:
+                base_s, sz = score(p)
+                pn = p.stem.lower()
+                # exact-ish title in filename
+                if name.lower() in pn or pn in name.lower():
+                    base_s += 20
+                # penalize wrong sibling (e.g. Sonic 2 file under Sonic)
+                for other in ("sonic 2", "sonic 3", "mummy returns", "revolutions", "reloaded"):
+                    if other in pn and other not in name.lower():
+                        base_s -= 30
+                return (base_s, sz, -len(p.name))
+
+            cands.sort(key=name_score, reverse=True)
             best = cands[0]
-            if score(best)[0] < 5:
-                print("SKIP", proj.name, "->", best.name, file=sys.stderr)
+            if name_score(best)[0] < 8:
+                print("SKIP", proj.name, "->", best.name, "score", name_score(best)[0], file=sys.stderr)
                 continue
             out.append((proj, best))
     return out

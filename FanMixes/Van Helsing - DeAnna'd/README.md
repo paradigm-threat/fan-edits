@@ -2,7 +2,7 @@
 
 Cut that removes **Anna** as much as possible without plot or context regression, and strips as many cringe beats as we can — especially with the Frankenstein monster. Select score beds are swapped for *Castlevania: Symphony of the Night* cues (`castlevania-symphony_of_the_night_ost/`, not in git).
 
-## Why this edit
+## Motivation
 
 First contact was a pirate rip (not a theater night). The surprise was how much **flair and color** the movie had — ideas that felt new and unique at the time, a Van Helsing who had never quite been *wanted* like this before. Comic-book and tropey, yes, and that was mostly fine. What was not fine was the **editing**: constantly chopped, obnoxious, excessive, lined with cringey statements that kill the action flow. Most productions shoot more than they keep because some takes do not fit. Here too much of the wrong material stayed in.
 
@@ -10,13 +10,15 @@ That flair is not an accident of “random Universal monster movie.” It is the
 
 Contemporary reviews said the quiet part out loud: Sommers “dancing as fast as he can” so nobody notices the story ([Salon](https://www.salon.com/2004/05/07/van_helsing/)); no sense of pacing, conversations interrupted by noise and collapse; Kate Beckinsale stuck with a bad Transylvanian accent and tin-pot lines ([Slate](https://slate.com/culture/2004/05/van-helsing-cursed.html), [EW](https://ew.com/article/2004/05/05/van-helsing-2/)). Blame lands on the **director’s choices** — capturing bad takes and printing them — though it is also plausible the shoot produced gold and the **cut** got compromised (hamstrung schedule, effects pile-up, editorial pressure). Ducsay later called the bulk of the film “muscular and cut-y” next to the calmer black-and-white open ([SYFY retrospective](https://www.syfy.com/syfy-wire/van-helsing-stephen-sommers-retrospective-interview)). Either way: the value is real, and watching it stock means cringing through it.
 
-This edit exists because the movie is worth saving. Cutting Anna’s excess establishment / intros / bad line-readings (she is not a bad actress; those takes should not have survived), plus Frankenstein cringe and other tone-breakers, removes a huge amount of chop so the action can play without being stabbed every few seconds by a quip.
+This edit exists because the movie is worth saving. **DeAnna:** keep only what the story still needs from Anna; drop the rest (too many shots, establishers, intros, and bad lines delivered badly — she is not a bad actress; those takes should not have survived). **Cringe:** cut tone-breaking comedy and awkward monster beats, especially Frankenstein’s creature, when the plot can stand without them. **Flow:** restore action continuity that the theatrical cut keeps interrupting.
 
-## Goals
+## Changes
 
-- **DeAnna:** keep only what the story still needs from Anna; drop the rest (too many shots, establishers, intros, and bad lines delivered badly).
-- **Cringe:** cut tone-breaking comedy and awkward monster beats, especially Frankenstein’s creature, when the plot can stand without them.
-- **Flow:** restore action continuity that the theatrical cut keeps interrupting.
+- Reduce Anna to story-essential beats only (drop excess establishers, intros, and bad line-readings)
+- Cut tone-breaking comedy and awkward Frankenstein-monster beats when the plot can stand without them
+- TODO: list specific Anna removal windows (describe from timeline/subs)
+- TODO: list specific Frankenstein / cringe removal windows (describe from timeline/subs)
+- TODO: list other tone-breaker trims for action flow (describe from timeline/subs)
 
 ## Score note — Dracula's Castle ↔ Silvestri
 

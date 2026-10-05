@@ -1,8 +1,19 @@
 # The Big Lebowski (1998) — Enhanced Citations
 
-Follow-up to [The Mummy (1999) - Debugged](../The%20Mummy%20%281999%29%20-%20Debugged/) and Paradigm Threat [AU-062](https://paradigmthreat.net/influence/hollywood/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md).
+Follow-up to [The Mummy (1999) - Debugged](../The%20Mummy%20%281999%29%20-%20Debugged/) and Paradigm Threat [AU-062](https://paradigmthreat.net/influence/eugene/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md).
 
 **Not a picture cut.** Theatrical film stays intact. Work is a second English subtitle track.
+
+## Motivation
+
+Gutterballs locks the same public Mountain of Heaven silhouette as the Mummy 1999 sun-on-peak. Official Coen cover (dream mash / Busby Berkeley homage) is not the payload; the enhanced track carries the AU-062 author reading — shared history including the Asgard–Viking lock — plus later sibling locks in the credits. NSA hide (no lecture).
+
+## Changes
+
+- Second English track: dialogue plus beat-locked notes; AU-062 overflow in the credits
+- Default track stays theatrical dialogue only
+- Gutterballs (shoe-rack-to-moon / Valkyrie): L1 Berkeley homage card; author / L3 Mountain of Heaven + Asgard–Viking cards; CIA-lock contrast (*Stargate*, *2001*)
+- Credits conversation: *Fifth Element* (NSA / paradise), *Mission to Mars* (they’re us), *Mummy Returns* (twelve tribes / no bad Arabs), *2001* (CIA / nothing unifying)
 
 ## Tracks
 
@@ -12,16 +23,6 @@ Sidecars live in `subs/` so players do not auto-load them beside the MKV.
 |------|------|
 | `subs/The Big Lebowski.english.srt` | **Default** — theatrical dialogue only |
 | `subs/The Big Lebowski.enhanced.srt` | **English (citations)** — dialogue plus beat-locked notes; AU-062 overflow in the credits |
-
-## Gutterballs
-
-Picture-locked cards on the shoe-rack-to-moon / Valkyrie number.
-
-**L1 (official Coen cover):** dreams mash leftovers; homage to 1930s Busby Berkeley.
-
-**Author / L3:** neither is the payload. Same public Mountain of Heaven silhouette as the Mummy 1999 sun-on-peak. Shared history, including the Asgard–Viking lock — universal, not a phallic gag. NSA hide (no lecture). CIA titles (*Stargate*, *2001*) use the same silhouette as a lock you are not meant to share.
-
-Credits also carry the later AU-062 locks: *Fifth Element* (NSA / paradise), *Mission to Mars* (they’re us), *Mummy Returns* (twelve tribes / no bad Arabs), *2001* (CIA / nothing unifying).
 
 ## Mux
 

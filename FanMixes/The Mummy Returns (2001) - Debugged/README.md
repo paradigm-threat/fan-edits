@@ -2,11 +2,15 @@
 
 Kid-friendlier cut to match *The Mummy (1999) - Debugged*. This film has no SRT-named scarab dump; v1 removes the **pygmy swarm** that kills the expedition (same “little creatures eating people” beat). Confirm in [PLAN.md](PLAN.md).
 
+## Motivation
+
+Match the 1999 Debugged rule: no little creatures eating people on screen. The 1999 flesh-eating beetle dump is not repeated as a set piece here; the closest analogue is the **pygmy swarm** that overruns the expedition. Izzy later jokes about “mummies, pygmies, big bugs.” Scorpion King prologue, Anubis warriors, and the finale stay for v1.
+
 ## Changes
 
-- First pygmy overrun after “Where’s the boy?”
-- Later pygmy eat/chase beat before “Thank God for that”
-- Credits / extra music beds use metal covers of *Zombies Ate My Neighbors* cues (see below)
+- First pygmy overrun after “Where’s the boy?” through snarling/screaming camp attack (resume “The black book!”)
+- Later pygmy eat/chase beat (yelling/snarling/gunfire) before “Let’s go / Thank God for that”
+- Credits / extra music beds use metal covers of *Zombies Ate My Neighbors* cues (see Extra audio)
 
 ## Extra audio
 

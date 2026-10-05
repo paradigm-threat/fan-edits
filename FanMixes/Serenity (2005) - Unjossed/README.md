@@ -1,18 +1,29 @@
 # Serenity (2005) — Unjossed Edition
 
+A family/kids cut of *Serenity*: strict on Reaver gore, keeps the action and core plot, and leaves favorite Whedon beats (including “leaf on the wind” and the final fight) alone unless they break tone after horror.
+
+## Motivation
+
+Built for an audience that wants the Firefly movie without Reaver shock cuts. Director notes: don’t trim liked one-liners unless they break tone after horror (the batteries beat is the main dialog cut); no reorder — linear theatrical flow. Haven and Maidenhead need picture/waveform QC because subs miss silent gore.
+
 ## Changes
 
-Family/kids cut: **strict on Reaver gore**, keeps action and core plot.
+- Opening: Reaver attack on screen (gore only) (~95s–185s).
+- Whole Kaylee/Jayne “nethers / batteries” beat removed (~1870s–1919s).
+- Haven massacre shortened to Mal’s reaction — bodies on posts / gore out (~3055s–3320s).
+- Maidenhead: reaver-gore inserts only; martial arts fight kept (~3780s–3865s).
+- Lab: reaver specimen / gore visuals trimmed (~5280s–5385s).
+- Mr. Universe reaver horror reduced (~5580s–5680s).
+- Reaver fleet / corpse shock beats trimmed (~5850s–5920s).
+- “Leaf on the wind” and final Operative / Serenity fight **kept**.
+- Opening: Reaver attack on screen (gore only)
+- Whole Kaylee/Jayne batteries beat; batteries beat (cont.); batteries beat (cont.)
+- Haven: bodies on posts — trim to Mal reaction (~2:05); Haven: extend trim if posts still visible
+- Maidenhead: reaver-gore inserts only (keep martial arts)
+- Lab: reaver specimen / gore visuals
+- Mr. Universe reaver horror (reduce)
+- Reaver fleet / corpse shock beats
 
-| Decision | Applied |
-|----------|---------|
-| Kaylee/Jayne “nethers / batteries” | **Whole beat removed** |
-| Haven massacre | **Shortened to Mal’s reaction** (posts/gore out) |
-| Maidenhead fight | **Kept** — martial arts stay; **reaver gore only** trimmed |
-| “Leaf on the wind” | **Kept** |
-| Final fight | **Kept** |
-
-See [PLAN.md](PLAN.md).
 
 ## Source media (not in git)
 

@@ -4,12 +4,16 @@ Sharper **16:9** presentation of the FX / Paramount TV movie. No story cuts. The
 
 A second English track cites the McNaughton / AU-058 investigation and the fact that this film **was not allowed in theaters** — FX TV only, and it never saw an HD release. See [INVESTIGATION.md](INVESTIGATION.md) and [PLAN.md](PLAN.md).
 
+## Motivation
+
+The disc is a **4:3 PAL** master framed for standard-def television. There is no hidden widescreen negative on this DVD — softness is DVD + interlaced PAL, not a missing HD tape. That is also the investigation beat: the film **was not allowed a theatrical run**. The best they could do was this made-for-TV version, and it **never saw an HD release**. Cards for that live on **English (citations)** only. AI upscale happens on Windows + NVIDIA; Linux produces the clean 10-bit HEVC, the dual English tracks, and this project folder.
+
 ## Changes
 
-- Restore square pixels, then **2× Real-ESRGAN** (general / real-world weights).
-- **Center crop to 16:9** (`1536×864`, optional scale to `1920×1080`).
-- Default **English** SRT (PAL-timed, dialogue only). DVD had no English image track.
-- Optional **English (citations)** — McNaughton, Tonkin/Hanyok, TV-only / no HD. Never on the default track.
+- Restore square pixels, then **2× Real-ESRGAN** (general / real-world weights)
+- **Center crop to 16:9** (`1536×864`, optional scale to `1920×1080`)
+- Default **English** SRT (PAL-timed, dialogue only). DVD had no English image track
+- Optional **English (citations)** — McNaughton, Tonkin/Hanyok, TV-only / no HD. Never on the default track
 
 ## Tracks (4:3 library MKV, now)
 

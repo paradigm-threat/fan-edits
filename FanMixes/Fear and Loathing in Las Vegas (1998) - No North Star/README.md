@@ -1,10 +1,18 @@
 # Fear and Loathing in Las Vegas (1998) — No North Star
 
+A single-scene cut that removes the North Star Coffee Lounge waitress/knife sequence and hard-cuts back to the Red Shark run to the airport.
+
+## Motivation
+
+Duke and Gonzo terrorizing the waitress (knife, “lemon meringue pie”) is a mean beat that doesn’t need depiction — the preceding narration already names the crime. Skipping the diner leaves the reflection intact and resumes cleanly on the convertible.
+
 ## Changes
 
-Removes the **North Star Coffee Lounge** scene (waitress, knife, “lemon meringue pie”) between the shot transition at **1:41:44** and the cut back to the Red Shark at **1:47:03**. Duke’s “massive crime often slips by unrecognized” line stays; the next line is “It was all over now.”
+- Removes the North Star Coffee Lounge scene (waitress, knife, “lemon meringue pie”) between the shot transition at **1:41:44** and the cut back to the Red Shark at **1:47:03**.
+- Keeps Duke’s “massive crime often slips by unrecognized” line; next line is “It was all over now.”
+- Picture hard-cut on the transition frames; 0.5 s audio fade-out/fade-in at the join (no overlapping acrossfade).
+- North Star Coffee Lounge: neon establish through Gonzo terrorizing the waitress with a knife; resume at 'It was all over now' / convertible. Picture hard-cut; kdenlive volume fade 0.5 s.
 
-Strategy and QC: [PLAN.md](PLAN.md).
 
 ## Source media (not in git)
 

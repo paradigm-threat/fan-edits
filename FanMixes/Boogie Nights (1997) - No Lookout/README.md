@@ -1,10 +1,17 @@
 # Boogie Nights (1997) — No Lookout
 
+A single-block cut of PTA’s *Boogie Nights* that skips the late-film collapse from the office whip-pan through On the Lookout and the donut-shop stick-up, then resumes on the film’s own fade to black into the Rahad-planning scene.
+
+## Motivation
+
+The On the Lookout / Valley night-drive / donut-shop kill stretch is a long bad-scene block that derails the movie’s late momentum and kills Buck for spectacle. Skipping it keeps Reed’s tape argument, accepts losing Amber’s collapse / custody / Buck’s death, and lands cleanly on the coke-deal planning beat.
+
 ## Changes
 
-Removes from PTA’s **whip-pan** out of Reed’s demo-tape office (**1:45:56**) through On the Lookout, the Valley night drive, and the **donut-shop stick-up/kill**, landing on the first fully **black** frame at **2:05:19**. The original black hold and fade-up into the Rahad-planning scene stay.
+- Removes from PTA’s whip-pan out of Reed’s demo-tape office (~1:45:56) through Amber/Dirk, bank loan, custody, On the Lookout, the Valley night drive, and the donut-shop stick-up/kill; resumes on the first fully black frame at 2:05:19 (original black hold and fade-up into Rahad planning stay).
+- Large jump joined with `fadeblack` 0.50 s + audio crossfade (no GOP snap).
+- Office whip-pan through Amber/Dirk, bank loan, custody, On the Lookout, night-drive, donut shop, Buck stick-up/kill; first held black frame 2:05:19.000, next picture 2:05:24.5 Rahad planning
 
-Strategy and QC: [PLAN.md](PLAN.md).
 
 ## Source media (not in git)
 

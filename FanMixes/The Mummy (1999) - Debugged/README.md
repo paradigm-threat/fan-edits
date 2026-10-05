@@ -2,18 +2,26 @@
 
 Kid-friendlier cut: **scarabs that kill or eat people** are removed. Adventure, Imhotep, and the later plagues stay. Not a full wipe of every gunfight.
 
-**Why cuts:** usually **violence**. Sometimes **unrealism** — Jonathan’s scarab/arm beat is out because a dirty-knife wound vanishes in the next shot. Details: [PLAN.md](PLAN.md), [INVESTIGATION.md](INVESTIGATION.md).
-
 **Canonical Kdenlive blank:** `The Mummy Debugged.kdenlive` is the known-good full-timeline project format for new FanMixes. Clone it with `scripts/clone_kdenlive_blank.py` — do not invent `.kdenlive` XML from scratch (those files often fail to open).
+
+## Motivation
+
+Removals are usually **violence** — live beetles eating people, swarm close-ups, Burns finished with scarabs, Beni’s treasure-chamber death. Sometimes **unrealism**: Jonathan’s scarab/arm beat is out because a dirty-knife wound vanishes in the next shot. Gunfights, Imhotep, and the Magi stay. Details: [PLAN.md](PLAN.md), [INVESTIGATION.md](INVESTIGATION.md).
 
 ## Changes
 
-- Hom-Dai: no live beetles eating Imhotep
+- Hom-Dai: no live scarabs poured onto wrapped Imhotep (resume Magi narration “He was to remain sealed”)
 - No camp “ate him alive” / Hom-Dai / 10-plagues lecture (cut 2026-09-23)
-- No Hamunaptra scarab swarm / corridor chase
-- No Cairo scene of Imhotep finishing Burns with scarabs
+- No Hamunaptra scarab swarm / corridor chase after Book of the Dead (resume “Evelyn?”)
+- No Cairo scene of Imhotep finishing Burns with scarabs (resume biblical plague “rivers and waters…”)
 - No Beni treasure-chamber death (scarabs eat him after “Goodbye, Beni.”)
-- No Jonathan arm-reset (scarab + knife, then uninjured)
+- No Jonathan arm-reset (scarab under the skin, dirty hunting knife, next shot uninjured)
+- Hom-Dai: live scarabs poured onto wrapped Imhotep. Resume Magi narration 'He was to remain sealed'.
+- Camp lecture: scarab skeletons / ate him alive / Hom-Dai / 10 plagues (source 00:58:02.836–00:59:01.793, cut 2026-09-23). Wider than the original 20s eat-talk window.
+- Hamunaptra: curse scarab swarm after Book of the Dead. Resume search 'Evelyn?'
+- Cairo: Imhotep/Beni finish Burns with scarabs. Resume biblical plague 'rivers and waters of Egypt ran red'.
+- Jonathan arm: scarab under the skin, dirty hunting knife, next shot uninjured (source 01:36:32.908–01:37:33.283).
+- Beni treasure-chamber death: scarabs eat him after 'Goodbye, Beni.' (source 01:53:27.236–01:54:36.203). Resume 'Look out!'
 
 ## Subtitles (two English tracks)
 
@@ -28,7 +36,7 @@ Sidecars live in `subs/` so players do not auto-load them beside the MKV.
 
 Citations never go on the default track. Same rule on *The Mummy Returns*: Silvestri / Avengers lines are enhanced-only.
 
-Paradigm Threat cross-link: [AU-062 Mountain of Heaven](https://paradigmthreat.net/influence/hollywood/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md) (opening sun-on-peak).
+Paradigm Threat cross-link: [AU-062 Mountain of Heaven](https://paradigmthreat.net/influence/cayman/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md) (opening sun-on-peak).
 
 After a new encode (or to swap subs only):
 

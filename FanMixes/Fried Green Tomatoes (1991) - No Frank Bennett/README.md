@@ -1,10 +1,31 @@
 # Fried Green Tomatoes (1991) — No Frank Bennett
 
-## Description
+This cut removes **Frank Bennett** (Nick Searcy): his on-screen scenes, the **Valdosta / river-club / abuse / kidnapping / investigation / trial** thread, and **dialogue that names or explains him**, so the runtime stays continuous where possible. The automated ranges come from the bundled English `.srt` (keyword clustering + padding); **review every join in Kdenlive** — subtitles miss silent reaction shots and some establishing shots may need manual handles.
 
 **Strategy, phases, and replacement-asset search plan:** [PLAN.md](PLAN.md).
 
-This cut removes **Frank Bennett** (Nick Searcy): his on-screen scenes, the **Valdosta / river-club / abuse / kidnapping / investigation / trial** thread, and **dialogue that names or explains him**, so the runtime stays continuous where possible. The automated ranges come from the bundled English `.srt` (keyword clustering + padding); **review every join in Kdenlive** — subtitles miss silent reaction shots and some establishing shots may need manual handles.
+## Motivation
+
+Frank Bennett’s antagonist thread (abuse, kidnapping, river dump, trial, barbecue revelation) dominates long stretches that pull focus from the Idgie / Ruth / Ninny / Evelyn emotional spine. Removing him as a face, voice, and name-driven plot dependency keeps Whistle Stop and the friendship arc — accepting some ambiguity instead of endless ADR.
+
+## Changes
+
+- Removes Frank Bennett on-screen scenes and the Valdosta / river-club / abuse / kidnapping / investigation / trial thread.
+- Removes dialogue that names or explains Frank (SRT keyword clustering: Frank, Bennett, Valdosta, river club, trial, Scroggins, barbecue Frank, etc.).
+- Manual removal: Ninny “murdered that man” gossip (~414.85s–424.34s; hard cut, no join fade).
+- TODO: removal ~435.3s–454.3s (describe from timeline/subs)
+- TODO: removal ~1375.5s–1480.3s (describe from timeline/subs)
+- TODO: removal ~1607.6s–1625.8s (describe from timeline/subs)
+- TODO: removal ~1776.6s–1795.2s (describe from timeline/subs)
+- TODO: removal ~2323.4s–2343.8s (describe from timeline/subs)
+- TODO: removal ~2575.4s–2625.3s (describe from timeline/subs)
+- TODO: removal ~3022.5s–3041.4s (describe from timeline/subs)
+- TODO: removal ~3931.8s–3999.7s (describe from timeline/subs)
+- TODO: removal ~4183.7s–4253.0s (describe from timeline/subs)
+- TODO: removal ~4375.4s–4394.6s (describe from timeline/subs)
+- TODO: removal ~4482.1s–4562.0s (describe from timeline/subs)
+- TODO: removal ~4667.7s–4834.9s (describe from timeline/subs)
+- TODO: 8 further Frank-plot removals — describe from timeline/subs; see [remove-frank-bennett-ranges.json](remove-frank-bennett-ranges.json)
 
 ## Source media (not in git)
 

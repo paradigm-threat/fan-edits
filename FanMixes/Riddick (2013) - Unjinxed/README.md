@@ -1,14 +1,23 @@
 # Riddick (2013) — Unjinxed
 
+A dialogue-trimmed *Riddick* that keeps the Unjinxed tone, front-loads the Necromonger “wrong planet” flashback as a linear prologue, and drops the opening predator beat so the desert survival story starts clean.
+
+## Motivation
+
+Theatrical *Riddick* dumps you into desert survival and only later explains why he’s stranded. This cut wants that exposition up front, without mid-film flashbacks, while keeping the existing Unjinxed dialogue trims (including the Vaako conspiracy block) and the Necromonger epilogue at the end.
+
 ## Changes
 
 - Removes distracting, sexist, and exaggerated dialogue throughout (legacy Unjinxed trims in `playlist2`).
-- **Flashback prologue:** Necromonger / wrong-planet backstory (`~10:54–22:51` on source) plays **before** the desert survival plot so exposition is linear.
-- **Vaako block** (`13:25–15:50` on source) stays **cut**.
-- **Opening vulture/pterosaur kill** removed; main desert story starts at **`00:01:13`** VO (no `00:00:30–00:02:00` predator beat).
-- Necromonger epilogue (`~1:41+`) remains at the **end**.
+- Opening vulture/pterosaur kill removed (~30s–120s on source); main desert story starts at **00:01:13** VO.
+- Vaako / Furya-bait conspiracy block stays cut (`00:13:25`–`00:15:50` / ~805s–950s).
+- Necromonger / wrong-planet flashback (`~10:54`–`22:51` on source) plays **before** the desert survival plot (prologue A + B; in-body flashback omitted from main).
+- Savanna bridge (`00:22:51`–`00:24:03`) kept once after main survival; Necromonger epilogue (`~1:41+`) remains at the **end**.
+- vulture/pterosaur kill — QC refine in Kdenlive
+- Vaako / Furya-bait conspiracy — keep removed
+- flashback block A — plays in prologue only
+- flashback block B — plays in prologue only; main omits 654-1371 except savanna 1371-1443
 
-Editorial detail: [PLAN.md](PLAN.md). Cut list: [remove-riddick-unjinxed-ranges.json](remove-riddick-unjinxed-ranges.json).
 
 ## Source media (not in git)
 

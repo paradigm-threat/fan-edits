@@ -2,6 +2,10 @@
 
 Toddler-safe cut (~3 years): Francis breakfast/pool/basement removed; **Francis premiere kept**. No clown close-ups, Large Marge, Simone diner, T-rex dream, Andy, train, Lloyd rodeo, basement conspiracy, biker death threats, WB nightmare, or Twisted Sister hell song. Keeps Mickey, full Alamo tour, Simone bus goodbye, Tequila dance, Santa/Godzilla gags, and the happy ending.
 
+## Motivation
+
+Age ~3: no frightening imagery (clown close-ups, Large Marge, Andy giant, T-rex dream, WB nightmare, hell song), no early Francis bad manners or paranoid basement rant. Bike theft stays (clown CUs trimmed manually). Joy stays — house, bike, Dottie, Mickey, Alamo, Simone bus goodbye, Tequila, studio chase, Francis premiere, happy end.
+
 ## Changes
 
 - **Francis:** breakfast, pool, and basement removed; **premiere confrontation kept**

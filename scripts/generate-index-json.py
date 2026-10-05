@@ -31,22 +31,12 @@ def title_from_readme(readme: Path, fallback: str) -> str:
 
 
 def blurb_from_readme(readme: Path) -> str:
+    """First description paragraph after H1 (skip Motivation/Changes heads)."""
     try:
         text = readme.read_text(encoding="utf-8", errors="replace")
     except OSError:
         return ""
     lines = text.splitlines()
-    # Prefer ## Changes / ## Why / ## Goals lead-in
-    for i, line in enumerate(lines):
-        if re.match(r"^##\s+(Changes|Why|Goals|About)\b", line, re.I):
-            for j in range(i + 1, min(i + 12, len(lines))):
-                t = lines[j].strip()
-                if not t or t.startswith("#") or t.startswith("```") or t.startswith("|"):
-                    continue
-                if t.startswith("- ") or t.startswith("* "):
-                    t = t[2:].strip()
-                return t[:280]
-    # First non-heading paragraph after H1
     past_title = False
     buf: list[str] = []
     for line in lines:
@@ -57,17 +47,18 @@ def blurb_from_readme(readme: Path) -> str:
         if not past_title:
             continue
         if s.startswith("#"):
-            if buf:
-                break
-            continue
+            # Stop at Motivation / Changes / other sections
+            break
         if not s:
             if buf:
                 break
             continue
         if s.startswith("```") or s.startswith("|") or s.startswith("!["):
             continue
+        if s.startswith("- ") or s.startswith("* "):
+            continue
         buf.append(s)
-        if len(" ".join(buf)) > 200:
+        if len(" ".join(buf)) > 220:
             break
     return " ".join(buf)[:280]
 
