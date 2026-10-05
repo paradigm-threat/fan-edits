@@ -207,6 +207,29 @@
     return root;
   }
 
+  function attrsToProps(el) {
+    const props = {};
+    for (let i = 0; i < el.attributes.length; i++) {
+      const a = el.attributes[i];
+      props[a.name] = a.value;
+    }
+    return props;
+  }
+
+  function upgradePlaceholders() {
+    try {
+      const nodes = global.document.querySelectorAll(
+        '[data-relay-park-native="fb-theater-player"]:not([data-fb-built="1"])',
+      );
+      for (let i = 0; i < nodes.length; i++) {
+        const host = nodes[i];
+        host.setAttribute('data-fb-built', '1');
+        const built = buildTheaterPlayer(attrsToProps(host), () => {}, null);
+        host.replaceChildren(built);
+      }
+    } catch (_) {}
+  }
+
   function register() {
     if (typeof global.__relayRegisterParkNative === 'function') {
       global.__relayRegisterParkNative('fb-theater-player', buildTheaterPlayer);
@@ -219,19 +242,36 @@
             connectedCallback() {
               if (this._fbBuilt) return;
               this._fbBuilt = true;
-              const props = {};
-              for (let i = 0; i < this.attributes.length; i++) {
-                const a = this.attributes[i];
-                props[a.name] = a.value;
-              }
-              const built = buildTheaterPlayer(props, () => {}, null);
+              const built = buildTheaterPlayer(attrsToProps(this), () => {}, null);
               this.replaceChildren(built);
             }
           },
         );
       }
     } catch (_) {}
+    upgradePlaceholders();
   }
-  register();
+
+  function boot() {
+    register();
+    let n = 0;
+    const t = global.setInterval(() => {
+      register();
+      n += 1;
+      if (typeof global.__relayRegisterParkNative === 'function' || n > 80) {
+        global.clearInterval(t);
+      }
+    }, 50);
+  }
+
+  if (typeof global.document !== 'undefined') {
+    if (global.document.readyState === 'loading') {
+      global.document.addEventListener('DOMContentLoaded', boot);
+    } else {
+      boot();
+    }
+  } else {
+    register();
+  }
   global.__fbBuildTheaterPlayer = buildTheaterPlayer;
 })(typeof globalThis !== 'undefined' ? globalThis : window);
