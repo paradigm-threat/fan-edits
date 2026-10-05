@@ -1,7 +1,7 @@
 /**
  * Flashback Repository — theater shell (SSR + hydrate).
  */
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import StyleContext from '@clevertree/style'
 import { MarkdownRenderer } from '@clevertree/markdown'
 import manifest from '@hooks'
@@ -232,25 +232,56 @@ export default function FlashbackApp() {
   const route = initialRoute()
   const kind = routeKind(route)
 
-  const projectsState = useState([])
-  const projects = projectsState[0]
-  const setProjects = projectsState[1]
+  let projects = []
+  try {
+    const res = fetch('/index.json')
+    if (res && res.ok === true && res.text) {
+      const data = JSON.parse(res.text)
+      if (data && data.projects) {
+        projects = data.projects
+      }
+    }
+  } catch (e) {
+    projects = []
+  }
 
-  const readmeState = useState('')
-  const readme = readmeState[0]
-  const setReadme = readmeState[1]
+  let homeMd = ''
+  let blogPosts = []
+  let md = ''
+  let readme = ''
+  if (kind.kind === 'home') {
+    homeMd = fetchText('content/home.md')
+    try {
+      const raw = fetchText('content/blog/index.json')
+      const data = raw ? JSON.parse(raw) : null
+      const list = data && data.posts ? data.posts : []
+      for (let i = 0; i < list.length; i++) {
+        const meta = list[i]
+        if (!meta || !meta.path) {
+          continue
+        }
+        blogPosts.push({
+          slug: meta.slug || '',
+          date: meta.date || '',
+          title: meta.title || 'Post',
+          body: fetchText(meta.path) || '',
+        })
+      }
+    } catch (e) {
+      blogPosts = []
+    }
+  }
+  if (kind.kind === 'md') {
+    md = fetchText(kind.file)
+  }
 
-  const mdState = useState('')
-  const md = mdState[0]
-  const setMd = mdState[1]
+  const selected = kind.kind === 'movie' ? findProject(projects, kind.slug) : null
+  if (kind.kind === 'movie' && selected) {
+    readme = fetchText(selected.path + '/README.md')
+  }
 
-  const homeState = useState('')
-  const homeMd = homeState[0]
-  const setHomeMd = homeState[1]
-
-  const blogState = useState([])
-  const blogPosts = blogState[0]
-  const setBlogPosts = blogState[1]
+  const fanMixes = projectsInCategory(projects, 'FanMixes')
+  const kidFriendly = projectsInCategory(projects, 'KidFriendly')
 
   const playingState = useState(false)
   const playing = playingState[0]
@@ -268,71 +299,11 @@ export default function FlashbackApp() {
   const ack = ackState[0]
   const setAck = ackState[1]
 
-  const movieAckState = useState(false)
+  const initialMovieAck =
+    kind.kind === 'movie' && kind.slug ? hasMovieOwnAck(kind.slug) === true : false
+  const movieAckState = useState(initialMovieAck)
   const movieAck = movieAckState[0]
   const setMovieAck = movieAckState[1]
-
-  useEffect(function () {
-    if (kind.kind === 'movie' && kind.slug) {
-      setMovieAck(hasMovieOwnAck(kind.slug) === true)
-    } else {
-      setMovieAck(false)
-    }
-  }, [kind.kind, kind.slug])
-
-  useEffect(function () {
-    const res = fetch('/index.json')
-    if (res && res.ok === true && res.text) {
-      try {
-        const data = JSON.parse(res.text)
-        if (data && data.projects) {
-          setProjects(data.projects)
-        }
-      } catch (e) {}
-    }
-    if (kind.kind === 'home') {
-      setHomeMd(fetchText('content/home.md'))
-      const posts = []
-      try {
-        const raw = fetchText('content/blog/index.json')
-        const data = raw ? JSON.parse(raw) : null
-        const list = data && data.posts ? data.posts : []
-        for (let i = 0; i < list.length; i++) {
-          const meta = list[i]
-          if (!meta || !meta.path) {
-            continue
-          }
-          posts.push({
-            slug: meta.slug || '',
-            date: meta.date || '',
-            title: meta.title || 'Post',
-            body: fetchText(meta.path) || '',
-          })
-        }
-      } catch (e) {}
-      setBlogPosts(posts)
-    }
-    if (kind.kind === 'md') {
-      setMd(fetchText(kind.file))
-    }
-  }, [])
-
-  useEffect(function () {
-    if (kind.kind !== 'movie') {
-      setReadme('')
-      return
-    }
-    const project = findProject(projects, kind.slug)
-    if (!project) {
-      setReadme('')
-      return
-    }
-    setReadme(fetchText(project.path + '/README.md'))
-  }, [projects, kind.kind, kind.slug])
-
-  const selected = kind.kind === 'movie' ? findProject(projects, kind.slug) : null
-  const fanMixes = projectsInCategory(projects, 'FanMixes')
-  const kidFriendly = projectsInCategory(projects, 'KidFriendly')
 
   function sendPlay() {
     if (ack !== true) {
@@ -365,7 +336,7 @@ export default function FlashbackApp() {
         key={p.slug}
         type="button"
         className={'fb-title-card fb-status-' + status}
-        onClick={function () {
+        onClick={() => {
           navigate('/' + p.slug)
         }}
       >
@@ -413,7 +384,7 @@ export default function FlashbackApp() {
   } else if (kind.kind === 'movie') {
     main = (
       <div className="fb-movie">
-        <button type="button" className="fb-back" onClick={function () { navigate('/') }}>
+        <button type="button" className="fb-back" onClick={() => { navigate('/') }}>
           ← Library
         </button>
         <h1 className="fb-movie-title">{selected ? selected.title : kind.slug}</h1>
@@ -427,8 +398,8 @@ export default function FlashbackApp() {
                 playing={playing}
                 command={command}
                 commandSeq={commandSeq}
-                onPlay={function () { setPlaying(true) }}
-                onPause={function () { setPlaying(false) }}
+                onPlay={() => { setPlaying(true) }}
+                onPause={() => { setPlaying(false) }}
               />
             ) : (
               <div className="fb-media fb-media-locked">
@@ -443,7 +414,7 @@ export default function FlashbackApp() {
               <MovieOwnAck
                 slug={selected.slug}
                 title={selected.title}
-                onAck={function () {
+                onAck={() => {
                   setMovieAck(true)
                 }}
               />
@@ -514,12 +485,12 @@ export default function FlashbackApp() {
           <SeatRows />
         </div>
         <OwnershipGate
-          onAck={function () {
+          onAck={() => {
             setAck(true)
           }}
         />
         <header className="fb-header">
-          <a className="fb-brand" href="/" onClick={function (e) {
+          <a className="fb-brand" href="/" onClick={(e) => {
             try { e.preventDefault() } catch (err) {}
             navigate('/')
           }}>
@@ -530,9 +501,9 @@ export default function FlashbackApp() {
             </span>
           </a>
           <nav className="fb-nav">
-            <a href="/" onClick={function (e) { try { e.preventDefault() } catch (err) {} navigate('/') }}>Library</a>
-            <a href="/motivation" onClick={function (e) { try { e.preventDefault() } catch (err) {} navigate('/motivation') }}>Why</a>
-            <a href="/legal" onClick={function (e) { try { e.preventDefault() } catch (err) {} navigate('/legal') }}>Legal</a>
+            <a href="/" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/') }}>Library</a>
+            <a href="/motivation" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/motivation') }}>Why</a>
+            <a href="/legal" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/legal') }}>Legal</a>
           </nav>
         </header>
         <div className="fb-marquee">

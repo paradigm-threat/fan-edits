@@ -67,7 +67,7 @@ export default function OwnershipGate(props) {
           <input
             type="checkbox"
             checked={checked === true}
-            onChange={function (e) {
+            onChange={(e) => {
               try {
                 setChecked(e && e.target && e.target.checked === true)
               } catch (err) {
@@ -82,7 +82,7 @@ export default function OwnershipGate(props) {
             type="button"
             className="fb-btn fb-btn-primary"
             disabled={checked !== true}
-            onClick={function () {
+            onClick={() => {
               if (checked !== true) {
                 return
               }

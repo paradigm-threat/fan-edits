@@ -73,7 +73,7 @@ export default function MovieOwnAck(props) {
         <label className="fb-movie-ack-check">
           <input
             type="checkbox"
-            onChange={function (e) {
+            onChange={(e) => {
               let on = false
               try {
                 on = e && e.target && e.target.checked === true

@@ -249,7 +249,7 @@ export default function RelayMedia(props) {
         <button
           type="button"
           className="fb-btn"
-          onClick={function () {
+          onClick={() => {
             setScheduledFor(-1)
             setAttempt(0)
           }}
@@ -271,7 +271,7 @@ export default function RelayMedia(props) {
     setScheduledFor(attempt)
     try {
       if (typeof setTimeout === 'function') {
-        setTimeout(function () {
+        setTimeout(() => {
           setAttempt(attempt + 1)
         }, delay)
       }
