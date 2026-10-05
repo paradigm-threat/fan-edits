@@ -8,7 +8,7 @@ import manifest from '@hooks'
 import { TicketIcon, PlayChevron, MarqueeBulb } from 'hooks/client/components/Icons.jsx'
 import OwnershipGate, { hasOwnershipAck, ensureOwnershipAckFromBrowser } from 'hooks/client/components/OwnershipGate.jsx'
 import MovieOwnAck, { hasMovieOwnAck, ensureMovieOwnAckFromBrowser } from 'hooks/client/components/MovieOwnAck.jsx'
-import RelayMedia from 'hooks/client/components/RelayMedia.jsx'
+import SeedUnlockPanel from 'hooks/client/components/SeedUnlockPanel.jsx'
 import RecentSlideshow from 'hooks/client/components/RecentSlideshow.jsx'
 
 function str(v) {
@@ -437,6 +437,21 @@ export default function FlashbackApp() {
   const mediaUnlocked = live === true && ack === true && movieAck === true
   const showMovieAck = mediaUnlocked !== true
 
+  function mediaVideoEl() {
+    try {
+      if (typeof globalThis === 'undefined' || !globalThis.document) {
+        return null
+      }
+      const doc = globalThis.document
+      if (!doc.querySelector) {
+        return null
+      }
+      return doc.querySelector('.fb-media-unlock-target video.fb-media-video')
+    } catch (e) {
+      return null
+    }
+  }
+
   function sendPlay() {
     if (mediaUnlocked !== true) {
       return
@@ -444,6 +459,12 @@ export default function FlashbackApp() {
     setCommand(1)
     setCommandSeq(commandSeq + 1)
     setPlaying(true)
+    try {
+      const v = mediaVideoEl()
+      if (v && v.play) {
+        v.play()
+      }
+    } catch (ePlay) {}
     if (isNarrowViewport()) {
       try {
         const doc = typeof globalThis !== 'undefined' ? globalThis.document : null
@@ -460,6 +481,12 @@ export default function FlashbackApp() {
     setCommand(2)
     setCommandSeq(commandSeq + 1)
     setPlaying(false)
+    try {
+      const v = mediaVideoEl()
+      if (v && v.pause) {
+        v.pause()
+      }
+    } catch (ePause) {}
   }
 
   function titleCard(p) {
@@ -528,17 +555,15 @@ export default function FlashbackApp() {
               </p>
             </div>
             <div className="fb-media-unlock-target">
-              <div className="fb-media fb-media-pending" data-relay-media="pending">
-                <p className="fb-media-msg">This file needs to be seeded</p>
-              </div>
-              <RelayMedia
+              {/*
+                SSR-safe panel (no @clevertree/video). CleverScript soft-hydrate
+                cannot swap a static seed placeholder for RelayMedia — Inspect
+                and ready <video> must live in this tree from first paint.
+              */}
+              <SeedUnlockPanel
                 src={mediaSrc(selected)}
                 subtitles={subtitleTracks(selected)}
                 playing={playing}
-                command={command}
-                commandSeq={commandSeq}
-                onPlay={() => { setPlaying(true) }}
-                onPause={() => { setPlaying(false) }}
               />
             </div>
             <MovieOwnAck
