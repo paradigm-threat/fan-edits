@@ -371,8 +371,8 @@ function projectSlug(p) {
   return ''
 }
 
-/** Catalog items for park-native NowShowing (lcd + carousel). */
-function nowShowingItems(projects) {
+/** Catalog items JSON for park-native NowShowing (lcd + carousel). */
+function nowShowingItemsJson(projects) {
   let out = []
   let list = []
   try {
@@ -395,7 +395,11 @@ function nowShowingItems(projects) {
       out = out.concat([{ title: t, href: '/' + s, poster: poster }])
     }
   }
-  return out
+  try {
+    return JSON.stringify(out)
+  } catch (e3) {
+    return '[]'
+  }
 }
 
 export default function FlashbackApp() {
@@ -668,10 +672,7 @@ export default function FlashbackApp() {
               confirmLabel="OK — I confirm"
               storageKey={movieStorageKey(selected.slug)}
               confirmed={movieAck === true}
-              links={[
-                { label: 'Ownership policy', href: '/legal' },
-                { label: 'Terms', href: '/terms' },
-              ]}
+              linksJson='[{"label":"Ownership policy","href":"/legal"},{"label":"Terms","href":"/terms"}]'
               onConfirm={() => {
                 setMovieAck(true)
                 setAck(true)
@@ -702,7 +703,7 @@ export default function FlashbackApp() {
   } else {
     main = (
       <div className="fb-home">
-        <NowShowing variant="carousel" items={nowShowingItems(projects)} ariaLabel="Now showing" />
+        <NowShowing variant="carousel" itemsJson={nowShowingItemsJson(projects)} ariaLabel="Now showing" />
         <div className="fb-home-lead">
           <div className="fb-home-intro fb-prose">
             <MarkdownRenderer content={homeMd || '# Welcome'} />
@@ -750,10 +751,7 @@ export default function FlashbackApp() {
             confirmLabel="OK — I confirm"
             storageKey={welcomeStorageKey()}
             confirmed={ack === true}
-            links={[
-              { label: 'Ownership policy', href: '/legal' },
-              { label: 'Terms', href: '/terms' },
-            ]}
+            linksJson='[{"label":"Ownership policy","href":"/legal"},{"label":"Terms","href":"/terms"}]'
             onConfirm={() => {
               setAck(true)
             }}
@@ -776,7 +774,7 @@ export default function FlashbackApp() {
             <a href="/legal" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/legal') }}>Legal</a>
           </nav>
         </header>
-        <NowShowing variant="lcd" items={nowShowingItems(projects)} ariaLabel="Now showing titles" />
+        <NowShowing variant="lcd" itemsJson={nowShowingItemsJson(projects)} ariaLabel="Now showing titles" />
         <main className="fb-main">{main}</main>
         <footer className="fb-footer">
           <span className="fb-footer-brand">Flashback Repository</span>
