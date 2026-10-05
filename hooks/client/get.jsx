@@ -339,13 +339,10 @@ export default function FlashbackApp() {
   function titleCard(p) {
     const status = p.status || 'wip'
     return (
-      <button
+      <a
         key={p.slug}
-        type="button"
         className={'fb-title-card fb-status-' + status}
-        onClick={() => {
-          navigate('/' + p.slug)
-        }}
+        href={'/' + p.slug}
       >
         <span className="fb-title-card-mark">
           <PlayChevron />
@@ -355,7 +352,7 @@ export default function FlashbackApp() {
           {p.blurb ? <span className="fb-title-card-blurb">{p.blurb}</span> : null}
           <span className="fb-title-card-meta">{status}</span>
         </span>
-      </button>
+      </a>
     )
   }
 
