@@ -262,6 +262,110 @@ themes:
         border: "1px solid var(border)"
       ".fb-home-blog .fb-section-title":
         marginTop: "0"
+      ".fb-now-showing":
+        marginTop: "8px"
+        marginBottom: "20px"
+      ".fb-now-showing-head":
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "baseline"
+        justifyContent: "space-between"
+        gap: "12px"
+        marginBottom: "10px"
+      ".fb-now-showing-title":
+        marginTop: "0"
+        marginBottom: "0"
+      ".fb-now-showing-count":
+        margin: "0"
+        fontSize: "0.78rem"
+        letterSpacing: "0.12em"
+        textTransform: "uppercase"
+        color: "var(goldDim)"
+      ".fb-slideshow":
+        position: "relative"
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "stretch"
+        gap: "8px"
+      ".fb-slide-nav":
+        flexShrink: "0"
+        width: "42px"
+        alignSelf: "stretch"
+        border: "1px solid var(goldDim)"
+        background: "linear-gradient(180deg, rgba(58,16,24,0.95), rgba(18,8,10,0.98))"
+        color: "var(gold)"
+        fontSize: "1.8rem"
+        lineHeight: "1"
+        cursor: "pointer"
+        fontFamily: "inherit"
+        borderRadius: "2px"
+      ".fb-slide-nav:hover":
+        borderColor: "var(gold)"
+        color: "var(cream)"
+      ".fb-slide":
+        flex: "1"
+        minWidth: "0"
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "stretch"
+        gap: "0"
+        textDecoration: "none"
+        color: "var(cream)"
+        border: "1px solid var(goldDim)"
+        borderRadius: "2px"
+        overflow: "hidden"
+        background: "linear-gradient(145deg, #2a1418 0%, #12080a 55%, #0a0708 100%)"
+        boxShadow: "0 12px 36px rgba(0,0,0,0.45)"
+        minHeight: "220px"
+      ".fb-slide:hover":
+        borderColor: "var(gold)"
+      ".fb-slide-art":
+        flex: "0 0 42%"
+        maxWidth: "280px"
+        background: "#0a0708"
+        display: "flex"
+        alignItems: "center"
+        justifyContent: "center"
+        overflow: "hidden"
+      ".fb-slide-img":
+        display: "block"
+        width: "100%"
+        height: "100%"
+        objectFit: "cover"
+      ".fb-slide-copy":
+        flex: "1"
+        minWidth: "0"
+        padding: "22px 20px 20px"
+        display: "flex"
+        flexDirection: "column"
+        gap: "8px"
+        justifyContent: "center"
+      ".fb-slide-text .fb-slide-copy":
+        padding: "28px 24px"
+      ".fb-slide-kicker":
+        margin: "0"
+        fontSize: "0.72rem"
+        letterSpacing: "0.16em"
+        textTransform: "uppercase"
+        color: "var(gold)"
+      ".fb-slide-name":
+        margin: "0"
+        fontSize: "1.35rem"
+        lineHeight: "1.25"
+        color: "var(cream)"
+      ".fb-slide-blurb":
+        margin: "0"
+        fontSize: "0.95rem"
+        lineHeight: "1.5"
+        color: "var(creamMuted)"
+      ".fb-slide-meta":
+        margin: "8px 0 0"
+        fontSize: "0.72rem"
+        letterSpacing: "0.1em"
+        textTransform: "uppercase"
+        color: "var(goldDim)"
+      ".fb-slide-meta.fb-status-ready":
+        color: "var(ok)"
       ".fb-blog-empty":
         color: "var(creamMuted)"
         margin: "0"
@@ -509,3 +613,14 @@ themes:
           opacity: "0.55"
         ".fb-movie-title":
           fontSize: "1.35rem"
+        ".fb-slide":
+          flexDirection: "column"
+          minHeight: "0"
+        ".fb-slide-art":
+          flex: "0 0 auto"
+          maxWidth: "none"
+          width: "100%"
+          maxHeight: "220px"
+        ".fb-slide-nav":
+          width: "36px"
+          fontSize: "1.5rem"

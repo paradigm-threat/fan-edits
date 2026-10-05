@@ -100,6 +100,51 @@ def load_manifest_paths() -> set[str]:
     return paths
 
 
+POSTER_BASENAMES = (
+    "poster.jpg",
+    "poster.jpeg",
+    "poster.png",
+    "poster.webp",
+    "cover.jpg",
+    "cover.jpeg",
+    "cover.png",
+    "cover.webp",
+)
+
+
+def find_poster(folder: Path, folder_rel: str) -> str | None:
+    """Pick a poster/cover image under the project folder when present."""
+    if not folder.is_dir():
+        return None
+    for base in (folder, folder / "img"):
+        if not base.is_dir():
+            continue
+        for name in POSTER_BASENAMES:
+            p = base / name
+            if p.is_file():
+                return f"{folder_rel}/{p.relative_to(folder).as_posix()}"
+    # Project-folder-named art (common for these mixes)
+    for ext in (".jpg", ".jpeg", ".png", ".webp"):
+        for base in (folder, folder / "img"):
+            if not base.is_dir():
+                continue
+            p = base / f"{folder.name}{ext}"
+            if p.is_file():
+                return f"{folder_rel}/{p.relative_to(folder).as_posix()}"
+    return None
+
+
+def media_root_poster(slug: str) -> str | None:
+    mapped = {
+        "sonic-2020-deschwartzed": "media/Sonic DeSchwartzed Edition Poster.png",
+        "sonic-2-2022-deschwartzed": "media/Sonic DeSchwartzed Edition Poster.png",
+    }
+    rel = mapped.get(slug)
+    if rel and (ROOT / rel).is_file():
+        return rel
+    return None
+
+
 def find_media(folder: Path, folder_rel: str, manifest_paths: set[str]) -> str | None:
     """Return media basename relative to project folder if stub/manifest exists or local file present."""
     candidates: list[str] = []
@@ -187,6 +232,9 @@ def main() -> None:
         reel_candidates = list(folder.glob("*.reel")) if folder.is_dir() else []
         reel = reel_candidates[0].as_posix() if len(reel_candidates) == 1 else None
         media = find_media(folder, folder_rel, manifest_paths)
+        poster = find_poster(folder, folder_rel)
+        if not poster:
+            poster = media_root_poster(slug)
         subs = find_subtitles(folder, folder_rel)
         status = status_for(folder, media, ROOT / rel)
         entry: dict = {
@@ -202,6 +250,8 @@ def main() -> None:
             entry["reel"] = reel
         if media:
             entry["media"] = media
+        if poster:
+            entry["image"] = poster
         if subs:
             entry["subtitles"] = subs
         projects.append(entry)

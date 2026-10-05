@@ -9,6 +9,7 @@ import { TicketIcon, PlayChevron, MarqueeBulb } from 'hooks/client/components/Ic
 import OwnershipGate, { hasOwnershipAck, ensureOwnershipAckFromBrowser } from 'hooks/client/components/OwnershipGate.jsx'
 import MovieOwnAck, { hasMovieOwnAck } from 'hooks/client/components/MovieOwnAck.jsx'
 import RelayMedia from 'hooks/client/components/RelayMedia.jsx'
+import RecentSlideshow from 'hooks/client/components/RecentSlideshow.jsx'
 
 function str(v) {
   if (v === null) {
@@ -466,6 +467,7 @@ export default function FlashbackApp() {
             )}
           </aside>
         </div>
+        <RecentSlideshow projects={projects} />
         <section className="fb-catalog">
           <h2 className="fb-section-title">FanMixes</h2>
           <div className="fb-title-grid">{fanCards}</div>
