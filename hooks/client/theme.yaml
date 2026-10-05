@@ -250,7 +250,8 @@ themes:
         display: "flex"
         flexDirection: "column"
         gap: "20px"
-        marginBottom: "8px"
+        marginTop: "4px"
+        marginBottom: "12px"
       ".fb-home-intro":
         minWidth: "0"
       ".fb-home-intro a":
@@ -263,8 +264,8 @@ themes:
       ".fb-home-blog .fb-section-title":
         marginTop: "0"
       ".fb-now-showing":
-        marginTop: "8px"
-        marginBottom: "20px"
+        marginTop: "0"
+        marginBottom: "28px"
       ".fb-now-showing-head":
         display: "flex"
         flexDirection: "row"

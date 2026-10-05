@@ -328,8 +328,12 @@ export default function FlashbackApp() {
   const initialMovieAck =
     kind.kind === 'movie' && kind.slug ? hasMovieOwnAck(kind.slug) === true : false
   const movieAckState = useState(initialMovieAck)
-  const movieAck = movieAckState[0]
+  const movieAckStored = movieAckState[0]
   const setMovieAck = movieAckState[1]
+  // Re-read localStorage each render (SSR useState stays false; inject/query may set LS).
+  const movieAck =
+    movieAckStored === true ||
+    (kind.kind === 'movie' && kind.slug ? hasMovieOwnAck(kind.slug) === true : false)
 
   function sendPlay() {
     if (ack !== true) {
@@ -476,6 +480,7 @@ export default function FlashbackApp() {
   } else {
     main = (
       <div className="fb-home">
+        <RecentSlideshow projects={projects} />
         <div className="fb-home-lead">
           <div className="fb-home-intro">
             <MarkdownRenderer content={homeMd || '# Welcome'} />
@@ -489,7 +494,6 @@ export default function FlashbackApp() {
             )}
           </aside>
         </div>
-        <RecentSlideshow projects={projects} />
         <section className="fb-catalog">
           <h2 className="fb-section-title">FanMixes</h2>
           <div className="fb-title-grid">{fanCards}</div>
