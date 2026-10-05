@@ -23,8 +23,9 @@
       "category": "FanMixes",
       "path": "FanMixes/Boogie Nights (1997) - No Lookout",
       "title": "Boogie Nights (1997) \u2014 No Lookout",
-      "status": "wip",
-      "blurb": "A single-block cut of PTA\u2019s *Boogie Nights* that skips the late-film collapse from the office whip-pan through On the Lookout and the donut-shop stick-up, then resumes on the film\u2019s own fade to black into the Rahad-planning scene."
+      "status": "ready",
+      "blurb": "A single-block cut of PTA\u2019s *Boogie Nights* that skips the late-film collapse from the office whip-pan through On the Lookout and the donut-shop stick-up, then resumes on the film\u2019s own fade to black into the Rahad-planning scene.",
+      "media": "Boogie Nights (1997) - No Lookout - final.mkv"
     },
     {
       "slug": "congo-1995-incel",
@@ -40,40 +41,45 @@
       "category": "FanMixes",
       "path": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star",
       "title": "Fear and Loathing in Las Vegas (1998) \u2014 No North Star",
-      "status": "wip",
-      "blurb": "A single-scene cut that removes the North Star Coffee Lounge waitress/knife sequence and hard-cuts back to the Red Shark run to the airport."
+      "status": "ready",
+      "blurb": "A single-scene cut that removes the North Star Coffee Lounge waitress/knife sequence and hard-cuts back to the Red Shark run to the airport.",
+      "media": "Fear and Loathing in Las Vegas (1998) - No North Star - final.mkv"
     },
     {
       "slug": "final-fantasy-2001-the-phantom-menace",
       "category": "FanMixes",
       "path": "FanMixes/Final Fantasy (2001) - The Phantom Menace",
       "title": "Final Fantasy (2001) \u2014 The Phantom Menace",
-      "status": "wip",
-      "blurb": "*Final Fantasy: The Spirits Within* (2001) \u2014 Phantom Menace Edition. A minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy\u2013like title placement \u2014 with the rare Japanese track and remix soundtrack upgra"
+      "status": "ready",
+      "blurb": "*Final Fantasy: The Spirits Within* (2001) \u2014 Phantom Menace Edition. A minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy\u2013like title placement \u2014 with the rare Japanese track and remix soundtrack upgra",
+      "media": "Final Fantasy (2001) - The Phantom Menace.mkv"
     },
     {
       "slug": "fried-green-tomatoes-1991-no-frank-bennett",
       "category": "FanMixes",
       "path": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett",
       "title": "Fried Green Tomatoes (1991) \u2014 No Frank Bennett",
-      "status": "wip",
-      "blurb": "This cut removes **Frank Bennett** (Nick Searcy): his on-screen scenes, the **Valdosta / river-club / abuse / kidnapping / investigation / trial** thread, and **dialogue that names or explains him**, so the runtime stays continuous where possible. The automated ranges come from t"
+      "status": "ready",
+      "blurb": "This cut removes **Frank Bennett** (Nick Searcy): his on-screen scenes, the **Valdosta / river-club / abuse / kidnapping / investigation / trial** thread, and **dialogue that names or explains him**, so the runtime stays continuous where possible. The automated ranges come from t",
+      "media": "Fried Green Tomatoes (1991) - No Frank Bennett - final.mkv"
     },
     {
       "slug": "matrix-reloaded-2003-unlinked",
       "category": "FanMixes",
       "path": "FanMixes/Matrix Reloaded (2003) - Unlinked",
       "title": "Matrix Reloaded (2003) \u2014 Unlinked",
-      "status": "wip",
-      "blurb": "A pacing-focused cut of *The Matrix Reloaded* that strips many Link establishment sequences plus a few early-movie wreckers (orgasm-brownie, kiss), so the story moves without the Tank-replacement hand-holding."
+      "status": "ready",
+      "blurb": "A pacing-focused cut of *The Matrix Reloaded* that strips many Link establishment sequences plus a few early-movie wreckers (orgasm-brownie, kiss), so the story moves without the Tank-replacement hand-holding.",
+      "media": "Matrix Reloaded (2003) - Unlinked Edition.mkv"
     },
     {
       "slug": "matrix-revolutions-2003-unlinked",
       "category": "FanMixes",
       "path": "FanMixes/Matrix Revolutions (2003) - Unlinked",
       "title": "Matrix Revolutions (2003) \u2014 Unlinked",
-      "status": "wip",
-      "blurb": "A companion cut to Reloaded \u2014 Unlinked that trims many Link establishment sequences from *The Matrix Revolutions*."
+      "status": "ready",
+      "blurb": "A companion cut to Reloaded \u2014 Unlinked that trims many Link establishment sequences from *The Matrix Revolutions*.",
+      "media": "Matrix Revolutions (2003) - Unlinked Edition.mkv"
     },
     {
       "slug": "mission-to-mars-2000-enhanced-citations",
@@ -110,16 +116,18 @@
       "category": "FanMixes",
       "path": "FanMixes/Riddick (2013) - Unjinxed",
       "title": "Riddick (2013) \u2014 Unjinxed",
-      "status": "wip",
-      "blurb": "A dialogue-trimmed *Riddick* that keeps the Unjinxed tone, front-loads the Necromonger \u201cwrong planet\u201d flashback as a linear prologue, and drops the opening predator beat so the desert survival story starts clean."
+      "status": "ready",
+      "blurb": "A dialogue-trimmed *Riddick* that keeps the Unjinxed tone, front-loads the Necromonger \u201cwrong planet\u201d flashback as a linear prologue, and drops the opening predator beat so the desert survival story starts clean.",
+      "media": "Riddick (2013) - Unjinxed.mkv"
     },
     {
       "slug": "serenity-2005-unjossed",
       "category": "FanMixes",
       "path": "FanMixes/Serenity (2005) - Unjossed",
       "title": "Serenity (2005) \u2014 Unjossed Edition",
-      "status": "wip",
-      "blurb": "A family/kids cut of *Serenity*: strict on Reaver gore, keeps the action and core plot, and leaves favorite Whedon beats (including \u201cleaf on the wind\u201d and the final fight) alone unless they break tone after horror."
+      "status": "ready",
+      "blurb": "A family/kids cut of *Serenity*: strict on Reaver gore, keeps the action and core plot, and leaves favorite Whedon beats (including \u201cleaf on the wind\u201d and the final fight) alone unless they break tone after horror.",
+      "media": "Serenity (2005) - Unjossed Edition.mkv"
     },
     {
       "slug": "silent-hill-2006-nay-tomorrow",
@@ -144,8 +152,9 @@
       "category": "FanMixes",
       "path": "FanMixes/Sonic 2 (2022) - DeSchwartzed",
       "title": "Sonic 2 (2022) \u2014 DeSchwartzed Edition",
-      "status": "wip",
-      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during"
+      "status": "ready",
+      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during",
+      "media": "Sonic 2 (2022) - DeSchwartzed Edition.mkv"
     },
     {
       "slug": "sonic-3-2024-deschwartzed",
@@ -237,8 +246,9 @@
       "category": "FanMixes",
       "path": "FanMixes/The Mummy Returns (2001) - Debugged",
       "title": "The Mummy Returns (2001) \u2014 Debugged",
-      "status": "wip",
-      "blurb": "Kid-friendlier cut to match *The Mummy (1999) - Debugged*. This film has no SRT-named scarab dump; v1 removes the **pygmy swarm** that kills the expedition (same \u201clittle creatures eating people\u201d beat). Confirm in [PLAN.md](PLAN.md)."
+      "status": "ready",
+      "blurb": "Kid-friendlier cut to match *The Mummy (1999) - Debugged*. This film has no SRT-named scarab dump; v1 removes the **pygmy swarm** that kills the expedition (same \u201clittle creatures eating people\u201d beat). Confirm in [PLAN.md](PLAN.md).",
+      "media": "The Mummy Returns Debugged.mkv"
     },
     {
       "slug": "the-pentagon-papers-2003-widescreen",
