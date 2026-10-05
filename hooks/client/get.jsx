@@ -542,7 +542,7 @@ export default function FlashbackApp() {
             <TicketIcon />
             <span className="fb-brand-text">
               <span className="fb-brand-name">Flashback Repository</span>
-              <span className="fb-brand-tag">Watchable Fan-Edits of Recent and Classic Movies</span>
+              <span className="fb-brand-tag">Watchable Fan-Edits of New and Classic Movies</span>
             </span>
           </a>
           <nav className="fb-nav">
