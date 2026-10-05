@@ -159,7 +159,7 @@ function stripAckQuery(slug) {
   } catch (e3) {}
 }
 
-function removeMovieAckNode() {
+function hideMovieAckNode() {
   try {
     if (typeof globalThis === 'undefined' || !globalThis.document) {
       return
@@ -172,15 +172,21 @@ function removeMovieAckNode() {
     if (!el) {
       return
     }
-    if (el.remove) {
-      el.remove()
-    } else if (el.parentNode && el.parentNode.removeChild) {
-      el.parentNode.removeChild(el)
-    }
+    // Hide instead of remove — removing before/during hydrate breaks soft-hydrate handlers.
+    try {
+      if (el.style) {
+        el.style.display = 'none'
+      }
+    } catch (eH) {}
+    try {
+      if (el.setAttribute) {
+        el.setAttribute('aria-hidden', 'true')
+      }
+    } catch (eA) {}
   } catch (e) {}
 }
 
-function removeWelcomeGateNode() {
+function hideWelcomeGateNode() {
   try {
     if (typeof globalThis === 'undefined' || !globalThis.document) {
       return
@@ -193,11 +199,16 @@ function removeWelcomeGateNode() {
     if (!gate) {
       return
     }
-    if (gate.remove) {
-      gate.remove()
-    } else if (gate.parentNode && gate.parentNode.removeChild) {
-      gate.parentNode.removeChild(gate)
-    }
+    try {
+      if (gate.style) {
+        gate.style.display = 'none'
+      }
+    } catch (eH) {}
+    try {
+      if (gate.setAttribute) {
+        gate.setAttribute('aria-hidden', 'true')
+      }
+    } catch (eA) {}
   } catch (e) {}
 }
 
@@ -212,13 +223,13 @@ export function ensureMovieOwnAckFromBrowser(slug) {
     writeMovieOwnAck(s)
     if (searchHasOwnershipAck() === true) {
       writeWelcomeAck()
-      removeWelcomeGateNode()
+      hideWelcomeGateNode()
     }
     stripAckQuery(s)
-    removeMovieAckNode()
+    hideMovieAckNode()
   }
   if (hasMovieOwnAck(s) === true) {
-    removeMovieAckNode()
+    hideMovieAckNode()
     return true
   }
   return false

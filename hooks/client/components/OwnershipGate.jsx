@@ -68,7 +68,7 @@ function consumeAckQuery() {
   return true
 }
 
-function removeGateNode() {
+function hideGateNode() {
   try {
     if (typeof globalThis === 'undefined' || !globalThis.document) {
       return
@@ -81,11 +81,17 @@ function removeGateNode() {
     if (!gate) {
       return
     }
-    if (gate.remove) {
-      gate.remove()
-    } else if (gate.parentNode && gate.parentNode.removeChild) {
-      gate.parentNode.removeChild(gate)
-    }
+    // Hide instead of remove — removing before hydrate breaks soft-hydrate (slideshow clicks).
+    try {
+      if (gate.style) {
+        gate.style.display = 'none'
+      }
+    } catch (eH) {}
+    try {
+      if (gate.setAttribute) {
+        gate.setAttribute('aria-hidden', 'true')
+      }
+    } catch (eA) {}
   } catch (e) {}
 }
 
@@ -106,7 +112,7 @@ export function hasOwnershipAck() {
 export function ensureOwnershipAckFromBrowser() {
   let fromQuery = consumeAckQuery()
   if (readAck() === true || fromQuery === true) {
-    removeGateNode()
+    hideGateNode()
     return true
   }
   return false
@@ -116,7 +122,7 @@ export default function OwnershipGate(props) {
   // Persist query ack on client (and when hydrate re-runs).
   let fromQuery = consumeAckQuery()
   if (fromQuery === true) {
-    removeGateNode()
+    hideGateNode()
   }
 
   if (readAck() === true) {
