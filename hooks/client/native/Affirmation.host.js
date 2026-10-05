@@ -320,13 +320,20 @@
     return props;
   }
 
+  function needsUpgrade(host) {
+    const fn = global.__fbHostNeedsUpgrade;
+    if (typeof fn === 'function') {
+      return fn(host, '.fb-affirmation-native');
+    }
+    return host && !host.querySelector('.fb-affirmation-native');
+  }
+
   function upgradePlaceholders() {
     try {
-      const nodes = global.document.querySelectorAll(
-        '[data-relay-park-native="fb-affirmation"]:not([data-fb-built="1"])',
-      );
+      const nodes = global.document.querySelectorAll('[data-relay-park-native="fb-affirmation"]');
       for (let i = 0; i < nodes.length; i++) {
         const host = nodes[i];
+        if (!needsUpgrade(host)) continue;
         host.setAttribute('data-fb-built', '1');
         const built = buildAffirmation(attrsToProps(host), null, null);
         host.replaceChildren(built);
@@ -374,6 +381,13 @@
         global.clearInterval(t);
       }
     }, 50);
+    const sched = global.__fbScheduleParkNativeReupgrade;
+    if (typeof sched === 'function') {
+      sched(() => {
+        register();
+        bootstrapOwnership();
+      });
+    }
   }
 
   if (typeof global.document !== 'undefined') {
