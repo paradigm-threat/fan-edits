@@ -124,7 +124,7 @@ function parseReadmeHero(readme, folderName) {
     i = i + 1
   }
   // Next line / lead paragraph until blank or ## heading
-  const lead = []
+  let lead = []
   while (i < lines.length) {
     const s = str(lines[i]).trim()
     if (s.length === 0) {
@@ -143,7 +143,7 @@ function parseReadmeHero(readme, folderName) {
     if (s.indexOf('- ') === 0 || s.indexOf('* ') === 0) {
       break
     }
-    lead.push(s)
+    lead = lead.concat([s])
     i = i + 1
     if (lead.join(' ').length > 280) {
       break
