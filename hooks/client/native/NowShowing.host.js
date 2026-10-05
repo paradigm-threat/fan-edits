@@ -207,13 +207,20 @@
     return props;
   }
 
+  function needsUpgrade(host) {
+    const fn = global.__fbHostNeedsUpgrade;
+    if (typeof fn === 'function') {
+      return fn(host, '.fb-marquee, .fb-now-showing-carousel');
+    }
+    return host && !host.querySelector('.fb-marquee, .fb-now-showing-carousel');
+  }
+
   function upgradePlaceholders() {
     try {
-      const nodes = global.document.querySelectorAll(
-        '[data-relay-park-native="fb-now-showing"]:not([data-fb-built="1"])',
-      );
+      const nodes = global.document.querySelectorAll('[data-relay-park-native="fb-now-showing"]');
       for (let i = 0; i < nodes.length; i++) {
         const host = nodes[i];
+        if (!needsUpgrade(host)) continue;
         host.setAttribute('data-fb-built', '1');
         const built = buildNowShowing(attrsToProps(host));
         host.replaceChildren(built);
@@ -253,6 +260,10 @@
         global.clearInterval(t);
       }
     }, 50);
+    const sched = global.__fbScheduleParkNativeReupgrade;
+    if (typeof sched === 'function') {
+      sched(register);
+    }
   }
 
   if (typeof global.document !== 'undefined') {

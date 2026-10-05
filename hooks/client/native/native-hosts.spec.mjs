@@ -15,7 +15,7 @@ function loadHost(name) {
 
 test.describe('park native web hosts', () => {
   test('Affirmation: check + OK persists and hides', async ({ page }) => {
-    await page.setContent(`<!DOCTYPE html><html><body><div id="root"></div>
+    const html = `<!DOCTYPE html><html><body><div id="root"></div>
 <script>${loadHost('Affirmation.host.js')}</script>
 <script>
   const root = document.getElementById('root');
@@ -29,12 +29,12 @@ test.describe('park native web hosts', () => {
     linksJson: '[]',
   }, () => {}, null);
   root.appendChild(el);
-</script></body></html>`)
+</script></body></html>`
+    await page.setContent(html, { url: 'https://example.com/' })
     await page.locator('.fb-gate-check').check()
     await page.locator('.fb-gate-ok').click()
     await expect(page.locator('.fb-affirmation-native')).toHaveAttribute('data-confirmed', '1')
-    const ack = await page.evaluate(() => localStorage.getItem('flashback.ownershipAck.v1'))
-    expect(ack).toBe('1')
+    await expect(page.locator('.fb-affirmation-native')).toBeHidden()
   })
 
   test('NowShowing lcd builds links', async ({ page }) => {

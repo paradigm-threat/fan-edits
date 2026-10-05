@@ -26,42 +26,57 @@ function injectParkNativeHosts(ssr) {
     if (typeof html !== 'string') {
       return ssr;
     }
-    if (html.indexOf('data-fb-park-native="1"') >= 0) {
+    // Re-inject if hosts were appended after </html> (invalid; browsers skip them).
+    var bodyClose = html.lastIndexOf('</body>');
+    var firstHost = html.indexOf('data-fb-park-native="1"');
+    var hostsOk =
+      firstHost >= 0 && (bodyClose < 0 || (firstHost >= 0 && firstHost < bodyClose));
+    if (hostsOk) {
       return ssr;
     }
+    // Strip broken trailing injections from older tips.
+    var cleaned = html;
+    while (true) {
+      var bad = cleaned.lastIndexOf('</html>');
+      if (bad < 0) {
+        break;
+      }
+      var tail = cleaned.slice(bad + 7);
+      if (tail.indexOf('data-fb-park-native="1"') < 0) {
+        break;
+      }
+      cleaned = cleaned.slice(0, bad + 7);
+    }
+    var hostMarker = '<script data-fb-park-native="1"';
+    while (cleaned.indexOf(hostMarker) >= 0) {
+      var hi = cleaned.indexOf(hostMarker);
+      var he = cleaned.indexOf('</script>', hi);
+      if (he < 0) {
+        break;
+      }
+      cleaned = cleaned.slice(0, hi) + cleaned.slice(he + 9);
+    }
+    html = cleaned;
     var snip =
+      '<script data-fb-park-native="1" src="/hooks/client/native/park-host-common.js"></script>' +
       '<script data-fb-park-native="1" src="/hooks/client/native/Affirmation.host.js"></script>' +
       '<script data-fb-park-native="1" src="/hooks/client/native/TheaterPlayer.host.js"></script>' +
       '<script data-fb-park-native="1" src="/hooks/client/native/NowShowing.host.js"></script>';
-    var needle = '<script type="module" src="';
-    var emb = html.indexOf('/assets/');
-    var embJs = html.indexOf('embed.js');
-    if (embJs < 0) {
-      needle = '<script type="application/json" id="relay-embed-config">';
-      if (html.indexOf(needle) < 0) {
-        return ssr;
-      }
-      var parts = html.split(needle);
-      if (!parts || parts.length < 2) {
-        return ssr;
-      }
-      var out = parts[0] + snip + needle + parts[1];
-      var file = {};
-      file.kind = 'file';
-      file.contentType = 'text/html; charset=utf-8';
-      file.bodyUtf8 = out;
-      try {
-        if (ssr.headers) {
-          file.headers = ssr.headers;
-        }
-      } catch (e2) {}
-      return file;
+    bodyClose = html.lastIndexOf('</body>');
+    var embedIdx = html.lastIndexOf('<script type="module"');
+    var insertAt = -1;
+    if (embedIdx >= 0 && (bodyClose < 0 || embedIdx < bodyClose)) {
+      insertAt = embedIdx;
+    } else if (bodyClose >= 0) {
+      insertAt = bodyClose;
+    } else {
+      var htmlClose = html.lastIndexOf('</html>');
+      insertAt = htmlClose >= 0 ? htmlClose : html.length;
     }
-    var idx = html.lastIndexOf('<script', embJs);
-    if (idx < 0) {
+    if (insertAt < 0) {
       return ssr;
     }
-    var out2 = html.slice(0, idx) + snip + html.slice(idx);
+    var out2 = html.slice(0, insertAt) + snip + html.slice(insertAt);
     var file2 = {};
     file2.kind = 'file';
     file2.contentType = 'text/html; charset=utf-8';
