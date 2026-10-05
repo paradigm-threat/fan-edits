@@ -16,7 +16,12 @@ function wantsSiteShell(ctx) {
 }
 
 // CleverScript SSR strips <script> from client JSX; inject after SSR so the browser
-// can persist ?ownershipAck=1 / ?movieOwnAck=<slug> and hide overlays without hydrate.
+// can persist ?ownershipAck=1 / ?movieOwnAck=<slug> without relying on hydrate onClick.
+//
+// CRITICAL: do NOT hide/remove .fb-gate / .fb-movie-ack here. Mutating those nodes
+// before soft-hydrate desyncs vnode↔DOM and freezes updates — leaving the locked
+// player message with no form. Persist LS, then location.replace to a clean URL so
+// React can unlock from localStorage once isClientLive().
 function injectOwnershipGateScript(ssr) {
   try {
     if (ssr === null) {
@@ -26,12 +31,12 @@ function injectOwnershipGateScript(ssr) {
     if (typeof html !== 'string') {
       return ssr;
     }
-    if (html.indexOf('flashback.movieOwn.v1.') >= 0) {
+    // Unique marker — do not key off flashback.movieOwn.v1. (may appear elsewhere).
+    if (html.indexOf('data-fb-own-inject="1"') >= 0) {
       return ssr;
     }
-    // Hide (do not remove) overlays — removing nodes before hydrate breaks soft-hydrate handlers.
     var snip =
-      '<script>(function(){try{var WKEY="flashback.ownershipAck.v1";var MPREF="flashback.movieOwn.v1.";var s=(location&&location.search)||"";var path=(location&&location.pathname)||"/";function param(name){var k=name+"=";var i=s.indexOf(k);if(i<0){return"";}var r=s.slice(i+k.length);var a=r.indexOf("&");if(a>=0){r=r.slice(0,a);}return r;}function pathSlug(){if(!path||path==="/"){return"";}var p=path.charAt(0)==="/"?path.slice(1):path;var slash=p.indexOf("/");if(slash>=0){p=p.slice(0,slash);}return p;}function hideSel(sel){var el=document.querySelector(sel);if(!el){return;}try{el.style.display="none";}catch(eH){}try{el.setAttribute("aria-hidden","true");}catch(eA){}}var own=false;if(s.indexOf("ownershipAck=1")>=0){own=true;}else if(localStorage&&localStorage.getItem&&localStorage.getItem(WKEY)==="1"){own=true;}if(own===true&&localStorage&&localStorage.setItem){localStorage.setItem(WKEY,"1");}if(own===true){hideSel(".fb-gate");}var slug=param("movieOwnAck");if(slug&&slug.length>0){try{if(typeof decodeURIComponent==="function"){slug=decodeURIComponent(slug);}}catch(e0){}if(localStorage&&localStorage.setItem){localStorage.setItem(MPREF+slug,"1");}hideSel(".fb-movie-ack");}else{var ps=pathSlug();if(ps&&localStorage&&localStorage.getItem&&localStorage.getItem(MPREF+ps)==="1"){hideSel(".fb-movie-ack");}}if((s.indexOf("ownershipAck=1")>=0||s.indexOf("movieOwnAck=")>=0)&&history&&history.replaceState){history.replaceState(null,"",path);}}catch(e){}})();</script>';
+      '<script data-fb-own-inject="1">(function(){try{var WKEY="flashback.ownershipAck.v1";var MPREF="flashback.movieOwn.v1.";var s=(location&&location.search)||"";var path=(location&&location.pathname)||"/";function param(name){var k=name+"=";var i=s.indexOf(k);if(i<0){return"";}var r=s.slice(i+k.length);var a=r.indexOf("&");if(a>=0){r=r.slice(0,a);}return r;}var dirty=false;if(s.indexOf("ownershipAck=1")>=0){if(localStorage&&localStorage.setItem){localStorage.setItem(WKEY,"1");}dirty=true;}var slug=param("movieOwnAck");if(slug&&slug.length>0){try{if(typeof decodeURIComponent==="function"){slug=decodeURIComponent(slug);}}catch(e0){}if(localStorage&&localStorage.setItem){localStorage.setItem(MPREF+slug,"1");}dirty=true;}if(dirty===true){try{location.replace(path);}catch(eR){if(history&&history.replaceState){history.replaceState(null,"",path);}}}}catch(e){}})();</script>';
     var needle = '<script type="application/json" id="relay-embed-config">';
     if (html.indexOf(needle) < 0) {
       return ssr;

@@ -4,7 +4,7 @@
  * CleverScript / park notes:
  * - Hydrated onClick is unreliable (SSR gate can resurrect; hid handlers flake).
  * - Use a native GET form + required checkbox so confirm works even without JS.
- * - On return with ?ownershipAck=1, persist to localStorage and hide the gate.
+ * - On return with ?ownershipAck=1, persist to localStorage; React unmounts once live.
  */
 import React from 'react'
 import { isClientLive } from '@clevertree/style-internal'
@@ -69,33 +69,6 @@ function consumeAckQuery() {
   return true
 }
 
-function hideGateNode() {
-  try {
-    if (typeof globalThis === 'undefined' || !globalThis.document) {
-      return
-    }
-    let doc = globalThis.document
-    if (!doc.querySelector) {
-      return
-    }
-    let gate = doc.querySelector('.fb-gate')
-    if (!gate) {
-      return
-    }
-    // Hide instead of remove — removing before hydrate breaks soft-hydrate (slideshow clicks).
-    try {
-      if (gate.style) {
-        gate.style.display = 'none'
-      }
-    } catch (eH) {}
-    try {
-      if (gate.setAttribute) {
-        gate.setAttribute('aria-hidden', 'true')
-      }
-    } catch (eA) {}
-  } catch (e) {}
-}
-
 export function hasOwnershipAck() {
   if (readAck() === true) {
     return true
@@ -107,13 +80,12 @@ export function hasOwnershipAck() {
 }
 
 /**
- * Call from the root client hook on every render. Persists ?ownershipAck=1 and
- * strips the SSR gate node when the browser already acknowledged.
+ * Call from the root client hook on every render. Persists ?ownershipAck=1.
+ * Do not mutate gate DOM — soft-hydrate freezes if vnode and DOM diverge.
  */
 export function ensureOwnershipAckFromBrowser() {
   let fromQuery = consumeAckQuery()
   if (readAck() === true || fromQuery === true) {
-    hideGateNode()
     return true
   }
   return false
@@ -121,12 +93,9 @@ export function ensureOwnershipAckFromBrowser() {
 
 export default function OwnershipGate(props) {
   // Persist query ack on client (and when hydrate re-runs).
-  let fromQuery = consumeAckQuery()
-  if (fromQuery === true) {
-    hideGateNode()
-  }
+  consumeAckQuery()
 
-  // SSR + hydrate must keep the gate node; hide via inject/CSS until live.
+  // SSR + hydrate must keep the gate node; unmount only after client is live.
   if (isClientLive() === true && readAck() === true) {
     return null
   }

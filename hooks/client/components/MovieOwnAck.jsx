@@ -160,61 +160,11 @@ function stripAckQuery(slug) {
   } catch (e3) {}
 }
 
-function hideMovieAckNode() {
-  try {
-    if (typeof globalThis === 'undefined' || !globalThis.document) {
-      return
-    }
-    let doc = globalThis.document
-    if (!doc.querySelector) {
-      return
-    }
-    let el = doc.querySelector('.fb-movie-ack')
-    if (!el) {
-      return
-    }
-    // Hide instead of remove — removing before/during hydrate breaks soft-hydrate handlers.
-    try {
-      if (el.style) {
-        el.style.display = 'none'
-      }
-    } catch (eH) {}
-    try {
-      if (el.setAttribute) {
-        el.setAttribute('aria-hidden', 'true')
-      }
-    } catch (eA) {}
-  } catch (e) {}
-}
-
-function hideWelcomeGateNode() {
-  try {
-    if (typeof globalThis === 'undefined' || !globalThis.document) {
-      return
-    }
-    let doc = globalThis.document
-    if (!doc.querySelector) {
-      return
-    }
-    let gate = doc.querySelector('.fb-gate')
-    if (!gate) {
-      return
-    }
-    try {
-      if (gate.style) {
-        gate.style.display = 'none'
-      }
-    } catch (eH) {}
-    try {
-      if (gate.setAttribute) {
-        gate.setAttribute('aria-hidden', 'true')
-      }
-    } catch (eA) {}
-  } catch (e) {}
-}
-
 /**
- * Persist ?movieOwnAck=<slug> (+ optional ownershipAck=1) and strip overlay nodes.
+ * Persist ?movieOwnAck=<slug> (+ optional ownershipAck=1).
+ * Do NOT hide/remove overlay DOM — that desyncs CleverScript soft-hydrate and
+ * freezes the locked player with no form. Inject script location.replace handles
+ * query cleanup after localStorage write; React unmounts the form once live+acked.
  * Returns true when this slug is acknowledged.
  */
 export function ensureMovieOwnAckFromBrowser(slug) {
@@ -224,13 +174,10 @@ export function ensureMovieOwnAckFromBrowser(slug) {
     writeMovieOwnAck(s)
     if (searchHasOwnershipAck() === true) {
       writeWelcomeAck()
-      hideWelcomeGateNode()
     }
     stripAckQuery(s)
-    hideMovieAckNode()
   }
   if (hasMovieOwnAck(s) === true) {
-    hideMovieAckNode()
     return true
   }
   return false
@@ -299,10 +246,11 @@ export default function MovieOwnAck(props) {
     needWelcome = false
   }
 
-  let fromQuery = ensureMovieOwnAckFromBrowser(slug)
-  // Keep SSR/hydrate markup stable — only skip overlay after client is live.
+  ensureMovieOwnAckFromBrowser(slug)
+  // Parent mounts us until mediaUnlocked. Only self-hide when BOTH welcome +
+  // per-title acks are set and client is live — never leave locked UI without a form.
   if (isClientLive() === true) {
-    if (fromQuery === true || hasMovieOwnAck(slug) === true) {
+    if (hasMovieOwnAck(slug) === true && readWelcomeAck() === true) {
       return null
     }
   }

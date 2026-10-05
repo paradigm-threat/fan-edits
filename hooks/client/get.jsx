@@ -342,11 +342,12 @@ export default function FlashbackApp() {
   }
   const movieAck = movieAckStored === true || movieAckFromLs === true
 
-  // CleverScript soft-hydrate: SSR always paints locked+overlay. Reading LS during the
-  // hydrate pass desyncs vnode vs DOM and freezes updates. Unlock only after live.
+  // CleverScript soft-hydrate: SSR always paints locked+overlay. Unlock only after
+  // live so hydrate markup stays stable. Keep the form visible until playback is
+  // actually unlocked (never hide the CTA while the locked message is showing).
   const live = isClientLive() === true
   const mediaUnlocked = live === true && ack === true && movieAck === true
-  const showMovieAck = live !== true || movieAck !== true
+  const showMovieAck = mediaUnlocked !== true
 
   function sendPlay() {
     if (mediaUnlocked !== true) {
