@@ -8,7 +8,6 @@ import manifest from '@hooks'
 import { TicketIcon, PlayChevron, MarqueeBulb } from 'hooks/client/components/Icons.jsx'
 import OwnershipGate, { hasOwnershipAck, ensureOwnershipAckFromBrowser } from 'hooks/client/components/OwnershipGate.jsx'
 import MovieOwnAck, { hasMovieOwnAck, ensureMovieOwnAckFromBrowser } from 'hooks/client/components/MovieOwnAck.jsx'
-import SeedUnlockPanel from 'hooks/client/components/SeedUnlockPanel.jsx'
 import RecentSlideshow from 'hooks/client/components/RecentSlideshow.jsx'
 
 function str(v) {
@@ -143,6 +142,140 @@ function fetchText(path) {
     }
   } catch (e) {}
   return ''
+}
+
+function looksLikeCid(raw) {
+  const s = str(raw).trim()
+  if (s.length < 10) {
+    return false
+  }
+  if (s.indexOf(' ') >= 0 || s.indexOf('/') >= 0 || s.indexOf('#') >= 0) {
+    return false
+  }
+  if (s.indexOf('baf') === 0) {
+    return true
+  }
+  if (s.indexOf('Qm') === 0) {
+    return true
+  }
+  return s.length >= 46
+}
+
+function parseCidFromStub(text) {
+  const raw = str(text)
+  if (raw.length === 0) {
+    return ''
+  }
+  const lines = raw.split('\n')
+  let i = 0
+  while (i < lines.length) {
+    const line = str(lines[i]).trim()
+    if (line.length > 0 && looksLikeCid(line)) {
+      return line
+    }
+    i = i + 1
+  }
+  return ''
+}
+
+/** CID from .ipfs stub only — avoid relayAssetStatus self-fetch during SSR (deadlocks). */
+function resolveProjectCid(project) {
+  if (!project || !project.media || !project.path) {
+    return ''
+  }
+  const logical = str(project.path) + '/' + str(project.media)
+  const stub = fetchText('.relay/assets/' + logical + '.ipfs')
+  return parseCidFromStub(stub)
+}
+
+function copyCidText(cid) {
+  const t = str(cid)
+  if (t.length === 0) {
+    return
+  }
+  try {
+    if (
+      typeof globalThis !== 'undefined' &&
+      globalThis.navigator &&
+      globalThis.navigator.clipboard &&
+      globalThis.navigator.clipboard.writeText
+    ) {
+      globalThis.navigator.clipboard.writeText(t)
+      return
+    }
+  } catch (e) {}
+  try {
+    if (typeof globalThis === 'undefined' || !globalThis.document) {
+      return
+    }
+    const doc = globalThis.document
+    const el = doc.createElement('textarea')
+    el.value = t
+    el.setAttribute('readonly', '')
+    el.style.position = 'fixed'
+    el.style.left = '-9999px'
+    doc.body.appendChild(el)
+    el.select()
+    if (doc.execCommand) {
+      doc.execCommand('copy')
+    }
+    doc.body.removeChild(el)
+  } catch (e2) {}
+}
+
+function encodeCidForUrl(cid) {
+  const c = str(cid).trim()
+  try {
+    if (typeof globalThis !== 'undefined' && globalThis.encodeURIComponent) {
+      return globalThis.encodeURIComponent(c)
+    }
+  } catch (e) {}
+  return c
+}
+
+/** SSR-safe inspect row — lives in get.jsx so soft-hydrate always paints it. */
+function renderIpfsInspect(cidRaw) {
+  const cid = str(cidRaw).trim()
+  if (!looksLikeCid(cid)) {
+    return null
+  }
+  const enc = encodeCidForUrl(cid)
+  return (
+    <div className="fb-media-inspect" data-ipfs-inspect="1">
+      <p className="fb-media-inspect-label">Inspect on IPFS</p>
+      <div className="fb-media-inspect-cid-row">
+        <code className="fb-media-inspect-cid" title="Content identifier">
+          {cid}
+        </code>
+        <button
+          type="button"
+          className="fb-btn fb-media-inspect-copy"
+          onClick={() => {
+            copyCidText(cid)
+          }}
+        >
+          Copy CID
+        </button>
+      </div>
+      <div className="fb-media-inspect-links">
+        <a href={'https://cid.ipfs.tech/#' + cid} target="_blank" rel="noopener noreferrer">
+          CID Inspector
+        </a>
+        <a href={'https://check.ipfs.network/?cid=' + enc} target="_blank" rel="noopener noreferrer">
+          Providers
+        </a>
+        <a href={'https://ipfs.io/ipfs/' + enc} target="_blank" rel="noopener noreferrer">
+          ipfs.io
+        </a>
+        <a href={'https://dweb.link/ipfs/' + enc} target="_blank" rel="noopener noreferrer">
+          dweb.link
+        </a>
+      </div>
+      <p className="fb-media-inspect-note">
+        Open a link to inspect the hash. Public gateway fetches from this page are often CORS-blocked.
+      </p>
+    </div>
+  )
 }
 
 /** Drop leading H1 — the movie page already shows the title. */
@@ -539,6 +672,7 @@ export default function FlashbackApp() {
       </article>
     )
   } else if (kind.kind === 'movie') {
+    const movieCid = selected && selected.media ? resolveProjectCid(selected) : ''
     main = (
       <div className="fb-movie">
         <button type="button" className="fb-back" onClick={() => { navigate('/') }}>
@@ -560,15 +694,17 @@ export default function FlashbackApp() {
             </div>
             <div className="fb-media-unlock-target">
               {/*
-                SSR-safe panel (no @clevertree/video). CleverScript soft-hydrate
-                cannot swap a static seed placeholder for RelayMedia — Inspect
-                and ready <video> must live in this tree from first paint.
+                Inspect must be in this SSR unlock target — RelayMedia never mounts
+                (@clevertree/video). No <video> / relayAssetStatus here (SSR hang).
+                CID from .ipfs stub only.
               */}
-              <SeedUnlockPanel
-                src={mediaSrc(selected)}
-                subtitles={subtitleTracks(selected)}
-                playing={playing}
-              />
+              <div className="fb-media fb-media-pending" data-relay-media="pending">
+                <p className="fb-media-msg">This file needs to be seeded</p>
+                <p className="fb-media-hint">
+                  The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.
+                </p>
+                {renderIpfsInspect(movieCid)}
+              </div>
             </div>
             <MovieOwnAck
               slug={selected.slug}
