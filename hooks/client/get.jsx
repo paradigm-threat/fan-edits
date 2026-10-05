@@ -103,12 +103,17 @@ function folderNameFromPath(projectPath) {
 function parseReadmeHero(readme, folderName) {
   const raw = str(readme)
   const fallbackTitle = str(folderName)
+  // CleverScript-safe hero strip: walk lines without regex or .push
   if (raw.length === 0) {
     return { title: fallbackTitle, blurb: '', body: '' }
   }
   const lines = raw.split('\n')
   let i = 0
-  while (i < lines.length && str(lines[i]).trim().length === 0) {
+  while (i < lines.length) {
+    const blank = str(lines[i]).trim()
+    if (blank.length > 0) {
+      break
+    }
     i = i + 1
   }
   if (i >= lines.length) {
@@ -120,15 +125,18 @@ function parseReadmeHero(readme, folderName) {
   }
   const title = first.slice(2).trim()
   i = i + 1
-  while (i < lines.length && str(lines[i]).trim().length === 0) {
+  while (i < lines.length) {
+    const blank2 = str(lines[i]).trim()
+    if (blank2.length > 0) {
+      break
+    }
     i = i + 1
   }
-  // Next line / lead paragraph until blank or ## heading
-  let lead = []
+  let blurb = ''
   while (i < lines.length) {
     const s = str(lines[i]).trim()
     if (s.length === 0) {
-      if (lead.length > 0) {
+      if (blurb.length > 0) {
         break
       }
       i = i + 1
@@ -137,19 +145,26 @@ function parseReadmeHero(readme, folderName) {
     if (s.charAt(0) === '#') {
       break
     }
-    if (s.indexOf('```') === 0 || s.indexOf('|') === 0 || s.indexOf('![') === 0) {
-      break
-    }
     if (s.indexOf('- ') === 0 || s.indexOf('* ') === 0) {
       break
     }
-    lead = lead.concat([s])
+    if (s.indexOf('|') === 0) {
+      break
+    }
+    if (blurb.length > 0) {
+      blurb = blurb + ' '
+    }
+    blurb = blurb + s
     i = i + 1
-    if (lead.join(' ').length > 280) {
+    if (blurb.length > 280) {
       break
     }
   }
-  while (i < lines.length && str(lines[i]).trim().length === 0) {
+  while (i < lines.length) {
+    const blank3 = str(lines[i]).trim()
+    if (blank3.length > 0) {
+      break
+    }
     i = i + 1
   }
   let body = ''
@@ -157,13 +172,13 @@ function parseReadmeHero(readme, folderName) {
     if (body.length > 0) {
       body = body + '\n'
     }
-    body = body + lines[j]
+    body = body + str(lines[j])
   }
-  return {
-    title: title.length > 0 ? title : fallbackTitle,
-    blurb: lead.join(' '),
-    body: body,
+  let outTitle = fallbackTitle
+  if (title.length > 0) {
+    outTitle = title
   }
+  return { title: outTitle, blurb: blurb, body: body }
 }
 
 /** Parse ?t= / #t= / 1:23 / 90s — CleverScript-safe (no regex literals). */
@@ -172,6 +187,7 @@ function isPlainNumberString(s) {
     return false
   }
   let dot = 0
+  const digits = '0123456789'
   for (let i = 0; i < s.length; i++) {
     const c = s.charAt(i)
     if (c === '.') {
@@ -179,7 +195,7 @@ function isPlainNumberString(s) {
       if (dot > 1) {
         return false
       }
-    } else if (c < '0' || c > '9') {
+    } else if (digits.indexOf(c) < 0) {
       return false
     }
   }
@@ -439,7 +455,11 @@ function resolveMediaRootCid() {
     }
   } catch (e) {}
   const tip = fetchText('IPFS_ROOT')
-  const line = str(tip).split('\n')[0]
+  const tipLines = str(tip).split('\n')
+  let line = ''
+  if (tipLines.length > 0) {
+    line = str(tipLines[0])
+  }
   if (looksLikeCid(line)) {
     return line
   }
