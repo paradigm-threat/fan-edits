@@ -19,9 +19,9 @@ export default function TheaterPlayer(props) {
         'The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.'
       }
       data-playing={p.playing === true ? 'true' : 'false'}
-      data-command={p.command != null ? String(p.command) : '0'}
-      data-command-seq={p.commandSeq != null ? String(p.commandSeq) : '0'}
-      data-command-arg={p.commandArg != null ? String(p.commandArg) : ''}
+      data-command={p.command !== null && p.command !== undefined ? String(p.command) : '0'}
+      data-command-seq={p.commandSeq !== null && p.commandSeq !== undefined ? String(p.commandSeq) : '0'}
+      data-command-arg={p.commandArg !== null && p.commandArg !== undefined ? String(p.commandArg) : ''}
       data-unlocked={p.unlocked === true ? 'true' : 'false'}
       onPlay={p.onPlay}
       onPause={p.onPause}

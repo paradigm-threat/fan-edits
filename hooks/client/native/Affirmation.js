@@ -11,12 +11,12 @@ export function welcomeStorageKey() {
 }
 
 export function movieStorageKey(slug) {
-  const s = slug == null ? '' : '' + slug
+  const s = slug === null || slug === undefined ? '' : '' + slug
   return 'flashback.movieOwn.v1.' + s
 }
 
 export function hasStoredAck(storageKey) {
-  const key = storageKey == null ? '' : '' + storageKey
+  const key = storageKey === null || storageKey === undefined ? '' : '' + storageKey
   if (!key) {
     return false
   }
@@ -71,7 +71,7 @@ export function ensureOwnershipAckFromBrowser() {
 }
 
 export function ensureMovieOwnAckFromBrowser(slug) {
-  const s = slug == null ? '' : '' + slug
+  const s = slug === null || slug === undefined ? '' : '' + slug
   try {
     if (typeof globalThis === 'undefined' || !globalThis.location) {
       return hasMovieOwnAck(s)
