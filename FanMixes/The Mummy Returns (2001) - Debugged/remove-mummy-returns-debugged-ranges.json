@@ -1,0 +1,17 @@
+{
+  "description": "The Mummy Returns (2001) Debugged: no classic flesh-eating scarab dump like 1999. Closest kid-unfriendly analogue is the pygmy swarm that overruns and kills the expedition (little creatures eating people). Times from The Mummy Returns 2001 SRT. Visual-only attacks need Kdenlive QC. join_fade false. Confirm pygmy cut with owner — not literally scarabs.",
+  "ranges": [
+    {
+      "start": 5238.357,
+      "end": 5317.02,
+      "join_fade": false,
+      "note": "Canyon: after 'Where's the boy?' through the first pygmy overrun (snarling/screaming). Resume 'The black book!'"
+    },
+    {
+      "start": 5426.045,
+      "end": 5502.497,
+      "join_fade": false,
+      "note": "Pygmy swarm continues (yelling/snarling/gunfire eating beats). Resume 'Let's go / Thank God for that' before the creepy-pygmy-things line."
+    }
+  ]
+}

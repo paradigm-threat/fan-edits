@@ -1,0 +1,600 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Ninja Scroll (1993) - Minor Damage",
+  "source_kdenlive": "Ninja Scroll (1993) - Minor Damage.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:07:50.009",
+      "removed_s": 3.128,
+      "source_removed": {
+        "in": "00:07:49.967",
+        "out": "00:07:53.095"
+      },
+      "left": {
+        "in": "00:07:45.009",
+        "out": "00:07:49.967"
+      },
+      "right": {
+        "in": "00:07:50.009",
+        "out": "00:07:55.009"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:08:08.008",
+      "removed_s": 251.261,
+      "source_removed": {
+        "in": "00:08:11.053",
+        "out": "00:12:22.314"
+      },
+      "left": {
+        "in": "00:08:03.008",
+        "out": "00:08:07.967"
+      },
+      "right": {
+        "in": "00:08:08.008",
+        "out": "00:08:13.008"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:08:26.026",
+      "removed_s": 2.086,
+      "source_removed": {
+        "in": "00:12:40.290",
+        "out": "00:12:42.376"
+      },
+      "left": {
+        "in": "00:08:21.026",
+        "out": "00:08:25.984"
+      },
+      "right": {
+        "in": "00:08:26.026",
+        "out": "00:08:31.026"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:08:33.909",
+      "removed_s": 4.588,
+      "source_removed": {
+        "in": "00:12:50.217",
+        "out": "00:12:54.805"
+      },
+      "left": {
+        "in": "00:08:28.909",
+        "out": "00:08:33.867"
+      },
+      "right": {
+        "in": "00:08:33.909",
+        "out": "00:08:38.909"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "00:08:53.202",
+      "removed_s": 79.644,
+      "source_removed": {
+        "in": "00:13:14.056",
+        "out": "00:14:33.700"
+      },
+      "left": {
+        "in": "00:08:48.202",
+        "out": "00:08:53.160"
+      },
+      "right": {
+        "in": "00:08:53.202",
+        "out": "00:08:58.202"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "00:09:34.767",
+      "removed_s": 14.681,
+      "source_removed": {
+        "in": "00:15:15.224",
+        "out": "00:15:29.905"
+      },
+      "left": {
+        "in": "00:09:29.767",
+        "out": "00:09:34.726"
+      },
+      "right": {
+        "in": "00:09:34.767",
+        "out": "00:09:37.603"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "00:09:37.603",
+      "removed_s": 1.669,
+      "source_removed": {
+        "in": "00:15:32.699",
+        "out": "00:15:34.368"
+      },
+      "left": {
+        "in": "00:09:32.603",
+        "out": "00:09:37.561"
+      },
+      "right": {
+        "in": "00:09:37.603",
+        "out": "00:09:42.603"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-08.kdenlive",
+      "join": 8,
+      "out_join": "00:09:43.776",
+      "removed_s": 14.556,
+      "source_removed": {
+        "in": "00:15:40.499",
+        "out": "00:15:55.055"
+      },
+      "left": {
+        "in": "00:09:38.776",
+        "out": "00:09:43.734"
+      },
+      "right": {
+        "in": "00:09:43.776",
+        "out": "00:09:48.776"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-09.kdenlive",
+      "join": 9,
+      "out_join": "00:10:50.222",
+      "removed_s": 3.17,
+      "source_removed": {
+        "in": "00:17:01.460",
+        "out": "00:17:04.630"
+      },
+      "left": {
+        "in": "00:10:45.222",
+        "out": "00:10:50.181"
+      },
+      "right": {
+        "in": "00:10:50.222",
+        "out": "00:10:55.222"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-10.kdenlive",
+      "join": 10,
+      "out_join": "00:10:55.394",
+      "removed_s": 5.297,
+      "source_removed": {
+        "in": "00:17:09.760",
+        "out": "00:17:15.057"
+      },
+      "left": {
+        "in": "00:10:50.394",
+        "out": "00:10:55.352"
+      },
+      "right": {
+        "in": "00:10:55.394",
+        "out": "00:10:58.022"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-11.kdenlive",
+      "join": 11,
+      "out_join": "00:10:58.022",
+      "removed_s": 2.419,
+      "source_removed": {
+        "in": "00:17:17.643",
+        "out": "00:17:20.062"
+      },
+      "left": {
+        "in": "00:10:53.022",
+        "out": "00:10:57.980"
+      },
+      "right": {
+        "in": "00:10:58.022",
+        "out": "00:11:03.022"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-12.kdenlive",
+      "join": 12,
+      "out_join": "00:12:29.094",
+      "removed_s": 388.343,
+      "source_removed": {
+        "in": "00:18:51.093",
+        "out": "00:25:19.436"
+      },
+      "left": {
+        "in": "00:12:24.094",
+        "out": "00:12:29.053"
+      },
+      "right": {
+        "in": "00:12:29.094",
+        "out": "00:12:34.094"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-13.kdenlive",
+      "join": 13,
+      "out_join": "00:20:12.828",
+      "removed_s": 3.337,
+      "source_removed": {
+        "in": "00:33:03.128",
+        "out": "00:33:06.465"
+      },
+      "left": {
+        "in": "00:20:07.828",
+        "out": "00:20:12.786"
+      },
+      "right": {
+        "in": "00:20:12.828",
+        "out": "00:20:17.828"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-14.kdenlive",
+      "join": 14,
+      "out_join": "00:22:53.202",
+      "removed_s": 13.537,
+      "source_removed": {
+        "in": "00:35:46.797",
+        "out": "00:36:00.334"
+      },
+      "left": {
+        "in": "00:22:48.202",
+        "out": "00:22:53.160"
+      },
+      "right": {
+        "in": "00:22:53.202",
+        "out": "00:22:58.202"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-15.kdenlive",
+      "join": 15,
+      "out_join": "00:24:01.501",
+      "removed_s": 621.647,
+      "source_removed": {
+        "in": "00:37:08.592",
+        "out": "00:47:30.239"
+      },
+      "left": {
+        "in": "00:23:56.501",
+        "out": "00:24:01.460"
+      },
+      "right": {
+        "in": "00:24:01.501",
+        "out": "00:24:04.921"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-16.kdenlive",
+      "join": 16,
+      "out_join": "00:24:04.921",
+      "removed_s": 6.298,
+      "source_removed": {
+        "in": "00:47:33.617",
+        "out": "00:47:39.915"
+      },
+      "left": {
+        "in": "00:23:59.921",
+        "out": "00:24:04.879"
+      },
+      "right": {
+        "in": "00:24:04.921",
+        "out": "00:24:09.921"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-17.kdenlive",
+      "join": 17,
+      "out_join": "00:25:33.890",
+      "removed_s": 3.837,
+      "source_removed": {
+        "in": "00:49:08.842",
+        "out": "00:49:12.679"
+      },
+      "left": {
+        "in": "00:25:28.890",
+        "out": "00:25:33.848"
+      },
+      "right": {
+        "in": "00:25:33.890",
+        "out": "00:25:38.890"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-18.kdenlive",
+      "join": 18,
+      "out_join": "00:26:40.897",
+      "removed_s": 108.196,
+      "source_removed": {
+        "in": "00:50:19.645",
+        "out": "00:52:07.841"
+      },
+      "left": {
+        "in": "00:26:35.897",
+        "out": "00:26:40.856"
+      },
+      "right": {
+        "in": "00:26:40.897",
+        "out": "00:26:45.897"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-19.kdenlive",
+      "join": 19,
+      "out_join": "00:28:18.935",
+      "removed_s": 7.758,
+      "source_removed": {
+        "in": "00:53:45.837",
+        "out": "00:53:53.595"
+      },
+      "left": {
+        "in": "00:28:13.935",
+        "out": "00:28:18.893"
+      },
+      "right": {
+        "in": "00:28:18.935",
+        "out": "00:28:23.935"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-20.kdenlive",
+      "join": 20,
+      "out_join": "00:28:25.359",
+      "removed_s": 2.025,
+      "source_removed": {
+        "in": "00:53:59.977",
+        "out": "00:54:02.002"
+      },
+      "left": {
+        "in": "00:28:20.359",
+        "out": "00:28:25.317"
+      },
+      "right": {
+        "in": "00:28:25.359",
+        "out": "00:28:30.359"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-21.kdenlive",
+      "join": 21,
+      "out_join": "00:29:21.331",
+      "removed_s": 18.834,
+      "source_removed": {
+        "in": "00:54:57.933",
+        "out": "00:55:16.767"
+      },
+      "left": {
+        "in": "00:29:16.331",
+        "out": "00:29:21.290"
+      },
+      "right": {
+        "in": "00:29:21.331",
+        "out": "00:29:26.331"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-22.kdenlive",
+      "join": 22,
+      "out_join": "00:32:33.260",
+      "removed_s": 39.813,
+      "source_removed": {
+        "in": "00:58:28.654",
+        "out": "00:59:08.467"
+      },
+      "left": {
+        "in": "00:32:28.260",
+        "out": "00:32:33.218"
+      },
+      "right": {
+        "in": "00:32:33.260",
+        "out": "00:32:38.260"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-23.kdenlive",
+      "join": 23,
+      "out_join": "00:32:49.234",
+      "removed_s": 22.898,
+      "source_removed": {
+        "in": "00:59:24.399",
+        "out": "00:59:47.297"
+      },
+      "left": {
+        "in": "00:32:44.234",
+        "out": "00:32:49.192"
+      },
+      "right": {
+        "in": "00:32:49.234",
+        "out": "00:32:54.234"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-24.kdenlive",
+      "join": 24,
+      "out_join": "00:34:00.621",
+      "removed_s": 18.375,
+      "source_removed": {
+        "in": "01:00:58.642",
+        "out": "01:01:17.017"
+      },
+      "left": {
+        "in": "00:33:55.621",
+        "out": "00:34:00.579"
+      },
+      "right": {
+        "in": "00:34:00.621",
+        "out": "00:34:05.621"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-25.kdenlive",
+      "join": 25,
+      "out_join": "00:38:21.559",
+      "removed_s": 35.392,
+      "source_removed": {
+        "in": "01:05:37.913",
+        "out": "01:06:13.305"
+      },
+      "left": {
+        "in": "00:38:16.559",
+        "out": "00:38:21.518"
+      },
+      "right": {
+        "in": "00:38:21.559",
+        "out": "00:38:26.559"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-26.kdenlive",
+      "join": 26,
+      "out_join": "00:42:19.558",
+      "removed_s": 3.545,
+      "source_removed": {
+        "in": "01:10:11.261",
+        "out": "01:10:14.806"
+      },
+      "left": {
+        "in": "00:42:14.558",
+        "out": "00:42:19.516"
+      },
+      "right": {
+        "in": "00:42:19.558",
+        "out": "00:42:24.558"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-27.kdenlive",
+      "join": 27,
+      "out_join": "00:45:41.580",
+      "removed_s": 24.798,
+      "source_removed": {
+        "in": "01:13:36.787",
+        "out": "01:14:01.585"
+      },
+      "left": {
+        "in": "00:45:36.580",
+        "out": "00:45:41.539"
+      },
+      "right": {
+        "in": "00:45:41.580",
+        "out": "00:45:45.501"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-28.kdenlive",
+      "join": 28,
+      "out_join": "00:45:45.501",
+      "removed_s": 414.012,
+      "source_removed": {
+        "in": "01:14:05.464",
+        "out": "01:20:59.476"
+      },
+      "left": {
+        "in": "00:45:40.501",
+        "out": "00:45:45.459"
+      },
+      "right": {
+        "in": "00:45:45.501",
+        "out": "00:45:50.501"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-29.kdenlive",
+      "join": 29,
+      "out_join": "00:46:20.810",
+      "removed_s": 3.003,
+      "source_removed": {
+        "in": "01:21:34.743",
+        "out": "01:21:37.746"
+      },
+      "left": {
+        "in": "00:46:15.810",
+        "out": "00:46:20.768"
+      },
+      "right": {
+        "in": "00:46:20.810",
+        "out": "00:46:25.810"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-30.kdenlive",
+      "join": 30,
+      "out_join": "00:47:40.830",
+      "removed_s": 4.195,
+      "source_removed": {
+        "in": "01:22:57.724",
+        "out": "01:23:01.919"
+      },
+      "left": {
+        "in": "00:47:35.830",
+        "out": "00:47:40.788"
+      },
+      "right": {
+        "in": "00:47:40.830",
+        "out": "00:47:45.830"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    },
+    {
+      "file": "seam-31.kdenlive",
+      "join": 31,
+      "out_join": "00:49:06.438",
+      "removed_s": 3.795,
+      "source_removed": {
+        "in": "01:24:27.486",
+        "out": "01:24:31.281"
+      },
+      "left": {
+        "in": "00:49:01.438",
+        "out": "00:49:06.397"
+      },
+      "right": {
+        "in": "00:49:06.438",
+        "out": "00:49:11.438"
+      },
+      "render": "/media/ari/HD/FanEditRender/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.mkv"
+    }
+  ]
+}

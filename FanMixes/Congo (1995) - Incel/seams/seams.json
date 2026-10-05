@@ -1,0 +1,486 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Congo (1995) - Incel",
+  "source_kdenlive": "Congo (1995) - Incel.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:06:33.784",
+      "removed_s": 46.695,
+      "source_removed": {
+        "in": "00:06:33.742",
+        "out": "00:07:20.437"
+      },
+      "left": {
+        "in": "00:06:28.784",
+        "out": "00:06:33.742"
+      },
+      "right": {
+        "in": "00:06:33.784",
+        "out": "00:06:38.784"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:07:26.818",
+      "removed_s": 1.21,
+      "source_removed": {
+        "in": "00:08:13.430",
+        "out": "00:08:14.640"
+      },
+      "left": {
+        "in": "00:07:21.818",
+        "out": "00:07:26.777"
+      },
+      "right": {
+        "in": "00:07:26.818",
+        "out": "00:07:31.818"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:07:51.009",
+      "removed_s": 2.878,
+      "source_removed": {
+        "in": "00:08:38.789",
+        "out": "00:08:41.667"
+      },
+      "left": {
+        "in": "00:07:46.009",
+        "out": "00:07:50.967"
+      },
+      "right": {
+        "in": "00:07:51.009",
+        "out": "00:07:56.009"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:10:17.976",
+      "removed_s": 6.84,
+      "source_removed": {
+        "in": "00:11:08.592",
+        "out": "00:11:15.432"
+      },
+      "left": {
+        "in": "00:10:12.976",
+        "out": "00:10:17.934"
+      },
+      "right": {
+        "in": "00:10:17.976",
+        "out": "00:10:22.976"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "00:12:40.207",
+      "removed_s": 13.513,
+      "source_removed": {
+        "in": "00:13:37.621",
+        "out": "00:13:51.134"
+      },
+      "left": {
+        "in": "00:12:35.207",
+        "out": "00:12:40.165"
+      },
+      "right": {
+        "in": "00:12:40.207",
+        "out": "00:12:45.207"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "00:18:06.757",
+      "removed_s": 18.393,
+      "source_removed": {
+        "in": "00:19:17.643",
+        "out": "00:19:36.036"
+      },
+      "left": {
+        "in": "00:18:01.757",
+        "out": "00:18:06.716"
+      },
+      "right": {
+        "in": "00:18:06.757",
+        "out": "00:18:11.757"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "00:18:20.604",
+      "removed_s": 32.056,
+      "source_removed": {
+        "in": "00:19:49.841",
+        "out": "00:20:21.897"
+      },
+      "left": {
+        "in": "00:18:15.604",
+        "out": "00:18:20.562"
+      },
+      "right": {
+        "in": "00:18:20.604",
+        "out": "00:18:25.604"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-08.kdenlive",
+      "join": 8,
+      "out_join": "00:18:25.693",
+      "removed_s": 3.545,
+      "source_removed": {
+        "in": "00:20:26.944",
+        "out": "00:20:30.489"
+      },
+      "left": {
+        "in": "00:18:20.693",
+        "out": "00:18:25.651"
+      },
+      "right": {
+        "in": "00:18:25.693",
+        "out": "00:18:30.693"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-09.kdenlive",
+      "join": 9,
+      "out_join": "00:19:25.066",
+      "removed_s": 3.712,
+      "source_removed": {
+        "in": "00:21:29.821",
+        "out": "00:21:33.533"
+      },
+      "left": {
+        "in": "00:19:20.066",
+        "out": "00:19:25.025"
+      },
+      "right": {
+        "in": "00:19:25.066",
+        "out": "00:19:30.066"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-10.kdenlive",
+      "join": 10,
+      "out_join": "00:19:30.697",
+      "removed_s": 515.017,
+      "source_removed": {
+        "in": "00:21:39.122",
+        "out": "00:30:14.139"
+      },
+      "left": {
+        "in": "00:19:25.697",
+        "out": "00:19:30.655"
+      },
+      "right": {
+        "in": "00:19:30.697",
+        "out": "00:19:35.697"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-11.kdenlive",
+      "join": 11,
+      "out_join": "00:19:55.848",
+      "removed_s": 1.292,
+      "source_removed": {
+        "in": "00:30:39.248",
+        "out": "00:30:40.540"
+      },
+      "left": {
+        "in": "00:19:50.848",
+        "out": "00:19:55.806"
+      },
+      "right": {
+        "in": "00:19:55.848",
+        "out": "00:20:00.848"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-12.kdenlive",
+      "join": 12,
+      "out_join": "00:21:17.477",
+      "removed_s": 5.964,
+      "source_removed": {
+        "in": "00:32:02.127",
+        "out": "00:32:08.091"
+      },
+      "left": {
+        "in": "00:21:12.477",
+        "out": "00:21:17.435"
+      },
+      "right": {
+        "in": "00:21:17.477",
+        "out": "00:21:22.477"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-13.kdenlive",
+      "join": 13,
+      "out_join": "00:21:50.052",
+      "removed_s": 27.467,
+      "source_removed": {
+        "in": "00:32:40.624",
+        "out": "00:33:08.091"
+      },
+      "left": {
+        "in": "00:21:45.052",
+        "out": "00:21:50.010"
+      },
+      "right": {
+        "in": "00:21:50.052",
+        "out": "00:21:55.052"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-14.kdenlive",
+      "join": 14,
+      "out_join": "00:24:57.602",
+      "removed_s": 16.85,
+      "source_removed": {
+        "in": "00:36:15.599",
+        "out": "00:36:32.449"
+      },
+      "left": {
+        "in": "00:24:52.602",
+        "out": "00:24:57.560"
+      },
+      "right": {
+        "in": "00:24:57.602",
+        "out": "00:25:02.602"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-15.kdenlive",
+      "join": 15,
+      "out_join": "00:36:15.411",
+      "removed_s": 32.639,
+      "source_removed": {
+        "in": "00:47:50.217",
+        "out": "00:48:22.856"
+      },
+      "left": {
+        "in": "00:36:10.411",
+        "out": "00:36:15.369"
+      },
+      "right": {
+        "in": "00:36:15.411",
+        "out": "00:36:20.411"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-16.kdenlive",
+      "join": 16,
+      "out_join": "00:37:16.204",
+      "removed_s": 1.168,
+      "source_removed": {
+        "in": "00:49:23.607",
+        "out": "00:49:24.775"
+      },
+      "left": {
+        "in": "00:37:11.204",
+        "out": "00:37:16.162"
+      },
+      "right": {
+        "in": "00:37:16.204",
+        "out": "00:37:17.121"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-17.kdenlive",
+      "join": 17,
+      "out_join": "00:37:17.121",
+      "removed_s": 350.865,
+      "source_removed": {
+        "in": "00:49:25.651",
+        "out": "00:55:16.516"
+      },
+      "left": {
+        "in": "00:37:12.121",
+        "out": "00:37:17.080"
+      },
+      "right": {
+        "in": "00:37:17.121",
+        "out": "00:37:22.121"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-18.kdenlive",
+      "join": 18,
+      "out_join": "00:41:45.691",
+      "removed_s": 5.548,
+      "source_removed": {
+        "in": "00:50:48.131",
+        "out": "00:50:53.679"
+      },
+      "left": {
+        "in": "00:41:40.691",
+        "out": "00:41:45.649"
+      },
+      "right": {
+        "in": "00:41:45.691",
+        "out": "00:41:50.691"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-19.kdenlive",
+      "join": 19,
+      "out_join": "00:45:12.407",
+      "removed_s": 1.209,
+      "source_removed": {
+        "in": "00:54:20.354",
+        "out": "00:54:21.563"
+      },
+      "left": {
+        "in": "00:45:07.407",
+        "out": "00:45:12.366"
+      },
+      "right": {
+        "in": "00:45:12.407",
+        "out": "00:45:13.408"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-20.kdenlive",
+      "join": 20,
+      "out_join": "00:45:13.408",
+      "removed_s": 2.086,
+      "source_removed": {
+        "in": "00:54:22.522",
+        "out": "00:54:24.608"
+      },
+      "left": {
+        "in": "00:45:08.408",
+        "out": "00:45:13.366"
+      },
+      "right": {
+        "in": "00:45:13.408",
+        "out": "00:45:18.408"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-21.kdenlive",
+      "join": 21,
+      "out_join": "00:46:04.941",
+      "removed_s": 978.519,
+      "source_removed": {
+        "in": "00:55:16.099",
+        "out": "01:11:34.618"
+      },
+      "left": {
+        "in": "00:45:59.941",
+        "out": "00:46:04.899"
+      },
+      "right": {
+        "in": "00:46:04.941",
+        "out": "00:46:09.941"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-22.kdenlive",
+      "join": 22,
+      "out_join": "00:50:51.927",
+      "removed_s": 1.794,
+      "source_removed": {
+        "in": "01:16:21.563",
+        "out": "01:16:23.357"
+      },
+      "left": {
+        "in": "00:50:46.927",
+        "out": "00:50:51.886"
+      },
+      "right": {
+        "in": "00:50:51.927",
+        "out": "00:50:52.970"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-23.kdenlive",
+      "join": 23,
+      "out_join": "00:50:52.970",
+      "removed_s": 3.128,
+      "source_removed": {
+        "in": "01:16:24.358",
+        "out": "01:16:27.486"
+      },
+      "left": {
+        "in": "00:50:47.970",
+        "out": "00:50:52.928"
+      },
+      "right": {
+        "in": "00:50:52.970",
+        "out": "00:50:57.970"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-24.kdenlive",
+      "join": 24,
+      "out_join": "00:57:33.784",
+      "removed_s": 6.173,
+      "source_removed": {
+        "in": "01:23:08.258",
+        "out": "01:23:14.431"
+      },
+      "left": {
+        "in": "00:57:28.784",
+        "out": "00:57:33.742"
+      },
+      "right": {
+        "in": "00:57:33.784",
+        "out": "00:57:38.784"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    },
+    {
+      "file": "seam-25.kdenlive",
+      "join": 25,
+      "out_join": "00:57:49.133",
+      "removed_s": 6.298,
+      "source_removed": {
+        "in": "01:23:29.738",
+        "out": "01:23:36.036"
+      },
+      "left": {
+        "in": "00:57:44.133",
+        "out": "00:57:49.091"
+      },
+      "right": {
+        "in": "00:57:49.133",
+        "out": "00:57:54.133"
+      },
+      "render": "/media/ari/HD/FanEditRender/Congo (1995) - Incel/Congo (1995) - Incel Edition.mkv"
+    }
+  ]
+}

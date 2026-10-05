@@ -1,0 +1,265 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/home/ari/dev/fan-edits/KidFriendly/Spirited Away (2001) - Alena Edition" version="7.33.0">
+ <profile colorspace="709" description="1280x692 24000/1001fps" frame_rate_num="24000" frame_rate_den="1001" height="692" progressive="1" sample_aspect_num="1" sample_aspect_den="1" width="1280" />
+ <producer id="producer0" in="00:00:00.000" out="01:17:07.408">
+  <property name="length">2147483647</property>
+  <property name="eof">continue</property>
+  <property name="resource">black</property>
+  <property name="aspect_ratio">1</property>
+  <property name="mlt_service">color</property>
+  <property name="kdenlive:playlistid">black_track</property>
+  <property name="mlt_image_format">rgba</property>
+  <property name="set.test_audio">0</property>
+ </producer>
+ <playlist id="playlist0" />
+ <playlist id="playlist1" />
+ <tractor id="tractor0" in="00:00:00.000">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="video" producer="playlist0" />
+  <track hide="video" producer="playlist1" />
+ </tractor>
+ <chain id="chain0" out="02:04:32.288">
+  <property name="eof">pause</property>
+  <property name="resource">/Anime/Studio Ghibli Movies (1984-2014)/ Spirited Away~Sen to Chihiro no Kamikakushi (720p Blu-ray 8bit Dual Audio) [NoobSubs] [FAE6635D].mkv</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">0</property>
+  <property name="vstream">0</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:id">5</property>
+  <property name="kdenlive:clip_type">0</property>
+  <property name="kdenlive:folderid">-1</property>
+ </chain>
+ <playlist id="playlist2">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:00.000" out="00:08:18.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:15:02.000" out="00:17:04.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="ajfadeout_b499a344" in="00:17:03.650" out="00:17:04.000">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadeout</property>
+    <property name="gain">1</property>
+    <property name="end">0</property>
+   </filter>
+   <filter id="ajfadein_b499a344" in="00:15:02.000" out="00:15:02.350">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadein</property>
+    <property name="gain">0</property>
+    <property name="end">1</property>
+   </filter>
+  </entry>
+  <entry in="00:18:08.000" out="00:34:47.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:38:24.000" out="00:57:58.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="ajfadeout_a60b43dc" in="00:57:57.650" out="00:57:58.000">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadeout</property>
+    <property name="gain">1</property>
+    <property name="end">0</property>
+   </filter>
+   <filter id="ajfadein_a60b43dc" in="00:38:24.000" out="00:38:24.350">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadein</property>
+    <property name="gain">0</property>
+    <property name="end">1</property>
+   </filter>
+  </entry>
+  <entry in="01:05:55.000" out="01:08:12.200" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="ajfadeout_e552fcb7" in="01:08:11.850" out="01:08:12.200">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadeout</property>
+    <property name="gain">1</property>
+    <property name="end">0</property>
+   </filter>
+   <filter id="ajfadein_e552fcb7" in="01:05:55.000" out="01:05:55.350">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadein</property>
+    <property name="gain">0</property>
+    <property name="end">1</property>
+   </filter>
+  </entry>
+  <entry in="01:35:16.080" out="01:42:18.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="ajfadeout_23f97b60" in="01:42:17.650" out="01:42:18.000">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadeout</property>
+    <property name="gain">1</property>
+    <property name="end">0</property>
+   </filter>
+   <filter id="ajfadein_23f97b60" in="01:35:16.080" out="01:35:16.430">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadein</property>
+    <property name="gain">0</property>
+    <property name="end">1</property>
+   </filter>
+  </entry>
+  <entry in="01:42:56.000" out="01:56:45.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="01:57:06.000" out="02:04:32.288" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+ </playlist>
+ <playlist id="playlist3">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:00.000" out="00:08:18.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:15:02.000" out="00:17:04.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="ajfadeout_b499a344" in="00:17:03.650" out="00:17:04.000">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadeout</property>
+    <property name="gain">1</property>
+    <property name="end">0</property>
+   </filter>
+   <filter id="ajfadein_b499a344" in="00:15:02.000" out="00:15:02.350">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadein</property>
+    <property name="gain">0</property>
+    <property name="end">1</property>
+   </filter>
+  </entry>
+  <entry in="00:18:08.000" out="00:34:47.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:38:24.000" out="00:57:58.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="ajfadeout_a60b43dc" in="00:57:57.650" out="00:57:58.000">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadeout</property>
+    <property name="gain">1</property>
+    <property name="end">0</property>
+   </filter>
+   <filter id="ajfadein_a60b43dc" in="00:38:24.000" out="00:38:24.350">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadein</property>
+    <property name="gain">0</property>
+    <property name="end">1</property>
+   </filter>
+  </entry>
+  <entry in="01:05:55.000" out="01:08:12.200" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="ajfadeout_e552fcb7" in="01:08:11.850" out="01:08:12.200">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadeout</property>
+    <property name="gain">1</property>
+    <property name="end">0</property>
+   </filter>
+   <filter id="ajfadein_e552fcb7" in="01:05:55.000" out="01:05:55.350">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadein</property>
+    <property name="gain">0</property>
+    <property name="end">1</property>
+   </filter>
+  </entry>
+  <entry in="01:35:16.080" out="01:42:18.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="ajfadeout_23f97b60" in="01:42:17.650" out="01:42:18.000">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadeout</property>
+    <property name="gain">1</property>
+    <property name="end">0</property>
+   </filter>
+   <filter id="ajfadein_23f97b60" in="01:35:16.080" out="01:35:16.430">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadein</property>
+    <property name="gain">0</property>
+    <property name="end">1</property>
+   </filter>
+  </entry>
+  <entry in="01:42:56.000" out="01:56:45.000" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="01:57:06.000" out="02:04:32.288" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+ </playlist>
+ <tractor id="tractor1" in="00:00:00.000" out="01:17:07.408">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="video" producer="playlist2" />
+ </tractor>
+ <tractor id="tractor2" in="00:00:00.000" out="01:17:07.408">
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="audio" producer="playlist3" />
+ </tractor>
+ <tractor id="tractor3" in="00:00:00.000" out="01:17:07.408">
+  <property name="kdenlive:duration">01:17:07.408</property>
+  <property name="kdenlive:clipname">Sequence 1</property>
+  <property name="kdenlive:uuid">{04404cf0-5e3d-4b47-a276-caf9e57f5c8b}</property>
+  <property name="kdenlive:sequenceproperties.subtitlesList">[
+    {
+        "file": "Spirited Away (2001) - Alena Edition.kdenlive.ass",
+        "id": 0,
+        "name": "Subtitles"
+    }
+]</property>
+  <track producer="producer0" />
+  <track producer="tractor1" />
+  <track producer="tractor2" />
+  <transition id="transition2">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="always_active">1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="sum">1</property>
+  </transition>
+  <transition id="transition3">
+   <property name="a_track">0</property>
+   <property name="b_track">2</property>
+   <property name="compositing">0</property>
+   <property name="mlt_service">qtblend</property>
+   <property name="kdenlive_id">qtblend</property>
+   <property name="always_active">1</property>
+  </transition>
+ </tractor>
+ <playlist id="main_bin">
+  <property name="kdenlive:docproperties.uuid">{04404cf0-5e3d-4b47-a276-caf9e57f5c8b}</property>
+  <property name="kdenlive:docproperties.kdenliveversion">25.04.2</property>
+ </playlist>
+</mlt>

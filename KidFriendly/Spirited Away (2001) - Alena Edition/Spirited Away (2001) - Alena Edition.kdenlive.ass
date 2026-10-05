@@ -1,0 +1,707 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 3840
+PlayResY: 1632
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,40,40,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:13.34,0:00:19.72,Default,,0,0,0,,<font face="Palatino Linotype" size="96">{\an8}<i>Good luck, Chihiro</i> \N<i>Hope we meet again</i></font>
+Dialogue: 0,0:00:16.10,0:00:19.10,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro? Chihiro!</font>
+Dialogue: 0,0:00:19.10,0:00:20.56,Default,,0,0,0,,<font face="Vesta" size="78">We're almost there.</font>
+Dialogue: 0,0:00:23.52,0:00:25.60,Default,,0,0,0,,<font face="Vesta" size="78">This really is the middle of nowhere.</font>
+Dialogue: 0,0:00:25.60,0:00:28.57,Default,,0,0,0,,<font face="Vesta" size="78">I'll have to shop in the next town.</font>
+Dialogue: 0,0:00:28.57,0:00:30.61,Default,,0,0,0,,<font face="Vesta" size="78">We'll just have to make do.</font>
+Dialogue: 0,0:00:33.03,0:00:35.16,Default,,0,0,0,,<font face="Vesta" size="78">Look, there's the elementary school.</font>
+Dialogue: 0,0:00:35.16,0:00:36.95,Default,,0,0,0,,<font face="Vesta" size="78">That's your new school, Chihiro.</font>
+Dialogue: 0,0:00:37.83,0:00:40.08,Default,,0,0,0,,<font face="Vesta" size="78">Why, it looks very nice.</font>
+Dialogue: 0,0:00:47.79,0:00:49.92,Default,,0,0,0,,<font face="Vesta" size="78">I liked my old school.</font>
+Dialogue: 0,0:00:54.13,0:00:57.22,Default,,0,0,0,,<font face="Vesta" size="78">Mom, my flowers got bent.</font>
+Dialogue: 0,0:00:57.22,0:00:59.81,Default,,0,0,0,,<font face="Vesta" size="78">No wonder, the way you squeeze them.</font>
+Dialogue: 0,0:00:59.81,0:01:02.77,Default,,0,0,0,,<font face="Vesta" size="78">A little water and they'll perk right up.</font>
+Dialogue: 0,0:01:03.81,0:01:07.52,Default,,0,0,0,,<font face="Vesta" size="78">My first bouquet, and it's farewell flowers.</font>
+Dialogue: 0,0:01:07.52,0:01:10.96,Default,,0,0,0,,<font face="Vesta" size="78">What about the rose you got for your birthday?</font>
+Dialogue: 0,0:01:10.96,0:01:14.28,Default,,0,0,0,,<font face="Vesta" size="78">One rose? One rose isn't a bouquet.</font>
+Dialogue: 0,0:01:14.28,0:01:16.03,Default,,0,0,0,,<font face="Vesta" size="78">You dropped the card.</font>
+Dialogue: 0,0:01:16.03,0:01:20.41,Default,,0,0,0,,<font face="Vesta" size="78">Now pull yourself together. This is a busy day for us.</font>
+Dialogue: 0,0:01:39.51,0:01:45.39,Default,,0,0,0,,<font face="Palatino Linotype" size="96">{\an8}<font size="100"><font color="#fbf3e8"><font face="AR CENA">SPIRITED AWAY</font></font></font></font>
+Dialogue: 0,0:01:57.20,0:02:01.16,Default,,0,0,0,,<font face="Vesta" size="78">Wait a minute. Did I take a wrong turn?</font>
+Dialogue: 0,0:02:01.62,0:02:03.20,Default,,0,0,0,,<font face="Vesta" size="78">I don't get it.</font>
+Dialogue: 0,0:02:03.20,0:02:05.33,Default,,0,0,0,,<font face="Vesta" size="78">That must be it up there.</font>
+Dialogue: 0,0:02:06.16,0:02:08.21,Default,,0,0,0,,<font face="Vesta" size="78">The blue one on the end.</font>
+Dialogue: 0,0:02:08.62,0:02:09.96,Default,,0,0,0,,<font face="Vesta" size="78">That's it.</font>
+Dialogue: 0,0:02:10.54,0:02:13.30,Default,,0,0,0,,<font face="Vesta" size="78">I guess I turned off too soon.</font>
+Dialogue: 0,0:02:13.30,0:02:15.34,Default,,0,0,0,,<font face="Vesta" size="78">Maybe if we go straight?</font>
+Dialogue: 0,0:02:15.34,0:02:17.97,Default,,0,0,0,,<font face="Vesta" size="78">Oh, please. That's how we always get lost.</font>
+Dialogue: 0,0:02:17.97,0:02:19.99,Default,,0,0,0,,<font face="Vesta" size="78">Let's just see what's up here.</font>
+Dialogue: 0,0:02:20.39,0:02:22.20,Default,,0,0,0,,<font face="Vesta" size="78">What are those things?</font>
+Dialogue: 0,0:02:22.20,0:02:24.01,Default,,0,0,0,,<font face="Vesta" size="78">Houses for the guardian spirits.</font>
+Dialogue: 0,0:02:30.90,0:02:32.61,Default,,0,0,0,,<font face="Vesta" size="78">Dad, are you sure?</font>
+Dialogue: 0,0:02:32.61,0:02:35.19,Default,,0,0,0,,<font face="Vesta" size="78">Don't worry, we've got 4-wheel drive.</font>
+Dialogue: 0,0:02:35.73,0:02:37.15,Default,,0,0,0,,<font face="Vesta" size="78">Sit down, Chihiro.</font>
+Dialogue: 0,0:02:57.34,0:02:59.63,Default,,0,0,0,,<font face="Vesta" size="78">What are you doing? Slow down!</font>
+Dialogue: 0,0:03:01.11,0:03:02.47,Default,,0,0,0,,<font face="Vesta" size="78">There's a tunnel.</font>
+Dialogue: 0,0:03:17.03,0:03:18.78,Default,,0,0,0,,<font face="Vesta" size="78">What's this building?</font>
+Dialogue: 0,0:03:18.78,0:03:20.61,Default,,0,0,0,,<font face="Vesta" size="78">It looks like a gate.</font>
+Dialogue: 0,0:03:21.53,0:03:24.58,Default,,0,0,0,,<font face="Vesta" size="78">Honey, I think we should go back.</font>
+Dialogue: 0,0:03:25.24,0:03:26.62,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro!</font>
+Dialogue: 0,0:03:28.20,0:03:29.12,Default,,0,0,0,,<font face="Vesta" size="78">Honestly...</font>
+Dialogue: 0,0:03:29.54,0:03:32.08,Default,,0,0,0,,<font face="Vesta" size="78">Look at this, it's just plaster.</font>
+Dialogue: 0,0:03:32.08,0:03:34.08,Default,,0,0,0,,<font face="Vesta" size="78">This thing's pretty new.</font>
+Dialogue: 0,0:03:44.22,0:03:45.60,Default,,0,0,0,,<font face="Vesta" size="78">The air's blowing in.</font>
+Dialogue: 0,0:03:46.22,0:03:47.31,Default,,0,0,0,,<font face="Vesta" size="78">What is it?</font>
+Dialogue: 0,0:03:47.31,0:03:49.60,Default,,0,0,0,,<font face="Vesta" size="78">Let's see what's on the other side.</font>
+Dialogue: 0,0:03:50.23,0:03:52.35,Default,,0,0,0,,<font face="Vesta" size="78">It's creepy, Dad. Can't we go back?</font>
+Dialogue: 0,0:03:52.81,0:03:56.94,Default,,0,0,0,,<font face="Vesta" size="78">Don't be such a chicken. C'mon, let's take a look.</font>
+Dialogue: 0,0:03:56.94,0:03:59.09,Default,,0,0,0,,<font face="Vesta" size="78">The movers will be there soon.</font>
+Dialogue: 0,0:03:59.09,0:04:03.41,Default,,0,0,0,,<font face="Vesta" size="78">So? They've got the keys. They'll handle everything.</font>
+Dialogue: 0,0:04:03.41,0:04:04.57,Default,,0,0,0,,<font face="Vesta" size="78">I know, but...</font>
+Dialogue: 0,0:04:04.57,0:04:06.53,Default,,0,0,0,,<font face="Vesta" size="78">No! I won't go.</font>
+Dialogue: 0,0:04:08.54,0:04:10.70,Default,,0,0,0,,<font face="Vesta" size="78">Dad, let's go.</font>
+Dialogue: 0,0:04:10.70,0:04:12.14,Default,,0,0,0,,<font face="Vesta" size="78">Come on, it'll be fun.</font>
+Dialogue: 0,0:04:12.14,0:04:14.00,Default,,0,0,0,,<font face="Vesta" size="78">I'm staying here!</font>
+Dialogue: 0,0:04:22.26,0:04:24.95,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro, you wait in the car.</font>
+Dialogue: 0,0:04:26.68,0:04:28.60,Default,,0,0,0,,<font face="Vesta" size="78">Mom...</font>
+Dialogue: 0,0:04:30.52,0:04:31.89,Default,,0,0,0,,<font face="Vesta" size="78">Wait up!</font>
+Dialogue: 0,0:04:37.44,0:04:39.19,Default,,0,0,0,,<font face="Vesta" size="78">Watch your step.</font>
+Dialogue: 0,0:04:39.19,0:04:42.53,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro, don't cling. You'll make me trip.</font>
+Dialogue: 0,0:05:14.56,0:05:15.70,Default,,0,0,0,,<font face="Vesta" size="78">What is this?</font>
+Dialogue: 0,0:05:15.70,0:05:17.86,Default,,0,0,0,,<font face="Vesta" size="78">Wait, hear that?</font>
+Dialogue: 0,0:05:26.66,0:05:27.78,Default,,0,0,0,,<font face="Vesta" size="78">A train.</font>
+Dialogue: 0,0:05:27.78,0:05:29.70,Default,,0,0,0,,<font face="Vesta" size="78">Maybe we're near a station.</font>
+Dialogue: 0,0:05:29.70,0:05:31.54,Default,,0,0,0,,<font face="Vesta" size="78">Let's find out. It must be close.</font>
+Dialogue: 0,0:06:08.36,0:06:10.62,Default,,0,0,0,,<font face="Vesta" size="78">Houses, way out here?</font>
+Dialogue: 0,0:06:10.62,0:06:12.24,Default,,0,0,0,,<font face="Vesta" size="78">I knew it.</font>
+Dialogue: 0,0:06:12.62,0:06:15.41,Default,,0,0,0,,<font face="Vesta" size="78">It's an abandoned theme park.</font>
+Dialogue: 0,0:06:17.21,0:06:20.75,Default,,0,0,0,,<font face="Vesta" size="78">They built lots of them back in the nineties.</font>
+Dialogue: 0,0:06:20.75,0:06:23.59,Default,,0,0,0,,<font face="Vesta" size="78">But they went bust when the economy tanked.</font>
+Dialogue: 0,0:06:23.59,0:06:26.05,Default,,0,0,0,,<font face="Vesta" size="78">This must be one of them.</font>
+Dialogue: 0,0:06:26.05,0:06:28.13,Default,,0,0,0,,<font face="Vesta" size="78">Wait, where are we going?</font>
+Dialogue: 0,0:06:28.13,0:06:30.76,Default,,0,0,0,,<font face="Vesta" size="78">Let's go back, Dad.</font>
+Dialogue: 0,0:06:33.72,0:06:35.39,Default,,0,0,0,,<font face="Vesta" size="78">Please!</font>
+Dialogue: 0,0:06:44.98,0:06:48.15,Default,,0,0,0,,<font face="Vesta" size="78">Mom, that building's moaning.</font>
+Dialogue: 0,0:06:48.15,0:06:49.24,Default,,0,0,0,,<font face="Vesta" size="78">It's just the wind.</font>
+Dialogue: 0,0:06:49.74,0:06:54.24,Default,,0,0,0,,<font face="Vesta" size="78">What a lovely spot. We should've brought the sandwiches.</font>
+Dialogue: 0,0:06:57.25,0:06:59.27,Default,,0,0,0,,<font face="Vesta" size="78">This would've been a river.</font>
+Dialogue: 0,0:07:04.59,0:07:06.26,Default,,0,0,0,,<font face="Vesta" size="78">Do you smell something?</font>
+Dialogue: 0,0:07:07.01,0:07:09.12,Default,,0,0,0,,<font face="Vesta" size="78">Something smells good.</font>
+Dialogue: 0,0:07:09.12,0:07:10.30,Default,,0,0,0,,<font face="Vesta" size="78">You're right.</font>
+Dialogue: 0,0:07:10.30,0:07:13.43,Default,,0,0,0,,<font face="Vesta" size="78">Maybe they're open for business after all.</font>
+Dialogue: 0,0:07:13.43,0:07:14.95,Default,,0,0,0,,<font face="Vesta" size="78">Hurry up, Chihiro.</font>
+Dialogue: 0,0:07:14.95,0:07:17.18,Default,,0,0,0,,<font face="Vesta" size="78">Wait for me!</font>
+Dialogue: 0,0:07:50.17,0:07:51.63,Default,,0,0,0,,<font face="Vesta" size="78">This way.</font>
+Dialogue: 0,0:07:55.80,0:07:59.35,Default,,0,0,0,,<font face="Vesta" size="78">Can you believe it? Nothing but restaurants.</font>
+Dialogue: 0,0:07:59.35,0:08:01.52,Default,,0,0,0,,<font face="Vesta" size="78">There's nobody here.</font>
+Dialogue: 0,0:08:04.15,0:08:05.63,Default,,0,0,0,,<font face="Vesta" size="78">Over there.</font>
+Dialogue: 0,0:08:09.65,0:08:11.82,Default,,0,0,0,,<font face="Vesta" size="78">Come on!</font>
+Dialogue: 0,0:08:18.00,0:08:20.15,Default,,0,0,0,,<font face="Vesta" size="78">Unless you eat something from this world, you'll disappear.</font>
+Dialogue: 0,0:08:20.15,0:08:21.44,Default,,0,0,0,,<font face="Vesta" size="78">No!</font>
+Dialogue: 0,0:08:25.53,0:08:28.74,Default,,0,0,0,,<font face="Vesta" size="78">Don't worry. You won't turn into a pig.</font>
+Dialogue: 0,0:08:28.74,0:08:30.62,Default,,0,0,0,,<font face="Vesta" size="78">Chew it and swallow.</font>
+Dialogue: 0,0:08:40.79,0:08:42.80,Default,,0,0,0,,<font face="Vesta" size="78">Good, now you'll be fine.</font>
+Dialogue: 0,0:08:42.80,0:08:44.47,Default,,0,0,0,,<font face="Vesta" size="78">See for yourself.</font>
+Dialogue: 0,0:08:52.68,0:08:54.06,Default,,0,0,0,,<font face="Vesta" size="78">I can touch you.</font>
+Dialogue: 0,0:08:54.06,0:08:56.33,Default,,0,0,0,,<font face="Vesta" size="78">Of course. Now come.</font>
+Dialogue: 0,0:08:56.33,0:09:00.77,Default,,0,0,0,,<font face="Vesta" size="78">Where's Mom and Dad? Did they really turn into pigs?</font>
+Dialogue: 0,0:09:00.77,0:09:03.23,Default,,0,0,0,,<font face="Vesta" size="78">You can't see them now, but you will.</font>
+Dialogue: 0,0:09:06.49,0:09:07.53,Default,,0,0,0,,<font face="Vesta" size="78">Quiet!</font>
+Dialogue: 0,0:09:25.67,0:09:28.88,Default,,0,0,0,,<font face="Vesta" size="78">It's looking for you. There's no time, let's run.</font>
+Dialogue: 0,0:09:30.09,0:09:32.93,Default,,0,0,0,,<font face="Vesta" size="78">I can't stand up. What should I do?</font>
+Dialogue: 0,0:09:32.93,0:09:33.99,Default,,0,0,0,,<font face="Vesta" size="78">My legs don't work.</font>
+Dialogue: 0,0:09:34.54,0:09:36.73,Default,,0,0,0,,<font face="Vesta" size="78">Relax and take a deep breath.</font>
+Dialogue: 0,0:09:40.35,0:09:44.86,Default,,0,0,0,,<font face="Vesta" size="78">In the name of the wind and water within, unbind her.</font>
+Dialogue: 0,0:09:44.86,0:09:45.86,Default,,0,0,0,,<font face="Vesta" size="78">Stand up!</font>
+Dialogue: 0,0:10:20.79,0:10:22.38,Default,,0,0,0,,<font face="Vesta" size="78">Master Haku!</font>
+Dialogue: 0,0:10:23.13,0:10:24.75,Default,,0,0,0,,<font face="Vesta" size="78">Where have you...</font>
+Dialogue: 0,0:10:26.21,0:10:27.97,Default,,0,0,0,,<font face="Vesta" size="78">A human?</font>
+Dialogue: 0,0:10:28.88,0:10:30.09,Default,,0,0,0,,<font face="Vesta" size="78">Run!</font>
+Dialogue: 0,0:10:46.65,0:10:49.07,Default,,0,0,0,,<font face="Vesta" size="78">Master Haku, Master Haku!</font>
+Dialogue: 0,0:10:49.07,0:10:51.82,Default,,0,0,0,,<font face="Vesta" size="78">I smell something. A human intruder!</font>
+Dialogue: 0,0:10:51.82,0:10:54.20,Default,,0,0,0,,<font face="Vesta" size="78">I smell humans! The stench of humans!</font>
+Dialogue: 0,0:10:54.20,0:10:55.16,Default,,0,0,0,,<font face="Vesta" size="78">They know you're here.</font>
+Dialogue: 0,0:10:55.16,0:10:56.99,Default,,0,0,0,,<font face="Vesta" size="78">Sorry, I messed up.</font>
+Dialogue: 0,0:10:56.99,0:10:59.50,Default,,0,0,0,,<font face="Vesta" size="78">No, Chihiro, you did very well.</font>
+Dialogue: 0,0:10:59.50,0:11:02.08,Default,,0,0,0,,<font face="Vesta" size="78">Now listen. I'll tell you what to do.</font>
+Dialogue: 0,0:11:02.08,0:11:03.67,Default,,0,0,0,,<font face="Vesta" size="78">If you stay here, they'll find you.</font>
+Dialogue: 0,0:11:04.34,0:11:07.76,Default,,0,0,0,,<font face="Vesta" size="78">I'll distract them while you get away.</font>
+Dialogue: 0,0:11:07.76,0:11:10.17,Default,,0,0,0,,<font face="Vesta" size="78">No, don't go! Stay with me, please.</font>
+Dialogue: 0,0:11:10.84,0:11:13.97,Default,,0,0,0,,<font face="Vesta" size="78">You have no choice, if you want to survive here...</font>
+Dialogue: 0,0:11:13.97,0:11:15.68,Default,,0,0,0,,<font face="Vesta" size="78">and save your parents, too.</font>
+Dialogue: 0,0:11:16.72,0:11:19.52,Default,,0,0,0,,<font face="Vesta" size="78">So I wasn't dreaming. They did turn into pigs.</font>
+Dialogue: 0,0:11:19.52,0:11:20.94,Default,,0,0,0,,<font face="Vesta" size="78">Listen carefully.</font>
+Dialogue: 0,0:11:21.85,0:11:25.44,Default,,0,0,0,,<font face="Vesta" size="78"><i>After I'm gone,</i> <i>go through the back gate.</i></font>
+Dialogue: 0,0:11:25.44,0:11:28.48,Default,,0,0,0,,<font face="Vesta" size="78"><i>Take the stairs</i> <i>all the way down.</i></font>
+Dialogue: 0,0:11:28.48,0:11:30.70,Default,,0,0,0,,<font face="Vesta" size="78"><i>You'll find</i> <i>the boiler room where...</i></font>
+Dialogue: 0,0:11:30.70,0:11:32.36,Default,,0,0,0,,<font face="Vesta" size="78"><i>they stoke the fires.</i></font>
+Dialogue: 0,0:11:32.36,0:11:35.66,Default,,0,0,0,,<font face="Vesta" size="78"><i>Look for Kamaji.</i></font>
+Dialogue: 0,0:11:36.28,0:11:37.16,Default,,0,0,0,,<font face="Vesta" size="78">Kamaji?</font>
+Dialogue: 0,0:11:38.37,0:11:40.75,Default,,0,0,0,,<font face="Vesta" size="78">Ask him for work.</font>
+Dialogue: 0,0:11:40.75,0:11:42.39,Default,,0,0,0,,<font face="Vesta" size="78">If he refuses, keep asking.</font>
+Dialogue: 0,0:11:43.00,0:11:46.42,Default,,0,0,0,,<font face="Vesta" size="78">If you don't work, Yubaba will turn you into an animal.</font>
+Dialogue: 0,0:11:46.88,0:11:48.21,Default,,0,0,0,,<font face="Vesta" size="78">Yubaba?</font>
+Dialogue: 0,0:11:48.21,0:11:51.26,Default,,0,0,0,,<font face="Vesta" size="78">She's the sorceress who rules our world.</font>
+Dialogue: 0,0:11:51.26,0:11:54.59,Default,,0,0,0,,<font face="Vesta" size="78">She'll try to trick you into leaving...</font>
+Dialogue: 0,0:11:54.59,0:11:56.51,Default,,0,0,0,,<font face="Vesta" size="78">but keep asking for work.</font>
+Dialogue: 0,0:11:56.51,0:12:01.14,Default,,0,0,0,,<font face="Vesta" size="78">The work's hard, but it will protect you. Then even Yubaba can't harm you.</font>
+Dialogue: 0,0:12:02.52,0:12:05.48,Default,,0,0,0,,<font face="Vesta" size="78">Master Haku, Master Haku!</font>
+Dialogue: 0,0:12:05.48,0:12:06.73,Default,,0,0,0,,<font face="Vesta" size="78">I have to go.</font>
+Dialogue: 0,0:12:06.73,0:12:09.42,Default,,0,0,0,,<font face="Vesta" size="78">Remember I'm your friend, Chihiro.</font>
+Dialogue: 0,0:12:09.42,0:12:10.94,Default,,0,0,0,,<font face="Vesta" size="78">How did you know my name?</font>
+Dialogue: 0,0:12:11.40,0:12:13.74,Default,,0,0,0,,<font face="Vesta" size="78">You told me long ago.</font>
+Dialogue: 0,0:12:13.74,0:12:15.70,Default,,0,0,0,,<font face="Vesta" size="78">My name is Haku.</font>
+Dialogue: 0,0:12:18.58,0:12:20.41,Default,,0,0,0,,<font face="Vesta" size="78">Here I am!</font>
+Dialogue: 0,0:12:22.33,0:12:24.69,Default,,0,0,0,,<font face="Vesta" size="78">Master Haku, Yubaba's waiting.</font>
+Dialogue: 0,0:12:24.69,0:12:27.75,Default,,0,0,0,,<font face="Vesta" size="78">I know, I've been searching too.</font>
+Dialogue: 0,0:16:35.92,0:16:37.79,Default,,0,0,0,,<font face="Vesta" size="78">Um...</font>
+Dialogue: 0,0:16:38.67,0:16:40.00,Default,,0,0,0,,<font face="Vesta" size="78">Excuse me.</font>
+Dialogue: 0,0:16:46.84,0:16:48.18,Default,,0,0,0,,<font face="Vesta" size="78">Um...</font>
+Dialogue: 0,0:16:54.89,0:16:57.23,Default,,0,0,0,,<font face="Vesta" size="78">Are you Kamaji?</font>
+Dialogue: 0,0:17:05.03,0:17:08.70,Default,,0,0,0,,<font face="Vesta" size="78">Haku sent me. Please let me work here.</font>
+Dialogue: 0,0:17:13.12,0:17:16.54,Default,,0,0,0,,<font face="Vesta" size="78">What, all at once?</font>
+Dialogue: 0,0:17:17.21,0:17:19.46,Default,,0,0,0,,<font face="Vesta" size="78">Get to work, you little runts!</font>
+Dialogue: 0,0:17:21.05,0:17:26.05,Default,,0,0,0,,<font face="Vesta" size="78">I am Kamaji, slave to the boilers that heat the baths.</font>
+Dialogue: 0,0:17:26.05,0:17:28.22,Default,,0,0,0,,<font face="Vesta" size="78">Step on it, boys!</font>
+Dialogue: 0,0:17:29.39,0:17:31.45,Default,,0,0,0,,<font face="Vesta" size="78">Please let me work here.</font>
+Dialogue: 0,0:17:31.45,0:17:35.98,Default,,0,0,0,,<font face="Vesta" size="78">I've got all the help I need. There's soot everywhere.</font>
+Dialogue: 0,0:17:35.98,0:17:38.90,Default,,0,0,0,,<font face="Vesta" size="78">I'll never run out of help.</font>
+Dialogue: 0,0:17:53.33,0:17:55.33,Default,,0,0,0,,<font face="Vesta" size="78">Oh, I'm sorry.</font>
+Dialogue: 0,0:17:59.00,0:18:01.09,Default,,0,0,0,,<font face="Vesta" size="78">Wait a second.</font>
+Dialogue: 0,0:18:12.93,0:18:14.43,Default,,0,0,0,,<font face="Vesta" size="78">Out of the way.</font>
+Dialogue: 0,0:19:07.48,0:19:09.74,Default,,0,0,0,,<font face="Vesta" size="78">Wait, what do I do with this?</font>
+Dialogue: 0,0:19:16.45,0:19:18.12,Default,,0,0,0,,<font face="Vesta" size="78">Do I leave it here?</font>
+Dialogue: 0,0:19:18.50,0:19:20.62,Default,,0,0,0,,<font face="Vesta" size="78">Finish what you start.</font>
+Dialogue: 0,0:20:20.27,0:20:24.23,Default,,0,0,0,,<font face="Vesta" size="78">Get to work, runts! Wanna turn back into soot?</font>
+Dialogue: 0,0:20:24.23,0:20:28.04,Default,,0,0,0,,<font face="Vesta" size="78">And you, better watch it. You can't just take someone's work.</font>
+Dialogue: 0,0:20:28.04,0:20:31.55,Default,,0,0,0,,<font face="Vesta" size="78">If they don't work, their spell will be broken.</font>
+Dialogue: 0,0:20:31.55,0:20:34.82,Default,,0,0,0,,<font face="Vesta" size="78">There's no work for you here. Try somewhere else.</font>
+Dialogue: 0,0:20:43.83,0:20:46.46,Default,,0,0,0,,<font face="Vesta" size="78">You sootballs got a problem?</font>
+Dialogue: 0,0:20:46.46,0:20:48.02,Default,,0,0,0,,<font face="Vesta" size="78">Get to work!</font>
+Dialogue: 0,0:20:49.00,0:20:50.92,Default,,0,0,0,,<font face="Vesta" size="78">Chow time!</font>
+Dialogue: 0,0:20:50.92,0:20:53.34,Default,,0,0,0,,<font face="Vesta" size="78">What, you guys at it again?</font>
+Dialogue: 0,0:20:55.26,0:20:58.18,Default,,0,0,0,,<font face="Vesta" size="78">Give it a rest. Where's your bowl?</font>
+Dialogue: 0,0:20:59.14,0:21:01.39,Default,,0,0,0,,<font face="Vesta" size="78">I keep telling you to leave it out.</font>
+Dialogue: 0,0:21:01.39,0:21:03.93,Default,,0,0,0,,<font face="Vesta" size="78">Food's here. Break time!</font>
+Dialogue: 0,0:21:19.53,0:21:21.79,Default,,0,0,0,,<font face="Vesta" size="78">The human! You're gonna catch it.</font>
+Dialogue: 0,0:21:21.79,0:21:24.00,Default,,0,0,0,,<font face="Vesta" size="78">They're having a fit about it upstairs.</font>
+Dialogue: 0,0:21:25.21,0:21:27.12,Default,,0,0,0,,<font face="Vesta" size="78">She's my granddaughter.</font>
+Dialogue: 0,0:21:27.12,0:21:28.58,Default,,0,0,0,,<font face="Vesta" size="78">Your granddaughter!</font>
+Dialogue: 0,0:21:29.46,0:21:33.30,Default,,0,0,0,,<font face="Vesta" size="78">She says she wants work, but I don't need any help.</font>
+Dialogue: 0,0:21:33.30,0:21:36.97,Default,,0,0,0,,<font face="Vesta" size="78">Could you take her to Yubaba for me?</font>
+Dialogue: 0,0:21:36.97,0:21:38.74,Default,,0,0,0,,<font face="Vesta" size="78">This girl can handle herself.</font>
+Dialogue: 0,0:21:38.74,0:21:41.43,Default,,0,0,0,,<font face="Vesta" size="78">Not a chance. Yubaba would kill me.</font>
+Dialogue: 0,0:21:41.43,0:21:46.23,Default,,0,0,0,,<font face="Vesta" size="78">Not even for this? Charcoal-roasted newt, finest quality.</font>
+Dialogue: 0,0:21:48.35,0:21:52.44,Default,,0,0,0,,<font face="Vesta" size="78">If you want work, you have to sign a contract with Yubaba.</font>
+Dialogue: 0,0:21:52.44,0:21:54.65,Default,,0,0,0,,<font face="Vesta" size="78">Might as well try your luck.</font>
+Dialogue: 0,0:21:55.82,0:21:58.66,Default,,0,0,0,,<font face="Vesta" size="78">Fine! You there, follow me.</font>
+Dialogue: 0,0:22:04.95,0:22:07.62,Default,,0,0,0,,<font face="Vesta" size="78">What about "Yes, ma'am" or "Thank you"?</font>
+Dialogue: 0,0:22:07.62,0:22:09.12,Default,,0,0,0,,<font face="Vesta" size="78">Yes, ma'am.</font>
+Dialogue: 0,0:22:09.12,0:22:10.63,Default,,0,0,0,,<font face="Vesta" size="78">What a klutz. Move it!</font>
+Dialogue: 0,0:22:10.63,0:22:11.59,Default,,0,0,0,,<font face="Vesta" size="78">Yes, ma'am.</font>
+Dialogue: 0,0:22:14.21,0:22:17.38,Default,,0,0,0,,<font face="Vesta" size="78">Leave the shoes. And the socks!</font>
+Dialogue: 0,0:22:17.38,0:22:18.55,Default,,0,0,0,,<font face="Vesta" size="78">Yes'm.</font>
+Dialogue: 0,0:22:23.93,0:22:27.98,Default,,0,0,0,,<font face="Vesta" size="78">Aren't you going to thank Kamaji? He's looking out for you.</font>
+Dialogue: 0,0:22:30.19,0:22:32.15,Default,,0,0,0,,<font face="Vesta" size="78">Thank you very much.</font>
+Dialogue: 0,0:22:33.61,0:22:34.98,Default,,0,0,0,,<font face="Vesta" size="78">Good luck.</font>
+Dialogue: 0,0:22:44.54,0:22:47.54,Default,,0,0,0,,<font face="Vesta" size="78">Yubaba lives on the top floor in the back.</font>
+Dialogue: 0,0:23:02.05,0:23:04.58,Default,,0,0,0,,<font face="Vesta" size="78">Move it, will you?</font>
+Dialogue: 0,0:23:08.68,0:23:10.27,Default,,0,0,0,,<font face="Vesta" size="78">You'll lose your nose.</font>
+Dialogue: 0,0:23:35.09,0:23:36.70,Default,,0,0,0,,<font face="Vesta" size="78">One more elevator after this.</font>
+Dialogue: 0,0:23:36.70,0:23:37.80,Default,,0,0,0,,<font face="Vesta" size="78">Yes'm.</font>
+Dialogue: 0,0:23:42.22,0:23:43.43,Default,,0,0,0,,<font face="Vesta" size="78">We're here.</font>
+Dialogue: 0,0:23:46.76,0:23:48.14,Default,,0,0,0,,<font face="Vesta" size="78">Welcome, sir!</font>
+Dialogue: 0,0:23:54.10,0:23:58.53,Default,,0,0,0,,<font face="Vesta" size="78">This elevator stops here. Please use another one.</font>
+Dialogue: 0,0:24:21.26,0:24:22.28,Default,,0,0,0,,<font face="Vesta" size="78">He's following us.</font>
+Dialogue: 0,0:24:22.28,0:24:23.68,Default,,0,0,0,,<font face="Vesta" size="78">Quit gawking.</font>
+Dialogue: 0,0:24:38.98,0:24:41.36,Default,,0,0,0,,<font face="Vesta" size="78">Here we are.</font>
+Dialogue: 0,0:24:46.03,0:24:48.62,Default,,0,0,0,,<font face="Vesta" size="78">Your room is on the right.</font>
+Dialogue: 0,0:24:51.33,0:24:52.28,Default,,0,0,0,,<font face="Vesta" size="78">Lin?</font>
+Dialogue: 0,0:24:52.28,0:24:53.62,Default,,0,0,0,,<font face="Vesta" size="78">Yes sir!</font>
+Dialogue: 0,0:24:55.17,0:24:56.96,Default,,0,0,0,,<font face="Vesta" size="78">Something smells.</font>
+Dialogue: 0,0:24:57.54,0:24:59.92,Default,,0,0,0,,<font face="Vesta" size="78">It's human. You reek of human.</font>
+Dialogue: 0,0:24:59.92,0:25:01.51,Default,,0,0,0,,<font face="Vesta" size="78">Is that so?</font>
+Dialogue: 0,0:25:01.51,0:25:04.72,Default,,0,0,0,,<font face="Vesta" size="78">I smell it, I do. Smells mighty tasty, too.</font>
+Dialogue: 0,0:25:05.30,0:25:07.72,Default,,0,0,0,,<font face="Vesta" size="78">You're hiding something.</font>
+Dialogue: 0,0:25:08.35,0:25:10.35,Default,,0,0,0,,<font face="Vesta" size="78">Tell me the truth.</font>
+Dialogue: 0,0:25:10.35,0:25:11.60,Default,,0,0,0,,<font face="Vesta" size="78">Maybe it's this.</font>
+Dialogue: 0,0:25:12.06,0:25:14.33,Default,,0,0,0,,<font face="Vesta" size="78">Roasted newt? Give it here!</font>
+Dialogue: 0,0:25:14.33,0:25:17.98,Default,,0,0,0,,<font face="Vesta" size="78">Not a chance. The girls asked me to get it.</font>
+Dialogue: 0,0:25:17.98,0:25:20.98,Default,,0,0,0,,<font face="Vesta" size="78">I'm begging you. I'll settle for a leg.</font>
+Dialogue: 0,0:25:22.03,0:25:24.99,Default,,0,0,0,,<font face="Vesta" size="78">Pull the lever to go up, sir.</font>
+Dialogue: 0,0:27:06.45,0:27:09.85,Default,,0,0,0,,<font face="Vesta" size="78">Now, now. What's wrong, my dear?</font>
+Dialogue: 0,0:27:10.68,0:27:13.35,Default,,0,0,0,,<font face="Vesta" size="78">I'm coming. That's a good baby.</font>
+Dialogue: 0,0:27:13.81,0:27:16.65,Default,,0,0,0,,<font face="Vesta" size="78">Are you still here? Get out, right now.</font>
+Dialogue: 0,0:27:16.65,0:27:18.69,Default,,0,0,0,,<font face="Vesta" size="78">I want to work here!</font>
+Dialogue: 0,0:27:18.69,0:27:22.24,Default,,0,0,0,,<font face="Vesta" size="78">Keep your voice down.</font>
+Dialogue: 0,0:27:22.24,0:27:25.91,Default,,0,0,0,,<font face="Vesta" size="78">I'll be right there, just be patient.</font>
+Dialogue: 0,0:27:26.83,0:27:29.70,Default,,0,0,0,,<font face="Vesta" size="78">That's a good baby. There, there.</font>
+Dialogue: 0,0:27:29.70,0:27:31.77,Default,,0,0,0,,<font face="Vesta" size="78">Please give me a job!</font>
+Dialogue: 0,0:27:31.77,0:27:35.04,Default,,0,0,0,,<font face="Vesta" size="78">All right, just pipe down.</font>
+Dialogue: 0,0:27:35.04,0:27:39.59,Default,,0,0,0,,<font face="Vesta" size="78">There, there, good baby.</font>
+Dialogue: 0,0:27:59.69,0:28:01.44,Default,,0,0,0,,<font face="Vesta" size="78">That's your contract.</font>
+Dialogue: 0,0:28:02.28,0:28:04.45,Default,,0,0,0,,<font face="Vesta" size="78">Sign on the bottom line.</font>
+Dialogue: 0,0:28:05.07,0:28:06.57,Default,,0,0,0,,<font face="Vesta" size="78">I'll put you to work.</font>
+Dialogue: 0,0:28:07.24,0:28:10.29,Default,,0,0,0,,<font face="Vesta" size="78">But one peep out of you about anything...</font>
+Dialogue: 0,0:28:10.29,0:28:12.75,Default,,0,0,0,,<font face="Vesta" size="78">and I'll turn you into a piglet.</font>
+Dialogue: 0,0:28:13.54,0:28:15.62,Default,,0,0,0,,<font face="Vesta" size="78">Should I sign here?</font>
+Dialogue: 0,0:28:15.62,0:28:19.13,Default,,0,0,0,,<font face="Vesta" size="78">Where else? Quit dilly-dallying.</font>
+Dialogue: 0,0:28:23.76,0:28:25.93,Default,,0,0,0,,<font face="Vesta" size="78">Unbelievable.</font>
+Dialogue: 0,0:28:26.43,0:28:29.26,Default,,0,0,0,,<font face="Vesta" size="78">What a ridiculous oath I took.</font>
+Dialogue: 0,0:28:30.68,0:28:34.27,Default,,0,0,0,,<font face="Vesta" size="78">I'm bound to give work to whoever asks.</font>
+Dialogue: 0,0:28:36.60,0:28:37.38,Default,,0,0,0,,<font face="Vesta" size="78">Finished?</font>
+Dialogue: 0,0:28:37.38,0:28:38.40,Default,,0,0,0,,<font face="Vesta" size="78">Yes.</font>
+Dialogue: 0,0:28:43.28,0:28:44.98,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro, that's your name?</font>
+Dialogue: 0,0:28:44.98,0:28:45.78,Default,,0,0,0,,<font face="Vesta" size="78">Yes.</font>
+Dialogue: 0,0:28:45.78,0:28:48.45,Default,,0,0,0,,<font face="Vesta" size="78">Quite a fancy name.</font>
+Dialogue: 0,0:28:57.92,0:29:00.67,Default,,0,0,0,,<font face="Vesta" size="78">From now on, your name is Sen.</font>
+Dialogue: 0,0:29:01.13,0:29:03.09,Default,,0,0,0,,<font face="Vesta" size="78">Understand? Sen.</font>
+Dialogue: 0,0:29:03.09,0:29:05.97,Default,,0,0,0,,<font face="Vesta" size="78">Answer me, Sen!</font>
+Dialogue: 0,0:29:05.97,0:29:07.43,Default,,0,0,0,,<font face="Vesta" size="78">I understand.</font>
+Dialogue: 0,0:29:07.43,0:29:08.64,Default,,0,0,0,,<font face="Vesta" size="78">Yes ma'am?</font>
+Dialogue: 0,0:29:11.81,0:29:15.22,Default,,0,0,0,,<font face="Vesta" size="78">See to her, she's starting work today.</font>
+Dialogue: 0,0:29:15.22,0:29:16.06,Default,,0,0,0,,<font face="Vesta" size="78">Very well.</font>
+Dialogue: 0,0:29:16.81,0:29:17.94,Default,,0,0,0,,<font face="Vesta" size="78">What is your name?</font>
+Dialogue: 0,0:29:18.98,0:29:21.98,Default,,0,0,0,,<font face="Vesta" size="78">Chi... I mean, Sen.</font>
+Dialogue: 0,0:29:21.98,0:29:24.15,Default,,0,0,0,,<font face="Vesta" size="78">Then follow me, Sen.</font>
+Dialogue: 0,0:29:32.66,0:29:34.33,Default,,0,0,0,,<font face="Vesta" size="78">Haku, I...</font>
+Dialogue: 0,0:29:34.33,0:29:36.12,Default,,0,0,0,,<font face="Vesta" size="78">No idle chatter.</font>
+Dialogue: 0,0:29:36.12,0:29:38.46,Default,,0,0,0,,<font face="Vesta" size="78">Call me Master Haku.</font>
+Dialogue: 0,0:29:54.14,0:29:57.48,Default,,0,0,0,,<font face="Vesta" size="78">I'm afraid even Yubaba can't give an order like that.</font>
+Dialogue: 0,0:29:57.48,0:29:59.14,Default,,0,0,0,,<font face="Vesta" size="78">Humans aren't allowed here.</font>
+Dialogue: 0,0:29:59.64,0:30:01.31,Default,,0,0,0,,<font face="Vesta" size="78">She signed the contract.</font>
+Dialogue: 0,0:30:01.31,0:30:02.14,Default,,0,0,0,,<font face="Vesta" size="78">What!</font>
+Dialogue: 0,0:30:02.14,0:30:03.82,Default,,0,0,0,,<font face="Vesta" size="78">I'll work hard.</font>
+Dialogue: 0,0:30:03.82,0:30:06.02,Default,,0,0,0,,<font face="Vesta" size="78">Don't send her to us.</font>
+Dialogue: 0,0:30:06.02,0:30:07.28,Default,,0,0,0,,<font face="Vesta" size="78">She stinks to high heaven.</font>
+Dialogue: 0,0:30:08.03,0:30:10.99,Default,,0,0,0,,<font face="Vesta" size="78">She won't stink after three days of our food.</font>
+Dialogue: 0,0:30:10.99,0:30:15.20,Default,,0,0,0,,<font face="Vesta" size="78">If she doesn't measure up, do with her as you will.</font>
+Dialogue: 0,0:30:17.04,0:30:19.27,Default,,0,0,0,,<font face="Vesta" size="78">Now go back to work. Where's Lin?</font>
+Dialogue: 0,0:30:19.27,0:30:22.08,Default,,0,0,0,,<font face="Vesta" size="78">What, you're dumping her on me?</font>
+Dialogue: 0,0:30:22.08,0:30:23.71,Default,,0,0,0,,<font face="Vesta" size="78">You wanted an assistant.</font>
+Dialogue: 0,0:30:23.71,0:30:26.63,Default,,0,0,0,,<font face="Vesta" size="78">That's right! Lin's just perfect.</font>
+Dialogue: 0,0:30:27.05,0:30:28.26,Default,,0,0,0,,<font face="Vesta" size="78">Go, Sen.</font>
+Dialogue: 0,0:30:28.26,0:30:29.26,Default,,0,0,0,,<font face="Vesta" size="78">Yes sir.</font>
+Dialogue: 0,0:30:29.86,0:30:33.39,Default,,0,0,0,,<font face="Vesta" size="78">What a pain. You're gonna pay for this.</font>
+Dialogue: 0,0:30:33.85,0:30:35.51,Default,,0,0,0,,<font face="Vesta" size="78">Off you go.</font>
+Dialogue: 0,0:30:37.89,0:30:39.18,Default,,0,0,0,,<font face="Vesta" size="78">Come on.</font>
+Dialogue: 0,0:30:48.03,0:30:49.53,Default,,0,0,0,,<font face="Vesta" size="78">You pulled it off!</font>
+Dialogue: 0,0:30:50.15,0:30:52.28,Default,,0,0,0,,<font face="Vesta" size="78">You're so thick, I was worried.</font>
+Dialogue: 0,0:30:52.70,0:30:56.37,Default,,0,0,0,,<font face="Vesta" size="78">Keep your wits about you. If you need anything, ask me.</font>
+Dialogue: 0,0:30:58.25,0:30:59.79,Default,,0,0,0,,<font face="Vesta" size="78">What's wrong?</font>
+Dialogue: 0,0:31:00.75,0:31:02.79,Default,,0,0,0,,<font face="Vesta" size="78">My legs are shaking.</font>
+Dialogue: 0,0:31:07.25,0:31:09.38,Default,,0,0,0,,<font face="Vesta" size="78">This is where we live.</font>
+Dialogue: 0,0:31:10.38,0:31:12.76,Default,,0,0,0,,<font face="Vesta" size="78">Eat, sleep and you'll be fine.</font>
+Dialogue: 0,0:31:15.76,0:31:17.93,Default,,0,0,0,,<font face="Vesta" size="78">Your apron. Keep it clean.</font>
+Dialogue: 0,0:31:17.93,0:31:19.02,Default,,0,0,0,,<font face="Vesta" size="78">Trousers.</font>
+Dialogue: 0,0:31:19.72,0:31:21.89,Default,,0,0,0,,<font face="Vesta" size="78">You're so puny.</font>
+Dialogue: 0,0:31:22.56,0:31:24.06,Default,,0,0,0,,<font face="Vesta" size="78">Too big.</font>
+Dialogue: 0,0:31:26.11,0:31:27.82,Default,,0,0,0,,<font face="Vesta" size="78">Lin, are there...</font>
+Dialogue: 0,0:31:27.82,0:31:28.94,Default,,0,0,0,,<font face="Vesta" size="78">What?</font>
+Dialogue: 0,0:31:28.94,0:31:31.01,Default,,0,0,0,,<font face="Vesta" size="78">Are there two Hakus here?</font>
+Dialogue: 0,0:31:31.01,0:31:34.70,Default,,0,0,0,,<font face="Vesta" size="78">Two of that one? I sure hope not.</font>
+Dialogue: 0,0:31:35.28,0:31:36.41,Default,,0,0,0,,<font face="Vesta" size="78">Still too big.</font>
+Dialogue: 0,0:31:36.41,0:31:39.16,Default,,0,0,0,,<font face="Vesta" size="78">He's Yubaba's apprentice. Be careful around him.</font>
+Dialogue: 0,0:31:42.58,0:31:44.75,Default,,0,0,0,,<font face="Vesta" size="78">Now where was that...</font>
+Dialogue: 0,0:31:45.27,0:31:47.63,Default,,0,0,0,,<font face="Vesta" size="78">All right, here we go.</font>
+Dialogue: 0,0:31:48.96,0:31:53.09,Default,,0,0,0,,<font face="Vesta" size="78">Hey, are you okay? Don't fall apart on me.</font>
+Dialogue: 0,0:31:53.97,0:31:56.43,Default,,0,0,0,,<font face="Vesta" size="78">What's all the noise, Lin?</font>
+Dialogue: 0,0:31:56.43,0:31:58.85,Default,,0,0,0,,<font face="Vesta" size="78">New girl. Says she feels faint.</font>
+Dialogue: 0,0:33:30.86,0:33:35.11,Default,,0,0,0,,<font face="Vesta" size="78">Meet me at the bridge. I'll take you to your mother and father.</font>
+Dialogue: 0,0:34:19.45,0:34:20.49,Default,,0,0,0,,<font face="Vesta" size="78">My shoes are gone.</font>
+Dialogue: 0,0:34:34.79,0:34:36.42,Default,,0,0,0,,<font face="Vesta" size="78">Thank you.</font>
+Dialogue: 0,0:35:44.86,0:35:46.32,Default,,0,0,0,,<font face="Vesta" size="78">Follow me.</font>
+Dialogue: 0,0:36:29.37,0:36:31.95,Default,,0,0,0,,<font face="Vesta" size="78">Dad, Mom, it's me!</font>
+Dialogue: 0,0:36:32.50,0:36:33.79,Default,,0,0,0,,<font face="Vesta" size="78">It's Sen.</font>
+Dialogue: 0,0:36:34.50,0:36:36.88,Default,,0,0,0,,<font face="Vesta" size="78">Mom! Dad!</font>
+Dialogue: 0,0:36:40.00,0:36:42.09,Default,,0,0,0,,<font face="Vesta" size="78">Are they sick? Are they hurt?</font>
+Dialogue: 0,0:36:42.09,0:36:44.80,Default,,0,0,0,,<font face="Vesta" size="78">They're just sleeping. Their stomachs are full.</font>
+Dialogue: 0,0:36:45.55,0:36:48.47,Default,,0,0,0,,<font face="Vesta" size="78">They don't remember they were ever human.</font>
+Dialogue: 0,0:36:54.10,0:36:56.64,Default,,0,0,0,,<font face="Vesta" size="78">Listen to me! I promise I'll save you.</font>
+Dialogue: 0,0:36:56.64,0:36:59.81,Default,,0,0,0,,<font face="Vesta" size="78">Don't get too fat or they'll eat you.</font>
+Dialogue: 0,0:37:08.11,0:37:09.70,Default,,0,0,0,,<font face="Vesta" size="78">Hide these.</font>
+Dialogue: 0,0:37:12.62,0:37:13.95,Default,,0,0,0,,<font face="Vesta" size="78">I thought they were gone.</font>
+Dialogue: 0,0:37:14.45,0:37:16.29,Default,,0,0,0,,<font face="Vesta" size="78">For when you go home.</font>
+Dialogue: 0,0:37:22.42,0:37:24.76,Default,,0,0,0,,<font face="Vesta" size="78">This was a farewell card.</font>
+Dialogue: 0,0:37:25.17,0:37:27.68,Default,,0,0,0,,<font face="Palatino Linotype" size="96">{\an8}<i>Good luck, Chihiro</i> \N<i>Hope we meet again</i></font>
+Dialogue: 0,0:37:26.17,0:37:27.68,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro?</font>
+Dialogue: 0,0:37:28.09,0:37:31.18,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro... That's my name!</font>
+Dialogue: 0,0:37:32.22,0:37:34.68,Default,,0,0,0,,<font face="Vesta" size="78">Yubaba controls us by stealing our names.</font>
+Dialogue: 0,0:37:35.43,0:37:39.81,Default,,0,0,0,,<font face="Vesta" size="78">You're Sen here. Keep your real name a secret.</font>
+Dialogue: 0,0:37:39.81,0:37:42.94,Default,,0,0,0,,<font face="Vesta" size="78">She almost got my name. I was turning into Sen.</font>
+Dialogue: 0,0:37:43.82,0:37:47.03,Default,,0,0,0,,<font face="Vesta" size="78">Without your real name, you'll never find your way home.</font>
+Dialogue: 0,0:37:47.99,0:37:50.66,Default,,0,0,0,,<font face="Vesta" size="78">I no longer remember mine.</font>
+Dialogue: 0,0:37:50.66,0:37:52.66,Default,,0,0,0,,<font face="Vesta" size="78">Your real name?</font>
+Dialogue: 0,0:37:52.66,0:37:56.00,Default,,0,0,0,,<font face="Vesta" size="78">But it's strange, I remember yours.</font>
+Dialogue: 0,0:37:58.46,0:38:01.33,Default,,0,0,0,,<font face="Vesta" size="78">Better eat, you must be hungry.</font>
+Dialogue: 0,0:38:01.33,0:38:03.00,Default,,0,0,0,,<font face="Vesta" size="78">I don't want to.</font>
+Dialogue: 0,0:38:03.00,0:38:07.09,Default,,0,0,0,,<font face="Vesta" size="78">I put a spell on them to give you back your strength.</font>
+Dialogue: 0,0:38:43.54,0:38:46.17,Default,,0,0,0,,<font face="Vesta" size="78">You've had a rough time. Better eat more.</font>
+Dialogue: 0,0:39:01.06,0:39:02.48,Default,,0,0,0,,<font face="Vesta" size="78">You know the way back.</font>
+Dialogue: 0,0:39:02.48,0:39:05.15,Default,,0,0,0,,<font face="Vesta" size="78">Thanks Haku. I promise to work hard.</font>
+Dialogue: 0,0:40:40.12,0:40:42.70,Default,,0,0,0,,<font face="Vesta" size="78">Where were you? I was worried.</font>
+Dialogue: 0,0:40:42.70,0:40:43.91,Default,,0,0,0,,<font face="Vesta" size="78">Sorry.</font>
+Dialogue: 0,0:40:53.21,0:40:55.05,Default,,0,0,0,,<font face="Vesta" size="78">Out of the way.</font>
+Dialogue: 0,0:41:07.90,0:41:10.15,Default,,0,0,0,,<font face="Vesta" size="78">Come on, give it some elbow grease.</font>
+Dialogue: 0,0:41:10.65,0:41:13.53,Default,,0,0,0,,<font face="Vesta" size="78">Starting today, you two are on the big tub.</font>
+Dialogue: 0,0:41:13.53,0:41:15.65,Default,,0,0,0,,<font face="Vesta" size="78">What? That's Frog work!</font>
+Dialogue: 0,0:41:15.65,0:41:18.74,Default,,0,0,0,,<font face="Vesta" size="78">Orders from the top. And no shirking, either.</font>
+Dialogue: 0,0:41:38.84,0:41:40.76,Default,,0,0,0,,<font face="Vesta" size="78">Aren't you getting wet?</font>
+Dialogue: 0,0:41:44.74,0:41:46.60,Default,,0,0,0,,<font face="Vesta" size="78">Sen, come on!</font>
+Dialogue: 0,0:41:46.60,0:41:48.06,Default,,0,0,0,,<font face="Vesta" size="78">Coming!</font>
+Dialogue: 0,0:41:48.06,0:41:49.77,Default,,0,0,0,,<font face="Vesta" size="78">I'll leave this open.</font>
+Dialogue: 0,0:42:17.72,0:42:18.90,Default,,0,0,0,,<font face="Vesta" size="78">On the big tub, Lin?</font>
+Dialogue: 0,0:42:18.90,0:42:19.68,Default,,0,0,0,,<font face="Vesta" size="78">Stuff it.</font>
+Dialogue: 0,0:42:23.30,0:42:26.47,Default,,0,0,0,,<font face="Vesta" size="78">Just look at this. Hasn't been scrubbed in ages.</font>
+Dialogue: 0,0:42:40.99,0:42:44.33,Default,,0,0,0,,<font face="Vesta" size="78">The big tub is reserved for our filthiest guests.</font>
+Dialogue: 0,0:42:44.33,0:42:46.29,Default,,0,0,0,,<font face="Vesta" size="78">It's caked with sludge.</font>
+Dialogue: 0,0:42:46.29,0:42:48.96,Default,,0,0,0,,<font face="Vesta" size="78">Lin! Sen! First customers are coming.</font>
+Dialogue: 0,0:42:48.96,0:42:50.67,Default,,0,0,0,,<font face="Vesta" size="78">All right already!</font>
+Dialogue: 0,0:42:50.67,0:42:53.00,Default,,0,0,0,,<font face="Vesta" size="78">Man, this is pure harassment.</font>
+Dialogue: 0,0:42:53.00,0:42:56.25,Default,,0,0,0,,<font face="Vesta" size="78">Go get a tag from the foreman.</font>
+Dialogue: 0,0:42:56.25,0:42:57.34,Default,,0,0,0,,<font face="Vesta" size="78">A tag?</font>
+Dialogue: 0,0:43:00.13,0:43:02.26,Default,,0,0,0,,<font face="Vesta" size="78">For an herbal bath.</font>
+Dialogue: 0,0:43:02.26,0:43:03.51,Default,,0,0,0,,<font face="Vesta" size="78">Right.</font>
+Dialogue: 0,0:43:04.64,0:43:06.33,Default,,0,0,0,,<font face="Vesta" size="78">Lin, what's a foreman?</font>
+Dialogue: 0,0:43:10.52,0:43:13.31,Default,,0,0,0,,<font face="Vesta" size="78">Something's coming. I wonder...</font>
+Dialogue: 0,0:43:22.32,0:43:26.16,Default,,0,0,0,,<font face="Vesta" size="78">Is some good-for-nothing using the rain to sneak in?</font>
+Dialogue: 0,0:43:50.43,0:43:53.19,Default,,0,0,0,,<font face="Vesta" size="78">Absolutely not, it's too valuable to waste.</font>
+Dialogue: 0,0:43:53.19,0:43:54.85,Default,,0,0,0,,<font face="Vesta" size="78">Good morning!</font>
+Dialogue: 0,0:43:55.31,0:43:57.27,Default,,0,0,0,,<font face="Vesta" size="78">Feeling refreshed?</font>
+Dialogue: 0,0:43:57.69,0:43:58.98,Default,,0,0,0,,<font face="Vesta" size="78">For Kasuga.</font>
+Dialogue: 0,0:43:58.98,0:44:01.15,Default,,0,0,0,,<font face="Vesta" size="78">One deluxe sulfur bath.</font>
+Dialogue: 0,0:44:01.53,0:44:03.99,Default,,0,0,0,,<font face="Vesta" size="78">No point standing there. Back to work.</font>
+Dialogue: 0,0:44:04.36,0:44:06.03,Default,,0,0,0,,<font face="Vesta" size="78">Scrub it with your hands.</font>
+Dialogue: 0,0:44:06.03,0:44:08.03,Default,,0,0,0,,<font face="Vesta" size="78">Good morning!</font>
+Dialogue: 0,0:44:08.03,0:44:08.97,Default,,0,0,0,,<font face="Vesta" size="78">Your bare hands.</font>
+Dialogue: 0,0:44:08.97,0:44:12.50,Default,,0,0,0,,<font face="Vesta" size="78">But she said it has to be an herbal bath.</font>
+Dialogue: 0,0:44:12.50,0:44:14.25,Default,,0,0,0,,<font face="Vesta" size="78">You just don't get it.</font>
+Dialogue: 0,0:44:14.25,0:44:16.54,Default,,0,0,0,,<font face="Vesta" size="78">Mugwort, right?</font>
+Dialogue: 0,0:44:16.54,0:44:18.50,Default,,0,0,0,,<font face="Vesta" size="78">Relax and enjoy.</font>
+Dialogue: 0,0:44:27.55,0:44:30.22,Default,,0,0,0,,<font face="Vesta" size="78">Foreman. Yes ma'am!</font>
+Dialogue: 0,0:44:32.31,0:44:33.48,Default,,0,0,0,,<font face="Vesta" size="78">Thank you!</font>
+Dialogue: 0,0:44:33.48,0:44:34.81,Default,,0,0,0,,<font face="Vesta" size="78">But that's not...</font>
+Dialogue: 0,0:44:34.81,0:44:36.40,Default,,0,0,0,,<font face="Vesta" size="78">Hey you, wait!</font>
+Dialogue: 0,0:44:36.40,0:44:37.40,Default,,0,0,0,,<font face="Vesta" size="78"><i>What's the trouble?</i></font>
+Dialogue: 0,0:44:37.40,0:44:38.81,Default,,0,0,0,,<font face="Vesta" size="78">Oh, nothing at all.</font>
+Dialogue: 0,0:44:39.19,0:44:40.90,Default,,0,0,0,,<font face="Vesta" size="78">We have an intruder.</font>
+Dialogue: 0,0:44:40.90,0:44:41.82,Default,,0,0,0,,<font face="Vesta" size="78"><i>A human?</i></font>
+Dialogue: 0,0:44:41.82,0:44:45.03,Default,,0,0,0,,<font face="Vesta" size="78">You figure it out. Haku's gone today.</font>
+Dialogue: 0,0:44:45.03,0:44:47.53,Default,,0,0,0,,<font face="Vesta" size="78">Wow, you got a really good one.</font>
+Dialogue: 0,0:44:47.53,0:44:50.08,Default,,0,0,0,,<font face="Vesta" size="78">This goes straight to Kamaji.</font>
+Dialogue: 0,0:44:51.66,0:44:53.50,Default,,0,0,0,,<font face="Vesta" size="78">Water should be right up.</font>
+Dialogue: 0,0:44:59.54,0:45:02.46,Default,,0,0,0,,<font face="Vesta" size="78">Yank this for hot water. Go ahead, try it.</font>
+Dialogue: 0,0:45:11.14,0:45:13.64,Default,,0,0,0,,<font face="Vesta" size="78">You're really are a klutz.</font>
+Dialogue: 0,0:45:13.64,0:45:15.85,Default,,0,0,0,,<font face="Vesta" size="78">Look at that color.</font>
+Dialogue: 0,0:45:15.85,0:45:18.15,Default,,0,0,0,,<font face="Vesta" size="78">This one has dried worm salts.</font>
+Dialogue: 0,0:45:18.73,0:45:21.65,Default,,0,0,0,,<font face="Vesta" size="78">With water this murky, who's gonna see the sludge?</font>
+Dialogue: 0,0:45:23.78,0:45:26.61,Default,,0,0,0,,<font face="Vesta" size="78">Yank it again when it's full. It'll stop.</font>
+Dialogue: 0,0:45:27.07,0:45:30.53,Default,,0,0,0,,<font face="Vesta" size="78">You can let go now. I'll go get our breakfast.</font>
+Dialogue: 0,0:45:30.53,0:45:31.78,Default,,0,0,0,,<font face="Vesta" size="78">Okay.</font>
+Dialogue: 0,0:45:54.10,0:45:56.23,Default,,0,0,0,,<font face="Vesta" size="78">Ouch!</font>
+Dialogue: 0,0:46:00.27,0:46:02.94,Default,,0,0,0,,<font face="Vesta" size="78">Um... The bath's not ready yet.</font>
+Dialogue: 0,0:46:08.49,0:46:09.95,Default,,0,0,0,,<font face="Vesta" size="78">So many...</font>
+Dialogue: 0,0:46:12.66,0:46:14.58,Default,,0,0,0,,<font face="Vesta" size="78">They're for me?</font>
+Dialogue: 0,0:46:17.56,0:46:20.21,Default,,0,0,0,,<font face="Vesta" size="78">But I don't need them.</font>
+Dialogue: 0,0:46:22.96,0:46:24.71,Default,,0,0,0,,<font face="Vesta" size="78">No, you gave me one already.</font>
+Dialogue: 0,0:46:53.55,0:46:57.68,Default,,0,0,0,,<font face="Vesta" size="78">Sen, you're a wonder! You made us a fortune.</font>
+Dialogue: 0,0:46:58.39,0:47:01.10,Default,,0,0,0,,<font face="Vesta" size="78">That was the guardian of a great river.</font>
+Dialogue: 0,0:47:01.10,0:47:02.77,Default,,0,0,0,,<font face="Vesta" size="78">Everyone, learn from Sen!</font>
+Dialogue: 0,0:47:03.35,0:47:05.35,Default,,0,0,0,,<font face="Vesta" size="78">Sake on the house tonight.</font>
+Dialogue: 0,0:47:05.85,0:47:08.52,Default,,0,0,0,,<font face="Vesta" size="78">Now hand over all that gold you picked up.</font>
+Dialogue: 0,0:47:22.16,0:47:24.16,Default,,0,0,0,,<font face="Vesta" size="78">Want some? I swiped them.</font>
+Dialogue: 0,0:47:24.67,0:47:26.21,Default,,0,0,0,,<font face="Vesta" size="78">Thanks.</font>
+Dialogue: 0,0:47:26.21,0:47:28.38,Default,,0,0,0,,<font face="Vesta" size="78">What a day.</font>
+Dialogue: 0,0:47:30.88,0:47:32.42,Default,,0,0,0,,<font face="Vesta" size="78">Haku missed the whole thing.</font>
+Dialogue: 0,0:47:32.42,0:47:34.30,Default,,0,0,0,,<font face="Vesta" size="78">Not Haku again!</font>
+Dialogue: 0,0:47:35.22,0:47:37.59,Default,,0,0,0,,<font face="Vesta" size="78">Sometimes he just disappears.</font>
+Dialogue: 0,0:47:38.05,0:47:41.93,Default,,0,0,0,,<font face="Vesta" size="78">They say Yubaba makes him do bad stuff.</font>
+Dialogue: 0,0:47:41.93,0:47:42.89,Default,,0,0,0,,<font face="Vesta" size="78">Really?</font>
+Dialogue: 0,0:47:42.89,0:47:44.39,Default,,0,0,0,,<font face="Vesta" size="78">Lights out, Lin.</font>
+Dialogue: 0,0:47:44.39,0:47:45.44,Default,,0,0,0,,<font face="Vesta" size="78">Okay.</font>
+Dialogue: 0,0:48:10.63,0:48:13.46,Default,,0,0,0,,<font face="Vesta" size="78">There's a town. And the water's like an ocean.</font>
+Dialogue: 0,0:48:13.46,0:48:16.47,Default,,0,0,0,,<font face="Vesta" size="78">What did you expect after all that rain?</font>
+Dialogue: 0,0:48:18.30,0:48:22.31,Default,,0,0,0,,<font face="Vesta" size="78">I'm gonna get there someday. I'll get out of here for sure.</font>
+Dialogue: 0,0:48:46.79,0:48:48.12,Default,,0,0,0,,<font face="Vesta" size="78">What's wrong?</font>
+Dialogue: 0,0:49:34.95,0:49:36.62,Default,,0,0,0,,<font face="Vesta" size="78">You'll pay for this!</font>
+Dialogue: 0,0:49:54.10,0:49:56.14,Default,,0,0,0,,<font face="Vesta" size="78">Sen, down here!</font>
+Dialogue: 0,0:50:12.49,0:50:14.87,Default,,0,0,0,,<font face="Vesta" size="78">Over here!</font>
+Dialogue: 0,0:50:14.87,0:50:16.54,Default,,0,0,0,,<font face="Vesta" size="78">We don't need him.</font>
+Dialogue: 0,0:50:20.54,0:50:24.02,Default,,0,0,0,,<font face="Vesta" size="78">He needs to get out of there. It's bad for him.</font>
+Dialogue: 0,0:50:24.02,0:50:26.46,Default,,0,0,0,,<font face="Vesta" size="78">But where do we take him?</font>
+Dialogue: 0,0:50:26.46,0:50:27.55,Default,,0,0,0,,<font face="Vesta" size="78">I don't know.</font>
+Dialogue: 0,0:50:27.55,0:50:28.97,Default,,0,0,0,,<font face="Vesta" size="78">Don't know?</font>
+Dialogue: 0,0:50:29.43,0:50:32.05,Default,,0,0,0,,<font face="Vesta" size="78">Great, now he's following us.</font>
+Dialogue: 0,0:50:49.57,0:50:50.70,Default,,0,0,0,,<font face="Vesta" size="78">From here you walk.</font>
+Dialogue: 0,0:50:50.70,0:50:51.78,Default,,0,0,0,,<font face="Vesta" size="78">Okay.</font>
+Dialogue: 0,0:50:51.78,0:50:53.66,Default,,0,0,0,,<font face="Vesta" size="78">You'll find the station.</font>
+Dialogue: 0,0:50:53.66,0:50:55.08,Default,,0,0,0,,<font face="Vesta" size="78">Thanks.</font>
+Dialogue: 0,0:50:55.70,0:50:57.54,Default,,0,0,0,,<font face="Vesta" size="78">Be sure to come back!</font>
+Dialogue: 0,0:50:57.54,0:50:58.54,Default,,0,0,0,,<font face="Vesta" size="78">I will.</font>
+Dialogue: 0,0:51:02.71,0:51:06.34,Default,,0,0,0,,<font face="Vesta" size="78">Sen! I said you were a klutz.</font>
+Dialogue: 0,0:51:06.34,0:51:07.90,Default,,0,0,0,,<font face="Vesta" size="78">I take it back!</font>
+Dialogue: 0,0:51:16.06,0:51:20.23,Default,,0,0,0,,<font face="Vesta" size="78">No Face, hurt her and you'll get it from me!</font>
+Dialogue: 0,0:51:23.52,0:51:24.86,Default,,0,0,0,,<font face="Vesta" size="78">There it is.</font>
+Dialogue: 0,0:51:36.41,0:51:38.79,Default,,0,0,0,,<font face="Vesta" size="78">The train's coming, let's hurry.</font>
+Dialogue: 0,0:52:02.27,0:52:04.52,Default,,0,0,0,,<font face="Vesta" size="78">To Swamp Bottom, please.</font>
+Dialogue: 0,0:52:11.11,0:52:12.78,Default,,0,0,0,,<font face="Vesta" size="78">You want to come too?</font>
+Dialogue: 0,0:52:14.28,0:52:16.28,Default,,0,0,0,,<font face="Vesta" size="78">One more, please.</font>
+Dialogue: 0,0:52:56.82,0:52:58.16,Default,,0,0,0,,<font face="Vesta" size="78">Sit down.</font>
+Dialogue: 0,0:52:58.78,0:53:00.45,Default,,0,0,0,,<font face="Vesta" size="78">Behave yourself, okay?</font>
+Dialogue: 0,0:55:02.62,0:55:04.07,Default,,0,0,0,,<font face="Vesta" size="78">Kamaji.</font>
+Dialogue: 0,0:55:06.31,0:55:09.16,Default,,0,0,0,,<font face="Vesta" size="78">Oh, Haku. You're awake.</font>
+Dialogue: 0,0:55:09.16,0:55:10.71,Default,,0,0,0,,<font face="Vesta" size="78">Kamaji, where's Sen?</font>
+Dialogue: 0,0:55:11.12,0:55:13.96,Default,,0,0,0,,<font face="Vesta" size="78">What happened? Please tell me.</font>
+Dialogue: 0,0:55:13.96,0:55:16.84,Default,,0,0,0,,<font face="Vesta" size="78">Don't you remember anything?</font>
+Dialogue: 0,0:55:17.42,0:55:19.72,Default,,0,0,0,,<font face="Vesta" size="78">Just fragments.</font>
+Dialogue: 0,0:55:19.72,0:55:23.09,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro kept calling my name in the darkness.</font>
+Dialogue: 0,0:55:23.09,0:55:27.10,Default,,0,0,0,,<font face="Vesta" size="78">I followed her voice and woke up here.</font>
+Dialogue: 0,0:55:27.47,0:55:32.35,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro? So her name is Chihiro.</font>
+Dialogue: 0,0:55:33.60,0:55:36.48,Default,,0,0,0,,<font face="Vesta" size="78">Wonderful... It's the power of love.</font>
+Dialogue: 0,0:55:40.15,0:55:43.36,Default,,0,0,0,,<font face="Vesta" size="78">This gold will hardly cover the damage.</font>
+Dialogue: 0,0:55:43.36,0:55:46.28,Default,,0,0,0,,<font face="Vesta" size="78">That fool, Sen! She just cost me a fortune.</font>
+Dialogue: 0,0:55:46.78,0:55:50.56,Default,,0,0,0,,<font face="Vesta" size="78">But we were saved, thanks to her.</font>
+Dialogue: 0,0:55:50.56,0:55:51.87,Default,,0,0,0,,<font face="Vesta" size="78">Silence!</font>
+Dialogue: 0,0:55:51.87,0:55:52.12,Default,,0,0,0,,<font face="Vesta" size="78">She started the whole thing.</font>
+Dialogue: 0,0:56:35.91,0:56:37.87,Default,,0,0,0,,<font face="Vesta" size="78">Bo?</font>
+Dialogue: 0,0:56:43.88,0:56:45.63,Default,,0,0,0,,<font face="Vesta" size="78">Bo!</font>
+Dialogue: 0,0:56:45.63,0:56:46.61,Default,,0,0,0,,<font face="Vesta" size="78">Pebbles!</font>
+Dialogue: 0,0:56:46.61,0:56:49.55,Default,,0,0,0,,<font face="Vesta" size="78">Bo!</font>
+Dialogue: 0,0:56:50.05,0:56:54.22,Default,,0,0,0,,<font face="Vesta" size="78">Where are you, Bo?</font>
+Dialogue: 0,0:56:54.22,0:56:56.85,Default,,0,0,0,,<font face="Vesta" size="78">Please come out.</font>
+Dialogue: 0,0:56:57.56,0:56:58.85,Default,,0,0,0,,<font face="Vesta" size="78">Bo!</font>
+Dialogue: 0,0:57:02.11,0:57:04.40,Default,,0,0,0,,<font face="Vesta" size="78">Bo?</font>
+Dialogue: 0,0:57:09.24,0:57:13.55,Default,,0,0,0,,<font face="Vesta" size="78">Why, you little...</font>
+Dialogue: 0,0:57:15.04,0:57:18.16,Default,,0,0,0,,<font face="Vesta" size="78">Out with it!</font>
+Dialogue: 0,0:57:19.64,0:57:23.65,Default,,0,0,0,,<font face="Vesta" size="78">Where did you hide my Bo?</font>
+Dialogue: 0,0:57:24.25,0:57:26.17,Default,,0,0,0,,<font face="Vesta" size="78">He's with Zeniba.</font>
+Dialogue: 0,0:57:26.17,0:57:28.13,Default,,0,0,0,,<font face="Vesta" size="78">Zeniba?</font>
+Dialogue: 0,0:57:49.15,0:57:52.95,Default,,0,0,0,,<font face="Vesta" size="78">Now I understand. That evil witch.</font>
+Dialogue: 0,0:57:52.95,0:57:55.66,Default,,0,0,0,,<font face="Vesta" size="78">She thinks she's beaten me.</font>
+Dialogue: 0,0:57:57.33,0:57:59.58,Default,,0,0,0,,<font face="Vesta" size="78">So, what's your plan?</font>
+Dialogue: 0,0:58:00.08,0:58:02.29,Default,,0,0,0,,<font face="Vesta" size="78">I'll bring him back.</font>
+Dialogue: 0,0:58:02.29,0:58:06.57,Default,,0,0,0,,<font face="Vesta" size="78">But you must send Sen and her parents back to their world.</font>
+Dialogue: 0,0:58:06.57,0:58:09.34,Default,,0,0,0,,<font face="Vesta" size="78">And what about you?</font>
+Dialogue: 0,0:58:09.34,0:58:13.09,Default,,0,0,0,,<font face="Vesta" size="78">Maybe I'll send them back and then tear you to pieces.</font>
+Dialogue: 0,0:59:00.06,0:59:01.68,Default,,0,0,0,,<font face="Vesta" size="78">I think this is right.</font>
+Dialogue: 0,0:59:02.85,0:59:04.14,Default,,0,0,0,,<font face="Vesta" size="78">Come on.</font>
+Dialogue: 0,0:59:30.96,0:59:32.63,Default,,0,0,0,,<font face="Vesta" size="78">You can ride on my shoulder.</font>
+Dialogue: 0,1:00:51.15,1:00:52.71,Default,,0,0,0,,<font face="Vesta" size="78">Come in.</font>
+Dialogue: 0,1:00:57.88,1:00:59.68,Default,,0,0,0,,<font face="Vesta" size="78">Thank you.</font>
+Dialogue: 0,1:01:01.64,1:01:04.06,Default,,0,0,0,,<font face="Vesta" size="78">Well, hurry up then.</font>
+Dialogue: 0,1:01:04.56,1:01:05.85,Default,,0,0,0,,<font face="Vesta" size="78">Come on.</font>
+Dialogue: 0,1:01:09.14,1:01:11.10,Default,,0,0,0,,<font face="Vesta" size="78">So you all made it.</font>
+Dialogue: 0,1:01:11.10,1:01:11.88,Default,,0,0,0,,<font face="Vesta" size="78">I...</font>
+Dialogue: 0,1:01:11.88,1:01:13.65,Default,,0,0,0,,<font face="Vesta" size="78">Have a seat.</font>
+Dialogue: 0,1:01:13.65,1:01:15.90,Default,,0,0,0,,<font face="Vesta" size="78">I'll make some tea.</font>
+Dialogue: 0,1:01:21.74,1:01:25.99,Default,,0,0,0,,<font face="Vesta" size="78">Zeniba, Haku stole this. I came to give it back.</font>
+Dialogue: 0,1:01:29.25,1:01:32.00,Default,,0,0,0,,<font face="Vesta" size="78">Do you know what this is?</font>
+Dialogue: 0,1:01:32.00,1:01:35.05,Default,,0,0,0,,<font face="Vesta" size="78">No, but I know it's very precious.</font>
+Dialogue: 0,1:01:35.05,1:01:38.67,Default,,0,0,0,,<font face="Vesta" size="78">I'm here to apologize for him. He's sorry.</font>
+Dialogue: 0,1:01:39.55,1:01:42.72,Default,,0,0,0,,<font face="Vesta" size="78">You held this and nothing happened to you?</font>
+Dialogue: 0,1:01:42.72,1:01:43.76,Default,,0,0,0,,<font face="Vesta" size="78">What?</font>
+Dialogue: 0,1:01:43.76,1:01:46.56,Default,,0,0,0,,<font face="Vesta" size="78">Wait, the protection spell is gone.</font>
+Dialogue: 0,1:01:47.68,1:01:50.98,Default,,0,0,0,,<font face="Vesta" size="78">I'm sorry. There was this strange bug.</font>
+Dialogue: 0,1:01:50.98,1:01:52.81,Default,,0,0,0,,<font face="Vesta" size="78">I squashed it.</font>
+Dialogue: 0,1:01:53.36,1:01:55.48,Default,,0,0,0,,<font face="Vesta" size="78">Squashed it!</font>
+Dialogue: 0,1:01:57.53,1:02:00.99,Default,,0,0,0,,<font face="Vesta" size="78">My sister snuck that bug into the dragon...</font>
+Dialogue: 0,1:02:00.99,1:02:03.78,Default,,0,0,0,,<font face="Vesta" size="78">so she could control him.</font>
+Dialogue: 0,1:02:03.78,1:02:06.41,Default,,0,0,0,,<font face="Vesta" size="78">And you squashed it!</font>
+Dialogue: 0,1:02:09.20,1:02:10.91,Default,,0,0,0,,<font face="Vesta" size="78">Now then, sit down.</font>
+Dialogue: 0,1:02:10.91,1:02:13.92,Default,,0,0,0,,<font face="Vesta" size="78">You must be No Face. You sit, too.</font>
+Dialogue: 0,1:02:14.88,1:02:18.67,Default,,0,0,0,,<font face="Vesta" size="78">Please turn them back into themselves.</font>
+Dialogue: 0,1:02:18.67,1:02:21.88,Default,,0,0,0,,<font face="Vesta" size="78">Why my dear, the spell's long broken.</font>
+Dialogue: 0,1:02:21.88,1:02:24.26,Default,,0,0,0,,<font face="Vesta" size="78">They can change back any time.</font>
+Dialogue: 0,1:02:31.56,1:02:35.52,Default,,0,0,0,,<font face="Vesta" size="78">Yubaba and I are two halves of a whole, but we don't get along.</font>
+Dialogue: 0,1:02:35.52,1:02:38.23,Default,,0,0,0,,<font face="Vesta" size="78">You know what bad taste she has.</font>
+Dialogue: 0,1:02:38.23,1:02:41.28,Default,,0,0,0,,<font face="Vesta" size="78">Sorceress twins are just a recipe for trouble.</font>
+Dialogue: 0,1:02:45.32,1:02:49.91,Default,,0,0,0,,<font face="Vesta" size="78">I'd like to help you dear, but there's nothing I can do.</font>
+Dialogue: 0,1:02:49.91,1:02:51.93,Default,,0,0,0,,<font face="Vesta" size="78">It's one of our rules here.</font>
+Dialogue: 0,1:02:52.41,1:02:55.54,Default,,0,0,0,,<font face="Vesta" size="78">You'll have to save your parents and your dragon boyfriend...</font>
+Dialogue: 0,1:02:55.54,1:02:57.29,Default,,0,0,0,,<font face="Vesta" size="78">all by yourself.</font>
+Dialogue: 0,1:02:57.29,1:03:00.21,Default,,0,0,0,,<font face="Vesta" size="78">But can't you even give me a hint?</font>
+Dialogue: 0,1:03:00.59,1:03:04.22,Default,,0,0,0,,<font face="Vesta" size="78">I feel like Haku and I met a long time ago.</font>
+Dialogue: 0,1:03:04.22,1:03:06.51,Default,,0,0,0,,<font face="Vesta" size="78">In that case it's easy.</font>
+Dialogue: 0,1:03:06.51,1:03:09.18,Default,,0,0,0,,<font face="Vesta" size="78">Everything that happens stays inside you...</font>
+Dialogue: 0,1:03:09.18,1:03:11.43,Default,,0,0,0,,<font face="Vesta" size="78">even if you can't remember it.</font>
+Dialogue: 0,1:03:12.77,1:03:16.10,Default,,0,0,0,,<font face="Vesta" size="78">It's already late. Why don't you stay the night?</font>
+Dialogue: 0,1:03:16.52,1:03:19.32,Default,,0,0,0,,<font face="Vesta" size="78">You boys give me a hand.</font>
+Dialogue: 0,1:03:25.45,1:03:27.45,Default,,0,0,0,,<font face="Vesta" size="78">Come on, keep at it.</font>
+Dialogue: 0,1:03:30.45,1:03:33.12,Default,,0,0,0,,<font face="Vesta" size="78">See? You have a talent for this.</font>
+Dialogue: 0,1:03:33.12,1:03:34.75,Default,,0,0,0,,<font face="Vesta" size="78">You're a big help.</font>
+Dialogue: 0,1:03:35.54,1:03:38.79,Default,,0,0,0,,<font face="Vesta" size="78">It's not the same when you use magic.</font>
+Dialogue: 0,1:03:40.13,1:03:44.67,Default,,0,0,0,,<font face="Vesta" size="78">Pull it through there. Now do it again.</font>
+Dialogue: 0,1:03:44.67,1:03:47.30,Default,,0,0,0,,<font face="Vesta" size="78">Zeniba, I'm going back after all.</font>
+Dialogue: 0,1:03:47.97,1:03:51.64,Default,,0,0,0,,<font face="Vesta" size="78">Haku could die while I'm sitting here.</font>
+Dialogue: 0,1:03:51.64,1:03:55.14,Default,,0,0,0,,<font face="Vesta" size="78">And they might eat my mom and dad!</font>
+Dialogue: 0,1:03:57.31,1:04:00.19,Default,,0,0,0,,<font face="Vesta" size="78">Wait just a little longer.</font>
+Dialogue: 0,1:04:00.19,1:04:01.73,Default,,0,0,0,,<font face="Vesta" size="78">There we are.</font>
+Dialogue: 0,1:04:02.57,1:04:04.53,Default,,0,0,0,,<font face="Vesta" size="78">Use it to tie back your hair.</font>
+Dialogue: 0,1:04:09.87,1:04:10.83,Default,,0,0,0,,<font face="Vesta" size="78">It's pretty.</font>
+Dialogue: 0,1:04:10.83,1:04:16.00,Default,,0,0,0,,<font face="Vesta" size="78">It'll protect you. I made it from the thread we spun.</font>
+Dialogue: 0,1:04:16.00,1:04:17.29,Default,,0,0,0,,<font face="Vesta" size="78">Thank you.</font>
+Dialogue: 0,1:04:26.84,1:04:30.76,Default,,0,0,0,,<font face="Vesta" size="78">What good timing. We've got another guest, let him in.</font>
+Dialogue: 0,1:04:30.76,1:04:31.89,Default,,0,0,0,,<font face="Vesta" size="78">Sure.</font>
+Dialogue: 0,1:04:45.19,1:04:46.32,Default,,0,0,0,,<font face="Vesta" size="78">Haku!</font>
+Dialogue: 0,1:04:47.53,1:04:48.70,Default,,0,0,0,,<font face="Vesta" size="78">Haku...</font>
+Dialogue: 0,1:04:49.53,1:04:51.45,Default,,0,0,0,,<font face="Vesta" size="78">I'm so glad to see you.</font>
+Dialogue: 0,1:04:51.45,1:04:54.20,Default,,0,0,0,,<font face="Vesta" size="78">Are you okay? Do you feel all right?</font>
+Dialogue: 0,1:04:54.20,1:04:55.20,Default,,0,0,0,,<font face="Vesta" size="78">Thank goodness.</font>
+Dialogue: 0,1:04:57.04,1:04:59.29,Default,,0,0,0,,<font face="Vesta" size="78">Good timing, I'd say.</font>
+Dialogue: 0,1:04:59.96,1:05:02.42,Default,,0,0,0,,<font face="Vesta" size="78">Zeniba, Haku's alive.</font>
+Dialogue: 0,1:05:02.96,1:05:07.22,Default,,0,0,0,,<font face="Vesta" size="78">Haku, I no longer blame you for what you did.</font>
+Dialogue: 0,1:05:07.22,1:05:10.89,Default,,0,0,0,,<font face="Vesta" size="78">But be sure to protect this girl.</font>
+Dialogue: 0,1:05:10.89,1:05:14.01,Default,,0,0,0,,<font face="Vesta" size="78">Okay boys, time you went home.</font>
+Dialogue: 0,1:05:14.01,1:05:16.06,Default,,0,0,0,,<font face="Vesta" size="78">Come see me again soon.</font>
+Dialogue: 0,1:05:16.81,1:05:21.15,Default,,0,0,0,,<font face="Vesta" size="78">You stay with me and be my helper.</font>
+Dialogue: 0,1:05:23.65,1:05:24.61,Default,,0,0,0,,<font face="Vesta" size="78">Zeniba!</font>
+Dialogue: 0,1:05:25.23,1:05:27.53,Default,,0,0,0,,<font face="Vesta" size="78">Thank you, I'm going now.</font>
+Dialogue: 0,1:05:27.53,1:05:30.74,Default,,0,0,0,,<font face="Vesta" size="78">Don't worry, I'm sure you'll manage just fine.</font>
+Dialogue: 0,1:05:30.74,1:05:34.08,Default,,0,0,0,,<font face="Vesta" size="78">My real name is Chihiro.</font>
+Dialogue: 0,1:05:34.08,1:05:36.70,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro? What a nice name.</font>
+Dialogue: 0,1:05:36.70,1:05:38.71,Default,,0,0,0,,<font face="Vesta" size="78">Take good care of it.</font>
+Dialogue: 0,1:05:38.71,1:05:39.50,Default,,0,0,0,,<font face="Vesta" size="78">I will!</font>
+Dialogue: 0,1:05:39.50,1:05:41.29,Default,,0,0,0,,<font face="Vesta" size="78">Now off you go.</font>
+Dialogue: 0,1:05:43.00,1:05:46.09,Default,,0,0,0,,<font face="Vesta" size="78">Thank you, Zeniba. Goodbye!</font>
+Dialogue: 0,1:06:35.14,1:06:36.97,Default,,0,0,0,,<font face="Vesta" size="78">Haku, listen.</font>
+Dialogue: 0,1:06:36.97,1:06:40.60,Default,,0,0,0,,<font face="Vesta" size="78">I don't remember this, but my mom told me about it.</font>
+Dialogue: 0,1:06:40.98,1:06:44.60,Default,,0,0,0,,<font face="Vesta" size="78">Once when I was little, I fell in a river.</font>
+Dialogue: 0,1:06:45.06,1:06:48.69,Default,,0,0,0,,<font face="Vesta" size="78">Now it's all built over. It flows underground.</font>
+Dialogue: 0,1:06:49.07,1:06:51.19,Default,,0,0,0,,<font face="Vesta" size="78">But I just remembered.</font>
+Dialogue: 0,1:06:52.32,1:06:53.99,Default,,0,0,0,,<font face="Vesta" size="78">The river was called...</font>
+Dialogue: 0,1:06:54.66,1:06:57.68,Default,,0,0,0,,<font face="Vesta" size="78">it was called the Kohaku River.</font>
+Dialogue: 0,1:06:58.16,1:07:01.16,Default,,0,0,0,,<font face="Vesta" size="78">Your real name is Kohaku.</font>
+Dialogue: 0,1:07:22.58,1:07:24.35,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro, thank you!</font>
+Dialogue: 0,1:07:24.35,1:07:27.58,Default,,0,0,0,,<font face="Vesta" size="78">My name is Nigihayami Kohaku Nushi.</font>
+Dialogue: 0,1:07:28.02,1:07:29.22,Default,,0,0,0,,<font face="Vesta" size="78">Nigihayami?</font>
+Dialogue: 0,1:07:29.22,1:07:31.40,Default,,0,0,0,,<font face="Vesta" size="78">Nigihayami Kohaku Nushi.</font>
+Dialogue: 0,1:07:31.40,1:07:34.45,Default,,0,0,0,,<font face="Vesta" size="78">What a name! Sounds like a guardian spirit.</font>
+Dialogue: 0,1:07:34.45,1:07:38.99,Default,,0,0,0,,<font face="Vesta" size="78">I remember how you fell into me as a child.</font>
+Dialogue: 0,1:07:38.99,1:07:40.91,Default,,0,0,0,,<font face="Vesta" size="78">You were chasing your shoe.</font>
+Dialogue: 0,1:07:40.91,1:07:45.25,Default,,0,0,0,,<font face="Vesta" size="78">Yes, and you carried me to shallow water.</font>
+Dialogue: 0,1:07:46.12,1:07:47.35,Default,,0,0,0,,<font face="Vesta" size="78">I'm so happy...</font>
+Dialogue: 0,1:08:20.16,1:08:21.58,Default,,0,0,0,,<font face="Vesta" size="78">They're back!</font>
+Dialogue: 0,1:08:34.92,1:08:37.55,Default,,0,0,0,,<font face="Vesta" size="78">You brought Bo back with you?</font>
+Dialogue: 0,1:08:40.24,1:08:41.47,Default,,0,0,0,,<font face="Vesta" size="78">Baba!</font>
+Dialogue: 0,1:08:41.47,1:08:45.89,Default,,0,0,0,,<font face="Vesta" size="78">Bo! You're not hurt? What a terrible time you had.</font>
+Dialogue: 0,1:08:47.14,1:08:50.27,Default,,0,0,0,,<font face="Vesta" size="78">Bo, when did you learn to stand on your own?</font>
+Dialogue: 0,1:08:50.86,1:08:53.02,Default,,0,0,0,,<font face="Vesta" size="78">Yubaba, remember your promise.</font>
+Dialogue: 0,1:08:53.02,1:08:56.03,Default,,0,0,0,,<font face="Vesta" size="78">Send Chihiro and her parents back to their world.</font>
+Dialogue: 0,1:08:56.44,1:08:58.99,Default,,0,0,0,,<font face="Vesta" size="78">Sorry, but it's not that simple.</font>
+Dialogue: 0,1:08:58.99,1:09:02.12,Default,,0,0,0,,<font face="Vesta" size="78">This world has rules, you know.</font>
+Dialogue: 0,1:09:02.74,1:09:04.04,Default,,0,0,0,,<font face="Vesta" size="78">Silence!</font>
+Dialogue: 0,1:09:04.04,1:09:06.95,Default,,0,0,0,,<font face="Vesta" size="78">Just do it, Baba. Don't be so mean.</font>
+Dialogue: 0,1:09:06.95,1:09:09.54,Default,,0,0,0,,<font face="Vesta" size="78">Baby had such a good time.</font>
+Dialogue: 0,1:09:10.04,1:09:12.92,Default,,0,0,0,,<font face="Vesta" size="78">But I'm just following the rule.</font>
+Dialogue: 0,1:09:12.92,1:09:15.55,Default,,0,0,0,,<font face="Vesta" size="78">Otherwise I can't break the spell.</font>
+Dialogue: 0,1:09:15.55,1:09:18.97,Default,,0,0,0,,<font face="Vesta" size="78">If you make Sen cry, I won't like you anymore.</font>
+Dialogue: 0,1:09:18.97,1:09:20.43,Default,,0,0,0,,<font face="Vesta" size="78">But...</font>
+Dialogue: 0,1:09:20.43,1:09:21.80,Default,,0,0,0,,<font face="Vesta" size="78">Granny!</font>
+Dialogue: 0,1:09:21.80,1:09:23.51,Default,,0,0,0,,<font face="Vesta" size="78">Granny?</font>
+Dialogue: 0,1:09:23.51,1:09:25.14,Default,,0,0,0,,<font face="Vesta" size="78">I'll do as you ask.</font>
+Dialogue: 0,1:09:36.98,1:09:39.24,Default,,0,0,0,,<font face="Vesta" size="78">Haku told me about the rule.</font>
+Dialogue: 0,1:09:39.24,1:09:41.12,Default,,0,0,0,,<font face="Vesta" size="78">Well, you've got guts.</font>
+Dialogue: 0,1:09:45.85,1:09:47.39,Default,,0,0,0,,<font face="Vesta" size="78">You get one guess.</font>
+Dialogue: 0,1:09:47.39,1:09:50.06,Default,,0,0,0,,<font face="Vesta" size="78">Pick them out and you all go free.</font>
+Dialogue: 0,1:10:01.91,1:10:05.55,Default,,0,0,0,,<font face="Vesta" size="78">Granny, I can't do it. Dad and Mom aren't here.</font>
+Dialogue: 0,1:10:05.55,1:10:09.33,Default,,0,0,0,,<font face="Vesta" size="78">Not here? Is that your answer?</font>
+Dialogue: 0,1:10:10.87,1:10:11.92,Default,,0,0,0,,<font face="Vesta" size="78">Yes.</font>
+Dialogue: 0,1:10:14.71,1:10:17.98,Default,,0,0,0,,<font face="Vesta" size="78">You're right!</font>
+Dialogue: 0,1:10:17.98,1:10:20.63,Default,,0,0,0,,<font face="Vesta" size="78">Attagirl! Good for you.</font>
+Dialogue: 0,1:10:24.60,1:10:25.89,Default,,0,0,0,,<font face="Vesta" size="78">Thank you everyone.</font>
+Dialogue: 0,1:10:25.89,1:10:29.14,Default,,0,0,0,,<font face="Vesta" size="78">All right! You win, just get out of here.</font>
+Dialogue: 0,1:10:29.64,1:10:31.56,Default,,0,0,0,,<font face="Vesta" size="78">Thanks for everything.</font>
+Dialogue: 0,1:10:32.10,1:10:33.60,Default,,0,0,0,,<font face="Vesta" size="78">Goodbye.</font>
+Dialogue: 0,1:10:34.06,1:10:35.23,Default,,0,0,0,,<font face="Vesta" size="78">Thank you.</font>
+Dialogue: 0,1:10:35.23,1:10:36.90,Default,,0,0,0,,<font face="Vesta" size="78">See you soon.</font>
+Dialogue: 0,1:10:36.90,1:10:37.56,Default,,0,0,0,,<font face="Vesta" size="78">Haku!</font>
+Dialogue: 0,1:10:37.56,1:10:38.65,Default,,0,0,0,,<font face="Vesta" size="78">Let's go.</font>
+Dialogue: 0,1:10:39.32,1:10:40.65,Default,,0,0,0,,<font face="Vesta" size="78">Where's Mom and Dad?</font>
+Dialogue: 0,1:10:40.65,1:10:41.95,Default,,0,0,0,,<font face="Vesta" size="78">They went on ahead.</font>
+Dialogue: 0,1:10:49.49,1:10:50.75,Default,,0,0,0,,<font face="Vesta" size="78">The water's gone.</font>
+Dialogue: 0,1:10:50.75,1:10:52.50,Default,,0,0,0,,<font face="Vesta" size="78">I can't go any further.</font>
+Dialogue: 0,1:10:52.92,1:10:55.42,Default,,0,0,0,,<font face="Vesta" size="78">Go back the way you came.</font>
+Dialogue: 0,1:10:55.42,1:10:58.48,Default,,0,0,0,,<font face="Vesta" size="78">But don't look back until you're out of the tunnel.</font>
+Dialogue: 0,1:10:58.48,1:11:00.76,Default,,0,0,0,,<font face="Vesta" size="78">But what about you?</font>
+Dialogue: 0,1:11:01.17,1:11:04.09,Default,,0,0,0,,<font face="Vesta" size="78">I'll tell Yubaba I'm quitting my apprenticeship.</font>
+Dialogue: 0,1:11:04.09,1:11:06.64,Default,,0,0,0,,<font face="Vesta" size="78">I'm fine now. I have my name back.</font>
+Dialogue: 0,1:11:07.18,1:11:09.10,Default,,0,0,0,,<font face="Vesta" size="78">Now I can go home too.</font>
+Dialogue: 0,1:11:09.10,1:11:10.60,Default,,0,0,0,,<font face="Vesta" size="78">Will we meet again somewhere?</font>
+Dialogue: 0,1:11:10.60,1:11:11.62,Default,,0,0,0,,<font face="Vesta" size="78">I'm sure of it.</font>
+Dialogue: 0,1:11:11.62,1:11:12.23,Default,,0,0,0,,<font face="Vesta" size="78">Promise?</font>
+Dialogue: 0,1:11:12.23,1:11:13.19,Default,,0,0,0,,<font face="Vesta" size="78">Promise.</font>
+Dialogue: 0,1:11:13.19,1:11:15.48,Default,,0,0,0,,<font face="Vesta" size="78">Now go, and don't look back.</font>
+Dialogue: 0,1:11:38.54,1:11:40.46,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro!</font>
+Dialogue: 0,1:11:40.46,1:11:43.13,Default,,0,0,0,,<font face="Vesta" size="78">Where have you been? Hurry up.</font>
+Dialogue: 0,1:11:46.64,1:11:48.60,Default,,0,0,0,,<font face="Vesta" size="78">Mom! Dad!</font>
+Dialogue: 0,1:11:48.60,1:11:50.47,Default,,0,0,0,,<font face="Vesta" size="78">Don't go running off like that.</font>
+Dialogue: 0,1:11:50.47,1:11:51.47,Default,,0,0,0,,<font face="Vesta" size="78">Let's go.</font>
+Dialogue: 0,1:11:52.14,1:11:54.48,Default,,0,0,0,,<font face="Vesta" size="78">Mom, are you really okay?</font>
+Dialogue: 0,1:11:54.48,1:11:58.73,Default,,0,0,0,,<font face="Vesta" size="78">Hurry, the moving van will be there.</font>
+Dialogue: 0,1:12:08.16,1:12:10.37,Default,,0,0,0,,<font face="Vesta" size="78">Hurry up, Chihiro.</font>
+Dialogue: 0,1:12:19.08,1:12:20.96,Default,,0,0,0,,<font face="Vesta" size="78">Watch your step.</font>
+Dialogue: 0,1:12:20.96,1:12:24.30,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro, don't cling. You'll make me trip.</font>
+Dialogue: 0,1:12:36.52,1:12:37.98,Default,,0,0,0,,<font face="Vesta" size="78">The end of the tunnel.</font>
+Dialogue: 0,1:12:38.35,1:12:39.94,Default,,0,0,0,,<font face="Vesta" size="78">Hey!</font>
+Dialogue: 0,1:12:39.94,1:12:41.29,Default,,0,0,0,,<font face="Vesta" size="78">What is it?</font>
+Dialogue: 0,1:12:41.90,1:12:44.03,Default,,0,0,0,,<font face="Vesta" size="78">Will you look at that.</font>
+Dialogue: 0,1:12:45.11,1:12:47.28,Default,,0,0,0,,<font face="Vesta" size="78">It's all dusty inside, too.</font>
+Dialogue: 0,1:12:47.70,1:12:48.78,Default,,0,0,0,,<font face="Vesta" size="78">Is this somebody's joke?</font>
+Dialogue: 0,1:12:48.78,1:12:49.74,Default,,0,0,0,,<font face="Vesta" size="78">I wonder...</font>
+Dialogue: 0,1:12:49.74,1:12:52.16,Default,,0,0,0,,<font face="Vesta" size="78">I told you not to stop here.</font>
+Dialogue: 0,1:12:57.87,1:13:00.38,Default,,0,0,0,,<font face="Vesta" size="78">That's it, you're fine.</font>
+Dialogue: 0,1:13:01.63,1:13:04.00,Default,,0,0,0,,<font face="Vesta" size="78">We're off, Chihiro.</font>
+Dialogue: 0,1:13:04.00,1:13:06.72,Default,,0,0,0,,<font face="Vesta" size="78">Chihiro! Hurry up!</font>
+Dialogue: 0,1:13:33.64,1:13:39.60,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}yondeiru mune no dokoka okude</font>
+Dialogue: 0,1:13:33.64,1:13:39.60,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}Somewhere, a voice calls in the depths of my heart.</font>
+Dialogue: 0,1:13:39.38,1:13:45.40,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}itsumo kokoro odoru yume wo mitai</font>
+Dialogue: 0,1:13:39.38,1:13:45.40,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}May I always be dreaming the dreams that move my heart.</font>
+Dialogue: 0,1:13:45.42,1:13:51.30,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}kanashimi wa kazoekirenai kedo</font>
+Dialogue: 0,1:13:45.42,1:13:51.30,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}Through the uncountable tears of despair,</font>
+Dialogue: 0,1:13:51.14,1:13:57.32,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}sono mukou de kitto anata ni aeru</font>
+Dialogue: 0,1:13:51.14,1:13:57.32,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}I know that you will be on the other side.</font>
+Dialogue: 0,1:13:57.70,1:14:04.02,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}kurikaesu ayamachi no sonotabi hito wa</font>
+Dialogue: 0,1:13:57.70,1:14:04.02,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}Every time we fall down and see the sky,</font>
+Dialogue: 0,1:14:03.66,1:14:08.78,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}tada aoi sora no aosa wo shiru</font>
+Dialogue: 0,1:14:03.66,1:14:08.78,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}we will open our eyes to its blue, as if for the first time.</font>
+Dialogue: 0,1:14:08.56,1:14:14.66,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}hateshinaku michi wa tsuzuite mieru keredo</font>
+Dialogue: 0,1:14:08.56,1:14:14.66,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}Even though the road is long, lonely, and has no end in sight,</font>
+Dialogue: 0,1:14:14.46,1:14:20.24,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}kono ryoute wa hikari wo dakeru</font>
+Dialogue: 0,1:14:14.46,1:14:20.24,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}I will embrace the light with these arms.</font>
+Dialogue: 0,1:14:22.18,1:14:28.06,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}sayonara no toki no shizukana mune</font>
+Dialogue: 0,1:14:22.18,1:14:28.06,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}My heart seems like it stops as I bid farewell,</font>
+Dialogue: 0,1:14:28.00,1:14:33.78,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}zero ni naru karada ga mimi wo sumaseru</font>
+Dialogue: 0,1:14:28.00,1:14:33.78,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}and my empty soul begins to accept reality.</font>
+Dialogue: 0,1:14:33.82,1:14:39.94,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}ikiteiru fushigi sinde iku fusigi</font>
+Dialogue: 0,1:14:33.82,1:14:39.94,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}The joys of living, the joys of death,</font>
+Dialogue: 0,1:14:39.82,1:14:46.08,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}hana mo kaze mo machi mo minna onaji</font>
+Dialogue: 0,1:14:39.82,1:14:46.08,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}cause us all to dance – the wind, town, and flowers.</font>
+Dialogue: 0,1:15:11.80,1:15:17.72,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}yondeiru mune no dokoka oku de</font>
+Dialogue: 0,1:15:11.80,1:15:17.72,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}Somewhere, a voice calls, in the depths of my heart.</font>
+Dialogue: 0,1:15:17.44,1:15:23.32,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}itsumo nando demo yume wo egakou</font>
+Dialogue: 0,1:15:17.44,1:15:23.32,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}Continue to dream your dreams, and never let them part.</font>
+Dialogue: 0,1:15:23.18,1:15:28.90,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}kanashimi no kazu wo iitsukusu yori</font>
+Dialogue: 0,1:15:23.18,1:15:28.90,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}Why think of the pains in your life, or your sadness.</font>
+Dialogue: 0,1:15:28.76,1:15:35.04,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}onaji kuchibiru de sotto utaou</font>
+Dialogue: 0,1:15:28.76,1:15:35.04,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}Instead, listen to the gentle song from that voice.</font>
+Dialogue: 0,1:15:35.36,1:15:41.60,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}tojiteiku omoide no sono naka ni itsumo</font>
+Dialogue: 0,1:15:35.36,1:15:41.60,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}We will never forget that passing voice,</font>
+Dialogue: 0,1:15:41.28,1:15:46.30,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}wasure takunai sasayaki wo kiku</font>
+Dialogue: 0,1:15:41.28,1:15:46.30,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}in the memories that guide you through life.</font>
+Dialogue: 0,1:15:46.16,1:15:52.00,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}konagona ni kudakareta kagami no ue nimo</font>
+Dialogue: 0,1:15:46.16,1:15:52.00,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}When the mirror breaks, shattering on the ground,</font>
+Dialogue: 0,1:15:51.70,1:15:57.76,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}atarashii keshiki ga utsusareru</font>
+Dialogue: 0,1:15:51.70,1:15:57.76,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}glimpses of a new life are reflected all around.</font>
+Dialogue: 0,1:15:59.74,1:16:05.62,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}hajimari no asa shizuka na mado</font>
+Dialogue: 0,1:15:59.74,1:16:05.62,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}Window of Beginnings, please let in the light of a new dawn,</font>
+Dialogue: 0,1:16:05.46,1:16:11.58,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}zero ni naru karada mitasarete yuke</font>
+Dialogue: 0,1:16:05.46,1:16:11.58,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}and let my silent and empty soul be filled and reborn.</font>
+Dialogue: 0,1:16:11.28,1:16:16.96,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}umi no kanata niwa mou sagasanai</font>
+Dialogue: 0,1:16:11.28,1:16:16.96,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}No need to search the land, nor sail across the sea.</font>
+Dialogue: 0,1:16:16.76,1:16:22.36,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}kagayaku mono wa itsumo koko ni</font>
+Dialogue: 0,1:16:16.76,1:16:22.36,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}'Cause it's here shining inside me. It's right here deep inside me.</font>
+Dialogue: 0,1:16:22.02,1:16:29.90,Default,,0,0,0,,<font face="Vesta" size="78">{\an7}watashi no naka ni mitsukerareta kara</font>
+Dialogue: 0,1:16:22.02,1:16:29.90,Default,,0,0,0,,<font face="Vesta" size="78">{\an1}Thanks to you I've found the light, and it's always with me.</font>
+Dialogue: 0,1:17:00.62,1:17:05.12,Default,,0,0,0,,<font face="Vesta" size="78"><font size="100"><font color="#f7ecdd"><font face="AR CENA">THE END</font></font></font></font>

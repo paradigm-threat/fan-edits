@@ -1,0 +1,581 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Silent Hill (2006) - Nay Tomorrow",
+  "source_kdenlive": "Silent Hill (2006) - Nay Tomorrow.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:01:54.847",
+      "removed_s": 13.495,
+      "source_removed": {
+        "in": "00:01:54.805",
+        "out": "00:02:08.300"
+      },
+      "left": {
+        "in": "00:01:49.847",
+        "out": "00:01:54.806"
+      },
+      "right": {
+        "in": "00:01:54.847",
+        "out": "00:01:59.847"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:19:32.386",
+      "removed_s": 10.802,
+      "source_removed": {
+        "in": "00:19:45.796",
+        "out": "00:19:56.598"
+      },
+      "left": {
+        "in": "00:19:27.386",
+        "out": "00:19:32.344"
+      },
+      "right": {
+        "in": "00:19:32.386",
+        "out": "00:19:37.386"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:19:41.711",
+      "removed_s": 4.504,
+      "source_removed": {
+        "in": "00:20:05.881",
+        "out": "00:20:10.385"
+      },
+      "left": {
+        "in": "00:19:36.711",
+        "out": "00:19:41.670"
+      },
+      "right": {
+        "in": "00:19:41.711",
+        "out": "00:19:46.711"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:20:01.898",
+      "removed_s": 2.837,
+      "source_removed": {
+        "in": "00:20:30.530",
+        "out": "00:20:33.367"
+      },
+      "left": {
+        "in": "00:19:56.898",
+        "out": "00:20:01.856"
+      },
+      "right": {
+        "in": "00:20:01.898",
+        "out": "00:20:06.898"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "00:20:45.799",
+      "removed_s": 3.253,
+      "source_removed": {
+        "in": "00:21:17.226",
+        "out": "00:21:20.479"
+      },
+      "left": {
+        "in": "00:20:40.799",
+        "out": "00:20:45.757"
+      },
+      "right": {
+        "in": "00:20:45.799",
+        "out": "00:20:50.799"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "00:38:59.562",
+      "removed_s": 12.846,
+      "source_removed": {
+        "in": "00:39:34.201",
+        "out": "00:39:47.047"
+      },
+      "left": {
+        "in": "00:38:54.562",
+        "out": "00:38:59.521"
+      },
+      "right": {
+        "in": "00:38:59.562",
+        "out": "00:39:04.562"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "00:39:31.409",
+      "removed_s": 157.83,
+      "source_removed": {
+        "in": "00:40:18.852",
+        "out": "00:42:56.682"
+      },
+      "left": {
+        "in": "00:39:26.409",
+        "out": "00:39:31.367"
+      },
+      "right": {
+        "in": "00:39:31.409",
+        "out": "00:39:36.409"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-08.kdenlive",
+      "join": 8,
+      "out_join": "00:41:38.397",
+      "removed_s": 39.581,
+      "source_removed": {
+        "in": "00:45:04.213",
+        "out": "00:45:43.794"
+      },
+      "left": {
+        "in": "00:41:33.397",
+        "out": "00:41:38.355"
+      },
+      "right": {
+        "in": "00:41:38.397",
+        "out": "00:41:42.067"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-09.kdenlive",
+      "join": 9,
+      "out_join": "00:41:42.067",
+      "removed_s": 2.419,
+      "source_removed": {
+        "in": "00:45:47.422",
+        "out": "00:45:49.841"
+      },
+      "left": {
+        "in": "00:41:37.067",
+        "out": "00:41:42.025"
+      },
+      "right": {
+        "in": "00:41:42.067",
+        "out": "00:41:47.067"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-10.kdenlive",
+      "join": 10,
+      "out_join": "00:41:48.782",
+      "removed_s": 18.709,
+      "source_removed": {
+        "in": "00:45:56.515",
+        "out": "00:46:15.224"
+      },
+      "left": {
+        "in": "00:41:43.782",
+        "out": "00:41:48.740"
+      },
+      "right": {
+        "in": "00:41:48.782",
+        "out": "00:41:53.782"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-11.kdenlive",
+      "join": 11,
+      "out_join": "00:41:54.412",
+      "removed_s": 25.484,
+      "source_removed": {
+        "in": "00:46:20.812",
+        "out": "00:46:46.296"
+      },
+      "left": {
+        "in": "00:41:49.412",
+        "out": "00:41:54.370"
+      },
+      "right": {
+        "in": "00:41:54.412",
+        "out": "00:41:59.412"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-12.kdenlive",
+      "join": 12,
+      "out_join": "00:45:34.267",
+      "removed_s": 10.553,
+      "source_removed": {
+        "in": "00:50:26.109",
+        "out": "00:50:36.662"
+      },
+      "left": {
+        "in": "00:45:29.267",
+        "out": "00:45:34.225"
+      },
+      "right": {
+        "in": "00:45:34.267",
+        "out": "00:45:39.267"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-13.kdenlive",
+      "join": 13,
+      "out_join": "00:47:04.152",
+      "removed_s": 10.302,
+      "source_removed": {
+        "in": "00:52:06.506",
+        "out": "00:52:16.808"
+      },
+      "left": {
+        "in": "00:46:59.152",
+        "out": "00:47:04.111"
+      },
+      "right": {
+        "in": "00:47:04.152",
+        "out": "00:47:09.152"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-14.kdenlive",
+      "join": 14,
+      "out_join": "00:47:10.326",
+      "removed_s": 4.254,
+      "source_removed": {
+        "in": "00:52:22.940",
+        "out": "00:52:27.194"
+      },
+      "left": {
+        "in": "00:47:05.326",
+        "out": "00:47:10.284"
+      },
+      "right": {
+        "in": "00:47:10.326",
+        "out": "00:47:15.326"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-15.kdenlive",
+      "join": 15,
+      "out_join": "01:05:45.134",
+      "removed_s": 7.925,
+      "source_removed": {
+        "in": "01:11:01.960",
+        "out": "01:11:09.885"
+      },
+      "left": {
+        "in": "01:05:40.134",
+        "out": "01:05:45.092"
+      },
+      "right": {
+        "in": "01:05:45.134",
+        "out": "01:05:47.719"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-16.kdenlive",
+      "join": 16,
+      "out_join": "01:05:47.719",
+      "removed_s": 3.545,
+      "source_removed": {
+        "in": "01:11:12.429",
+        "out": "01:11:15.974"
+      },
+      "left": {
+        "in": "01:05:42.719",
+        "out": "01:05:47.678"
+      },
+      "right": {
+        "in": "01:05:47.719",
+        "out": "01:05:52.719"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-17.kdenlive",
+      "join": 17,
+      "out_join": "01:06:00.315",
+      "removed_s": 3.254,
+      "source_removed": {
+        "in": "01:11:28.528",
+        "out": "01:11:31.782"
+      },
+      "left": {
+        "in": "01:05:55.315",
+        "out": "01:06:00.273"
+      },
+      "right": {
+        "in": "01:06:00.315",
+        "out": "01:06:05.315"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-18.kdenlive",
+      "join": 18,
+      "out_join": "01:19:36.792",
+      "removed_s": 129.467,
+      "source_removed": {
+        "in": "01:25:08.217",
+        "out": "01:27:17.684"
+      },
+      "left": {
+        "in": "01:19:31.792",
+        "out": "01:19:36.750"
+      },
+      "right": {
+        "in": "01:19:36.792",
+        "out": "01:19:38.710"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-19.kdenlive",
+      "join": 19,
+      "out_join": "01:19:38.710",
+      "removed_s": 2.127,
+      "source_removed": {
+        "in": "01:27:19.561",
+        "out": "01:27:21.688"
+      },
+      "left": {
+        "in": "01:19:33.710",
+        "out": "01:19:38.669"
+      },
+      "right": {
+        "in": "01:19:38.710",
+        "out": "01:19:43.710"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-20.kdenlive",
+      "join": 20,
+      "out_join": "01:20:06.448",
+      "removed_s": 171.074,
+      "source_removed": {
+        "in": "01:27:49.383",
+        "out": "01:30:40.457"
+      },
+      "left": {
+        "in": "01:20:01.448",
+        "out": "01:20:06.407"
+      },
+      "right": {
+        "in": "01:20:06.448",
+        "out": "01:20:11.448"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-21.kdenlive",
+      "join": 21,
+      "out_join": "01:23:54.686",
+      "removed_s": 5668.695,
+      "source_removed": {
+        "in": "01:34:28.654",
+        "out": "03:08:57.349"
+      },
+      "left": {
+        "in": "01:23:49.686",
+        "out": "01:23:54.645"
+      },
+      "right": {
+        "in": "01:23:54.686",
+        "out": "01:23:55.937"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-22.kdenlive",
+      "join": 22,
+      "out_join": "01:23:55.937",
+      "removed_s": 102047.238,
+      "source_removed": {
+        "in": "03:08:58.558",
+        "out": "31:29:45.796"
+      },
+      "left": {
+        "in": "01:23:50.937",
+        "out": "01:23:55.895"
+      },
+      "right": {
+        "in": "01:23:55.937",
+        "out": "01:24:00.937"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-23.kdenlive",
+      "join": 23,
+      "out_join": "01:25:01.859",
+      "removed_s": 8.842,
+      "source_removed": {
+        "in": "01:38:12.638",
+        "out": "01:38:21.480"
+      },
+      "left": {
+        "in": "01:24:56.859",
+        "out": "01:25:01.818"
+      },
+      "right": {
+        "in": "01:25:01.859",
+        "out": "01:25:06.859"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-24.kdenlive",
+      "join": 24,
+      "out_join": "01:28:59.106",
+      "removed_s": 14.765,
+      "source_removed": {
+        "in": "01:42:18.685",
+        "out": "01:42:33.450"
+      },
+      "left": {
+        "in": "01:28:54.106",
+        "out": "01:28:59.064"
+      },
+      "right": {
+        "in": "01:28:59.106",
+        "out": "01:29:04.106"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-25.kdenlive",
+      "join": 25,
+      "out_join": "01:35:21.420",
+      "removed_s": 74.997,
+      "source_removed": {
+        "in": "01:48:55.722",
+        "out": "01:50:10.719"
+      },
+      "left": {
+        "in": "01:35:16.420",
+        "out": "01:35:21.378"
+      },
+      "right": {
+        "in": "01:35:21.420",
+        "out": "01:35:26.420"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-26.kdenlive",
+      "join": 26,
+      "out_join": "01:35:36.477",
+      "removed_s": 3.253,
+      "source_removed": {
+        "in": "01:50:25.734",
+        "out": "01:50:28.987"
+      },
+      "left": {
+        "in": "01:35:31.477",
+        "out": "01:35:36.435"
+      },
+      "right": {
+        "in": "01:35:36.477",
+        "out": "01:35:41.477"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-27.kdenlive",
+      "join": 27,
+      "out_join": "01:37:52.159",
+      "removed_s": 2262.983,
+      "source_removed": {
+        "in": "01:52:44.628",
+        "out": "02:30:27.611"
+      },
+      "left": {
+        "in": "01:37:47.159",
+        "out": "01:37:52.117"
+      },
+      "right": {
+        "in": "01:37:52.159",
+        "out": "01:37:57.159"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-28.kdenlive",
+      "join": 28,
+      "out_join": "01:38:48.779",
+      "removed_s": 1.877,
+      "source_removed": {
+        "in": "01:53:47.506",
+        "out": "01:53:49.383"
+      },
+      "left": {
+        "in": "01:38:43.779",
+        "out": "01:38:48.738"
+      },
+      "right": {
+        "in": "01:38:48.779",
+        "out": "01:38:53.779"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-29.kdenlive",
+      "join": 29,
+      "out_join": "01:42:23.755",
+      "removed_s": 3.587,
+      "source_removed": {
+        "in": "01:57:24.316",
+        "out": "01:57:27.903"
+      },
+      "left": {
+        "in": "01:42:18.755",
+        "out": "01:42:23.713"
+      },
+      "right": {
+        "in": "01:42:23.755",
+        "out": "01:42:28.755"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    },
+    {
+      "file": "seam-30.kdenlive",
+      "join": 30,
+      "out_join": "01:42:35.183",
+      "removed_s": 16.183,
+      "source_removed": {
+        "in": "01:57:39.289",
+        "out": "01:57:55.472"
+      },
+      "left": {
+        "in": "01:42:30.183",
+        "out": "01:42:35.141"
+      },
+      "right": {
+        "in": "01:42:35.183",
+        "out": "01:42:40.183"
+      },
+      "render": "/media/ari/HD/FanEditRender/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow Edition.mkv"
+    }
+  ]
+}

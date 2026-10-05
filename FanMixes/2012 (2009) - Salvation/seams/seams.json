@@ -1,0 +1,1037 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "2012 (2009) - Salvation",
+  "source_kdenlive": "2012 (2009) - Salvation.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:07:12.805",
+      "removed_s": 13.388,
+      "source_removed": {
+        "in": "00:07:12.763",
+        "out": "00:07:26.151"
+      },
+      "left": {
+        "in": "00:07:07.805",
+        "out": "00:07:12.763"
+      },
+      "right": {
+        "in": "00:07:12.805",
+        "out": "00:07:17.805"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:14:53.200",
+      "removed_s": 6.298,
+      "source_removed": {
+        "in": "00:15:06.506",
+        "out": "00:15:12.804"
+      },
+      "left": {
+        "in": "00:14:48.200",
+        "out": "00:14:53.159"
+      },
+      "right": {
+        "in": "00:14:53.200",
+        "out": "00:14:58.200"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:18:41.647",
+      "removed_s": 144.607,
+      "source_removed": {
+        "in": "00:19:01.210",
+        "out": "00:21:25.817"
+      },
+      "left": {
+        "in": "00:18:36.647",
+        "out": "00:18:41.605"
+      },
+      "right": {
+        "in": "00:18:41.647",
+        "out": "00:18:46.647"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:26:38.478",
+      "removed_s": 40.355,
+      "source_removed": {
+        "in": "00:29:22.606",
+        "out": "00:30:02.961"
+      },
+      "left": {
+        "in": "00:26:33.478",
+        "out": "00:26:38.436"
+      },
+      "right": {
+        "in": "00:26:38.478",
+        "out": "00:26:43.478"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "00:31:14.556",
+      "removed_s": 107.696,
+      "source_removed": {
+        "in": "00:34:38.997",
+        "out": "00:36:26.693"
+      },
+      "left": {
+        "in": "00:31:09.556",
+        "out": "00:31:14.514"
+      },
+      "right": {
+        "in": "00:31:14.556",
+        "out": "00:31:19.556"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "00:33:56.247",
+      "removed_s": 13.221,
+      "source_removed": {
+        "in": "00:39:08.342",
+        "out": "00:39:21.563"
+      },
+      "left": {
+        "in": "00:33:51.247",
+        "out": "00:33:56.206"
+      },
+      "right": {
+        "in": "00:33:56.247",
+        "out": "00:34:01.247"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "00:38:25.402",
+      "removed_s": 13.328,
+      "source_removed": {
+        "in": "00:43:50.676",
+        "out": "00:44:04.004"
+      },
+      "left": {
+        "in": "00:38:20.402",
+        "out": "00:38:25.361"
+      },
+      "right": {
+        "in": "00:38:25.402",
+        "out": "00:38:30.402"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-08.kdenlive",
+      "join": 8,
+      "out_join": "00:38:41.919",
+      "removed_s": 13.513,
+      "source_removed": {
+        "in": "00:44:20.479",
+        "out": "00:44:33.992"
+      },
+      "left": {
+        "in": "00:38:36.919",
+        "out": "00:38:41.877"
+      },
+      "right": {
+        "in": "00:38:41.919",
+        "out": "00:38:46.919"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-09.kdenlive",
+      "join": 9,
+      "out_join": "00:38:47.842",
+      "removed_s": 9.301,
+      "source_removed": {
+        "in": "00:44:39.873",
+        "out": "00:44:49.174"
+      },
+      "left": {
+        "in": "00:38:42.842",
+        "out": "00:38:47.800"
+      },
+      "right": {
+        "in": "00:38:47.842",
+        "out": "00:38:52.842"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-10.kdenlive",
+      "join": 10,
+      "out_join": "00:59:39.124",
+      "removed_s": 27.343,
+      "source_removed": {
+        "in": "01:05:40.415",
+        "out": "01:06:07.758"
+      },
+      "left": {
+        "in": "00:59:34.124",
+        "out": "00:59:39.083"
+      },
+      "right": {
+        "in": "00:59:39.124",
+        "out": "00:59:44.124"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-11.kdenlive",
+      "join": 11,
+      "out_join": "01:00:38.832",
+      "removed_s": 72.012,
+      "source_removed": {
+        "in": "01:07:07.424",
+        "out": "01:08:19.436"
+      },
+      "left": {
+        "in": "01:00:33.832",
+        "out": "01:00:38.790"
+      },
+      "right": {
+        "in": "01:00:38.832",
+        "out": "01:00:43.832"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-12.kdenlive",
+      "join": 12,
+      "out_join": "01:02:37.039",
+      "removed_s": 11.887,
+      "source_removed": {
+        "in": "01:10:17.601",
+        "out": "01:10:29.488"
+      },
+      "left": {
+        "in": "01:02:32.039",
+        "out": "01:02:36.997"
+      },
+      "right": {
+        "in": "01:02:37.039",
+        "out": "01:02:42.039"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-13.kdenlive",
+      "join": 13,
+      "out_join": "01:03:05.817",
+      "removed_s": 190.951,
+      "source_removed": {
+        "in": "01:10:58.225",
+        "out": "01:14:09.176"
+      },
+      "left": {
+        "in": "01:03:00.817",
+        "out": "01:03:05.776"
+      },
+      "right": {
+        "in": "01:03:05.817",
+        "out": "01:03:10.817"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-14.kdenlive",
+      "join": 14,
+      "out_join": "01:05:59.102",
+      "removed_s": 3.796,
+      "source_removed": {
+        "in": "01:17:02.419",
+        "out": "01:17:06.215"
+      },
+      "left": {
+        "in": "01:05:54.102",
+        "out": "01:05:59.060"
+      },
+      "right": {
+        "in": "01:05:59.102",
+        "out": "01:06:04.102"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-15.kdenlive",
+      "join": 15,
+      "out_join": "01:06:12.782",
+      "removed_s": 8.675,
+      "source_removed": {
+        "in": "01:17:19.853",
+        "out": "01:17:28.528"
+      },
+      "left": {
+        "in": "01:06:07.782",
+        "out": "01:06:12.740"
+      },
+      "right": {
+        "in": "01:06:12.782",
+        "out": "01:06:17.782"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-16.kdenlive",
+      "join": 16,
+      "out_join": "01:10:14.408",
+      "removed_s": 301.293,
+      "source_removed": {
+        "in": "01:21:30.113",
+        "out": "01:26:31.406"
+      },
+      "left": {
+        "in": "01:10:09.408",
+        "out": "01:10:14.366"
+      },
+      "right": {
+        "in": "01:10:14.408",
+        "out": "01:10:19.408"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-17.kdenlive",
+      "join": 17,
+      "out_join": "01:15:16.411",
+      "removed_s": 20.228,
+      "source_removed": {
+        "in": "01:31:33.367",
+        "out": "01:31:53.595"
+      },
+      "left": {
+        "in": "01:15:11.411",
+        "out": "01:15:16.369"
+      },
+      "right": {
+        "in": "01:15:16.411",
+        "out": "01:15:21.411"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-18.kdenlive",
+      "join": 18,
+      "out_join": "01:19:04.732",
+      "removed_s": 52.159,
+      "source_removed": {
+        "in": "01:35:41.875",
+        "out": "01:36:34.034"
+      },
+      "left": {
+        "in": "01:18:59.732",
+        "out": "01:19:04.691"
+      },
+      "right": {
+        "in": "01:19:04.732",
+        "out": "01:19:09.732"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-19.kdenlive",
+      "join": 19,
+      "out_join": "01:20:48.967",
+      "removed_s": 61.084,
+      "source_removed": {
+        "in": "01:38:18.227",
+        "out": "01:39:19.311"
+      },
+      "left": {
+        "in": "01:20:43.967",
+        "out": "01:20:48.925"
+      },
+      "right": {
+        "in": "01:20:48.967",
+        "out": "01:20:51.261"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-20.kdenlive",
+      "join": 20,
+      "out_join": "01:20:51.261",
+      "removed_s": 3.295,
+      "source_removed": {
+        "in": "01:39:21.563",
+        "out": "01:39:24.858"
+      },
+      "left": {
+        "in": "01:20:46.261",
+        "out": "01:20:51.219"
+      },
+      "right": {
+        "in": "01:20:51.261",
+        "out": "01:20:56.261"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-21.kdenlive",
+      "join": 21,
+      "out_join": "01:24:23.501",
+      "removed_s": 3.36,
+      "source_removed": {
+        "in": "01:42:57.057",
+        "out": "01:43:00.417"
+      },
+      "left": {
+        "in": "01:24:18.501",
+        "out": "01:24:23.460"
+      },
+      "right": {
+        "in": "01:24:23.501",
+        "out": "01:24:28.501"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-22.kdenlive",
+      "join": 22,
+      "out_join": "01:24:59.662",
+      "removed_s": 3.129,
+      "source_removed": {
+        "in": "01:43:36.536",
+        "out": "01:43:39.665"
+      },
+      "left": {
+        "in": "01:24:54.662",
+        "out": "01:24:59.620"
+      },
+      "right": {
+        "in": "01:24:59.662",
+        "out": "01:25:04.662"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-23.kdenlive",
+      "join": 23,
+      "out_join": "01:28:45.273",
+      "removed_s": 37.31,
+      "source_removed": {
+        "in": "01:47:25.234",
+        "out": "01:48:02.544"
+      },
+      "left": {
+        "in": "01:28:40.273",
+        "out": "01:28:45.231"
+      },
+      "right": {
+        "in": "01:28:45.273",
+        "out": "01:28:50.273"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-24.kdenlive",
+      "join": 24,
+      "out_join": "01:29:55.866",
+      "removed_s": 12.763,
+      "source_removed": {
+        "in": "01:49:13.096",
+        "out": "01:49:25.859"
+      },
+      "left": {
+        "in": "01:29:50.866",
+        "out": "01:29:55.825"
+      },
+      "right": {
+        "in": "01:29:55.866",
+        "out": "01:30:00.866"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-25.kdenlive",
+      "join": 25,
+      "out_join": "01:30:10.798",
+      "removed_s": 5.881,
+      "source_removed": {
+        "in": "01:49:40.749",
+        "out": "01:49:46.630"
+      },
+      "left": {
+        "in": "01:30:05.798",
+        "out": "01:30:10.756"
+      },
+      "right": {
+        "in": "01:30:10.798",
+        "out": "01:30:15.798"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-26.kdenlive",
+      "join": 26,
+      "out_join": "01:31:03.833",
+      "removed_s": 41.189,
+      "source_removed": {
+        "in": "01:50:39.623",
+        "out": "01:51:20.812"
+      },
+      "left": {
+        "in": "01:30:58.833",
+        "out": "01:31:03.791"
+      },
+      "right": {
+        "in": "01:31:03.833",
+        "out": "01:31:08.833"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-27.kdenlive",
+      "join": 27,
+      "out_join": "01:31:33.279",
+      "removed_s": 16.415,
+      "source_removed": {
+        "in": "01:51:50.217",
+        "out": "01:52:06.632"
+      },
+      "left": {
+        "in": "01:31:28.279",
+        "out": "01:31:33.238"
+      },
+      "right": {
+        "in": "01:31:33.279",
+        "out": "01:31:38.279"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-28.kdenlive",
+      "join": 28,
+      "out_join": "01:32:23.454",
+      "removed_s": 2.002,
+      "source_removed": {
+        "in": "01:52:56.765",
+        "out": "01:52:58.767"
+      },
+      "left": {
+        "in": "01:32:18.454",
+        "out": "01:32:23.412"
+      },
+      "right": {
+        "in": "01:32:23.454",
+        "out": "01:32:28.454"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-29.kdenlive",
+      "join": 29,
+      "out_join": "01:32:52.840",
+      "removed_s": 17.601,
+      "source_removed": {
+        "in": "01:53:28.111",
+        "out": "01:53:45.712"
+      },
+      "left": {
+        "in": "01:32:47.840",
+        "out": "01:32:52.798"
+      },
+      "right": {
+        "in": "01:32:52.840",
+        "out": "01:32:57.840"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-30.kdenlive",
+      "join": 30,
+      "out_join": "01:33:53.967",
+      "removed_s": 30.595,
+      "source_removed": {
+        "in": "01:54:46.797",
+        "out": "01:55:17.392"
+      },
+      "left": {
+        "in": "01:33:48.967",
+        "out": "01:33:53.925"
+      },
+      "right": {
+        "in": "01:33:53.967",
+        "out": "01:33:58.967"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-31.kdenlive",
+      "join": 31,
+      "out_join": "01:34:07.438",
+      "removed_s": 123.379,
+      "source_removed": {
+        "in": "01:55:30.822",
+        "out": "01:57:34.201"
+      },
+      "left": {
+        "in": "01:34:02.438",
+        "out": "01:34:07.397"
+      },
+      "right": {
+        "in": "01:34:07.438",
+        "out": "01:34:12.438"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-32.kdenlive",
+      "join": 32,
+      "out_join": "01:34:21.536",
+      "removed_s": 4.337,
+      "source_removed": {
+        "in": "01:57:48.257",
+        "out": "01:57:52.594"
+      },
+      "left": {
+        "in": "01:34:16.536",
+        "out": "01:34:21.494"
+      },
+      "right": {
+        "in": "01:34:21.536",
+        "out": "01:34:26.536"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-33.kdenlive",
+      "join": 33,
+      "out_join": "01:37:42.079",
+      "removed_s": 148.32,
+      "source_removed": {
+        "in": "02:01:13.096",
+        "out": "02:03:41.416"
+      },
+      "left": {
+        "in": "01:37:37.079",
+        "out": "01:37:42.038"
+      },
+      "right": {
+        "in": "01:37:42.079",
+        "out": "01:37:43.456"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-34.kdenlive",
+      "join": 34,
+      "out_join": "01:37:43.456",
+      "removed_s": 2.628,
+      "source_removed": {
+        "in": "02:03:42.751",
+        "out": "02:03:45.379"
+      },
+      "left": {
+        "in": "01:37:38.456",
+        "out": "01:37:43.414"
+      },
+      "right": {
+        "in": "01:37:43.456",
+        "out": "01:37:48.456"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-35.kdenlive",
+      "join": 35,
+      "out_join": "01:39:04.583",
+      "removed_s": 38.205,
+      "source_removed": {
+        "in": "02:05:06.465",
+        "out": "02:05:44.670"
+      },
+      "left": {
+        "in": "01:38:59.583",
+        "out": "01:39:04.542"
+      },
+      "right": {
+        "in": "01:39:04.583",
+        "out": "01:39:07.002"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-36.kdenlive",
+      "join": 36,
+      "out_join": "01:39:07.002",
+      "removed_s": 5.13,
+      "source_removed": {
+        "in": "02:05:47.047",
+        "out": "02:05:52.177"
+      },
+      "left": {
+        "in": "01:39:02.002",
+        "out": "01:39:06.960"
+      },
+      "right": {
+        "in": "01:39:07.002",
+        "out": "01:39:09.797"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-37.kdenlive",
+      "join": 37,
+      "out_join": "01:39:09.797",
+      "removed_s": 29.219,
+      "source_removed": {
+        "in": "02:05:54.930",
+        "out": "02:06:24.149"
+      },
+      "left": {
+        "in": "01:39:04.797",
+        "out": "01:39:09.755"
+      },
+      "right": {
+        "in": "01:39:09.797",
+        "out": "01:39:14.797"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-38.kdenlive",
+      "join": 38,
+      "out_join": "01:40:16.803",
+      "removed_s": 94.058,
+      "source_removed": {
+        "in": "02:07:31.114",
+        "out": "02:09:05.172"
+      },
+      "left": {
+        "in": "01:40:11.803",
+        "out": "01:40:16.762"
+      },
+      "right": {
+        "in": "01:40:16.803",
+        "out": "01:40:21.803"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-39.kdenlive",
+      "join": 39,
+      "out_join": "01:40:43.872",
+      "removed_s": 9.509,
+      "source_removed": {
+        "in": "02:09:32.199",
+        "out": "02:09:41.708"
+      },
+      "left": {
+        "in": "01:40:38.872",
+        "out": "01:40:43.830"
+      },
+      "right": {
+        "in": "01:40:43.872",
+        "out": "01:40:48.872"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-40.kdenlive",
+      "join": 40,
+      "out_join": "01:41:28.399",
+      "removed_s": 6.214,
+      "source_removed": {
+        "in": "02:10:26.193",
+        "out": "02:10:32.407"
+      },
+      "left": {
+        "in": "01:41:23.399",
+        "out": "01:41:28.357"
+      },
+      "right": {
+        "in": "01:41:28.399",
+        "out": "01:41:33.399"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-41.kdenlive",
+      "join": 41,
+      "out_join": "01:41:44.791",
+      "removed_s": 85.34,
+      "source_removed": {
+        "in": "02:10:48.757",
+        "out": "02:12:14.097"
+      },
+      "left": {
+        "in": "01:41:39.791",
+        "out": "01:41:44.749"
+      },
+      "right": {
+        "in": "01:41:44.791",
+        "out": "01:41:49.791"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-42.kdenlive",
+      "join": 42,
+      "out_join": "01:42:29.961",
+      "removed_s": 10.117,
+      "source_removed": {
+        "in": "02:12:59.226",
+        "out": "02:13:09.343"
+      },
+      "left": {
+        "in": "01:42:24.961",
+        "out": "01:42:29.920"
+      },
+      "right": {
+        "in": "01:42:29.961",
+        "out": "01:42:34.961"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-43.kdenlive",
+      "join": 43,
+      "out_join": "01:42:45.894",
+      "removed_s": 7.048,
+      "source_removed": {
+        "in": "02:13:25.234",
+        "out": "02:13:32.282"
+      },
+      "left": {
+        "in": "01:42:40.894",
+        "out": "01:42:45.852"
+      },
+      "right": {
+        "in": "01:42:45.894",
+        "out": "01:42:48.022"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-44.kdenlive",
+      "join": 44,
+      "out_join": "01:42:48.022",
+      "removed_s": 34.975,
+      "source_removed": {
+        "in": "02:13:34.368",
+        "out": "02:14:09.343"
+      },
+      "left": {
+        "in": "01:42:43.022",
+        "out": "01:42:47.980"
+      },
+      "right": {
+        "in": "01:42:48.022",
+        "out": "01:42:53.022"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-45.kdenlive",
+      "join": 45,
+      "out_join": "01:42:57.030",
+      "removed_s": 3.712,
+      "source_removed": {
+        "in": "02:14:18.310",
+        "out": "02:14:22.022"
+      },
+      "left": {
+        "in": "01:42:52.030",
+        "out": "01:42:56.989"
+      },
+      "right": {
+        "in": "01:42:57.030",
+        "out": "01:43:02.030"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-46.kdenlive",
+      "join": 46,
+      "out_join": "01:43:15.382",
+      "removed_s": 170.824,
+      "source_removed": {
+        "in": "02:14:40.332",
+        "out": "02:17:31.156"
+      },
+      "left": {
+        "in": "01:43:10.382",
+        "out": "01:43:15.340"
+      },
+      "right": {
+        "in": "01:43:15.382",
+        "out": "01:43:19.678"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-47.kdenlive",
+      "join": 47,
+      "out_join": "01:43:19.678",
+      "removed_s": 69.301,
+      "source_removed": {
+        "in": "02:17:35.410",
+        "out": "02:18:44.711"
+      },
+      "left": {
+        "in": "01:43:14.678",
+        "out": "01:43:19.636"
+      },
+      "right": {
+        "in": "01:43:19.678",
+        "out": "01:43:24.350"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-48.kdenlive",
+      "join": 48,
+      "out_join": "01:43:24.350",
+      "removed_s": 4.63,
+      "source_removed": {
+        "in": "02:18:49.341",
+        "out": "02:18:53.971"
+      },
+      "left": {
+        "in": "01:43:19.350",
+        "out": "01:43:24.308"
+      },
+      "right": {
+        "in": "01:43:24.350",
+        "out": "01:43:27.435"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-49.kdenlive",
+      "join": 49,
+      "out_join": "01:43:27.435",
+      "removed_s": 7.239,
+      "source_removed": {
+        "in": "02:18:57.015",
+        "out": "02:19:04.254"
+      },
+      "left": {
+        "in": "01:43:22.435",
+        "out": "01:43:27.394"
+      },
+      "right": {
+        "in": "01:43:27.435",
+        "out": "01:43:32.023"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-50.kdenlive",
+      "join": 50,
+      "out_join": "01:43:32.023",
+      "removed_s": 30.656,
+      "source_removed": {
+        "in": "02:19:08.800",
+        "out": "02:19:39.456"
+      },
+      "left": {
+        "in": "01:43:27.023",
+        "out": "01:43:31.981"
+      },
+      "right": {
+        "in": "01:43:32.023",
+        "out": "01:43:37.023"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-51.kdenlive",
+      "join": 51,
+      "out_join": "01:43:38.029",
+      "removed_s": 4.129,
+      "source_removed": {
+        "in": "02:19:45.420",
+        "out": "02:19:49.549"
+      },
+      "left": {
+        "in": "01:43:33.029",
+        "out": "01:43:37.987"
+      },
+      "right": {
+        "in": "01:43:38.029",
+        "out": "01:43:41.407"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-52.kdenlive",
+      "join": 52,
+      "out_join": "01:43:41.407",
+      "removed_s": 169.073,
+      "source_removed": {
+        "in": "02:19:52.886",
+        "out": "02:22:41.959"
+      },
+      "left": {
+        "in": "01:43:36.407",
+        "out": "01:43:41.366"
+      },
+      "right": {
+        "in": "01:43:41.407",
+        "out": "01:43:46.407"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-53.kdenlive",
+      "join": 53,
+      "out_join": "01:43:52.334",
+      "removed_s": 22.129,
+      "source_removed": {
+        "in": "02:22:52.844",
+        "out": "02:23:14.973"
+      },
+      "left": {
+        "in": "01:43:47.334",
+        "out": "01:43:52.292"
+      },
+      "right": {
+        "in": "01:43:52.334",
+        "out": "01:43:57.334"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    },
+    {
+      "file": "seam-54.kdenlive",
+      "join": 54,
+      "out_join": "01:44:08.727",
+      "removed_s": 100.647,
+      "source_removed": {
+        "in": "02:23:31.323",
+        "out": "02:25:11.970"
+      },
+      "left": {
+        "in": "01:44:03.727",
+        "out": "01:44:08.685"
+      },
+      "right": {
+        "in": "01:44:08.727",
+        "out": "01:44:13.727"
+      },
+      "render": "/media/ari/HD/FanEditRender/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv"
+    }
+  ]
+}

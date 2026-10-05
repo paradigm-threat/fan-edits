@@ -1,0 +1,1341 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Sonic (2020) - DeSchwartzed",
+  "source_kdenlive": "Sonic (2020) - DeSchwartzed.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:00:38.539",
+      "removed_s": 191.011,
+      "source_removed": {
+        "in": "00:00:38.497",
+        "out": "00:03:49.508"
+      },
+      "left": {
+        "in": "00:00:33.539",
+        "out": "00:00:38.497"
+      },
+      "right": {
+        "in": "00:00:38.539",
+        "out": "00:00:43.539"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:00:53.952",
+      "removed_s": 33.367,
+      "source_removed": {
+        "in": "00:04:04.880",
+        "out": "00:04:38.247"
+      },
+      "left": {
+        "in": "00:00:48.952",
+        "out": "00:00:53.910"
+      },
+      "right": {
+        "in": "00:00:53.952",
+        "out": "00:00:58.952"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:01:02.419",
+      "removed_s": 3.67,
+      "source_removed": {
+        "in": "00:04:46.672",
+        "out": "00:04:50.342"
+      },
+      "left": {
+        "in": "00:00:57.419",
+        "out": "00:01:02.377"
+      },
+      "right": {
+        "in": "00:01:02.419",
+        "out": "00:01:07.419"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:01:48.572",
+      "removed_s": 429.551,
+      "source_removed": {
+        "in": "00:05:36.453",
+        "out": "00:12:46.004"
+      },
+      "left": {
+        "in": "00:01:43.572",
+        "out": "00:01:48.530"
+      },
+      "right": {
+        "in": "00:01:48.572",
+        "out": "00:01:50.699"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "00:01:50.699",
+      "removed_s": 2.002,
+      "source_removed": {
+        "in": "00:12:48.090",
+        "out": "00:12:50.092"
+      },
+      "left": {
+        "in": "00:01:45.699",
+        "out": "00:01:50.658"
+      },
+      "right": {
+        "in": "00:01:50.699",
+        "out": "00:01:55.699"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "00:02:17.374",
+      "removed_s": 2.294,
+      "source_removed": {
+        "in": "00:13:16.725",
+        "out": "00:13:19.019"
+      },
+      "left": {
+        "in": "00:02:12.374",
+        "out": "00:02:17.332"
+      },
+      "right": {
+        "in": "00:02:17.374",
+        "out": "00:02:22.374"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "00:02:25.299",
+      "removed_s": 105.61,
+      "source_removed": {
+        "in": "00:13:26.902",
+        "out": "00:15:12.512"
+      },
+      "left": {
+        "in": "00:02:20.299",
+        "out": "00:02:25.257"
+      },
+      "right": {
+        "in": "00:02:25.299",
+        "out": "00:02:30.299"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-08.kdenlive",
+      "join": 8,
+      "out_join": "00:02:57.831",
+      "removed_s": 3.587,
+      "source_removed": {
+        "in": "00:15:45.003",
+        "out": "00:15:48.590"
+      },
+      "left": {
+        "in": "00:02:52.831",
+        "out": "00:02:57.790"
+      },
+      "right": {
+        "in": "00:02:57.831",
+        "out": "00:03:02.831"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-09.kdenlive",
+      "join": 9,
+      "out_join": "00:03:04.547",
+      "removed_s": 47.112,
+      "source_removed": {
+        "in": "00:15:55.264",
+        "out": "00:16:42.376"
+      },
+      "left": {
+        "in": "00:02:59.547",
+        "out": "00:03:04.505"
+      },
+      "right": {
+        "in": "00:03:04.547",
+        "out": "00:03:09.547"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-10.kdenlive",
+      "join": 10,
+      "out_join": "00:05:21.398",
+      "removed_s": 6.78,
+      "source_removed": {
+        "in": "00:18:59.184",
+        "out": "00:19:05.964"
+      },
+      "left": {
+        "in": "00:05:16.398",
+        "out": "00:05:21.356"
+      },
+      "right": {
+        "in": "00:05:21.398",
+        "out": "00:05:26.398"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-11.kdenlive",
+      "join": 11,
+      "out_join": "00:05:46.339",
+      "removed_s": 40.939,
+      "source_removed": {
+        "in": "00:19:30.864",
+        "out": "00:20:11.803"
+      },
+      "left": {
+        "in": "00:05:41.339",
+        "out": "00:05:46.298"
+      },
+      "right": {
+        "in": "00:05:46.339",
+        "out": "00:05:51.339"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-12.kdenlive",
+      "join": 12,
+      "out_join": "00:08:04.149",
+      "removed_s": 304.129,
+      "source_removed": {
+        "in": "00:22:29.571",
+        "out": "00:27:33.700"
+      },
+      "left": {
+        "in": "00:07:59.149",
+        "out": "00:08:04.107"
+      },
+      "right": {
+        "in": "00:08:04.149",
+        "out": "00:08:09.149"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-13.kdenlive",
+      "join": 13,
+      "out_join": "00:08:17.329",
+      "removed_s": 5.464,
+      "source_removed": {
+        "in": "00:27:46.838",
+        "out": "00:27:52.302"
+      },
+      "left": {
+        "in": "00:08:12.329",
+        "out": "00:08:17.287"
+      },
+      "right": {
+        "in": "00:08:17.329",
+        "out": "00:08:18.288"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-14.kdenlive",
+      "join": 14,
+      "out_join": "00:08:18.288",
+      "removed_s": 1.585,
+      "source_removed": {
+        "in": "00:27:53.220",
+        "out": "00:27:54.805"
+      },
+      "left": {
+        "in": "00:08:13.288",
+        "out": "00:08:18.247"
+      },
+      "right": {
+        "in": "00:08:18.288",
+        "out": "00:08:23.288"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-15.kdenlive",
+      "join": 15,
+      "out_join": "00:11:13.909",
+      "removed_s": 11.034,
+      "source_removed": {
+        "in": "00:30:50.384",
+        "out": "00:31:01.418"
+      },
+      "left": {
+        "in": "00:11:08.909",
+        "out": "00:11:13.867"
+      },
+      "right": {
+        "in": "00:11:13.909",
+        "out": "00:11:18.909"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-16.kdenlive",
+      "join": 16,
+      "out_join": "00:11:21.000",
+      "removed_s": 8.216,
+      "source_removed": {
+        "in": "00:31:08.467",
+        "out": "00:31:16.683"
+      },
+      "left": {
+        "in": "00:11:16.000",
+        "out": "00:11:20.958"
+      },
+      "right": {
+        "in": "00:11:21.000",
+        "out": "00:11:23.002"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-17.kdenlive",
+      "join": 17,
+      "out_join": "00:11:23.002",
+      "removed_s": 2.419,
+      "source_removed": {
+        "in": "00:31:18.644",
+        "out": "00:31:21.063"
+      },
+      "left": {
+        "in": "00:11:18.002",
+        "out": "00:11:22.961"
+      },
+      "right": {
+        "in": "00:11:23.002",
+        "out": "00:11:28.002"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-18.kdenlive",
+      "join": 18,
+      "out_join": "00:12:59.538",
+      "removed_s": 3.319,
+      "source_removed": {
+        "in": "00:32:57.557",
+        "out": "00:33:00.876"
+      },
+      "left": {
+        "in": "00:12:54.538",
+        "out": "00:12:59.496"
+      },
+      "right": {
+        "in": "00:12:59.538",
+        "out": "00:13:04.538"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-19.kdenlive",
+      "join": 19,
+      "out_join": "00:13:20.142",
+      "removed_s": 2.294,
+      "source_removed": {
+        "in": "00:33:21.438",
+        "out": "00:33:23.732"
+      },
+      "left": {
+        "in": "00:13:15.142",
+        "out": "00:13:20.100"
+      },
+      "right": {
+        "in": "00:13:20.142",
+        "out": "00:13:22.728"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-20.kdenlive",
+      "join": 20,
+      "out_join": "00:13:22.728",
+      "removed_s": 3.545,
+      "source_removed": {
+        "in": "00:33:26.276",
+        "out": "00:33:29.821"
+      },
+      "left": {
+        "in": "00:13:17.728",
+        "out": "00:13:22.686"
+      },
+      "right": {
+        "in": "00:13:22.728",
+        "out": "00:13:25.022"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-21.kdenlive",
+      "join": 21,
+      "out_join": "00:13:25.022",
+      "removed_s": 3.587,
+      "source_removed": {
+        "in": "00:33:32.074",
+        "out": "00:33:35.661"
+      },
+      "left": {
+        "in": "00:13:20.022",
+        "out": "00:13:24.981"
+      },
+      "right": {
+        "in": "00:13:25.022",
+        "out": "00:13:26.565"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-22.kdenlive",
+      "join": 22,
+      "out_join": "00:13:26.565",
+      "removed_s": 2.544,
+      "source_removed": {
+        "in": "00:33:37.162",
+        "out": "00:33:39.706"
+      },
+      "left": {
+        "in": "00:13:21.565",
+        "out": "00:13:26.523"
+      },
+      "right": {
+        "in": "00:13:26.565",
+        "out": "00:13:31.565"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-23.kdenlive",
+      "join": 23,
+      "out_join": "00:13:33.072",
+      "removed_s": 5.756,
+      "source_removed": {
+        "in": "00:33:46.171",
+        "out": "00:33:51.927"
+      },
+      "left": {
+        "in": "00:13:28.072",
+        "out": "00:13:33.030"
+      },
+      "right": {
+        "in": "00:13:33.072",
+        "out": "00:13:38.072"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-24.kdenlive",
+      "join": 24,
+      "out_join": "00:13:59.830",
+      "removed_s": 15.64,
+      "source_removed": {
+        "in": "00:34:18.644",
+        "out": "00:34:34.284"
+      },
+      "left": {
+        "in": "00:13:54.830",
+        "out": "00:13:59.788"
+      },
+      "right": {
+        "in": "00:13:59.830",
+        "out": "00:14:04.830"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-25.kdenlive",
+      "join": 25,
+      "out_join": "00:14:35.306",
+      "removed_s": 136.016,
+      "source_removed": {
+        "in": "00:35:09.718",
+        "out": "00:37:25.734"
+      },
+      "left": {
+        "in": "00:14:30.306",
+        "out": "00:14:35.264"
+      },
+      "right": {
+        "in": "00:14:35.306",
+        "out": "00:14:40.306"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-26.kdenlive",
+      "join": 26,
+      "out_join": "00:14:51.823",
+      "removed_s": 40.731,
+      "source_removed": {
+        "in": "00:37:42.209",
+        "out": "00:38:22.940"
+      },
+      "left": {
+        "in": "00:14:46.823",
+        "out": "00:14:51.781"
+      },
+      "right": {
+        "in": "00:14:51.823",
+        "out": "00:14:56.823"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-27.kdenlive",
+      "join": 27,
+      "out_join": "00:15:11.383",
+      "removed_s": 58.123,
+      "source_removed": {
+        "in": "00:38:42.459",
+        "out": "00:39:40.582"
+      },
+      "left": {
+        "in": "00:15:06.383",
+        "out": "00:15:11.342"
+      },
+      "right": {
+        "in": "00:15:11.383",
+        "out": "00:15:16.383"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-28.kdenlive",
+      "join": 28,
+      "out_join": "00:15:20.476",
+      "removed_s": 6.173,
+      "source_removed": {
+        "in": "00:39:49.633",
+        "out": "00:39:55.806"
+      },
+      "left": {
+        "in": "00:15:15.476",
+        "out": "00:15:20.434"
+      },
+      "right": {
+        "in": "00:15:20.476",
+        "out": "00:15:25.476"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-29.kdenlive",
+      "join": 29,
+      "out_join": "00:16:54.158",
+      "removed_s": 740.687,
+      "source_removed": {
+        "in": "00:41:29.446",
+        "out": "00:53:50.133"
+      },
+      "left": {
+        "in": "00:16:49.158",
+        "out": "00:16:54.116"
+      },
+      "right": {
+        "in": "00:16:54.158",
+        "out": "00:16:59.158"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-30.kdenlive",
+      "join": 30,
+      "out_join": "00:17:24.336",
+      "removed_s": 17.059,
+      "source_removed": {
+        "in": "00:54:20.270",
+        "out": "00:54:37.329"
+      },
+      "left": {
+        "in": "00:17:19.336",
+        "out": "00:17:24.295"
+      },
+      "right": {
+        "in": "00:17:24.336",
+        "out": "00:17:29.336"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-31.kdenlive",
+      "join": 31,
+      "out_join": "00:17:38.892",
+      "removed_s": 9.825,
+      "source_removed": {
+        "in": "00:54:51.843",
+        "out": "00:55:01.668"
+      },
+      "left": {
+        "in": "00:17:33.892",
+        "out": "00:17:38.850"
+      },
+      "right": {
+        "in": "00:17:38.892",
+        "out": "00:17:43.892"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-32.kdenlive",
+      "join": 32,
+      "out_join": "00:17:45.441",
+      "removed_s": 5.297,
+      "source_removed": {
+        "in": "00:55:08.175",
+        "out": "00:55:13.472"
+      },
+      "left": {
+        "in": "00:17:40.441",
+        "out": "00:17:45.399"
+      },
+      "right": {
+        "in": "00:17:45.441",
+        "out": "00:17:50.441"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-33.kdenlive",
+      "join": 33,
+      "out_join": "00:18:18.348",
+      "removed_s": 2.461,
+      "source_removed": {
+        "in": "00:55:46.338",
+        "out": "00:55:48.799"
+      },
+      "left": {
+        "in": "00:18:13.348",
+        "out": "00:18:18.307"
+      },
+      "right": {
+        "in": "00:18:18.348",
+        "out": "00:18:20.392"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-34.kdenlive",
+      "join": 34,
+      "out_join": "00:18:20.392",
+      "removed_s": 12.369,
+      "source_removed": {
+        "in": "00:55:50.801",
+        "out": "00:56:03.170"
+      },
+      "left": {
+        "in": "00:18:15.392",
+        "out": "00:18:20.350"
+      },
+      "right": {
+        "in": "00:18:20.392",
+        "out": "00:18:25.392"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-35.kdenlive",
+      "join": 35,
+      "out_join": "00:18:29.693",
+      "removed_s": 2.503,
+      "source_removed": {
+        "in": "00:56:12.429",
+        "out": "00:56:14.932"
+      },
+      "left": {
+        "in": "00:18:24.693",
+        "out": "00:18:29.651"
+      },
+      "right": {
+        "in": "00:18:29.693",
+        "out": "00:18:34.693"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-36.kdenlive",
+      "join": 36,
+      "out_join": "00:18:40.078",
+      "removed_s": 2.92,
+      "source_removed": {
+        "in": "00:56:25.275",
+        "out": "00:56:28.195"
+      },
+      "left": {
+        "in": "00:18:35.078",
+        "out": "00:18:40.036"
+      },
+      "right": {
+        "in": "00:18:40.078",
+        "out": "00:18:45.078"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-37.kdenlive",
+      "join": 37,
+      "out_join": "00:18:55.009",
+      "removed_s": 6.423,
+      "source_removed": {
+        "in": "00:56:43.085",
+        "out": "00:56:49.508"
+      },
+      "left": {
+        "in": "00:18:50.009",
+        "out": "00:18:54.968"
+      },
+      "right": {
+        "in": "00:18:55.009",
+        "out": "00:18:58.513"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-38.kdenlive",
+      "join": 38,
+      "out_join": "00:18:58.513",
+      "removed_s": 1.376,
+      "source_removed": {
+        "in": "00:56:52.970",
+        "out": "00:56:54.346"
+      },
+      "left": {
+        "in": "00:18:53.513",
+        "out": "00:18:58.471"
+      },
+      "right": {
+        "in": "00:18:58.513",
+        "out": "00:19:01.766"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-39.kdenlive",
+      "join": 39,
+      "out_join": "00:19:01.766",
+      "removed_s": 2.526,
+      "source_removed": {
+        "in": "00:56:57.557",
+        "out": "00:57:00.083"
+      },
+      "left": {
+        "in": "00:18:56.766",
+        "out": "00:19:01.724"
+      },
+      "right": {
+        "in": "00:19:01.766",
+        "out": "00:19:02.850"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-40.kdenlive",
+      "join": 40,
+      "out_join": "00:19:02.850",
+      "removed_s": 7.716,
+      "source_removed": {
+        "in": "00:57:01.126",
+        "out": "00:57:08.842"
+      },
+      "left": {
+        "in": "00:18:57.850",
+        "out": "00:19:02.809"
+      },
+      "right": {
+        "in": "00:19:02.850",
+        "out": "00:19:07.850"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-41.kdenlive",
+      "join": 41,
+      "out_join": "00:19:11.150",
+      "removed_s": 5.923,
+      "source_removed": {
+        "in": "00:57:17.100",
+        "out": "00:57:23.023"
+      },
+      "left": {
+        "in": "00:19:06.150",
+        "out": "00:19:11.108"
+      },
+      "right": {
+        "in": "00:19:11.150",
+        "out": "00:19:16.150"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-42.kdenlive",
+      "join": 42,
+      "out_join": "00:19:31.295",
+      "removed_s": 4.547,
+      "source_removed": {
+        "in": "00:57:43.126",
+        "out": "00:57:47.673"
+      },
+      "left": {
+        "in": "00:19:26.295",
+        "out": "00:19:31.253"
+      },
+      "right": {
+        "in": "00:19:31.295",
+        "out": "00:19:36.295"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-43.kdenlive",
+      "join": 43,
+      "out_join": "00:19:36.800",
+      "removed_s": 13.412,
+      "source_removed": {
+        "in": "00:57:53.136",
+        "out": "00:58:06.548"
+      },
+      "left": {
+        "in": "00:19:31.800",
+        "out": "00:19:36.758"
+      },
+      "right": {
+        "in": "00:19:36.800",
+        "out": "00:19:38.384"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-44.kdenlive",
+      "join": 44,
+      "out_join": "00:19:38.384",
+      "removed_s": 7.925,
+      "source_removed": {
+        "in": "00:58:08.091",
+        "out": "00:58:16.016"
+      },
+      "left": {
+        "in": "00:19:33.384",
+        "out": "00:19:38.343"
+      },
+      "right": {
+        "in": "00:19:38.384",
+        "out": "00:19:43.384"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-45.kdenlive",
+      "join": 45,
+      "out_join": "00:20:07.039",
+      "removed_s": 4.087,
+      "source_removed": {
+        "in": "00:58:44.628",
+        "out": "00:58:48.715"
+      },
+      "left": {
+        "in": "00:20:02.039",
+        "out": "00:20:06.997"
+      },
+      "right": {
+        "in": "00:20:07.039",
+        "out": "00:20:10.125"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-46.kdenlive",
+      "join": 46,
+      "out_join": "00:20:10.125",
+      "removed_s": 1.585,
+      "source_removed": {
+        "in": "00:58:51.760",
+        "out": "00:58:53.345"
+      },
+      "left": {
+        "in": "00:20:05.125",
+        "out": "00:20:10.084"
+      },
+      "right": {
+        "in": "00:20:10.125",
+        "out": "00:20:15.125"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-47.kdenlive",
+      "join": 47,
+      "out_join": "00:20:48.020",
+      "removed_s": 2.085,
+      "source_removed": {
+        "in": "00:59:31.198",
+        "out": "00:59:33.283"
+      },
+      "left": {
+        "in": "00:20:43.020",
+        "out": "00:20:47.978"
+      },
+      "right": {
+        "in": "00:20:48.020",
+        "out": "00:20:53.020"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-48.kdenlive",
+      "join": 48,
+      "out_join": "00:22:40.179",
+      "removed_s": 64.171,
+      "source_removed": {
+        "in": "01:01:25.525",
+        "out": "01:02:29.696"
+      },
+      "left": {
+        "in": "00:22:35.179",
+        "out": "00:22:40.137"
+      },
+      "right": {
+        "in": "00:22:40.179",
+        "out": "00:22:45.179"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-49.kdenlive",
+      "join": 49,
+      "out_join": "00:25:31.378",
+      "removed_s": 299.541,
+      "source_removed": {
+        "in": "01:05:20.854",
+        "out": "01:10:20.395"
+      },
+      "left": {
+        "in": "00:25:26.378",
+        "out": "00:25:31.337"
+      },
+      "right": {
+        "in": "00:25:31.378",
+        "out": "00:25:36.378"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-50.kdenlive",
+      "join": 50,
+      "out_join": "00:25:41.389",
+      "removed_s": 5.797,
+      "source_removed": {
+        "in": "01:10:30.364",
+        "out": "01:10:36.161"
+      },
+      "left": {
+        "in": "00:25:36.389",
+        "out": "00:25:41.347"
+      },
+      "right": {
+        "in": "00:25:41.389",
+        "out": "00:25:46.389"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-51.kdenlive",
+      "join": 51,
+      "out_join": "00:25:58.114",
+      "removed_s": 24.465,
+      "source_removed": {
+        "in": "01:10:52.844",
+        "out": "01:11:17.309"
+      },
+      "left": {
+        "in": "00:25:53.114",
+        "out": "00:25:58.072"
+      },
+      "right": {
+        "in": "00:25:58.114",
+        "out": "00:26:03.114"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-52.kdenlive",
+      "join": 52,
+      "out_join": "00:26:10.000",
+      "removed_s": 62.753,
+      "source_removed": {
+        "in": "01:11:29.154",
+        "out": "01:12:31.907"
+      },
+      "left": {
+        "in": "00:26:05.000",
+        "out": "00:26:09.959"
+      },
+      "right": {
+        "in": "00:26:10.000",
+        "out": "00:26:15.000"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-53.kdenlive",
+      "join": 53,
+      "out_join": "00:26:22.596",
+      "removed_s": 2.92,
+      "source_removed": {
+        "in": "01:12:44.461",
+        "out": "01:12:47.381"
+      },
+      "left": {
+        "in": "00:26:17.596",
+        "out": "00:26:22.554"
+      },
+      "right": {
+        "in": "00:26:22.596",
+        "out": "00:26:27.596"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-54.kdenlive",
+      "join": 54,
+      "out_join": "00:27:25.432",
+      "removed_s": 2.836,
+      "source_removed": {
+        "in": "01:13:50.175",
+        "out": "01:13:53.011"
+      },
+      "left": {
+        "in": "00:27:20.432",
+        "out": "00:27:25.390"
+      },
+      "right": {
+        "in": "00:27:25.432",
+        "out": "00:27:28.436"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-55.kdenlive",
+      "join": 55,
+      "out_join": "00:27:28.436",
+      "removed_s": 10.158,
+      "source_removed": {
+        "in": "01:13:55.973",
+        "out": "01:14:06.131"
+      },
+      "left": {
+        "in": "00:27:23.436",
+        "out": "00:27:28.394"
+      },
+      "right": {
+        "in": "00:27:28.436",
+        "out": "00:27:33.436"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-56.kdenlive",
+      "join": 56,
+      "out_join": "00:27:35.317",
+      "removed_s": 12.846,
+      "source_removed": {
+        "in": "01:14:12.971",
+        "out": "01:14:25.817"
+      },
+      "left": {
+        "in": "00:27:30.317",
+        "out": "00:27:35.275"
+      },
+      "right": {
+        "in": "00:27:35.317",
+        "out": "00:27:40.317"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-57.kdenlive",
+      "join": 57,
+      "out_join": "00:28:47.121",
+      "removed_s": 5.381,
+      "source_removed": {
+        "in": "01:15:37.579",
+        "out": "01:15:42.960"
+      },
+      "left": {
+        "in": "00:28:42.121",
+        "out": "00:28:47.079"
+      },
+      "right": {
+        "in": "00:28:47.121",
+        "out": "00:28:52.121"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-58.kdenlive",
+      "join": 58,
+      "out_join": "00:29:09.375",
+      "removed_s": 11.595,
+      "source_removed": {
+        "in": "01:16:05.172",
+        "out": "01:16:16.767"
+      },
+      "left": {
+        "in": "00:29:04.375",
+        "out": "00:29:09.333"
+      },
+      "right": {
+        "in": "00:29:09.375",
+        "out": "00:29:14.375"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-59.kdenlive",
+      "join": 59,
+      "out_join": "00:29:53.191",
+      "removed_s": 12.304,
+      "source_removed": {
+        "in": "01:17:00.542",
+        "out": "01:17:12.846"
+      },
+      "left": {
+        "in": "00:29:48.191",
+        "out": "00:29:53.150"
+      },
+      "right": {
+        "in": "00:29:53.191",
+        "out": "00:29:58.191"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-60.kdenlive",
+      "join": 60,
+      "out_join": "00:30:59.323",
+      "removed_s": 2.836,
+      "source_removed": {
+        "in": "01:18:18.936",
+        "out": "01:18:21.772"
+      },
+      "left": {
+        "in": "00:30:54.323",
+        "out": "00:30:59.281"
+      },
+      "right": {
+        "in": "00:30:59.323",
+        "out": "00:31:04.323"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-61.kdenlive",
+      "join": 61,
+      "out_join": "00:32:55.027",
+      "removed_s": 28.237,
+      "source_removed": {
+        "in": "01:20:17.434",
+        "out": "01:20:45.671"
+      },
+      "left": {
+        "in": "00:32:50.027",
+        "out": "00:32:54.985"
+      },
+      "right": {
+        "in": "00:32:55.027",
+        "out": "00:33:00.027"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-62.kdenlive",
+      "join": 62,
+      "out_join": "00:33:08.331",
+      "removed_s": 14.705,
+      "source_removed": {
+        "in": "01:20:58.934",
+        "out": "01:21:13.639"
+      },
+      "left": {
+        "in": "00:33:03.331",
+        "out": "00:33:08.290"
+      },
+      "right": {
+        "in": "00:33:08.331",
+        "out": "00:33:13.331"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-63.kdenlive",
+      "join": 63,
+      "out_join": "00:33:32.146",
+      "removed_s": 2.962,
+      "source_removed": {
+        "in": "01:21:37.412",
+        "out": "01:21:40.374"
+      },
+      "left": {
+        "in": "00:33:27.146",
+        "out": "00:33:32.104"
+      },
+      "right": {
+        "in": "00:33:32.146",
+        "out": "00:33:37.146"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-64.kdenlive",
+      "join": 64,
+      "out_join": "00:33:51.540",
+      "removed_s": 8.616,
+      "source_removed": {
+        "in": "01:21:59.726",
+        "out": "01:22:08.342"
+      },
+      "left": {
+        "in": "00:33:46.540",
+        "out": "00:33:51.498"
+      },
+      "right": {
+        "in": "00:33:51.540",
+        "out": "00:33:56.540"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-65.kdenlive",
+      "join": 65,
+      "out_join": "00:34:50.998",
+      "removed_s": 6.089,
+      "source_removed": {
+        "in": "01:23:07.758",
+        "out": "01:23:13.847"
+      },
+      "left": {
+        "in": "00:34:45.998",
+        "out": "00:34:50.956"
+      },
+      "right": {
+        "in": "00:34:50.998",
+        "out": "00:34:55.998"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-66.kdenlive",
+      "join": 66,
+      "out_join": "00:35:39.569",
+      "removed_s": 4.004,
+      "source_removed": {
+        "in": "01:24:02.377",
+        "out": "01:24:06.381"
+      },
+      "left": {
+        "in": "00:35:34.569",
+        "out": "00:35:39.528"
+      },
+      "right": {
+        "in": "00:35:39.569",
+        "out": "00:35:42.072"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-67.kdenlive",
+      "join": 67,
+      "out_join": "00:35:42.072",
+      "removed_s": 1.377,
+      "source_removed": {
+        "in": "01:24:08.842",
+        "out": "01:24:10.219"
+      },
+      "left": {
+        "in": "00:35:37.072",
+        "out": "00:35:42.030"
+      },
+      "right": {
+        "in": "00:35:42.072",
+        "out": "00:35:47.072"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-68.kdenlive",
+      "join": 68,
+      "out_join": "00:35:50.747",
+      "removed_s": 6.507,
+      "source_removed": {
+        "in": "01:24:18.852",
+        "out": "01:24:25.359"
+      },
+      "left": {
+        "in": "00:35:45.747",
+        "out": "00:35:50.705"
+      },
+      "right": {
+        "in": "00:35:50.747",
+        "out": "00:35:55.747"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-69.kdenlive",
+      "join": 69,
+      "out_join": "00:35:56.753",
+      "removed_s": 47.654,
+      "source_removed": {
+        "in": "01:24:31.323",
+        "out": "01:25:18.977"
+      },
+      "left": {
+        "in": "00:35:51.753",
+        "out": "00:35:56.711"
+      },
+      "right": {
+        "in": "00:35:56.753",
+        "out": "00:36:01.753"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-70.kdenlive",
+      "join": 70,
+      "out_join": "00:36:03.384",
+      "removed_s": 301.794,
+      "source_removed": {
+        "in": "01:25:25.567",
+        "out": "01:30:27.361"
+      },
+      "left": {
+        "in": "00:35:58.384",
+        "out": "00:36:03.343"
+      },
+      "right": {
+        "in": "00:36:03.384",
+        "out": "00:36:08.384"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed Edition.mkv"
+    }
+  ]
+}

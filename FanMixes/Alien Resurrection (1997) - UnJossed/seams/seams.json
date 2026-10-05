@@ -1,0 +1,201 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Alien Resurrection (1997) - UnJossed",
+  "source_kdenlive": "Alien Resurrection (1997) - UnJossed.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:15:27.209",
+      "removed_s": 28.866,
+      "source_removed": {
+        "in": "00:15:27.167",
+        "out": "00:15:56.033"
+      },
+      "left": {
+        "in": "00:15:22.209",
+        "out": "00:15:27.167"
+      },
+      "right": {
+        "in": "00:15:27.209",
+        "out": "00:15:32.209"
+      },
+      "render": "/media/ari/HD/FanEditRender/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:18:27.317",
+      "removed_s": 6.667,
+      "source_removed": {
+        "in": "00:18:56.100",
+        "out": "00:19:02.767"
+      },
+      "left": {
+        "in": "00:18:22.317",
+        "out": "00:18:27.276"
+      },
+      "right": {
+        "in": "00:18:27.317",
+        "out": "00:18:32.317"
+      },
+      "render": "/media/ari/HD/FanEditRender/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:20:19.025",
+      "removed_s": 56.0,
+      "source_removed": {
+        "in": "00:20:54.433",
+        "out": "00:21:50.433"
+      },
+      "left": {
+        "in": "00:20:14.025",
+        "out": "00:20:18.983"
+      },
+      "right": {
+        "in": "00:20:19.025",
+        "out": "00:20:24.025"
+      },
+      "render": "/media/ari/HD/FanEditRender/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:22:54.267",
+      "removed_s": 16.167,
+      "source_removed": {
+        "in": "00:24:25.633",
+        "out": "00:24:41.800"
+      },
+      "left": {
+        "in": "00:22:49.267",
+        "out": "00:22:54.225"
+      },
+      "right": {
+        "in": "00:22:54.267",
+        "out": "00:22:59.267"
+      },
+      "render": "/media/ari/HD/FanEditRender/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "00:33:27.109",
+      "removed_s": 111.067,
+      "source_removed": {
+        "in": "00:35:14.600",
+        "out": "00:37:05.667"
+      },
+      "left": {
+        "in": "00:33:22.109",
+        "out": "00:33:27.067"
+      },
+      "right": {
+        "in": "00:33:27.109",
+        "out": "00:33:32.109"
+      },
+      "render": "/media/ari/HD/FanEditRender/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "00:33:55.416",
+      "removed_s": 211.667,
+      "source_removed": {
+        "in": "00:37:33.933",
+        "out": "00:41:05.600"
+      },
+      "left": {
+        "in": "00:33:50.416",
+        "out": "00:33:55.375"
+      },
+      "right": {
+        "in": "00:33:55.416",
+        "out": "00:34:00.416"
+      },
+      "render": "/media/ari/HD/FanEditRender/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "00:34:23.425",
+      "removed_s": 155.866,
+      "source_removed": {
+        "in": "00:41:33.567",
+        "out": "00:44:09.433"
+      },
+      "left": {
+        "in": "00:34:18.425",
+        "out": "00:34:23.383"
+      },
+      "right": {
+        "in": "00:34:23.425",
+        "out": "00:34:28.425"
+      },
+      "render": "/media/ari/HD/FanEditRender/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv"
+    },
+    {
+      "file": "seam-08.kdenlive",
+      "join": 8,
+      "out_join": "00:34:50.834",
+      "removed_s": 268.967,
+      "source_removed": {
+        "in": "00:44:36.800",
+        "out": "00:49:05.767"
+      },
+      "left": {
+        "in": "00:34:45.834",
+        "out": "00:34:50.792"
+      },
+      "right": {
+        "in": "00:34:50.834",
+        "out": "00:34:55.834"
+      },
+      "render": "/media/ari/HD/FanEditRender/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv"
+    },
+    {
+      "file": "seam-09.kdenlive",
+      "join": 9,
+      "out_join": "00:45:28.241",
+      "removed_s": 1.367,
+      "source_removed": {
+        "in": "00:59:43.133",
+        "out": "00:59:44.500"
+      },
+      "left": {
+        "in": "00:45:23.241",
+        "out": "00:45:28.200"
+      },
+      "right": {
+        "in": "00:45:28.241",
+        "out": "00:45:33.241"
+      },
+      "render": "/media/ari/HD/FanEditRender/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv"
+    },
+    {
+      "file": "seam-10.kdenlive",
+      "join": 10,
+      "out_join": "01:13:45.750",
+      "removed_s": 695.2,
+      "source_removed": {
+        "in": "01:28:01.967",
+        "out": "01:39:37.167"
+      },
+      "left": {
+        "in": "01:13:40.750",
+        "out": "01:13:45.708"
+      },
+      "right": {
+        "in": "01:13:45.750",
+        "out": "01:13:50.750"
+      },
+      "render": "/media/ari/HD/FanEditRender/Alien Resurrection (1997) - UnJossed/Alien Resurrection (1997) - UnJossed Edition.mkv"
+    }
+  ]
+}

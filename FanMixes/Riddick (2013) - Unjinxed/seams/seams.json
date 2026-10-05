@@ -1,0 +1,429 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Riddick (2013) - Unjinxed",
+  "source_kdenlive": "Riddick (2013) - Unjinxed.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:02:30.622",
+      "removed_s": 145.65,
+      "source_removed": {
+        "in": "00:13:25.067",
+        "out": "00:15:50.717"
+      },
+      "left": {
+        "in": "00:02:25.622",
+        "out": "00:02:30.580"
+      },
+      "right": {
+        "in": "00:02:30.622",
+        "out": "00:02:35.622"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:19:12.438",
+      "removed_s": 717.049,
+      "source_removed": {
+        "in": "00:10:54.487",
+        "out": "00:22:51.536"
+      },
+      "left": {
+        "in": "00:19:07.438",
+        "out": "00:19:12.396"
+      },
+      "right": {
+        "in": "00:19:12.438",
+        "out": "00:19:17.438"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:37:11.328",
+      "removed_s": 200.752,
+      "source_removed": {
+        "in": "00:40:50.342",
+        "out": "00:44:11.094"
+      },
+      "left": {
+        "in": "00:37:06.328",
+        "out": "00:37:11.286"
+      },
+      "right": {
+        "in": "00:37:11.328",
+        "out": "00:37:16.328"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:48:18.168",
+      "removed_s": 20.062,
+      "source_removed": {
+        "in": "00:55:17.893",
+        "out": "00:55:37.955"
+      },
+      "left": {
+        "in": "00:48:13.168",
+        "out": "00:48:18.127"
+      },
+      "right": {
+        "in": "00:48:18.168",
+        "out": "00:48:23.168"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "00:57:02.402",
+      "removed_s": 139.853,
+      "source_removed": {
+        "in": "01:04:22.147",
+        "out": "01:06:42.000"
+      },
+      "left": {
+        "in": "00:56:57.402",
+        "out": "00:57:02.360"
+      },
+      "right": {
+        "in": "00:57:02.402",
+        "out": "00:57:07.402"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "00:58:23.113",
+      "removed_s": 56.974,
+      "source_removed": {
+        "in": "01:08:02.669",
+        "out": "01:08:59.643"
+      },
+      "left": {
+        "in": "00:58:18.113",
+        "out": "00:58:23.071"
+      },
+      "right": {
+        "in": "00:58:23.113",
+        "out": "00:58:28.113"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "00:59:53.624",
+      "removed_s": 229.74,
+      "source_removed": {
+        "in": "01:10:30.113",
+        "out": "01:14:19.853"
+      },
+      "left": {
+        "in": "00:59:48.624",
+        "out": "00:59:53.583"
+      },
+      "right": {
+        "in": "00:59:53.624",
+        "out": "00:59:58.624"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-08.kdenlive",
+      "join": 8,
+      "out_join": "01:08:18.108",
+      "removed_s": 98.979,
+      "source_removed": {
+        "in": "01:22:44.294",
+        "out": "01:24:23.273"
+      },
+      "left": {
+        "in": "01:08:13.108",
+        "out": "01:08:18.066"
+      },
+      "right": {
+        "in": "01:08:18.108",
+        "out": "01:08:23.108"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-09.kdenlive",
+      "join": 9,
+      "out_join": "01:08:33.707",
+      "removed_s": 2.044,
+      "source_removed": {
+        "in": "01:24:38.830",
+        "out": "01:24:40.874"
+      },
+      "left": {
+        "in": "01:08:28.707",
+        "out": "01:08:33.666"
+      },
+      "right": {
+        "in": "01:08:33.707",
+        "out": "01:08:38.707"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-10.kdenlive",
+      "join": 10,
+      "out_join": "01:08:41.507",
+      "removed_s": 5.088,
+      "source_removed": {
+        "in": "01:24:48.632",
+        "out": "01:24:53.720"
+      },
+      "left": {
+        "in": "01:08:36.507",
+        "out": "01:08:41.465"
+      },
+      "right": {
+        "in": "01:08:41.507",
+        "out": "01:08:46.507"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-11.kdenlive",
+      "join": 11,
+      "out_join": "01:09:13.103",
+      "removed_s": 2.044,
+      "source_removed": {
+        "in": "01:25:25.275",
+        "out": "01:25:27.319"
+      },
+      "left": {
+        "in": "01:09:08.103",
+        "out": "01:09:13.062"
+      },
+      "right": {
+        "in": "01:09:13.103",
+        "out": "01:09:18.103"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-12.kdenlive",
+      "join": 12,
+      "out_join": "01:09:31.163",
+      "removed_s": 31.054,
+      "source_removed": {
+        "in": "01:25:45.337",
+        "out": "01:26:16.391"
+      },
+      "left": {
+        "in": "01:09:26.163",
+        "out": "01:09:31.121"
+      },
+      "right": {
+        "in": "01:09:31.163",
+        "out": "01:09:36.163"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-13.kdenlive",
+      "join": 13,
+      "out_join": "01:11:29.327",
+      "removed_s": 22.064,
+      "source_removed": {
+        "in": "01:28:14.514",
+        "out": "01:28:36.578"
+      },
+      "left": {
+        "in": "01:11:24.327",
+        "out": "01:11:29.286"
+      },
+      "right": {
+        "in": "01:11:29.327",
+        "out": "01:11:34.327"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-14.kdenlive",
+      "join": 14,
+      "out_join": "01:12:17.941",
+      "removed_s": 5430.572,
+      "source_removed": {
+        "in": "01:29:25.150",
+        "out": "02:59:55.722"
+      },
+      "left": {
+        "in": "01:12:12.941",
+        "out": "01:12:17.899"
+      },
+      "right": {
+        "in": "01:12:17.941",
+        "out": "01:12:22.941"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-15.kdenlive",
+      "join": 15,
+      "out_join": "01:12:44.242",
+      "removed_s": 64.462,
+      "source_removed": {
+        "in": "01:30:23.357",
+        "out": "01:31:27.819"
+      },
+      "left": {
+        "in": "01:12:39.242",
+        "out": "01:12:44.200"
+      },
+      "right": {
+        "in": "01:12:44.242",
+        "out": "01:12:49.242"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-16.kdenlive",
+      "join": 16,
+      "out_join": "01:17:20.510",
+      "removed_s": 63.545,
+      "source_removed": {
+        "in": "01:36:04.046",
+        "out": "01:37:07.591"
+      },
+      "left": {
+        "in": "01:17:15.510",
+        "out": "01:17:20.469"
+      },
+      "right": {
+        "in": "01:17:20.510",
+        "out": "01:17:25.510"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-17.kdenlive",
+      "join": 17,
+      "out_join": "01:19:08.725",
+      "removed_s": 11.076,
+      "source_removed": {
+        "in": "01:38:55.764",
+        "out": "01:39:06.840"
+      },
+      "left": {
+        "in": "01:19:03.725",
+        "out": "01:19:08.683"
+      },
+      "right": {
+        "in": "01:19:08.725",
+        "out": "01:19:13.725"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-18.kdenlive",
+      "join": 18,
+      "out_join": "01:19:15.231",
+      "removed_s": 19.478,
+      "source_removed": {
+        "in": "01:39:13.305",
+        "out": "01:39:32.783"
+      },
+      "left": {
+        "in": "01:19:10.231",
+        "out": "01:19:15.190"
+      },
+      "right": {
+        "in": "01:19:15.231",
+        "out": "01:19:20.231"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-19.kdenlive",
+      "join": 19,
+      "out_join": "01:19:56.713",
+      "removed_s": 18.56,
+      "source_removed": {
+        "in": "01:40:14.223",
+        "out": "01:40:32.783"
+      },
+      "left": {
+        "in": "01:19:51.713",
+        "out": "01:19:56.671"
+      },
+      "right": {
+        "in": "01:19:56.713",
+        "out": "01:20:01.713"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-20.kdenlive",
+      "join": 20,
+      "out_join": "01:20:51.416",
+      "removed_s": 11.053,
+      "source_removed": {
+        "in": "01:41:27.444",
+        "out": "01:41:38.497"
+      },
+      "left": {
+        "in": "01:20:46.416",
+        "out": "01:20:51.374"
+      },
+      "right": {
+        "in": "01:20:51.416",
+        "out": "01:20:56.416"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-21.kdenlive",
+      "join": 21,
+      "out_join": "01:24:23.929",
+      "removed_s": 10.594,
+      "source_removed": {
+        "in": "01:45:10.969",
+        "out": "01:45:21.563"
+      },
+      "left": {
+        "in": "01:24:18.929",
+        "out": "01:24:23.888"
+      },
+      "right": {
+        "in": "01:24:23.929",
+        "out": "01:24:28.929"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    },
+    {
+      "file": "seam-22.kdenlive",
+      "join": 22,
+      "out_join": "01:38:05.119",
+      "removed_s": 6.715,
+      "source_removed": {
+        "in": "01:59:02.711",
+        "out": "01:59:09.426"
+      },
+      "left": {
+        "in": "01:38:00.119",
+        "out": "01:38:05.077"
+      },
+      "right": {
+        "in": "01:38:05.119",
+        "out": "01:38:10.119"
+      },
+      "render": "/media/ari/HD/FanEditRender/Riddick (2013) - Unjinxed/Riddick (2013) - Unjinxed.mkv"
+    }
+  ]
+}

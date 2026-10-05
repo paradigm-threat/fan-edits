@@ -1,0 +1,391 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "The Mummy (1999) - Debugged",
+  "source_kdenlive": "The Mummy Debugged.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:05:20.229",
+      "removed_s": 63.461,
+      "source_removed": {
+        "in": "00:05:20.229",
+        "out": "00:06:23.690"
+      },
+      "left": {
+        "in": "00:05:15.229",
+        "out": "00:05:20.187"
+      },
+      "right": {
+        "in": "00:05:20.229",
+        "out": "00:05:25.229"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:40:33.116",
+      "removed_s": 19.52,
+      "source_removed": {
+        "in": "00:41:36.536",
+        "out": "00:41:56.056"
+      },
+      "left": {
+        "in": "00:40:28.116",
+        "out": "00:40:33.075"
+      },
+      "right": {
+        "in": "00:40:33.116",
+        "out": "00:40:38.116"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:42:45.360",
+      "removed_s": 75.766,
+      "source_removed": {
+        "in": "00:44:08.258",
+        "out": "00:45:24.024"
+      },
+      "left": {
+        "in": "00:42:40.360",
+        "out": "00:42:45.318"
+      },
+      "right": {
+        "in": "00:42:45.360",
+        "out": "00:42:50.360"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:43:41.356",
+      "removed_s": 50.282,
+      "source_removed": {
+        "in": "00:46:19.978",
+        "out": "00:47:10.260"
+      },
+      "left": {
+        "in": "00:43:36.356",
+        "out": "00:43:41.314"
+      },
+      "right": {
+        "in": "00:43:41.356",
+        "out": "00:43:46.356"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "00:44:18.936",
+      "removed_s": 23.213,
+      "source_removed": {
+        "in": "00:47:47.798",
+        "out": "00:48:11.011"
+      },
+      "left": {
+        "in": "00:44:13.936",
+        "out": "00:44:18.894"
+      },
+      "right": {
+        "in": "00:44:18.936",
+        "out": "00:44:23.936"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "00:44:53.386",
+      "removed_s": 21.337,
+      "source_removed": {
+        "in": "00:48:45.420",
+        "out": "00:49:06.757"
+      },
+      "left": {
+        "in": "00:44:48.386",
+        "out": "00:44:53.345"
+      },
+      "right": {
+        "in": "00:44:53.386",
+        "out": "00:44:58.386"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "00:51:56.389",
+      "removed_s": 41.625,
+      "source_removed": {
+        "in": "00:56:09.718",
+        "out": "00:56:51.343"
+      },
+      "left": {
+        "in": "00:51:51.389",
+        "out": "00:51:56.347"
+      },
+      "right": {
+        "in": "00:51:56.389",
+        "out": "00:52:01.389"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-08.kdenlive",
+      "join": 8,
+      "out_join": "00:53:07.966",
+      "removed_s": 58.957,
+      "source_removed": {
+        "in": "00:58:02.878",
+        "out": "00:59:01.835"
+      },
+      "left": {
+        "in": "00:53:02.966",
+        "out": "00:53:07.924"
+      },
+      "right": {
+        "in": "00:53:07.966",
+        "out": "00:53:12.966"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-09.kdenlive",
+      "join": 9,
+      "out_join": "00:55:35.785",
+      "removed_s": 79.311,
+      "source_removed": {
+        "in": "01:01:29.613",
+        "out": "01:02:48.924"
+      },
+      "left": {
+        "in": "00:55:30.785",
+        "out": "00:55:35.744"
+      },
+      "right": {
+        "in": "00:55:35.785",
+        "out": "00:55:40.785"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-10.kdenlive",
+      "join": 10,
+      "out_join": "00:56:02.085",
+      "removed_s": 147.861,
+      "source_removed": {
+        "in": "01:03:15.182",
+        "out": "01:05:43.043"
+      },
+      "left": {
+        "in": "00:55:57.085",
+        "out": "00:56:02.043"
+      },
+      "right": {
+        "in": "00:56:02.085",
+        "out": "00:56:07.085"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-11.kdenlive",
+      "join": 11,
+      "out_join": "00:56:19.459",
+      "removed_s": 23.607,
+      "source_removed": {
+        "in": "01:06:00.375",
+        "out": "01:06:23.982"
+      },
+      "left": {
+        "in": "00:56:14.459",
+        "out": "00:56:19.417"
+      },
+      "right": {
+        "in": "00:56:19.459",
+        "out": "00:56:24.459"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-12.kdenlive",
+      "join": 12,
+      "out_join": "00:56:26.632",
+      "removed_s": 14.682,
+      "source_removed": {
+        "in": "01:06:31.114",
+        "out": "01:06:45.796"
+      },
+      "left": {
+        "in": "00:56:21.632",
+        "out": "00:56:26.591"
+      },
+      "right": {
+        "in": "00:56:26.632",
+        "out": "00:56:31.632"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-13.kdenlive",
+      "join": 13,
+      "out_join": "00:58:12.159",
+      "removed_s": 4.797,
+      "source_removed": {
+        "in": "01:08:31.281",
+        "out": "01:08:36.078"
+      },
+      "left": {
+        "in": "00:58:07.159",
+        "out": "00:58:12.117"
+      },
+      "right": {
+        "in": "00:58:12.159",
+        "out": "00:58:17.159"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-14.kdenlive",
+      "join": 14,
+      "out_join": "01:00:39.293",
+      "removed_s": 62.502,
+      "source_removed": {
+        "in": "01:11:03.170",
+        "out": "01:12:05.672"
+      },
+      "left": {
+        "in": "01:00:34.293",
+        "out": "01:00:39.251"
+      },
+      "right": {
+        "in": "01:00:39.293",
+        "out": "01:00:44.293"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-15.kdenlive",
+      "join": 15,
+      "out_join": "01:12:48.677",
+      "removed_s": 8.091,
+      "source_removed": {
+        "in": "01:24:15.015",
+        "out": "01:24:23.106"
+      },
+      "left": {
+        "in": "01:12:43.677",
+        "out": "01:12:48.636"
+      },
+      "right": {
+        "in": "01:12:48.677",
+        "out": "01:12:53.677"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-16.kdenlive",
+      "join": 16,
+      "out_join": "01:12:56.310",
+      "removed_s": 2.628,
+      "source_removed": {
+        "in": "01:24:30.697",
+        "out": "01:24:33.325"
+      },
+      "left": {
+        "in": "01:12:51.310",
+        "out": "01:12:56.268"
+      },
+      "right": {
+        "in": "01:12:56.310",
+        "out": "01:13:01.310"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-17.kdenlive",
+      "join": 17,
+      "out_join": "01:23:10.283",
+      "removed_s": 9.551,
+      "source_removed": {
+        "in": "01:34:47.256",
+        "out": "01:34:56.807"
+      },
+      "left": {
+        "in": "01:23:05.283",
+        "out": "01:23:10.241"
+      },
+      "right": {
+        "in": "01:23:10.283",
+        "out": "01:23:15.283"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-18.kdenlive",
+      "join": 18,
+      "out_join": "01:24:27.781",
+      "removed_s": 81.23,
+      "source_removed": {
+        "in": "01:36:14.264",
+        "out": "01:37:35.494"
+      },
+      "left": {
+        "in": "01:24:22.781",
+        "out": "01:24:27.740"
+      },
+      "right": {
+        "in": "01:24:27.781",
+        "out": "01:24:32.781"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-19.kdenlive",
+      "join": 19,
+      "out_join": "01:29:39.126",
+      "removed_s": 7.174,
+      "source_removed": {
+        "in": "01:42:46.797",
+        "out": "01:42:53.971"
+      },
+      "left": {
+        "in": "01:29:34.126",
+        "out": "01:29:39.084"
+      },
+      "right": {
+        "in": "01:29:39.126",
+        "out": "01:29:44.126"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    },
+    {
+      "file": "seam-20.kdenlive",
+      "join": 20,
+      "out_join": "01:40:12.433",
+      "removed_s": 68.967,
+      "source_removed": {
+        "in": "01:53:27.236",
+        "out": "01:54:36.203"
+      },
+      "left": {
+        "in": "01:40:07.433",
+        "out": "01:40:12.391"
+      },
+      "right": {
+        "in": "01:40:12.433",
+        "out": "01:40:17.433"
+      },
+      "render": "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+    }
+  ]
+}

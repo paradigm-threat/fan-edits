@@ -1,0 +1,201 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Matrix Revolutions (2003) - Unlinked",
+  "source_kdenlive": "Matrix Revolutions (2003) - Unlinked.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Matrix Revolutions (2003) - Unlinked/Matrix Revolutions (2003) - Unlinked Edition.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:04:03.379",
+      "removed_s": 16.433,
+      "source_removed": {
+        "in": "00:04:03.337",
+        "out": "00:04:19.770"
+      },
+      "left": {
+        "in": "00:03:58.379",
+        "out": "00:04:03.337"
+      },
+      "right": {
+        "in": "00:04:03.379",
+        "out": "00:04:08.379"
+      },
+      "render": "/media/ari/HD/FanEditRender/Matrix Revolutions (2003) - Unlinked/Matrix Revolutions (2003) - Unlinked Edition.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:13:37.162",
+      "removed_s": 3.795,
+      "source_removed": {
+        "in": "00:13:53.512",
+        "out": "00:13:57.307"
+      },
+      "left": {
+        "in": "00:13:32.162",
+        "out": "00:13:37.121"
+      },
+      "right": {
+        "in": "00:13:37.162",
+        "out": "00:13:42.162"
+      },
+      "render": "/media/ari/HD/FanEditRender/Matrix Revolutions (2003) - Unlinked/Matrix Revolutions (2003) - Unlinked Edition.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:40:31.657",
+      "removed_s": 68.008,
+      "source_removed": {
+        "in": "00:40:51.760",
+        "out": "00:41:59.768"
+      },
+      "left": {
+        "in": "00:40:26.657",
+        "out": "00:40:31.615"
+      },
+      "right": {
+        "in": "00:40:31.657",
+        "out": "00:40:36.657"
+      },
+      "render": "/media/ari/HD/FanEditRender/Matrix Revolutions (2003) - Unlinked/Matrix Revolutions (2003) - Unlinked Edition.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:49:33.516",
+      "removed_s": 27.152,
+      "source_removed": {
+        "in": "00:51:01.585",
+        "out": "00:51:28.737"
+      },
+      "left": {
+        "in": "00:49:28.516",
+        "out": "00:49:33.474"
+      },
+      "right": {
+        "in": "00:49:33.516",
+        "out": "00:49:38.516"
+      },
+      "render": "/media/ari/HD/FanEditRender/Matrix Revolutions (2003) - Unlinked/Matrix Revolutions (2003) - Unlinked Edition.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "00:52:11.995",
+      "removed_s": 30.655,
+      "source_removed": {
+        "in": "00:54:07.174",
+        "out": "00:54:37.829"
+      },
+      "left": {
+        "in": "00:52:06.995",
+        "out": "00:52:11.953"
+      },
+      "right": {
+        "in": "00:52:11.995",
+        "out": "00:52:16.995"
+      },
+      "render": "/media/ari/HD/FanEditRender/Matrix Revolutions (2003) - Unlinked/Matrix Revolutions (2003) - Unlinked Edition.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "00:58:56.480",
+      "removed_s": 4.254,
+      "source_removed": {
+        "in": "01:01:22.272",
+        "out": "01:01:26.526"
+      },
+      "left": {
+        "in": "00:58:51.480",
+        "out": "00:58:56.438"
+      },
+      "right": {
+        "in": "00:58:56.480",
+        "out": "00:59:01.480"
+      },
+      "render": "/media/ari/HD/FanEditRender/Matrix Revolutions (2003) - Unlinked/Matrix Revolutions (2003) - Unlinked Edition.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "01:15:31.288",
+      "removed_s": 10.385,
+      "source_removed": {
+        "in": "01:18:01.293",
+        "out": "01:18:11.678"
+      },
+      "left": {
+        "in": "01:15:26.288",
+        "out": "01:15:31.247"
+      },
+      "right": {
+        "in": "01:15:31.288",
+        "out": "01:15:36.288"
+      },
+      "render": "/media/ari/HD/FanEditRender/Matrix Revolutions (2003) - Unlinked/Matrix Revolutions (2003) - Unlinked Edition.mkv"
+    },
+    {
+      "file": "seam-08.kdenlive",
+      "join": 8,
+      "out_join": "01:19:27.994",
+      "removed_s": 10.969,
+      "source_removed": {
+        "in": "01:22:08.342",
+        "out": "01:22:19.311"
+      },
+      "left": {
+        "in": "01:19:22.994",
+        "out": "01:19:27.952"
+      },
+      "right": {
+        "in": "01:19:27.994",
+        "out": "01:19:32.994"
+      },
+      "render": "/media/ari/HD/FanEditRender/Matrix Revolutions (2003) - Unlinked/Matrix Revolutions (2003) - Unlinked Edition.mkv"
+    },
+    {
+      "file": "seam-09.kdenlive",
+      "join": 9,
+      "out_join": "01:20:04.113",
+      "removed_s": 7.197,
+      "source_removed": {
+        "in": "01:22:55.389",
+        "out": "01:23:02.586"
+      },
+      "left": {
+        "in": "01:19:59.113",
+        "out": "01:20:04.071"
+      },
+      "right": {
+        "in": "01:20:04.113",
+        "out": "01:20:09.113"
+      },
+      "render": "/media/ari/HD/FanEditRender/Matrix Revolutions (2003) - Unlinked/Matrix Revolutions (2003) - Unlinked Edition.mkv"
+    },
+    {
+      "file": "seam-10.kdenlive",
+      "join": 10,
+      "out_join": "01:52:50.326",
+      "removed_s": 2.628,
+      "source_removed": {
+        "in": "01:55:48.757",
+        "out": "01:55:51.385"
+      },
+      "left": {
+        "in": "01:52:45.326",
+        "out": "01:52:50.284"
+      },
+      "right": {
+        "in": "01:52:50.326",
+        "out": "01:52:55.326"
+      },
+      "render": "/media/ari/HD/FanEditRender/Matrix Revolutions (2003) - Unlinked/Matrix Revolutions (2003) - Unlinked Edition.mkv"
+    }
+  ]
+}

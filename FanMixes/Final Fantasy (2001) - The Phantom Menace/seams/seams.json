@@ -1,0 +1,1018 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Final Fantasy (2001) - The Phantom Menace",
+  "source_kdenlive": "Final Fantasy (2001) - The Phantom Menace.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:00:28.696",
+      "removed_s": 26.109,
+      "source_removed": {
+        "in": "00:00:28.654",
+        "out": "00:00:54.763"
+      },
+      "left": {
+        "in": "00:00:23.696",
+        "out": "00:00:28.654"
+      },
+      "right": {
+        "in": "00:00:28.696",
+        "out": "00:00:33.696"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:08:14.849",
+      "removed_s": 16.85,
+      "source_removed": {
+        "in": "00:08:40.874",
+        "out": "00:08:57.724"
+      },
+      "left": {
+        "in": "00:08:09.849",
+        "out": "00:08:14.807"
+      },
+      "right": {
+        "in": "00:08:14.849",
+        "out": "00:08:19.849"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:08:37.229",
+      "removed_s": 7.507,
+      "source_removed": {
+        "in": "00:09:20.062",
+        "out": "00:09:27.569"
+      },
+      "left": {
+        "in": "00:08:32.229",
+        "out": "00:08:37.187"
+      },
+      "right": {
+        "in": "00:08:37.229",
+        "out": "00:08:42.229"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:08:47.073",
+      "removed_s": 9.759,
+      "source_removed": {
+        "in": "00:09:37.371",
+        "out": "00:09:47.130"
+      },
+      "left": {
+        "in": "00:08:42.073",
+        "out": "00:08:47.031"
+      },
+      "right": {
+        "in": "00:08:47.073",
+        "out": "00:08:49.784"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "00:08:49.784",
+      "removed_s": 2.335,
+      "source_removed": {
+        "in": "00:09:49.800",
+        "out": "00:09:52.135"
+      },
+      "left": {
+        "in": "00:08:44.784",
+        "out": "00:08:49.743"
+      },
+      "right": {
+        "in": "00:08:49.784",
+        "out": "00:08:54.784"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "00:08:57.292",
+      "removed_s": 2.526,
+      "source_removed": {
+        "in": "00:09:59.601",
+        "out": "00:10:02.127"
+      },
+      "left": {
+        "in": "00:08:52.292",
+        "out": "00:08:57.250"
+      },
+      "right": {
+        "in": "00:08:57.292",
+        "out": "00:08:59.420"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "00:08:59.420",
+      "removed_s": 4.087,
+      "source_removed": {
+        "in": "00:10:04.213",
+        "out": "00:10:08.300"
+      },
+      "left": {
+        "in": "00:08:54.420",
+        "out": "00:08:59.378"
+      },
+      "right": {
+        "in": "00:08:59.420",
+        "out": "00:09:04.420"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-08.kdenlive",
+      "join": 8,
+      "out_join": "00:10:14.309",
+      "removed_s": 53.118,
+      "source_removed": {
+        "in": "00:11:23.148",
+        "out": "00:12:16.266"
+      },
+      "left": {
+        "in": "00:10:09.309",
+        "out": "00:10:14.268"
+      },
+      "right": {
+        "in": "00:10:14.309",
+        "out": "00:10:19.309"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-09.kdenlive",
+      "join": 9,
+      "out_join": "00:11:16.895",
+      "removed_s": 17.268,
+      "source_removed": {
+        "in": "00:13:18.810",
+        "out": "00:13:36.078"
+      },
+      "left": {
+        "in": "00:11:11.895",
+        "out": "00:11:16.853"
+      },
+      "right": {
+        "in": "00:11:16.895",
+        "out": "00:11:21.895"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-10.kdenlive",
+      "join": 10,
+      "out_join": "00:11:32.993",
+      "removed_s": 5.673,
+      "source_removed": {
+        "in": "00:13:52.135",
+        "out": "00:13:57.808"
+      },
+      "left": {
+        "in": "00:11:27.993",
+        "out": "00:11:32.951"
+      },
+      "right": {
+        "in": "00:11:32.993",
+        "out": "00:11:37.993"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-11.kdenlive",
+      "join": 11,
+      "out_join": "00:11:46.864",
+      "removed_s": 7.757,
+      "source_removed": {
+        "in": "00:14:11.637",
+        "out": "00:14:19.394"
+      },
+      "left": {
+        "in": "00:11:41.864",
+        "out": "00:11:46.822"
+      },
+      "right": {
+        "in": "00:11:46.864",
+        "out": "00:11:51.864"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-12.kdenlive",
+      "join": 12,
+      "out_join": "00:13:14.933",
+      "removed_s": 2.92,
+      "source_removed": {
+        "in": "00:15:47.422",
+        "out": "00:15:50.342"
+      },
+      "left": {
+        "in": "00:13:09.933",
+        "out": "00:13:14.892"
+      },
+      "right": {
+        "in": "00:13:14.933",
+        "out": "00:13:18.061"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-13.kdenlive",
+      "join": 13,
+      "out_join": "00:13:18.061",
+      "removed_s": 5.464,
+      "source_removed": {
+        "in": "00:15:53.428",
+        "out": "00:15:58.892"
+      },
+      "left": {
+        "in": "00:13:13.061",
+        "out": "00:13:18.019"
+      },
+      "right": {
+        "in": "00:13:18.061",
+        "out": "00:13:23.061"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-14.kdenlive",
+      "join": 14,
+      "out_join": "00:14:34.434",
+      "removed_s": 33.783,
+      "source_removed": {
+        "in": "00:17:15.224",
+        "out": "00:17:49.007"
+      },
+      "left": {
+        "in": "00:14:29.434",
+        "out": "00:14:34.393"
+      },
+      "right": {
+        "in": "00:14:34.434",
+        "out": "00:14:39.434"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-15.kdenlive",
+      "join": 15,
+      "out_join": "00:15:01.735",
+      "removed_s": 114.787,
+      "source_removed": {
+        "in": "00:18:16.266",
+        "out": "00:20:11.053"
+      },
+      "left": {
+        "in": "00:14:56.735",
+        "out": "00:15:01.693"
+      },
+      "right": {
+        "in": "00:15:01.735",
+        "out": "00:15:06.735"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-16.kdenlive",
+      "join": 16,
+      "out_join": "00:15:55.646",
+      "removed_s": 165.211,
+      "source_removed": {
+        "in": "00:21:04.922",
+        "out": "00:23:50.133"
+      },
+      "left": {
+        "in": "00:15:50.646",
+        "out": "00:15:55.604"
+      },
+      "right": {
+        "in": "00:15:55.646",
+        "out": "00:16:00.646"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-17.kdenlive",
+      "join": 17,
+      "out_join": "00:17:25.408",
+      "removed_s": 4.505,
+      "source_removed": {
+        "in": "00:25:19.853",
+        "out": "00:25:24.358"
+      },
+      "left": {
+        "in": "00:17:20.408",
+        "out": "00:17:25.366"
+      },
+      "right": {
+        "in": "00:17:25.408",
+        "out": "00:17:30.408"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-18.kdenlive",
+      "join": 18,
+      "out_join": "00:18:30.704",
+      "removed_s": 13.388,
+      "source_removed": {
+        "in": "00:26:29.613",
+        "out": "00:26:43.001"
+      },
+      "left": {
+        "in": "00:18:25.704",
+        "out": "00:18:30.663"
+      },
+      "right": {
+        "in": "00:18:30.704",
+        "out": "00:18:35.704"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-19.kdenlive",
+      "join": 19,
+      "out_join": "00:18:40.965",
+      "removed_s": 15.747,
+      "source_removed": {
+        "in": "00:26:53.220",
+        "out": "00:27:08.967"
+      },
+      "left": {
+        "in": "00:18:35.965",
+        "out": "00:18:40.923"
+      },
+      "right": {
+        "in": "00:18:40.965",
+        "out": "00:18:45.965"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-20.kdenlive",
+      "join": 20,
+      "out_join": "00:18:46.513",
+      "removed_s": 1.96,
+      "source_removed": {
+        "in": "00:27:14.473",
+        "out": "00:27:16.433"
+      },
+      "left": {
+        "in": "00:18:41.513",
+        "out": "00:18:46.471"
+      },
+      "right": {
+        "in": "00:18:46.513",
+        "out": "00:18:49.474"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-21.kdenlive",
+      "join": 21,
+      "out_join": "00:18:49.474",
+      "removed_s": 202.939,
+      "source_removed": {
+        "in": "00:27:19.353",
+        "out": "00:30:42.292"
+      },
+      "left": {
+        "in": "00:18:44.474",
+        "out": "00:18:49.433"
+      },
+      "right": {
+        "in": "00:18:49.474",
+        "out": "00:18:54.474"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-22.kdenlive",
+      "join": 22,
+      "out_join": "00:19:42.926",
+      "removed_s": 8.926,
+      "source_removed": {
+        "in": "00:31:35.702",
+        "out": "00:31:44.628"
+      },
+      "left": {
+        "in": "00:19:37.926",
+        "out": "00:19:42.884"
+      },
+      "right": {
+        "in": "00:19:42.926",
+        "out": "00:19:47.926"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-23.kdenlive",
+      "join": 23,
+      "out_join": "00:20:04.513",
+      "removed_s": 8.55,
+      "source_removed": {
+        "in": "00:32:06.173",
+        "out": "00:32:14.723"
+      },
+      "left": {
+        "in": "00:19:59.513",
+        "out": "00:20:04.471"
+      },
+      "right": {
+        "in": "00:20:04.513",
+        "out": "00:20:09.513"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-24.kdenlive",
+      "join": 24,
+      "out_join": "00:30:13.522",
+      "removed_s": 3.921,
+      "source_removed": {
+        "in": "00:42:23.690",
+        "out": "00:42:27.611"
+      },
+      "left": {
+        "in": "00:30:08.522",
+        "out": "00:30:13.480"
+      },
+      "right": {
+        "in": "00:30:13.522",
+        "out": "00:30:18.522"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-25.kdenlive",
+      "join": 25,
+      "out_join": "00:33:19.110",
+      "removed_s": 10.302,
+      "source_removed": {
+        "in": "00:45:33.158",
+        "out": "00:45:43.460"
+      },
+      "left": {
+        "in": "00:33:14.110",
+        "out": "00:33:19.069"
+      },
+      "right": {
+        "in": "00:33:19.110",
+        "out": "00:33:24.110"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-26.kdenlive",
+      "join": 26,
+      "out_join": "00:33:49.331",
+      "removed_s": 2.21,
+      "source_removed": {
+        "in": "00:46:13.639",
+        "out": "00:46:15.849"
+      },
+      "left": {
+        "in": "00:33:44.331",
+        "out": "00:33:49.289"
+      },
+      "right": {
+        "in": "00:33:49.331",
+        "out": "00:33:54.331"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-27.kdenlive",
+      "join": 27,
+      "out_join": "00:36:56.797",
+      "removed_s": 21.48,
+      "source_removed": {
+        "in": "00:49:23.273",
+        "out": "00:49:44.753"
+      },
+      "left": {
+        "in": "00:36:51.797",
+        "out": "00:36:56.755"
+      },
+      "right": {
+        "in": "00:36:56.797",
+        "out": "00:37:01.797"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-28.kdenlive",
+      "join": 28,
+      "out_join": "00:37:06.765",
+      "removed_s": 1.084,
+      "source_removed": {
+        "in": "00:49:54.680",
+        "out": "00:49:55.764"
+      },
+      "left": {
+        "in": "00:37:01.765",
+        "out": "00:37:06.724"
+      },
+      "right": {
+        "in": "00:37:06.765",
+        "out": "00:37:11.765"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-29.kdenlive",
+      "join": 29,
+      "out_join": "00:38:14.922",
+      "removed_s": 9.009,
+      "source_removed": {
+        "in": "00:51:03.879",
+        "out": "00:51:12.888"
+      },
+      "left": {
+        "in": "00:38:09.922",
+        "out": "00:38:14.880"
+      },
+      "right": {
+        "in": "00:38:14.922",
+        "out": "00:38:19.922"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-30.kdenlive",
+      "join": 30,
+      "out_join": "00:38:23.222",
+      "removed_s": 15.265,
+      "source_removed": {
+        "in": "00:51:21.146",
+        "out": "00:51:36.411"
+      },
+      "left": {
+        "in": "00:38:18.222",
+        "out": "00:38:23.180"
+      },
+      "right": {
+        "in": "00:38:23.222",
+        "out": "00:38:28.222"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-31.kdenlive",
+      "join": 31,
+      "out_join": "00:39:01.909",
+      "removed_s": 4.504,
+      "source_removed": {
+        "in": "00:52:15.057",
+        "out": "00:52:19.561"
+      },
+      "left": {
+        "in": "00:38:56.909",
+        "out": "00:39:01.868"
+      },
+      "right": {
+        "in": "00:39:01.909",
+        "out": "00:39:06.909"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-32.kdenlive",
+      "join": 32,
+      "out_join": "00:41:16.799",
+      "removed_s": 11.971,
+      "source_removed": {
+        "in": "00:54:34.409",
+        "out": "00:54:46.380"
+      },
+      "left": {
+        "in": "00:41:11.799",
+        "out": "00:41:16.757"
+      },
+      "right": {
+        "in": "00:41:16.799",
+        "out": "00:41:20.803"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-33.kdenlive",
+      "join": 33,
+      "out_join": "00:41:20.803",
+      "removed_s": 15.747,
+      "source_removed": {
+        "in": "00:54:50.342",
+        "out": "00:55:06.089"
+      },
+      "left": {
+        "in": "00:41:15.803",
+        "out": "00:41:20.761"
+      },
+      "right": {
+        "in": "00:41:20.803",
+        "out": "00:41:25.803"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-34.kdenlive",
+      "join": 34,
+      "out_join": "00:44:59.967",
+      "removed_s": 20.794,
+      "source_removed": {
+        "in": "00:58:45.212",
+        "out": "00:59:06.006"
+      },
+      "left": {
+        "in": "00:44:54.967",
+        "out": "00:44:59.925"
+      },
+      "right": {
+        "in": "00:44:59.967",
+        "out": "00:45:04.967"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-35.kdenlive",
+      "join": 35,
+      "out_join": "00:45:20.904",
+      "removed_s": 13.68,
+      "source_removed": {
+        "in": "00:59:26.902",
+        "out": "00:59:40.582"
+      },
+      "left": {
+        "in": "00:45:15.904",
+        "out": "00:45:20.863"
+      },
+      "right": {
+        "in": "00:45:20.904",
+        "out": "00:45:25.904"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-36.kdenlive",
+      "join": 36,
+      "out_join": "00:47:10.769",
+      "removed_s": 13.138,
+      "source_removed": {
+        "in": "01:01:30.405",
+        "out": "01:01:43.543"
+      },
+      "left": {
+        "in": "00:47:05.769",
+        "out": "00:47:10.727"
+      },
+      "right": {
+        "in": "00:47:10.769",
+        "out": "00:47:15.769"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-37.kdenlive",
+      "join": 37,
+      "out_join": "00:48:48.831",
+      "removed_s": 4.672,
+      "source_removed": {
+        "in": "01:03:21.563",
+        "out": "01:03:26.235"
+      },
+      "left": {
+        "in": "00:48:43.831",
+        "out": "00:48:48.789"
+      },
+      "right": {
+        "in": "00:48:48.831",
+        "out": "00:48:53.831"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-38.kdenlive",
+      "join": 38,
+      "out_join": "00:49:18.276",
+      "removed_s": 21.128,
+      "source_removed": {
+        "in": "01:03:56.014",
+        "out": "01:04:17.142"
+      },
+      "left": {
+        "in": "00:49:13.276",
+        "out": "00:49:18.235"
+      },
+      "right": {
+        "in": "00:49:18.276",
+        "out": "00:49:23.276"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-39.kdenlive",
+      "join": 39,
+      "out_join": "00:50:12.646",
+      "removed_s": 1.46,
+      "source_removed": {
+        "in": "01:05:11.470",
+        "out": "01:05:12.930"
+      },
+      "left": {
+        "in": "00:50:07.646",
+        "out": "00:50:12.604"
+      },
+      "right": {
+        "in": "00:50:12.646",
+        "out": "00:50:15.314"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-40.kdenlive",
+      "join": 40,
+      "out_join": "00:50:15.314",
+      "removed_s": 1.335,
+      "source_removed": {
+        "in": "01:05:12.846",
+        "out": "01:05:14.181"
+      },
+      "left": {
+        "in": "00:50:10.314",
+        "out": "00:50:15.273"
+      },
+      "right": {
+        "in": "00:50:15.314",
+        "out": "00:50:17.108"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-41.kdenlive",
+      "join": 41,
+      "out_join": "00:50:17.108",
+      "removed_s": 1.293,
+      "source_removed": {
+        "in": "01:05:15.933",
+        "out": "01:05:17.226"
+      },
+      "left": {
+        "in": "00:50:12.108",
+        "out": "00:50:17.066"
+      },
+      "right": {
+        "in": "00:50:17.108",
+        "out": "00:50:22.108"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-42.kdenlive",
+      "join": 42,
+      "out_join": "00:51:20.319",
+      "removed_s": 14.682,
+      "source_removed": {
+        "in": "01:06:20.395",
+        "out": "01:06:35.077"
+      },
+      "left": {
+        "in": "00:51:15.319",
+        "out": "00:51:20.277"
+      },
+      "right": {
+        "in": "00:51:20.319",
+        "out": "00:51:25.319"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-43.kdenlive",
+      "join": 43,
+      "out_join": "00:53:10.976",
+      "removed_s": 16.517,
+      "source_removed": {
+        "in": "01:08:25.692",
+        "out": "01:08:42.209"
+      },
+      "left": {
+        "in": "00:53:05.976",
+        "out": "00:53:10.934"
+      },
+      "right": {
+        "in": "00:53:10.976",
+        "out": "00:53:15.976"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-44.kdenlive",
+      "join": 44,
+      "out_join": "00:55:29.976",
+      "removed_s": 78.643,
+      "source_removed": {
+        "in": "01:11:01.168",
+        "out": "01:12:19.811"
+      },
+      "left": {
+        "in": "00:55:24.976",
+        "out": "00:55:29.934"
+      },
+      "right": {
+        "in": "00:55:29.976",
+        "out": "00:55:34.976"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-45.kdenlive",
+      "join": 45,
+      "out_join": "00:57:54.710",
+      "removed_s": 17.791,
+      "source_removed": {
+        "in": "01:14:44.503",
+        "out": "01:15:02.294"
+      },
+      "left": {
+        "in": "00:57:49.710",
+        "out": "00:57:54.668"
+      },
+      "right": {
+        "in": "00:57:54.710",
+        "out": "00:57:59.710"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-46.kdenlive",
+      "join": 46,
+      "out_join": "01:07:06.012",
+      "removed_s": 7.508,
+      "source_removed": {
+        "in": "01:24:13.555",
+        "out": "01:24:21.063"
+      },
+      "left": {
+        "in": "01:07:01.012",
+        "out": "01:07:05.970"
+      },
+      "right": {
+        "in": "01:07:06.012",
+        "out": "01:07:11.012"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-47.kdenlive",
+      "join": 47,
+      "out_join": "01:11:25.907",
+      "removed_s": 11.636,
+      "source_removed": {
+        "in": "01:28:40.916",
+        "out": "01:28:52.552"
+      },
+      "left": {
+        "in": "01:11:20.907",
+        "out": "01:11:25.865"
+      },
+      "right": {
+        "in": "01:11:25.907",
+        "out": "01:11:30.907"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-48.kdenlive",
+      "join": 48,
+      "out_join": "01:11:34.272",
+      "removed_s": 10.135,
+      "source_removed": {
+        "in": "01:29:00.876",
+        "out": "01:29:11.011"
+      },
+      "left": {
+        "in": "01:11:29.272",
+        "out": "01:11:34.231"
+      },
+      "right": {
+        "in": "01:11:34.272",
+        "out": "01:11:39.272"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-49.kdenlive",
+      "join": 49,
+      "out_join": "01:11:41.821",
+      "removed_s": 20.73,
+      "source_removed": {
+        "in": "01:29:18.518",
+        "out": "01:29:39.248"
+      },
+      "left": {
+        "in": "01:11:36.821",
+        "out": "01:11:41.779"
+      },
+      "right": {
+        "in": "01:11:41.821",
+        "out": "01:11:46.821"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-50.kdenlive",
+      "join": 50,
+      "out_join": "01:12:31.102",
+      "removed_s": 6.84,
+      "source_removed": {
+        "in": "01:30:28.487",
+        "out": "01:30:35.327"
+      },
+      "left": {
+        "in": "01:12:26.102",
+        "out": "01:12:31.060"
+      },
+      "right": {
+        "in": "01:12:31.102",
+        "out": "01:12:36.102"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-51.kdenlive",
+      "join": 51,
+      "out_join": "01:15:04.826",
+      "removed_s": 5.047,
+      "source_removed": {
+        "in": "01:33:09.009",
+        "out": "01:33:14.056"
+      },
+      "left": {
+        "in": "01:14:59.826",
+        "out": "01:15:04.785"
+      },
+      "right": {
+        "in": "01:15:04.826",
+        "out": "01:15:09.826"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-52.kdenlive",
+      "join": 52,
+      "out_join": "01:15:50.329",
+      "removed_s": 11.159,
+      "source_removed": {
+        "in": "01:33:59.518",
+        "out": "01:34:10.677"
+      },
+      "left": {
+        "in": "01:15:45.329",
+        "out": "01:15:50.287"
+      },
+      "right": {
+        "in": "01:15:50.329",
+        "out": "01:15:55.329"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    },
+    {
+      "file": "seam-53.kdenlive",
+      "join": 53,
+      "out_join": "01:18:53.206",
+      "removed_s": 6.716,
+      "source_removed": {
+        "in": "01:37:13.513",
+        "out": "01:37:20.229"
+      },
+      "left": {
+        "in": "01:18:48.206",
+        "out": "01:18:53.164"
+      },
+      "right": {
+        "in": "01:18:53.206",
+        "out": "01:18:58.206"
+      },
+      "render": "/media/ari/HD/FanEditRender/Final Fantasy (2001) - The Phantom Menace/Final Fantasy (2001) - The Phantom Menace.mkv"
+    }
+  ]
+}

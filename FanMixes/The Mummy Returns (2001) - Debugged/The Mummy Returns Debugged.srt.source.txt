@@ -1,0 +1,6 @@
+Matched to embedded English dvd_subtitle stream in YTS 4K MKV (1111 cues, ±1ms).
+Downloaded from yts-subs English id=490472
+URL=https://subtitles.yts-subs.com/subtitles/the-mummy-returns-2001-english-yify-490472.zip
+Original: The.Mummy.Returns.2001.2160p.BluRay.REMUX.HEVC.DTS-X.7.1-FGT-English.srt
+For: The.Mummy.Returns.2001.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv
+Replaces wrong yify-116022 (was ~2s early / 981 cues).

@@ -1,0 +1,144 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Serenity (2005) - Unjossed",
+  "source_kdenlive": "Serenity (2005) - Unjossed.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Serenity (2005) - Unjossed/Serenity (2005) - Unjossed Edition.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:01:35.428",
+      "removed_s": 94.636,
+      "source_removed": {
+        "in": "00:01:33.343",
+        "out": "00:03:07.979"
+      },
+      "left": {
+        "in": "00:01:30.428",
+        "out": "00:01:35.387"
+      },
+      "right": {
+        "in": "00:01:35.428",
+        "out": "00:01:40.428"
+      },
+      "render": "/media/ari/HD/FanEditRender/Serenity (2005) - Unjossed/Serenity (2005) - Unjossed Edition.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:30:17.566",
+      "removed_s": 52.136,
+      "source_removed": {
+        "in": "00:31:08.116",
+        "out": "00:32:00.252"
+      },
+      "left": {
+        "in": "00:30:12.566",
+        "out": "00:30:17.524"
+      },
+      "right": {
+        "in": "00:30:17.566",
+        "out": "00:30:22.566"
+      },
+      "render": "/media/ari/HD/FanEditRender/Serenity (2005) - Unjossed/Serenity (2005) - Unjossed Edition.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:49:33.678",
+      "removed_s": 273.315,
+      "source_removed": {
+        "in": "00:50:46.710",
+        "out": "00:55:20.025"
+      },
+      "left": {
+        "in": "00:49:28.678",
+        "out": "00:49:33.637"
+      },
+      "right": {
+        "in": "00:49:33.678",
+        "out": "00:49:38.678"
+      },
+      "render": "/media/ari/HD/FanEditRender/Serenity (2005) - Unjossed/Serenity (2005) - Unjossed Edition.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:57:21.145",
+      "removed_s": 92.926,
+      "source_removed": {
+        "in": "01:02:56.773",
+        "out": "01:04:29.699"
+      },
+      "left": {
+        "in": "00:57:16.145",
+        "out": "00:57:21.104"
+      },
+      "right": {
+        "in": "00:57:21.145",
+        "out": "00:57:26.145"
+      },
+      "render": "/media/ari/HD/FanEditRender/Serenity (2005) - Unjossed/Serenity (2005) - Unjossed Edition.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "01:21:22.544",
+      "removed_s": 109.234,
+      "source_removed": {
+        "in": "01:27:57.189",
+        "out": "01:29:46.423"
+      },
+      "left": {
+        "in": "01:21:17.544",
+        "out": "01:21:22.503"
+      },
+      "right": {
+        "in": "01:21:22.544",
+        "out": "01:21:27.544"
+      },
+      "render": "/media/ari/HD/FanEditRender/Serenity (2005) - Unjossed/Serenity (2005) - Unjossed Edition.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "01:24:35.611",
+      "removed_s": 106.607,
+      "source_removed": {
+        "in": "01:32:55.361",
+        "out": "01:34:41.968"
+      },
+      "left": {
+        "in": "01:24:30.611",
+        "out": "01:24:35.570"
+      },
+      "right": {
+        "in": "01:24:35.611",
+        "out": "01:24:40.611"
+      },
+      "render": "/media/ari/HD/FanEditRender/Serenity (2005) - Unjossed/Serenity (2005) - Unjossed Edition.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "01:27:26.073",
+      "removed_s": 72.197,
+      "source_removed": {
+        "in": "01:37:28.801",
+        "out": "01:38:40.998"
+      },
+      "left": {
+        "in": "01:27:21.073",
+        "out": "01:27:26.031"
+      },
+      "right": {
+        "in": "01:27:26.073",
+        "out": "01:27:31.073"
+      },
+      "render": "/media/ari/HD/FanEditRender/Serenity (2005) - Unjossed/Serenity (2005) - Unjossed Edition.mkv"
+    }
+  ]
+}

@@ -1,0 +1,1854 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Sonic 2 (2022) - DeSchwartzed",
+  "source_kdenlive": "Sonic 2 (2022) - DeSchwartzed.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:05:48.382",
+      "removed_s": 553.078,
+      "source_removed": {
+        "in": "00:05:48.340",
+        "out": "00:15:01.418"
+      },
+      "left": {
+        "in": "00:05:43.382",
+        "out": "00:05:48.340"
+      },
+      "right": {
+        "in": "00:05:48.382",
+        "out": "00:05:53.382"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:06:06.316",
+      "removed_s": 20.771,
+      "source_removed": {
+        "in": "00:15:19.311",
+        "out": "00:15:40.082"
+      },
+      "left": {
+        "in": "00:06:01.316",
+        "out": "00:06:06.275"
+      },
+      "right": {
+        "in": "00:06:06.316",
+        "out": "00:06:11.316"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:06:11.738",
+      "removed_s": 16.039,
+      "source_removed": {
+        "in": "00:15:45.462",
+        "out": "00:16:01.501"
+      },
+      "left": {
+        "in": "00:06:06.738",
+        "out": "00:06:11.696"
+      },
+      "right": {
+        "in": "00:06:11.738",
+        "out": "00:06:16.738"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:06:16.744",
+      "removed_s": 6.214,
+      "source_removed": {
+        "in": "00:16:06.465",
+        "out": "00:16:12.679"
+      },
+      "left": {
+        "in": "00:06:11.744",
+        "out": "00:06:16.702"
+      },
+      "right": {
+        "in": "00:06:16.744",
+        "out": "00:06:21.082"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "00:06:21.082",
+      "removed_s": 7.299,
+      "source_removed": {
+        "in": "00:16:16.975",
+        "out": "00:16:24.274"
+      },
+      "left": {
+        "in": "00:06:16.082",
+        "out": "00:06:21.040"
+      },
+      "right": {
+        "in": "00:06:21.082",
+        "out": "00:06:26.082"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "00:06:37.223",
+      "removed_s": 38.395,
+      "source_removed": {
+        "in": "00:16:40.374",
+        "out": "00:17:18.769"
+      },
+      "left": {
+        "in": "00:06:32.223",
+        "out": "00:06:37.182"
+      },
+      "right": {
+        "in": "00:06:37.223",
+        "out": "00:06:42.223"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-07.kdenlive",
+      "join": 7,
+      "out_join": "00:08:13.843",
+      "removed_s": 46.278,
+      "source_removed": {
+        "in": "00:18:55.347",
+        "out": "00:19:41.625"
+      },
+      "left": {
+        "in": "00:08:08.843",
+        "out": "00:08:13.801"
+      },
+      "right": {
+        "in": "00:08:13.843",
+        "out": "00:08:18.843"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-08.kdenlive",
+      "join": 8,
+      "out_join": "00:08:19.849",
+      "removed_s": 65.714,
+      "source_removed": {
+        "in": "00:19:47.589",
+        "out": "00:20:53.303"
+      },
+      "left": {
+        "in": "00:08:14.849",
+        "out": "00:08:19.807"
+      },
+      "right": {
+        "in": "00:08:19.849",
+        "out": "00:08:24.849"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-09.kdenlive",
+      "join": 9,
+      "out_join": "00:08:29.465",
+      "removed_s": 3.128,
+      "source_removed": {
+        "in": "00:21:02.878",
+        "out": "00:21:06.006"
+      },
+      "left": {
+        "in": "00:08:24.465",
+        "out": "00:08:29.424"
+      },
+      "right": {
+        "in": "00:08:29.465",
+        "out": "00:08:34.465"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-10.kdenlive",
+      "join": 10,
+      "out_join": "00:08:53.072",
+      "removed_s": 10.719,
+      "source_removed": {
+        "in": "00:21:29.571",
+        "out": "00:21:40.290"
+      },
+      "left": {
+        "in": "00:08:48.072",
+        "out": "00:08:53.030"
+      },
+      "right": {
+        "in": "00:08:53.072",
+        "out": "00:08:58.072"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-11.kdenlive",
+      "join": 11,
+      "out_join": "00:11:04.542",
+      "removed_s": 3.963,
+      "source_removed": {
+        "in": "00:23:51.718",
+        "out": "00:23:55.681"
+      },
+      "left": {
+        "in": "00:10:59.542",
+        "out": "00:11:04.500"
+      },
+      "right": {
+        "in": "00:11:04.542",
+        "out": "00:11:09.542"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-12.kdenlive",
+      "join": 12,
+      "out_join": "00:11:54.782",
+      "removed_s": 14.288,
+      "source_removed": {
+        "in": "00:24:45.879",
+        "out": "00:25:00.167"
+      },
+      "left": {
+        "in": "00:11:49.782",
+        "out": "00:11:54.740"
+      },
+      "right": {
+        "in": "00:11:54.782",
+        "out": "00:11:59.782"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-13.kdenlive",
+      "join": 13,
+      "out_join": "00:12:18.513",
+      "removed_s": 13.305,
+      "source_removed": {
+        "in": "00:25:23.857",
+        "out": "00:25:37.162"
+      },
+      "left": {
+        "in": "00:12:13.513",
+        "out": "00:12:18.472"
+      },
+      "right": {
+        "in": "00:12:18.513",
+        "out": "00:12:23.513"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-14.kdenlive",
+      "join": 14,
+      "out_join": "00:12:31.151",
+      "removed_s": 14.371,
+      "source_removed": {
+        "in": "00:25:49.758",
+        "out": "00:26:04.129"
+      },
+      "left": {
+        "in": "00:12:26.151",
+        "out": "00:12:31.109"
+      },
+      "right": {
+        "in": "00:12:31.151",
+        "out": "00:12:36.151"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-15.kdenlive",
+      "join": 15,
+      "out_join": "00:13:02.850",
+      "removed_s": 3.712,
+      "source_removed": {
+        "in": "00:26:35.786",
+        "out": "00:26:39.498"
+      },
+      "left": {
+        "in": "00:12:57.850",
+        "out": "00:13:02.808"
+      },
+      "right": {
+        "in": "00:13:02.850",
+        "out": "00:13:07.850"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-16.kdenlive",
+      "join": 16,
+      "out_join": "00:13:10.815",
+      "removed_s": 2.586,
+      "source_removed": {
+        "in": "00:26:47.422",
+        "out": "00:26:50.008"
+      },
+      "left": {
+        "in": "00:13:05.815",
+        "out": "00:13:10.774"
+      },
+      "right": {
+        "in": "00:13:10.815",
+        "out": "00:13:15.815"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-17.kdenlive",
+      "join": 17,
+      "out_join": "00:13:15.946",
+      "removed_s": 4.88,
+      "source_removed": {
+        "in": "00:26:55.097",
+        "out": "00:26:59.977"
+      },
+      "left": {
+        "in": "00:13:10.946",
+        "out": "00:13:15.904"
+      },
+      "right": {
+        "in": "00:13:15.946",
+        "out": "00:13:20.946"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-18.kdenlive",
+      "join": 18,
+      "out_join": "00:13:31.777",
+      "removed_s": 3.962,
+      "source_removed": {
+        "in": "00:27:15.766",
+        "out": "00:27:19.728"
+      },
+      "left": {
+        "in": "00:13:26.777",
+        "out": "00:13:31.735"
+      },
+      "right": {
+        "in": "00:13:31.777",
+        "out": "00:13:34.070"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-19.kdenlive",
+      "join": 19,
+      "out_join": "00:13:34.070",
+      "removed_s": 11.136,
+      "source_removed": {
+        "in": "00:27:21.980",
+        "out": "00:27:33.116"
+      },
+      "left": {
+        "in": "00:13:29.070",
+        "out": "00:13:34.029"
+      },
+      "right": {
+        "in": "00:13:34.070",
+        "out": "00:13:39.070"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-20.kdenlive",
+      "join": 20,
+      "out_join": "00:16:52.673",
+      "removed_s": 3.753,
+      "source_removed": {
+        "in": "00:30:51.677",
+        "out": "00:30:55.430"
+      },
+      "left": {
+        "in": "00:16:47.673",
+        "out": "00:16:52.631"
+      },
+      "right": {
+        "in": "00:16:52.673",
+        "out": "00:16:57.673"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-21.kdenlive",
+      "join": 21,
+      "out_join": "00:18:10.507",
+      "removed_s": 121.126,
+      "source_removed": {
+        "in": "00:32:13.222",
+        "out": "00:34:14.348"
+      },
+      "left": {
+        "in": "00:18:05.507",
+        "out": "00:18:10.465"
+      },
+      "right": {
+        "in": "00:18:10.507",
+        "out": "00:18:15.507"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-22.kdenlive",
+      "join": 22,
+      "out_join": "00:18:19.432",
+      "removed_s": 12.22,
+      "source_removed": {
+        "in": "00:34:23.232",
+        "out": "00:34:35.452"
+      },
+      "left": {
+        "in": "00:18:14.432",
+        "out": "00:18:19.391"
+      },
+      "right": {
+        "in": "00:18:19.432",
+        "out": "00:18:22.560"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-23.kdenlive",
+      "join": 23,
+      "out_join": "00:18:22.560",
+      "removed_s": 22.254,
+      "source_removed": {
+        "in": "00:34:38.538",
+        "out": "00:35:00.792"
+      },
+      "left": {
+        "in": "00:18:17.560",
+        "out": "00:18:22.518"
+      },
+      "right": {
+        "in": "00:18:22.560",
+        "out": "00:18:27.560"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-24.kdenlive",
+      "join": 24,
+      "out_join": "00:19:12.194",
+      "removed_s": 8.967,
+      "source_removed": {
+        "in": "00:35:50.384",
+        "out": "00:35:59.351"
+      },
+      "left": {
+        "in": "00:19:07.194",
+        "out": "00:19:12.152"
+      },
+      "right": {
+        "in": "00:19:12.194",
+        "out": "00:19:17.194"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-25.kdenlive",
+      "join": 25,
+      "out_join": "00:19:37.492",
+      "removed_s": 249.593,
+      "source_removed": {
+        "in": "00:36:24.608",
+        "out": "00:40:34.201"
+      },
+      "left": {
+        "in": "00:19:32.492",
+        "out": "00:19:37.451"
+      },
+      "right": {
+        "in": "00:19:37.492",
+        "out": "00:19:42.492"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-26.kdenlive",
+      "join": 26,
+      "out_join": "00:19:42.706",
+      "removed_s": 6.548,
+      "source_removed": {
+        "in": "00:40:39.373",
+        "out": "00:40:45.921"
+      },
+      "left": {
+        "in": "00:19:37.706",
+        "out": "00:19:42.664"
+      },
+      "right": {
+        "in": "00:19:42.706",
+        "out": "00:19:47.706"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-27.kdenlive",
+      "join": 27,
+      "out_join": "00:21:03.501",
+      "removed_s": 477.623,
+      "source_removed": {
+        "in": "00:42:06.673",
+        "out": "00:50:04.296"
+      },
+      "left": {
+        "in": "00:20:58.501",
+        "out": "00:21:03.459"
+      },
+      "right": {
+        "in": "00:21:03.501",
+        "out": "00:21:08.501"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-28.kdenlive",
+      "join": 28,
+      "out_join": "00:21:08.714",
+      "removed_s": 7.507,
+      "source_removed": {
+        "in": "00:50:09.468",
+        "out": "00:50:16.975"
+      },
+      "left": {
+        "in": "00:21:03.714",
+        "out": "00:21:08.673"
+      },
+      "right": {
+        "in": "00:21:08.714",
+        "out": "00:21:13.714"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-29.kdenlive",
+      "join": 29,
+      "out_join": "00:21:30.695",
+      "removed_s": 6.798,
+      "source_removed": {
+        "in": "00:50:38.914",
+        "out": "00:50:45.712"
+      },
+      "left": {
+        "in": "00:21:25.695",
+        "out": "00:21:30.653"
+      },
+      "right": {
+        "in": "00:21:30.695",
+        "out": "00:21:35.695"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-30.kdenlive",
+      "join": 30,
+      "out_join": "00:22:26.733",
+      "removed_s": 7.758,
+      "source_removed": {
+        "in": "00:51:41.708",
+        "out": "00:51:49.466"
+      },
+      "left": {
+        "in": "00:22:21.733",
+        "out": "00:22:26.691"
+      },
+      "right": {
+        "in": "00:22:26.733",
+        "out": "00:22:30.361"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-31.kdenlive",
+      "join": 31,
+      "out_join": "00:22:30.361",
+      "removed_s": 4.421,
+      "source_removed": {
+        "in": "00:51:53.053",
+        "out": "00:51:57.474"
+      },
+      "left": {
+        "in": "00:22:25.361",
+        "out": "00:22:30.320"
+      },
+      "right": {
+        "in": "00:22:30.361",
+        "out": "00:22:35.361"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-32.kdenlive",
+      "join": 32,
+      "out_join": "00:23:58.454",
+      "removed_s": 15.725,
+      "source_removed": {
+        "in": "00:53:25.525",
+        "out": "00:53:41.250"
+      },
+      "left": {
+        "in": "00:23:53.454",
+        "out": "00:23:58.412"
+      },
+      "right": {
+        "in": "00:23:58.454",
+        "out": "00:24:03.454"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-33.kdenlive",
+      "join": 33,
+      "out_join": "00:24:32.428",
+      "removed_s": 1.752,
+      "source_removed": {
+        "in": "00:54:15.182",
+        "out": "00:54:16.934"
+      },
+      "left": {
+        "in": "00:24:27.428",
+        "out": "00:24:32.386"
+      },
+      "right": {
+        "in": "00:24:32.428",
+        "out": "00:24:37.428"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-34.kdenlive",
+      "join": 34,
+      "out_join": "00:24:47.568",
+      "removed_s": 1.418,
+      "source_removed": {
+        "in": "00:54:32.032",
+        "out": "00:54:33.450"
+      },
+      "left": {
+        "in": "00:24:42.568",
+        "out": "00:24:47.526"
+      },
+      "right": {
+        "in": "00:24:47.568",
+        "out": "00:24:52.568"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-35.kdenlive",
+      "join": 35,
+      "out_join": "00:25:26.797",
+      "removed_s": 32.115,
+      "source_removed": {
+        "in": "00:55:12.638",
+        "out": "00:55:44.753"
+      },
+      "left": {
+        "in": "00:25:21.797",
+        "out": "00:25:26.756"
+      },
+      "right": {
+        "in": "00:25:26.797",
+        "out": "00:25:28.132"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-36.kdenlive",
+      "join": 36,
+      "out_join": "00:25:28.132",
+      "removed_s": 1.752,
+      "source_removed": {
+        "in": "00:55:46.046",
+        "out": "00:55:47.798"
+      },
+      "left": {
+        "in": "00:25:23.132",
+        "out": "00:25:28.090"
+      },
+      "right": {
+        "in": "00:25:28.132",
+        "out": "00:25:33.132"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-37.kdenlive",
+      "join": 37,
+      "out_join": "00:25:35.513",
+      "removed_s": 3.003,
+      "source_removed": {
+        "in": "00:55:55.138",
+        "out": "00:55:58.141"
+      },
+      "left": {
+        "in": "00:25:30.513",
+        "out": "00:25:35.472"
+      },
+      "right": {
+        "in": "00:25:35.513",
+        "out": "00:25:38.874"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-38.kdenlive",
+      "join": 38,
+      "out_join": "00:25:38.874",
+      "removed_s": 8.049,
+      "source_removed": {
+        "in": "00:56:01.460",
+        "out": "00:56:09.509"
+      },
+      "left": {
+        "in": "00:25:33.874",
+        "out": "00:25:38.832"
+      },
+      "right": {
+        "in": "00:25:38.874",
+        "out": "00:25:43.874"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-39.kdenlive",
+      "join": 39,
+      "out_join": "00:26:02.357",
+      "removed_s": 41.731,
+      "source_removed": {
+        "in": "00:56:32.950",
+        "out": "00:57:14.681"
+      },
+      "left": {
+        "in": "00:25:57.357",
+        "out": "00:26:02.315"
+      },
+      "right": {
+        "in": "00:26:02.357",
+        "out": "00:26:07.357"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-40.kdenlive",
+      "join": 40,
+      "out_join": "00:26:07.696",
+      "removed_s": 3.462,
+      "source_removed": {
+        "in": "00:57:19.978",
+        "out": "00:57:23.440"
+      },
+      "left": {
+        "in": "00:26:02.696",
+        "out": "00:26:07.654"
+      },
+      "right": {
+        "in": "00:26:07.696",
+        "out": "00:26:12.696"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-41.kdenlive",
+      "join": 41,
+      "out_join": "00:27:37.268",
+      "removed_s": 36.726,
+      "source_removed": {
+        "in": "00:58:52.970",
+        "out": "00:59:29.696"
+      },
+      "left": {
+        "in": "00:27:32.268",
+        "out": "00:27:37.226"
+      },
+      "right": {
+        "in": "00:27:37.268",
+        "out": "00:27:40.813"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-42.kdenlive",
+      "join": 42,
+      "out_join": "00:27:40.813",
+      "removed_s": 0.959,
+      "source_removed": {
+        "in": "00:59:33.200",
+        "out": "00:59:34.159"
+      },
+      "left": {
+        "in": "00:27:35.813",
+        "out": "00:27:40.772"
+      },
+      "right": {
+        "in": "00:27:40.813",
+        "out": "00:27:44.192"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-43.kdenlive",
+      "join": 43,
+      "out_join": "00:27:44.192",
+      "removed_s": 4.671,
+      "source_removed": {
+        "in": "00:59:37.496",
+        "out": "00:59:42.167"
+      },
+      "left": {
+        "in": "00:27:39.192",
+        "out": "00:27:44.150"
+      },
+      "right": {
+        "in": "00:27:44.192",
+        "out": "00:27:49.192"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-44.kdenlive",
+      "join": 44,
+      "out_join": "00:28:22.796",
+      "removed_s": 5.297,
+      "source_removed": {
+        "in": "01:00:20.729",
+        "out": "01:00:26.026"
+      },
+      "left": {
+        "in": "00:28:17.796",
+        "out": "00:28:22.754"
+      },
+      "right": {
+        "in": "00:28:22.796",
+        "out": "00:28:27.796"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-45.kdenlive",
+      "join": 45,
+      "out_join": "00:28:42.398",
+      "removed_s": 13.931,
+      "source_removed": {
+        "in": "01:00:45.587",
+        "out": "01:00:59.518"
+      },
+      "left": {
+        "in": "00:28:37.398",
+        "out": "00:28:42.357"
+      },
+      "right": {
+        "in": "00:28:42.398",
+        "out": "00:28:43.297"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-46.kdenlive",
+      "join": 46,
+      "out_join": "00:28:43.297",
+      "removed_s": 2.67,
+      "source_removed": {
+        "in": "01:01:00.375",
+        "out": "01:01:03.045"
+      },
+      "left": {
+        "in": "00:28:38.297",
+        "out": "00:28:43.255"
+      },
+      "right": {
+        "in": "00:28:43.297",
+        "out": "00:28:48.297"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-47.kdenlive",
+      "join": 47,
+      "out_join": "00:29:49.470",
+      "removed_s": 7.841,
+      "source_removed": {
+        "in": "01:02:09.176",
+        "out": "01:02:17.017"
+      },
+      "left": {
+        "in": "00:29:44.470",
+        "out": "00:29:49.428"
+      },
+      "right": {
+        "in": "00:29:49.470",
+        "out": "00:29:54.470"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-48.kdenlive",
+      "join": 48,
+      "out_join": "00:30:02.859",
+      "removed_s": 109.698,
+      "source_removed": {
+        "in": "01:02:30.364",
+        "out": "01:04:20.062"
+      },
+      "left": {
+        "in": "00:29:57.859",
+        "out": "00:30:02.818"
+      },
+      "right": {
+        "in": "00:30:02.859",
+        "out": "00:30:07.859"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-49.kdenlive",
+      "join": 49,
+      "out_join": "00:30:14.579",
+      "removed_s": 5.339,
+      "source_removed": {
+        "in": "01:04:31.740",
+        "out": "01:04:37.079"
+      },
+      "left": {
+        "in": "00:30:09.579",
+        "out": "00:30:14.537"
+      },
+      "right": {
+        "in": "00:30:14.579",
+        "out": "00:30:19.579"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-50.kdenlive",
+      "join": 50,
+      "out_join": "00:30:40.002",
+      "removed_s": 38.663,
+      "source_removed": {
+        "in": "01:05:02.461",
+        "out": "01:05:41.124"
+      },
+      "left": {
+        "in": "00:30:35.002",
+        "out": "00:30:39.961"
+      },
+      "right": {
+        "in": "00:30:40.002",
+        "out": "00:30:45.002"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-51.kdenlive",
+      "join": 51,
+      "out_join": "00:30:47.343",
+      "removed_s": 11.619,
+      "source_removed": {
+        "in": "01:05:48.423",
+        "out": "01:06:00.042"
+      },
+      "left": {
+        "in": "00:30:42.343",
+        "out": "00:30:47.301"
+      },
+      "right": {
+        "in": "00:30:47.343",
+        "out": "00:30:50.179"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-52.kdenlive",
+      "join": 52,
+      "out_join": "00:30:50.179",
+      "removed_s": 28.112,
+      "source_removed": {
+        "in": "01:06:02.836",
+        "out": "01:06:30.948"
+      },
+      "left": {
+        "in": "00:30:45.179",
+        "out": "00:30:50.137"
+      },
+      "right": {
+        "in": "00:30:50.179",
+        "out": "00:30:55.179"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-53.kdenlive",
+      "join": 53,
+      "out_join": "00:31:28.073",
+      "removed_s": 215.035,
+      "source_removed": {
+        "in": "01:07:08.800",
+        "out": "01:10:43.835"
+      },
+      "left": {
+        "in": "00:31:23.073",
+        "out": "00:31:28.031"
+      },
+      "right": {
+        "in": "00:31:28.073",
+        "out": "00:31:33.073"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-54.kdenlive",
+      "join": 54,
+      "out_join": "00:31:50.577",
+      "removed_s": 3.67,
+      "source_removed": {
+        "in": "01:11:06.298",
+        "out": "01:11:09.968"
+      },
+      "left": {
+        "in": "00:31:45.577",
+        "out": "00:31:50.536"
+      },
+      "right": {
+        "in": "00:31:50.577",
+        "out": "00:31:55.577"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-55.kdenlive",
+      "join": 55,
+      "out_join": "00:33:07.052",
+      "removed_s": 1.752,
+      "source_removed": {
+        "in": "01:12:26.401",
+        "out": "01:12:28.153"
+      },
+      "left": {
+        "in": "00:33:02.052",
+        "out": "00:33:07.010"
+      },
+      "right": {
+        "in": "00:33:07.052",
+        "out": "00:33:12.052"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-56.kdenlive",
+      "join": 56,
+      "out_join": "00:33:23.735",
+      "removed_s": 23.088,
+      "source_removed": {
+        "in": "01:12:44.795",
+        "out": "01:13:07.883"
+      },
+      "left": {
+        "in": "00:33:18.735",
+        "out": "00:33:23.694"
+      },
+      "right": {
+        "in": "00:33:23.735",
+        "out": "00:33:28.735"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-57.kdenlive",
+      "join": 57,
+      "out_join": "00:33:49.302",
+      "removed_s": 83.19,
+      "source_removed": {
+        "in": "01:13:33.408",
+        "out": "01:14:56.598"
+      },
+      "left": {
+        "in": "00:33:44.302",
+        "out": "00:33:49.260"
+      },
+      "right": {
+        "in": "00:33:49.302",
+        "out": "00:33:54.302"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-58.kdenlive",
+      "join": 58,
+      "out_join": "00:40:31.785",
+      "removed_s": 9.635,
+      "source_removed": {
+        "in": "01:21:39.039",
+        "out": "01:21:48.674"
+      },
+      "left": {
+        "in": "00:40:26.785",
+        "out": "00:40:31.743"
+      },
+      "right": {
+        "in": "00:40:31.785",
+        "out": "00:40:36.785"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-59.kdenlive",
+      "join": 59,
+      "out_join": "00:41:02.797",
+      "removed_s": 4.713,
+      "source_removed": {
+        "in": "01:22:19.645",
+        "out": "01:22:24.358"
+      },
+      "left": {
+        "in": "00:40:57.797",
+        "out": "00:41:02.756"
+      },
+      "right": {
+        "in": "00:41:02.797",
+        "out": "00:41:07.797"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-60.kdenlive",
+      "join": 60,
+      "out_join": "00:42:29.490",
+      "removed_s": 1.877,
+      "source_removed": {
+        "in": "01:23:51.009",
+        "out": "01:23:52.886"
+      },
+      "left": {
+        "in": "00:42:24.490",
+        "out": "00:42:29.448"
+      },
+      "right": {
+        "in": "00:42:29.490",
+        "out": "00:42:31.409"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-61.kdenlive",
+      "join": 61,
+      "out_join": "00:42:31.409",
+      "removed_s": 72.202,
+      "source_removed": {
+        "in": "01:23:54.763",
+        "out": "01:25:06.965"
+      },
+      "left": {
+        "in": "00:42:26.409",
+        "out": "00:42:31.367"
+      },
+      "right": {
+        "in": "00:42:31.409",
+        "out": "00:42:34.955"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-62.kdenlive",
+      "join": 62,
+      "out_join": "00:42:34.955",
+      "removed_s": 53.034,
+      "source_removed": {
+        "in": "01:25:10.469",
+        "out": "01:26:03.503"
+      },
+      "left": {
+        "in": "00:42:29.955",
+        "out": "00:42:34.913"
+      },
+      "right": {
+        "in": "00:42:34.955",
+        "out": "00:42:36.998"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-63.kdenlive",
+      "join": 63,
+      "out_join": "00:42:36.998",
+      "removed_s": 6.882,
+      "source_removed": {
+        "in": "01:26:05.505",
+        "out": "01:26:12.387"
+      },
+      "left": {
+        "in": "00:42:31.998",
+        "out": "00:42:36.957"
+      },
+      "right": {
+        "in": "00:42:36.998",
+        "out": "00:42:41.998"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-64.kdenlive",
+      "join": 64,
+      "out_join": "00:42:42.421",
+      "removed_s": 69.426,
+      "source_removed": {
+        "in": "01:26:17.768",
+        "out": "01:27:27.194"
+      },
+      "left": {
+        "in": "00:42:37.421",
+        "out": "00:42:42.379"
+      },
+      "right": {
+        "in": "00:42:42.421",
+        "out": "00:42:47.421"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-65.kdenlive",
+      "join": 65,
+      "out_join": "00:43:20.274",
+      "removed_s": 3.462,
+      "source_removed": {
+        "in": "01:28:05.005",
+        "out": "01:28:08.467"
+      },
+      "left": {
+        "in": "00:43:15.274",
+        "out": "00:43:20.232"
+      },
+      "right": {
+        "in": "00:43:20.274",
+        "out": "00:43:25.274"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-66.kdenlive",
+      "join": 66,
+      "out_join": "00:43:48.009",
+      "removed_s": 2.753,
+      "source_removed": {
+        "in": "01:28:36.161",
+        "out": "01:28:38.914"
+      },
+      "left": {
+        "in": "00:43:43.009",
+        "out": "00:43:47.968"
+      },
+      "right": {
+        "in": "00:43:48.009",
+        "out": "00:43:53.009"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-67.kdenlive",
+      "join": 67,
+      "out_join": "00:44:14.100",
+      "removed_s": 1.293,
+      "source_removed": {
+        "in": "01:29:04.963",
+        "out": "01:29:06.256"
+      },
+      "left": {
+        "in": "00:44:09.100",
+        "out": "00:44:14.058"
+      },
+      "right": {
+        "in": "00:44:14.100",
+        "out": "00:44:19.100"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-68.kdenlive",
+      "join": 68,
+      "out_join": "00:44:49.427",
+      "removed_s": 7.758,
+      "source_removed": {
+        "in": "01:29:41.541",
+        "out": "01:29:49.299"
+      },
+      "left": {
+        "in": "00:44:44.427",
+        "out": "00:44:49.385"
+      },
+      "right": {
+        "in": "00:44:49.427",
+        "out": "00:44:54.427"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-69.kdenlive",
+      "join": 69,
+      "out_join": "00:47:01.797",
+      "removed_s": 24.649,
+      "source_removed": {
+        "in": "01:32:01.627",
+        "out": "01:32:26.276"
+      },
+      "left": {
+        "in": "00:46:56.797",
+        "out": "00:47:01.755"
+      },
+      "right": {
+        "in": "00:47:01.797",
+        "out": "00:47:06.797"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-70.kdenlive",
+      "join": 70,
+      "out_join": "00:47:48.784",
+      "removed_s": 5.672,
+      "source_removed": {
+        "in": "01:33:13.222",
+        "out": "01:33:18.894"
+      },
+      "left": {
+        "in": "00:47:43.784",
+        "out": "00:47:48.743"
+      },
+      "right": {
+        "in": "00:47:48.784",
+        "out": "00:47:53.784"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-71.kdenlive",
+      "join": 71,
+      "out_join": "00:48:12.474",
+      "removed_s": 14.473,
+      "source_removed": {
+        "in": "01:33:42.542",
+        "out": "01:33:57.015"
+      },
+      "left": {
+        "in": "00:48:07.474",
+        "out": "00:48:12.432"
+      },
+      "right": {
+        "in": "00:48:12.474",
+        "out": "00:48:17.474"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-72.kdenlive",
+      "join": 72,
+      "out_join": "00:48:19.755",
+      "removed_s": 5.631,
+      "source_removed": {
+        "in": "01:34:04.254",
+        "out": "01:34:09.885"
+      },
+      "left": {
+        "in": "00:48:14.755",
+        "out": "00:48:19.713"
+      },
+      "right": {
+        "in": "00:48:19.755",
+        "out": "00:48:24.755"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-73.kdenlive",
+      "join": 73,
+      "out_join": "00:48:42.485",
+      "removed_s": 4.922,
+      "source_removed": {
+        "in": "01:34:32.574",
+        "out": "01:34:37.496"
+      },
+      "left": {
+        "in": "00:48:37.485",
+        "out": "00:48:42.444"
+      },
+      "right": {
+        "in": "00:48:42.485",
+        "out": "00:48:47.485"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-74.kdenlive",
+      "join": 74,
+      "out_join": "00:50:12.538",
+      "removed_s": 29.113,
+      "source_removed": {
+        "in": "01:36:07.507",
+        "out": "01:36:36.620"
+      },
+      "left": {
+        "in": "00:50:07.538",
+        "out": "00:50:12.496"
+      },
+      "right": {
+        "in": "00:50:12.538",
+        "out": "00:50:17.538"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-75.kdenlive",
+      "join": 75,
+      "out_join": "00:50:22.798",
+      "removed_s": 6.173,
+      "source_removed": {
+        "in": "01:36:46.838",
+        "out": "01:36:53.011"
+      },
+      "left": {
+        "in": "00:50:17.798",
+        "out": "00:50:22.756"
+      },
+      "right": {
+        "in": "00:50:22.798",
+        "out": "00:50:24.758"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-76.kdenlive",
+      "join": 76,
+      "out_join": "00:50:24.758",
+      "removed_s": 9.324,
+      "source_removed": {
+        "in": "01:36:54.930",
+        "out": "01:37:04.254"
+      },
+      "left": {
+        "in": "00:50:19.758",
+        "out": "00:50:24.717"
+      },
+      "right": {
+        "in": "00:50:24.758",
+        "out": "00:50:29.758"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-77.kdenlive",
+      "join": 77,
+      "out_join": "00:50:30.139",
+      "removed_s": 4.463,
+      "source_removed": {
+        "in": "01:37:09.593",
+        "out": "01:37:14.056"
+      },
+      "left": {
+        "in": "00:50:25.139",
+        "out": "00:50:30.097"
+      },
+      "right": {
+        "in": "00:50:30.139",
+        "out": "00:50:33.601"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-78.kdenlive",
+      "join": 78,
+      "out_join": "00:50:33.601",
+      "removed_s": 24.357,
+      "source_removed": {
+        "in": "01:37:17.476",
+        "out": "01:37:41.833"
+      },
+      "left": {
+        "in": "00:50:28.601",
+        "out": "00:50:33.559"
+      },
+      "right": {
+        "in": "00:50:33.601",
+        "out": "00:50:38.601"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-79.kdenlive",
+      "join": 79,
+      "out_join": "00:50:40.817",
+      "removed_s": 1.126,
+      "source_removed": {
+        "in": "01:37:41.792",
+        "out": "01:37:42.918"
+      },
+      "left": {
+        "in": "00:50:35.817",
+        "out": "00:50:40.775"
+      },
+      "right": {
+        "in": "00:50:40.817",
+        "out": "00:50:45.817"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-80.kdenlive",
+      "join": 80,
+      "out_join": "00:50:51.745",
+      "removed_s": 3.42,
+      "source_removed": {
+        "in": "01:37:53.804",
+        "out": "01:37:57.224"
+      },
+      "left": {
+        "in": "00:50:46.745",
+        "out": "00:50:51.703"
+      },
+      "right": {
+        "in": "00:50:51.745",
+        "out": "00:50:53.204"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-81.kdenlive",
+      "join": 81,
+      "out_join": "00:50:53.204",
+      "removed_s": 6.363,
+      "source_removed": {
+        "in": "01:37:58.642",
+        "out": "01:38:05.005"
+      },
+      "left": {
+        "in": "00:50:48.204",
+        "out": "00:50:53.163"
+      },
+      "right": {
+        "in": "00:50:53.204",
+        "out": "00:50:58.204"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-82.kdenlive",
+      "join": 82,
+      "out_join": "00:51:47.091",
+      "removed_s": 2.276,
+      "source_removed": {
+        "in": "01:38:58.850",
+        "out": "01:39:01.126"
+      },
+      "left": {
+        "in": "00:51:42.091",
+        "out": "00:51:47.049"
+      },
+      "right": {
+        "in": "00:51:47.091",
+        "out": "00:51:52.091"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-83.kdenlive",
+      "join": 83,
+      "out_join": "00:52:48.801",
+      "removed_s": 5.631,
+      "source_removed": {
+        "in": "01:40:02.794",
+        "out": "01:40:08.425"
+      },
+      "left": {
+        "in": "00:52:43.801",
+        "out": "00:52:48.759"
+      },
+      "right": {
+        "in": "00:52:48.801",
+        "out": "00:52:53.801"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-84.kdenlive",
+      "join": 84,
+      "out_join": "00:53:34.889",
+      "removed_s": 9.867,
+      "source_removed": {
+        "in": "01:40:54.471",
+        "out": "01:41:04.338"
+      },
+      "left": {
+        "in": "00:53:29.889",
+        "out": "00:53:34.847"
+      },
+      "right": {
+        "in": "00:53:34.889",
+        "out": "00:53:39.889"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-85.kdenlive",
+      "join": 85,
+      "out_join": "00:53:41.353",
+      "removed_s": 3.503,
+      "source_removed": {
+        "in": "01:41:10.761",
+        "out": "01:41:14.264"
+      },
+      "left": {
+        "in": "00:53:36.353",
+        "out": "00:53:41.312"
+      },
+      "right": {
+        "in": "00:53:41.353",
+        "out": "00:53:46.353"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-86.kdenlive",
+      "join": 86,
+      "out_join": "00:55:02.333",
+      "removed_s": 4.296,
+      "source_removed": {
+        "in": "01:42:35.202",
+        "out": "01:42:39.498"
+      },
+      "left": {
+        "in": "00:54:57.333",
+        "out": "00:55:02.291"
+      },
+      "right": {
+        "in": "00:55:02.333",
+        "out": "00:55:07.333"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-87.kdenlive",
+      "join": 87,
+      "out_join": "00:55:12.342",
+      "removed_s": 22.713,
+      "source_removed": {
+        "in": "01:42:39.456",
+        "out": "01:43:02.169"
+      },
+      "left": {
+        "in": "00:55:07.342",
+        "out": "00:55:12.301"
+      },
+      "right": {
+        "in": "00:55:12.342",
+        "out": "00:55:17.342"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-88.kdenlive",
+      "join": 88,
+      "out_join": "00:57:49.671",
+      "removed_s": 11.804,
+      "source_removed": {
+        "in": "01:45:39.456",
+        "out": "01:45:51.260"
+      },
+      "left": {
+        "in": "00:57:44.671",
+        "out": "00:57:49.629"
+      },
+      "right": {
+        "in": "00:57:49.671",
+        "out": "00:57:54.671"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-89.kdenlive",
+      "join": 89,
+      "out_join": "00:58:10.006",
+      "removed_s": 10.552,
+      "source_removed": {
+        "in": "01:46:11.553",
+        "out": "01:46:22.105"
+      },
+      "left": {
+        "in": "00:58:05.006",
+        "out": "00:58:09.964"
+      },
+      "right": {
+        "in": "00:58:10.006",
+        "out": "00:58:15.006"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-90.kdenlive",
+      "join": 90,
+      "out_join": "00:58:29.359",
+      "removed_s": 32.348,
+      "source_removed": {
+        "in": "01:46:41.416",
+        "out": "01:47:13.764"
+      },
+      "left": {
+        "in": "00:58:24.359",
+        "out": "00:58:29.317"
+      },
+      "right": {
+        "in": "00:58:29.359",
+        "out": "00:58:34.359"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-91.kdenlive",
+      "join": 91,
+      "out_join": "00:58:44.790",
+      "removed_s": 18.227,
+      "source_removed": {
+        "in": "01:47:29.154",
+        "out": "01:47:47.381"
+      },
+      "left": {
+        "in": "00:58:39.790",
+        "out": "00:58:44.749"
+      },
+      "right": {
+        "in": "00:58:44.790",
+        "out": "00:58:49.628"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-92.kdenlive",
+      "join": 92,
+      "out_join": "00:58:49.628",
+      "removed_s": 4.671,
+      "source_removed": {
+        "in": "01:47:52.177",
+        "out": "01:47:56.848"
+      },
+      "left": {
+        "in": "00:58:44.628",
+        "out": "00:58:49.586"
+      },
+      "right": {
+        "in": "00:58:49.628",
+        "out": "00:58:54.628"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-93.kdenlive",
+      "join": 93,
+      "out_join": "00:59:30.693",
+      "removed_s": 35.225,
+      "source_removed": {
+        "in": "01:48:37.871",
+        "out": "01:49:13.096"
+      },
+      "left": {
+        "in": "00:59:25.693",
+        "out": "00:59:30.651"
+      },
+      "right": {
+        "in": "00:59:30.693",
+        "out": "00:59:35.447"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-94.kdenlive",
+      "join": 94,
+      "out_join": "00:59:35.447",
+      "removed_s": 1.544,
+      "source_removed": {
+        "in": "01:49:17.809",
+        "out": "01:49:19.353"
+      },
+      "left": {
+        "in": "00:59:30.447",
+        "out": "00:59:35.406"
+      },
+      "right": {
+        "in": "00:59:35.447",
+        "out": "00:59:40.447"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-95.kdenlive",
+      "join": 95,
+      "out_join": "01:00:02.849",
+      "removed_s": 12.555,
+      "source_removed": {
+        "in": "01:49:46.713",
+        "out": "01:49:59.268"
+      },
+      "left": {
+        "in": "00:59:57.849",
+        "out": "01:00:02.807"
+      },
+      "right": {
+        "in": "01:00:02.849",
+        "out": "01:00:07.849"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-96.kdenlive",
+      "join": 96,
+      "out_join": "01:00:29.858",
+      "removed_s": 7.674,
+      "source_removed": {
+        "in": "01:50:26.235",
+        "out": "01:50:33.909"
+      },
+      "left": {
+        "in": "01:00:24.858",
+        "out": "01:00:29.816"
+      },
+      "right": {
+        "in": "01:00:29.858",
+        "out": "01:00:34.858"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    },
+    {
+      "file": "seam-97.kdenlive",
+      "join": 97,
+      "out_join": "01:02:35.573",
+      "removed_s": 1035.122,
+      "source_removed": {
+        "in": "01:35:49.007",
+        "out": "01:53:04.129"
+      },
+      "left": {
+        "in": "01:02:30.573",
+        "out": "01:02:35.531"
+      },
+      "right": {
+        "in": "01:02:35.573",
+        "out": "01:02:40.573"
+      },
+      "render": "/media/ari/HD/FanEditRender/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed Edition.mkv"
+    }
+  ]
+}

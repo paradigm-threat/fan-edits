@@ -1,0 +1,30 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Fear and Loathing in Las Vegas (1998) - No North Star",
+  "source_kdenlive": "Fear and Loathing in Las Vegas (1998) - No North Star.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Fear and Loathing in Las Vegas (1998) - No North Star/Fear and Loathing in Las Vegas (1998) - No North Star - final.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "01:41:44.140",
+      "removed_s": 319.11,
+      "source_removed": {
+        "in": "01:41:44.098",
+        "out": "01:47:03.208"
+      },
+      "left": {
+        "in": "01:41:39.140",
+        "out": "01:41:44.098"
+      },
+      "right": {
+        "in": "01:41:44.140",
+        "out": "01:41:49.140"
+      },
+      "render": "/media/ari/HD/FanEditRender/Fear and Loathing in Las Vegas (1998) - No North Star/Fear and Loathing in Las Vegas (1998) - No North Star - final.mkv"
+    }
+  ]
+}

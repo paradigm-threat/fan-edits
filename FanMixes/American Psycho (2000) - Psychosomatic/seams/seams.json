@@ -1,0 +1,125 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "American Psycho (2000) - Psychosomatic",
+  "source_kdenlive": "American Psycho (2000) - Psychosomatic.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/American Psycho (2000) - Psychosomatic/American Psycho (2000) - Psychosomatic.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "00:20:07.548",
+      "removed_s": 140.688,
+      "source_removed": {
+        "in": "00:20:07.507",
+        "out": "00:22:28.195"
+      },
+      "left": {
+        "in": "00:20:02.548",
+        "out": "00:20:07.506"
+      },
+      "right": {
+        "in": "00:20:07.548",
+        "out": "00:20:12.548"
+      },
+      "render": "/media/ari/HD/FanEditRender/American Psycho (2000) - Psychosomatic/American Psycho (2000) - Psychosomatic.mkv"
+    },
+    {
+      "file": "seam-02.kdenlive",
+      "join": 2,
+      "out_join": "00:26:05.671",
+      "removed_s": 7.091,
+      "source_removed": {
+        "in": "00:28:26.276",
+        "out": "00:28:33.367"
+      },
+      "left": {
+        "in": "00:26:00.671",
+        "out": "00:26:05.629"
+      },
+      "right": {
+        "in": "00:26:05.671",
+        "out": "00:26:10.671"
+      },
+      "render": "/media/ari/HD/FanEditRender/American Psycho (2000) - Psychosomatic/American Psycho (2000) - Psychosomatic.mkv"
+    },
+    {
+      "file": "seam-03.kdenlive",
+      "join": 3,
+      "out_join": "00:34:37.184",
+      "removed_s": 20.854,
+      "source_removed": {
+        "in": "00:37:04.838",
+        "out": "00:37:25.692"
+      },
+      "left": {
+        "in": "00:34:32.184",
+        "out": "00:34:37.142"
+      },
+      "right": {
+        "in": "00:34:37.184",
+        "out": "00:34:42.184"
+      },
+      "render": "/media/ari/HD/FanEditRender/American Psycho (2000) - Psychosomatic/American Psycho (2000) - Psychosomatic.mkv"
+    },
+    {
+      "file": "seam-04.kdenlive",
+      "join": 4,
+      "out_join": "00:36:12.784",
+      "removed_s": 438.268,
+      "source_removed": {
+        "in": "00:39:01.251",
+        "out": "00:46:19.519"
+      },
+      "left": {
+        "in": "00:36:07.784",
+        "out": "00:36:12.743"
+      },
+      "right": {
+        "in": "00:36:12.784",
+        "out": "00:36:17.784"
+      },
+      "render": "/media/ari/HD/FanEditRender/American Psycho (2000) - Psychosomatic/American Psycho (2000) - Psychosomatic.mkv"
+    },
+    {
+      "file": "seam-05.kdenlive",
+      "join": 5,
+      "out_join": "01:03:39.103",
+      "removed_s": 151.179,
+      "source_removed": {
+        "in": "01:13:45.796",
+        "out": "01:16:16.975"
+      },
+      "left": {
+        "in": "01:03:34.103",
+        "out": "01:03:39.061"
+      },
+      "right": {
+        "in": "01:03:39.103",
+        "out": "01:03:44.103"
+      },
+      "render": "/media/ari/HD/FanEditRender/American Psycho (2000) - Psychosomatic/American Psycho (2000) - Psychosomatic.mkv"
+    },
+    {
+      "file": "seam-06.kdenlive",
+      "join": 6,
+      "out_join": "01:06:15.557",
+      "removed_s": 31.638,
+      "source_removed": {
+        "in": "01:18:53.387",
+        "out": "01:19:25.025"
+      },
+      "left": {
+        "in": "01:06:10.557",
+        "out": "01:06:15.515"
+      },
+      "right": {
+        "in": "01:06:15.557",
+        "out": "01:06:20.557"
+      },
+      "render": "/media/ari/HD/FanEditRender/American Psycho (2000) - Psychosomatic/American Psycho (2000) - Psychosomatic.mkv"
+    }
+  ]
+}

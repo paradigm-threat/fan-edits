@@ -1,0 +1,30 @@
+{
+  "note": "QC joins on the finished render (output times). source_removed is the original-rip span so subtitles can name the cut. Not the feature.",
+  "project": "Boogie Nights (1997) - No Lookout",
+  "source_kdenlive": "Boogie Nights (1997) - No Lookout.kdenlive",
+  "from_render": true,
+  "render": "/media/ari/HD/FanEditRender/Boogie Nights (1997) - No Lookout/Boogie Nights (1997) - No Lookout - final.mkv",
+  "original": null,
+  "proxy": false,
+  "seams": [
+    {
+      "file": "seam-01.kdenlive",
+      "join": 1,
+      "out_join": "01:45:56.100",
+      "removed_s": 1162.942,
+      "source_removed": {
+        "in": "01:45:56.058",
+        "out": "02:05:19.000"
+      },
+      "left": {
+        "in": "01:45:51.100",
+        "out": "01:45:56.058"
+      },
+      "right": {
+        "in": "01:45:56.100",
+        "out": "01:46:01.100"
+      },
+      "render": "/media/ari/HD/FanEditRender/Boogie Nights (1997) - No Lookout/Boogie Nights (1997) - No Lookout - final.mkv"
+    }
+  ]
+}
