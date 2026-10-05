@@ -419,6 +419,17 @@ themes:
         padding: "12px"
         background: "var(screen)"
         border: "1px solid var(border)"
+      ".fb-media-unlock-target":
+        display: "none"
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-media-locked":
+        display: "none"
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-media-unlock-target":
+        display: "block"
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-movie-ack":
+        display: "none"
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-video-controls .fb-btn":
+        opacity: "1"
+        pointerEvents: "auto"
       ".fb-movie-ack":
         position: "absolute"
         inset: "12px"

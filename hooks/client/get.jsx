@@ -459,7 +459,13 @@ export default function FlashbackApp() {
         {selected && selected.blurb ? <p className="fb-movie-blurb">{selected.blurb}</p> : null}
         {selected && selected.media ? (
           <div className="fb-video-panel">
-            {mediaUnlocked === true ? (
+            {/* Static SSR tree: inject + CSS toggle unlock (CleverScript cannot swap branches post-hydrate). */}
+            <div className="fb-media fb-media-locked" aria-hidden="true">
+              <p className="fb-media-msg">
+                {"Playback unlocks after you confirm ownership below."}
+              </p>
+            </div>
+            <div className="fb-media-unlock-target">
               <RelayMedia
                 src={mediaSrc(selected)}
                 subtitles={subtitleTracks(selected)}
@@ -469,24 +475,16 @@ export default function FlashbackApp() {
                 onPlay={() => { setPlaying(true) }}
                 onPause={() => { setPlaying(false) }}
               />
-            ) : (
-              <div className="fb-media fb-media-locked" aria-hidden="true">
-                <p className="fb-media-msg">
-                  {"Playback unlocks after you confirm ownership below."}
-                </p>
-              </div>
-            )}
-            {showMovieAck === true ? (
-              <MovieOwnAck
-                slug={selected.slug}
-                originalTitle={projectOriginalTitle(selected)}
-                title={projectTitle(selected)}
-                needWelcome={ack !== true}
-                onAck={() => {
-                  setMovieAck(true)
-                }}
-              />
-            ) : null}
+            </div>
+            <MovieOwnAck
+              slug={selected.slug}
+              originalTitle={projectOriginalTitle(selected)}
+              title={projectTitle(selected)}
+              needWelcome={ack !== true}
+              onAck={() => {
+                setMovieAck(true)
+              }}
+            />
             <div className="fb-video-controls">
               <button
                 type="button"
