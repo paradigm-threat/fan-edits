@@ -3,14 +3,7 @@
  * Run: node hooks/client/native/inject-park-hosts.test.mjs
  */
 import assert from 'node:assert/strict'
-import fs from 'node:fs'
-import path from 'node:path'
-import { fileURLToPath } from 'node:url'
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url))
-const getCs = fs.readFileSync(path.join(__dirname, '../../server/get.cs'), 'utf8')
-
-// Minimal reimplementation of injectParkNativeHosts (keep in sync with get.cs).
+// Mirrors relay-gateway `inject_park_native_host_scripts` (embed_html.rs).
 function injectParkNativeHosts(html) {
   var bodyClose = html.lastIndexOf('</body>')
   var firstHost = html.indexOf('data-fb-park-native="1"')
@@ -57,7 +50,5 @@ const firstHost = out.indexOf('data-fb-park-native="1"')
 assert.ok(firstHost >= 0 && firstHost < bodyClose, 'hosts must be inside body')
 assert.ok(out.indexOf('park-host-common.js') >= 0, 'common boot script included')
 assert.ok(!out.includes('</html><script data-fb-park-native'), 'no hosts after html')
-
-assert.match(getCs, /park-host-common\.js/, 'get.cs references common boot script')
 
 console.log('inject-park-hosts.test.mjs OK')

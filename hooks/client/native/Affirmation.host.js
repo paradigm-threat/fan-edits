@@ -223,7 +223,7 @@
     root.setAttribute('aria-modal', 'true');
 
     const panel = global.document.createElement('div');
-    panel.className = 'fb-gate-panel';
+    panel.className = 'fb-gate-panel fb-gate-card';
 
     const eye = global.document.createElement('p');
     eye.className = 'fb-gate-eyebrow';
