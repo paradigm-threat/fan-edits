@@ -269,7 +269,7 @@ function startAtFromLocation() {
       }
     }
   } catch (e) {}
-  return -1
+  return 0 - 1
 }
 
 function theaterHostEl() {

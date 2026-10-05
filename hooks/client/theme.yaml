@@ -290,6 +290,9 @@ themes:
         marginLeft: "auto"
         marginRight: "auto"
         boxSizing: "border-box"
+      ".fb-affirmation":
+        padding: "20px 18px 8px"
+        boxSizing: "border-box"
       ".fb-footer":
         position: "relative"
         zIndex: "2"
