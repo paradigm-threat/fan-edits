@@ -52,6 +52,15 @@ function readAck() {
   }
 }
 
+function syncWelcomeDocFlag() {
+  try {
+    if (typeof globalThis === 'undefined' || !globalThis.document || !globalThis.document.documentElement) {
+      return
+    }
+    globalThis.document.documentElement.setAttribute('data-fb-welcome-ack', '1')
+  } catch (e) {}
+}
+
 function writeAck() {
   try {
     if (typeof localStorage === 'undefined') {
@@ -62,6 +71,7 @@ function writeAck() {
     }
     localStorage.setItem(ACK_KEY, '1')
   } catch (e) {}
+  syncWelcomeDocFlag()
 }
 
 function searchHasOwnershipAck() {
@@ -120,6 +130,7 @@ export function hasOwnershipAck() {
 export function ensureOwnershipAckFromBrowser() {
   let fromQuery = consumeAckQuery()
   if (readAck() === true || fromQuery === true) {
+    syncWelcomeDocFlag()
     return true
   }
   return false

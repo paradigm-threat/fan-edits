@@ -47,6 +47,28 @@ function readWelcomeAck() {
   }
 }
 
+function syncWelcomeDocFlag() {
+  try {
+    if (typeof globalThis === 'undefined' || !globalThis.document || !globalThis.document.documentElement) {
+      return
+    }
+    globalThis.document.documentElement.setAttribute('data-fb-welcome-ack', '1')
+  } catch (e) {}
+}
+
+function syncMovieDocFlag(slug) {
+  try {
+    let s = str(slug)
+    if (s.length === 0) {
+      return
+    }
+    if (typeof globalThis === 'undefined' || !globalThis.document || !globalThis.document.documentElement) {
+      return
+    }
+    globalThis.document.documentElement.setAttribute('data-fb-movie-ack', s)
+  } catch (e) {}
+}
+
 function writeWelcomeAck() {
   try {
     if (typeof localStorage === 'undefined') {
@@ -57,6 +79,7 @@ function writeWelcomeAck() {
     }
     localStorage.setItem(WELCOME_KEY, '1')
   } catch (e) {}
+  syncWelcomeDocFlag()
 }
 
 function readMovieAckFromDocFlag(slug) {
@@ -127,6 +150,7 @@ function writeMovieOwnAck(slug) {
       return
     }
     localStorage.setItem(ackKey(s), '1')
+    syncMovieDocFlag(s)
   } catch (e) {}
 }
 
@@ -221,6 +245,10 @@ export function ensureMovieOwnAckFromBrowser(slug) {
     stripAckQuery(s)
   }
   if (hasMovieOwnAck(s) === true) {
+    syncMovieDocFlag(s)
+    if (readWelcomeAck() === true) {
+      syncWelcomeDocFlag()
+    }
     return true
   }
   return false
