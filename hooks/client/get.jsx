@@ -804,7 +804,7 @@ export default function FlashbackApp() {
       if (v && v.play) {
         const p = v.play()
         if (p && p.catch) {
-          p.catch(function () {})
+          p.catch(() => {})
         }
       }
     } catch (ePlay) {}
