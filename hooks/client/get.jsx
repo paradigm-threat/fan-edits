@@ -55,15 +55,19 @@ function mediaSrc(project) {
 
 function subtitleTracks(project) {
   if (!project || !project.subtitles) return []
-  return project.subtitles.map(function (t) {
+  const out = []
+  const list = project.subtitles
+  for (let i = 0; i < list.length; i++) {
+    const t = list[i]
     const track = {
       src: t.src.charAt(0) === '/' ? t.src : '/' + t.src,
       label: t.label || 'Subtitles',
       lang: t.lang || 'en',
     }
     if (t.default === true) track.default = true
-    return track
-  })
+    out.push(track)
+  }
+  return out
 }
 
 function findProject(projects, slug) {
@@ -74,9 +78,11 @@ function findProject(projects, slug) {
 }
 
 function projectsInCategory(projects, category) {
-  return projects.filter(function (p) {
-    return p.category === category
-  })
+  const out = []
+  for (let i = 0; i < projects.length; i++) {
+    if (projects[i].category === category) out.push(projects[i])
+  }
+  return out
 }
 
 function fetchText(path) {
@@ -310,6 +316,28 @@ export default function FlashbackApp() {
     )
   }
 
+  const fanCards = []
+  for (let i = 0; i < fanMixes.length; i++) {
+    fanCards.push(titleCard(fanMixes[i]))
+  }
+  const kidCards = []
+  for (let i = 0; i < kidFriendly.length; i++) {
+    kidCards.push(titleCard(kidFriendly[i]))
+  }
+  const blogCards = []
+  for (let i = 0; i < blogPosts.length; i++) {
+    const post = blogPosts[i]
+    blogCards.push(
+      <article key={post.slug || post.title} className="fb-blog-post">
+        {post.date ? <p className="fb-blog-date">{post.date}</p> : null}
+        <h3 className="fb-blog-title">{post.title}</h3>
+        <div className="fb-blog-body">
+          <MarkdownRenderer content={post.body || ''} />
+        </div>
+      </article>
+    )
+  }
+
   let main = null
   if (kind.kind === 'md') {
     main = (
@@ -394,25 +422,15 @@ export default function FlashbackApp() {
             {blogPosts.length === 0 ? (
               <p className="fb-blog-empty">No posts yet.</p>
             ) : (
-              blogPosts.map(function (post) {
-                return (
-                  <article key={post.slug || post.title} className="fb-blog-post">
-                    {post.date ? <p className="fb-blog-date">{post.date}</p> : null}
-                    <h3 className="fb-blog-title">{post.title}</h3>
-                    <div className="fb-blog-body">
-                      <MarkdownRenderer content={post.body || ''} />
-                    </div>
-                  </article>
-                )
-              })
+              blogCards
             )}
           </aside>
         </div>
         <section className="fb-catalog">
           <h2 className="fb-section-title">FanMixes</h2>
-          <div className="fb-title-grid">{fanMixes.map(titleCard)}</div>
+          <div className="fb-title-grid">{fanCards}</div>
           <h2 className="fb-section-title">KidFriendly</h2>
-          <div className="fb-title-grid">{kidFriendly.map(titleCard)}</div>
+          <div className="fb-title-grid">{kidCards}</div>
         </section>
       </div>
     )
