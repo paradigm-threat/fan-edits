@@ -752,6 +752,14 @@ export default function FlashbackApp() {
     )
   } else if (kind.kind === 'movie') {
     const movieCid = selected && selected.media ? resolveProjectCid(selected) : ''
+    // Evaluate README MarkdownRenderer before the video panel JSX so SSR
+    // cancel during media/inspect cannot leave an empty .fb-readme.
+    const readmeMd = readmeBody(readme) || '# Loading…'
+    const readmeNode = (
+      <div className="fb-readme fb-prose">
+        <MarkdownRenderer content={readmeMd} />
+      </div>
+    )
     main = (
       <div className="fb-movie">
         <button type="button" className="fb-back" onClick={() => { navigate('/') }}>
@@ -814,9 +822,7 @@ export default function FlashbackApp() {
         ) : (
           <p className="fb-movie-nomedia">Feature media is not catalogued yet for this title.</p>
         )}
-        <div className="fb-readme fb-prose">
-          <MarkdownRenderer content={readmeBody(readme) || '# Loading…'} />
-        </div>
+        {readmeNode}
       </div>
     )
   } else {
