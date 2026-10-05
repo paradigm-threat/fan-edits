@@ -129,19 +129,21 @@ const harnessHtml = `<!DOCTYPE html>
 
     document.getElementById('play').addEventListener('click', () => {
       const host = document.querySelector('.fb-theater-player');
-      if (host && host.__fbStartMirrorHunt) {
+      if (host && host.__fbCtx && host.__fbCtx.notePlayWhileSeeding) {
+        host.__fbCtx.notePlayWhileSeeding();
+      } else if (host && host.__fbStartMirrorHunt) {
         host.__fbStartMirrorHunt({ fromPlay: true });
       }
-      const ph = document.querySelector('[data-relay-park-native="fb-theater-player"]') || playerMount.firstElementChild;
-      // Attribute drive as get.jsx does
       const built = document.querySelector('.fb-theater-player');
       if (built && built.parentElement && built.parentElement.setAttribute) {
+        built.parentElement.setAttribute('data-unlocked', 'true');
         built.parentElement.setAttribute('data-playing', 'true');
         built.parentElement.setAttribute('data-command', '1');
         built.parentElement.setAttribute('data-command-seq', String(Date.now()));
       }
       if (built && built.__fbApplyCommands) {
         built.__fbApplyCommands({
+          unlocked: 'true',
           playing: 'true',
           command: '1',
           commandSeq: String(Date.now()),
@@ -154,6 +156,24 @@ const harnessHtml = `<!DOCTYPE html>
       const v = document.querySelector('video.fb-media-video');
       if (v && v.pause) v.pause();
     });
+
+    // When Affirmation confirms, unlock the theater host like CleverScript would.
+    const mo = new MutationObserver(() => {
+      const ack = document.documentElement.getAttribute('data-fb-movie-ack');
+      if (ack === slug) {
+        const built = document.querySelector('.fb-theater-player');
+        if (built && built.parentElement) {
+          built.parentElement.setAttribute('data-unlocked', 'true');
+        }
+        if (built && built.__fbApplyCommands) {
+          built.__fbApplyCommands({ unlocked: 'true', playing: 'false', command: '0', commandSeq: '0' });
+        }
+        if (built && built.__fbCtx && built.__fbCtx.setUnlocked) {
+          built.__fbCtx.setUnlocked(true);
+        }
+      }
+    });
+    mo.observe(document.documentElement, { attributes: true, attributeFilter: ['data-fb-movie-ack'] });
   </script>
 </body>
 </html>
@@ -299,7 +319,6 @@ test.describe('native hosts', () => {
     await expect(gate).toBeVisible()
 
     await page.locator('.fb-gate-check input[type=checkbox], .fb-gate-check').first().click({ force: true })
-    // Prefer checking the checkbox input directly
     const checkbox = page.locator('.fb-affirmation-native input[type=checkbox]')
     if (await checkbox.count()) {
       await checkbox.check({ force: true })
@@ -311,19 +330,40 @@ test.describe('native hosts', () => {
       .poll(async () => page.evaluate(() => document.documentElement.getAttribute('data-fb-movie-ack')))
       .toBe(SLUG)
 
-    // Wait for mirror hunt to mark ready (or show pending/failed feedback)
     const theater = page.locator('.fb-theater-player')
     await expect(theater).toBeVisible()
 
     await page.locator('#play').click()
 
-    // Visible feedback: note, pending, failed, playing state, or video activity
+    // Instant feedback within a few hundred ms
+    await expect
+      .poll(
+        async () =>
+          page.evaluate(() => {
+            const pending = document.querySelector('.fb-media-pending, .fb-media-play-requested')
+            const live = document.querySelector('[data-fb-live-status]')
+            const note = document.querySelector('.fb-media-playback-note')
+            const video = document.querySelector('video.fb-media-video')
+            const pendingText =
+              pending && getComputedStyle(pending).display !== 'none' ? pending.textContent || '' : ''
+            const liveText =
+              live && getComputedStyle(live).display !== 'none' ? live.textContent || '' : ''
+            const noteText = note && getComputedStyle(note).display !== 'none' ? note.textContent || '' : ''
+            const playing = video && !video.paused ? 'playing' : ''
+            return [pendingText, liveText, noteText, playing].filter(Boolean).join(' | ')
+          }),
+        { timeout: 1500 },
+      )
+      .toMatch(/Play requested|mirror|probing|Checking|Ready|Playing|live|hunt|starting/i)
+
+    // Eventually ready/playing or a concrete live error (not stuck blank)
     await expect
       .poll(
         async () =>
           page.evaluate(() => {
             const note = document.querySelector('.fb-media-playback-note')
             const pending = document.querySelector('.fb-media-pending, .fb-media-failed, .fb-media-play-requested')
+            const live = document.querySelector('[data-fb-live-status]')
             const err = document.querySelector('.fb-media-playback-error')
             const video = document.querySelector('video.fb-media-video')
             const noteText = note && getComputedStyle(note).display !== 'none' ? note.textContent || '' : ''
@@ -333,16 +373,153 @@ test.describe('native hosts', () => {
                 : ''
             const pendingVisible =
               pending && getComputedStyle(pending).display !== 'none' ? pending.textContent || '' : ''
+            const liveText =
+              live && getComputedStyle(live).display !== 'none' ? live.textContent || '' : ''
             const playing =
               video && !video.paused && video.readyState >= 2
                 ? 'playing'
                 : video && video.readyState >= 2
                   ? 'readyState'
                   : ''
-            return [noteText, errText, pendingVisible, playing].filter(Boolean).join(' | ')
+            return [noteText, errText, pendingVisible, liveText, playing].filter(Boolean).join(' | ')
           }),
         { timeout: 15000 },
       )
       .not.toBe('')
+  })
+
+  test('Play shows live error when status probe times out', async ({ page }) => {
+    test.setTimeout(60000)
+    // Match same-origin and fleet mirror URLs
+    await page.route('**/FanMixes/Test/tiny.mkv**', async (route) => {
+      const url = route.request().url()
+      if (url.includes('relayAssetStatus=1')) {
+        await new Promise((r) => setTimeout(r, 60000))
+        await route.abort()
+        return
+      }
+      await route.abort()
+    })
+    // Avoid waiting on real fleet /api/config
+    await page.route('**/api/config', async (route) => {
+      await route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ peers: [] }),
+      })
+    })
+
+    await page.goto(srv.origin + '/harness.html')
+    await page.evaluate((slug) => history.replaceState(null, '', '/' + slug), SLUG)
+    const checkbox = page.locator('.fb-affirmation-native input[type=checkbox]')
+    if (await checkbox.count()) await checkbox.check({ force: true })
+    await page.locator('.fb-gate-ok').click()
+    await expect(page.locator('.fb-affirmation-native')).toBeHidden({ timeout: 5000 })
+
+    await page.evaluate(() => {
+      const built = document.querySelector('.fb-theater-player')
+      if (built && built.__fbCtx && built.__fbCtx.setUnlocked) built.__fbCtx.setUnlocked(true)
+      if (built && built.parentElement) built.parentElement.setAttribute('data-unlocked', 'true')
+    })
+
+    await page.locator('#play').click({ force: true })
+
+    await expect
+      .poll(
+        async () =>
+          page.evaluate(() => {
+            const msg = document.querySelector('.fb-media-pending .fb-media-msg')
+            const live = document.querySelector('[data-fb-live-status]')
+            return ((msg && msg.textContent) || '') + ' | ' + ((live && live.textContent) || '')
+          }),
+        { timeout: 2000 },
+      )
+      .toMatch(/Play requested|Resolving|Checking|probing|relayAssetStatus|mirror|hunt|starting/i)
+
+    await expect
+      .poll(
+        async () =>
+          page.evaluate(() => {
+            const live = document.querySelector('[data-fb-live-status]')
+            const msg = document.querySelector('.fb-media-pending .fb-media-msg')
+            return ((live && live.textContent) || '') + ' | ' + ((msg && msg.textContent) || '')
+          }),
+        { timeout: 20000 },
+      )
+      .toMatch(/timed out|timeout|Unreachable|Status request/i)
+  })
+
+  test('Play surfaces symlink stub as permanent block with Retry', async ({ page }) => {
+    await page.route(`**${MEDIA_PATH}**`, async (route) => {
+      const req = route.request()
+      const url = req.url()
+      if (url.includes('relayAssetStatus=1')) {
+        await route.fulfill({
+          status: 200,
+          contentType: 'application/vnd.relay.asset-status+json',
+          body: JSON.stringify({
+            schema: 'relay.asset-status.v1',
+            error: 'ok',
+            message: 'asset available',
+            retryable: false,
+            cid: 'bafybeistubcid',
+            seed: { state: 'cached', progressPct: 100, bytesTotal: 93, localBlock: true },
+          }),
+        })
+        return
+      }
+      if (req.headers()['range']) {
+        await route.fulfill({
+          status: 206,
+          headers: {
+            'Content-Type': 'text/plain',
+            'Accept-Ranges': 'bytes',
+            'Content-Range': 'bytes 0-0/93',
+            'Content-Length': '1',
+            'Access-Control-Allow-Origin': '*',
+          },
+          body: 'x',
+        })
+        return
+      }
+      await route.fulfill({
+        status: 200,
+        headers: {
+          'Content-Type': 'text/plain',
+          'Content-Length': '93',
+          'Access-Control-Allow-Origin': '*',
+        },
+        body: 'x'.repeat(93),
+      })
+    })
+
+    await page.goto(srv.origin + '/harness.html')
+    await page.evaluate((slug) => history.replaceState(null, '', '/' + slug), SLUG)
+    const checkbox = page.locator('.fb-affirmation-native input[type=checkbox]')
+    if (await checkbox.count()) await checkbox.check({ force: true })
+    await page.locator('.fb-gate-ok').click()
+    await expect(page.locator('.fb-affirmation-native')).toBeHidden({ timeout: 5000 })
+
+    await page.evaluate(() => {
+      const built = document.querySelector('.fb-theater-player')
+      if (built && built.__fbCtx && built.__fbCtx.setUnlocked) built.__fbCtx.setUnlocked(true)
+    })
+
+    await page.locator('#play').click({ force: true })
+
+    await expect
+      .poll(
+        async () =>
+          page.evaluate(() => {
+            const pendingMsg = document.querySelector('.fb-media-pending .fb-media-msg')
+            const live = document.querySelector('[data-fb-live-status]')
+            return ((pendingMsg && pendingMsg.textContent) || '') + ' | ' + ((live && live.textContent) || '')
+          }),
+        { timeout: 15000 },
+      )
+      .toMatch(/stub|Broken CID|symlink/i)
+
+    await expect(page.locator('[data-fb-live-status]')).toContainText(/stub|block/i)
+    await expect(page.getByRole('button', { name: 'Retry' })).toBeVisible()
   })
 })

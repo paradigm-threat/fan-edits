@@ -61,6 +61,44 @@
     return (n / 1000000000).toFixed(2) + ' GB';
   }
 
+  /** Timed fetch so hung mirrors cannot freeze Play feedback. */
+  function fetchWithTimeout(url, opts, ms) {
+    opts = opts || {};
+    const timeoutMs = typeof ms === 'number' && ms > 0 ? ms : 5000;
+    let settled = false;
+    let timer = null;
+    return new Promise(function (resolve, reject) {
+      timer = global.setTimeout(function () {
+        if (settled) return;
+        settled = true;
+        const e = new Error('timeout');
+        e.code = 'timeout';
+        reject(e);
+      }, timeoutMs);
+      global.fetch(url, opts).then(
+        function (r) {
+          if (settled) return;
+          settled = true;
+          if (timer) global.clearTimeout(timer);
+          resolve(r);
+        },
+        function (err) {
+          if (settled) return;
+          settled = true;
+          if (timer) global.clearTimeout(timer);
+          const name = err && err.name ? err.name : '';
+          if (name === 'AbortError') {
+            const e = new Error('timeout');
+            e.code = 'timeout';
+            reject(e);
+            return;
+          }
+          reject(err);
+        },
+      );
+    });
+  }
+
   function peerShort(fqdn) {
     const s = String(fqdn || '');
     const i = s.indexOf('.');
@@ -366,6 +404,11 @@
   function applyCommands(ctx, props) {
     const video = ctx.video;
     if (!video) return;
+    const unlockedNow =
+      prop(props, 'unlocked', 'false') === 'true' || prop(props, 'data-unlocked', 'false') === 'true';
+    if (typeof ctx.setUnlocked === 'function') {
+      ctx.setUnlocked(unlockedNow);
+    }
     const playing = prop(props, 'playing', 'false') === 'true';
     const cmd = parseInt(prop(props, 'command', '0'), 10) || 0;
     let arg = parseMediaTime(prop(props, 'commandArg', ''));
@@ -401,8 +444,8 @@
 
     if (cmd === 1 || playing) {
       try {
-        shell.style.display = 'block';
-        pending.style.display = 'none';
+        if (ctx.uiShell) ctx.uiShell.style.display = 'block';
+        if (ctx.uiPending) ctx.uiPending.style.display = 'none';
       } catch (_) {}
       ctx.clearPlaybackError();
       ctx.setPlaybackNote('Starting playback…');
@@ -478,6 +521,13 @@
       'The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.';
     pending.appendChild(hint);
 
+    const liveLog = global.document.createElement('p');
+    liveLog.className = 'fb-media-live';
+    liveLog.setAttribute('data-fb-live-status', '1');
+    liveLog.setAttribute('aria-live', 'polite');
+    liveLog.style.display = 'none';
+    pending.appendChild(liveLog);
+
     const bar = global.document.createElement('div');
     bar.className = 'fb-media-bar';
     bar.style.display = 'block';
@@ -533,11 +583,24 @@
 
     const ctx = {
       video: video,
+      uiShell: shell,
+      uiPending: pending,
       isReady: seedState === 'ready' && !!src,
       pendingSeek: Number.isNaN(startAt) ? null : startAt,
       pendingEnd: Number.isNaN(endAt) ? null : endAt, // recorded for future clip-stop; not enforced yet
       didInitialSeek: false,
       lastCommandSeq: prop(props, 'commandSeq', '0'),
+      setUnlocked: function (on) {
+        if (on) {
+          locked.style.display = 'none';
+          locked.setAttribute('aria-hidden', 'true');
+          unlock.style.display = '';
+        } else {
+          locked.style.display = '';
+          locked.setAttribute('aria-hidden', 'false');
+          unlock.style.display = 'none';
+        }
+      },
       setPlaybackNote: function (text) {
         if (!text) {
           statusBanner.style.display = 'none';
@@ -552,6 +615,8 @@
         errBanner.style.display = 'block';
         pending.style.display = 'none';
         shell.style.display = 'block';
+        locked.style.display = 'none';
+        unlock.style.display = '';
         root.setAttribute('data-seed-state', 'error');
       },
       clearPlaybackError: function () {
@@ -559,12 +624,16 @@
         errMsg.textContent = '';
       },
       notePlayWhileSeeding: function () {
+        locked.style.display = 'none';
+        unlock.style.display = '';
         pending.style.display = 'block';
         shell.style.display = 'none';
         pending.className = 'fb-media fb-media-pending fb-media-play-requested';
         msg.textContent = 'Play requested — probing this site and fleet mirrors…';
         hint.textContent =
           'Trying the current host, then iad1 / ord1 / hkg1. The first mirror with real video bytes wins.';
+        liveLog.style.display = 'block';
+        liveLog.textContent = 'Starting mirror hunt…';
         try {
           pending.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
         } catch (_) {}
@@ -619,9 +688,11 @@
     let attempt = 0;
     let timer = null;
     let stopped = false;
+    let huntGen = 0;
     let mirrorIndex = 0;
     let mirrors = buildMirrorList(logicalPathFromSrc(src), DEFAULT_PEER_FQDNS);
     let activeMirror = mirrors[0] || null;
+    let probeLog = [];
     const maxRounds = 8;
 
     function setVideoSource(mediaUrl) {
@@ -696,15 +767,50 @@
       bar.setAttribute('title', pct + '%');
       hint.style.display = 'block';
       hint.textContent = statusHint(st);
+      liveLog.style.display = 'block';
+      const label = st.mirrorLabel || 'mirror';
+      let line = label + ': ';
+      if (stub) {
+        line += 'blocked — symlink stub ' + formatBytes(st.bytesTotal);
+      } else if (st.ok) {
+        line += 'playable';
+      } else if (st.error === 'timeout') {
+        line += 'timed out (no response in time)';
+      } else if (st.error) {
+        line += (st.message || st.error) + (st.seedState ? ' · seed=' + st.seedState : '');
+      } else {
+        line += st.message || 'checking…';
+      }
+      if (typeof st.providers === 'number') {
+        line += ' · ' + st.providers + (st.providers === 1 ? ' provider' : ' providers');
+      }
+      probeLog = probeLog.concat([line]);
+      if (probeLog.length > 6) {
+        probeLog = probeLog.slice(probeLog.length - 6);
+      }
+      liveLog.textContent = probeLog.join(' → ');
       if (exhausted || (permanent && stub)) {
-        pending.className = 'fb-media fb-media-failed';
+        pending.className =
+          'fb-media fb-media-failed' +
+          (root.getAttribute('data-play-requested') === '1' ? ' fb-media-play-requested' : '');
         retryBtn.style.display = 'inline-block';
       } else {
-        pending.className = 'fb-media fb-media-pending';
+        pending.className =
+          'fb-media fb-media-pending' +
+          (root.getAttribute('data-play-requested') === '1' ? ' fb-media-play-requested' : '');
         retryBtn.style.display = 'none';
       }
       const cid = st.cid || cidProp;
       inspectHost.replaceChildren(buildInspect(cid, st.providers, st.bytesTotal));
+    }
+
+    function setPhase(text) {
+      liveLog.style.display = 'block';
+      const prefix = probeLog.length ? probeLog.join(' → ') + ' → ' : '';
+      liveLog.textContent = prefix + (text || '');
+      if (text && text.indexOf('…') >= 0) {
+        msg.textContent = text;
+      }
     }
 
     function loadPeerList(done) {
@@ -716,10 +822,14 @@
         }
         done();
       }
+      setPhase('Resolving fleet peer list…');
       for (let i = 0; i < DEFAULT_PEER_FQDNS.length; i++) {
         const fqdn = DEFAULT_PEER_FQDNS[i];
-        global
-          .fetch('https://' + fqdn + '/api/config', { credentials: 'omit', cache: 'no-store' })
+        fetchWithTimeout(
+          'https://' + fqdn + '/api/config',
+          { credentials: 'omit', cache: 'no-store' },
+          3500,
+        )
           .then(function (r) {
             return r && r.ok ? r.json() : null;
           })
@@ -739,17 +849,23 @@
     function probeOneMirror(mirror) {
       const statusUrl =
         mirror.mediaUrl + (mirror.mediaUrl.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1';
-      return global
-        .fetch(statusUrl, { credentials: 'omit', cache: 'no-store' })
+      setPhase(mirror.label + ': requesting relayAssetStatus…');
+      return fetchWithTimeout(statusUrl, { credentials: 'omit', cache: 'no-store' }, 6000)
         .then(function (r) {
-          return r ? r.json().catch(function () { return null; }) : null;
+          if (!r) {
+            throw Object.assign(new Error('No status'), { code: 'network' });
+          }
+          setPhase(mirror.label + ': parsing status (HTTP ' + r.status + ')…');
+          return r.json().catch(function () {
+            return null;
+          });
         })
         .then(function (j) {
           const st = parseStatusJson(j) || {
             ok: false,
             retryable: true,
             error: 'http',
-            message: 'No status',
+            message: 'No status JSON',
             progressPct: 0,
             seedState: 'unknown',
             providers: null,
@@ -759,13 +875,18 @@
             cid: cidProp,
           };
           st.mirrorLabel = mirror.label;
-          return global
-            .fetch(mirror.mediaUrl, {
+          showStatus(st);
+          setPhase(mirror.label + ': Range probe bytes=0-0…');
+          return fetchWithTimeout(
+            mirror.mediaUrl,
+            {
               method: 'GET',
               headers: { Range: 'bytes=0-0' },
               credentials: 'omit',
               cache: 'no-store',
-            })
+            },
+            6000,
+          )
             .then(function (r2) {
               const size = parseTotalFromHeaders(r2.headers);
               const ct = (r2.headers.get('Content-Type') || '').toLowerCase();
@@ -789,6 +910,9 @@
                 if (st.ok || st.seedState === 'cached' || st.seedState === 'ready') {
                   st.ok = true;
                   st.seedState = 'ready';
+                } else {
+                  st.message =
+                    (st.message || 'status not ready') + ' · Range HTTP ' + r2.status;
                 }
               } else if (r2.status >= 500 || r2.status === 425 || r2.status === 503 || r2.status === 504) {
                 st.ok = false;
@@ -803,28 +927,30 @@
               }
               return { mirror: mirror, st: st };
             })
-            .catch(function () {
+            .catch(function (err) {
+              const code = err && err.code ? err.code : 'range-fail';
               st.ok = false;
               st.retryable = true;
-              st.error = 'range-fail';
-              st.message = 'Range probe failed';
+              st.error = code;
+              st.message = code === 'timeout' ? 'Range probe timed out' : 'Range probe failed';
               return { mirror: mirror, st: st };
             });
         })
-        .catch(function () {
+        .catch(function (err) {
+          const code = err && err.code ? err.code : 'network';
           return {
             mirror: mirror,
             st: {
               ok: false,
               retryable: true,
-              error: 'network',
-              message: 'Unreachable',
+              error: code,
+              message: code === 'timeout' ? 'Status request timed out' : 'Unreachable',
               progressPct: 0,
               seedState: 'unknown',
               providers: null,
               bytesTotal: null,
               bytesReceived: null,
-              retryAfterSecs: 3,
+              retryAfterSecs: 2,
               cid: cidProp,
               mirrorLabel: mirror.label,
             },
@@ -835,9 +961,10 @@
     function scheduleNext(delayMs) {
       if (stopped || !src) return;
       if (timer) global.clearTimeout(timer);
-      let delay = delayMs || 2500;
-      if (delay < 1200) delay = 1200;
-      if (delay > 12000) delay = 12000;
+      let delay = delayMs || 1800;
+      if (delay < 600) delay = 600;
+      if (delay > 8000) delay = 8000;
+      setPhase('Next mirror in ' + Math.round(delay / 100) / 10 + 's…');
       timer = global.setTimeout(function () {
         attempt += 1;
         huntStep();
@@ -861,7 +988,10 @@
             bytesReceived: null,
             retryAfterSecs: 5,
             cid: cidProp,
+            mirrorLabel: 'fleet',
           });
+          liveLog.textContent =
+            'All mirrors exhausted after ' + attempt + ' probes. Tap Retry or re-ingest if stub.';
           retryBtn.style.display = 'inline-block';
           return;
         }
@@ -880,8 +1010,10 @@
           })
           .join(' → ') +
         ')';
+      setPhase(mirror.label + ': starting probe…');
+      const gen = huntGen;
       probeOneMirror(mirror).then(function (result) {
-        if (stopped) return;
+        if (stopped || gen !== huntGen) return;
         const st = result.st;
         showStatus(st);
         if (!isStubCid(st) && (st.ok || st.seedState === 'cached' || st.seedState === 'ready')) {
@@ -889,21 +1021,44 @@
           return;
         }
         if (isStubCid(st)) {
+          liveLog.textContent =
+            st.mirrorLabel +
+            ': permanent block — CID is a ' +
+            formatBytes(st.bytesTotal) +
+            ' symlink stub on every mirror.';
           retryBtn.style.display = 'inline-block';
           return;
         }
         mirrorIndex += 1;
         const delay =
-          st && st.retryAfterSecs > 0 ? st.retryAfterSecs * 1000 : mirrorIndex === 0 ? 2500 : 900;
+          st && st.retryAfterSecs > 0 ? Math.min(st.retryAfterSecs * 1000, 4000) : 900;
         scheduleNext(delay);
       });
     }
 
     function startMirrorHunt(opts) {
       opts = opts || {};
-      if (!src) return;
+      if (!src) {
+        pending.style.display = 'block';
+        shell.style.display = 'none';
+        msg.textContent = 'Play blocked — no media src on this title.';
+        hint.textContent = 'Catalog has no playable path for this edit.';
+        liveLog.style.display = 'block';
+        liveLog.textContent = 'error: missing src';
+        retryBtn.style.display = 'none';
+        return;
+      }
+      // Invalidate in-flight probes from a prior hunt
+      huntGen += 1;
+      const gen = huntGen;
+      if (timer) {
+        global.clearTimeout(timer);
+        timer = null;
+      }
       if (opts.fromPlay) {
         root.setAttribute('data-play-requested', '1');
+        locked.style.display = 'none';
+        unlock.style.display = '';
       }
       stopped = false;
       ctx.isReady = false;
@@ -919,8 +1074,28 @@
       msg.textContent = opts.fromPlay
         ? 'Play requested — probing mirrors…'
         : 'Checking this site and fleet mirrors…';
+      hint.textContent =
+        'Same-origin first, then fan-edits.iad1 / ord1 / hkg1. Live errors appear below as each probe finishes.';
+      liveLog.style.display = 'block';
+      liveLog.textContent = opts.fromPlay ? 'Play → mirror hunt started' : 'Auto mirror hunt started';
+      probeLog = [];
+      try {
+        pending.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      } catch (_) {}
       loadPeerList(function () {
-        if (stopped) return;
+        if (stopped || gen !== huntGen) return;
+        setPhase(
+          'Probing ' +
+            mirrors.length +
+            ' mirror' +
+            (mirrors.length === 1 ? '' : 's') +
+            ': ' +
+            mirrors
+              .map(function (m) {
+                return m.label;
+              })
+              .join(' → '),
+        );
         huntStep();
       });
     }
@@ -949,7 +1124,6 @@
         timer = null;
       }
     };
-    return root;
     return root;
   }
 

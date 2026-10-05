@@ -712,6 +712,13 @@ themes:
       ".fb-media-hint":
         margin: "0"
         fontSize: "0.88rem"
+      ".fb-media-live":
+        margin: "4px 0 0"
+        fontSize: "0.82rem"
+        color: "var(goldMid)"
+        fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        lineHeight: "1.4"
+        wordBreak: "break-word"
       ".fb-media-cid":
         fontSize: "0.75rem"
         wordBreak: "break-all"

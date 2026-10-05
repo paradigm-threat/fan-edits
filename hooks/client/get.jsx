@@ -809,6 +809,23 @@ export default function FlashbackApp() {
 
   function sendPlay() {
     if (mediaUnlocked !== true) {
+      try {
+        const host = theaterHostEl()
+        if (host) {
+          const built = host.querySelector ? host.querySelector('.fb-theater-player') : null
+          if (built && built.__fbCtx && built.__fbCtx.setPlaybackError) {
+            built.__fbCtx.setPlaybackError(
+              'Confirm ownership first — the Affirmation gate must be accepted before Play.',
+            )
+          }
+        }
+        const gate = globalThis.document
+          ? globalThis.document.querySelector('.fb-affirmation-native, .fb-gate, [aria-modal="true"]')
+          : null
+        if (gate && gate.scrollIntoView) {
+          gate.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        }
+      } catch (eLocked) {}
       return
     }
     const nextSeq = commandSeq + 1
@@ -820,7 +837,9 @@ export default function FlashbackApp() {
       const host = theaterHostEl()
       if (host) {
         const built = host.querySelector ? host.querySelector('.fb-theater-player') : null
-        if (built && built.__fbStartMirrorHunt) {
+        if (built && built.__fbCtx && built.__fbCtx.notePlayWhileSeeding) {
+          built.__fbCtx.notePlayWhileSeeding()
+        } else if (built && built.__fbStartMirrorHunt) {
           built.__fbStartMirrorHunt({ fromPlay: true })
         }
       }
