@@ -102,6 +102,25 @@ function findProject(projects, slug) {
   return null
 }
 
+/** CleverScript-safe: optional index fields via try/catch. */
+function projectOriginalTitle(p) {
+  try {
+    if (p && p.originalTitle) {
+      return str(p.originalTitle)
+    }
+  } catch (e) {}
+  return ''
+}
+
+function projectTitle(p) {
+  try {
+    if (p && p.title) {
+      return str(p.title)
+    }
+  } catch (e) {}
+  return ''
+}
+
 function projectsInCategory(projects, category) {
   let out = []
   for (let i = 0; i < projects.length; i++) {
@@ -419,7 +438,8 @@ export default function FlashbackApp() {
             {movieAck !== true ? (
               <MovieOwnAck
                 slug={selected.slug}
-                title={selected.title}
+                originalTitle={projectOriginalTitle(selected)}
+                title={projectTitle(selected)}
                 needWelcome={ack !== true}
                 onAck={() => {
                   setMovieAck(true)

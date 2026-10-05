@@ -225,18 +225,53 @@ export function ensureMovieOwnAckFromBrowser(slug) {
 }
 
 /**
+ * Strip fanedit/edition suffix from a display title (UI fallback only).
+ * Prefer props.originalTitle from index.json when present.
+ */
+function stripEditionSuffix(raw) {
+  let t = str(raw).trim()
+  if (t.length === 0) {
+    return ''
+  }
+  let em = t.indexOf(' — ')
+  let hy = t.indexOf(' - ')
+  let cut = -1
+  if (em >= 0 && hy >= 0) {
+    if (em < hy) {
+      cut = em
+    } else {
+      cut = hy
+    }
+  } else if (em >= 0) {
+    cut = em
+  } else if (hy >= 0) {
+    cut = hy
+  }
+  if (cut >= 0) {
+    t = t.slice(0, cut).trim()
+  }
+  return t
+}
+
+/**
  * Overlay CTA until the viewer confirms they own this particular title.
- * props.slug, props.title, props.needWelcome, props.onAck
+ * props.slug, props.originalTitle, props.title (fallback), props.needWelcome, props.onAck
  */
 export default function MovieOwnAck(props) {
   let slug = ''
-  let title = 'this movie'
+  let originalTitle = ''
+  let title = ''
   let needWelcome = false
   try {
     if (props && props.slug) {
       slug = str(props.slug)
     }
   } catch (e) {}
+  try {
+    if (props && props.originalTitle) {
+      originalTitle = str(props.originalTitle)
+    }
+  } catch (e1) {}
   try {
     if (props && props.title) {
       title = str(props.title)
@@ -257,14 +292,16 @@ export default function MovieOwnAck(props) {
     return null
   }
 
-  let action = '/' + slug
-  let checkLabel = 'I confirm I own a legal copy of ' + title + ' before I play this edit.'
-  if (needWelcome === true) {
-    checkLabel =
-      'I confirm I own a legal copy of each original film I play here — including ' +
-      title +
-      '.'
+  let ownName = originalTitle
+  if (ownName.length === 0) {
+    ownName = stripEditionSuffix(title)
   }
+  if (ownName.length === 0) {
+    ownName = 'this movie'
+  }
+
+  let action = '/' + slug
+  let checkLabel = 'I confirm I own a legal copy of ' + ownName + '.'
 
   return (
     <div className="fb-movie-ack" role="dialog" aria-label="Confirm you own this title">

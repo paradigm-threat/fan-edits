@@ -30,6 +30,31 @@ def title_from_readme(readme: Path, fallback: str) -> str:
     return fallback
 
 
+def original_title_from(display_title: str, folder_name: str) -> str:
+    """Source film name without fanedit/edition suffix.
+
+    Prefer the README/display title (often includes the year), else the folder
+    name. Strip a trailing edition segment after `` - `` or `` — ``
+    (e.g. ``Van Helsing (2004) — DeAnna'd`` → ``Van Helsing (2004)``;
+    folder ``Van Helsing - DeAnna'd`` alone → ``Van Helsing``). Also drop a
+    trailing `` [tag]`` like ``[1080p]``.
+    """
+    raw = (display_title or "").strip() or (folder_name or "").strip()
+    # Prefer whichever candidate still has a (YYYY) year when both exist.
+    folder = (folder_name or "").strip()
+    year_re = re.compile(r"\(\d{4}\)")
+    if folder and year_re.search(folder) and not year_re.search(raw):
+        raw = folder
+    # Split on space-hyphen-space or em dash edition separator (last wins if multiple).
+    for sep in (" — ", " - "):
+        if sep in raw:
+            raw = raw.split(sep, 1)[0].strip()
+            break
+    # Trailing bracket tags: "Title (1971) [1080p]" → "Title (1971)"
+    raw = re.sub(r"\s*\[[^\]]+\]\s*$", "", raw).strip()
+    return raw or folder_name or display_title
+
+
 def blurb_from_readme(readme: Path) -> str:
     """First description paragraph after H1 (skip Motivation/Changes heads)."""
     try:
@@ -228,6 +253,7 @@ def main() -> None:
         folder_rel = path.parent.as_posix()
         slug = slugify(path.parent.name)
         title = title_from_readme(ROOT / rel, path.parent.name)
+        original_title = original_title_from(title, path.parent.name)
         blurb = blurb_from_readme(ROOT / rel)
         reel_candidates = list(folder.glob("*.reel")) if folder.is_dir() else []
         reel = reel_candidates[0].as_posix() if len(reel_candidates) == 1 else None
@@ -242,6 +268,8 @@ def main() -> None:
             "category": category,
             "path": folder_rel,
             "title": title,
+            # Always set so CleverScript property access never throws
+            "originalTitle": original_title,
             "status": status,
         }
         if blurb:
