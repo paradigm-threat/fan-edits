@@ -157,6 +157,134 @@ function statusLabel(st) {
   return 'This file needs to be seeded'
 }
 
+/** CID from relayAssetStatus JSON (or stub line 2). No regex — CleverScript. */
+function looksLikeCid(raw) {
+  const s = str(raw).trim()
+  if (s.length < 10) {
+    return false
+  }
+  if (s.indexOf(' ') >= 0 || s.indexOf('/') >= 0 || s.indexOf('#') >= 0) {
+    return false
+  }
+  if (s.indexOf('baf') === 0) {
+    return true
+  }
+  if (s.indexOf('Qm') === 0) {
+    return true
+  }
+  return s.length >= 46
+}
+
+function copyText(text) {
+  const t = str(text)
+  if (t.length === 0) {
+    return
+  }
+  try {
+    if (
+      typeof globalThis !== 'undefined' &&
+      globalThis.navigator &&
+      globalThis.navigator.clipboard &&
+      globalThis.navigator.clipboard.writeText
+    ) {
+      globalThis.navigator.clipboard.writeText(t)
+      return
+    }
+  } catch (e) {}
+  try {
+    if (typeof globalThis === 'undefined' || !globalThis.document) {
+      return
+    }
+    const doc = globalThis.document
+    const el = doc.createElement('textarea')
+    el.value = t
+    el.setAttribute('readonly', '')
+    el.style.position = 'fixed'
+    el.style.left = '-9999px'
+    doc.body.appendChild(el)
+    el.select()
+    if (doc.execCommand) {
+      doc.execCommand('copy')
+    }
+    doc.body.removeChild(el)
+  } catch (e2) {}
+}
+
+/**
+ * Compact inspect row: copyable CID + public CID tools / gateways.
+ * Browser HEAD to public gateways is usually CORS-blocked or rate-limited;
+ * Relay `?relayAssetStatus=1` remains the live seed probe.
+ */
+function IpfsInspectRow(props) {
+  let cid = ''
+  let providers = null
+  try {
+    cid = str(props.cid).trim()
+  } catch (e) {
+    cid = ''
+  }
+  try {
+    if (typeof props.providers === 'number') {
+      providers = props.providers
+    }
+  } catch (e2) {}
+  if (!looksLikeCid(cid)) {
+    return null
+  }
+  const enc = encodeURIComponent(cid)
+  const inspector = 'https://cid.ipfs.tech/#' + cid
+  const check = 'https://check.ipfs.network/?cid=' + enc
+  const gatewayIo = 'https://ipfs.io/ipfs/' + enc
+  const gatewayDweb = 'https://dweb.link/ipfs/' + enc
+  let providerNote = ''
+  if (providers !== null) {
+    if (providers === 0) {
+      providerNote = 'Relay sees 0 providers for this CID.'
+    } else if (providers === 1) {
+      providerNote = 'Relay sees 1 provider for this CID.'
+    } else {
+      providerNote = 'Relay sees ' + providers + ' providers for this CID.'
+    }
+  }
+  return (
+    <div className="fb-media-inspect" data-ipfs-inspect="1">
+      <p className="fb-media-inspect-label">Inspect on IPFS</p>
+      <div className="fb-media-inspect-cid-row">
+        <code className="fb-media-inspect-cid" title="Content identifier">
+          {cid}
+        </code>
+        <button
+          type="button"
+          className="fb-btn fb-media-inspect-copy"
+          onClick={() => {
+            copyText(cid)
+          }}
+        >
+          Copy CID
+        </button>
+      </div>
+      <div className="fb-media-inspect-links">
+        <a href={inspector} target="_blank" rel="noopener noreferrer">
+          CID Inspector
+        </a>
+        <a href={check} target="_blank" rel="noopener noreferrer">
+          Providers
+        </a>
+        <a href={gatewayIo} target="_blank" rel="noopener noreferrer">
+          ipfs.io
+        </a>
+        <a href={gatewayDweb} target="_blank" rel="noopener noreferrer">
+          dweb.link
+        </a>
+      </div>
+      {providerNote ? <p className="fb-media-inspect-note">{providerNote}</p> : null}
+      <p className="fb-media-inspect-note">
+        Public gateway fetches from this page are often CORS-blocked; use the links. Seed status above is from Relay.
+      </p>
+    </div>
+  )
+}
+
 export default function RelayMedia(props) {
   let src = ''
   let subtitles = []
@@ -245,7 +373,7 @@ export default function RelayMedia(props) {
         <p className="fb-media-hint">
           The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.
         </p>
-        {st.cid ? <p className="fb-media-cid">{st.cid}</p> : null}
+        <IpfsInspectRow cid={st.cid} providers={st.providers} />
         <button
           type="button"
           className="fb-btn"
@@ -287,6 +415,7 @@ export default function RelayMedia(props) {
           <div className="fb-media-bar-fill" style={{ width: pct + '%' }} />
         </div>
       ) : null}
+      <IpfsInspectRow cid={st.cid} providers={st.providers} />
     </div>
   )
 }
