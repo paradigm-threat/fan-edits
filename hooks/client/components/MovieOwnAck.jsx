@@ -28,6 +28,13 @@ function ackKey(slug) {
 
 function readWelcomeAck() {
   try {
+    if (typeof globalThis !== 'undefined' && globalThis.__fbHasWelcome) {
+      if (globalThis.__fbHasWelcome() === true) {
+        return true
+      }
+    }
+  } catch (e0) {}
+  try {
     if (typeof localStorage === 'undefined') {
       return false
     }
@@ -52,7 +59,25 @@ function writeWelcomeAck() {
   } catch (e) {}
 }
 
+function readMovieAckFromHostBridge(slug) {
+  try {
+    let s = str(slug)
+    if (s.length === 0) {
+      return false
+    }
+    if (typeof globalThis !== 'undefined' && globalThis.__fbHasMovieOwn) {
+      if (globalThis.__fbHasMovieOwn(s) === true) {
+        return true
+      }
+    }
+  } catch (e) {}
+  return false
+}
+
 export function hasMovieOwnAck(slug) {
+  if (readMovieAckFromHostBridge(slug) === true) {
+    return true
+  }
   try {
     let s = str(slug)
     if (s.length === 0) {

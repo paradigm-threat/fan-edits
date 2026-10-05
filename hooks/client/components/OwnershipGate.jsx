@@ -10,7 +10,21 @@ import React from 'react'
 
 var ACK_KEY = 'flashback.ownershipAck.v1'
 
+function readAckFromHostBridge() {
+  try {
+    if (typeof globalThis !== 'undefined' && globalThis.__fbHasWelcome) {
+      if (globalThis.__fbHasWelcome() === true) {
+        return true
+      }
+    }
+  } catch (e) {}
+  return false
+}
+
 function readAck() {
+  if (readAckFromHostBridge() === true) {
+    return true
+  }
   try {
     if (typeof localStorage === 'undefined') {
       return false
