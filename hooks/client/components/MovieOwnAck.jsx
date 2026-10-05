@@ -29,13 +29,13 @@ function ackKey(slug) {
 
 function readWelcomeAck() {
   try {
-    if (typeof globalThis === 'undefined' || !globalThis.localStorage) {
+    if (typeof localStorage === 'undefined') {
       return false
     }
-    if (!globalThis.localStorage.getItem) {
+    if (!localStorage.getItem) {
       return false
     }
-    return globalThis.localStorage.getItem(WELCOME_KEY) === '1'
+    return localStorage.getItem(WELCOME_KEY) === '1'
   } catch (e) {
     return false
   }
@@ -43,13 +43,13 @@ function readWelcomeAck() {
 
 function writeWelcomeAck() {
   try {
-    if (typeof globalThis === 'undefined' || !globalThis.localStorage) {
+    if (typeof localStorage === 'undefined') {
       return
     }
-    if (!globalThis.localStorage.setItem) {
+    if (!localStorage.setItem) {
       return
     }
-    globalThis.localStorage.setItem(WELCOME_KEY, '1')
+    localStorage.setItem(WELCOME_KEY, '1')
   } catch (e) {}
 }
 
@@ -59,13 +59,13 @@ export function hasMovieOwnAck(slug) {
     if (s.length === 0) {
       return false
     }
-    if (typeof globalThis === 'undefined' || !globalThis.localStorage) {
+    if (typeof localStorage === 'undefined') {
       return false
     }
-    if (!globalThis.localStorage.getItem) {
+    if (!localStorage.getItem) {
       return false
     }
-    return globalThis.localStorage.getItem(ackKey(s)) === '1'
+    return localStorage.getItem(ackKey(s)) === '1'
   } catch (e) {
     return false
   }
@@ -77,13 +77,13 @@ function writeMovieOwnAck(slug) {
     if (s.length === 0) {
       return
     }
-    if (typeof globalThis === 'undefined' || !globalThis.localStorage) {
+    if (typeof localStorage === 'undefined') {
       return
     }
-    if (!globalThis.localStorage.setItem) {
+    if (!localStorage.setItem) {
       return
     }
-    globalThis.localStorage.setItem(ackKey(s), '1')
+    localStorage.setItem(ackKey(s), '1')
   } catch (e) {}
 }
 
