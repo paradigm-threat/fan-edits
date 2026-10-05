@@ -5,7 +5,6 @@ import React, { useState } from 'react'
 import StyleContext from '@clevertree/style'
 import { MarkdownRenderer } from '@clevertree/markdown'
 import manifest from '@hooks'
-import { isClientLivePhase } from '@clevertree/style-internal'
 import { TicketIcon, PlayChevron, MarqueeBulb } from 'hooks/client/components/Icons.jsx'
 import OwnershipGate, { hasOwnershipAck, ensureOwnershipAckFromBrowser } from 'hooks/client/components/OwnershipGate.jsx'
 import MovieOwnAck, { hasMovieOwnAck, ensureMovieOwnAckFromBrowser } from 'hooks/client/components/MovieOwnAck.jsx'
@@ -342,14 +341,8 @@ export default function FlashbackApp() {
   }
   const movieAck = movieAckStored === true || movieAckFromLs === true
 
-<<<<<<< Updated upstream
-  // CleverScript soft-hydrate: SSR always paints locked+overlay. Unlock only after
-  // live so hydrate markup stays stable. Keep the form visible until playback is
-  // actually unlocked (never hide the CTA while the locked message is showing).
-  const live = isClientLivePhase(2) === true
-=======
-  // Soft-hydrate: match SSR locked+overlay on the first paint, then unlock after a
-  // macrotask so vnode/DOM stay aligned during hydrate (phase helpers are unreliable here).
+  // Soft-hydrate: SSR paints locked+overlay first. Phase helpers (isClientLive*) are
+  // unreliable on parked embed; defer LS-based unlock until after hydrate settles.
   const pastState = useState(false)
   const pastHydrate = pastState[0]
   const setPastHydrate = pastState[1]
@@ -366,8 +359,15 @@ export default function FlashbackApp() {
       }
     } catch (e) {}
   }
-  const live = pastHydrate === true
->>>>>>> Stashed changes
+  let hydratedReady = false
+  try {
+    if (typeof globalThis !== 'undefined' && globalThis.document && globalThis.document.documentElement) {
+      if (globalThis.document.documentElement.getAttribute('data-pt-hydrated') === '1') {
+        hydratedReady = true
+      }
+    }
+  } catch (eHydrated) {}
+  const live = pastHydrate === true || hydratedReady === true
   const mediaUnlocked = live === true && ack === true && movieAck === true
   const showMovieAck = mediaUnlocked !== true
 
