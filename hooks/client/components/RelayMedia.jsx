@@ -7,19 +7,29 @@ import { VideoPlayer } from '@clevertree/video'
 import { isClientLive } from '@clevertree/style-internal'
 
 function str(v) {
-  if (v === null) return ''
+  if (v === null) {
+    return ''
+  }
   if (typeof v === 'boolean') {
-    if (v) return 'true'
+    if (v) {
+      return 'true'
+    }
     return 'false'
   }
-  if (typeof v === 'number') return '' + v
-  if (typeof v === 'string') return v
+  if (typeof v === 'number') {
+    return '' + v
+  }
+  if (typeof v === 'string') {
+    return v
+  }
   return ''
 }
 
 function statusUrl(src) {
   let u = str(src).trim()
-  if (u.length === 0) return ''
+  if (u.length === 0) {
+    return ''
+  }
   const join = u.indexOf('?') >= 0 ? '&' : '?'
   return u + join + 'relayAssetStatus=1'
 }
@@ -36,7 +46,9 @@ function parseStatus(resp) {
     retryAfterSecs: 5,
     cid: '',
   }
-  if (!resp) return empty
+  if (!resp) {
+    return empty
+  }
   if (resp.ok === true && resp.status === 200) {
     try {
       const text = resp.text ? resp.text : ''
@@ -118,9 +130,13 @@ function parseStatus(resp) {
 }
 
 function statusLabel(st) {
-  if (st.ok) return 'Ready'
+  if (st.ok) {
+    return 'Ready'
+  }
   if (st.seedState === 'fetching') {
-    if (st.progressPct !== null) return 'Seeding… ' + st.progressPct + '%'
+    if (st.progressPct !== null) {
+      return 'Seeding… ' + st.progressPct + '%'
+    }
     return 'Seeding from the network…'
   }
   if (st.seedState === 'unavailable' || st.error === 'ipfs-not-found') {
@@ -129,9 +145,15 @@ function statusLabel(st) {
   if (st.seedState === 'missing' || st.error === 'ipfs-pending') {
     return 'This file needs to be seeded — retrying…'
   }
-  if (st.error === 'ipfs-busy') return 'Busy — retrying…'
-  if (st.error === 'ipfs-gateway-timeout') return 'Gateway timeout — retrying…'
-  if (st.message) return st.message
+  if (st.error === 'ipfs-busy') {
+    return 'Busy — retrying…'
+  }
+  if (st.error === 'ipfs-gateway-timeout') {
+    return 'Gateway timeout — retrying…'
+  }
+  if (st.message) {
+    return st.message
+  }
   return 'This file needs to be seeded'
 }
 
@@ -149,18 +171,26 @@ export default function RelayMedia(props) {
     src = ''
   }
   try {
-    if (props.subtitles) subtitles = props.subtitles
+    if (props.subtitles) {
+      subtitles = props.subtitles
+    }
   } catch (e) {
     subtitles = []
   }
   try {
-    if (props.playing === true) playing = true
+    if (props.playing === true) {
+      playing = true
+    }
   } catch (e) {}
   try {
-    if (typeof props.command === 'number') command = props.command
+    if (typeof props.command === 'number') {
+      command = props.command
+    }
   } catch (e) {}
   try {
-    if (typeof props.commandSeq === 'number') commandSeq = props.commandSeq
+    if (typeof props.commandSeq === 'number') {
+      commandSeq = props.commandSeq
+    }
   } catch (e) {}
   try {
     onPlay = props.onPlay
@@ -232,8 +262,12 @@ export default function RelayMedia(props) {
 
   if (live && st.retryable === true && scheduledFor !== attempt) {
     let delay = st.retryAfterSecs > 0 ? st.retryAfterSecs * 1000 : 2500
-    if (delay < 2000) delay = 2000
-    if (delay > 15000) delay = 15000
+    if (delay < 2000) {
+      delay = 2000
+    }
+    if (delay > 15000) {
+      delay = 15000
+    }
     setScheduledFor(attempt)
     try {
       if (typeof setTimeout === 'function') {

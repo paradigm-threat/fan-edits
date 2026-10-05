@@ -11,26 +11,42 @@ import MovieOwnAck, { hasMovieOwnAck } from 'hooks/client/components/MovieOwnAck
 import RelayMedia from 'hooks/client/components/RelayMedia.jsx'
 
 function str(v) {
-  if (v === null) return ''
+  if (v === null) {
+    return ''
+  }
   if (typeof v === 'boolean') {
-    if (v) return 'true'
+    if (v) {
+      return 'true'
+    }
     return 'false'
   }
-  if (typeof v === 'number') return '' + v
-  if (typeof v === 'string') return v
+  if (typeof v === 'number') {
+    return '' + v
+  }
+  if (typeof v === 'string') {
+    return v
+  }
   return ''
 }
 
 function normalizeRoute(raw) {
   let t = str(raw).trim()
-  if (t.length === 0) return '/'
-  if (t.charAt(0) !== '/') t = '/' + t
-  // strip query
+  if (t.length === 0) {
+    return '/'
+  }
+  if (t.charAt(0) !== '/') {
+    t = '/' + t
+  }
   const q = t.indexOf('?')
-  if (q >= 0) t = t.slice(0, q)
-  if (t === '/index.md' || t === '/index.html') return '/'
-  // trailing slash
-  if (t.length > 1 && t.charAt(t.length - 1) === '/') t = t.slice(0, t.length - 1)
+  if (q >= 0) {
+    t = t.slice(0, q)
+  }
+  if (t === '/index.md' || t === '/index.html') {
+    return '/'
+  }
+  if (t.length > 1 && t.charAt(t.length - 1) === '/') {
+    t = t.slice(0, t.length - 1)
+  }
   return t
 }
 
@@ -49,12 +65,16 @@ function initialRoute() {
 }
 
 function mediaSrc(project) {
-  if (!project || !project.media) return ''
+  if (!project || !project.media) {
+    return ''
+  }
   return '/' + project.path + '/' + project.media
 }
 
 function subtitleTracks(project) {
-  if (!project || !project.subtitles) return []
+  if (!project || !project.subtitles) {
+    return []
+  }
   const out = []
   const list = project.subtitles
   for (let i = 0; i < list.length; i++) {
@@ -64,7 +84,9 @@ function subtitleTracks(project) {
       label: t.label || 'Subtitles',
       lang: t.lang || 'en',
     }
-    if (t.default === true) track.default = true
+    if (t.default === true) {
+      track.default = true
+    }
     out.push(track)
   }
   return out
@@ -72,7 +94,9 @@ function subtitleTracks(project) {
 
 function findProject(projects, slug) {
   for (let i = 0; i < projects.length; i++) {
-    if (projects[i].slug === slug) return projects[i]
+    if (projects[i].slug === slug) {
+      return projects[i]
+    }
   }
   return null
 }
@@ -80,7 +104,9 @@ function findProject(projects, slug) {
 function projectsInCategory(projects, category) {
   const out = []
   for (let i = 0; i < projects.length; i++) {
-    if (projects[i].category === category) out.push(projects[i])
+    if (projects[i].category === category) {
+      out.push(projects[i])
+    }
   }
   return out
 }
@@ -88,9 +114,13 @@ function projectsInCategory(projects, category) {
 function fetchText(path) {
   try {
     let p = str(path)
-    if (p.charAt(0) === '/') p = p.slice(1)
+    if (p.charAt(0) === '/') {
+      p = p.slice(1)
+    }
     const res = fetch('/' + p)
-    if (res && res.ok === true && res.text) return res.text
+    if (res && res.ok === true && res.text) {
+      return res.text
+    }
   } catch (e) {}
   return ''
 }
@@ -98,21 +128,31 @@ function fetchText(path) {
 /** Drop leading H1 — the movie page already shows the title. */
 function readmeBody(raw) {
   const text = str(raw)
-  if (!text) return ''
+  if (!text) {
+    return ''
+  }
   const lines = text.split('\n')
   let i = 0
-  while (i < lines.length && lines[i].trim() === '') i++
+  while (i < lines.length && lines[i].trim() === '') {
+    i++
+  }
   if (i < lines.length && lines[i].indexOf('# ') === 0) {
     i++
-    while (i < lines.length && lines[i].trim() === '') i++
+    while (i < lines.length && lines[i].trim() === '') {
+      i++
+    }
   }
   return lines.slice(i).join('\n')
 }
 
 function isNarrowViewport() {
   try {
-    if (typeof window === 'undefined') return true
-    if (!window.matchMedia) return window.innerWidth < 900
+    if (typeof window === 'undefined') {
+      return true
+    }
+    if (!window.matchMedia) {
+      return window.innerWidth < 900
+    }
     return window.matchMedia('(max-width: 900px)').matches === true
   } catch (e) {
     return true
@@ -121,25 +161,42 @@ function isNarrowViewport() {
 
 function requestFs(el) {
   try {
-    if (!el) return
-    if (el.requestFullscreen) el.requestFullscreen()
-    else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen()
-    else if (el.webkitEnterFullscreen) el.webkitEnterFullscreen()
+    if (!el) {
+      return
+    }
+    if (el.requestFullscreen) {
+      el.requestFullscreen()
+    } else if (el.webkitRequestFullscreen) {
+      el.webkitRequestFullscreen()
+    } else if (el.webkitEnterFullscreen) {
+      el.webkitEnterFullscreen()
+    }
   } catch (e) {}
 }
 
 function routeKind(route) {
-  if (route === '/' || route === '') return { kind: 'home' }
-  if (route === '/legal') return { kind: 'md', file: 'content/legal.md', title: 'Ownership policy' }
-  if (route === '/terms') return { kind: 'md', file: 'content/terms.md', title: 'Terms' }
+  if (route === '/' || route === '') {
+    return { kind: 'home' }
+  }
+  if (route === '/legal') {
+    return { kind: 'md', file: 'content/legal.md', title: 'Ownership policy' }
+  }
+  if (route === '/terms') {
+    return { kind: 'md', file: 'content/terms.md', title: 'Terms' }
+  }
   if (route === '/motivation' || route === '/why') {
     return { kind: 'md', file: 'content/motivation.md', title: 'Why we’re doing this' }
   }
-  // /slug or /movie/slug
   let slug = route
-  if (slug.charAt(0) === '/') slug = slug.slice(1)
-  if (slug.indexOf('movie/') === 0) slug = slug.slice('movie/'.length)
-  if (slug.indexOf('/') >= 0) return { kind: 'home' }
+  if (slug.charAt(0) === '/') {
+    slug = slug.slice(1)
+  }
+  if (slug.indexOf('movie/') === 0) {
+    slug = slug.slice('movie/'.length)
+  }
+  if (slug.indexOf('/') >= 0) {
+    return { kind: 'home' }
+  }
   return { kind: 'movie', slug: slug }
 }
 
@@ -228,7 +285,9 @@ export default function FlashbackApp() {
     if (res && res.ok === true && res.text) {
       try {
         const data = JSON.parse(res.text)
-        if (data && data.projects) setProjects(data.projects)
+        if (data && data.projects) {
+          setProjects(data.projects)
+        }
       } catch (e) {}
     }
     if (kind.kind === 'home') {
@@ -240,7 +299,9 @@ export default function FlashbackApp() {
         const list = data && data.posts ? data.posts : []
         for (let i = 0; i < list.length; i++) {
           const meta = list[i]
-          if (!meta || !meta.path) continue
+          if (!meta || !meta.path) {
+            continue
+          }
           posts.push({
             slug: meta.slug || '',
             date: meta.date || '',
@@ -274,8 +335,12 @@ export default function FlashbackApp() {
   const kidFriendly = projectsInCategory(projects, 'KidFriendly')
 
   function sendPlay() {
-    if (ack !== true) return
-    if (movieAck !== true) return
+    if (ack !== true) {
+      return
+    }
+    if (movieAck !== true) {
+      return
+    }
     setCommand(1)
     setCommandSeq(commandSeq + 1)
     setPlaying(true)

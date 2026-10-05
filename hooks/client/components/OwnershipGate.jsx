@@ -7,8 +7,12 @@ var ACK_KEY = 'flashback.ownershipAck.v1'
 
 function readAck() {
   try {
-    if (typeof localStorage === 'undefined') return false
-    if (!localStorage.getItem) return false
+    if (typeof localStorage === 'undefined') {
+      return false
+    }
+    if (!localStorage.getItem) {
+      return false
+    }
     return localStorage.getItem(ACK_KEY) === '1'
   } catch (e) {
     return false
@@ -17,8 +21,12 @@ function readAck() {
 
 function writeAck() {
   try {
-    if (typeof localStorage === 'undefined') return
-    if (!localStorage.setItem) return
+    if (typeof localStorage === 'undefined') {
+      return
+    }
+    if (!localStorage.setItem) {
+      return
+    }
     localStorage.setItem(ACK_KEY, '1')
   } catch (e) {}
 }
@@ -75,11 +83,15 @@ export default function OwnershipGate(props) {
             className="fb-btn fb-btn-primary"
             disabled={checked !== true}
             onClick={function () {
-              if (checked !== true) return
+              if (checked !== true) {
+                return
+              }
               writeAck()
               setOpen(false)
               try {
-                if (props && typeof props.onAck === 'function') props.onAck()
+                if (props && typeof props.onAck === 'function') {
+                  props.onAck()
+                }
               } catch (e) {}
             }}
           >

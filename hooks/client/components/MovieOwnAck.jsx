@@ -11,9 +11,15 @@ function ackKey(slug) {
 
 export function hasMovieOwnAck(slug) {
   try {
-    if (!slug) return false
-    if (typeof localStorage === 'undefined') return false
-    if (!localStorage.getItem) return false
+    if (!slug) {
+      return false
+    }
+    if (typeof localStorage === 'undefined') {
+      return false
+    }
+    if (!localStorage.getItem) {
+      return false
+    }
     return localStorage.getItem(ackKey(slug)) === '1'
   } catch (e) {
     return false
@@ -22,9 +28,15 @@ export function hasMovieOwnAck(slug) {
 
 function writeMovieOwnAck(slug) {
   try {
-    if (!slug) return
-    if (typeof localStorage === 'undefined') return
-    if (!localStorage.setItem) return
+    if (!slug) {
+      return
+    }
+    if (typeof localStorage === 'undefined') {
+      return
+    }
+    if (!localStorage.setItem) {
+      return
+    }
     localStorage.setItem(ackKey(slug), '1')
   } catch (e) {}
 }
@@ -37,10 +49,14 @@ export default function MovieOwnAck(props) {
   let slug = ''
   let title = 'this movie'
   try {
-    if (props && props.slug) slug = '' + props.slug
+    if (props && props.slug) {
+      slug = '' + props.slug
+    }
   } catch (e) {}
   try {
-    if (props && props.title) title = '' + props.title
+    if (props && props.title) {
+      title = '' + props.title
+    }
   } catch (e) {}
 
   const doneState = useState(hasMovieOwnAck(slug))
@@ -64,11 +80,15 @@ export default function MovieOwnAck(props) {
               } catch (err) {
                 on = false
               }
-              if (on !== true) return
+              if (on !== true) {
+                return
+              }
               writeMovieOwnAck(slug)
               setDone(true)
               try {
-                if (props && typeof props.onAck === 'function') props.onAck()
+                if (props && typeof props.onAck === 'function') {
+                  props.onAck()
+                }
               } catch (e2) {}
             }}
           />

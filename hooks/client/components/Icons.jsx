@@ -6,7 +6,9 @@ import React from 'react'
 export function TicketIcon(props) {
   let className = 'fb-icon fb-icon-ticket'
   try {
-    if (props && props.className) className = className + ' ' + props.className
+    if (props && props.className) {
+      className = className + ' ' + props.className
+    }
   } catch (e) {}
   return (
     <svg className={className} viewBox="0 0 48 32" width="48" height="32" aria-hidden="true">
@@ -22,7 +24,9 @@ export function TicketIcon(props) {
 export function PlayChevron(props) {
   let className = 'fb-icon fb-icon-play'
   try {
-    if (props && props.className) className = className + ' ' + props.className
+    if (props && props.className) {
+      className = className + ' ' + props.className
+    }
   } catch (e) {}
   return (
     <svg className={className} viewBox="0 0 32 32" width="28" height="28" aria-hidden="true">
@@ -35,7 +39,9 @@ export function PlayChevron(props) {
 export function MarqueeBulb(props) {
   let className = 'fb-icon fb-icon-bulb'
   try {
-    if (props && props.className) className = className + ' ' + props.className
+    if (props && props.className) {
+      className = className + ' ' + props.className
+    }
   } catch (e) {}
   return (
     <svg className={className} viewBox="0 0 12 12" width="10" height="10" aria-hidden="true">
