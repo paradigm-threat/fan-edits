@@ -169,6 +169,10 @@ export default function FlashbackApp() {
   const homeMd = homeState[0]
   const setHomeMd = homeState[1]
 
+  const blogState = useState([])
+  const blogPosts = blogState[0]
+  const setBlogPosts = blogState[1]
+
   const playingState = useState(false)
   const playing = playingState[0]
   const setPlaying = playingState[1]
@@ -207,6 +211,23 @@ export default function FlashbackApp() {
     }
     if (kind.kind === 'home') {
       setHomeMd(fetchText('content/home.md'))
+      const posts = []
+      try {
+        const raw = fetchText('content/blog/index.json')
+        const data = raw ? JSON.parse(raw) : null
+        const list = data && data.posts ? data.posts : []
+        for (let i = 0; i < list.length; i++) {
+          const meta = list[i]
+          if (!meta || !meta.path) continue
+          posts.push({
+            slug: meta.slug || '',
+            date: meta.date || '',
+            title: meta.title || 'Post',
+            body: fetchText(meta.path) || '',
+          })
+        }
+      } catch (e) {}
+      setBlogPosts(posts)
     }
     if (kind.kind === 'md') {
       setMd(fetchText(kind.file))
@@ -348,8 +369,28 @@ export default function FlashbackApp() {
   } else {
     main = (
       <div className="fb-home">
-        <div className="fb-home-copy">
-          <MarkdownRenderer content={homeMd || '# Welcome'} />
+        <div className="fb-home-lead">
+          <div className="fb-home-intro">
+            <MarkdownRenderer content={homeMd || '# Welcome'} />
+          </div>
+          <aside className="fb-home-blog" aria-label="Blog">
+            <h2 className="fb-section-title">Blog</h2>
+            {blogPosts.length === 0 ? (
+              <p className="fb-blog-empty">No posts yet.</p>
+            ) : (
+              blogPosts.map(function (post) {
+                return (
+                  <article key={post.slug || post.title} className="fb-blog-post">
+                    {post.date ? <p className="fb-blog-date">{post.date}</p> : null}
+                    <h3 className="fb-blog-title">{post.title}</h3>
+                    <div className="fb-blog-body">
+                      <MarkdownRenderer content={post.body || ''} />
+                    </div>
+                  </article>
+                )
+              })
+            )}
+          </aside>
         </div>
         <section className="fb-catalog">
           <h2 className="fb-section-title">FanMixes</h2>

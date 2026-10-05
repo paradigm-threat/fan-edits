@@ -240,10 +240,52 @@ themes:
         color: "var(ok)"
       ".fb-status-needs-seed .fb-title-card-meta":
         color: "var(warn)"
-      ".fb-home-copy":
+      ".fb-home-lead":
+        display: "flex"
+        flexDirection: "column"
+        gap: "20px"
         marginBottom: "8px"
-      ".fb-home-copy a":
+      ".fb-home-intro":
+        minWidth: "0"
+      ".fb-home-intro a":
         color: "var(gold)"
+      ".fb-home-blog":
+        minWidth: "0"
+        padding: "14px 16px 16px"
+        background: "linear-gradient(160deg, rgba(42,18,22,0.92), rgba(14,8,10,0.96))"
+        border: "1px solid var(border)"
+      ".fb-home-blog .fb-section-title":
+        marginTop: "0"
+      ".fb-blog-empty":
+        color: "var(creamMuted)"
+        margin: "0"
+      ".fb-blog-post":
+        marginTop: "4px"
+      ".fb-blog-post + .fb-blog-post":
+        marginTop: "22px"
+        paddingTop: "18px"
+        borderTop: "1px solid var(border)"
+      ".fb-blog-date":
+        margin: "0 0 4px"
+        fontSize: "0.72rem"
+        letterSpacing: "0.08em"
+        textTransform: "uppercase"
+        color: "var(goldDim)"
+      ".fb-blog-title":
+        margin: "0 0 10px"
+        fontSize: "1.2rem"
+        color: "var(cream)"
+        lineHeight: "1.35"
+      ".fb-blog-body":
+        color: "var(creamMuted)"
+        fontSize: "0.95rem"
+      ".fb-blog-body a":
+        color: "var(gold)"
+      ".fb-blog-body p":
+        margin: "0 0 0.85em"
+      ".fb-blog-body ul":
+        margin: "0 0 0.85em"
+        paddingLeft: "1.2em"
       ".fb-movie-title":
         margin: "8px 0 10px"
         fontSize: "1.75rem"
@@ -409,6 +451,11 @@ themes:
         display: "block"
         flexShrink: "0"
       "@media (min-width: 900px)":
+        ".fb-home-lead":
+          display: "grid"
+          gridTemplateColumns: "minmax(0, 1.15fr) minmax(0, 0.85fr)"
+          gap: "22px"
+          alignItems: "start"
         ".fb-title-grid":
           display: "grid"
           gridTemplateColumns: "1fr 1fr"
