@@ -136,19 +136,8 @@ function fetchText(path) {
     if (p.charAt(0) === '/') {
       p = p.slice(1)
     }
-    // Encode each path segment so spaces/parens in FanMix folders resolve under SSR fetch.
-    const parts = p.split('/')
-    let encoded = []
-    for (let i = 0; i < parts.length; i++) {
-      let seg = parts[i]
-      try {
-        if (typeof globalThis !== 'undefined' && globalThis.encodeURIComponent) {
-          seg = globalThis.encodeURIComponent(seg)
-        }
-      } catch (eEnc) {}
-      encoded = encoded.concat([seg])
-    }
-    const res = fetch('/' + encoded.join('/'))
+    // SSR RepoFetchHost reads git paths in-process — keep spaces/parens unencoded.
+    const res = fetch('/' + p)
     if (res && res.ok === true && res.text) {
       return res.text
     }
@@ -869,7 +858,8 @@ export default function FlashbackApp() {
           <div className="fb-screen-glow" />
           <SeatRows />
         </div>
-        {kind.kind !== 'movie' && (live !== true || hasOwnershipAck() !== true) ? (
+        {/* Always mount on non-movie: soft-hydrate cannot unmount after LS ack; CSS hides via data-fb-welcome-ack. */}
+        {kind.kind !== 'movie' ? (
           <OwnershipGate
             onAck={() => {
               setAck(true)
