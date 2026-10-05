@@ -246,12 +246,16 @@ def main() -> None:
         }
         if blurb:
             entry["blurb"] = blurb
+        else:
+            entry["blurb"] = ""
         if reel:
             entry["reel"] = reel
         if media:
             entry["media"] = media
-        if poster:
-            entry["image"] = poster
+        else:
+            entry["media"] = ""
+        # Always include image so CleverScript property access never throws
+        entry["image"] = poster if poster else ""
         if subs:
             entry["subtitles"] = subs
         projects.append(entry)

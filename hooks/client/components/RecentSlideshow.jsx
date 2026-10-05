@@ -1,6 +1,6 @@
 /**
  * Home now-showing carousel — manual prev/next, image or blurb slides.
- * CleverScript-safe (arrow handlers, braced bodies, concat, no dynamic object keys).
+ * CleverScript-safe: no dynamic object keys; optional fields via try/catch.
  */
 import React, { useState } from 'react'
 
@@ -30,9 +30,36 @@ function str(v) {
   return '' + v
 }
 
+function optStr(obj, key) {
+  try {
+    if (!obj) {
+      return ''
+    }
+    if (key === 'image') {
+      return str(obj.image)
+    }
+    if (key === 'blurb') {
+      return str(obj.blurb)
+    }
+    if (key === 'media') {
+      return str(obj.media)
+    }
+    if (key === 'slug') {
+      return str(obj.slug)
+    }
+    if (key === 'title') {
+      return str(obj.title)
+    }
+    if (key === 'status') {
+      return str(obj.status)
+    }
+  } catch (e) {}
+  return ''
+}
+
 function projectBySlug(projects, slug) {
   for (let i = 0; i < projects.length; i++) {
-    if (projects[i] && projects[i].slug === slug) {
+    if (projects[i] && optStr(projects[i], 'slug') === slug) {
       return projects[i]
     }
   }
@@ -43,10 +70,10 @@ function isReadyWithMedia(p) {
   if (!p) {
     return false
   }
-  if (p.status !== 'ready') {
+  if (optStr(p, 'status') !== 'ready') {
     return false
   }
-  if (!p.media) {
+  if (optStr(p, 'media').length === 0) {
     return false
   }
   return true
@@ -59,6 +86,10 @@ function listHasSlug(list, slug) {
     }
   }
   return false
+}
+
+function hasPoster(p) {
+  return optStr(p, 'image').length > 0
 }
 
 /**
@@ -92,10 +123,10 @@ export function pickRecentProjects(projects) {
     if (isReadyWithMedia(p) !== true) {
       continue
     }
-    if (listHasSlug(seen, p.slug) === true) {
+    if (listHasSlug(seen, optStr(p, 'slug')) === true) {
       continue
     }
-    if (p.image) {
+    if (hasPoster(p) === true) {
       withImage = withImage.concat([p])
     } else {
       textOnly = textOnly.concat([p])
@@ -113,7 +144,7 @@ export function pickRecentProjects(projects) {
 }
 
 function imageSrc(project) {
-  let img = str(project && project.image)
+  let img = optStr(project, 'image')
   if (img.length === 0) {
     return ''
   }
@@ -148,13 +179,17 @@ export default function RecentSlideshow(props) {
   let current = slides[safeIdx]
   let img = imageSrc(current)
   let hasImage = img.length > 0
-  let blurb = str(current.blurb)
+  let blurb = optStr(current, 'blurb')
   if (blurb.length > 220) {
     blurb = blurb.slice(0, 217) + '…'
   }
-  let href = '/' + str(current.slug)
-  let status = str(current.status) || 'ready'
+  let href = '/' + optStr(current, 'slug')
+  let status = optStr(current, 'status')
+  if (status.length === 0) {
+    status = 'ready'
+  }
   let label = (safeIdx + 1) + ' / ' + slides.length
+  let title = optStr(current, 'title')
 
   let goPrev = () => {
     let next = safeIdx - 1
@@ -195,7 +230,7 @@ export default function RecentSlideshow(props) {
           ) : null}
           <div className="fb-slide-copy">
             <p className="fb-slide-kicker">Feature presentation</p>
-            <h3 className="fb-slide-name">{str(current.title)}</h3>
+            <h3 className="fb-slide-name">{title}</h3>
             {blurb.length > 0 ? (
               <p className="fb-slide-blurb">{blurb}</p>
             ) : null}
