@@ -588,6 +588,11 @@ themes:
         padding: "16px"
         background: "#0c0a09"
         color: "var(creamMuted)"
+      ".fb-media-video":
+        display: "block"
+        width: "100%"
+        maxHeight: "70vh"
+        background: "#000"
       ".fb-media-msg":
         margin: "0"
         color: "var(cream)"
@@ -605,12 +610,13 @@ themes:
         display: "flex"
         flexDirection: "column"
         gap: "6px"
+        overflow: "visible"
       ".fb-media-inspect-label":
         margin: "0"
         fontSize: "0.72rem"
         letterSpacing: "0.12em"
         textTransform: "uppercase"
-        color: "var(goldDim)"
+        color: "var(gold)"
       ".fb-media-inspect-cid-row":
         display: "flex"
         flexWrap: "wrap"
@@ -620,10 +626,10 @@ themes:
         flex: "1"
         minWidth: "0"
         fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
-        fontSize: "0.72rem"
+        fontSize: "0.78rem"
         wordBreak: "break-all"
-        opacity: "0.85"
-        color: "var(creamMuted)"
+        color: "var(cream)"
+        opacity: "0.95"
       ".fb-media-inspect-copy":
         padding: "4px 10px"
         fontSize: "0.78rem"
@@ -632,7 +638,7 @@ themes:
         display: "flex"
         flexWrap: "wrap"
         gap: "8px 14px"
-        fontSize: "0.82rem"
+        fontSize: "0.88rem"
       ".fb-media-inspect-links a":
         color: "var(gold)"
         textDecoration: "underline"
@@ -641,7 +647,8 @@ themes:
         margin: "0"
         fontSize: "0.72rem"
         lineHeight: "1.4"
-        opacity: "0.65"
+        opacity: "0.7"
+        color: "var(creamMuted)"
       ".fb-media-bar":
         height: "6px"
         background: "#2a1c18"
@@ -657,8 +664,67 @@ themes:
         fontSize: "0.95rem"
       ".fb-doc":
         fontSize: "1.02rem"
-      ".fb-doc a":
+      ".fb-prose":
+        color: "var(creamMuted)"
+        lineHeight: "1.6"
+      ".fb-prose a":
         color: "var(gold)"
+        textDecoration: "underline"
+      ".fb-prose h1":
+        margin: "0 0 0.75em"
+        fontSize: "1.55rem"
+        lineHeight: "1.25"
+        color: "var(cream)"
+      ".fb-prose h2":
+        margin: "1.35em 0 0.55em"
+        fontSize: "1.25rem"
+        lineHeight: "1.3"
+        color: "var(cream)"
+      ".fb-prose h3":
+        margin: "1.15em 0 0.45em"
+        fontSize: "1.08rem"
+        lineHeight: "1.35"
+        color: "var(cream)"
+      ".fb-prose h4":
+        margin: "1em 0 0.4em"
+        fontSize: "1rem"
+        color: "var(cream)"
+      ".fb-prose p":
+        margin: "0 0 0.9em"
+      ".fb-prose ul":
+        margin: "0 0 0.9em"
+        paddingLeft: "1.35em"
+      ".fb-prose ol":
+        margin: "0 0 0.9em"
+        paddingLeft: "1.35em"
+      ".fb-prose li":
+        margin: "0 0 0.35em"
+      ".fb-prose strong":
+        color: "var(cream)"
+        fontWeight: "700"
+      ".fb-prose em":
+        fontStyle: "italic"
+      ".fb-prose code":
+        fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        fontSize: "0.9em"
+        color: "var(goldDim)"
+      ".fb-prose img":
+        display: "block"
+        maxWidth: "100%"
+        height: "auto"
+        margin: "0.75em 0 1em"
+        border: "1px solid var(border)"
+      ".fb-prose blockquote":
+        margin: "0 0 0.9em"
+        padding: "0.2em 0 0.2em 0.9em"
+        borderLeft: "3px solid var(goldDim)"
+        color: "var(creamMuted)"
+      ".fb-movie-blurb.fb-prose":
+        marginBottom: "16px"
+      ".fb-movie-blurb.fb-prose p":
+        margin: "0 0 0.55em"
+      ".fb-movie-blurb.fb-prose p:last-child":
+        marginBottom: "0"
       ".fb-gate":
         position: "fixed"
         inset: "0"

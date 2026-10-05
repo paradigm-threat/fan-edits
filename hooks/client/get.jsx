@@ -8,7 +8,7 @@ import manifest from '@hooks'
 import { TicketIcon, PlayChevron, MarqueeBulb } from 'hooks/client/components/Icons.jsx'
 import OwnershipGate, { hasOwnershipAck, ensureOwnershipAckFromBrowser } from 'hooks/client/components/OwnershipGate.jsx'
 import MovieOwnAck, { hasMovieOwnAck, ensureMovieOwnAckFromBrowser } from 'hooks/client/components/MovieOwnAck.jsx'
-import RelayMedia from 'hooks/client/components/RelayMedia.jsx'
+import SeedUnlockPanel from 'hooks/client/components/SeedUnlockPanel.jsx'
 import RecentSlideshow from 'hooks/client/components/RecentSlideshow.jsx'
 
 function str(v) {
@@ -437,6 +437,21 @@ export default function FlashbackApp() {
   const mediaUnlocked = live === true && ack === true && movieAck === true
   const showMovieAck = mediaUnlocked !== true
 
+  function mediaVideoEl() {
+    try {
+      if (typeof globalThis === 'undefined' || !globalThis.document) {
+        return null
+      }
+      const doc = globalThis.document
+      if (!doc.querySelector) {
+        return null
+      }
+      return doc.querySelector('.fb-media-unlock-target video.fb-media-video')
+    } catch (e) {
+      return null
+    }
+  }
+
   function sendPlay() {
     if (mediaUnlocked !== true) {
       return
@@ -444,6 +459,12 @@ export default function FlashbackApp() {
     setCommand(1)
     setCommandSeq(commandSeq + 1)
     setPlaying(true)
+    try {
+      const v = mediaVideoEl()
+      if (v && v.play) {
+        v.play()
+      }
+    } catch (ePlay) {}
     if (isNarrowViewport()) {
       try {
         const doc = typeof globalThis !== 'undefined' ? globalThis.document : null
@@ -460,6 +481,12 @@ export default function FlashbackApp() {
     setCommand(2)
     setCommandSeq(commandSeq + 1)
     setPlaying(false)
+    try {
+      const v = mediaVideoEl()
+      if (v && v.pause) {
+        v.pause()
+      }
+    } catch (ePause) {}
   }
 
   function titleCard(p) {
@@ -497,7 +524,7 @@ export default function FlashbackApp() {
       <article key={post.slug || post.title} className="fb-blog-post">
         {post.date ? <p className="fb-blog-date">{post.date}</p> : null}
         <h3 className="fb-blog-title">{post.title}</h3>
-        <div className="fb-blog-body">
+        <div className="fb-blog-body fb-prose">
           <MarkdownRenderer content={post.body || ''} />
         </div>
       </article>
@@ -507,7 +534,7 @@ export default function FlashbackApp() {
   let main = null
   if (kind.kind === 'md') {
     main = (
-      <article className="fb-doc">
+      <article className="fb-doc fb-prose">
         <MarkdownRenderer content={md || '# Loading…'} />
       </article>
     )
@@ -518,7 +545,11 @@ export default function FlashbackApp() {
           ← Library
         </button>
         <h1 className="fb-movie-title">{selected ? selected.title : kind.slug}</h1>
-        {selected && selected.blurb ? <p className="fb-movie-blurb">{selected.blurb}</p> : null}
+        {selected && selected.blurb ? (
+          <div className="fb-movie-blurb fb-prose">
+            <MarkdownRenderer content={selected.blurb} />
+          </div>
+        ) : null}
         {selected && selected.media ? (
           <div className="fb-video-panel">
             {/* Static SSR tree: inject + CSS toggle unlock (CleverScript cannot swap branches post-hydrate). */}
@@ -528,17 +559,15 @@ export default function FlashbackApp() {
               </p>
             </div>
             <div className="fb-media-unlock-target">
-              <div className="fb-media fb-media-pending" data-relay-media="pending">
-                <p className="fb-media-msg">This file needs to be seeded</p>
-              </div>
-              <RelayMedia
+              {/*
+                SSR-safe panel (no @clevertree/video). CleverScript soft-hydrate
+                cannot swap a static seed placeholder for RelayMedia — Inspect
+                and ready <video> must live in this tree from first paint.
+              */}
+              <SeedUnlockPanel
                 src={mediaSrc(selected)}
                 subtitles={subtitleTracks(selected)}
                 playing={playing}
-                command={command}
-                commandSeq={commandSeq}
-                onPlay={() => { setPlaying(true) }}
-                onPause={() => { setPlaying(false) }}
               />
             </div>
             <MovieOwnAck
@@ -570,7 +599,7 @@ export default function FlashbackApp() {
         ) : (
           <p className="fb-movie-nomedia">Feature media is not catalogued yet for this title.</p>
         )}
-        <div className="fb-readme">
+        <div className="fb-readme fb-prose">
           <MarkdownRenderer content={readmeBody(readme) || '# Loading…'} />
         </div>
       </div>
@@ -580,7 +609,7 @@ export default function FlashbackApp() {
       <div className="fb-home">
         <RecentSlideshow projects={projects} />
         <div className="fb-home-lead">
-          <div className="fb-home-intro">
+          <div className="fb-home-intro fb-prose">
             <MarkdownRenderer content={homeMd || '# Welcome'} />
           </div>
           <aside className="fb-home-blog" aria-label="Blog">
