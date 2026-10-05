@@ -8,8 +8,11 @@
 *.mkv.new
 *.mkv.bak
 *.mp3
-*.web*
+*.webm
+*.webp
 *.flac
+# Park-native web hosts (RN-style *.web.js) must not be ignored
+!hooks/client/native/*.web.js
 *.mp4*
 *.avi
 *.mov

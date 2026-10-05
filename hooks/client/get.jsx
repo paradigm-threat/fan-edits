@@ -5,10 +5,17 @@ import React, { useState } from 'react'
 import StyleContext from '@clevertree/style'
 import { MarkdownRenderer } from '@clevertree/markdown'
 import manifest from '@hooks'
-import { TicketIcon, PlayChevron, MarqueeBulb } from 'hooks/client/components/Icons.jsx'
-import OwnershipGate, { hasOwnershipAck, ensureOwnershipAckFromBrowser } from 'hooks/client/components/OwnershipGate.jsx'
-import MovieOwnAck, { hasMovieOwnAck, ensureMovieOwnAckFromBrowser } from 'hooks/client/components/MovieOwnAck.jsx'
-import RecentSlideshow from 'hooks/client/components/RecentSlideshow.jsx'
+import { TicketIcon, PlayChevron } from 'hooks/client/components/Icons.jsx'
+import Affirmation, {
+  hasOwnershipAck,
+  ensureOwnershipAckFromBrowser,
+  hasMovieOwnAck,
+  ensureMovieOwnAckFromBrowser,
+  welcomeStorageKey,
+  movieStorageKey,
+} from 'hooks/client/native/Affirmation.js'
+import NowShowing from 'hooks/client/native/NowShowing.js'
+import TheaterPlayer from 'hooks/client/native/TheaterPlayer.js'
 
 function str(v) {
   if (v === null) {
@@ -364,52 +371,8 @@ function projectSlug(p) {
   return ''
 }
 
-/** Wing of glowing dots with letters of `phrase` woven between stars (no separate label row). */
-function MarqueeWing(props) {
-  let phrase = str(props.phrase)
-  let prefix = str(props.prefix)
-  if (prefix.length === 0) {
-    prefix = 'w'
-  }
-  let out = []
-  let bi = 0
-  let lead = 2
-  while (bi < lead) {
-    out = out.concat([
-      <MarqueeBulb key={prefix + 'lb' + bi} className={'fb-bulb fb-bulb-' + (bi % 4)} />,
-    ])
-    bi = bi + 1
-  }
-  let ci = 0
-  while (ci < phrase.length) {
-    let ch = phrase.charAt(ci)
-    out = out.concat([
-      <MarqueeBulb key={prefix + 'b' + ci} className={'fb-bulb fb-bulb-' + ((bi + ci) % 4)} />,
-    ])
-    if (ch === ' ') {
-      out = out.concat([<span key={prefix + 'sp' + ci} className="fb-wing-gap" aria-hidden="true" />])
-    } else {
-      out = out.concat([
-        <span key={prefix + 'c' + ci} className="fb-wing-letter">
-          {ch}
-        </span>,
-      ])
-    }
-    ci = ci + 1
-  }
-  out = out.concat([
-    <MarqueeBulb key={prefix + 'tb0'} className={'fb-bulb fb-bulb-' + ((bi + ci) % 4)} />,
-    <MarqueeBulb key={prefix + 'tb1'} className={'fb-bulb fb-bulb-' + ((bi + ci + 1) % 4)} />,
-  ])
-  return (
-    <div className="fb-marquee-lights fb-marquee-wing" aria-hidden="true">
-      {out}
-    </div>
-  )
-}
-
-/** Catalog title+slug pairs for the LCD billboard. CleverScript-safe. */
-function marqueeEntries(projects) {
+/** Catalog items for park-native NowShowing (lcd + carousel). */
+function nowShowingItems(projects) {
   let out = []
   let list = []
   try {
@@ -423,84 +386,16 @@ function marqueeEntries(projects) {
     let t = projectTitle(list[i])
     let s = projectSlug(list[i])
     if (t.length > 0 && s.length > 0) {
-      out = out.concat([{ title: t, slug: s }])
+      let poster = ''
+      try {
+        if (list[i] && list[i].poster) {
+          poster = '/' + list[i].path + '/' + list[i].poster
+        }
+      } catch (e2) {}
+      out = out.concat([{ title: t, href: '/' + s, poster: poster }])
     }
   }
   return out
-}
-
-function marqueePlainText(entries) {
-  let board = ''
-  for (let i = 0; i < entries.length; i++) {
-    let t = entries[i].title
-    if (board.length === 0) {
-      board = '★ ' + t
-    } else {
-      board = board + ' ★ ' + t
-    }
-  }
-  if (board.length === 0) {
-    return '★ no titles yet ★ '
-  }
-  return board + ' ★ '
-}
-
-function marqueeTrackNodes(entries, keyPrefix) {
-  let nodes = []
-  if (entries.length === 0) {
-    return [
-      <span key={keyPrefix + 'empty'} className="fb-lcd-star">
-        ★ no titles yet ★
-      </span>,
-    ]
-  }
-  for (let i = 0; i < entries.length; i++) {
-    let e = entries[i]
-    nodes = nodes.concat([
-      <span key={keyPrefix + 's' + i} className="fb-lcd-star">
-        {' ★ '}
-      </span>,
-      <a key={keyPrefix + 'a' + i} className="fb-lcd-link" href={'/' + e.slug}>
-        {e.title}
-      </a>,
-    ])
-  }
-  nodes = nodes.concat([
-    <span key={keyPrefix + 'end'} className="fb-lcd-star">
-      {' ★ '}
-    </span>,
-  ])
-  return nodes
-}
-
-function MarqueeBoard(props) {
-  let entries = marqueeEntries(props.projects)
-  let board = marqueePlainText(entries)
-  let n = board.length
-  if (n < 1) {
-    n = 1
-  }
-  let dur = n * 0.42
-  let half = marqueeTrackNodes(entries, 'a')
-  let track = half.concat(marqueeTrackNodes(entries, 'b'))
-  let css =
-    '@keyframes fb-lcd-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}' +
-    '@media (prefers-reduced-motion:no-preference){.fb-lcd-track{animation:fb-lcd-scroll ' +
-    dur +
-    's steps(' +
-    n +
-    ') infinite}}' +
-    '@media (prefers-reduced-motion:reduce){.fb-lcd-track{animation:none!important;transform:none!important}}'
-  return (
-    <div className="fb-marquee-board">
-      <style>{css}</style>
-      <div className="fb-lcd" aria-label={board}>
-        <div className="fb-lcd-window">
-          <div className="fb-lcd-track">{track}</div>
-        </div>
-      </div>
-    </div>
-  )
 }
 
 export default function FlashbackApp() {
@@ -749,33 +644,37 @@ export default function FlashbackApp() {
         </div>
         {selected && selected.media ? (
           <div className="fb-video-panel">
-            {/* Static SSR tree: inject + CSS toggle unlock (CleverScript cannot swap branches post-hydrate). */}
-            <div className="fb-media fb-media-locked" aria-hidden="true">
-              <p className="fb-media-msg">
-                {"Playback unlocks after you confirm ownership below."}
-              </p>
-            </div>
-            <div className="fb-media-unlock-target">
-              {/*
-                Inspect must be in this SSR unlock target — RelayMedia never mounts
-                (@clevertree/video). No <video> / relayAssetStatus here (SSR hang).
-                CID from .ipfs stub only.
-              */}
-              <div className="fb-media fb-media-pending" data-relay-media="pending">
-                <p className="fb-media-msg">This file needs to be seeded</p>
-                <p className="fb-media-hint">
-                  The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.
-                </p>
-                {renderIpfsInspect(movieCid)}
-              </div>
-            </div>
-            <MovieOwnAck
-              slug={selected.slug}
-              originalTitle={projectOriginalTitle(selected)}
-              title={projectTitle(selected)}
-              needWelcome={ack !== true}
-              onAck={() => {
+            <TheaterPlayer
+              src={mediaSrc(selected)}
+              cid={movieCid}
+              seedState="pending"
+              unlocked={movieAck === true && ack === true}
+              playing={playing === true}
+              command={command}
+              commandSeq={commandSeq}
+            />
+            <Affirmation
+              mode="title"
+              eyebrow="CONFIRM"
+              title={'I confirm I own a legal copy of ' + projectOriginalTitle(selected)}
+              body={
+                'Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nThis site is a personal catalog of projects — not a pirate archive.'
+              }
+              checkboxLabel={
+                'I confirm I own a legal copy of ' +
+                projectOriginalTitle(selected) +
+                ' before I play its edit.'
+              }
+              confirmLabel="OK — I confirm"
+              storageKey={movieStorageKey(selected.slug)}
+              confirmed={movieAck === true}
+              links={[
+                { label: 'Ownership policy', href: '/legal' },
+                { label: 'Terms', href: '/terms' },
+              ]}
+              onConfirm={() => {
                 setMovieAck(true)
+                setAck(true)
               }}
             />
             <div className="fb-video-controls">
@@ -803,7 +702,7 @@ export default function FlashbackApp() {
   } else {
     main = (
       <div className="fb-home">
-        <RecentSlideshow projects={projects} />
+        <NowShowing variant="carousel" items={nowShowingItems(projects)} ariaLabel="Now showing" />
         <div className="fb-home-lead">
           <div className="fb-home-intro fb-prose">
             <MarkdownRenderer content={homeMd || '# Welcome'} />
@@ -839,10 +738,23 @@ export default function FlashbackApp() {
           <div className="fb-screen-glow" />
           <SeatRows />
         </div>
-        {/* Always mount on non-movie: soft-hydrate cannot unmount after LS ack; CSS hides via data-fb-welcome-ack. */}
         {kind.kind !== 'movie' ? (
-          <OwnershipGate
-            onAck={() => {
+          <Affirmation
+            mode="welcome"
+            eyebrow="WELCOME"
+            title="Own the original — then enjoy the edit"
+            body={
+              'Before you play any fan edit here, please confirm you own a legal commercial copy of the corresponding original film. Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nThis site is a personal catalog of projects — not a pirate archive, and not a substitute for buying or renting the studio release.'
+            }
+            checkboxLabel="I confirm I own a legal copy of each original film before I play its edit."
+            confirmLabel="OK — I confirm"
+            storageKey={welcomeStorageKey()}
+            confirmed={ack === true}
+            links={[
+              { label: 'Ownership policy', href: '/legal' },
+              { label: 'Terms', href: '/terms' },
+            ]}
+            onConfirm={() => {
               setAck(true)
             }}
           />
@@ -864,11 +776,7 @@ export default function FlashbackApp() {
             <a href="/legal" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/legal') }}>Legal</a>
           </nav>
         </header>
-        <div className="fb-marquee">
-          <MarqueeWing phrase="now" prefix="L" />
-          <MarqueeBoard projects={projects} />
-          <MarqueeWing phrase="showing" prefix="R" />
-        </div>
+        <NowShowing variant="lcd" items={nowShowingItems(projects)} ariaLabel="Now showing titles" />
         <main className="fb-main">{main}</main>
         <footer className="fb-footer">
           <span className="fb-footer-brand">Flashback Repository</span>
