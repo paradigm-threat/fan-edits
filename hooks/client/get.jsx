@@ -299,6 +299,28 @@ function readmeBody(raw) {
   return lines.slice(i).join('\n')
 }
 
+/** Strip poster image lines so SSR MarkdownRenderer stays under the timeout budget. */
+function readmeForRender(raw) {
+  const body = readmeBody(raw)
+  if (!body) {
+    return '# Loading…'
+  }
+  const lines = body.split('\n')
+  let kept = []
+  for (let i = 0; i < lines.length; i++) {
+    const t = lines[i].trim()
+    if (t.indexOf('![') === 0) {
+      continue
+    }
+    kept = kept.concat([lines[i]])
+  }
+  const out = kept.join('\n').trim()
+  if (!out) {
+    return '# Loading…'
+  }
+  return out
+}
+
 function isNarrowViewport() {
   try {
     if (typeof globalThis === 'undefined') {
@@ -752,14 +774,6 @@ export default function FlashbackApp() {
     )
   } else if (kind.kind === 'movie') {
     const movieCid = selected && selected.media ? resolveProjectCid(selected) : ''
-    // Evaluate README MarkdownRenderer before the video panel JSX so SSR
-    // cancel during media/inspect cannot leave an empty .fb-readme.
-    const readmeMd = readmeBody(readme) || '# Loading…'
-    const readmeNode = (
-      <div className="fb-readme fb-prose">
-        <MarkdownRenderer content={readmeMd} />
-      </div>
-    )
     main = (
       <div className="fb-movie">
         <button type="button" className="fb-back" onClick={() => { navigate('/') }}>
@@ -771,6 +785,10 @@ export default function FlashbackApp() {
             <MarkdownRenderer content={selected.blurb} />
           </div>
         ) : null}
+        {/* README MD before video in tree order so SSR finishes links/lists; CSS order keeps it below the player. */}
+        <div className="fb-readme fb-prose">
+          <MarkdownRenderer content={readmeForRender(readme)} />
+        </div>
         {selected && selected.media ? (
           <div className="fb-video-panel">
             {/* Static SSR tree: inject + CSS toggle unlock (CleverScript cannot swap branches post-hydrate). */}
@@ -822,7 +840,6 @@ export default function FlashbackApp() {
         ) : (
           <p className="fb-movie-nomedia">Feature media is not catalogued yet for this title.</p>
         )}
-        {readmeNode}
       </div>
     )
   } else {

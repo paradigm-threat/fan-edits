@@ -460,6 +460,9 @@ themes:
       ".fb-blog-body ul":
         margin: "0 0 0.85em"
         paddingLeft: "1.2em"
+      ".fb-movie":
+        display: "flex"
+        flexDirection: "column"
       ".fb-movie-title":
         margin: "8px 0 10px"
         fontSize: "1.75rem"
@@ -467,6 +470,21 @@ themes:
       ".fb-movie-blurb":
         color: "var(creamMuted)"
         marginBottom: "16px"
+      ".fb-video-panel":
+        position: "relative"
+        marginBottom: "24px"
+        padding: "12px"
+        background: "var(screen)"
+        border: "1px solid var(border)"
+        order: "2"
+      ".fb-movie-nomedia":
+        order: "2"
+      ".fb-readme":
+        marginTop: "8px"
+        paddingTop: "16px"
+        borderTop: "1px solid var(border)"
+        fontSize: "0.95rem"
+        order: "3"
       ".fb-back":
         background: "transparent"
         border: "none"
@@ -476,17 +494,13 @@ themes:
         cursor: "pointer"
         padding: "0"
         marginBottom: "8px"
-      ".fb-video-panel":
-        position: "relative"
-        marginBottom: "24px"
-        padding: "12px"
-        background: "var(screen)"
-        border: "1px solid var(border)"
       ".fb-media-unlock-target":
         display: "none"
       ".fb-video-controls .fb-btn":
         opacity: "0.45"
         pointerEvents: "none"
+      "html[data-fb-welcome-ack='1'] .fb-gate":
+        display: "none !important"
       "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-media-locked":
         display: "none"
       "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-media-unlock-target":
@@ -675,11 +689,6 @@ themes:
       ".fb-media-bar-fill":
         height: "100%"
         background: "var(gold)"
-      ".fb-readme":
-        marginTop: "8px"
-        paddingTop: "16px"
-        borderTop: "1px solid var(border)"
-        fontSize: "0.95rem"
       ".fb-doc":
         fontSize: "1.02rem"
       ".fb-prose":
