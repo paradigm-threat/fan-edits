@@ -270,8 +270,8 @@ export default function RelayMedia(props) {
     }
     setScheduledFor(attempt)
     try {
-      if (typeof setTimeout === 'function') {
-        setTimeout(() => {
+      if (typeof globalThis !== 'undefined' && globalThis.setTimeout) {
+        globalThis.setTimeout(() => {
           setAttempt(attempt + 1)
         }, delay)
       }
