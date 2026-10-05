@@ -166,7 +166,44 @@ function parseReadmeHero(readme, folderName) {
   }
 }
 
-/** Parse ?t= / #t= / 1:23 / 90s — CleverScript-safe (no optional chaining). */
+/** Parse ?t= / #t= / 1:23 / 90s — CleverScript-safe (no regex literals). */
+function isPlainNumberString(s) {
+  if (s.length === 0) {
+    return false
+  }
+  let dot = 0
+  for (let i = 0; i < s.length; i++) {
+    const c = s.charAt(i)
+    if (c === '.') {
+      dot = dot + 1
+      if (dot > 1) {
+        return false
+      }
+    } else if (c < '0' || c > '9') {
+      return false
+    }
+  }
+  return true
+}
+
+function queryParam(search, key) {
+  const needle = key + '='
+  const variants = ['?' + needle, '&' + needle]
+  for (let v = 0; v < variants.length; v++) {
+    const idx = search.indexOf(variants[v])
+    if (idx < 0) {
+      continue
+    }
+    let start = idx + variants[v].length
+    let end = search.indexOf('&', start)
+    if (end < 0) {
+      end = search.length
+    }
+    return search.slice(start, end)
+  }
+  return ''
+}
+
 function parseMediaTime(raw) {
   let s = str(raw).trim()
   if (s.length === 0) {
@@ -179,14 +216,22 @@ function parseMediaTime(raw) {
   if (comma >= 0) {
     s = s.slice(0, comma)
   }
-  if (/^\d+(\.\d+)?$/.test(s)) {
+  if (s.length > 0 && s.charAt(s.length - 1) === 's') {
+    s = s.slice(0, s.length - 1)
+  }
+  if (isPlainNumberString(s)) {
     return parseFloat(s)
   }
   const parts = s.split(':')
-  if (parts.length === 2) {
+  if (parts.length === 2 && isPlainNumberString(parts[0]) && isPlainNumberString(parts[1])) {
     return parseInt(parts[0], 10) * 60 + parseFloat(parts[1])
   }
-  if (parts.length === 3) {
+  if (
+    parts.length === 3 &&
+    isPlainNumberString(parts[0]) &&
+    isPlainNumberString(parts[1]) &&
+    isPlainNumberString(parts[2])
+  ) {
     return parseInt(parts[0], 10) * 3600 + parseInt(parts[1], 10) * 60 + parseFloat(parts[2])
   }
   return -1
@@ -200,13 +245,11 @@ function startAtFromLocation() {
     const loc = globalThis.location
     if (loc.search) {
       const q = loc.search
-      // Manual parse — URLSearchParams may be fine but keep CS-simple.
       const keys = ['t', 'start', 'time']
       for (let i = 0; i < keys.length; i++) {
-        const key = keys[i]
-        const m = q.match(new RegExp('[?&]' + key + '=([^&]+)'))
-        if (m && m[1]) {
-          const n = parseMediaTime(decodeURIComponent(m[1]))
+        const rawVal = queryParam(q, keys[i])
+        if (rawVal.length > 0) {
+          const n = parseMediaTime(decodeURIComponent(rawVal))
           if (n >= 0) {
             return n
           }
@@ -1015,7 +1058,7 @@ export default function FlashbackApp() {
           }}>
             <img
               className="fb-brand-logo"
-              src="/hooks/client/brand/png/logo-header.png"
+              src="/hooks/client/brand/png/icon-192.png"
               alt=""
               width="64"
               height="64"
@@ -1037,7 +1080,7 @@ export default function FlashbackApp() {
           <span className="fb-footer-brand">
             <img
               className="fb-brand-mark"
-              src="/hooks/client/brand/svg/icon-mark.svg"
+              src="/hooks/client/brand/png/icon-192.png"
               alt=""
               width="28"
               height="28"
