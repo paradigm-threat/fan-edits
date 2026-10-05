@@ -1,6 +1,6 @@
 /**
- * Home “now showing” carousel — manual prev/next, image or blurb slides.
- * CleverScript-safe (arrow handlers, braced bodies, concat, globalThis).
+ * Home now-showing carousel — manual prev/next, image or blurb slides.
+ * CleverScript-safe (arrow handlers, braced bodies, concat, no dynamic object keys).
  */
 import React, { useState } from 'react'
 
@@ -18,7 +18,10 @@ var FEATURED_SLUGS = [
 var MAX_SLIDES = 8
 
 function str(v) {
-  if (v === null || v === undefined) {
+  if (v === null) {
+    return ''
+  }
+  if (typeof v === 'undefined') {
     return ''
   }
   if (typeof v === 'string') {
@@ -49,13 +52,22 @@ function isReadyWithMedia(p) {
   return true
 }
 
+function listHasSlug(list, slug) {
+  for (let i = 0; i < list.length; i++) {
+    if (list[i] === slug) {
+      return true
+    }
+  }
+  return false
+}
+
 /**
  * Prefer curated Halloween / highlight slugs, then remaining ready+media
  * (titles with poster art before text-only). Cap at MAX_SLIDES.
  */
 export function pickRecentProjects(projects) {
   let out = []
-  let seen = {}
+  let seen = []
   if (!projects || projects.length === 0) {
     return out
   }
@@ -70,7 +82,7 @@ export function pickRecentProjects(projects) {
       continue
     }
     out = out.concat([p])
-    seen[slug] = true
+    seen = seen.concat([slug])
   }
 
   let withImage = []
@@ -80,7 +92,7 @@ export function pickRecentProjects(projects) {
     if (isReadyWithMedia(p) !== true) {
       continue
     }
-    if (seen[p.slug] === true) {
+    if (listHasSlug(seen, p.slug) === true) {
       continue
     }
     if (p.image) {
