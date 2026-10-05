@@ -1,8 +1,12 @@
 /**
  * First-visit ownership acknowledgment — must confirm before browsing/playing.
  *
- * CleverScript note: controlled checkboxes often fail to sync React state on
- * hydrate, so this gate uses an uncontrolled input and reads .checked on OK.
+ * CleverScript notes:
+ * - Controlled checkboxes often fail to sync React state on hydrate.
+ * - useState(open) is unreliable: SSR always renders the gate (no localStorage),
+ *   and runtime re-runs can resurrect that SSR tree after setState(false).
+ * - Visibility is derived from localStorage on every render; OK also removes the
+ *   gate node so the UI dismisses even if a re-run races.
  */
 import React, { useState } from 'react'
 
@@ -53,16 +57,38 @@ function gateCheckboxChecked() {
   }
 }
 
+function removeGateNode() {
+  try {
+    if (typeof globalThis === 'undefined' || !globalThis.document) {
+      return
+    }
+    let doc = globalThis.document
+    if (!doc.querySelector) {
+      return
+    }
+    let gate = doc.querySelector('.fb-gate')
+    if (!gate) {
+      return
+    }
+    if (gate.remove) {
+      gate.remove()
+    } else if (gate.parentNode && gate.parentNode.removeChild) {
+      gate.parentNode.removeChild(gate)
+    }
+  } catch (e) {}
+}
+
 export function hasOwnershipAck() {
   return readAck() === true
 }
 
 export default function OwnershipGate(props) {
-  const openState = useState(readAck() !== true)
-  const open = openState[0]
-  const setOpen = openState[1]
+  // Tick only forces a client re-render after OK; visibility comes from readAck().
+  const tickState = useState(0)
+  const tick = tickState[0]
+  const setTick = tickState[1]
 
-  if (open !== true) {
+  if (readAck() === true) {
     return null
   }
 
@@ -71,7 +97,7 @@ export default function OwnershipGate(props) {
       <div className="fb-gate-card">
         <p className="fb-gate-kicker">Welcome</p>
         <h2 id="fb-gate-title" className="fb-gate-title">
-          Own the original — then enjoy the edit
+          {"Own the original — then enjoy the edit"}
         </h2>
         <p className="fb-gate-body">
           {"Before you play any fan edit here, please confirm you own a legal commercial copy of the corresponding original film. Same house rule fanedit communities have used for years: the edit is for people who already have the movie."}
@@ -97,12 +123,15 @@ export default function OwnershipGate(props) {
                 return
               }
               writeAck()
-              setOpen(false)
+              removeGateNode()
               try {
                 if (props && typeof props.onAck === 'function') {
                   props.onAck()
                 }
               } catch (e) {}
+              try {
+                setTick(tick + 1)
+              } catch (e2) {}
             }}
           >
             OK — I confirm
