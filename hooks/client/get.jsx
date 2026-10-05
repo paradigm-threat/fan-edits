@@ -207,7 +207,7 @@ function queryParam(search, key) {
 function parseMediaTime(raw) {
   let s = str(raw).trim()
   if (s.length === 0) {
-    return -1
+    return 0 - 1
   }
   if (s.indexOf('t=') === 0) {
     s = s.slice(2)
@@ -234,13 +234,13 @@ function parseMediaTime(raw) {
   ) {
     return parseInt(parts[0], 10) * 3600 + parseInt(parts[1], 10) * 60 + parseFloat(parts[2])
   }
-  return -1
+  return 0 - 1
 }
 
 function startAtFromLocation() {
   try {
     if (typeof globalThis === 'undefined' || !globalThis.location) {
-      return -1
+      return 0 - 1
     }
     const loc = globalThis.location
     if (loc.search) {
