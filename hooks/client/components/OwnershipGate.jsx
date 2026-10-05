@@ -7,7 +7,7 @@
  * - On return with ?ownershipAck=1, persist to localStorage; React unmounts once live.
  */
 import React from 'react'
-import { isClientLive } from '@clevertree/style-internal'
+import { isClientLivePhase } from '@clevertree/style-internal'
 
 var ACK_KEY = 'flashback.ownershipAck.v1'
 
@@ -95,8 +95,8 @@ export default function OwnershipGate(props) {
   // Persist query ack on client (and when hydrate re-runs).
   consumeAckQuery()
 
-  // SSR + hydrate must keep the gate node; unmount only after client is live.
-  if (isClientLive() === true && readAck() === true) {
+  // SSR + hydrate must keep the gate node; unmount only after phase 2+.
+  if (isClientLivePhase(2) === true && readAck() === true) {
     return null
   }
 

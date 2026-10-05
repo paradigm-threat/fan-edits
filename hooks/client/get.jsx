@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import StyleContext from '@clevertree/style'
 import { MarkdownRenderer } from '@clevertree/markdown'
 import manifest from '@hooks'
-import { isClientLive } from '@clevertree/style-internal'
+import { isClientLivePhase } from '@clevertree/style-internal'
 import { TicketIcon, PlayChevron, MarqueeBulb } from 'hooks/client/components/Icons.jsx'
 import OwnershipGate, { hasOwnershipAck, ensureOwnershipAckFromBrowser } from 'hooks/client/components/OwnershipGate.jsx'
 import MovieOwnAck, { hasMovieOwnAck, ensureMovieOwnAckFromBrowser } from 'hooks/client/components/MovieOwnAck.jsx'
@@ -345,7 +345,7 @@ export default function FlashbackApp() {
   // CleverScript soft-hydrate: SSR always paints locked+overlay. Unlock only after
   // live so hydrate markup stays stable. Keep the form visible until playback is
   // actually unlocked (never hide the CTA while the locked message is showing).
-  const live = isClientLive() === true
+  const live = isClientLivePhase(2) === true
   const mediaUnlocked = live === true && ack === true && movieAck === true
   const showMovieAck = mediaUnlocked !== true
 

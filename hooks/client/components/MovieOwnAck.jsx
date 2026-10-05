@@ -5,7 +5,7 @@
  * script / client consume; no reliance on hydrated onClick.
  */
 import React from 'react'
-import { isClientLive } from '@clevertree/style-internal'
+import { isClientLivePhase } from '@clevertree/style-internal'
 
 var PREFIX = 'flashback.movieOwn.v1.'
 var WELCOME_KEY = 'flashback.ownershipAck.v1'
@@ -249,7 +249,7 @@ export default function MovieOwnAck(props) {
   ensureMovieOwnAckFromBrowser(slug)
   // Parent mounts us until mediaUnlocked. Only self-hide when BOTH welcome +
   // per-title acks are set and client is live — never leave locked UI without a form.
-  if (isClientLive() === true) {
+  if (isClientLivePhase(2) === true) {
     if (hasMovieOwnAck(slug) === true && readWelcomeAck() === true) {
       return null
     }
