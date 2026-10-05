@@ -17,7 +17,10 @@
       st.textContent = [
         /* Affirmation / ownership gate */
         '.fb-gate{position:fixed;inset:0;z-index:50;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(6,4,5,.9)}',
+        /* Movie title ack is inline under the player — not a fullscreen overlay. */
+        '.fb-affirmation-native[data-fb-affirmation="title"]{position:relative;inset:auto;z-index:auto;display:block;padding:0;background:transparent;margin:12px 0 16px}',
         '.fb-gate-panel,.fb-gate-card{max-width:480px;width:100%;padding:28px 26px 24px;background:linear-gradient(165deg,#3a1820 0%,#1a0c10 55%,#12080a 100%);border:1px solid #d4a574;box-shadow:0 24px 70px rgba(0,0,0,.6);border-radius:4px;color:#f3e6d4}',
+        '.fb-affirmation-native[data-fb-affirmation="title"] .fb-gate-panel,.fb-affirmation-native[data-fb-affirmation="title"] .fb-gate-card{max-width:100%;box-shadow:none}',
         '.fb-gate-eyebrow,.fb-gate-kicker{margin:0 0 8px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#d4a574}',
         '.fb-gate-title{margin:0 0 14px;font-size:1.5rem;line-height:1.25;color:#f3e6d4}',
         '.fb-gate-body{margin:0 0 14px;color:#c9b8a4;font-size:1rem;line-height:1.55}',
@@ -29,10 +32,12 @@
         '.fb-gate-ok{width:100%;justify-content:center;padding:12px 18px;font-size:1.02rem;cursor:pointer;border:1px solid #d4a574;background:linear-gradient(180deg,#5a2430,#2a1018);color:#f3e6d4;border-radius:4px}',
         '.fb-gate-links{margin:16px 0 0;font-size:.85rem;text-align:center}',
         '.fb-gate-links a{color:#d4a574}',
-        'html[data-fb-welcome-ack="1"] .fb-gate{display:none!important}',
+        /* Only hide welcome overlay after site-wide ack — never hide movie title ack via this rule. */
+        'html[data-fb-welcome-ack="1"] .fb-affirmation-native[data-fb-affirmation="welcome"]{display:none!important}',
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-media-locked{display:none!important}',
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-media-unlock-target{display:block!important}',
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-video-controls .fb-btn{opacity:1;pointer-events:auto}',
+        'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-affirmation-native[data-fb-affirmation="title"]{display:none!important}',
         '.fb-media-unlock-target{display:none}',
         '.fb-video-controls .fb-btn{opacity:.45;pointer-events:none}',
         /* NowShowing LCD marquee */

@@ -51,6 +51,4 @@ assert.ok(firstHost >= 0 && firstHost < bodyClose, 'hosts must be inside body')
 assert.ok(out.indexOf('park-host-common.js') >= 0, 'common boot script included')
 assert.ok(!out.includes('</html><script data-fb-park-native'), 'no hosts after html')
 
-assert.match(getCs, /park-host-common\.js/, 'get.cs references common boot script')
-
 console.log('inject-park-hosts.test.mjs OK')

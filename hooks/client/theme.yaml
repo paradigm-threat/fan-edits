@@ -499,7 +499,9 @@ themes:
       ".fb-video-controls .fb-btn":
         opacity: "0.45"
         pointerEvents: "none"
-      "html[data-fb-welcome-ack='1'] .fb-gate":
+      "html[data-fb-welcome-ack='1'] .fb-affirmation-native[data-fb-affirmation='welcome']":
+        display: "none !important"
+      "html[data-fb-welcome-ack='1'] .fb-gate:not([data-fb-affirmation='title'])":
         display: "none !important"
       "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-media-locked":
         display: "none"
