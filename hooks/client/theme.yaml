@@ -583,6 +583,10 @@ themes:
       ".fb-video-controls .fb-btn":
         opacity: "0.45"
         pointerEvents: "none"
+      ".fb-video-controls .fb-btn:disabled":
+        opacity: "0.4"
+        cursor: "not-allowed"
+        pointerEvents: "none"
       "html[data-fb-welcome-ack='1'] .fb-affirmation-native[data-fb-affirmation='welcome']":
         display: "none !important"
       "html[data-fb-welcome-ack='1'] .fb-gate:not([data-fb-affirmation='title'])":
@@ -593,9 +597,13 @@ themes:
         display: "block"
       "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-movie-ack":
         display: "none"
-      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-video-controls .fb-btn":
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-video-controls .fb-btn:not(:disabled)":
         opacity: "1"
         pointerEvents: "auto"
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-video-controls .fb-btn:disabled":
+        opacity: "0.4"
+        pointerEvents: "none"
+        cursor: "not-allowed"
       ".fb-movie-ack":
         position: "absolute"
         inset: "12px"
@@ -672,6 +680,7 @@ themes:
       ".fb-video-controls":
         display: "flex"
         flexDirection: "row"
+        flexWrap: "wrap"
         gap: "10px"
         marginTop: "12px"
       ".fb-theater-downloads":
@@ -680,10 +689,12 @@ themes:
         border: "1px solid var(border)"
         background: "rgba(0,0,0,0.28)"
       ".fb-theater-external":
-        marginTop: "14px"
+        marginTop: "0"
+        marginBottom: "14px"
         padding: "12px 14px"
         border: "1px solid #5a4a2a"
         background: "rgba(40,28,12,0.45)"
+        display: "block"
       ".fb-theater-external-steps":
         margin: "0 0 12px"
         paddingLeft: "1.25rem"
@@ -695,6 +706,10 @@ themes:
         fontSize: "0.75rem"
         wordBreak: "break-all"
         color: "var(cream)"
+      ".fb-theater-external-status":
+        margin: "10px 0 0"
+        fontSize: "0.88rem"
+        color: "var(gold)"
       ".fb-theater-external-actions":
         display: "flex"
         flexDirection: "row"

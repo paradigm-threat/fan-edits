@@ -153,6 +153,57 @@ function canPlayHevcMp4() {
   }
 }
 
+/**
+ * True only when the browser claims Matroska + HEVC in-page.
+ * No major browser reports this in 2026 — in-page Play stays off.
+ */
+function canPlayMkvHevc() {
+  try {
+    const doc = globalThis.document
+    if (!doc || typeof doc.createElement !== 'function') {
+      return false
+    }
+    const v = doc.createElement('video')
+    const tests = [
+      'video/x-matroska; codecs="hvc1.1.6.L93.B0"',
+      'video/x-matroska; codecs="hev1.1.6.L93.B0"',
+      'video/matroska; codecs="hvc1.1.6.L93.B0"',
+      'video/webm; codecs="hvc1.1.6.L93.B0"',
+    ]
+    for (let i = 0; i < tests.length; i++) {
+      const r = v.canPlayType(tests[i])
+      if (r === 'probably' || r === 'maybe') {
+        return true
+      }
+    }
+  } catch (e) {}
+  return false
+}
+
+/** Absolute same-origin URL for VLC Open Network Stream. */
+function absoluteStreamUrl(path) {
+  const p = str(path)
+  if (p.length === 0) {
+    return ''
+  }
+  if (p.indexOf('https://') === 0 || p.indexOf('http://') === 0) {
+    return p
+  }
+  try {
+    const loc = globalThis.location
+    if (loc && loc.origin) {
+      if (p.charAt(0) === '/') {
+        return loc.origin + p
+      }
+      return loc.origin + '/' + p
+    }
+  } catch (e) {}
+  if (p.charAt(0) === '/') {
+    return p
+  }
+  return '/' + p
+}
+
 function pickPlayableSrc(project) {
   if (!project) {
     return ''
@@ -748,6 +799,51 @@ function encodeCidForUrl(cid) {
   return c
 }
 
+/** SSR-safe external-player panel — stream URL always visible (no in-page <video>). */
+function renderExternalWatchPanel(streamUrl, copyMsg, onCopy) {
+  const url = str(streamUrl)
+  if (url.length === 0) {
+    return null
+  }
+  let status = null
+  if (str(copyMsg).length > 0) {
+    status = <p className="fb-theater-external-status">{copyMsg}</p>
+  }
+  return (
+    <div className="fb-theater-external" data-fb-external-watch="1" data-playback-engine="external">
+      <p className="fb-theater-downloads-label">Watch in an external player</p>
+      <ol className="fb-theater-external-steps">
+        <li>Install VLC (free) if you do not have it yet.</li>
+        <li>Copy the stream URL below (or tap Play in external player).</li>
+        <li>In VLC: Media → Open Network Stream… → paste → Play.</li>
+      </ol>
+      <div className="fb-theater-external-url-row">
+        <code className="fb-theater-external-url" data-fb-stream-url="1">
+          {url}
+        </code>
+      </div>
+      <div className="fb-theater-external-actions fb-theater-downloads-links">
+        <button type="button" className="fb-btn fb-theater-copy-stream" onClick={onCopy}>
+          Copy stream URL
+        </button>
+        <a
+          className="fb-btn fb-theater-get-vlc"
+          href="https://www.videolan.org/vlc/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get VLC
+        </a>
+      </div>
+      {status}
+      <p className="fb-theater-downloads-note">
+        Browsers cannot play Matroska + HEVC in-page yet. Streaming in VLC keeps full quality with
+        embedded subs.
+      </p>
+    </div>
+  )
+}
+
 /** SSR-safe inspect row — lives in get.jsx so soft-hydrate always paints it. */
 function renderIpfsInspect(cidRaw) {
   const cid = str(cidRaw).trim()
@@ -1033,6 +1129,12 @@ export default function FlashbackApp() {
   const command = cmdState[0]
   const setCommand = cmdState[1]
 
+  const streamCopyState = useState('')
+  const streamCopyMsg = streamCopyState[0]
+  const setStreamCopyMsg = streamCopyState[1]
+
+  const inPageMkvOk = canPlayMkvHevc() === true
+
   const seqState = useState(0)
   const commandSeq = seqState[0]
   const setCommandSeq = seqState[1]
@@ -1108,6 +1210,9 @@ export default function FlashbackApp() {
   }
 
   function sendPlay() {
+    if (inPageMkvOk !== true) {
+      return
+    }
     if (mediaUnlocked !== true) {
       try {
         const host = theaterHostEl()
@@ -1166,6 +1271,9 @@ export default function FlashbackApp() {
   }
 
   function sendPause() {
+    if (inPageMkvOk !== true) {
+      return
+    }
     const nextSeq = commandSeq + 1
     setCommand(2)
     setCommandSeq(nextSeq)
@@ -1177,6 +1285,39 @@ export default function FlashbackApp() {
         v.pause()
       }
     } catch (ePause) {}
+  }
+
+  function copyStreamUrl(url) {
+    const u = str(url)
+    if (u.length === 0) {
+      setStreamCopyMsg('No stream URL yet.')
+      return
+    }
+    copyCidText(u)
+    setStreamCopyMsg('Copied — paste into VLC → Media → Open Network Stream.')
+    try {
+      if (typeof globalThis !== 'undefined' && globalThis.setTimeout) {
+        globalThis.setTimeout(() => {
+          setStreamCopyMsg('')
+        }, 4000)
+      }
+    } catch (e) {}
+  }
+
+  function playInExternalPlayer(url) {
+    if (mediaUnlocked !== true) {
+      try {
+        const gate = globalThis.document
+          ? globalThis.document.querySelector('.fb-affirmation-native, .fb-gate, [aria-modal="true"]')
+          : null
+        if (gate && gate.scrollIntoView) {
+          gate.scrollIntoView({ behavior: 'smooth', block: 'center' })
+        }
+      } catch (eGate) {}
+      setStreamCopyMsg('Confirm ownership first, then tap Play in external player.')
+      return
+    }
+    copyStreamUrl(url)
   }
 
   function titleCard(p) {
@@ -1271,6 +1412,46 @@ export default function FlashbackApp() {
     if (startAtNum >= 0) {
       startAtVal = startAtNum
     }
+    let streamUrl = ''
+    if (selected) {
+      streamUrl = absoluteStreamUrl(mediaSrc(selected))
+    }
+    let mediaSurface = null
+    if (selected && inPageMkvOk === true) {
+      mediaSurface = (
+        <TheaterPlayer
+          src={pickPlayableSrc(selected)}
+          srcWeb={mediaSrcFor(selected, projectMediaField(selected, 'mediaWeb'))}
+          srcMobile={mediaSrcFor(selected, projectMediaField(selected, 'mediaMobile'))}
+          srcMaster={mediaSrc(selected)}
+          subtitlesJson={subtitlesJson(selected)}
+          cid={movieCid}
+          seedState="pending"
+          unlocked={movieAck === true && ack === true}
+          playing={playing === true}
+          command={command}
+          commandSeq={commandSeq}
+          commandArg=""
+          startAt={startAtVal}
+        />
+      )
+    } else if (selected) {
+      mediaSurface = renderExternalWatchPanel(streamUrl, streamCopyMsg, () => {
+        copyStreamUrl(streamUrl)
+      })
+    }
+    let playDisabled = true
+    if (inPageMkvOk === true) {
+      playDisabled = false
+    }
+    let playTitle = 'In-browser Play needs Matroska + HEVC support (not available yet)'
+    if (inPageMkvOk === true) {
+      playTitle = 'Play in this browser'
+    }
+    let pauseTitle = 'In-browser Pause needs Matroska + HEVC support (not available yet)'
+    if (inPageMkvOk === true) {
+      pauseTitle = 'Pause'
+    }
     main = (
       <div className="fb-movie">
         <button type="button" className="fb-back" onClick={() => { navigate('/') }}>
@@ -1291,21 +1472,7 @@ export default function FlashbackApp() {
           projectMediaField(selected, 'mediaWeb').length > 0 ||
           projectMediaField(selected, 'mediaMobile').length > 0) ? (
           <div className="fb-video-panel">
-            <TheaterPlayer
-              src={pickPlayableSrc(selected)}
-              srcWeb={mediaSrcFor(selected, projectMediaField(selected, 'mediaWeb'))}
-              srcMobile={mediaSrcFor(selected, projectMediaField(selected, 'mediaMobile'))}
-              srcMaster={mediaSrc(selected)}
-              subtitlesJson={subtitlesJson(selected)}
-              cid={movieCid}
-              seedState="pending"
-              unlocked={movieAck === true && ack === true}
-              playing={playing === true}
-              command={command}
-              commandSeq={commandSeq}
-              commandArg=""
-              startAt={startAtVal}
-            />
+            {mediaSurface}
             <Affirmation
               mode="title"
               eyebrow="CONFIRM"
@@ -1330,14 +1497,27 @@ export default function FlashbackApp() {
             <div className="fb-video-controls">
               <button
                 type="button"
-                className="fb-btn fb-btn-primary"
+                className="fb-btn fb-btn-primary fb-btn-external-play"
+                onClick={() => {
+                  playInExternalPlayer(streamUrl)
+                }}
+              >
+                <PlayChevron className="fb-btn-icon" /> Play in external player
+              </button>
+              <button
+                type="button"
+                className="fb-btn fb-btn-inpage-play"
+                disabled={playDisabled}
+                title={playTitle}
                 onClick={sendPlay}
               >
                 <PlayChevron className="fb-btn-icon" /> Play
               </button>
               <button
                 type="button"
-                className="fb-btn"
+                className="fb-btn fb-btn-inpage-pause"
+                disabled={playDisabled}
+                title={pauseTitle}
                 onClick={sendPause}
               >
                 Pause

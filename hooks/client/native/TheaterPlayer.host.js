@@ -571,7 +571,7 @@
     const wrap = global.document.createElement('div');
     wrap.className = 'fb-theater-external';
     wrap.setAttribute('data-fb-external-watch', '1');
-    wrap.style.display = 'none';
+    wrap.style.display = 'block';
 
     const heading = global.document.createElement('p');
     heading.className = 'fb-theater-downloads-label';
@@ -597,7 +597,7 @@
     const code = global.document.createElement('code');
     code.className = 'fb-theater-external-url';
     code.setAttribute('data-fb-stream-url', '1');
-    code.textContent = 'Waiting for a stream mirror…';
+    code.textContent = 'Resolving stream URL…';
     urlRow.appendChild(code);
     wrap.appendChild(urlRow);
 
@@ -1557,6 +1557,26 @@
     root.appendChild(externalWatch);
     root.appendChild(buildDownloadRow(props, srcLadder));
     root.setAttribute('data-playback-engine', 'external');
+    // Prefer same-origin master URL immediately so the stream link is never blank.
+    try {
+      const seedSrc =
+        prop(props, 'srcMaster', '') ||
+        prop(props, 'src', '') ||
+        (srcLadder[0] && srcLadder[0].url) ||
+        '';
+      if (seedSrc && externalWatch && typeof externalWatch.__setStreamUrl === 'function') {
+        externalWatch.__setStreamUrl(seedSrc);
+      }
+    } catch (_) {}
+    // Hide in-page video chrome for library masters until browsers gain MKV+HEVC.
+    try {
+      const masterUrl = prop(props, 'srcMaster', '') || prop(props, 'src', '') || '';
+      if (looksMatroskaUrl(masterUrl) || looksHevcUrl(masterUrl)) {
+        shell.style.display = 'none';
+        video.style.display = 'none';
+        pending.style.display = 'none';
+      }
+    } catch (_) {}
 
     let attempt = 0;
     let timer = null;
