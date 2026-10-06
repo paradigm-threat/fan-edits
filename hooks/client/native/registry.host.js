@@ -7,6 +7,7 @@
     '/hooks/client/native/telemetry.js',
     '/hooks/client/native/Affirmation.host.js',
     '/hooks/client/native/TheaterPlayer.host.js',
+    '/hooks/client/native/ExternalPlay.host.js',
     '/hooks/client/native/NowShowing.host.js',
     '/hooks/client/native/Board.host.js',
   ];

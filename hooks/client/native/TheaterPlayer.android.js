@@ -1,10 +1,9 @@
 /**
  * Android CleverScript host for TheaterPlayer.
- * Default: Open in external player for HTTPS MKV stream (avoids ExoPlayer cache /
- * codec surprises). In-app VideoPlayer remains optional secondary.
- * Download still available for offline.
+ * External CTA lives in ExternalPlay.android.js (intent VIEW). Downloads stay here.
  */
 import React, { useState } from 'react'
+import ExternalPlay from 'hooks/client/native/ExternalPlay.js'
 
 function propStr(p, key) {
   try {
@@ -13,28 +12,6 @@ function propStr(p, key) {
     }
   } catch (e) {}
   return ''
-}
-
-/** Absolute same-origin URL for streaming in an external app. */
-function absoluteHref(href) {
-  const h = '' + (href || '')
-  if (h.length === 0) {
-    return ''
-  }
-  if (h.indexOf('http://') === 0 || h.indexOf('https://') === 0) {
-    return h
-  }
-  try {
-    if (typeof location !== 'undefined' && location.href) {
-      // CleverScript-safe: avoid URL constructor if fragile; join origin + path
-      const origin = location.protocol + '//' + location.host
-      if (h.charAt(0) === '/') {
-        return origin + h
-      }
-      return origin + '/' + h
-    }
-  } catch (e2) {}
-  return h
 }
 
 /** Prefer archival master MKV. */
@@ -135,36 +112,6 @@ function downloadLinks(p) {
   )
 }
 
-function externalWatchPanel(streamSrc) {
-  const abs = absoluteHref(streamSrc)
-  // intent:// opens the system chooser / VLC when the shell navigates the href
-  let intentHref = abs
-  if (abs.indexOf('https://') === 0 || abs.indexOf('http://') === 0) {
-    intentHref =
-      'intent:' +
-      abs +
-      '#Intent;action=android.intent.action.VIEW;type=video/*;end'
-  }
-  return (
-    <div className="fb-theater-external" data-fb-external-watch="1" data-playback-engine="external">
-      <p className="fb-theater-downloads-label">Watch in an external player</p>
-      <p className="fb-theater-downloads-note">
-        Full-quality HEVC MKV streams best in VLC or another player — not the in-app browser
-        cache. Tap below to open the stream URL with an app on this device.
-      </p>
-      <div className="fb-theater-downloads-links">
-        <a className="fb-btn fb-btn-primary" href={intentHref}>
-          Open in external player
-        </a>
-        <a className="fb-btn" href={abs} download="">
-          Download MKV
-        </a>
-      </div>
-      <p className="fb-theater-downloads-note">{abs}</p>
-    </div>
-  )
-}
-
 export default function TheaterPlayer(props) {
   const p = props || {}
   const ladder = androidSrcLadder(p)
@@ -220,7 +167,7 @@ export default function TheaterPlayer(props) {
   }
   return (
     <div className="fb-theater-player" data-playback-engine="external">
-      {externalWatchPanel(chosenSrc)}
+      <ExternalPlay streamUrl={chosenSrc} unlocked={true} setupHref="/setup" />
       {downloadLinks(p)}
       {p.cid ? <p className="fb-theater-tech-body">CID {p.cid}</p> : null}
     </div>

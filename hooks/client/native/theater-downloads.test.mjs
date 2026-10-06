@@ -23,6 +23,14 @@ test('host builds external watch panel with VLC stream copy', () => {
   assert.match(host, /data-fb-external-watch/)
 })
 
+test('ExternalPlay park-native owns primary web CTA (registry)', () => {
+  const registry = fs.readFileSync(path.join(dir, 'registry.host.js'), 'utf8')
+  const externalHost = fs.readFileSync(path.join(dir, 'ExternalPlay.host.js'), 'utf8')
+  assert.match(registry, /ExternalPlay\.host\.js/)
+  assert.match(externalHost, /fb-external-play/)
+  assert.match(externalHost, /vlc:\/\/weblink/)
+})
+
 test('host builds download row with MKV master and subtitle labels', () => {
   assert.match(host, /function buildDownloadRow/)
   assert.match(host, /Download the movie/)

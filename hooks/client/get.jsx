@@ -16,6 +16,7 @@ import Affirmation, {
 } from 'hooks/client/native/Affirmation.js'
 import NowShowing from 'hooks/client/native/NowShowing.js'
 import TheaterPlayer from 'hooks/client/native/TheaterPlayer.js'
+import ExternalPlay from 'hooks/client/native/ExternalPlay.js'
 import Board from 'hooks/client/native/Board.js'
 
 function str(v) {
@@ -204,23 +205,6 @@ function absoluteStreamUrl(path) {
     return origin + p
   }
   return origin + '/' + p
-}
-
-/**
- * Custom scheme for OS protocol handlers installed via /setup.
- * weblink?url= form keeps spaces / apostrophes safe across Chrome quirks.
- */
-function vlcProtocolUrl(httpsUrl) {
-  const u = str(httpsUrl)
-  if (u.indexOf('https://') !== 0 && u.indexOf('http://') !== 0) {
-    return ''
-  }
-  try {
-    if (typeof globalThis !== 'undefined' && globalThis.encodeURIComponent) {
-      return 'vlc://weblink?url=' + globalThis.encodeURIComponent(u)
-    }
-  } catch (e) {}
-  return 'vlc://' + u
 }
 
 function pickPlayableSrc(project) {
@@ -818,77 +802,6 @@ function encodeCidForUrl(cid) {
   return c
 }
 
-/** SSR-safe external-player panel — stream URL always visible (no in-page <video>). */
-function renderExternalWatchPanel(streamUrl, copyMsg, onCopy, vlcHref) {
-  const url = str(streamUrl)
-  if (url.length === 0) {
-    return null
-  }
-  let status = null
-  if (str(copyMsg).length > 0) {
-    status = <p className="fb-theater-external-status">{copyMsg}</p>
-  }
-  const vlc = str(vlcHref)
-  let openVlc = null
-  if (vlc.length > 0) {
-    // Use button + location.href — Relay SSR rewrites custom-scheme <a href> to same-origin.
-    openVlc = (
-      <button
-        type="button"
-        className="fb-btn fb-btn-primary fb-theater-open-vlc"
-        onClick={() => {
-          try {
-            if (typeof globalThis !== 'undefined' && globalThis.location) {
-              globalThis.location.href = vlc
-            }
-          } catch (e) {}
-        }}
-      >
-        Open in VLC
-      </button>
-    )
-  }
-  return (
-    <div className="fb-theater-external" data-fb-external-watch="1" data-playback-engine="external">
-      <p className="fb-theater-downloads-label">Watch in an external player</p>
-      <ol className="fb-theater-external-steps">
-        <li>
-          One-time: install VLC and the <a href="/setup">playback setup</a> (`vlc://` handler).
-        </li>
-        <li>Tap <strong>Open in VLC</strong> (or copy the stream URL below).</li>
-        <li>If the click is blocked: VLC → Media → Open Network Stream… → paste → Play.</li>
-      </ol>
-      <div className="fb-theater-external-url-row">
-        <code className="fb-theater-external-url" data-fb-stream-url="1">
-          {url}
-        </code>
-      </div>
-      <div className="fb-theater-external-actions fb-theater-downloads-links">
-        {openVlc}
-        <button type="button" className="fb-btn fb-theater-copy-stream" onClick={onCopy}>
-          Copy stream URL
-        </button>
-        <a className="fb-btn" href="/setup">
-          Setup guide
-        </a>
-        <a
-          className="fb-btn fb-theater-get-vlc"
-          href="https://www.videolan.org/vlc/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Get VLC
-        </a>
-      </div>
-      {status}
-      <p className="fb-theater-downloads-note">
-        Browsers cannot play Matroska + HEVC in-page yet. A local `vlc://` handler (see Setup) opens
-        the HTTPS stream in VLC in one click.
-      </p>
-    </div>
-  )
-}
-
 /** SSR-safe inspect row — lives in get.jsx so soft-hydrate always paints it. */
 function renderIpfsInspect(cidRaw) {
   const cid = str(cidRaw).trim()
@@ -1177,10 +1090,6 @@ export default function FlashbackApp() {
   const command = cmdState[0]
   const setCommand = cmdState[1]
 
-  const streamCopyState = useState('')
-  const streamCopyMsg = streamCopyState[0]
-  const setStreamCopyMsg = streamCopyState[1]
-
   const inPageMkvOk = canPlayMkvHevc() === true
 
   const seqState = useState(0)
@@ -1335,51 +1244,6 @@ export default function FlashbackApp() {
     } catch (ePause) {}
   }
 
-  function copyStreamUrl(url) {
-    const u = str(url)
-    if (u.length === 0) {
-      setStreamCopyMsg('No stream URL yet.')
-      return
-    }
-    copyCidText(u)
-    setStreamCopyMsg('Copied — paste into VLC → Media → Open Network Stream.')
-    try {
-      if (typeof globalThis !== 'undefined' && globalThis.setTimeout) {
-        globalThis.setTimeout(() => {
-          setStreamCopyMsg('')
-        }, 4000)
-      }
-    } catch (e) {}
-  }
-
-  function playInExternalPlayer(url) {
-    if (mediaUnlocked !== true) {
-      try {
-        const gate = globalThis.document
-          ? globalThis.document.querySelector('.fb-affirmation-native, .fb-gate, [aria-modal="true"]')
-          : null
-        if (gate && gate.scrollIntoView) {
-          gate.scrollIntoView({ behavior: 'smooth', block: 'center' })
-        }
-      } catch (eGate) {}
-      setStreamCopyMsg('Confirm ownership first, then open in VLC.')
-      return
-    }
-    const abs = str(url)
-    copyStreamUrl(abs)
-    const vlc = vlcProtocolUrl(abs)
-    if (vlc.length === 0) {
-      return
-    }
-    try {
-      if (typeof globalThis !== 'undefined' && globalThis.location) {
-        globalThis.location.href = vlc
-      }
-    } catch (eOpen) {
-      setStreamCopyMsg('Copied stream URL — paste in VLC, or finish /setup for one-click Open in VLC.')
-    }
-  }
-
   function titleCard(p) {
     const status = p.status || 'wip'
     let meta = status
@@ -1496,13 +1360,12 @@ export default function FlashbackApp() {
         />
       )
     } else if (selected) {
-      mediaSurface = renderExternalWatchPanel(
-        streamUrl,
-        streamCopyMsg,
-        () => {
-          copyStreamUrl(streamUrl)
-        },
-        vlcProtocolUrl(streamUrl),
+      mediaSurface = (
+        <ExternalPlay
+          streamUrl={streamUrl}
+          unlocked={movieAck === true && ack === true}
+          setupHref="/setup"
+        />
       )
     }
     let playDisabled = true
@@ -1562,15 +1425,6 @@ export default function FlashbackApp() {
             <div className="fb-video-controls">
               <button
                 type="button"
-                className="fb-btn fb-btn-primary fb-btn-external-play"
-                onClick={() => {
-                  playInExternalPlayer(streamUrl)
-                }}
-              >
-                <PlayChevron className="fb-btn-icon" /> Open in VLC
-              </button>
-              <button
-                type="button"
                 className="fb-btn fb-btn-inpage-play"
                 disabled={playDisabled}
                 title={playTitle}
@@ -1587,9 +1441,6 @@ export default function FlashbackApp() {
               >
                 Pause
               </button>
-              <a className="fb-btn" href="/setup">
-                Setup
-              </a>
             </div>
           </div>
         ) : (

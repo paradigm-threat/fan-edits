@@ -36,6 +36,8 @@ const stub = read('Affirmation.js')
 const affirmation = read('Affirmation.android.js')
 const nowShowing = read('NowShowing.android.js')
 const theater = read('TheaterPlayer.android.js')
+const externalPlay = read('ExternalPlay.android.js')
+const externalStub = read('ExternalPlay.js')
 
 assert.deepEqual(exportFns(affirmation), exportFns(stub), 'android affirmation exports match the stub')
 assert.match(stub, /globalThis\.__relaySkipAffirmations === true/)
@@ -53,8 +55,8 @@ assert.match(nowShowing, /<a /)
 assert.match(nowShowing, /href=/)
 assert.equal(/lcd|marquee/i.test(nowShowing), false, 'android now-showing is a row, not the web marquee')
 
-assert.match(theater, /Open in external player/)
-assert.match(theater, /intent:/)
+assert.match(theater, /ExternalPlay/)
+assert.match(theater, /hooks\/client\/native\/ExternalPlay\.js/)
 assert.match(theater, /relayAssetStatus=1/)
 assert.match(theater, /p\.unlocked/)
 assert.match(theater, /p\.cid/)
@@ -65,15 +67,32 @@ assert.match(theater, /androidSrcLadder|pickSeededSrc/)
 assert.match(theater, /Download the movie/)
 assert.match(theater, /Full quality \(MKV\)/)
 assert.match(theater, /data-playback-engine="external"/)
-assert.match(theater, /externalWatchPanel/)
+assert.equal(theater.includes('externalWatchPanel'), false, 'theater delegates CTA to ExternalPlay')
 // MKV master is preferred before MP4 fallbacks
 assert.match(theater, /master\.length > 0/)
 assert.equal(theater.includes("from '@clevertree/video'"), false, 'android theater defaults to external player, not VideoPlayer')
+
+assert.match(externalStub, /data-relay-park-native="fb-external-play"/)
+assert.match(externalStub, /data-stream-url/)
+assert.match(externalStub, /data-unlocked/)
+assert.match(externalStub, /data-setup-href/)
+assert.match(externalPlay, /Open in external player/)
+assert.match(externalPlay, /intent:/)
+assert.match(externalPlay, /android\.intent\.action\.VIEW/)
+assert.match(externalPlay, /type=video\/\*/)
+assert.match(externalPlay, /Download MKV/)
+assert.match(externalPlay, /data-fb-external-play/)
+assert.equal(
+  /vlc:\/\//.test(codeOnly(externalPlay)),
+  false,
+  'android ExternalPlay must not use vlc://',
+)
 
 for (const [name, src] of [
   ['Affirmation.android.js', affirmation],
   ['NowShowing.android.js', nowShowing],
   ['TheaterPlayer.android.js', theater],
+  ['ExternalPlay.android.js', externalPlay],
 ]) {
   forbidHostOnly(name, src)
 }
