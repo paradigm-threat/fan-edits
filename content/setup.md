@@ -10,9 +10,13 @@ Download the official build for your OS: [videolan.org/vlc](https://www.videolan
 
 Confirm it runs. You do **not** need extra codecs for our streams.
 
-## 2. Register the `vlc://` URL scheme
+## 2. Pick one way to hand the stream to VLC
 
-Browsers do not hand links to VLC by themselves. A tiny **protocol handler** on your machine maps `vlc://…` → open VLC with the HTTPS stream URL.
+Browsers will not open VLC by themselves. Choose **A** (works with Flashback’s **Open in VLC** button on every OS) or **B** (Chrome / Edge / Firefox extension).
+
+### A. Register the `vlc://` URL scheme (recommended)
+
+A tiny **protocol handler** on your machine maps `vlc://…` → open VLC with the HTTPS stream URL. Flashback’s **Open in VLC** button uses this.
 
 We ship per-OS installers in this repo (HTTPS-only; no shell injection of arbitrary URLs).
 
@@ -69,6 +73,22 @@ start vlc://https://www.videolan.org/vlc/video-dummy.mp4
 ```
 
 Uninstall: [/scripts/vlc-protocol/uninstall-windows.ps1](/scripts/vlc-protocol/uninstall-windows.ps1)
+
+### B. Chrome / Edge / Firefox extension (optional)
+
+[**Open in VLC™ media player**](https://chromewebstore.google.com/detail/open-in-vlc-media-player/ihpiinojhnfhpdmmacgmpoonphhimkaj) (also on [Firefox](https://addons.mozilla.org/en-US/firefox/addon/open-in-vlc/) / [Edge](https://microsoftedge.microsoft.com/addons/detail/open-in-vlc%E2%84%A2-media-player/hjfcjapkfahlmlefedkkpbbkeddpnnlc)) sends media URLs from the browser to VLC.
+
+**Also required:** their small **native client** (the extension prompts you the first time — it bridges the browser to VLC; browsers block that without a helper).
+
+How to use it on Flashback:
+
+1. Install the extension + native client; keep VLC installed.
+2. Open a title, confirm ownership, wait for the **stream URL** to show.
+3. Either:
+   - Right‑click the stream URL (or **Copy stream URL**) and use the extension’s **Open in VLC** context menu / toolbar button, or
+   - Paste the HTTPS URL if the extension asks for a link.
+
+**Caveats:** third‑party extension + Node-based native host (trust / update surface). It does **not** power our one-click **Open in VLC** button — that still needs path **A** (`vlc://`). Fine to use both; path **A** is enough alone.
 
 ## 3. How the link works
 
