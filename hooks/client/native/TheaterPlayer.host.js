@@ -164,25 +164,25 @@
     return out;
   }
 
-  /** Keep page origin at index 0 after peer-list rebuilds. */
+  /** Keep page origin at index 0 after peer-list rebuilds; demote known-flaky peers. */
   function prioritizeSameOrigin(list) {
     const arr = list && list.length ? list.slice() : [];
     let origin = '';
     try {
       origin = String(global.location.origin || '').replace(/\/$/, '');
     } catch (_) {}
-    if (!origin || arr.length < 2) return arr;
-    let idx = -1;
-    for (let i = 0; i < arr.length; i++) {
-      if (arr[i] && arr[i].origin === origin) {
-        idx = i;
-        break;
-      }
-    }
-    if (idx > 0) {
-      const m = arr.splice(idx, 1)[0];
-      arr.unshift(m);
-    }
+    const rank = function (m) {
+      if (!m || !m.origin) return 50;
+      if (origin && m.origin === origin) return 0;
+      const o = String(m.origin);
+      if (o.indexOf('ord1.') >= 0) return 1;
+      if (o.indexOf('hkg1.') >= 0) return 2;
+      if (o.indexOf('iad1.') >= 0) return 40;
+      return 10;
+    };
+    arr.sort(function (a, b) {
+      return rank(a) - rank(b);
+    });
     return arr;
   }
 
@@ -1170,6 +1170,14 @@
                 ctx.setPlaybackError(note);
                 return;
               }
+              // Mirror fetch/CORS failures: try next fleet host before dropping quality.
+              if (err && err.code === 'FETCH_FAILED' && mirrorIndex + 1 < mirrors.length) {
+                mirrorIndex += 1;
+                msg.textContent = 'Playback failed on current mirror — trying next…';
+                liveLog.textContent = note + ' → next mirror';
+                startMirrorHunt({ fromPlay: true, resume: true });
+                return;
+              }
               if (advanceRendition(note)) return;
               reportTheaterIssue({
                 severity: 'major',
@@ -1702,6 +1710,16 @@
           if (st.ok || st.stub) {
             return { mirror: mirror, st: st };
           }
+          // Range 4xx/5xx already tells us this mirror cannot serve bytes — skip status
+          // (status often 504s for 5+ seconds and stalls the hunt).
+          const hardFail =
+            st.error &&
+            (String(st.error).indexOf('http-4') === 0 ||
+              String(st.error).indexOf('http-5') === 0);
+          if (hardFail) {
+            st.retryAfterSecs = 1;
+            return { mirror: mirror, st: st };
+          }
           return probeStatusOnly(mirror, st).then(function (st2) {
             showStatus(st2);
             return { mirror: mirror, st: st2 };
@@ -1712,8 +1730,16 @@
           st.error = code;
           st.message = code === 'timeout' ? 'Range probe timed out' : 'Range probe failed';
           return probeStatusOnly(mirror, st).then(function (st2) {
-            // Status may say cached while Range timed out — try play anyway.
-            if (st2.seedState === 'cached' || st2.seedState === 'ready' || st2.ok) {
+            // Same-origin only: status-cached may still play when Range probe was slow.
+            // Cross-origin (fleet) without Range proof often fails CORS on hung nodes — skip.
+            let sameOrigin = false;
+            try {
+              sameOrigin = mirror.origin === String(global.location.origin || '').replace(/\/$/, '');
+            } catch (_) {}
+            if (
+              sameOrigin &&
+              (st2.seedState === 'cached' || st2.seedState === 'ready' || st2.ok)
+            ) {
               st2.ok = true;
               st2.seedState = 'ready';
               st2.retryable = true;
