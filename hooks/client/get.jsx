@@ -831,10 +831,21 @@ function renderExternalWatchPanel(streamUrl, copyMsg, onCopy, vlcHref) {
   const vlc = str(vlcHref)
   let openVlc = null
   if (vlc.length > 0) {
+    // Use button + location.href — Relay SSR rewrites custom-scheme <a href> to same-origin.
     openVlc = (
-      <a className="fb-btn fb-btn-primary fb-theater-open-vlc" href={vlc}>
+      <button
+        type="button"
+        className="fb-btn fb-btn-primary fb-theater-open-vlc"
+        onClick={() => {
+          try {
+            if (typeof globalThis !== 'undefined' && globalThis.location) {
+              globalThis.location.href = vlc
+            }
+          } catch (e) {}
+        }}
+      >
         Open in VLC
-      </a>
+      </button>
     )
   }
   return (
@@ -1549,22 +1560,15 @@ export default function FlashbackApp() {
               }}
             />
             <div className="fb-video-controls">
-              <a
+              <button
+                type="button"
                 className="fb-btn fb-btn-primary fb-btn-external-play"
-                href={vlcProtocolUrl(streamUrl)}
-                onClick={(e) => {
-                  if (mediaUnlocked !== true) {
-                    try {
-                      e.preventDefault()
-                    } catch (err) {}
-                    playInExternalPlayer(streamUrl)
-                    return
-                  }
-                  copyStreamUrl(streamUrl)
+                onClick={() => {
+                  playInExternalPlayer(streamUrl)
                 }}
               >
                 <PlayChevron className="fb-btn-icon" /> Open in VLC
-              </a>
+              </button>
               <button
                 type="button"
                 className="fb-btn fb-btn-inpage-play"
