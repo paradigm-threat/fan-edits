@@ -177,35 +177,37 @@
     return u.endsWith('.mkv') || u.endsWith('.mka') || u.endsWith('.mks');
   }
 
+  /** Resolve `/wasm/c/{oid}/` from page scripts when `@relay/web-assets` is opted in. */
+  function relayWasmPrefix() {
+    try {
+      if (global.__RELAY_WASM_PREFIX__) {
+        return String(global.__RELAY_WASM_PREFIX__).replace(/\/?$/, '/');
+      }
+    } catch (_) {}
+    try {
+      const scripts = global.document.getElementsByTagName('script');
+      for (let i = 0; i < scripts.length; i++) {
+        const src = scripts[i].getAttribute('src') || '';
+        const m = src.match(/\/(?:assets|wasm)\/c\/([a-f0-9]{40})\//i);
+        if (m) return '/wasm/c/' + m[1] + '/';
+      }
+    } catch (_) {}
+    return '/wasm/';
+  }
+
   /** CDN / pinned URL for @clevertree/relay-video-web (same layout as relay-runtime). */
   function relayVideoWebModuleUrl() {
     try {
       if (global.__RELAY_VIDEO_WEB_URL__) return String(global.__RELAY_VIDEO_WEB_URL__);
     } catch (_) {}
-    try {
-      const pinned =
-        global.__RELAY_WASM_PREFIX__ != null
-          ? String(global.__RELAY_WASM_PREFIX__).replace(/\/?$/, '/')
-          : '/wasm/';
-      return pinned + 'relay_video_wasm_pkg/player.js';
-    } catch (_) {
-      return '/wasm/relay_video_wasm_pkg/player.js';
-    }
+    return relayWasmPrefix() + 'relay_video_wasm_pkg/player.js';
   }
 
   function relayVideoWasmBinaryUrl() {
     try {
       if (global.__RELAY_VIDEO_WASM_URL__) return String(global.__RELAY_VIDEO_WASM_URL__);
     } catch (_) {}
-    try {
-      const pinned =
-        global.__RELAY_WASM_PREFIX__ != null
-          ? String(global.__RELAY_WASM_PREFIX__).replace(/\/?$/, '/')
-          : '/wasm/';
-      return pinned + 'relay_video_wasm_pkg/relay_video_wasm_bg.wasm';
-    } catch (_) {
-      return '/wasm/relay_video_wasm_pkg/relay_video_wasm_bg.wasm';
-    }
+    return relayWasmPrefix() + 'relay_video_wasm_pkg/relay_video_wasm_bg.wasm';
   }
 
   /** Build ordered ladder: archival master first, then H.264 MP4 compatibility. */

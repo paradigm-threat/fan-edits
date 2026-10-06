@@ -2,7 +2,7 @@ import { fetchIpfsBytesFromGetContext, resolveIpfsFromGetContext } from '@relay/
 import { optimizeRasterFromGetContext, queryWidth } from '@relay/image';
 import { ssrClientHookFromGetContext } from '@relay/ssr';
 // Opt into framework /assets + /wasm (embed.js hydrate). Scanned statically by the gateway.
-import { pinnedPrefix } from '@relay/web-assets';
+import { pinnedPrefix, wasmPrefix } from '@relay/web-assets';
 
 // Parked site shell + thin IPFS media for Flashback Repository.
 function wantsSiteShell(ctx) {
@@ -23,6 +23,11 @@ export default function run(ctx, next) {
   try {
     if (typeof pinnedPrefix === 'function') {
       pinnedPrefix();
+    }
+  } catch (e) {}
+  try {
+    if (typeof wasmPrefix === 'function') {
+      wasmPrefix();
     }
   } catch (e) {}
 
