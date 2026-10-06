@@ -1625,10 +1625,22 @@
             })
             .catch(function (err) {
               const code = err && err.code ? err.code : 'range-fail';
-              st.ok = false;
-              st.retryable = true;
-              st.error = code;
-              st.message = code === 'timeout' ? 'Range probe timed out' : 'Range probe failed';
+              // Status may already say cached while a short Range probe times out under load.
+              // Prefer play over looping the seed spinner forever.
+              if (st.seedState === 'cached' || st.seedState === 'ready' || st.ok) {
+                st.ok = true;
+                st.seedState = 'ready';
+                st.retryable = true;
+                st.error = null;
+                st.message =
+                  (code === 'timeout' ? 'Range probe timed out' : 'Range probe failed') +
+                  ' — trying play from status';
+              } else {
+                st.ok = false;
+                st.retryable = true;
+                st.error = code;
+                st.message = code === 'timeout' ? 'Range probe timed out' : 'Range probe failed';
+              }
               return { mirror: mirror, st: st };
             });
         })

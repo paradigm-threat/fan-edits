@@ -1315,7 +1315,7 @@ export default function FlashbackApp() {
             {' · '}
             <a href="/submit">Submissions</a>
             {' · '}
-            <a href="/board">Board / Report a problem</a>
+            <a href="/board">{'Board / Report a problem'}</a>
             {' · '}
             <a href="/legal">Ownership</a>
             {' · '}
