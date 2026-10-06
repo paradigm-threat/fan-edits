@@ -1,16 +1,97 @@
 /**
  * Android CleverScript host for TheaterPlayer.
- * Seed probe, then the shared relay-video-player builtin.
+ * Archival master first (ExoPlayer progressive), then H.264 web/mobile ladder.
+ * When MediaCodec rejects a master, fall through with the same compat UX as web
+ * (recommend 1080p/720p — no browser WASM on device; JNI demux is later).
+ * Passes subtitlesJson for Media3 text tracks (VTT/SRT).
  */
 import React, { useState } from 'react'
 import { VideoPlayer } from '@clevertree/video'
 
+function propStr(p, key) {
+  try {
+    if (p && p[key] !== null && p[key] !== undefined) {
+      return '' + p[key]
+    }
+  } catch (e) {}
+  return ''
+}
+
+/** Ordered ladder: master MKV → web 1080p → mobile 720p. */
+function androidSrcLadder(p) {
+  const mobile = propStr(p, 'srcMobile')
+  const web = propStr(p, 'srcWeb')
+  const master = propStr(p, 'srcMaster')
+  const fallback = propStr(p, 'src')
+  let out = []
+  if (master.length > 0) {
+    out = out.concat([master])
+  }
+  if (web.length > 0) {
+    out = out.concat([web])
+  }
+  if (mobile.length > 0) {
+    out = out.concat([mobile])
+  }
+  if (out.length === 0 && fallback.length > 0) {
+    out = out.concat([fallback])
+  }
+  let uniq = []
+  for (let i = 0; i < out.length; i++) {
+    let seen = false
+    for (let j = 0; j < uniq.length; j++) {
+      if (uniq[j] === out[i]) {
+        seen = true
+      }
+    }
+    if (!seen) {
+      uniq = uniq.concat([out[i]])
+    }
+  }
+  return uniq
+}
+
+function probeSeed(src) {
+  try {
+    const statusUrl = src + (src.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1'
+    const res = fetch(statusUrl)
+    if (res && res.text) {
+      const j = JSON.parse(res.text)
+      if (j && j.error && j.error !== 'ok') {
+        return { ok: false, message: j.message || 'This file needs to be seeded' }
+      }
+    }
+    return { ok: true, message: '' }
+  } catch (e) {
+    return { ok: false, message: 'This file needs to be seeded' }
+  }
+}
+
+function pickSeededSrc(ladder) {
+  if (!ladder || ladder.length === 0) {
+    return { src: '', message: 'No media path for this title.' }
+  }
+  let lastMsg = 'This file needs to be seeded'
+  for (let i = 0; i < ladder.length; i++) {
+    const r = probeSeed(ladder[i])
+    if (r.ok) {
+      return { src: ladder[i], message: '' }
+    }
+    lastMsg = r.message || lastMsg
+  }
+  return { src: '', message: lastMsg }
+}
+
 export default function TheaterPlayer(props) {
   const p = props || {}
-  const src = p.src || ''
+  const ladder = androidSrcLadder(p)
   const seedState = useState('idle')
   const seed = seedState[0]
   const setSeed = seedState[1]
+  const srcState = useState('')
+  const chosenSrc = srcState[0]
+  const setChosenSrc = srcState[1]
+  const subsJson = propStr(p, 'subtitlesJson') || '[]'
 
   if (p.unlocked !== true) {
     return (
@@ -19,24 +100,18 @@ export default function TheaterPlayer(props) {
       </div>
     )
   }
-  if (src.length === 0) {
+  if (ladder.length === 0) {
     return <p>No media path for this title.</p>
   }
   if (seed === 'idle') {
-    let next = 'ready'
-    try {
-      const statusUrl = src + (src.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1'
-      const res = fetch(statusUrl)
-      if (res && res.text) {
-        const j = JSON.parse(res.text)
-        if (j && j.error && j.error !== 'ok') {
-          next = j.message || 'This file needs to be seeded'
-        }
-      }
-    } catch (e) {
-      next = 'This file needs to be seeded'
+    const pick = pickSeededSrc(ladder)
+    if (pick.src.length > 0) {
+      setChosenSrc(pick.src)
+      setSeed('ready')
+    } else {
+      setChosenSrc('')
+      setSeed(pick.message || 'This file needs to be seeded')
     }
-    setSeed(next)
   }
   if (seed !== 'ready') {
     return (
@@ -56,11 +131,12 @@ export default function TheaterPlayer(props) {
   return (
     <div className="fb-theater-player">
       <VideoPlayer
-        src={src}
+        src={chosenSrc}
         controls={true}
         playing={p.playing === true}
         command={p.command}
         commandSeq={p.commandSeq}
+        subtitlesJson={subsJson}
       />
       {p.cid ? <p>CID {p.cid}</p> : null}
     </div>

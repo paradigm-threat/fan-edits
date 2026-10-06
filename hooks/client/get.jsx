@@ -78,6 +78,108 @@ function mediaSrc(project) {
   return '/' + project.path + '/' + project.media
 }
 
+function projectMediaField(project, key) {
+  try {
+    if (project && project[key]) {
+      return str(project[key])
+    }
+  } catch (e) {}
+  return ''
+}
+
+/** Logical URL for a basename under project.path. */
+function mediaSrcFor(project, basename) {
+  const base = str(basename)
+  if (!project || base.length === 0) {
+    return ''
+  }
+  const path = str(project.path)
+  if (path.length === 0) {
+    return ''
+  }
+  return '/' + path + '/' + base
+}
+
+/**
+ * Push archival master first (highest quality). Host uses native HTML5 or
+ * WASM demux; fall back to H.264 MP4 compatibility on failure.
+ * Among MP4s: wide → 1080p then 720p; Save-Data/narrow → 720p then 1080p.
+ */
+function prefersDesktopPlayback() {
+  try {
+    if (typeof navigator !== 'undefined' && navigator.connection) {
+      if (navigator.connection.saveData === true) {
+        return false
+      }
+    }
+  } catch (e) {}
+  try {
+    if (typeof matchMedia === 'function') {
+      if (!matchMedia('(min-width: 901px)').matches) {
+        return false
+      }
+    }
+  } catch (e2) {}
+  return true
+}
+
+function canPlayAvcMp4() {
+  try {
+    if (typeof document === 'undefined') {
+      return true
+    }
+    const v = document.createElement('video')
+    const r = v.canPlayType('video/mp4; codecs="avc1.42E01E"')
+    return r === 'probably' || r === 'maybe'
+  } catch (e) {
+    return true
+  }
+}
+
+function pickPlayableSrc(project) {
+  if (!project) {
+    return ''
+  }
+  const mobile = projectMediaField(project, 'mediaMobile')
+  const web = projectMediaField(project, 'mediaWeb')
+  const master = projectMediaField(project, 'media')
+  const avc = canPlayAvcMp4()
+  const desktop = prefersDesktopPlayback()
+  // Always lead with master MKV — host falls through on NotSupportedError.
+  let order = []
+  if (master.length > 0) {
+    order = order.concat([master])
+  }
+  if (desktop) {
+    if (web.length > 0 && avc) {
+      order = order.concat([web])
+    }
+    if (mobile.length > 0 && avc) {
+      order = order.concat([mobile])
+    }
+  } else {
+    if (mobile.length > 0 && avc) {
+      order = order.concat([mobile])
+    }
+    if (web.length > 0 && avc) {
+      order = order.concat([web])
+    }
+  }
+  if (order.length === 0) {
+    return ''
+  }
+  return mediaSrcFor(project, order[0])
+}
+
+function resolveCidForLogical(logical) {
+  const path = str(logical)
+  if (path.length === 0) {
+    return ''
+  }
+  const stub = fetchText('.relay/assets/' + path + '.ipfs')
+  return parseCidFromStub(stub)
+}
+
 /** Last path segment — folder name fallback when README has no `#` title. */
 function folderNameFromPath(projectPath) {
   const p = str(projectPath)
@@ -431,12 +533,31 @@ function parseCidFromStub(text) {
 
 /** CID from .ipfs stub only — avoid relayAssetStatus self-fetch during SSR (deadlocks). */
 function resolveProjectCid(project) {
-  if (!project || !project.media || !project.path) {
+  if (!project || !project.path) {
     return ''
   }
-  const logical = str(project.path) + '/' + str(project.media)
-  const stub = fetchText('.relay/assets/' + logical + '.ipfs')
-  return parseCidFromStub(stub)
+  const playSrc = pickPlayableSrc(project)
+  if (playSrc.length > 0) {
+    const logical = playSrc.charAt(0) === '/' ? playSrc.substring(1) : playSrc
+    const cid = resolveCidForLogical(logical)
+    if (cid.length > 0) {
+      return cid
+    }
+  }
+  const master = projectMediaField(project, 'media')
+  if (master.length === 0) {
+    return ''
+  }
+  return resolveCidForLogical(str(project.path) + '/' + master)
+}
+
+function subtitlesJson(project) {
+  try {
+    const tracks = subtitleTracks(project)
+    return JSON.stringify(tracks)
+  } catch (e) {
+    return '[]'
+  }
 }
 
 /** mediaRoot from assets.manifest.json (UnixFS DAG of all thin assets). */
@@ -592,6 +713,9 @@ function routeKind(route) {
   }
   if (route === '/motivation' || route === '/why') {
     return { kind: 'md', file: 'content/motivation.md', title: 'Why we’re doing this' }
+  }
+  if (route === '/submit' || route === '/contribute') {
+    return { kind: 'md', file: 'content/submit.md', title: 'Submissions' }
   }
   let slug = route
   if (slug.charAt(0) === '/') {
@@ -966,10 +1090,17 @@ export default function FlashbackApp() {
         <div className="fb-readme fb-prose">
           <MarkdownRenderer content={hero.body || ''} />
         </div>
-        {selected && selected.media ? (
+        {selected &&
+        (projectMediaField(selected, 'media').length > 0 ||
+          projectMediaField(selected, 'mediaWeb').length > 0 ||
+          projectMediaField(selected, 'mediaMobile').length > 0) ? (
           <div className="fb-video-panel">
             <TheaterPlayer
-              src={mediaSrc(selected)}
+              src={pickPlayableSrc(selected)}
+              srcWeb={mediaSrcFor(selected, projectMediaField(selected, 'mediaWeb'))}
+              srcMobile={mediaSrcFor(selected, projectMediaField(selected, 'mediaMobile'))}
+              srcMaster={mediaSrc(selected)}
+              subtitlesJson={subtitlesJson(selected)}
               cid={movieCid}
               seedState="pending"
               unlocked={movieAck === true && ack === true}
@@ -1055,7 +1186,7 @@ export default function FlashbackApp() {
     <StyleContext src="hooks/client/theme.yaml">
       <div className="fb-app">
         <style>
-          {'@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}@keyframes fb-bulb{0%,100%{opacity:0.4}50%{opacity:1}}@keyframes fb-sconce-breathe{0%,100%{opacity:0.28}50%{opacity:0.48}}@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}.fb-bulb-0{animation:fb-bulb 2.2s ease-in-out infinite}.fb-bulb-1{animation:fb-bulb 2.2s ease-in-out 0.4s infinite}.fb-bulb-2{animation:fb-bulb 2.2s ease-in-out 0.8s infinite}.fb-bulb-3{animation:fb-bulb 2.2s ease-in-out 1.2s infinite}.fb-sconce-1{animation:fb-sconce-breathe 7.5s ease-in-out infinite}.fb-sconce-2{animation:fb-sconce-breathe 7.5s ease-in-out 1.6s infinite}.fb-sconce-3{animation:fb-sconce-breathe 7.5s ease-in-out 3.2s infinite}}@media (prefers-reduced-motion:reduce){.fb-screen-glow,.fb-bulb,.fb-sconce{animation:none!important}}'}
+          {'@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}@keyframes fb-bulb{0%,100%{opacity:0.4}50%{opacity:1}}@keyframes fb-sconce-breathe{0%,100%{opacity:0.5}50%{opacity:0.78}}@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}.fb-bulb-0{animation:fb-bulb 2.2s ease-in-out infinite}.fb-bulb-1{animation:fb-bulb 2.2s ease-in-out 0.4s infinite}.fb-bulb-2{animation:fb-bulb 2.2s ease-in-out 0.8s infinite}.fb-bulb-3{animation:fb-bulb 2.2s ease-in-out 1.2s infinite}.fb-sconce-1{animation:fb-sconce-breathe 7.5s ease-in-out infinite}.fb-sconce-2{animation:fb-sconce-breathe 7.5s ease-in-out 1.6s infinite}.fb-sconce-3{animation:fb-sconce-breathe 7.5s ease-in-out 3.2s infinite}}@media (prefers-reduced-motion:reduce){.fb-screen-glow,.fb-bulb,.fb-sconce{animation:none!important}}'}
         </style>
         <div className={playing === true ? 'fb-backdrop fb-backdrop-playing' : 'fb-backdrop'} aria-hidden="true">
           <div className="fb-curtain fb-curtain-left" />
@@ -1111,6 +1242,7 @@ export default function FlashbackApp() {
           <nav className="fb-nav">
             <a href="/" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/') }}>Library</a>
             <a href="/motivation" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/motivation') }}>Why</a>
+            <a href="/submit" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/submit') }}>Submit</a>
             <a href="/legal" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/legal') }}>Legal</a>
           </nav>
         </header>
@@ -1129,6 +1261,8 @@ export default function FlashbackApp() {
           </span>
           <span className="fb-footer-links">
             <a href="/motivation">Why we’re doing this</a>
+            {' · '}
+            <a href="/submit">Submissions</a>
             {' · '}
             <a href="/legal">Ownership</a>
             {' · '}

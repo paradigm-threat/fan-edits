@@ -47,6 +47,46 @@ Final encodes are kept **outside Git** on NAS/local disk. The bulk helper expect
 
 There is **no environment variable** for the render root today — change `RENDER` at the top of `scripts/ingest-fanedit-renders.py` if your mount differs.
 
+## Web / mobile H.264 renditions (compatibility only)
+
+Archival masters stay **HEVC/Matroska** (full quality). Progressive **H.264 + AAC MP4** rungs are for browsers/devices that cannot demux/decode the master (no max-res MP4 encode):
+
+| File suffix | Role |
+|-------------|------|
+| `*.web-1080p.mp4` | Desktop / wide viewport compatibility (~1080p, CRF 20) |
+| `*.mobile-720p.mp4` | Phones / Save-Data / slow nets (~720p, CRF 23) |
+
+Encode beside the master (idempotent; skips up-to-date outputs):
+
+```bash
+python3 scripts/encode-web-renditions.py 'FanMixes/Boogie Nights (1997) - No Lookout'
+# flags: --force  --dry-run  --which web|mobile|all
+```
+
+Then ingest the MP4s (thin stubs only — same as masters):
+
+```bash
+python3 scripts/ingest-fanedit-renders.py --web-renditions-only
+# or after masters: python3 scripts/ingest-fanedit-renders.py --web-renditions
+```
+
+`generate-index-json.py` always emits CleverScript-safe `mediaWeb` / `mediaMobile` (empty string when missing).
+
+**Player pick:** try archival **master first** (native HTML5, else Relay video WASM demux → WebCodecs). If that fails or WebCodecs rejects (common for HEVC on Linux/Firefox), fall back to `mediaWeb` (1080p MP4) then `mediaMobile` (720p).
+
+**Do not batch-encode every title on one PC.** Sync the repo to the NAS and claim titles — see [docs/WEB_RENDITIONS.md](docs/WEB_RENDITIONS.md).
+
+### Subtitles (WebVTT)
+
+HTML5 `<track>` needs **`.vtt`**, not `.srt`. Convert sidecars:
+
+```bash
+python3 scripts/srt_to_vtt.py
+# or: python3 scripts/srt_to_vtt.py 'FanMixes/…/subs'
+```
+
+Index gen prefers `subs/*.vtt` and auto-converts sibling `.srt` when present. VTT stays **git text** (tiny); do not IPFS-ingest unless policy changes. TheaterPlayer shows a **CC** button to cycle Off → each track.
+
 ## Run bulk ingest
 
 From the repo root, with Kubo up:
@@ -68,6 +108,9 @@ For each matched title the script:
 ```bash
 cd ~/dev/fan-edits
 ~/dev/relay/relay-gateway/scripts/relay-ipfs-ingest 'FanMixes/…/….mkv'
+# after encode:
+~/dev/relay/relay-gateway/scripts/relay-ipfs-ingest 'FanMixes/…/….web-1080p.mp4'
+~/dev/relay/relay-gateway/scripts/relay-ipfs-ingest 'FanMixes/…/….mobile-720p.mp4'
 ```
 
 Useful flags (see `relay-ipfs-ingest --help`): **`--dry-run`**, **`--ingest-staged`**, **`--check-staged`**.

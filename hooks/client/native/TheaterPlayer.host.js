@@ -148,6 +148,208 @@
     return out;
   }
 
+  function prefersDesktopPlayback() {
+    // Wide/HD browser → max rung (web-1080p). Save-Data or narrow → mobile.
+    try {
+      const c = global.navigator && global.navigator.connection;
+      if (c && c.saveData === true) return false;
+    } catch (_) {}
+    try {
+      if (global.matchMedia && !global.matchMedia('(min-width: 901px)').matches) return false;
+    } catch (_) {}
+    return true;
+  }
+
+  function canPlayAvcMp4() {
+    try {
+      const v = global.document.createElement('video');
+      const r = v.canPlayType('video/mp4; codecs="avc1.42E01E"');
+      return r === 'probably' || r === 'maybe';
+    } catch (_) {
+      return true;
+    }
+  }
+
+  function looksMatroskaUrl(url) {
+    const u = String(url || '')
+      .split('?')[0]
+      .toLowerCase();
+    return u.endsWith('.mkv') || u.endsWith('.mka') || u.endsWith('.mks');
+  }
+
+  /** CDN / pinned URL for @clevertree/relay-video-web (same layout as relay-runtime). */
+  function relayVideoWebModuleUrl() {
+    try {
+      if (global.__RELAY_VIDEO_WEB_URL__) return String(global.__RELAY_VIDEO_WEB_URL__);
+    } catch (_) {}
+    try {
+      const pinned =
+        global.__RELAY_WASM_PREFIX__ != null
+          ? String(global.__RELAY_WASM_PREFIX__).replace(/\/?$/, '/')
+          : '/wasm/';
+      return pinned + 'relay_video_wasm_pkg/player.js';
+    } catch (_) {
+      return '/wasm/relay_video_wasm_pkg/player.js';
+    }
+  }
+
+  function relayVideoWasmBinaryUrl() {
+    try {
+      if (global.__RELAY_VIDEO_WASM_URL__) return String(global.__RELAY_VIDEO_WASM_URL__);
+    } catch (_) {}
+    try {
+      const pinned =
+        global.__RELAY_WASM_PREFIX__ != null
+          ? String(global.__RELAY_WASM_PREFIX__).replace(/\/?$/, '/')
+          : '/wasm/';
+      return pinned + 'relay_video_wasm_pkg/relay_video_wasm_bg.wasm';
+    } catch (_) {
+      return '/wasm/relay_video_wasm_pkg/relay_video_wasm_bg.wasm';
+    }
+  }
+
+  /** Build ordered ladder: archival master first, then H.264 MP4 compatibility. */
+  function buildSrcLadder(props, preferredSrc) {
+    const preferred = String(preferredSrc || prop(props, 'src', '') || '');
+    const web = prop(props, 'srcWeb', '') || prop(props, 'data-src-web', '');
+    const mobile = prop(props, 'srcMobile', '') || prop(props, 'data-src-mobile', '');
+    const master = prop(props, 'srcMaster', '') || prop(props, 'data-src-master', '');
+    const avc = canPlayAvcMp4();
+    const desktop = prefersDesktopPlayback();
+    const order = [];
+    function push(kind, url) {
+      const u = String(url || '');
+      if (!u) return;
+      for (let i = 0; i < order.length; i++) {
+        if (order[i].src === u) return;
+      }
+      order.push({ kind: kind, src: u });
+    }
+    // Archival master first; host escalates via WASM or falls through to MP4.
+    push('master', master);
+    if (desktop) {
+      if (avc) {
+        push('web', web);
+        push('mobile', mobile);
+      }
+    } else {
+      if (avc) {
+        push('mobile', mobile);
+        push('web', web);
+      }
+    }
+    if (preferred) {
+      let idx = -1;
+      for (let i = 0; i < order.length; i++) {
+        if (order[i].src === preferred) {
+          idx = i;
+          break;
+        }
+      }
+      if (idx > 0) {
+        const hit = order.splice(idx, 1)[0];
+        order.unshift(hit);
+      } else if (idx < 0) {
+        order.unshift({ kind: 'preferred', src: preferred });
+      }
+    }
+    return order;
+  }
+
+  function parseSubtitlesJson(raw) {
+    const s = String(raw || '').trim();
+    if (!s || s === '[]') return [];
+    try {
+      const list = JSON.parse(s);
+      if (!Array.isArray(list)) return [];
+      const out = [];
+      for (let i = 0; i < list.length; i++) {
+        const t = list[i];
+        if (!t || !t.src) continue;
+        out.push({
+          src: String(t.src),
+          label: String(t.label || 'Subtitles'),
+          lang: String(t.lang || 'en'),
+          isDefault: t.default === true,
+        });
+      }
+      // Default tracks first (CleverScript cannot emit HTML default= attr)
+      out.sort(function (a, b) {
+        return (b.isDefault ? 1 : 0) - (a.isDefault ? 1 : 0);
+      });
+      return out;
+    } catch (_) {
+      return [];
+    }
+  }
+
+  function attachSubtitleTracks(video, tracks) {
+    if (!video || !tracks || !tracks.length) return;
+    // Clear prior tracks
+    try {
+      while (video.firstChild) video.removeChild(video.firstChild);
+    } catch (_) {}
+    for (let i = 0; i < tracks.length; i++) {
+      const t = tracks[i];
+      const el = global.document.createElement('track');
+      el.kind = 'subtitles';
+      el.src = t.src;
+      el.srclang = t.lang || 'en';
+      el.label = t.label || 'Subtitles';
+      if (i === 0 && t.isDefault) {
+        try {
+          el.setAttribute('default', '');
+        } catch (_) {}
+      }
+      video.appendChild(el);
+    }
+    try {
+      const tt = video.textTracks;
+      if (tt && tt.length) {
+        for (let j = 0; j < tt.length; j++) {
+          tt[j].mode = j === 0 && tracks[0] && tracks[0].isDefault ? 'showing' : 'hidden';
+        }
+      }
+    } catch (_) {}
+  }
+
+  function attachCcControl(shell, video, tracks) {
+    if (!shell || !video || !tracks || !tracks.length) return null;
+    const btn = global.document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'fb-btn fb-cc-btn';
+    btn.setAttribute('aria-label', 'Subtitles');
+    let mode = tracks[0] && tracks[0].isDefault ? 0 : -1; // -1 off, else track index
+    function paint() {
+      if (mode < 0) {
+        btn.textContent = 'CC Off';
+        btn.setAttribute('aria-pressed', 'false');
+      } else {
+        const label = tracks[mode] && tracks[mode].label ? tracks[mode].label : 'CC';
+        btn.textContent = 'CC: ' + label;
+        btn.setAttribute('aria-pressed', 'true');
+      }
+      try {
+        const tt = video.textTracks;
+        if (!tt) return;
+        for (let i = 0; i < tt.length; i++) {
+          tt[i].mode = i === mode ? 'showing' : 'hidden';
+        }
+      } catch (_) {}
+    }
+    paint();
+    btn.addEventListener('click', function () {
+      mode += 1;
+      if (mode >= tracks.length) mode = -1;
+      paint();
+    });
+    const row = global.document.createElement('div');
+    row.className = 'fb-cc-row';
+    row.appendChild(btn);
+    shell.appendChild(row);
+    return btn;
+  }
+
   function parseTotalFromHeaders(headers) {
     if (!headers || typeof headers.get !== 'function') return null;
     const cr = headers.get('Content-Range') || '';
@@ -475,17 +677,24 @@
   }
 
   function buildTheaterPlayer(props, invokeHandler, onAfterInvoke) {
-    const src = prop(props, 'src', '');
+    const preferredSrc = prop(props, 'src', '');
+    const srcLadder = buildSrcLadder(props, preferredSrc);
+    let ladderIndex = 0;
+    let src = srcLadder.length ? srcLadder[0].src : preferredSrc;
     const poster = prop(props, 'poster', '');
     const cidProp = prop(props, 'cid', '');
     const seedState = prop(props, 'seedState', 'pending');
     const seedMessage = prop(props, 'seedMessage', 'This file needs to be seeded');
     const seedHint = prop(props, 'seedHint', '');
     const unlocked = prop(props, 'unlocked', 'false') === 'true';
+    const subtitleTracks = parseSubtitlesJson(
+      prop(props, 'subtitlesJson', '') || prop(props, 'data-subtitles-json', ''),
+    );
     let startAt = parseMediaTime(prop(props, 'startAt', ''));
     const fromUrl = seekFromLocation();
     if (Number.isNaN(startAt)) startAt = fromUrl.start;
     const endAt = fromUrl.end;
+    let didPlaySucceed = false;
 
     const root = global.document.createElement('div');
     root.className = 'fb-theater-player';
@@ -580,6 +789,7 @@
     video.controls = true;
     if (src) video.src = src;
     if (poster) video.poster = poster;
+    attachSubtitleTracks(video, subtitleTracks);
 
     const ctx = {
       video: video,
@@ -649,19 +859,114 @@
         }
         applyCommands(ctx, props);
         if (ctx.isReady) {
-          const p = video.play();
-          if (p && typeof p.catch === 'function') p.catch(function () {});
+          if (wasmApi && typeof wasmApi.play === 'function') {
+            try {
+              wasmApi.play();
+            } catch (_) {}
+          } else {
+            const p = video.play();
+            if (p && typeof p.catch === 'function') p.catch(function () {});
+          }
         } else {
           ctx.notePlayWhileSeeding();
         }
       },
     };
 
+    let wasmApi = null;
+    let wasmTriedForUrl = '';
+
+    function destroyWasmPlayer() {
+      if (!wasmApi) return;
+      try {
+        if (typeof wasmApi.destroy === 'function') wasmApi.destroy();
+      } catch (_) {}
+      wasmApi = null;
+      try {
+        video.style.display = '';
+      } catch (_) {}
+    }
+
+    function mountWasmPlayer(mediaUrl, where, sizeNote) {
+      const url = String(mediaUrl || '');
+      destroyWasmPlayer();
+      wasmTriedForUrl = url;
+      ctx.setPlaybackNote('Loading extended video engine…');
+      const modUrl = relayVideoWebModuleUrl();
+      return import(/* webpackIgnore: true */ modUrl)
+        .then(function (mod) {
+          const create = mod.createWasmPlayer || (mod.default && mod.default.createWasmPlayer);
+          if (!create) throw new Error('createWasmPlayer missing');
+          video.style.display = 'none';
+          return create(shell, url, {
+            wasmUrl: relayVideoWasmBinaryUrl(),
+            autoPlay:
+              prop(props, 'playing', 'false') === 'true' ||
+              root.getAttribute('data-play-requested') === '1',
+            onPlay: function () {
+              didPlaySucceed = true;
+              invoke(propHandler(props, 'onPlay'), invokeHandler, onAfterInvoke);
+            },
+            onPause: function () {
+              invoke(propHandler(props, 'onPause'), invokeHandler, onAfterInvoke);
+            },
+            onEnded: function () {
+              invoke(propHandler(props, 'onEnded'), invokeHandler, onAfterInvoke);
+            },
+            onError: function () {
+              invoke(propHandler(props, 'onError'), invokeHandler, onAfterInvoke);
+              destroyWasmPlayer();
+              if (advanceRendition('Full-quality decode failed — switching to compatibility stream…')) {
+                return;
+              }
+              ctx.setPlaybackError('Playback failed.');
+            },
+            onUnderrun: function () {
+              destroyWasmPlayer();
+              advanceRendition('Buffer underrun — switching to 1080p for compatibility…');
+            },
+            onTimeUpdate: function () {},
+          });
+        })
+        .then(function (api) {
+          wasmApi = api;
+          ctx.isReady = true;
+          pending.style.display = 'none';
+          shell.style.display = 'block';
+          root.setAttribute('data-seed-state', 'ready');
+          ctx.setPlaybackNote('Playing full quality via ' + (where || 'mirror') + (sizeNote || ''));
+          ctx.clearPlaybackError();
+          if (ctx.pendingSeek != null && typeof api.seek === 'function') {
+            try {
+              api.seek(ctx.pendingSeek);
+              ctx.didInitialSeek = true;
+            } catch (_) {}
+          }
+          if (
+            prop(props, 'playing', 'false') === 'true' ||
+            root.getAttribute('data-play-requested') === '1'
+          ) {
+            return api.play && api.play();
+          }
+        })
+        .catch(function (err) {
+          destroyWasmPlayer();
+          const code = err && err.code ? err.code : '';
+          const note =
+            code === 'WEBCODECS_UNSUPPORTED' || code === 'SOURCE_TOO_LARGE'
+              ? 'Full quality needs a capable browser — switching to 1080p for compatibility.'
+              : 'Extended engine unavailable — trying compatibility stream…';
+          if (advanceRendition(note)) return;
+          ctx.setPlaybackError(note);
+        });
+    }
+
     video.addEventListener('play', () => invoke(propHandler(props, 'onPlay'), invokeHandler, onAfterInvoke));
     video.addEventListener('pause', () => invoke(propHandler(props, 'onPause'), invokeHandler, onAfterInvoke));
     video.addEventListener('ended', () => invoke(propHandler(props, 'onEnded'), invokeHandler, onAfterInvoke));
     video.addEventListener('waiting', () => ctx.setPlaybackNote('Buffering…'));
     video.addEventListener('playing', () => {
+      didPlaySucceed = true;
       ctx.setPlaybackNote('');
       ctx.clearPlaybackError();
     });
@@ -672,14 +977,37 @@
       invoke(propHandler(props, 'onError'), invokeHandler, onAfterInvoke);
       ctx.isReady = false;
       stopped = false;
-      mirrorIndex += 1;
-      msg.textContent = 'Playback failed on current mirror — trying next…';
+      // Try next mirror first; if mirrors for this path are done, escalate or advance ladder
+      if (mirrorIndex + 1 < mirrors.length) {
+        mirrorIndex += 1;
+        msg.textContent = 'Playback failed on current mirror — trying next…';
+        pending.style.display = 'block';
+        shell.style.display = 'none';
+        startMirrorHunt({ fromPlay: true, resume: true });
+        return;
+      }
+      const cur = srcLadder[ladderIndex];
+      const failUrl = activeMirror && activeMirror.mediaUrl ? activeMirror.mediaUrl : '';
+      if (
+        cur &&
+        cur.kind === 'master' &&
+        looksMatroskaUrl(failUrl) &&
+        wasmTriedForUrl !== failUrl
+      ) {
+        mountWasmPlayer(failUrl, activeMirror && activeMirror.label, '');
+        return;
+      }
+      if (advanceRendition('Playback failed — trying next quality…')) {
+        return;
+      }
+      msg.textContent = 'Playback failed on all qualities and mirrors.';
       pending.style.display = 'block';
       shell.style.display = 'none';
-      startMirrorHunt({ fromPlay: true, resume: true });
+      retryBtn.style.display = 'inline-block';
     });
     applyCommands(ctx, props);
     shell.appendChild(video);
+    attachCcControl(shell, video, subtitleTracks);
 
     unlock.appendChild(pending);
     unlock.appendChild(shell);
@@ -695,7 +1023,54 @@
     let probeLog = [];
     const maxRounds = 2;
 
+    function rebuildMirrorsForSrc(nextSrc, peerFqdns) {
+      src = nextSrc;
+      mirrors = buildMirrorList(logicalPathFromSrc(src), peerFqdns || DEFAULT_PEER_FQDNS);
+      activeMirror = mirrors[0] || null;
+      mirrorIndex = 0;
+      attempt = 0;
+      root.setAttribute('data-src', src || '');
+      const kind =
+        srcLadder[ladderIndex] && srcLadder[ladderIndex].kind
+          ? srcLadder[ladderIndex].kind
+          : 'media';
+      root.setAttribute('data-rendition', kind);
+    }
+
+    function advanceRendition(reason) {
+      if (didPlaySucceed) return false;
+      if (ladderIndex + 1 >= srcLadder.length) return false;
+      ladderIndex += 1;
+      const next = srcLadder[ladderIndex];
+      if (!next || !next.src) return false;
+      const prevKind =
+        srcLadder[ladderIndex - 1] && srcLadder[ladderIndex - 1].kind
+          ? srcLadder[ladderIndex - 1].kind
+          : '';
+      let note =
+        reason ||
+        'Trying ' + (next.kind === 'mobile' ? '720p MP4' : next.kind === 'web' ? '1080p MP4' : 'master') + '…';
+      if (prevKind === 'master' && (next.kind === 'web' || next.kind === 'mobile')) {
+        note =
+          'Full quality needs a capable browser — switching to ' +
+          (next.kind === 'web' ? '1080p' : '720p') +
+          ' for compatibility.';
+        try {
+          ctx.setPlaybackNote(note);
+        } catch (_) {}
+      }
+      liveLog.style.display = 'block';
+      liveLog.textContent = note;
+      msg.textContent = note.split(' http')[0];
+      rebuildMirrorsForSrc(next.src, null);
+      pending.style.display = 'block';
+      shell.style.display = 'none';
+      startMirrorHunt({ fromPlay: true, resume: false });
+      return true;
+    }
+
     function setVideoSource(mediaUrl) {
+      destroyWasmPlayer();
       try {
         const u = new global.URL(mediaUrl, global.location.href);
         if (u.origin !== global.location.origin) {
@@ -706,14 +1081,12 @@
           } catch (_) {}
         }
       } catch (_) {}
+      video.style.display = '';
       video.src = mediaUrl;
     }
 
     function showReady(mirror, size) {
       activeMirror = mirror || activeMirror;
-      if (activeMirror && activeMirror.mediaUrl) {
-        setVideoSource(activeMirror.mediaUrl);
-      }
       pending.style.display = 'none';
       shell.style.display = 'block';
       root.setAttribute('data-seed-state', 'ready');
@@ -726,10 +1099,17 @@
       }
       const where = activeMirror && activeMirror.label ? activeMirror.label : 'mirror';
       const sizeNote = size ? ' · ' + formatBytes(size) : '';
-      ctx.setPlaybackNote('Ready via ' + where + sizeNote);
+      const mediaUrl = activeMirror && activeMirror.mediaUrl ? activeMirror.mediaUrl : '';
       try {
         shell.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       } catch (_) {}
+      // Matroska masters: WASM demux → WebCodecs before HTML5 (native usually cannot).
+      if (mediaUrl && looksMatroskaUrl(mediaUrl)) {
+        mountWasmPlayer(mediaUrl, where, sizeNote);
+        return;
+      }
+      if (mediaUrl) setVideoSource(mediaUrl);
+      ctx.setPlaybackNote('Ready via ' + where + sizeNote);
       applyCommands(ctx, props);
       if (prop(props, 'playing', 'false') === 'true' || root.getAttribute('data-play-requested') === '1') {
         ctx.setPlaybackNote('Starting playback via ' + where + sizeNote + '…');
@@ -819,6 +1199,7 @@
       function finish() {
         if (found && found.length) {
           mirrors = buildMirrorList(logicalPathFromSrc(src), found);
+          activeMirror = mirrors[0] || activeMirror;
         }
         done();
       }
@@ -976,6 +1357,9 @@
       if (mirrorIndex >= mirrors.length) {
         mirrorIndex = 0;
         if (attempt >= maxRounds * mirrors.length) {
+          if (advanceRendition('All mirrors failed for this file — trying next quality…')) {
+            return;
+          }
           showStatus({
             ok: false,
             retryable: false,
