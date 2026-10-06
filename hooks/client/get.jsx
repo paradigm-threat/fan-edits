@@ -613,10 +613,56 @@ function resolveProjectCid(project) {
   return resolveCidForLogical(str(project.path) + '/' + master)
 }
 
+function jsonEscapeStr(s) {
+  const raw = str(s)
+  let out = ''
+  for (let i = 0; i < raw.length; i++) {
+    const c = raw.charAt(i)
+    if (c === '\\') {
+      out = out + '\\\\'
+    } else if (c === '"') {
+      out = out + '\\"'
+    } else if (c === '\n') {
+      out = out + '\\n'
+    } else if (c === '\r') {
+      out = out + '\\r'
+    } else if (c === '\t') {
+      out = out + '\\t'
+    } else {
+      out = out + c
+    }
+  }
+  return out
+}
+
+/** CleverScript-safe JSON for subtitle tracks (no JSON.stringify). */
 function subtitlesJson(project) {
   try {
     const tracks = subtitleTracks(project)
-    return JSON.stringify(tracks)
+    if (!tracks || tracks.length === 0) {
+      return '[]'
+    }
+    let body = ''
+    for (let i = 0; i < tracks.length; i++) {
+      const t = tracks[i]
+      if (i > 0) {
+        body = body + ','
+      }
+      let piece =
+        '{"src":"' +
+        jsonEscapeStr(t.src) +
+        '","label":"' +
+        jsonEscapeStr(t.label || 'Subtitles') +
+        '","lang":"' +
+        jsonEscapeStr(t.lang || 'en') +
+        '"'
+      if (t.default === true) {
+        piece = piece + ',"default":true'
+      }
+      piece = piece + '}'
+      body = body + piece
+    }
+    return '[' + body + ']'
   } catch (e) {
     return '[]'
   }
