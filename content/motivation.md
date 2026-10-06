@@ -44,10 +44,32 @@ Projects stay in **Kdenlive + melt** so the library remains editable with open-s
 
 ## Why MP4 (and external subtitles), not MKV
 
-We publish finished cuts as **HEVC MP4** with **sidecar subtitle files**, not as Matroska (`.mkv`). No separate H.264 ladder for the site — modern browsers handle HEVC; download + VLC covers the rest.
+We publish finished cuts as **HEVC MP4** with **sidecar subtitle files**, not as Matroska (`.mkv`).
 
-Browsers never made full Matroska a first-class `<video>` format. The web settled on **ISO BMFF / MP4** for progressive and adaptive streaming, and on **WebM** as a Matroska-derived profile for royalty-sensitive codecs — not “open the `.mkv` and play.” Platform pipelines (Safari/Apple, Chrome, Firefox) and hardware decoders follow that stack. The name *Matroska* nods at Russian nesting dolls (*matryoshka*); the practical barrier is standardization and product incentives, not a formal ban on the word.
+### Navigating the standards maze
 
-Sidecar subs (default + enhanced when we have them) travel next to the file so the site player and offline apps (VLC, etc.) can find them without relying on a muxed Matroska track browsers ignore.
+Getting from “I own the film and I made a better cut” to “a friend can press Play in a browser” is not a single button. It is a maze of containers, codecs, licenses, and `canPlayType` answers that differ by OS and hardware.
 
-The allowed part is the point. The rest is craft.
+You would expect that maze to have thinned out by now. For a small library that just wants to host owned edits over IPFS, the path still feels deliberately hard:
+
+- **Matroska (`.mkv`)** is what editors actually finish in. Browsers never made full Matroska a first-class `<video>` format. The web settled on **ISO BMFF / MP4** for progressive and Range streaming, and on **WebM** as a Matroska-derived profile for royalty-sensitive codecs — not “open the `.mkv` and play.”
+- **HEVC / H.265** is the efficient codec many of our finals already use. Safari often plays it. Chrome and Firefox only sometimes do — often only when the OS exposes a hardware decoder. On many Linux desktops, Chrome reports **no HEVC at all**, so in-page play fails even when the file is fine. Download + VLC still works because VLC brings its own decoders.
+- **H.264** is the universal web fallback, but encoding a second full ladder is days of CPU and a second archive of the same cut. Big platforms absorb that cost as a matter of course.
+- **VP9 / AV1** power most of YouTube’s browser delivery — adaptive ladders, royalty-friendlier for the open web — built for fleets that re-encode everything continuously. That is not a weekend workflow for a personal catalog of finished fan edits.
+
+So the maze is not “video is hard.” It is that **easy universal in-browser play** was standardized around stacks and budgets that suit the largest distributors. Independents who already own the discs and just want to share a cleaner cut keep hitting container walls, codec walls, and silent empty strings from `canPlayType`.
+
+It can feel like the only way the incumbents could keep the open web from competing with their players: not a ban on the word *Matroska* or *HEVC*, but a thicket of defaults where “ship one file and Play works everywhere” never quite arrives.
+
+We navigated it anyway, toward a start:
+
+1. Remux the finished edit into a **single fragmented HEVC MP4** (same picture, streamable with HTTP `Range`).
+2. Drop published final MKVs from the play path.
+3. Keep **external** default (and enhanced) subtitles beside the file.
+4. Theater plays where the browser reports HEVC; otherwise say so clearly and point at **Download** for VLC — no endless Buffering.
+
+The name *Matroska* nods at Russian nesting dolls (*matryoshka*). The practical barrier is standardization and product incentives, not a formal ban on the word.
+
+Sidecar subs travel next to the file so the site player and offline apps can find them without relying on a muxed Matroska track browsers ignore.
+
+The allowed part is the point. The rest is craft — and refusing to wait for the maze to become optional.
