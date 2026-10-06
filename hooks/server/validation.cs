@@ -2,9 +2,18 @@ export default function run(ctx) {
   return validateChangedFiles(ctx)
 }
 
+var COMMENTS_PREFIX = '.relay/comments/by-path/'
+var COMMENTS_MAX_BYTES = 32768
+
 export function validateChangedFiles(ctx) {
   var files = ctx.files
   if (files === null) return true
+  var branch = ''
+  try {
+    if (ctx.branch !== null && ctx.branch !== undefined) {
+      branch = '' + ctx.branch
+    }
+  } catch (e) {}
   var keys = Object.keys(files)
   for (var i = 0; i < keys.length; i++) {
     var p = keys[i]
@@ -23,6 +32,29 @@ export function validateChangedFiles(ctx) {
 
     if (endsWith(p, '.debug.json')) {
       return { ok: false, error: 'debug artifact rejected: ' + p }
+    }
+
+    if (startsWith(p, COMMENTS_PREFIX)) {
+      if (branch !== 'comments') {
+        return {
+          ok: false,
+          error: 'board posts (.relay/comments/) only allowed on branch comments, not ' + branch,
+        }
+      }
+      if (!endsWith(p, '.md') && !endsWith(p, '.MD')) {
+        return { ok: false, error: 'board posts must be markdown: ' + p }
+      }
+      var body = files[p]
+      var size = 0
+      if (typeof body === 'string') {
+        size = body.length
+      } else if (body !== null && body !== undefined && typeof body.byteLength === 'number') {
+        size = body.byteLength
+      }
+      if (size > COMMENTS_MAX_BYTES) {
+        return { ok: false, error: 'board post too large (max ' + COMMENTS_MAX_BYTES + ' bytes)' }
+      }
+      continue
     }
 
     if (!isAllowedPath(p)) {
