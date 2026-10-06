@@ -152,6 +152,7 @@
       seen[base] = true;
       out.push({ label: label, origin: base, mediaUrl: base + '/' + enc });
     }
+    // Same-origin first: fleet subdomain mirrors often lack CORS from the park host.
     try {
       add(global.location.hostname || 'this site', global.location.origin);
     } catch (_) {}
@@ -160,6 +161,28 @@
       add(peerShort(fqdn), 'https://' + DEFAULT_REPO + '.' + fqdn);
     }
     return out;
+  }
+
+  /** Keep page origin at index 0 after peer-list rebuilds. */
+  function prioritizeSameOrigin(list) {
+    const arr = list && list.length ? list.slice() : [];
+    let origin = '';
+    try {
+      origin = String(global.location.origin || '').replace(/\/$/, '');
+    } catch (_) {}
+    if (!origin || arr.length < 2) return arr;
+    let idx = -1;
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] && arr[i].origin === origin) {
+        idx = i;
+        break;
+      }
+    }
+    if (idx > 0) {
+      const m = arr.splice(idx, 1)[0];
+      arr.unshift(m);
+    }
+    return arr;
   }
 
   function prefersDesktopPlayback() {
@@ -1076,7 +1099,7 @@
         return 'Full quality needs hardware decode this browser does not provide. Switching to 1080p for compatibility.';
       }
       if (code === 'SOURCE_TOO_LARGE') {
-        return 'Full-quality playback is too large for this browser path. Switching to 1080p for compatibility.';
+        return 'This archival file is too large for in-browser demux right now. Download the MKV below, or wait for a 1080p web rendition.';
       }
       if (code === 'FETCH_FAILED') {
         return 'The video file could not be downloaded from this mirror. Trying another source.';
@@ -1513,7 +1536,10 @@
       let found = null;
       function finish() {
         if (found && found.length) {
-          mirrors = buildMirrorList(logicalPathFromSrc(src), found);
+          mirrors = prioritizeSameOrigin(buildMirrorList(logicalPathFromSrc(src), found));
+          activeMirror = mirrors[0] || activeMirror;
+        } else {
+          mirrors = prioritizeSameOrigin(mirrors);
           activeMirror = mirrors[0] || activeMirror;
         }
         done();
@@ -1542,11 +1568,76 @@
       }
     }
 
-    function probeOneMirror(mirror) {
+    function emptyProbeState(mirror) {
+      return {
+        ok: false,
+        retryable: true,
+        error: null,
+        message: '',
+        progressPct: 0,
+        seedState: 'unknown',
+        providers: null,
+        bytesTotal: null,
+        bytesReceived: null,
+        retryAfterSecs: 3,
+        cid: cidProp,
+        mirrorLabel: mirror.label,
+        contentType: '',
+      };
+    }
+
+    function applyRangeResult(st, r2) {
+      const size = parseTotalFromHeaders(r2.headers);
+      const ct = (r2.headers.get('Content-Type') || '').toLowerCase();
+      if (size != null) st.bytesTotal = size;
+      st.contentType = ct;
+      if (size != null && size < STUB_BYTES_MAX) {
+        st.ok = false;
+        st.stub = true;
+        st.retryable = false;
+        st.seedState = 'stub';
+        st.error = 'ipfs-stub';
+        st.message = 'Symlink stub (' + formatBytes(size) + ')';
+        return st;
+      }
+      if (ct.indexOf('symlink') >= 0) {
+        st.ok = false;
+        st.stub = true;
+        st.retryable = false;
+        st.seedState = 'stub';
+        st.error = 'ipfs-stub';
+        st.message = 'Symlink stub';
+        return st;
+      }
+      if (r2.ok || r2.status === 206) {
+        // Range success is authoritative: status endpoints often 504 under load while bytes serve.
+        st.ok = true;
+        st.seedState = 'ready';
+        st.retryable = true;
+        st.error = null;
+        st.progressPct = 100;
+        st.message = 'Range HTTP ' + r2.status;
+        return st;
+      }
+      if (r2.status >= 500 || r2.status === 425 || r2.status === 503 || r2.status === 504) {
+        st.ok = false;
+        st.retryable = true;
+        st.error = 'http-' + r2.status;
+        st.message = 'HTTP ' + r2.status;
+        return st;
+      }
+      st.ok = false;
+      st.retryable = r2.status !== 410 && r2.status !== 404;
+      st.error = 'http-' + r2.status;
+      st.message = 'HTTP ' + r2.status;
+      return st;
+    }
+
+    function probeStatusOnly(mirror, st) {
       const statusUrl =
         mirror.mediaUrl + (mirror.mediaUrl.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1';
       setPhase(mirror.label + ': requesting relayAssetStatus…');
-      return fetchWithTimeout(statusUrl, { credentials: 'omit', cache: 'no-store' }, 6000)
+      return fetchWithTimeout(statusUrl, { credentials: 'omit', cache: 'no-store' }, 5000)
         .then(function (r) {
           if (!r) {
             throw Object.assign(new Error('No status'), { code: 'network' });
@@ -1557,112 +1648,70 @@
           });
         })
         .then(function (j) {
-          const st = parseStatusJson(j) || {
-            ok: false,
-            retryable: true,
-            error: 'http',
-            message: 'No status JSON',
-            progressPct: 0,
-            seedState: 'unknown',
-            providers: null,
-            bytesTotal: null,
-            bytesReceived: null,
-            retryAfterSecs: 3,
-            cid: cidProp,
-          };
-          st.mirrorLabel = mirror.label;
-          showStatus(st);
-          setPhase(mirror.label + ': Range probe bytes=0-0…');
-          return fetchWithTimeout(
-            mirror.mediaUrl,
-            {
-              method: 'GET',
-              headers: { Range: 'bytes=0-0' },
-              credentials: 'omit',
-              cache: 'no-store',
-            },
-            6000,
-          )
-            .then(function (r2) {
-              const size = parseTotalFromHeaders(r2.headers);
-              const ct = (r2.headers.get('Content-Type') || '').toLowerCase();
-              if (size != null) st.bytesTotal = size;
-              st.contentType = ct;
-              if (size != null && size < STUB_BYTES_MAX) {
-                st.ok = false;
-                st.stub = true;
-                st.retryable = false;
-                st.seedState = 'stub';
-                st.error = 'ipfs-stub';
-                st.message = 'Symlink stub (' + formatBytes(size) + ')';
-              } else if (ct.indexOf('symlink') >= 0) {
-                st.ok = false;
-                st.stub = true;
-                st.retryable = false;
-                st.seedState = 'stub';
-                st.error = 'ipfs-stub';
-                st.message = 'Symlink stub';
-              } else if (r2.ok || r2.status === 206) {
-                if (st.ok || st.seedState === 'cached' || st.seedState === 'ready') {
-                  st.ok = true;
-                  st.seedState = 'ready';
-                } else {
-                  st.message =
-                    (st.message || 'status not ready') + ' · Range HTTP ' + r2.status;
-                }
-              } else if (r2.status >= 500 || r2.status === 425 || r2.status === 503 || r2.status === 504) {
-                st.ok = false;
-                st.retryable = true;
-                st.error = 'http-' + r2.status;
-                st.message = 'HTTP ' + r2.status;
-              } else if (!r2.ok) {
-                st.ok = false;
-                st.retryable = r2.status !== 410 && r2.status !== 404;
-                st.error = 'http-' + r2.status;
-                st.message = 'HTTP ' + r2.status;
-              }
-              return { mirror: mirror, st: st };
-            })
-            .catch(function (err) {
-              const code = err && err.code ? err.code : 'range-fail';
-              // Status may already say cached while a short Range probe times out under load.
-              // Prefer play over looping the seed spinner forever.
-              if (st.seedState === 'cached' || st.seedState === 'ready' || st.ok) {
-                st.ok = true;
-                st.seedState = 'ready';
-                st.retryable = true;
-                st.error = null;
-                st.message =
-                  (code === 'timeout' ? 'Range probe timed out' : 'Range probe failed') +
-                  ' — trying play from status';
-              } else {
-                st.ok = false;
-                st.retryable = true;
-                st.error = code;
-                st.message = code === 'timeout' ? 'Range probe timed out' : 'Range probe failed';
-              }
-              return { mirror: mirror, st: st };
-            });
+          const parsed = parseStatusJson(j);
+          if (parsed) {
+            parsed.mirrorLabel = mirror.label;
+            if (st.bytesTotal != null && parsed.bytesTotal == null) {
+              parsed.bytesTotal = st.bytesTotal;
+            }
+            return parsed;
+          }
+          st.message = st.message || 'No status JSON';
+          return st;
         })
         .catch(function (err) {
           const code = err && err.code ? err.code : 'network';
-          return {
-            mirror: mirror,
-            st: {
-              ok: false,
-              retryable: true,
-              error: code,
-              message: code === 'timeout' ? 'Status request timed out' : 'Unreachable',
-              progressPct: 0,
-              seedState: 'unknown',
-              providers: null,
-              bytesTotal: null,
-              bytesReceived: null,
-              retryAfterSecs: 2,
-              cid: cidProp,
-              mirrorLabel: mirror.label,
-            },
-          };
+          if (!st.message) {
+            st.error = code;
+            st.message = code === 'timeout' ? 'Status request timed out' : 'Unreachable';
+          }
+          return st;
+        });
+    }
+
+    // Range-first: relayAssetStatus often 504s while the same URL serves Range 206 quickly.
+    function probeOneMirror(mirror) {
+      const st = emptyProbeState(mirror);
+      setPhase(mirror.label + ': Range probe bytes=0-0…');
+      return fetchWithTimeout(
+        mirror.mediaUrl,
+        {
+          method: 'GET',
+          headers: { Range: 'bytes=0-0' },
+          credentials: 'omit',
+          cache: 'no-store',
+        },
+        8000,
+      )
+        .then(function (r2) {
+          applyRangeResult(st, r2);
+          showStatus(st);
+          if (st.ok || st.stub) {
+            return { mirror: mirror, st: st };
+          }
+          return probeStatusOnly(mirror, st).then(function (st2) {
+            showStatus(st2);
+            return { mirror: mirror, st: st2 };
+          });
+        })
+        .catch(function (err) {
+          const code = err && err.code ? err.code : 'range-fail';
+          st.error = code;
+          st.message = code === 'timeout' ? 'Range probe timed out' : 'Range probe failed';
+          return probeStatusOnly(mirror, st).then(function (st2) {
+            // Status may say cached while Range timed out — try play anyway.
+            if (st2.seedState === 'cached' || st2.seedState === 'ready' || st2.ok) {
+              st2.ok = true;
+              st2.seedState = 'ready';
+              st2.retryable = true;
+              st2.error = null;
+              st2.message =
+                (code === 'timeout' ? 'Range probe timed out' : 'Range probe failed') +
+                ' — trying play from status';
+            }
+            showStatus(st2);
+            return { mirror: mirror, st: st2 };
+          });
         });
     }
 
