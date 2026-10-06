@@ -108,15 +108,15 @@ function mediaSrcFor(project, basename) {
  */
 function prefersDesktopPlayback() {
   try {
-    if (typeof navigator !== 'undefined' && navigator.connection) {
-      if (navigator.connection.saveData === true) {
-        return false
-      }
+    const nav = globalThis.navigator
+    if (nav && nav.connection && nav.connection.saveData === true) {
+      return false
     }
   } catch (e) {}
   try {
-    if (typeof matchMedia === 'function') {
-      if (!matchMedia('(min-width: 901px)').matches) {
+    const mm = globalThis.matchMedia
+    if (typeof mm === 'function') {
+      if (!mm('(min-width: 901px)').matches) {
         return false
       }
     }
@@ -126,10 +126,11 @@ function prefersDesktopPlayback() {
 
 function canPlayAvcMp4() {
   try {
-    if (typeof document === 'undefined') {
+    const doc = globalThis.document
+    if (!doc || typeof doc.createElement !== 'function') {
       return true
     }
-    const v = document.createElement('video')
+    const v = doc.createElement('video')
     const r = v.canPlayType('video/mp4; codecs="avc1.42E01E"')
     return r === 'probably' || r === 'maybe'
   } catch (e) {
