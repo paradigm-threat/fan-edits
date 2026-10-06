@@ -48,6 +48,14 @@ test('web host supports Android browser via intent VIEW', () => {
   assert.match(host, /pagehide/)
 })
 
+test('web host re-checks ownership from html movie-ack (not frozen stub attr)', () => {
+  assert.match(host, /function ownershipUnlocked/)
+  assert.match(host, /data-fb-movie-ack/)
+  assert.match(host, /data-fb-welcome-ack/)
+  assert.match(host, /refreshUnlocked/)
+  assert.match(host, /MutationObserver/)
+})
+
 test('registry loads ExternalPlay.host.js', () => {
   assert.match(registry, /ExternalPlay\.host\.js/)
   const idx = registry.indexOf('ExternalPlay.host.js')

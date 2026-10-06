@@ -133,9 +133,28 @@
     }
   }
 
-  function buildExternalPlay(props) {
+  /** Live unlock: stub attrs can lag Affirmation; html data-fb-* is authoritative. */
+  function ownershipUnlocked(hostEl, propsUnlocked) {
+    if (propsUnlocked === true) return true;
+    try {
+      if (hostEl && hostEl.getAttribute && hostEl.getAttribute('data-unlocked') === 'true') {
+        return true;
+      }
+    } catch (_) {}
+    try {
+      const doc = global.document && global.document.documentElement;
+      if (!doc) return false;
+      const movieAck = doc.getAttribute('data-fb-movie-ack');
+      const welcome = doc.getAttribute('data-fb-welcome-ack');
+      return !!(movieAck && movieAck.length > 0 && welcome === '1');
+    } catch (_) {
+      return false;
+    }
+  }
+
+  function buildExternalPlay(props, hostEl) {
     const streamUrl = absoluteHttps(prop(props, 'streamUrl', ''));
-    const unlocked = prop(props, 'unlocked', 'false') === 'true';
+    let unlocked = ownershipUnlocked(hostEl, prop(props, 'unlocked', 'false') === 'true');
     const setupHref = prop(props, 'setupHref', '/setup') || '/setup';
     const android = isAndroidBrowser();
     const openMode = android ? 'android-intent' : 'vlc-protocol';
@@ -145,6 +164,7 @@
     root.setAttribute('data-fb-external-play', '1');
     root.setAttribute('data-playback-engine', 'external');
     root.setAttribute('data-fb-open-mode', openMode);
+    root.setAttribute('data-fb-unlocked', unlocked ? 'true' : 'false');
 
     const heading = global.document.createElement('p');
     heading.className = 'fb-theater-downloads-label';
@@ -233,9 +253,21 @@
       'fb-btn fb-btn-primary fb-btn-external-play' +
       (android ? ' fb-theater-open-intent' : ' fb-theater-open-vlc');
     openBtn.textContent = android ? 'Open in external player' : 'Open in VLC';
+    function refreshUnlocked() {
+      unlocked = ownershipUnlocked(hostEl, false);
+      try {
+        root.setAttribute('data-fb-unlocked', unlocked ? 'true' : 'false');
+        if (unlocked && hostEl && hostEl.setAttribute) {
+          hostEl.setAttribute('data-unlocked', 'true');
+        }
+      } catch (_) {}
+      return unlocked;
+    }
+
     openBtn.addEventListener('click', function () {
       clearFailTimer();
       leftPage = false;
+      refreshUnlocked();
       if (!streamUrl) {
         setStatus('No stream URL yet.');
         return;
@@ -358,6 +390,28 @@
       : 'Browsers cannot play Matroska + HEVC in-page yet. A local vlc:// handler (Setup) opens the HTTPS stream in VLC.';
     root.appendChild(note);
 
+    // Affirmation sets html data-fb-* after first build — keep unlocked in sync.
+    try {
+      if (global.MutationObserver) {
+        const sync = function () {
+          refreshUnlocked();
+        };
+        if (hostEl) {
+          new global.MutationObserver(sync).observe(hostEl, {
+            attributes: true,
+            attributeFilter: ['data-unlocked'],
+          });
+        }
+        if (global.document && global.document.documentElement) {
+          new global.MutationObserver(sync).observe(global.document.documentElement, {
+            attributes: true,
+            attributeFilter: ['data-fb-movie-ack', 'data-fb-welcome-ack'],
+          });
+        }
+      }
+    } catch (_) {}
+    refreshUnlocked();
+
     return root;
   }
 
@@ -385,7 +439,7 @@
         const host = nodes[i];
         if (!needsUpgrade(host)) continue;
         host.setAttribute('data-fb-built', '1');
-        const built = buildExternalPlay(attrsToProps(host));
+        const built = buildExternalPlay(attrsToProps(host), host);
         host.replaceChildren(built);
       }
     } catch (_) {}
@@ -393,7 +447,9 @@
 
   function register() {
     if (typeof global.__relayRegisterParkNative === 'function') {
-      global.__relayRegisterParkNative('fb-external-play', buildExternalPlay);
+      global.__relayRegisterParkNative('fb-external-play', function (props) {
+        return buildExternalPlay(props, null);
+      });
     }
     try {
       if (global.customElements && !global.customElements.get('fb-external-play')) {
@@ -403,7 +459,7 @@
             connectedCallback() {
               if (this._fbBuilt) return;
               this._fbBuilt = true;
-              const built = buildExternalPlay(attrsToProps(this));
+              const built = buildExternalPlay(attrsToProps(this), this);
               this.replaceChildren(built);
             }
           },
