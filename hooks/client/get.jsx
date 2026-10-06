@@ -571,7 +571,7 @@ function resolveProjectCid(project) {
   }
   const playSrc = pickPlayableSrc(project)
   if (playSrc.length > 0) {
-    const logical = playSrc.charAt(0) === '/' ? playSrc.substring(1) : playSrc
+    const logical = playSrc.charAt(0) === '/' ? playSrc.slice(1) : playSrc
     const cid = resolveCidForLogical(logical)
     if (cid.length > 0) {
       return cid
