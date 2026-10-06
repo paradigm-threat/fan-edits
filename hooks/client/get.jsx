@@ -878,10 +878,12 @@ function projectSlug(p) {
   return ''
 }
 
-/** Catalog items JSON for park-native NowShowing (lcd + carousel). Only status=showing. */
-function nowShowingItemsJson(projects) {
+/** Catalog items for park-native NowShowing (lcd + carousel).
+ * Prefer index.nowShowing slug order; fall back to status=showing. */
+function nowShowingItemsJson(projects, nowShowingSlugs) {
   let out = []
   let list = []
+  let slugs = []
   try {
     if (projects) {
       list = projects
@@ -889,28 +891,63 @@ function nowShowingItemsJson(projects) {
   } catch (e) {
     list = []
   }
-  for (let i = 0; i < list.length; i++) {
-    let st = ''
-    try {
-      if (list[i] && list[i].status) {
-        st = '' + list[i].status
-      }
-    } catch (eSt) {}
-    if (st !== 'showing') {
-      continue
+  try {
+    if (nowShowingSlugs) {
+      slugs = nowShowingSlugs
     }
-    let t = projectTitle(list[i])
-    let s = projectSlug(list[i])
+  } catch (eSlugs) {
+    slugs = []
+  }
+
+  function posterFor(p) {
+    let poster = ''
+    try {
+      if (p && p.poster) {
+        poster = '/' + p.path + '/' + p.poster
+      } else if (p && p.image) {
+        poster = '/' + p.path + '/' + p.image
+      }
+    } catch (e2) {}
+    return poster
+  }
+
+  function pushItem(p) {
+    let t = projectTitle(p)
+    let s = projectSlug(p)
     if (t.length > 0 && s.length > 0) {
-      let poster = ''
+      out = out.concat([{ title: t, href: '/' + s, poster: posterFor(p) }])
+    }
+  }
+
+  if (slugs && slugs.length > 0) {
+    for (let i = 0; i < slugs.length; i++) {
+      let want = ''
       try {
-        if (list[i] && list[i].poster) {
-          poster = '/' + list[i].path + '/' + list[i].poster
-        } else if (list[i] && list[i].image) {
-          poster = '/' + list[i].path + '/' + list[i].image
+        want = '' + slugs[i]
+      } catch (eWant) {
+        want = ''
+      }
+      if (want.length === 0) {
+        continue
+      }
+      for (let j = 0; j < list.length; j++) {
+        if (projectSlug(list[j]) === want) {
+          pushItem(list[j])
+          break
         }
-      } catch (e2) {}
-      out = out.concat([{ title: t, href: '/' + s, poster: poster }])
+      }
+    }
+  } else {
+    for (let i = 0; i < list.length; i++) {
+      let st = ''
+      try {
+        if (list[i] && list[i].status) {
+          st = '' + list[i].status
+        }
+      } catch (eSt) {}
+      if (st === 'showing') {
+        pushItem(list[i])
+      }
     }
   }
   try {
@@ -929,6 +966,7 @@ export default function FlashbackApp() {
   }
 
   let projects = []
+  let nowShowingSlugs = []
   try {
     const res = fetch('/index.json')
     if (res && res.ok === true && res.text) {
@@ -936,9 +974,17 @@ export default function FlashbackApp() {
       if (data && data.projects) {
         projects = data.projects
       }
+      try {
+        if (data && data.nowShowing) {
+          nowShowingSlugs = data.nowShowing
+        }
+      } catch (eNs) {
+        nowShowingSlugs = []
+      }
     }
   } catch (e) {
     projects = []
+    nowShowingSlugs = []
   }
 
   let homeMd = ''
@@ -1306,7 +1352,7 @@ export default function FlashbackApp() {
   } else {
     main = (
       <div className="fb-home">
-        <NowShowing variant="carousel" itemsJson={nowShowingItemsJson(projects)} ariaLabel="Now showing" />
+        <NowShowing variant="carousel" itemsJson={nowShowingItemsJson(projects, nowShowingSlugs)} ariaLabel="Now showing" />
         <div className="fb-home-lead">
           <div className="fb-home-intro fb-prose">
             <MarkdownRenderer content={homeMd || '# Welcome'} />
@@ -1397,7 +1443,7 @@ export default function FlashbackApp() {
             <a href="/legal" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/legal') }}>Legal</a>
           </nav>
         </header>
-        <NowShowing variant="lcd" itemsJson={nowShowingItemsJson(projects)} ariaLabel="Now showing titles" />
+        <NowShowing variant="lcd" itemsJson={nowShowingItemsJson(projects, nowShowingSlugs)} ariaLabel="Now showing titles" />
         <main className="fb-main">{main}</main>
         <footer className="fb-footer">
           <span className="fb-footer-brand">

@@ -346,19 +346,35 @@ def status_for(folder: Path, media: str | None, readme: Path) -> str:
     return "wip"
 
 
-# Halloween / rotation: only these slugs appear in Now Showing (external-player stream).
-NOW_SHOWING_SLUGS = frozenset(
-    {
-        "the-mummy-1999-debugged",
-        "the-mummy-returns-2001-debugged",
-        "van-helsing-deanna-d",
-    }
-)
+# Edit now-showing.json to change the marquee / carousel rotation.
+# generate-index-json maps those slugs → status=showing and copies the list into index.json.
+NOW_SHOWING_FILE = ROOT / "now-showing.json"
 
 
-def publish_status(slug: str, raw: str) -> str:
+def load_now_showing_slugs() -> list[str]:
+    """Ordered slug list from now-showing.json (single source of truth)."""
+    if not NOW_SHOWING_FILE.is_file():
+        return []
+    try:
+        data = json.loads(NOW_SHOWING_FILE.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    if not isinstance(data, list):
+        return []
+    out: list[str] = []
+    seen: set[str] = set()
+    for item in data:
+        slug = str(item or "").strip()
+        if not slug or slug in seen:
+            continue
+        seen.add(slug)
+        out.append(slug)
+    return out
+
+
+def publish_status(slug: str, raw: str, now_showing: set[str]) -> str:
     """Map seed readiness to showing | coming_soon | wip | needs-seed."""
-    if slug in NOW_SHOWING_SLUGS and raw in ("ready", "showing"):
+    if slug in now_showing and raw in ("ready", "showing"):
         return "showing"
     if raw == "ready":
         return "coming_soon"
@@ -367,6 +383,8 @@ def publish_status(slug: str, raw: str) -> str:
 
 def main() -> None:
     manifest_paths = load_manifest_paths()
+    now_showing = load_now_showing_slugs()
+    now_showing_set = set(now_showing)
     projects = []
     for rel in sorted(git_readmes()):
         path = Path(rel)
@@ -386,7 +404,7 @@ def main() -> None:
         if not poster:
             poster = media_root_poster(slug)
         subs = find_subtitles(folder, folder_rel)
-        status = publish_status(slug, status_for(folder, media, ROOT / rel))
+        status = publish_status(slug, status_for(folder, media, ROOT / rel), now_showing_set)
         # CleverScript SSR cannot reliably walk nested object arrays; ship a ready JSON string.
         tracks_for_player = []
         for t in subs:
@@ -424,9 +442,12 @@ def main() -> None:
             entry["reel"] = reel
         projects.append(entry)
 
-    doc = {"projects": projects}
+    # Keep only slugs that still exist in the catalog (typos / retired titles drop out).
+    known = {p["slug"] for p in projects}
+    now_showing_live = [s for s in now_showing if s in known]
+    doc = {"nowShowing": now_showing_live, "projects": projects}
     OUT.write_text(json.dumps(doc, indent=2) + "\n", encoding="utf-8")
-    print(f"wrote {len(projects)} projects to {OUT}")
+    print(f"wrote {len(projects)} projects ({len(now_showing_live)} now showing) to {OUT}")
 
 
 if __name__ == "__main__":
