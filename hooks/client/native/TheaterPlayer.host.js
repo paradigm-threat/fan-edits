@@ -889,6 +889,37 @@
       } catch (_) {}
     }
 
+    function spokenPlaybackError(err) {
+      if (err && typeof err.userMessage === 'string' && err.userMessage) return err.userMessage;
+      if (err && typeof modSpokenMessage === 'function') {
+        try {
+          return modSpokenMessage(err);
+        } catch (_) {}
+      }
+      const code = err && err.code ? String(err.code) : '';
+      if (code === 'WEBCODECS_UNSUPPORTED') {
+        return 'Full quality needs hardware decode this browser does not provide. Switching to 1080p for compatibility.';
+      }
+      if (code === 'SOURCE_TOO_LARGE') {
+        return 'Full-quality playback is too large for this browser path. Switching to 1080p for compatibility.';
+      }
+      if (code === 'FETCH_FAILED') {
+        return 'The video file could not be downloaded from this mirror. Trying another source.';
+      }
+      if (code === 'WASM_LOAD_FAILED' || code === 'ENGINE_MISSING') {
+        return 'This browser could not load the extended video engine. Switching to a compatibility stream.';
+      }
+      if (code === 'DEMUX_FAILED') {
+        return 'This file’s container could not be read. Switching to a compatibility stream.';
+      }
+      if (code === 'DECODE_FAILED' || code === 'UNDERRUN') {
+        return 'Video decode could not keep up. Switching to a compatibility stream.';
+      }
+      return 'Full quality is unavailable here — switching to a compatibility stream.';
+    }
+
+    let modSpokenMessage = null;
+
     function mountWasmPlayer(mediaUrl, where, sizeNote) {
       const url = String(mediaUrl || '');
       destroyWasmPlayer();
@@ -897,14 +928,24 @@
       const modUrl = relayVideoWebModuleUrl();
       return import(/* webpackIgnore: true */ modUrl)
         .then(function (mod) {
+          if (typeof mod.spokenMessageForError === 'function') {
+            modSpokenMessage = mod.spokenMessageForError;
+          }
           const create = mod.createWasmPlayer || (mod.default && mod.default.createWasmPlayer);
-          if (!create) throw new Error('createWasmPlayer missing');
+          if (!create) {
+            const err = new Error('createWasmPlayer missing');
+            err.code = 'ENGINE_MISSING';
+            throw err;
+          }
           video.style.display = 'none';
           return create(shell, url, {
             wasmUrl: relayVideoWasmBinaryUrl(),
             autoPlay:
               prop(props, 'playing', 'false') === 'true' ||
               root.getAttribute('data-play-requested') === '1',
+            onStatus: function (msg) {
+              if (msg) ctx.setPlaybackNote(msg);
+            },
             onPlay: function () {
               didPlaySucceed = true;
               invoke(propHandler(props, 'onPlay'), invokeHandler, onAfterInvoke);
@@ -915,17 +956,18 @@
             onEnded: function () {
               invoke(propHandler(props, 'onEnded'), invokeHandler, onAfterInvoke);
             },
-            onError: function () {
+            onError: function (err) {
               invoke(propHandler(props, 'onError'), invokeHandler, onAfterInvoke);
               destroyWasmPlayer();
-              if (advanceRendition('Full-quality decode failed — switching to compatibility stream…')) {
-                return;
-              }
-              ctx.setPlaybackError('Playback failed.');
+              const note = spokenPlaybackError(err);
+              if (advanceRendition(note)) return;
+              ctx.setPlaybackError(note);
             },
-            onUnderrun: function () {
+            onUnderrun: function (err) {
               destroyWasmPlayer();
-              advanceRendition('Buffer underrun — switching to 1080p for compatibility…');
+              const note = spokenPlaybackError(err);
+              if (advanceRendition(note)) return;
+              ctx.setPlaybackError(note);
             },
             onTimeUpdate: function () {},
           });
@@ -953,11 +995,7 @@
         })
         .catch(function (err) {
           destroyWasmPlayer();
-          const code = err && err.code ? err.code : '';
-          const note =
-            code === 'WEBCODECS_UNSUPPORTED' || code === 'SOURCE_TOO_LARGE'
-              ? 'Full quality needs a capable browser — switching to 1080p for compatibility.'
-              : 'Extended engine unavailable — trying compatibility stream…';
+          const note = spokenPlaybackError(err);
           if (advanceRendition(note)) return;
           ctx.setPlaybackError(note);
         });
@@ -1053,10 +1091,15 @@
         reason ||
         'Trying ' + (next.kind === 'mobile' ? '720p MP4' : next.kind === 'web' ? '1080p MP4' : 'master') + '…';
       if (prevKind === 'master' && (next.kind === 'web' || next.kind === 'mobile')) {
-        note =
-          'Full quality needs a capable browser — switching to ' +
-          (next.kind === 'web' ? '1080p' : '720p') +
-          ' for compatibility.';
+        // Keep a caller-supplied spoken reason when present; otherwise explain the rung.
+        if (!reason || reason.indexOf('compatibility') < 0) {
+          note =
+            'Full quality is unavailable in this browser — switching to ' +
+            (next.kind === 'web' ? '1080p' : '720p') +
+            ' for compatibility.';
+        } else {
+          note = reason;
+        }
         try {
           ctx.setPlaybackNote(note);
         } catch (_) {}
