@@ -21,7 +21,7 @@ CleverScript stays on `Foo.js` (web keeps `Foo.host.js`). Android prefers `Foo.a
 
 - `Affirmation.android.js` — confirm dialog, same storage keys as the web host. Honors `@hooks` `relaySkipAffirmations` from the generic client.
 - `NowShowing.android.js` — horizontal, remote-focusable row (`data-relay-scroll="x"`).
-- `TheaterPlayer.android.js` — seed check via `?relayAssetStatus=1`, then `@clevertree/video` `VideoPlayer`.
+- `TheaterPlayer.android.js` — H.264 ladder (`srcMobile` → `srcWeb` → `srcMaster`) with seed probe per rung via `?relayAssetStatus=1`, then `@clevertree/video` `VideoPlayer`. Passes `subtitlesJson` for Media3 VTT/SRT tracks. Park-stub fallback in the shell also reads `data-src-mobile` / `data-src-web` / `data-subtitles-json`.
 
 `npm test` includes `hooks/client/native/android-hosts.test.mjs`, which checks those files against the web stub’s exports, storage keys, and props. Playwright still covers `*.host.js` only.
 

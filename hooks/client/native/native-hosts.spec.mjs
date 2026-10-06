@@ -22,6 +22,8 @@ function startStaticServer() {
     '.js': 'application/javascript; charset=utf-8',
     '.mjs': 'application/javascript; charset=utf-8',
     '.mkv': 'video/x-matroska',
+    '.mp4': 'video/mp4',
+    '.vtt': 'text/vtt; charset=utf-8',
     '.html': 'text/html; charset=utf-8',
   }
   const server = http.createServer((req, res) => {
@@ -91,6 +93,7 @@ const harnessHtml = `<!DOCTYPE html>
     </div>
   </div>
   <script src="/hooks/client/native/park-host-common.js"></script>
+  <script src="/hooks/client/native/telemetry.js"></script>
   <script src="/hooks/client/native/Affirmation.host.js"></script>
   <script src="/hooks/client/native/TheaterPlayer.host.js"></script>
   <script>
@@ -521,5 +524,75 @@ test.describe('native hosts', () => {
 
     await expect(page.locator('[data-fb-live-status]')).toContainText(/stub|block/i)
     await expect(page.getByRole('button', { name: 'Retry' })).toBeVisible()
+  })
+
+  test('TheaterPlayer mounts native <track> cues and CC cycle from subtitlesJson', async ({ page }) => {
+    await page.goto(srv.origin + '/harness.html')
+    // Dismiss harness Affirmation so it does not cover the player chrome
+    await page.evaluate((slug) => {
+      try {
+        localStorage.setItem('flashback.movieOwn.v1.' + slug, '1')
+      } catch (_) {}
+      document.documentElement.setAttribute('data-fb-movie-ack', slug)
+      document.documentElement.setAttribute('data-fb-welcome-ack', '1')
+      const modal = document.querySelector('.fb-affirmation-native')
+      if (modal) modal.style.display = 'none'
+    }, SLUG)
+    await page.evaluate(() => {
+      const mount = document.getElementById('player-host')
+      mount.replaceChildren()
+      const player = window.__fbBuildTheaterPlayer(
+        {
+          src: '/FanMixes/Test/tiny.mkv',
+          srcWeb: '/FanMixes/Test/tiny.web-1080p.mp4',
+          srcMobile: '/FanMixes/Test/tiny.mobile-720p.mp4',
+          srcMaster: '/FanMixes/Test/tiny.mkv',
+          subtitlesJson: JSON.stringify([
+            {
+              src: '/hooks/client/native/fixtures/sample.vtt',
+              label: 'English',
+              lang: 'en',
+              default: true,
+            },
+            {
+              src: '/hooks/client/native/fixtures/sample.vtt',
+              label: 'Citations',
+              lang: 'en',
+            },
+          ]),
+          cid: 'bafybeitesthostcid000000000000000000000000000000000',
+          seedState: 'ready',
+          unlocked: 'true',
+          playing: 'false',
+          command: '0',
+          commandSeq: '0',
+          commandArg: '',
+          startAt: '',
+        },
+        () => {},
+        null,
+      )
+      mount.appendChild(player)
+      if (player.__fbCtx && player.__fbCtx.setUnlocked) player.__fbCtx.setUnlocked(true)
+      const shell = document.querySelector('.fb-media-ready')
+      const pending = document.querySelector('.fb-media-pending')
+      if (shell) shell.style.display = 'block'
+      if (pending) pending.style.display = 'none'
+    })
+
+    const tracks = page.locator('#player-host video.fb-media-video track')
+    await expect(tracks).toHaveCount(2)
+    await expect(tracks.first()).toHaveAttribute('kind', 'subtitles')
+    await expect(tracks.first()).toHaveAttribute('label', 'English')
+    const cc = page.locator('#player-host .fb-cc-btn')
+    await expect(cc).toBeAttached()
+    await expect(cc).toContainText(/CC:\s*English/i)
+    const after = await page.evaluate(() => {
+      const btn = document.querySelector('#player-host .fb-cc-btn')
+      if (!btn) return ''
+      btn.click()
+      return btn.textContent || ''
+    })
+    expect(after).toMatch(/Citations|Off|English/i)
   })
 })

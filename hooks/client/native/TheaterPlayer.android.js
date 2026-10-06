@@ -71,7 +71,7 @@ function pickSeededSrc(ladder) {
   if (!ladder || ladder.length === 0) {
     return { src: '', message: 'No media path for this title.' }
   }
-  let lastMsg = 'This file needs to be seeded'
+  let lastMsg = 'This movie isn’t ready to stream yet.'
   for (let i = 0; i < ladder.length; i++) {
     const r = probeSeed(ladder[i])
     if (r.ok) {
@@ -80,6 +80,39 @@ function pickSeededSrc(ladder) {
     lastMsg = r.message || lastMsg
   }
   return { src: '', message: lastMsg }
+}
+
+function downloadLinks(p) {
+  const master = propStr(p, 'srcMaster') || propStr(p, 'src')
+  const web = propStr(p, 'srcWeb')
+  const mobile = propStr(p, 'srcMobile')
+  let dl = []
+  if (master.length > 0) {
+    dl = dl.concat([{ label: 'Full quality (MKV)', href: master }])
+  }
+  if (web.length > 0 && web !== master) {
+    dl = dl.concat([{ label: '1080p (MP4)', href: web }])
+  }
+  if (mobile.length > 0 && mobile !== master && mobile !== web) {
+    dl = dl.concat([{ label: '720p (MP4)', href: mobile }])
+  }
+  let links = []
+  for (let i = 0; i < dl.length; i++) {
+    links = links.concat([
+      <a href={dl[i].href} download="">
+        {dl[i].label}
+      </a>,
+    ])
+  }
+  return (
+    <div className="fb-theater-downloads" data-fb-downloads="1">
+      <p className="fb-theater-downloads-label">Download the movie</p>
+      <div className="fb-theater-downloads-links">{links}</div>
+      <p className="fb-theater-downloads-note">
+        Save a file, then open it in a video player on your device.
+      </p>
+    </div>
+  )
 }
 
 export default function TheaterPlayer(props) {
@@ -110,21 +143,29 @@ export default function TheaterPlayer(props) {
       setSeed('ready')
     } else {
       setChosenSrc('')
-      setSeed(pick.message || 'This file needs to be seeded')
+      setSeed(pick.message || 'This movie isn’t ready to stream yet.')
     }
   }
   if (seed !== 'ready') {
     return (
-      <div className="fb-theater-seed">
-        <p>{seed === 'idle' ? 'Checking whether this file is seeded…' : seed}</p>
-        <button
-          type="button"
-          onClick={() => {
-            setSeed('idle')
-          }}
-        >
-          Retry
-        </button>
+      <div className="fb-theater-player">
+        <div className="fb-theater-seed">
+          <p>
+            {seed === 'idle'
+              ? 'Getting the movie ready…'
+              : 'Sorry — we couldn’t play this movie here.'}
+          </p>
+          <p>You can download the movie below and open it on your device.</p>
+          <button
+            type="button"
+            onClick={() => {
+              setSeed('idle')
+            }}
+          >
+            Try again
+          </button>
+        </div>
+        {downloadLinks(p)}
       </div>
     )
   }
@@ -138,7 +179,8 @@ export default function TheaterPlayer(props) {
         commandSeq={p.commandSeq}
         subtitlesJson={subsJson}
       />
-      {p.cid ? <p>CID {p.cid}</p> : null}
+      {downloadLinks(p)}
+      {p.cid ? <p className="fb-theater-tech-body">CID {p.cid}</p> : null}
     </div>
   )
 }

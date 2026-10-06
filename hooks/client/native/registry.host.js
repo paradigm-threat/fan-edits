@@ -4,9 +4,11 @@
  */
 (function () {
   var scripts = [
+    '/hooks/client/native/telemetry.js',
     '/hooks/client/native/Affirmation.host.js',
     '/hooks/client/native/TheaterPlayer.host.js',
     '/hooks/client/native/NowShowing.host.js',
+    '/hooks/client/native/Board.host.js',
   ];
   for (var i = 0; i < scripts.length; i++) {
     var s = document.createElement('script');

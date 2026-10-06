@@ -16,6 +16,7 @@ import Affirmation, {
 } from 'hooks/client/native/Affirmation.js'
 import NowShowing from 'hooks/client/native/NowShowing.js'
 import TheaterPlayer from 'hooks/client/native/TheaterPlayer.js'
+import Board from 'hooks/client/native/Board.js'
 
 function str(v) {
   if (v === null) {
@@ -320,6 +321,35 @@ function queryParam(search, key) {
     return search.slice(start, end)
   }
   return ''
+}
+
+function boardQueryFromLocation() {
+  let path = '/'
+  let kind = 'comment'
+  try {
+    const loc = typeof globalThis !== 'undefined' ? globalThis.location : null
+    if (loc && loc.search) {
+      const q = loc.search
+      const rawPath = queryParam(q, 'path')
+      if (rawPath.length > 0) {
+        try {
+          path = decodeURIComponent(rawPath)
+        } catch (e) {
+          path = rawPath
+        }
+        if (path.charAt(0) !== '/') {
+          path = '/' + path
+        }
+      } else if (loc.pathname && loc.pathname !== '/board') {
+        path = normalizeRoute(loc.pathname)
+      }
+      const rawKind = queryParam(q, 'kind')
+      if (rawKind === 'bug' || rawKind === 'review' || rawKind === 'comment') {
+        kind = rawKind
+      }
+    }
+  } catch (e2) {}
+  return { path: path, kind: kind }
 }
 
 function parseMediaTime(raw) {
@@ -717,6 +747,9 @@ function routeKind(route) {
   if (route === '/submit' || route === '/contribute') {
     return { kind: 'md', file: 'content/submit.md', title: 'Submissions' }
   }
+  if (route === '/board' || route === '/feedback' || route === '/bugs') {
+    return { kind: 'board' }
+  }
   let slug = route
   if (slug.charAt(0) === '/') {
     slug = slug.slice(1)
@@ -1046,7 +1079,21 @@ export default function FlashbackApp() {
   }
 
   let main = null
-  if (kind.kind === 'md') {
+  if (kind.kind === 'board') {
+    const bq = boardQueryFromLocation()
+    main = (
+      <div className="fb-doc">
+        <button type="button" className="fb-back" onClick={() => { navigate('/') }}>
+          ← Library
+        </button>
+        <h1 className="fb-movie-title">Board</h1>
+        <p className="fb-movie-blurb">
+          Bugs, comments, and short reviews — public notes on the git comments branch.
+        </p>
+        <Board path={bq.path} kind={bq.kind} />
+      </div>
+    )
+  } else if (kind.kind === 'md') {
     main = (
       <article className="fb-doc fb-prose">
         <MarkdownRenderer content={md || '# Loading…'} />
@@ -1243,6 +1290,7 @@ export default function FlashbackApp() {
             <a href="/" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/') }}>Library</a>
             <a href="/motivation" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/motivation') }}>Why</a>
             <a href="/submit" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/submit') }}>Submit</a>
+            <a href="/board" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/board') }}>Board</a>
             <a href="/legal" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/legal') }}>Legal</a>
           </nav>
         </header>
@@ -1263,6 +1311,8 @@ export default function FlashbackApp() {
             <a href="/motivation">Why we’re doing this</a>
             {' · '}
             <a href="/submit">Submissions</a>
+            {' · '}
+            <a href="/board">Board / Report a problem</a>
             {' · '}
             <a href="/legal">Ownership</a>
             {' · '}

@@ -5,6 +5,20 @@
 (function (global) {
   'use strict';
 
+  function reportTheaterIssue(opts) {
+    try {
+      const api = global.__fbTheaterTelemetry;
+      if (api && typeof api.reportTheaterIssue === 'function') {
+        api.reportTheaterIssue(opts || {});
+      }
+    } catch (_) {}
+  }
+
+  function currentRendition(srcLadder, ladderIndex) {
+    const cur = srcLadder && srcLadder[ladderIndex];
+    return cur && cur.kind ? cur.kind : 'media';
+  }
+
   function prop(props, key, fallback) {
     if (!props) return fallback;
     const keys = [key];
@@ -474,6 +488,93 @@
     };
   }
 
+  function downloadLabelForKind(kind, src) {
+    if (kind === 'master') return 'Full quality (MKV)';
+    if (kind === 'web') return '1080p (MP4)';
+    if (kind === 'mobile') return '720p (MP4)';
+    const s = String(src || '').toLowerCase();
+    if (s.indexOf('.mkv') >= 0) return 'Full quality (MKV)';
+    if (s.indexOf('1080') >= 0 || s.indexOf('.web-') >= 0) return '1080p (MP4)';
+    if (s.indexOf('720') >= 0 || s.indexOf('mobile') >= 0) return '720p (MP4)';
+    return 'Download';
+  }
+
+  /** Calm download row: MKV + other resolutions (always below the player). */
+  function buildDownloadRow(props, ladder) {
+    const wrap = global.document.createElement('div');
+    wrap.className = 'fb-theater-downloads';
+    wrap.setAttribute('data-fb-downloads', '1');
+    const heading = global.document.createElement('p');
+    heading.className = 'fb-theater-downloads-label';
+    heading.textContent = 'Download the movie';
+    wrap.appendChild(heading);
+    const list = global.document.createElement('div');
+    list.className = 'fb-theater-downloads-links';
+    const seen = {};
+    const items = [];
+    function add(kind, url) {
+      const u = String(url || '');
+      if (!u || seen[u]) return;
+      seen[u] = true;
+      items.push({ kind: kind, src: u });
+    }
+    if (ladder && ladder.length) {
+      for (let i = 0; i < ladder.length; i++) {
+        add(ladder[i].kind, ladder[i].src);
+      }
+    }
+    add('master', prop(props, 'srcMaster', '') || prop(props, 'data-src-master', ''));
+    add('web', prop(props, 'srcWeb', '') || prop(props, 'data-src-web', ''));
+    add('mobile', prop(props, 'srcMobile', '') || prop(props, 'data-src-mobile', ''));
+    add('media', prop(props, 'src', '') || prop(props, 'data-src', ''));
+    if (!items.length) {
+      const empty = global.document.createElement('p');
+      empty.className = 'fb-theater-downloads-empty';
+      empty.textContent = 'No downloadable files listed for this title yet.';
+      wrap.appendChild(empty);
+    } else {
+      for (let j = 0; j < items.length; j++) {
+        const a = global.document.createElement('a');
+        a.className = 'fb-theater-download-link';
+        a.href = items[j].src;
+        a.setAttribute('download', '');
+        a.rel = 'noopener';
+        a.textContent = downloadLabelForKind(items[j].kind, items[j].src);
+        list.appendChild(a);
+      }
+      wrap.appendChild(list);
+    }
+    const note = global.document.createElement('p');
+    note.className = 'fb-theater-downloads-note';
+    note.textContent = 'Save a file, then open it in VLC or another video player on your computer.';
+    wrap.appendChild(note);
+    const boardRow = global.document.createElement('p');
+    boardRow.className = 'fb-theater-downloads-note';
+    const boardLink = global.document.createElement('a');
+    boardLink.className = 'fb-theater-download-link';
+    let pagePath = '/';
+    try {
+      pagePath = (global.location && global.location.pathname) || '/';
+    } catch (_) {}
+    boardLink.href =
+      '/board?kind=bug&path=' + encodeURIComponent(pagePath);
+    boardLink.textContent = 'Report a problem on the Board';
+    boardRow.appendChild(boardLink);
+    wrap.appendChild(boardRow);
+    return wrap;
+  }
+
+  function goToBoardBug() {
+    let pagePath = '/';
+    try {
+      pagePath = (global.location && global.location.pathname) || '/';
+    } catch (_) {}
+    const href = '/board?kind=bug&path=' + encodeURIComponent(pagePath);
+    try {
+      if (global.location) global.location.href = href;
+    } catch (_) {}
+  }
+
   function buildInspect(cid, providers, bytesTotal) {
     const wrap = global.document.createElement('div');
     wrap.className = 'fb-media-inspect';
@@ -697,6 +798,8 @@
     if (Number.isNaN(startAt)) startAt = fromUrl.start;
     const endAt = fromUrl.end;
     let didPlaySucceed = false;
+    let reportedSeedFail = false;
+    let reportedMirrorsExhausted = false;
 
     const root = global.document.createElement('div');
     root.className = 'fb-theater-player';
@@ -722,22 +825,13 @@
 
     const msg = global.document.createElement('p');
     msg.className = 'fb-media-msg';
-    msg.textContent = seedMessage;
+    msg.textContent = seedMessage || 'Getting the movie ready…';
     pending.appendChild(msg);
 
     const hint = global.document.createElement('p');
     hint.className = 'fb-media-hint';
-    hint.textContent =
-      seedHint ||
-      'The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start.';
+    hint.textContent = seedHint || 'This usually takes a moment. Please wait.';
     pending.appendChild(hint);
-
-    const liveLog = global.document.createElement('p');
-    liveLog.className = 'fb-media-live';
-    liveLog.setAttribute('data-fb-live-status', '1');
-    liveLog.setAttribute('aria-live', 'polite');
-    liveLog.style.display = 'none';
-    pending.appendChild(liveLog);
 
     const bar = global.document.createElement('div');
     bar.className = 'fb-media-bar';
@@ -753,16 +847,55 @@
     bar.appendChild(fill);
     pending.appendChild(bar);
 
-    const inspectHost = global.document.createElement('div');
-    inspectHost.appendChild(buildInspect(cidProp, null, null));
-    pending.appendChild(inspectHost);
-
+    const pendingActions = global.document.createElement('div');
+    pendingActions.className = 'fb-theater-actions';
     const retryBtn = global.document.createElement('button');
     retryBtn.type = 'button';
     retryBtn.className = 'fb-btn';
-    retryBtn.textContent = 'Retry';
+    retryBtn.textContent = 'Try again';
     retryBtn.style.display = 'none';
-    pending.appendChild(retryBtn);
+    pendingActions.appendChild(retryBtn);
+
+    const reportPendingBtn = global.document.createElement('button');
+    reportPendingBtn.type = 'button';
+    reportPendingBtn.className = 'fb-btn fb-theater-report';
+    reportPendingBtn.textContent = 'Report a problem';
+    reportPendingBtn.style.display = 'none';
+    reportPendingBtn.addEventListener('click', function () {
+      reportTheaterIssue({
+        severity: 'major',
+        code: 'user_report',
+        message: msg.textContent || 'user report (seed/mirrors)',
+        rendition: currentRendition(srcLadder, ladderIndex),
+        engine: 'hunt',
+        force: true,
+      });
+      goToBoardBug();
+    });
+    pendingActions.appendChild(reportPendingBtn);
+    pending.appendChild(pendingActions);
+
+    const techDetails = global.document.createElement('details');
+    techDetails.className = 'fb-theater-tech';
+    const techSummary = global.document.createElement('summary');
+    techSummary.className = 'fb-theater-tech-summary';
+    techSummary.textContent = 'Technical details';
+    techDetails.appendChild(techSummary);
+    const techBody = global.document.createElement('div');
+    techBody.className = 'fb-theater-tech-body';
+
+    const liveLog = global.document.createElement('p');
+    liveLog.className = 'fb-media-live';
+    liveLog.setAttribute('data-fb-live-status', '1');
+    liveLog.setAttribute('aria-live', 'polite');
+    liveLog.style.display = 'none';
+    techBody.appendChild(liveLog);
+
+    const inspectHost = global.document.createElement('div');
+    inspectHost.appendChild(buildInspect(cidProp, null, null));
+    techBody.appendChild(inspectHost);
+    techDetails.appendChild(techBody);
+    pending.appendChild(techDetails);
 
     const shell = global.document.createElement('div');
     shell.className = 'fb-media-ready';
@@ -782,6 +915,41 @@
     const errMsg = global.document.createElement('p');
     errMsg.className = 'fb-media-msg';
     errBanner.appendChild(errMsg);
+    const errNudge = global.document.createElement('p');
+    errNudge.className = 'fb-media-hint fb-theater-download-nudge';
+    errNudge.textContent =
+      'You can download the movie below, or leave a public note on the Board.';
+    errBanner.appendChild(errNudge);
+    const errActions = global.document.createElement('div');
+    errActions.className = 'fb-theater-actions';
+    const reportBtn = global.document.createElement('button');
+    reportBtn.type = 'button';
+    reportBtn.className = 'fb-btn fb-theater-report';
+    reportBtn.textContent = 'Report a problem';
+    reportBtn.style.display = 'none';
+    errActions.appendChild(reportBtn);
+    errBanner.appendChild(errActions);
+    const errTech = global.document.createElement('details');
+    errTech.className = 'fb-theater-tech';
+    const errTechSummary = global.document.createElement('summary');
+    errTechSummary.className = 'fb-theater-tech-summary';
+    errTechSummary.textContent = 'Technical details';
+    errTech.appendChild(errTechSummary);
+    const errTechBody = global.document.createElement('p');
+    errTechBody.className = 'fb-theater-tech-body fb-media-live';
+    errTech.appendChild(errTechBody);
+    errBanner.appendChild(errTech);
+    reportBtn.addEventListener('click', function () {
+      reportTheaterIssue({
+        severity: 'major',
+        code: 'user_report',
+        message: errTechBody.textContent || errMsg.textContent || msg.textContent || 'user report',
+        rendition: currentRendition(srcLadder, ladderIndex),
+        engine: wasmApi ? 'wasm' : 'native',
+        force: true,
+      });
+      goToBoardBug();
+    });
     shell.appendChild(errBanner);
 
     const video = global.document.createElement('video');
@@ -823,8 +991,14 @@
         statusBanner.style.display = 'block';
       },
       setPlaybackError: function (text) {
-        errMsg.textContent = text || 'Playback failed.';
+        const detail = text || 'Playback failed.';
+        errMsg.textContent = 'Sorry — this browser couldn’t play the video.';
+        errNudge.style.display = 'block';
+        errTechBody.textContent = detail;
         errBanner.style.display = 'block';
+        reportBtn.style.display = 'inline-block';
+        reportBtn.disabled = false;
+        reportBtn.textContent = 'Report a problem';
         pending.style.display = 'none';
         shell.style.display = 'block';
         locked.style.display = 'none';
@@ -834,6 +1008,8 @@
       clearPlaybackError: function () {
         errBanner.style.display = 'none';
         errMsg.textContent = '';
+        errTechBody.textContent = '';
+        reportBtn.style.display = 'none';
       },
       notePlayWhileSeeding: function () {
         locked.style.display = 'none';
@@ -841,9 +1017,8 @@
         pending.style.display = 'block';
         shell.style.display = 'none';
         pending.className = 'fb-media fb-media-pending fb-media-play-requested';
-        msg.textContent = 'Play requested — probing this site and fleet mirrors…';
-        hint.textContent =
-          'Trying the current host, then iad1 / ord1 / hkg1. The first mirror with real video bytes wins.';
+        msg.textContent = 'Getting the movie ready…';
+        hint.textContent = 'This usually takes a moment. Please wait.';
         liveLog.style.display = 'block';
         liveLog.textContent = 'Starting mirror hunt…';
         try {
@@ -960,13 +1135,56 @@
               invoke(propHandler(props, 'onError'), invokeHandler, onAfterInvoke);
               destroyWasmPlayer();
               const note = spokenPlaybackError(err);
+              if (didPlaySucceed) {
+                reportTheaterIssue({
+                  severity: 'major',
+                  code: 'post_play_collapse',
+                  message: note,
+                  rendition: currentRendition(srcLadder, ladderIndex),
+                  engine: 'wasm',
+                });
+                ctx.setPlaybackError(note);
+                return;
+              }
               if (advanceRendition(note)) return;
+              reportTheaterIssue({
+                severity: 'major',
+                code: 'wasm_hard_fail',
+                message: note,
+                rendition: currentRendition(srcLadder, ladderIndex),
+                engine: 'wasm',
+              });
               ctx.setPlaybackError(note);
             },
             onUnderrun: function (err) {
               destroyWasmPlayer();
               const note = spokenPlaybackError(err);
+              if (didPlaySucceed) {
+                reportTheaterIssue({
+                  severity: 'major',
+                  code: 'post_play_collapse',
+                  message: note,
+                  rendition: currentRendition(srcLadder, ladderIndex),
+                  engine: 'wasm',
+                });
+                ctx.setPlaybackError(note);
+                return;
+              }
+              reportTheaterIssue({
+                severity: 'minor',
+                code: 'underrun_soft',
+                message: note,
+                rendition: currentRendition(srcLadder, ladderIndex),
+                engine: 'wasm',
+              });
               if (advanceRendition(note)) return;
+              reportTheaterIssue({
+                severity: 'major',
+                code: 'wasm_hard_fail',
+                message: note,
+                rendition: currentRendition(srcLadder, ladderIndex),
+                engine: 'wasm',
+              });
               ctx.setPlaybackError(note);
             },
             onTimeUpdate: function () {},
@@ -997,6 +1215,13 @@
           destroyWasmPlayer();
           const note = spokenPlaybackError(err);
           if (advanceRendition(note)) return;
+          reportTheaterIssue({
+            severity: 'major',
+            code: 'wasm_hard_fail',
+            message: note,
+            rendition: currentRendition(srcLadder, ladderIndex),
+            engine: 'wasm',
+          });
           ctx.setPlaybackError(note);
         });
     }
@@ -1040,10 +1265,22 @@
       if (advanceRendition('Playback failed — trying next quality…')) {
         return;
       }
-      msg.textContent = 'Playback failed on all qualities and mirrors.';
+      const failCode = didPlaySucceed ? 'post_play_collapse' : 'native_hard_fail';
+      reportTheaterIssue({
+        severity: 'major',
+        code: failCode,
+        message: 'Playback failed on all qualities and mirrors.',
+        rendition: currentRendition(srcLadder, ladderIndex),
+        engine: 'native',
+      });
+      msg.textContent = 'Sorry — we couldn’t play this movie here.';
+      hint.textContent = 'You can download the movie below and open it on your computer.';
+      liveLog.style.display = 'block';
+      liveLog.textContent = 'Playback failed on all qualities and mirrors.';
       pending.style.display = 'block';
       shell.style.display = 'none';
       retryBtn.style.display = 'inline-block';
+      reportPendingBtn.style.display = 'inline-block';
     });
     applyCommands(ctx, props);
     shell.appendChild(video);
@@ -1052,6 +1289,7 @@
     unlock.appendChild(pending);
     unlock.appendChild(shell);
     root.appendChild(unlock);
+    root.appendChild(buildDownloadRow(props, srcLadder));
 
     let attempt = 0;
     let timer = null;
@@ -1100,6 +1338,13 @@
         } else {
           note = reason;
         }
+        reportTheaterIssue({
+          severity: 'minor',
+          code: 'compat_fallback',
+          message: note,
+          rendition: next.kind,
+          engine: 'ladder',
+        });
         try {
           ctx.setPlaybackNote(note);
         } catch (_) {}
@@ -1165,11 +1410,11 @@
             ctx.clearPlaybackError();
           }).catch(function (err) {
             const name = err && err.name ? err.name : 'PlayError';
-            ctx.setPlaybackError(
-              name === 'NotAllowedError'
-                ? 'Ready on ' + where + ' — tap Play on the video controls.'
-                : 'Ready on ' + where + ' but play failed (' + name + ').',
-            );
+            if (name === 'NotAllowedError') {
+              ctx.setPlaybackNote('Ready — tap Play on the video controls.');
+              return;
+            }
+            ctx.setPlaybackError('Ready on ' + where + ' but play failed (' + name + ').');
           });
         }
       }
@@ -1182,7 +1427,6 @@
         stub ||
         (st.retryable !== true && (st.error === 'ipfs-not-found' || st.seedState === 'unavailable'));
       const exhausted = attempt >= maxRounds * Math.max(1, mirrors.length);
-      msg.textContent = statusLabel(st);
       root.setAttribute('data-seed-state', stub ? 'stub' : st.seedState || 'pending');
       pending.setAttribute('data-relay-media', exhausted || permanent ? 'failed' : 'pending');
       const pct = displayPct(st);
@@ -1191,7 +1435,6 @@
       bar.setAttribute('aria-valuenow', String(pct));
       bar.setAttribute('title', pct + '%');
       hint.style.display = 'block';
-      hint.textContent = statusHint(st);
       liveLog.style.display = 'block';
       const label = st.mirrorLabel || 'mirror';
       let line = label + ': ';
@@ -1213,17 +1456,42 @@
       if (probeLog.length > 6) {
         probeLog = probeLog.slice(probeLog.length - 6);
       }
-      liveLog.textContent = probeLog.join(' → ');
+      liveLog.textContent = statusLabel(st) + '\n' + probeLog.join(' → ') + '\n' + statusHint(st);
       if (exhausted || (permanent && stub)) {
+        msg.textContent = 'Sorry — we couldn’t play this movie here.';
+        hint.textContent = 'You can download the movie below and open it on your computer.';
         pending.className =
           'fb-media fb-media-failed' +
           (root.getAttribute('data-play-requested') === '1' ? ' fb-media-play-requested' : '');
         retryBtn.style.display = 'inline-block';
+        reportPendingBtn.style.display = 'inline-block';
+      } else if (permanent && !stub) {
+        msg.textContent = 'This movie isn’t ready to stream yet.';
+        hint.textContent = 'You can download the movie below, or try again in a little while.';
+        pending.className =
+          'fb-media fb-media-failed' +
+          (root.getAttribute('data-play-requested') === '1' ? ' fb-media-play-requested' : '');
+        retryBtn.style.display = 'inline-block';
+        reportPendingBtn.style.display = 'inline-block';
       } else {
+        msg.textContent =
+          pct > 0 ? 'Getting the movie ready… ' + pct + '%' : 'Getting the movie ready…';
+        hint.textContent = 'This usually takes a moment. Please wait.';
         pending.className =
           'fb-media fb-media-pending' +
           (root.getAttribute('data-play-requested') === '1' ? ' fb-media-play-requested' : '');
         retryBtn.style.display = 'none';
+        reportPendingBtn.style.display = 'none';
+      }
+      if (permanent && !stub && !reportedSeedFail) {
+        reportedSeedFail = true;
+        reportTheaterIssue({
+          severity: 'major',
+          code: 'seed_permanent_fail',
+          message: st.message || st.error || 'CID permanently unavailable',
+          rendition: currentRendition(srcLadder, ladderIndex),
+          engine: 'seed',
+        });
       }
       const cid = st.cid || cidProp;
       inspectHost.replaceChildren(buildInspect(cid, st.providers, st.bytesTotal));
@@ -1233,8 +1501,10 @@
       liveLog.style.display = 'block';
       const prefix = probeLog.length ? probeLog.join(' → ') + ' → ' : '';
       liveLog.textContent = prefix + (text || '');
+      // Keep the calm headline; only refresh the waiting copy.
       if (text && text.indexOf('…') >= 0) {
-        msg.textContent = text;
+        msg.textContent = 'Getting the movie ready…';
+        hint.textContent = 'This usually takes a moment. Please wait.';
       }
     }
 
@@ -1419,9 +1689,20 @@
             cid: cidProp,
             mirrorLabel: 'fleet',
           });
+          if (!reportedMirrorsExhausted) {
+            reportedMirrorsExhausted = true;
+            reportTheaterIssue({
+              severity: 'major',
+              code: 'mirrors_exhausted',
+              message: 'All mirrors failed or still seeding',
+              rendition: currentRendition(srcLadder, ladderIndex),
+              engine: 'hunt',
+            });
+          }
           liveLog.textContent =
             'All mirrors exhausted after ' + attempt + ' probes. Tap Retry or re-ingest if stub.';
           retryBtn.style.display = 'inline-block';
+          reportPendingBtn.style.display = 'inline-block';
           return;
         }
       }
@@ -1470,8 +1751,8 @@
       if (!src) {
         pending.style.display = 'block';
         shell.style.display = 'none';
-        msg.textContent = 'Play blocked — no media src on this title.';
-        hint.textContent = 'Catalog has no playable path for this edit.';
+        msg.textContent = 'Sorry — this movie isn’t available to play yet.';
+        hint.textContent = 'You can download the movie below if a file is listed.';
         liveLog.style.display = 'block';
         liveLog.textContent = 'error: missing src';
         retryBtn.style.display = 'none';
@@ -1500,11 +1781,9 @@
       pending.className =
         'fb-media fb-media-pending' + (opts.fromPlay ? ' fb-media-play-requested' : '');
       retryBtn.style.display = 'none';
-      msg.textContent = opts.fromPlay
-        ? 'Play requested — probing mirrors…'
-        : 'Checking this site and fleet mirrors…';
-      hint.textContent =
-        'Same-origin first, then fan-edits.iad1 / ord1 / hkg1. Live errors appear below as each probe finishes.';
+      reportPendingBtn.style.display = 'none';
+      msg.textContent = 'Getting the movie ready…';
+      hint.textContent = 'This usually takes a moment. Please wait.';
       liveLog.style.display = 'block';
       liveLog.textContent = opts.fromPlay ? 'Play → mirror hunt started' : 'Auto mirror hunt started';
       probeLog = [];
@@ -1705,6 +1984,12 @@
 
   function register() {
     wireSectionLinkClicks();
+    try {
+      const tel = global.__fbTheaterTelemetry;
+      if (tel && typeof tel.installMinorErrorSampling === 'function') {
+        tel.installMinorErrorSampling();
+      }
+    } catch (_) {}
     if (typeof global.__relayRegisterParkNative === 'function') {
       global.__relayRegisterParkNative('fb-theater-player', buildTheaterPlayer);
     }

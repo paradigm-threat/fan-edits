@@ -61,6 +61,15 @@ assert.match(theater, /playing=\{p\.playing === true\}/)
 assert.match(theater, /command=\{p\.command\}/)
 assert.match(theater, /commandSeq=\{p\.commandSeq\}/)
 assert.match(theater, /p\.cid/)
+assert.match(theater, /srcMobile/)
+assert.match(theater, /srcWeb/)
+assert.match(theater, /srcMaster/)
+assert.match(theater, /subtitlesJson/)
+assert.match(theater, /androidSrcLadder|pickSeededSrc/)
+assert.match(theater, /Download the movie/)
+assert.match(theater, /Full quality \(MKV\)/)
+// MKV master is preferred before MP4 fallbacks
+assert.match(theater, /master\.length > 0/)
 
 for (const [name, src] of [
   ['Affirmation.android.js', affirmation],

@@ -30,16 +30,36 @@ export default function TheaterPlayer(props) {
   if (p.startAt !== null) {
     startAt = '' + p.startAt
   }
+  let srcWeb = ''
+  if (p.srcWeb !== null) {
+    srcWeb = '' + p.srcWeb
+  }
+  let srcMobile = ''
+  if (p.srcMobile !== null) {
+    srcMobile = '' + p.srcMobile
+  }
+  let srcMaster = ''
+  if (p.srcMaster !== null) {
+    srcMaster = '' + p.srcMaster
+  }
+  let subtitlesJson = '[]'
+  if (p.subtitlesJson !== null && p.subtitlesJson !== '') {
+    subtitlesJson = '' + p.subtitlesJson
+  }
   return (
     <div
       className="fb-theater-player-host"
       data-relay-park-native="fb-theater-player"
       data-src={p.src || ''}
+      data-src-web={srcWeb}
+      data-src-mobile={srcMobile}
+      data-src-master={srcMaster}
+      data-subtitles-json={subtitlesJson}
       data-poster=""
       data-cid={p.cid || ''}
       data-seed-state={p.seedState || 'pending'}
-      data-seed-message="This file needs to be seeded"
-      data-seed-hint="The content hash is known. Until a peer seeds the bytes onto IPFS, playback cannot start."
+      data-seed-message="Getting the movie ready…"
+      data-seed-hint="This usually takes a moment. Please wait."
       data-playing={playing}
       data-command={command}
       data-command-seq={commandSeq}
