@@ -1016,7 +1016,13 @@
       },
       setPlaybackError: function (text) {
         const detail = text || 'Playback failed.';
-        errMsg.textContent = 'Sorry — this browser couldn’t play the video.';
+        // Clear status strip so "Loading extended video engine…" does not stick over the error.
+        statusBanner.style.display = 'none';
+        statusBanner.textContent = '';
+        // Prefer the spoken detail as the headline when we have one (e.g. SOURCE_TOO_LARGE).
+        errMsg.textContent = detail;
+        errNudge.textContent =
+          'You can download the movie below, or leave a public note on the Board.';
         errNudge.style.display = 'block';
         errTechBody.textContent = detail;
         errBanner.style.display = 'block';
@@ -1246,6 +1252,13 @@
         .catch(function (err) {
           destroyWasmPlayer();
           const note = spokenPlaybackError(err);
+          if (err && err.code === 'FETCH_FAILED' && mirrorIndex + 1 < mirrors.length) {
+            mirrorIndex += 1;
+            msg.textContent = 'Playback failed on current mirror — trying next…';
+            liveLog.textContent = note + ' → next mirror';
+            startMirrorHunt({ fromPlay: true, resume: true });
+            return;
+          }
           if (advanceRendition(note)) return;
           reportTheaterIssue({
             severity: 'major',
@@ -1255,9 +1268,7 @@
             rendition: currentRendition(srcLadder, ladderIndex),
             engine: 'wasm',
           });
-          pending.style.display = 'block';
-          shell.style.display = 'none';
-          msg.textContent = note;
+          ctx.setPlaybackError(note);
           hint.textContent =
             err && err.code === 'SOURCE_TOO_LARGE'
               ? 'Use “Download the movie” below for VLC / another player while we finish streaming demux and web MP4s.'
@@ -1266,7 +1277,6 @@
           liveLog.textContent = note;
           retryBtn.style.display = 'inline-block';
           reportPendingBtn.style.display = 'inline-block';
-          ctx.setPlaybackError(note);
         });
     }
 
