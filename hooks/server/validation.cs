@@ -8,12 +8,8 @@ var COMMENTS_MAX_BYTES = 32768
 export function validateChangedFiles(ctx) {
   var files = ctx.files
   if (files === null) return true
-  var branch = ''
-  try {
-    if (ctx.branch !== null && ctx.branch !== undefined) {
-      branch = '' + ctx.branch
-    }
-  } catch (e) {}
+  // CleverScript has no `undefined` binding — avoid !== undefined (throws; empty catch hid branch).
+  var branch = ctx.branch ? '' + ctx.branch : ''
   var keys = Object.keys(files)
   for (var i = 0; i < keys.length; i++) {
     var p = keys[i]
