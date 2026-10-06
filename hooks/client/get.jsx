@@ -206,6 +206,23 @@ function absoluteStreamUrl(path) {
   return origin + '/' + p
 }
 
+/**
+ * Custom scheme for OS protocol handlers installed via /setup.
+ * weblink?url= form keeps spaces / apostrophes safe across Chrome quirks.
+ */
+function vlcProtocolUrl(httpsUrl) {
+  const u = str(httpsUrl)
+  if (u.indexOf('https://') !== 0 && u.indexOf('http://') !== 0) {
+    return ''
+  }
+  try {
+    if (typeof globalThis !== 'undefined' && globalThis.encodeURIComponent) {
+      return 'vlc://weblink?url=' + globalThis.encodeURIComponent(u)
+    }
+  } catch (e) {}
+  return 'vlc://' + u
+}
+
 function pickPlayableSrc(project) {
   if (!project) {
     return ''
@@ -802,7 +819,7 @@ function encodeCidForUrl(cid) {
 }
 
 /** SSR-safe external-player panel — stream URL always visible (no in-page <video>). */
-function renderExternalWatchPanel(streamUrl, copyMsg, onCopy) {
+function renderExternalWatchPanel(streamUrl, copyMsg, onCopy, vlcHref) {
   const url = str(streamUrl)
   if (url.length === 0) {
     return null
@@ -811,13 +828,24 @@ function renderExternalWatchPanel(streamUrl, copyMsg, onCopy) {
   if (str(copyMsg).length > 0) {
     status = <p className="fb-theater-external-status">{copyMsg}</p>
   }
+  const vlc = str(vlcHref)
+  let openVlc = null
+  if (vlc.length > 0) {
+    openVlc = (
+      <a className="fb-btn fb-btn-primary fb-theater-open-vlc" href={vlc}>
+        Open in VLC
+      </a>
+    )
+  }
   return (
     <div className="fb-theater-external" data-fb-external-watch="1" data-playback-engine="external">
       <p className="fb-theater-downloads-label">Watch in an external player</p>
       <ol className="fb-theater-external-steps">
-        <li>Install VLC (free) if you do not have it yet.</li>
-        <li>Copy the stream URL below (or tap Play in external player).</li>
-        <li>In VLC: Media → Open Network Stream… → paste → Play.</li>
+        <li>
+          One-time: install VLC and the <a href="/setup">playback setup</a> (`vlc://` handler).
+        </li>
+        <li>Tap <strong>Open in VLC</strong> (or copy the stream URL below).</li>
+        <li>If the click is blocked: VLC → Media → Open Network Stream… → paste → Play.</li>
       </ol>
       <div className="fb-theater-external-url-row">
         <code className="fb-theater-external-url" data-fb-stream-url="1">
@@ -825,9 +853,13 @@ function renderExternalWatchPanel(streamUrl, copyMsg, onCopy) {
         </code>
       </div>
       <div className="fb-theater-external-actions fb-theater-downloads-links">
+        {openVlc}
         <button type="button" className="fb-btn fb-theater-copy-stream" onClick={onCopy}>
           Copy stream URL
         </button>
+        <a className="fb-btn" href="/setup">
+          Setup guide
+        </a>
         <a
           className="fb-btn fb-theater-get-vlc"
           href="https://www.videolan.org/vlc/"
@@ -839,8 +871,8 @@ function renderExternalWatchPanel(streamUrl, copyMsg, onCopy) {
       </div>
       {status}
       <p className="fb-theater-downloads-note">
-        Browsers cannot play Matroska + HEVC in-page yet. Streaming in VLC keeps full quality with
-        embedded subs.
+        Browsers cannot play Matroska + HEVC in-page yet. A local `vlc://` handler (see Setup) opens
+        the HTTPS stream in VLC in one click.
       </p>
     </div>
   )
@@ -930,6 +962,9 @@ function routeKind(route) {
   }
   if (route === '/submit' || route === '/contribute') {
     return { kind: 'md', file: 'content/submit.md', title: 'Submissions' }
+  }
+  if (route === '/setup' || route === '/playback' || route === '/vlc') {
+    return { kind: 'md', file: 'content/setup.md', title: 'Setup for playback' }
   }
   if (route === '/board' || route === '/feedback' || route === '/bugs') {
     return { kind: 'board' }
@@ -1316,10 +1351,22 @@ export default function FlashbackApp() {
           gate.scrollIntoView({ behavior: 'smooth', block: 'center' })
         }
       } catch (eGate) {}
-      setStreamCopyMsg('Confirm ownership first, then tap Play in external player.')
+      setStreamCopyMsg('Confirm ownership first, then open in VLC.')
       return
     }
-    copyStreamUrl(url)
+    const abs = str(url)
+    copyStreamUrl(abs)
+    const vlc = vlcProtocolUrl(abs)
+    if (vlc.length === 0) {
+      return
+    }
+    try {
+      if (typeof globalThis !== 'undefined' && globalThis.location) {
+        globalThis.location.href = vlc
+      }
+    } catch (eOpen) {
+      setStreamCopyMsg('Copied stream URL — paste in VLC, or finish /setup for one-click Open in VLC.')
+    }
   }
 
   function titleCard(p) {
@@ -1438,9 +1485,14 @@ export default function FlashbackApp() {
         />
       )
     } else if (selected) {
-      mediaSurface = renderExternalWatchPanel(streamUrl, streamCopyMsg, () => {
-        copyStreamUrl(streamUrl)
-      })
+      mediaSurface = renderExternalWatchPanel(
+        streamUrl,
+        streamCopyMsg,
+        () => {
+          copyStreamUrl(streamUrl)
+        },
+        vlcProtocolUrl(streamUrl),
+      )
     }
     let playDisabled = true
     if (inPageMkvOk === true) {
@@ -1497,15 +1549,22 @@ export default function FlashbackApp() {
               }}
             />
             <div className="fb-video-controls">
-              <button
-                type="button"
+              <a
                 className="fb-btn fb-btn-primary fb-btn-external-play"
-                onClick={() => {
-                  playInExternalPlayer(streamUrl)
+                href={vlcProtocolUrl(streamUrl)}
+                onClick={(e) => {
+                  if (mediaUnlocked !== true) {
+                    try {
+                      e.preventDefault()
+                    } catch (err) {}
+                    playInExternalPlayer(streamUrl)
+                    return
+                  }
+                  copyStreamUrl(streamUrl)
                 }}
               >
-                <PlayChevron className="fb-btn-icon" /> Play in external player
-              </button>
+                <PlayChevron className="fb-btn-icon" /> Open in VLC
+              </a>
               <button
                 type="button"
                 className="fb-btn fb-btn-inpage-play"
@@ -1524,6 +1583,9 @@ export default function FlashbackApp() {
               >
                 Pause
               </button>
+              <a className="fb-btn" href="/setup">
+                Setup
+              </a>
             </div>
           </div>
         ) : (
@@ -1619,6 +1681,7 @@ export default function FlashbackApp() {
           </a>
           <nav className="fb-nav">
             <a href="/" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/') }}>Library</a>
+            <a href="/setup" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/setup') }}>Setup</a>
             <a href="/motivation" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/motivation') }}>Why</a>
             <a href="/submit" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/submit') }}>Submit</a>
             <a href="/board" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/board') }}>Board</a>
@@ -1639,6 +1702,8 @@ export default function FlashbackApp() {
             Flashback Repository
           </span>
           <span className="fb-footer-links">
+            <a href="/setup">Setup / VLC</a>
+            {' · '}
             <a href="/motivation">Why we’re doing this</a>
             {' · '}
             <a href="/submit">Submissions</a>

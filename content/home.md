@@ -17,9 +17,10 @@ Own the original, confirm once, hit Play. Or ignore this and browse the full lib
 ## How to use it
 
 1. **Confirm ownership** on the welcome screen (once per browser).
-2. **Pick a title** from the library below — each page explains what changed.
-3. **Reaffirm for that film** the first time you open it (one checkbox; remembered forever on this device).
-4. Hit **Play**. On a phone, playback goes fullscreen when it can. There is also an **Android / TV APK** for couch watching.
+2. **One-time computer setup:** install VLC and the `vlc://` handler — see [Setup for playback](/setup).
+3. **Pick a title** from the library below — each page explains what changed.
+4. **Reaffirm for that film** the first time you open it (one checkbox; remembered forever on this device).
+5. Tap **Open in VLC** (or copy the stream URL into VLC → Media → Open Network Stream). There is also an **Android / TV APK** for couch watching.
 
 Media rides **thin IPFS**: if a file is not on the network yet, it **needs to be seeded** — the hash is known; the bytes just are not here yet.
 
