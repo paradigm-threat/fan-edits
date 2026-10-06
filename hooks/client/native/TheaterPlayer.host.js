@@ -270,14 +270,13 @@
     return relayWasmPrefix() + 'relay_video_wasm_pkg/relay_video_wasm_bg.wasm';
   }
 
-  /** Build ordered ladder: HEVC archival MP4 when decodable, then H.264 web/mobile. */
+  /** Build ordered ladder: archival MKV/HEVC master first; optional H.264 rungs if present. */
   function buildSrcLadder(props, preferredSrc) {
     const preferred = String(preferredSrc || prop(props, 'src', '') || '');
     const web = prop(props, 'srcWeb', '') || prop(props, 'data-src-web', '');
     const mobile = prop(props, 'srcMobile', '') || prop(props, 'data-src-mobile', '');
     const master = prop(props, 'srcMaster', '') || prop(props, 'data-src-master', '');
     const avc = canPlayAvcMp4();
-    const hevc = canPlayHevcMp4();
     const desktop = prefersDesktopPlayback();
     const order = [];
     function push(kind, url) {
@@ -288,8 +287,8 @@
       }
       order.push({ kind: kind, src: u });
     }
-    // HEVC archival first when the browser reports HEVC; else H.264 ladder then master fallback.
-    if (hevc) push('master', master);
+    // Library default: full-quality master (MKV). In-page Play is not the product path.
+    push('master', master);
     if (desktop) {
       if (avc) {
         push('web', web);
@@ -301,7 +300,6 @@
         push('web', web);
       }
     }
-    if (master && (!hevc || order.length === 0)) push('master', master);
     if (preferred) {
       let idx = -1;
       for (let i = 0; i < order.length; i++) {
@@ -537,7 +535,7 @@
   }
 
   function downloadLabelForKind(kind, src) {
-    if (kind === 'master') return 'Full quality (HEVC MP4)';
+    if (kind === 'master') return 'Full quality (MKV)';
     if (kind === 'web') return '1080p (H.264 MP4)';
     if (kind === 'mobile') return '720p (H.264 MP4)';
     if (kind === 'sub') {
@@ -547,15 +545,132 @@
       return 'Subtitles';
     }
     const s = String(src || '').toLowerCase();
+    if (s.indexOf('.mkv') >= 0) return 'Full quality (MKV)';
     if (s.indexOf('.hevc.mp4') >= 0) return 'Full quality (HEVC MP4)';
-    if (s.indexOf('.mkv') >= 0) return 'Full quality (legacy MKV)';
     if (s.indexOf('1080') >= 0 || s.indexOf('.web-') >= 0) return '1080p (H.264 MP4)';
     if (s.indexOf('720') >= 0 || s.indexOf('mobile') >= 0) return '720p (H.264 MP4)';
     if (s.indexOf('.vtt') >= 0 || s.indexOf('.srt') >= 0) return 'Subtitles';
     return 'Download';
   }
 
-  /** Calm download row: MP4 rungs + shared subtitle files (always below the player). */
+  function absoluteMediaUrl(url) {
+    const u = String(url || '');
+    if (!u) return '';
+    try {
+      return String(new global.URL(u, global.location.href));
+    } catch (_) {
+      return u;
+    }
+  }
+
+  /**
+   * Primary watch path: stream MKV/HEVC in VLC (or similar), not in-page <video>.
+   * Stream URL is filled once a mirror probe succeeds.
+   */
+  function buildExternalWatchPanel() {
+    const wrap = global.document.createElement('div');
+    wrap.className = 'fb-theater-external';
+    wrap.setAttribute('data-fb-external-watch', '1');
+    wrap.style.display = 'none';
+
+    const heading = global.document.createElement('p');
+    heading.className = 'fb-theater-downloads-label';
+    heading.textContent = 'Watch in an external player';
+    wrap.appendChild(heading);
+
+    const steps = global.document.createElement('ol');
+    steps.className = 'fb-theater-external-steps';
+    const stepTexts = [
+      'Install VLC (free) if you do not have it yet.',
+      'Copy the stream URL below.',
+      'In VLC: Media → Open Network Stream… → paste → Play.',
+    ];
+    for (let i = 0; i < stepTexts.length; i++) {
+      const li = global.document.createElement('li');
+      li.textContent = stepTexts[i];
+      steps.appendChild(li);
+    }
+    wrap.appendChild(steps);
+
+    const urlRow = global.document.createElement('div');
+    urlRow.className = 'fb-theater-external-url-row';
+    const code = global.document.createElement('code');
+    code.className = 'fb-theater-external-url';
+    code.setAttribute('data-fb-stream-url', '1');
+    code.textContent = 'Waiting for a stream mirror…';
+    urlRow.appendChild(code);
+    wrap.appendChild(urlRow);
+
+    const actions = global.document.createElement('div');
+    actions.className = 'fb-theater-external-actions fb-theater-downloads-links';
+
+    const copyBtn = global.document.createElement('button');
+    copyBtn.type = 'button';
+    copyBtn.className = 'fb-btn fb-btn-primary fb-theater-copy-stream';
+    copyBtn.textContent = 'Copy stream URL';
+    copyBtn.disabled = true;
+    copyBtn.addEventListener('click', function () {
+      const u = wrap.getAttribute('data-stream-url') || '';
+      if (!u) return;
+      try {
+        if (global.navigator && global.navigator.clipboard && global.navigator.clipboard.writeText) {
+          global.navigator.clipboard.writeText(u).then(
+            function () {
+              copyBtn.textContent = 'Copied';
+              global.setTimeout(function () {
+                copyBtn.textContent = 'Copy stream URL';
+              }, 1600);
+            },
+            function () {
+              copyBtn.textContent = 'Copy failed';
+            },
+          );
+          return;
+        }
+      } catch (_) {}
+      try {
+        const ta = global.document.createElement('textarea');
+        ta.value = u;
+        global.document.body.appendChild(ta);
+        ta.select();
+        global.document.execCommand('copy');
+        global.document.body.removeChild(ta);
+        copyBtn.textContent = 'Copied';
+        global.setTimeout(function () {
+          copyBtn.textContent = 'Copy stream URL';
+        }, 1600);
+      } catch (_) {}
+    });
+    actions.appendChild(copyBtn);
+
+    const vlcLink = global.document.createElement('a');
+    vlcLink.className = 'fb-btn fb-theater-get-vlc';
+    vlcLink.href = 'https://www.videolan.org/vlc/';
+    vlcLink.target = '_blank';
+    vlcLink.rel = 'noopener noreferrer';
+    vlcLink.textContent = 'Get VLC';
+    actions.appendChild(vlcLink);
+
+    wrap.appendChild(actions);
+
+    const note = global.document.createElement('p');
+    note.className = 'fb-theater-downloads-note';
+    note.textContent =
+      'Browsers still cannot play Matroska + HEVC in-page reliably. Streaming in VLC avoids that maze and keeps full quality with embedded subs.';
+    wrap.appendChild(note);
+
+    wrap.__setStreamUrl = function (url) {
+      const abs = absoluteMediaUrl(url);
+      if (!abs) return;
+      wrap.setAttribute('data-stream-url', abs);
+      wrap.style.display = 'block';
+      code.textContent = abs;
+      copyBtn.disabled = false;
+    };
+    return wrap;
+  }
+
+  /** Calm download row: master MKV + optional rungs + shared subtitle files. */
   function buildDownloadRow(props, ladder) {
     const wrap = global.document.createElement('div');
     wrap.className = 'fb-theater-downloads';
@@ -617,7 +732,7 @@
     const note = global.document.createElement('p');
     note.className = 'fb-theater-downloads-note';
     note.textContent =
-      'Save the MP4 and matching subtitle files together, then open them in VLC or another video player.';
+      'Prefer Copy stream URL above for playback. Download the MKV for offline use, then open it in VLC (embedded subs travel with the file).';
     wrap.appendChild(note);
     const boardRow = global.document.createElement('p');
     boardRow.className = 'fb-theater-downloads-note';
@@ -824,6 +939,17 @@
         if (ctx.uiPending) ctx.uiPending.style.display = 'none';
       } catch (_) {}
       ctx.clearPlaybackError();
+      // External-stream masters: no in-page play — nudge toward VLC.
+      let externalOnly = false;
+      try {
+        externalOnly =
+          (ctx.root && ctx.root.getAttribute('data-playback-engine') === 'external') ||
+          video.style.display === 'none';
+      } catch (_) {}
+      if (externalOnly) {
+        ctx.setPlaybackNote('Use Copy stream URL and open in VLC — in-page Play is not used for MKV.');
+        return;
+      }
       ctx.setPlaybackNote('Starting playback…');
       try {
         video.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
@@ -875,6 +1001,7 @@
     const root = global.document.createElement('div');
     root.className = 'fb-theater-player';
     root.setAttribute('data-seed-state', seedState);
+    let externalWatch = null;
 
     const locked = global.document.createElement('div');
     locked.className = 'fb-media fb-media-locked';
@@ -1035,6 +1162,7 @@
 
     const ctx = {
       video: video,
+      root: root,
       uiShell: shell,
       uiPending: pending,
       isReady: seedState === 'ready' && !!src,
@@ -1385,13 +1513,17 @@
       }
       const cur = srcLadder[ladderIndex];
       const failUrl = activeMirror && activeMirror.mediaUrl ? activeMirror.mediaUrl : '';
-      if (
-        cur &&
-        cur.kind === 'master' &&
-        looksMatroskaUrl(failUrl) &&
-        wasmTriedForUrl !== failUrl
-      ) {
-        mountWasmPlayer(failUrl, activeMirror && activeMirror.label, '');
+      if (cur && cur.kind === 'master' && failUrl) {
+        if (externalWatch && typeof externalWatch.__setStreamUrl === 'function') {
+          externalWatch.__setStreamUrl(failUrl);
+        }
+        root.setAttribute('data-playback-engine', 'external');
+        video.style.display = 'none';
+        pending.style.display = 'none';
+        shell.style.display = 'block';
+        ctx.setPlaybackNote('Stream URL ready — open in VLC (Media → Open Network Stream).');
+        hint.textContent =
+          'In-page play is not used for full-quality MKV. Copy the stream URL below.';
         return;
       }
       if (advanceRendition('Playback failed — trying next quality…')) {
@@ -1421,7 +1553,10 @@
     unlock.appendChild(pending);
     unlock.appendChild(shell);
     root.appendChild(unlock);
+    externalWatch = buildExternalWatchPanel();
+    root.appendChild(externalWatch);
     root.appendChild(buildDownloadRow(props, srcLadder));
+    root.setAttribute('data-playback-engine', 'external');
 
     let attempt = 0;
     let timer = null;
@@ -1637,35 +1772,34 @@
       try {
         shell.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       } catch (_) {}
-      // Matroska masters: WASM demux → WebCodecs before HTML5 (native usually cannot).
-      if (mediaUrl && looksMatroskaUrl(mediaUrl)) {
-        mountWasmPlayer(mediaUrl, where, sizeNote);
-        return;
+      // Library masters (MKV / HEVC): external player stream — do not auto-play or WASM-escalate.
+      const isLibraryMaster =
+        looksMatroskaUrl(mediaUrl) ||
+        looksHevcUrl(mediaUrl) ||
+        (srcLadder[ladderIndex] && srcLadder[ladderIndex].kind === 'master');
+      if (mediaUrl && isLibraryMaster) {
+          clearPlayWatches();
+          try {
+            video.removeAttribute('src');
+            video.load();
+          } catch (_) {}
+          video.style.display = 'none';
+          if (externalWatch && typeof externalWatch.__setStreamUrl === 'function') {
+            externalWatch.__setStreamUrl(mediaUrl);
+          }
+          root.setAttribute('data-playback-engine', 'external');
+          ctx.setPlaybackNote(
+            'Stream ready via ' + where + sizeNote + ' — copy the URL and open in VLC.',
+          );
+          ctx.clearPlaybackError();
+          errNudge.textContent =
+            'Use Copy stream URL below (Media → Open Network Stream in VLC), or Download the MKV.';
+          errNudge.style.display = 'none';
+          return;
       }
-      if (mediaUrl && looksHevcUrl(mediaUrl) && hevcLikelyUnsupported(mediaUrl)) {
-        const note =
-          'This browser does not report HEVC (H.265) support, so in-page play may not work.';
-        reportTheaterIssue({
-          severity: 'major',
-          code: 'hevc_unsupported',
-          message: note,
-          rendition: currentRendition(srcLadder, ladderIndex),
-          engine: 'native',
-        });
-        if (advanceRendition(note + ' Trying a compatibility file…')) return;
-        try {
-          video.removeAttribute('src');
-          video.load();
-        } catch (_) {}
-        ctx.setPlaybackError(note);
-        errNudge.textContent =
-          'Use “Download the movie” below and open the HEVC MP4 in VLC (or another HEVC-capable player).';
-        errNudge.style.display = 'block';
-        retryBtn.style.display = 'inline-block';
-        reportPendingBtn.style.display = 'inline-block';
-        return;
-      }
+      video.style.display = '';
       if (mediaUrl) setVideoSource(mediaUrl);
+      root.setAttribute('data-playback-engine', 'native');
       ctx.setPlaybackNote('Ready via ' + where + sizeNote);
       applyCommands(ctx, props);
       if (prop(props, 'playing', 'false') === 'true' || root.getAttribute('data-play-requested') === '1') {
@@ -1673,7 +1807,6 @@
         const p = video.play();
         if (p && typeof p.then === 'function') {
           p.then(function () {
-            // play() resolved — still wait for frames via play-start / buffer watches
             ctx.setPlaybackNote('Buffering via ' + where + sizeNote + '…');
             armBufferStallWatch();
           }).catch(function (err) {

@@ -387,6 +387,10 @@ themes:
         color: "var(goldDim)"
       ".fb-status-ready .fb-title-card-meta":
         color: "var(ok)"
+      ".fb-status-showing .fb-title-card-meta":
+        color: "var(ok)"
+      ".fb-status-coming_soon .fb-title-card-meta":
+        color: "var(creamMuted)"
       ".fb-status-needs-seed .fb-title-card-meta":
         color: "var(warn)"
       ".fb-home-lead":
@@ -675,6 +679,28 @@ themes:
         padding: "12px 14px"
         border: "1px solid var(border)"
         background: "rgba(0,0,0,0.28)"
+      ".fb-theater-external":
+        marginTop: "14px"
+        padding: "12px 14px"
+        border: "1px solid #5a4a2a"
+        background: "rgba(40,28,12,0.45)"
+      ".fb-theater-external-steps":
+        margin: "0 0 12px"
+        paddingLeft: "1.25rem"
+        fontSize: "0.9rem"
+        color: "var(creamMuted)"
+        lineHeight: "1.45"
+      ".fb-theater-external-url":
+        display: "block"
+        fontSize: "0.75rem"
+        wordBreak: "break-all"
+        color: "var(cream)"
+      ".fb-theater-external-actions":
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        gap: "10px"
+        marginBottom: "8px"
       ".fb-theater-downloads-label":
         margin: "0 0 8px"
         fontSize: "0.95rem"

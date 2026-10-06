@@ -1,12 +1,10 @@
 /**
  * Android CleverScript host for TheaterPlayer.
- * Archival master first (ExoPlayer progressive), then H.264 web/mobile ladder.
- * When MediaCodec rejects a master, fall through with the same compat UX as web
- * (recommend 1080p/720p — no browser WASM on device; JNI demux is later).
- * Passes subtitlesJson for Media3 text tracks (VTT/SRT).
+ * Default: Open in external player for HTTPS MKV stream (avoids ExoPlayer cache /
+ * codec surprises). In-app VideoPlayer remains optional secondary.
+ * Download still available for offline.
  */
 import React, { useState } from 'react'
-import { VideoPlayer } from '@clevertree/video'
 
 function propStr(p, key) {
   try {
@@ -17,7 +15,29 @@ function propStr(p, key) {
   return ''
 }
 
-/** Ordered ladder: master MKV → web 1080p → mobile 720p. */
+/** Absolute same-origin URL for streaming in an external app. */
+function absoluteHref(href) {
+  const h = '' + (href || '')
+  if (h.length === 0) {
+    return ''
+  }
+  if (h.indexOf('http://') === 0 || h.indexOf('https://') === 0) {
+    return h
+  }
+  try {
+    if (typeof location !== 'undefined' && location.href) {
+      // CleverScript-safe: avoid URL constructor if fragile; join origin + path
+      const origin = location.protocol + '//' + location.host
+      if (h.charAt(0) === '/') {
+        return origin + h
+      }
+      return origin + '/' + h
+    }
+  } catch (e2) {}
+  return h
+}
+
+/** Prefer archival master MKV. */
 function androidSrcLadder(p) {
   const mobile = propStr(p, 'srcMobile')
   const web = propStr(p, 'srcWeb')
@@ -109,8 +129,38 @@ function downloadLinks(p) {
       <p className="fb-theater-downloads-label">Download the movie</p>
       <div className="fb-theater-downloads-links">{links}</div>
       <p className="fb-theater-downloads-note">
-        Save a file, then open it in a video player on your device.
+        Prefer Open in external player above. Download for offline, then open in VLC.
       </p>
+    </div>
+  )
+}
+
+function externalWatchPanel(streamSrc) {
+  const abs = absoluteHref(streamSrc)
+  // intent:// opens the system chooser / VLC when the shell navigates the href
+  let intentHref = abs
+  if (abs.indexOf('https://') === 0 || abs.indexOf('http://') === 0) {
+    intentHref =
+      'intent:' +
+      abs +
+      '#Intent;action=android.intent.action.VIEW;type=video/*;end'
+  }
+  return (
+    <div className="fb-theater-external" data-fb-external-watch="1" data-playback-engine="external">
+      <p className="fb-theater-downloads-label">Watch in an external player</p>
+      <p className="fb-theater-downloads-note">
+        Full-quality HEVC MKV streams best in VLC or another player — not the in-app browser
+        cache. Tap below to open the stream URL with an app on this device.
+      </p>
+      <div className="fb-theater-downloads-links">
+        <a className="fb-btn fb-btn-primary" href={intentHref}>
+          Open in external player
+        </a>
+        <a className="fb-btn" href={abs} download="">
+          Download MKV
+        </a>
+      </div>
+      <p className="fb-theater-downloads-note">{abs}</p>
     </div>
   )
 }
@@ -124,7 +174,6 @@ export default function TheaterPlayer(props) {
   const srcState = useState('')
   const chosenSrc = srcState[0]
   const setChosenSrc = srcState[1]
-  const subsJson = propStr(p, 'subtitlesJson') || '[]'
 
   if (p.unlocked !== true) {
     return (
@@ -153,7 +202,7 @@ export default function TheaterPlayer(props) {
           <p>
             {seed === 'idle'
               ? 'Getting the movie ready…'
-              : 'Sorry — we couldn’t play this movie here.'}
+              : 'Sorry — we couldn’t prepare this stream yet.'}
           </p>
           <p>You can download the movie below and open it on your device.</p>
           <button
@@ -170,15 +219,8 @@ export default function TheaterPlayer(props) {
     )
   }
   return (
-    <div className="fb-theater-player">
-      <VideoPlayer
-        src={chosenSrc}
-        controls={true}
-        playing={p.playing === true}
-        command={p.command}
-        commandSeq={p.commandSeq}
-        subtitlesJson={subsJson}
-      />
+    <div className="fb-theater-player" data-playback-engine="external">
+      {externalWatchPanel(chosenSrc)}
       {downloadLinks(p)}
       {p.cid ? <p className="fb-theater-tech-body">CID {p.cid}</p> : null}
     </div>

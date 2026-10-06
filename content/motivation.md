@@ -38,38 +38,37 @@ Historic leaders have described controlled opposition as a containment strategy.
 
 ## Pushback by doing the work
 
-Flashback Repository is pushback under ownership rules: make the cut, document it, host it (primarily over IPFS), require that viewers own the commercial original. Watch on the web or via the Android / TV app. No pirate archive. No apology for wanting better versions of films we already bought.
+Flashback Repository is pushback under ownership rules: make the cut, document it, host it (primarily over IPFS), require that viewers own the commercial original. Watch via **external player stream** (VLC and friends) from the theater page, or later via the Android / TV app. No pirate archive. No apology for wanting better versions of films we already bought.
 
 Projects stay in **Kdenlive + melt** so the library remains editable with open-source tools — see [Submissions](/submit).
 
-## Why MP4 (and external subtitles), not MKV
+## Why MKV + HEVC (and an external player), not in-browser Play
 
-We publish finished cuts as **HEVC MP4** with **sidecar subtitle files**, not as Matroska (`.mkv`).
+We publish finished cuts as **full-quality HEVC Matroska (`.mkv`)** with **embedded subtitles** — the same file the edit produces. That is the best experience for picture, audio, and captions in one container.
 
 ### Navigating the standards maze
 
-Getting from “I own the film and I made a better cut” to “a friend can press Play in a browser” is not a single button. It is a maze of containers, codecs, licenses, and `canPlayType` answers that differ by OS and hardware.
+Getting from “I own the film and I made a better cut” to “a friend presses Play in Chrome” is not a single button. It is a maze of containers, codecs, licenses, and `canPlayType` answers that differ by OS and hardware.
 
-You would expect that maze to have thinned out by now. For a small library that just wants to host owned edits over IPFS, the path still feels deliberately hard:
+You would expect that maze to have thinned out by now. It has not. For a small library that just wants to host owned edits over IPFS, the path still feels deliberately hard — absurd for this decade:
 
-- **Matroska (`.mkv`)** is what editors actually finish in. Browsers never made full Matroska a first-class `<video>` format. The web settled on **ISO BMFF / MP4** for progressive and Range streaming, and on **WebM** as a Matroska-derived profile for royalty-sensitive codecs — not “open the `.mkv` and play.”
-- **HEVC / H.265** is the efficient codec many of our finals already use. Safari often plays it. Chrome and Firefox only sometimes do — often only when the OS exposes a hardware decoder. On many Linux desktops, Chrome reports **no HEVC at all**, so in-page play fails even when the file is fine. Download + VLC still works because VLC brings its own decoders.
-- **H.264** is the universal web fallback, but encoding a second full ladder is days of CPU and a second archive of the same cut. Big platforms absorb that cost as a matter of course.
-- **VP9 / AV1** power most of YouTube’s browser delivery — adaptive ladders, royalty-friendlier for the open web — built for fleets that re-encode everything continuously. That is not a weekend workflow for a personal catalog of finished fan edits.
+- **Matroska (`.mkv`)** is what editors finish in. Browsers never made full Matroska a first-class `<video>` format. The web settled on **ISO BMFF / MP4** and **WebM**, not “open the `.mkv` and play.”
+- **HEVC / H.265** is the efficient codec our finals use. Safari sometimes plays HEVC-in-MP4. Chrome and Firefox often report **no HEVC at all**, or accept a probe and then throw `NotSupportedError` on the real file.
+- **In-page “WASM players”** we tried only **demux** into WebCodecs — they do not ship a software HEVC decoder, and they refuse sources larger than a tiny in-memory cap. A feature film will not fit. Demux is not watch.
+- **H.264 re-encode ladders** would make in-page Play boringly reliable — at the cost of days of CPU and a second multi‑gig archive of every cut. That is how big platforms paper over the maze. It is not how a personal catalog should have to ship.
+- Browsers also will not **hand a stream to VLC** with one reliable click. Custom URL schemes are flaky. The honest desktop path is **copy the HTTPS URL → Media → Open Network Stream** (or Download and open locally). Android can offer a real **Open in external player** intent.
 
-So the maze is not “video is hard.” It is that **easy universal in-browser play** was standardized around stacks and budgets that suit the largest distributors. Independents who already own the discs and just want to share a cleaner cut keep hitting container walls, codec walls, and silent empty strings from `canPlayType`.
+So the maze is not “video is hard.” It is that **universal in-browser Play** was standardized around stacks and budgets that suit the largest distributors. Independents who already own the discs keep hitting container walls, codec walls, silent empty strings from `canPlayType`, and demux toys that cannot hold a movie.
 
-It can feel like the only way the incumbents could keep the open web from competing with their players: not a ban on the word *Matroska* or *HEVC*, but a thicket of defaults where “ship one file and Play works everywhere” never quite arrives.
+It can feel like the only way incumbents could keep the open web from competing with their players: not a ban on the word *Matroska* or *HEVC*, but a thicket where “ship one best file and Play works everywhere” never quite arrives.
 
-We navigated it anyway, toward a start:
+We stopped bending the file to the thicket. The start path that preserves quality:
 
-1. Remux the finished edit into a **single fragmented HEVC MP4** (same picture, streamable with HTTP `Range`).
-2. Drop published final MKVs from the play path.
-3. Keep **external** default (and enhanced) subtitles beside the file.
-4. Theater plays where the browser reports HEVC; otherwise say so clearly and point at **Download** for VLC — no endless Buffering.
+1. Keep the finished edit as **one HEVC MKV** with **embedded** default (and enhanced) subtitles.
+2. Host it over HTTPS / IPFS with `Range` so players can stream and seek.
+3. Theater **default**: copy stream URL → open in **VLC** (or another capable player) — no endless Buffering, no fake in-page engine.
+4. Keep looking for a real in-page MKV/HEVC path later; do not pretend we have one today.
 
 The name *Matroska* nods at Russian nesting dolls (*matryoshka*). The practical barrier is standardization and product incentives, not a formal ban on the word.
 
-Sidecar subs travel next to the file so the site player and offline apps can find them without relying on a muxed Matroska track browsers ignore.
-
-The allowed part is the point. The rest is craft — and refusing to wait for the maze to become optional.
+The allowed part is the point. The rest is craft — and refusing to wait for the maze to become optional before we share a better cut.

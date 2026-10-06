@@ -183,16 +183,18 @@ def is_web_or_skip_media(name: str) -> bool:
 
 
 def _media_rank(name: str) -> tuple[int, int, str]:
-    """Prefer HEVC MP4 archival masters over legacy MKV."""
+    """Prefer final MKV (embedded subs) over HEVC MP4 remux."""
     n = name.lower()
-    if n.endswith(HEVC_SUFFIX):
+    if n.endswith(".mkv") and "clean" not in n and "seam" not in n:
         tier = 0
-    elif n.endswith(".mp4") and not is_web_or_skip_media(name):
+    elif n.endswith(HEVC_SUFFIX):
         tier = 1
     elif n.endswith(".mkv"):
         tier = 2
-    else:
+    elif n.endswith(".mp4") and not is_web_or_skip_media(name):
         tier = 3
+    else:
+        tier = 4
     bonus = 0
     if any(x in n for x in ("final", "edition", "debugged", "deanna")):
         bonus = -1
@@ -344,6 +346,25 @@ def status_for(folder: Path, media: str | None, readme: Path) -> str:
     return "wip"
 
 
+# Halloween / rotation: only these slugs appear in Now Showing (external-player stream).
+NOW_SHOWING_SLUGS = frozenset(
+    {
+        "the-mummy-1999-debugged",
+        "the-mummy-returns-2001-debugged",
+        "van-helsing-deanna-d",
+    }
+)
+
+
+def publish_status(slug: str, raw: str) -> str:
+    """Map seed readiness to showing | coming_soon | wip | needs-seed."""
+    if slug in NOW_SHOWING_SLUGS and raw in ("ready", "showing"):
+        return "showing"
+    if raw == "ready":
+        return "coming_soon"
+    return raw
+
+
 def main() -> None:
     manifest_paths = load_manifest_paths()
     projects = []
@@ -365,7 +386,7 @@ def main() -> None:
         if not poster:
             poster = media_root_poster(slug)
         subs = find_subtitles(folder, folder_rel)
-        status = status_for(folder, media, ROOT / rel)
+        status = publish_status(slug, status_for(folder, media, ROOT / rel))
         # CleverScript SSR cannot reliably walk nested object arrays; ship a ready JSON string.
         tracks_for_player = []
         for t in subs:

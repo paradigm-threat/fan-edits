@@ -878,7 +878,7 @@ function projectSlug(p) {
   return ''
 }
 
-/** Catalog items JSON for park-native NowShowing (lcd + carousel). */
+/** Catalog items JSON for park-native NowShowing (lcd + carousel). Only status=showing. */
 function nowShowingItemsJson(projects) {
   let out = []
   let list = []
@@ -890,6 +890,15 @@ function nowShowingItemsJson(projects) {
     list = []
   }
   for (let i = 0; i < list.length; i++) {
+    let st = ''
+    try {
+      if (list[i] && list[i].status) {
+        st = '' + list[i].status
+      }
+    } catch (eSt) {}
+    if (st !== 'showing') {
+      continue
+    }
     let t = projectTitle(list[i])
     let s = projectSlug(list[i])
     if (t.length > 0 && s.length > 0) {
@@ -897,6 +906,8 @@ function nowShowingItemsJson(projects) {
       try {
         if (list[i] && list[i].poster) {
           poster = '/' + list[i].path + '/' + list[i].poster
+        } else if (list[i] && list[i].image) {
+          poster = '/' + list[i].path + '/' + list[i].image
         }
       } catch (e2) {}
       out = out.concat([{ title: t, href: '/' + s, poster: poster }])
@@ -1124,6 +1135,12 @@ export default function FlashbackApp() {
 
   function titleCard(p) {
     const status = p.status || 'wip'
+    let meta = status
+    if (status === 'showing') {
+      meta = 'now showing'
+    } else if (status === 'coming_soon' || status === 'ready') {
+      meta = 'coming soon'
+    }
     return (
       <a
         key={p.slug}
@@ -1136,7 +1153,7 @@ export default function FlashbackApp() {
         <span className="fb-title-card-body">
           <span className="fb-title-card-name">{p.title}</span>
           {p.blurb ? <span className="fb-title-card-blurb">{p.blurb}</span> : null}
-          <span className="fb-title-card-meta">{status}</span>
+          <span className="fb-title-card-meta">{meta}</span>
         </span>
       </a>
     )

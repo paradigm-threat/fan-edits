@@ -13,7 +13,8 @@ INGEST = Path.home() / "dev/relay/relay-gateway/scripts/relay-ipfs-ingest"
 
 WEB_GLOBS = ("*.web-1080p.mp4", "*.mobile-720p.mp4")
 HEVC_GLOBS = ("*.hevc.mp4",)
-MASTER_GLOBS = ("*.hevc.mp4", "*.mkv")  # prefer HEVC MP4 when both exist
+MASTER_GLOBS = ("*.mkv", "*.hevc.mp4")  # prefer final MKV with embedded subs
+
 
 
 def is_source_rip(name: str) -> bool:
@@ -95,15 +96,15 @@ def pairs() -> list[tuple[Path, Path]]:
             def name_score(p: Path) -> tuple[int, int, int]:
                 base_s, sz = score(p)
                 pn = p.stem.lower()
-                # Prefer remuxed HEVC MP4 over legacy MKV
-                if p.name.lower().endswith(".hevc.mp4"):
+                # Prefer final MKV (embedded subs) over HEVC MP4 remux
+                if p.suffix.lower() == ".mkv" and "clean" not in p.name.lower():
                     base_s += 40
-                elif p.suffix.lower() == ".mkv":
-                    base_s -= 5
-                # exact-ish title in filename
+                elif p.name.lower().endswith(".hevc.mp4"):
+                    base_s += 10
+                elif "clean" in p.name.lower():
+                    base_s += 5
                 if name.lower() in pn or pn in name.lower():
                     base_s += 20
-                # penalize wrong sibling (e.g. Sonic 2 file under Sonic)
                 for other in ("sonic 2", "sonic 3", "mummy returns", "revolutions", "reloaded"):
                     if other in pn and other not in name.lower():
                         base_s -= 30

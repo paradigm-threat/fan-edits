@@ -1,38 +1,27 @@
-# Published finals: HEVC MP4 only
+# Published finals: HEVC MKV (external player)
 
-**One file per title:** remux the final edit to `*.hevc.mp4` (`ffmpeg -c copy`).  
-**Do not run H.264 web/mobile encodes** for publish.
+**One file per title:** the finished edit as **HEVC Matroska** (`.mkv`) with **embedded subtitles**.  
+Theater default is **stream in an external player** (copy HTTPS URL → VLC Open Network Stream), not in-browser `<video>`.
 
 | Artifact | Suffix | Status |
 |----------|--------|--------|
-| Archival + theater | `*.hevc.mp4` | **Required** |
-| Final Matroska | `*.mkv` | **Remove** after remux |
+| Archival + theater master | `*.mkv` (HEVC, embedded subs) | **Required** |
+| HEVC MP4 remux | `*.hevc.mp4` | **Not required** for ship |
 | H.264 ladders | `*.web-1080p.mp4` / `*.mobile-720p.mp4` | **Not required** — cancelled |
 
-Modern browsers play HEVC MP4 for the most part; rare gaps use **Download** + VLC.
+Do **not** batch-encode H.264 web/mobile for publish. Optional later R&D may revisit in-page play; it is not the Halloween path.
 
-Subtitles: shared `subs/` (default + enhanced), title-aligned — not per-resolution.
+Sidecar `subs/` (VTT/SRT) may still exist for tooling; the MKV remains the watchable master with muxed tracks.
 
-## Remux (low CPU)
-
-```bash
-python3 scripts/remux-hevc-stream.py \
-  "/media/ari/HD/FanEditRender/<ProjectFolder>" \
-  --replace-source
-```
-
-`--replace-source` deletes the source `.mkv` after a successful remux. Add `--extract-subs` if `subs/` needs english/enhanced tracks.
-
-## Paths / status (NAS)
+## Paths / status
 
 | Path | Role |
 |------|------|
-| `/media/ari/HD/dev/fan-edits` | Synced git tree |
-| `/media/ari/HD/FanEditRender/<Project>/` | `*.hevc.mp4` + `subs/` |
-| `HEVC_REMUX_STATUS.md` | **Active** remux queue |
-| `WEB_REENCODE_STATUS.md` | H.264 — **cancelled** |
+| `/media/ari/HD/FanEditRender/<Project>/` | Final `*.mkv` (+ optional `subs/`) |
 | `SOURCE_RENDER_CONTINUE.md` | Other-machine handoff |
+| `WEB_REENCODE_STATUS.md` | H.264 — **cancelled** |
+| `HEVC_REMUX_STATUS.md` | MP4 remux — **not required** for ship |
 
-After remux: ingest `*.hevc.mp4`, `generate-index-json.py`, publish tip.
+After render: ingest the MKV stub, `generate-index-json.py`, publish tip. Pin only **Now Showing** titles on the gateway.
 
-Scripts `encode-web-renditions.py` / `render-web-from-kdenlive.py` remain in-tree for emergencies only — do not use them for the library rollout.
+Scripts `encode-web-renditions.py` / `remux-hevc-stream.py` remain in-tree for experiments only.

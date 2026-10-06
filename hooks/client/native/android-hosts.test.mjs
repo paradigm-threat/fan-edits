@@ -53,23 +53,22 @@ assert.match(nowShowing, /<a /)
 assert.match(nowShowing, /href=/)
 assert.equal(/lcd|marquee/i.test(nowShowing), false, 'android now-showing is a row, not the web marquee')
 
-assert.match(theater, /from '@clevertree\/video'/)
-assert.match(theater, /<VideoPlayer/)
+assert.match(theater, /Open in external player/)
+assert.match(theater, /intent:/)
 assert.match(theater, /relayAssetStatus=1/)
 assert.match(theater, /p\.unlocked/)
-assert.match(theater, /playing=\{p\.playing === true\}/)
-assert.match(theater, /command=\{p\.command\}/)
-assert.match(theater, /commandSeq=\{p\.commandSeq\}/)
 assert.match(theater, /p\.cid/)
 assert.match(theater, /srcMobile/)
 assert.match(theater, /srcWeb/)
 assert.match(theater, /srcMaster/)
-assert.match(theater, /subtitlesJson/)
 assert.match(theater, /androidSrcLadder|pickSeededSrc/)
 assert.match(theater, /Download the movie/)
 assert.match(theater, /Full quality \(MKV\)/)
+assert.match(theater, /data-playback-engine="external"/)
+assert.match(theater, /externalWatchPanel/)
 // MKV master is preferred before MP4 fallbacks
 assert.match(theater, /master\.length > 0/)
+assert.equal(theater.includes("from '@clevertree/video'"), false, 'android theater defaults to external player, not VideoPlayer')
 
 for (const [name, src] of [
   ['Affirmation.android.js', affirmation],
