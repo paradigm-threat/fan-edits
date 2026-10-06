@@ -1026,9 +1026,10 @@
     const video = global.document.createElement('video');
     video.className = 'fb-media-video relay-video-player';
     video.setAttribute('playsinline', '');
-    video.setAttribute('preload', 'metadata');
+    video.setAttribute('preload', 'none');
     video.controls = true;
-    if (src) video.src = src;
+    // Do not assign src until a mirror probe succeeds — avoids Buffering… on a bare logical path
+    // before HEVC support / Range readiness is known.
     if (poster) video.poster = poster;
     attachSubtitleTracks(video, subtitleTracks);
 
@@ -1652,8 +1653,14 @@
           engine: 'native',
         });
         if (advanceRendition(note + ' Trying a compatibility file…')) return;
+        try {
+          video.removeAttribute('src');
+          video.load();
+        } catch (_) {}
         ctx.setPlaybackError(note);
-        hint.textContent = 'Use “Download the movie” below and open the HEVC MP4 in VLC.';
+        errNudge.textContent =
+          'Use “Download the movie” below and open the HEVC MP4 in VLC (or another HEVC-capable player).';
+        errNudge.style.display = 'block';
         retryBtn.style.display = 'inline-block';
         reportPendingBtn.style.display = 'inline-block';
         return;
