@@ -34,6 +34,20 @@ test('web host opens vlc:// with copy + delayed fail status', () => {
   assert.match(host, /setTimeout/)
 })
 
+test('web host supports Android browser via intent VIEW', () => {
+  assert.match(host, /function isAndroidBrowser/)
+  assert.match(host, /function intentViewUrl/)
+  assert.match(host, /android\.intent\.action\.VIEW/)
+  assert.match(host, /type=video\/\*/)
+  assert.match(host, /scheme=https/)
+  assert.match(host, /Open in external player/)
+  assert.match(host, /android-intent/)
+  assert.match(host, /play\.google\.com\/store\/apps\/details\?id=org\.videolan\.vlc/)
+  assert.match(host, /function navigateExternal/)
+  assert.match(host, /visibilitychange/)
+  assert.match(host, /pagehide/)
+})
+
 test('registry loads ExternalPlay.host.js', () => {
   assert.match(registry, /ExternalPlay\.host\.js/)
   const idx = registry.indexOf('ExternalPlay.host.js')

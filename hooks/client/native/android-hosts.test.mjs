@@ -80,7 +80,9 @@ assert.match(externalPlay, /Open in external player/)
 assert.match(externalPlay, /intent:/)
 assert.match(externalPlay, /android\.intent\.action\.VIEW/)
 assert.match(externalPlay, /type=video\/\*/)
+assert.match(externalPlay, /scheme=https/)
 assert.match(externalPlay, /Download MKV/)
+assert.match(externalPlay, /play\.google\.com\/store\/apps\/details\?id=org\.videolan\.vlc/)
 assert.match(externalPlay, /data-fb-external-play/)
 assert.equal(
   /vlc:\/\//.test(codeOnly(externalPlay)),

@@ -607,6 +607,14 @@ themes:
         opacity: "1"
         pointerEvents: "auto"
         cursor: "pointer"
+      ".fb-theater-open-intent":
+        opacity: "1"
+        pointerEvents: "auto"
+        cursor: "pointer"
+      ".fb-theater-download-mkv":
+        opacity: "1"
+        pointerEvents: "auto"
+        cursor: "pointer"
       ".fb-btn-setup":
         opacity: "1"
         pointerEvents: "auto"

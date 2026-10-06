@@ -38,7 +38,7 @@ function intentHrefFor(abs) {
     return (
       'intent:' +
       abs +
-      '#Intent;action=android.intent.action.VIEW;type=video/*;end'
+      '#Intent;action=android.intent.action.VIEW;type=video/*;scheme=https;end'
     )
   }
   return abs
@@ -89,14 +89,22 @@ export default function ExternalPlay(props) {
       </p>
       <code className="fb-theater-external-url">{abs}</code>
       <div className="fb-external-play-actions fb-theater-external-actions">
-        <a className="fb-btn fb-btn-primary fb-btn-external-play" href={intentHref}>
+        <a className="fb-btn fb-btn-primary fb-btn-external-play fb-theater-open-intent" href={intentHref}>
           Open in external player
         </a>
-        <a className="fb-btn" href={abs} download="">
+        <a className="fb-btn fb-theater-download-mkv" href={abs} download="">
           Download MKV
         </a>
-        <a className="fb-btn" href={setupHref}>
+        <a className="fb-btn fb-btn-setup" href={setupHref}>
           Setup
+        </a>
+        <a
+          className="fb-btn fb-theater-get-vlc"
+          href="https://play.google.com/store/apps/details?id=org.videolan.vlc"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Get VLC (Play Store)
         </a>
       </div>
     </div>

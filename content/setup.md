@@ -112,15 +112,27 @@ Same house rule as always: confirm you own a legal commercial copy of the origin
 
 | Symptom | Fix |
 | --- | --- |
-| Click does nothing | Run the installer again; allow the browser’s “Open VLC / Flashback VLC Protocol?” prompt |
+| Click does nothing (desktop) | Run the installer again; allow the browser’s “Open VLC / Flashback VLC Protocol?” prompt |
+| Click does nothing (Android) | Install VLC from Play Store; allow the app chooser; or Copy stream URL → VLC → Network |
 | “VLC not found” | Install VLC, or put `vlc` on your PATH |
 | 404 / seed message | That title’s bytes are not pinned on a reachable gateway yet — try later or another Now Showing title |
 | Works in VLC via paste but not via `vlc://` | Handler not registered for your user; re-run the OS installer above |
+
+## Android phone / tablet browser
+
+You do **not** need the desktop `vlc://` installers. Flashback detects Android browsers and uses an **`intent:`** link so the system app chooser can open the HTTPS stream in VLC (or another player).
+
+1. Install [VLC for Android](https://play.google.com/store/apps/details?id=org.videolan.vlc) from the Play Store.
+2. Open a title in Chrome (or another Android browser) → confirm ownership.
+3. Tap **Open in external player** → pick **VLC** (or another app that plays network video).
+4. If the chooser does not appear: **Copy stream URL** → open VLC → **Network** / **Open network stream** → paste → Play.
+
+The Flashback **Android / TV APK** uses the same intent path inside the app shell.
 
 ## Manual fallback (any OS)
 
 1. Open the title on Flashback → confirm ownership.
 2. **Copy stream URL**.
-3. VLC → **Media → Open Network Stream…** → paste → **Play**.
+3. VLC → **Media → Open Network Stream…** (Android: **Network**) → paste → **Play**.
 
 You can skip the protocol handler entirely and always use this path.

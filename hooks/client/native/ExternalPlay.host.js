@@ -1,5 +1,6 @@
 /**
- * Web host for `fb-external-play`: Open in VLC (vlc://), Copy stream URL, status, Setup.
+ * Web host for `fb-external-play`.
+ * Desktop: Open in VLC via vlc://. Android browsers: intent ACTION_VIEW (video/*).
  * CleverScript only passes data attrs — all click handling lives here.
  */
 (function (global) {
@@ -39,6 +40,22 @@
     return 'https://flashbackrepository.org/' + u;
   }
 
+  /** Chrome / Firefox / Samsung Internet / WebView on Android (not iOS). */
+  function isAndroidBrowser() {
+    try {
+      const nav = global.navigator;
+      if (!nav) return false;
+      const ua = String(nav.userAgent || '');
+      if (/Android/i.test(ua) && !/Windows Phone/i.test(ua)) return true;
+      // Chromium client hints (when available)
+      const uaData = nav.userAgentData;
+      if (uaData && typeof uaData.platform === 'string') {
+        if (String(uaData.platform).toLowerCase() === 'android') return true;
+      }
+    } catch (_) {}
+    return false;
+  }
+
   function vlcProtocolUrl(httpsUrl) {
     const u = absoluteHttps(httpsUrl);
     if (u.indexOf('https://') !== 0 && u.indexOf('http://') !== 0) return '';
@@ -48,6 +65,47 @@
       }
     } catch (_) {}
     return 'vlc://' + u;
+  }
+
+  /** Android Chrome intent URL — system chooser / VLC (no package pin). */
+  function intentViewUrl(httpsUrl) {
+    const u = absoluteHttps(httpsUrl);
+    if (u.indexOf('https://') !== 0 && u.indexOf('http://') !== 0) return '';
+    return (
+      'intent:' +
+      u +
+      '#Intent;action=android.intent.action.VIEW;type=video/*;scheme=https;end'
+    );
+  }
+
+  /**
+   * Navigate to a custom scheme / intent from a user gesture.
+   * Prefer a temporary <a> click (Chrome Android is pickier about location.href for intent:).
+   */
+  function navigateExternal(href) {
+    const h = String(href || '');
+    if (!h) return false;
+    try {
+      const doc = global.document;
+      if (doc && doc.body && doc.createElement) {
+        const a = doc.createElement('a');
+        a.href = h;
+        a.setAttribute('rel', 'noopener noreferrer');
+        a.style.display = 'none';
+        doc.body.appendChild(a);
+        a.click();
+        try {
+          doc.body.removeChild(a);
+        } catch (_) {}
+        return true;
+      }
+    } catch (_) {}
+    try {
+      global.location.href = h;
+      return true;
+    } catch (_) {
+      return false;
+    }
   }
 
   function copyText(text) {
@@ -79,11 +137,14 @@
     const streamUrl = absoluteHttps(prop(props, 'streamUrl', ''));
     const unlocked = prop(props, 'unlocked', 'false') === 'true';
     const setupHref = prop(props, 'setupHref', '/setup') || '/setup';
+    const android = isAndroidBrowser();
+    const openMode = android ? 'android-intent' : 'vlc-protocol';
 
     const root = global.document.createElement('div');
     root.className = 'fb-external-play fb-theater-external';
     root.setAttribute('data-fb-external-play', '1');
     root.setAttribute('data-playback-engine', 'external');
+    root.setAttribute('data-fb-open-mode', openMode);
 
     const heading = global.document.createElement('p');
     heading.className = 'fb-theater-downloads-label';
@@ -92,11 +153,17 @@
 
     const steps = global.document.createElement('ol');
     steps.className = 'fb-theater-external-steps';
-    const stepTexts = [
-      'One-time: install VLC and the playback setup (vlc:// handler).',
-      'Tap Open in VLC (or Copy stream URL).',
-      'If nothing opens: VLC → Media → Open Network Stream… → paste → Play.',
-    ];
+    const stepTexts = android
+      ? [
+          'Install VLC (or another video app) from the Play Store.',
+          'Tap Open in external player — Android asks which app should open the stream.',
+          'If nothing opens: Copy stream URL → open VLC → Network → paste the HTTPS link.',
+        ]
+      : [
+          'One-time: install VLC and the playback setup (vlc:// handler).',
+          'Tap Open in VLC (or Copy stream URL).',
+          'If nothing opens: VLC → Media → Open Network Stream… → paste → Play.',
+        ];
     for (let i = 0; i < stepTexts.length; i++) {
       const li = global.document.createElement('li');
       li.textContent = stepTexts[i];
@@ -120,6 +187,25 @@
     root.appendChild(status);
 
     let failTimer = null;
+    let leftPage = false;
+
+    function onPageHide() {
+      leftPage = true;
+      clearFailTimer();
+    }
+    function onVisibility() {
+      try {
+        if (global.document && global.document.visibilityState === 'hidden') {
+          leftPage = true;
+          clearFailTimer();
+        }
+      } catch (_) {}
+    }
+    try {
+      global.addEventListener('pagehide', onPageHide);
+      global.addEventListener('visibilitychange', onVisibility);
+    } catch (_) {}
+
     function setStatus(msg) {
       const m = String(msg || '');
       if (!m) {
@@ -143,16 +229,23 @@
 
     const openBtn = global.document.createElement('button');
     openBtn.type = 'button';
-    openBtn.className = 'fb-btn fb-btn-primary fb-btn-external-play fb-theater-open-vlc';
-    openBtn.textContent = 'Open in VLC';
+    openBtn.className =
+      'fb-btn fb-btn-primary fb-btn-external-play' +
+      (android ? ' fb-theater-open-intent' : ' fb-theater-open-vlc');
+    openBtn.textContent = android ? 'Open in external player' : 'Open in VLC';
     openBtn.addEventListener('click', function () {
       clearFailTimer();
+      leftPage = false;
       if (!streamUrl) {
         setStatus('No stream URL yet.');
         return;
       }
       if (!unlocked) {
-        setStatus('Confirm ownership first, then tap Open in VLC.');
+        setStatus(
+          android
+            ? 'Confirm ownership first, then tap Open in external player.'
+            : 'Confirm ownership first, then tap Open in VLC.',
+        );
         try {
           const gate = global.document.querySelector(
             '.fb-affirmation-native, .fb-gate, [aria-modal="true"]',
@@ -163,24 +256,45 @@
         } catch (_) {}
         return;
       }
-      const vlc = vlcProtocolUrl(streamUrl);
-      if (!vlc) {
-        setStatus('Could not build vlc:// link. Use Copy stream URL instead.');
+
+      let launch = '';
+      if (android) {
+        launch = intentViewUrl(streamUrl);
+        if (!launch) {
+          setStatus('Could not build Android intent link. Use Copy stream URL instead.');
+          return;
+        }
+        setStatus('Opening player…');
+      } else {
+        launch = vlcProtocolUrl(streamUrl);
+        if (!launch) {
+          setStatus('Could not build vlc:// link. Use Copy stream URL instead.');
+          return;
+        }
+        setStatus('Opening VLC…');
+      }
+
+      if (!navigateExternal(launch)) {
+        setStatus(
+          android
+            ? 'Could not open an external player. Copy the stream URL and paste it in VLC.'
+            : 'Could not launch vlc://. Copy the stream URL or finish Setup.',
+        );
         return;
       }
-      setStatus('Opening VLC…');
-      try {
-        global.location.href = vlc;
-      } catch (_) {
-        setStatus('Could not launch vlc://. Copy the stream URL or finish Setup.');
-        return;
-      }
+
       failTimer = global.setTimeout(function () {
         failTimer = null;
+        if (leftPage) return;
+        try {
+          if (global.document && global.document.visibilityState === 'hidden') return;
+        } catch (_) {}
         setStatus(
-          'VLC did not open — install the vlc:// handler on Setup, or Copy stream URL and paste in VLC.',
+          android
+            ? 'No player opened — install VLC from the Play Store, or Copy stream URL and open it in VLC → Network.'
+            : 'VLC did not open — install the vlc:// handler on Setup, or Copy stream URL and paste in VLC.',
         );
-      }, 1200);
+      }, 1400);
     });
     actions.appendChild(openBtn);
 
@@ -196,12 +310,25 @@
         return;
       }
       if (copyText(streamUrl)) {
-        setStatus('Copied — paste into VLC → Media → Open Network Stream.');
+        setStatus(
+          android
+            ? 'Copied — open VLC → Network / Open network stream → paste.'
+            : 'Copied — paste into VLC → Media → Open Network Stream.',
+        );
       } else {
         setStatus('Copy failed — select the URL above manually.');
       }
     });
     actions.appendChild(copyBtn);
+
+    if (android && streamUrl) {
+      const dl = global.document.createElement('a');
+      dl.className = 'fb-btn fb-theater-download-mkv';
+      dl.href = streamUrl;
+      dl.setAttribute('download', '');
+      dl.textContent = 'Download MKV';
+      actions.appendChild(dl);
+    }
 
     const setupLink = global.document.createElement('a');
     setupLink.className = 'fb-btn fb-btn-setup';
@@ -211,18 +338,24 @@
 
     const vlcGet = global.document.createElement('a');
     vlcGet.className = 'fb-btn fb-theater-get-vlc';
-    vlcGet.href = 'https://www.videolan.org/vlc/';
+    if (android) {
+      vlcGet.href = 'https://play.google.com/store/apps/details?id=org.videolan.vlc';
+      vlcGet.textContent = 'Get VLC (Play Store)';
+    } else {
+      vlcGet.href = 'https://www.videolan.org/vlc/';
+      vlcGet.textContent = 'Get VLC';
+    }
     vlcGet.target = '_blank';
     vlcGet.rel = 'noopener noreferrer';
-    vlcGet.textContent = 'Get VLC';
     actions.appendChild(vlcGet);
 
     root.appendChild(actions);
 
     const note = global.document.createElement('p');
     note.className = 'fb-theater-downloads-note';
-    note.textContent =
-      'Browsers cannot play Matroska + HEVC in-page yet. A local vlc:// handler (Setup) opens the HTTPS stream in VLC.';
+    note.textContent = android
+      ? 'Browsers cannot play Matroska + HEVC in-page yet. On Android, Open in external player hands the HTTPS stream to VLC (or another app) via the system chooser.'
+      : 'Browsers cannot play Matroska + HEVC in-page yet. A local vlc:// handler (Setup) opens the HTTPS stream in VLC.';
     root.appendChild(note);
 
     return root;
@@ -306,4 +439,6 @@
     register();
   }
   global.__fbBuildExternalPlay = buildExternalPlay;
+  global.__fbExternalPlayIsAndroid = isAndroidBrowser;
+  global.__fbExternalPlayIntentUrl = intentViewUrl;
 })(typeof globalThis !== 'undefined' ? globalThis : window);
