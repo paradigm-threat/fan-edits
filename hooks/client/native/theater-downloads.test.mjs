@@ -31,3 +31,13 @@ test('error and pending UI keep tech details behind a toggle', () => {
   assert.match(common, /\.fb-theater-downloads/)
   assert.match(common, /\.fb-theater-tech/)
 })
+
+test('host arms play-start and buffer-stall timeouts', () => {
+  assert.match(host, /PLAY_START_TIMEOUT_MS/)
+  assert.match(host, /BUFFER_STALL_TIMEOUT_MS/)
+  assert.match(host, /play_start_timeout/)
+  assert.match(host, /buffer_stall_timeout/)
+  assert.match(host, /armPlayStartWatch/)
+  assert.match(host, /failPlaybackStall/)
+  assert.match(host, /hevc_unsupported/)
+})

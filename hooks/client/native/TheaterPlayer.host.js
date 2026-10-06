@@ -114,6 +114,17 @@
     });
   }
 
+  /** How long we wait for first frames after play() / during Buffering… */
+  const PLAY_START_TIMEOUT_MS = 22000;
+  const BUFFER_STALL_TIMEOUT_MS = 28000;
+
+  function looksHevcUrl(url) {
+    const u = String(url || '')
+      .split('?')[0]
+      .toLowerCase();
+    return u.indexOf('.hevc.mp4') >= 0 || u.indexOf('hevc') >= 0;
+  }
+
   function peerShort(fqdn) {
     const s = String(fqdn || '');
     const i = s.indexOf('.');
@@ -1317,13 +1328,43 @@
     }
 
     video.addEventListener('play', () => invoke(propHandler(props, 'onPlay'), invokeHandler, onAfterInvoke));
-    video.addEventListener('pause', () => invoke(propHandler(props, 'onPause'), invokeHandler, onAfterInvoke));
-    video.addEventListener('ended', () => invoke(propHandler(props, 'onEnded'), invokeHandler, onAfterInvoke));
-    video.addEventListener('waiting', () => ctx.setPlaybackNote('Buffering…'));
+    video.addEventListener('pause', () => {
+      clearPlayWatches();
+      invoke(propHandler(props, 'onPause'), invokeHandler, onAfterInvoke);
+    });
+    video.addEventListener('ended', () => {
+      clearPlayWatches();
+      invoke(propHandler(props, 'onEnded'), invokeHandler, onAfterInvoke);
+    });
+    video.addEventListener('waiting', () => {
+      ctx.setPlaybackNote('Buffering…');
+      armBufferStallWatch();
+    });
     video.addEventListener('playing', () => {
       didPlaySucceed = true;
+      clearPlayWatches();
       ctx.setPlaybackNote('');
       ctx.clearPlaybackError();
+    });
+    video.addEventListener('timeupdate', () => {
+      let t = 0;
+      try {
+        t = video.currentTime || 0;
+      } catch (_) {}
+      if (t > 0.25) {
+        didPlaySucceed = true;
+        if (playWatchTimer) {
+          global.clearTimeout(playWatchTimer);
+          playWatchTimer = null;
+        }
+      }
+    });
+    video.addEventListener('canplay', () => {
+      // First media bytes decoded — keep play-start watch but clear buffer stall.
+      if (bufferWatchTimer) {
+        global.clearTimeout(bufferWatchTimer);
+        bufferWatchTimer = null;
+      }
     });
     video.addEventListener('loadedmetadata', () => {
       if (ctx.pendingSeek != null) applyCommands(ctx, props);
@@ -1383,6 +1424,9 @@
 
     let attempt = 0;
     let timer = null;
+    let playWatchTimer = null;
+    let bufferWatchTimer = null;
+    let playWatchGen = 0;
     let stopped = false;
     let huntGen = 0;
     let mirrorIndex = 0;
@@ -1390,6 +1434,115 @@
     let activeMirror = mirrors[0] || null;
     let probeLog = [];
     const maxRounds = 2;
+
+    function clearPlayWatches() {
+      if (playWatchTimer) {
+        global.clearTimeout(playWatchTimer);
+        playWatchTimer = null;
+      }
+      if (bufferWatchTimer) {
+        global.clearTimeout(bufferWatchTimer);
+        bufferWatchTimer = null;
+      }
+    }
+
+    function hevcLikelyUnsupported(mediaUrl) {
+      if (!looksHevcUrl(mediaUrl || (video && video.currentSrc) || src)) return false;
+      try {
+        return !canPlayHevcMp4();
+      } catch (_) {
+        return false;
+      }
+    }
+
+    function failPlaybackStall(reason, code) {
+      clearPlayWatches();
+      const note =
+        reason ||
+        'Playback timed out while buffering. The stream may be too slow on this mirror, or this browser cannot decode HEVC.';
+      // Prefer next mirror while we still have them
+      if (mirrorIndex + 1 < mirrors.length) {
+        mirrorIndex += 1;
+        msg.textContent = 'Stream stalled — trying next mirror…';
+        pending.style.display = 'block';
+        shell.style.display = 'none';
+        liveLog.style.display = 'block';
+        liveLog.textContent = note;
+        stopped = false;
+        startMirrorHunt({ fromPlay: true, resume: true });
+        return;
+      }
+      if (advanceRendition(note)) return;
+      reportTheaterIssue({
+        severity: 'major',
+        code: code || 'play_stall_timeout',
+        message: note,
+        rendition: currentRendition(srcLadder, ladderIndex),
+        engine: 'native',
+      });
+      try {
+        video.pause();
+      } catch (_) {}
+      ctx.setPlaybackError(note);
+      hint.textContent =
+        hevcLikelyUnsupported(video && video.currentSrc) || looksHevcUrl(src)
+          ? 'If this browser cannot play HEVC, use “Download the movie” below and open it in VLC.'
+          : 'You can download the movie below, or leave a public note on the Board.';
+      retryBtn.style.display = 'inline-block';
+      reportPendingBtn.style.display = 'inline-block';
+    }
+
+    function armPlayStartWatch(label) {
+      clearPlayWatches();
+      playWatchGen += 1;
+      const gen = playWatchGen;
+      const where = label || (activeMirror && activeMirror.label) || 'mirror';
+      ctx.setPlaybackNote('Starting playback via ' + where + '…');
+      playWatchTimer = global.setTimeout(function () {
+        if (gen !== playWatchGen) return;
+        if (didPlaySucceed) return;
+        let t = 0;
+        try {
+          t = video.currentTime || 0;
+        } catch (_) {}
+        if (t > 0.2) {
+          didPlaySucceed = true;
+          ctx.setPlaybackNote('');
+          return;
+        }
+        failPlaybackStall(
+          'Timed out waiting for playback to start on ' + where + '.',
+          'play_start_timeout',
+        );
+      }, PLAY_START_TIMEOUT_MS);
+    }
+
+    function armBufferStallWatch() {
+      if (bufferWatchTimer) {
+        global.clearTimeout(bufferWatchTimer);
+        bufferWatchTimer = null;
+      }
+      const gen = playWatchGen;
+      let startT = 0;
+      try {
+        startT = video.currentTime || 0;
+      } catch (_) {}
+      bufferWatchTimer = global.setTimeout(function () {
+        if (gen !== playWatchGen) return;
+        let nowT = 0;
+        let paused = true;
+        try {
+          nowT = video.currentTime || 0;
+          paused = !!video.paused;
+        } catch (_) {}
+        if (paused) return;
+        if (nowT > startT + 0.15) return;
+        failPlaybackStall(
+          'Buffering timed out — no new video frames arrived in time.',
+          'buffer_stall_timeout',
+        );
+      }, BUFFER_STALL_TIMEOUT_MS);
+    }
 
     function rebuildMirrorsForSrc(nextSrc, peerFqdns) {
       src = nextSrc;
@@ -1488,23 +1641,45 @@
         mountWasmPlayer(mediaUrl, where, sizeNote);
         return;
       }
+      if (mediaUrl && looksHevcUrl(mediaUrl) && hevcLikelyUnsupported(mediaUrl)) {
+        const note =
+          'This browser does not report HEVC (H.265) support, so in-page play may not work.';
+        reportTheaterIssue({
+          severity: 'major',
+          code: 'hevc_unsupported',
+          message: note,
+          rendition: currentRendition(srcLadder, ladderIndex),
+          engine: 'native',
+        });
+        if (advanceRendition(note + ' Trying a compatibility file…')) return;
+        ctx.setPlaybackError(note);
+        hint.textContent = 'Use “Download the movie” below and open the HEVC MP4 in VLC.';
+        retryBtn.style.display = 'inline-block';
+        reportPendingBtn.style.display = 'inline-block';
+        return;
+      }
       if (mediaUrl) setVideoSource(mediaUrl);
       ctx.setPlaybackNote('Ready via ' + where + sizeNote);
       applyCommands(ctx, props);
       if (prop(props, 'playing', 'false') === 'true' || root.getAttribute('data-play-requested') === '1') {
-        ctx.setPlaybackNote('Starting playback via ' + where + sizeNote + '…');
+        armPlayStartWatch(where);
         const p = video.play();
         if (p && typeof p.then === 'function') {
           p.then(function () {
-            ctx.setPlaybackNote('Playing via ' + where + sizeNote);
-            ctx.clearPlaybackError();
+            // play() resolved — still wait for frames via play-start / buffer watches
+            ctx.setPlaybackNote('Buffering via ' + where + sizeNote + '…');
+            armBufferStallWatch();
           }).catch(function (err) {
+            clearPlayWatches();
             const name = err && err.name ? err.name : 'PlayError';
             if (name === 'NotAllowedError') {
               ctx.setPlaybackNote('Ready — tap Play on the video controls.');
               return;
             }
-            ctx.setPlaybackError('Ready on ' + where + ' but play failed (' + name + ').');
+            failPlaybackStall(
+              'Ready on ' + where + ' but play failed (' + name + ').',
+              'play_promise_fail',
+            );
           });
         }
       }
