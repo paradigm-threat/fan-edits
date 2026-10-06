@@ -44,7 +44,7 @@ export function validateChangedFiles(ctx) {
       var size = 0
       if (typeof body === 'string') {
         size = body.length
-      } else if (body !== null && body !== undefined && typeof body.byteLength === 'number') {
+      } else if (body && typeof body.byteLength === 'number') {
         size = body.byteLength
       }
       if (size > COMMENTS_MAX_BYTES) {
