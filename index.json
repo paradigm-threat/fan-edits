@@ -7,9 +7,12 @@
       "title": "2012 (2009) \u2014 Salvation",
       "originalTitle": "2012 (2009)",
       "status": "ready",
-      "blurb": "A tighter cut of Roland Emmerich\u2019s disaster epic that trims excess death spectacle and russophobic beats so the survival story can breathe.",
       "media": "2012 (2009) - Salvation.mkv",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "A tighter cut of Roland Emmerich\u2019s disaster epic that trims excess death spectacle and russophobic beats so the survival story can breathe."
     },
     {
       "slug": "alien-resurrection-1997-unjossed",
@@ -18,9 +21,12 @@
       "title": "Alien Resurrection (1997) \u2014 UnJossed",
       "originalTitle": "Alien Resurrection (1997)",
       "status": "ready",
-      "blurb": "A leaner *Alien Resurrection* that strips out most of the gross, Joss Whedon\u2013flavored body-horror gags while keeping the Betty crew\u2019s escape intact.",
       "media": "Alien Resurrection (1997) - UnJossed Edition.mkv",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "A leaner *Alien Resurrection* that strips out most of the gross, Joss Whedon\u2013flavored body-horror gags while keeping the Betty crew\u2019s escape intact."
     },
     {
       "slug": "boogie-nights-1997-no-lookout",
@@ -29,9 +35,19 @@
       "title": "Boogie Nights (1997) \u2014 No Lookout",
       "originalTitle": "Boogie Nights (1997)",
       "status": "ready",
-      "blurb": "A single-block cut of PTA\u2019s *Boogie Nights* that skips the late-film collapse from the office whip-pan through On the Lookout and the donut-shop stick-up, then resumes on the film\u2019s own fade to black into the Rahad-planning scene.",
-      "media": "Boogie Nights (1997) - No Lookout - final.mkv",
-      "image": ""
+      "media": "Boogie Nights (1997) - No Lookout - final.hevc.mp4",
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [
+        {
+          "src": "FanMixes/Boogie Nights (1997) - No Lookout/subs/Boogie Nights (1997) - No Lookout.english.vtt",
+          "label": "English (default)",
+          "lang": "en",
+          "default": true
+        }
+      ],
+      "blurb": "A single-block cut of PTA\u2019s *Boogie Nights* that skips the late-film collapse from the office whip-pan through On the Lookout and the donut-shop stick-up, then resumes on the film\u2019s own fade to black into the Rahad-planning scene."
     },
     {
       "slug": "congo-1995-incel",
@@ -40,9 +56,12 @@
       "title": "Congo (1995) \u2014 Incel",
       "originalTitle": "Congo (1995)",
       "status": "ready",
-      "blurb": "A leaner *Congo* that trims Dr. Elliot\u2019s incel-ish dialogue, some Travis/Captain Wanta screaming, and a bit of gore \u2014 and fixes a travel plot hole by moving the Bob Driscoll encounter forward.",
       "media": "Congo (1995) - Incel Edition.mkv",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "A leaner *Congo* that trims Dr. Elliot\u2019s incel-ish dialogue, some Travis/Captain Wanta screaming, and a bit of gore \u2014 and fixes a travel plot hole by moving the Bob Driscoll encounter forward."
     },
     {
       "slug": "fear-and-loathing-in-las-vegas-1998-no-north-star",
@@ -51,9 +70,12 @@
       "title": "Fear and Loathing in Las Vegas (1998) \u2014 No North Star",
       "originalTitle": "Fear and Loathing in Las Vegas (1998)",
       "status": "ready",
-      "blurb": "A single-scene cut that removes the North Star Coffee Lounge waitress/knife sequence and hard-cuts back to the Red Shark run to the airport.",
       "media": "Fear and Loathing in Las Vegas (1998) - No North Star - final.mkv",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "A single-scene cut that removes the North Star Coffee Lounge waitress/knife sequence and hard-cuts back to the Red Shark run to the airport."
     },
     {
       "slug": "final-fantasy-2001-the-phantom-menace",
@@ -62,9 +84,12 @@
       "title": "Final Fantasy (2001) \u2014 The Phantom Menace",
       "originalTitle": "Final Fantasy (2001)",
       "status": "ready",
-      "blurb": "*Final Fantasy: The Spirits Within* (2001) \u2014 Phantom Menace Edition. A minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy\u2013like title placement \u2014 with the rare Japanese track and remix soundtrack upgra",
       "media": "Final Fantasy (2001) - The Phantom Menace.mkv",
-      "image": "FanMixes/Final Fantasy (2001) - The Phantom Menace/img/poster.jpg"
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "*Final Fantasy: The Spirits Within* (2001) \u2014 Phantom Menace Edition. A minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy\u2013like title placement \u2014 with the rare Japanese track and remix soundtrack upgra"
     },
     {
       "slug": "fried-green-tomatoes-1991-no-frank-bennett",
@@ -73,9 +98,12 @@
       "title": "Fried Green Tomatoes (1991) \u2014 No Frank Bennett",
       "originalTitle": "Fried Green Tomatoes (1991)",
       "status": "ready",
-      "blurb": "This cut removes **Frank Bennett** (Nick Searcy): his on-screen scenes, the **Valdosta / river-club / abuse / kidnapping / investigation / trial** thread, and **dialogue that names or explains him**, so the runtime stays continuous where possible. The automated ranges come from t",
       "media": "Fried Green Tomatoes (1991) - No Frank Bennett - final.mkv",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "This cut removes **Frank Bennett** (Nick Searcy): his on-screen scenes, the **Valdosta / river-club / abuse / kidnapping / investigation / trial** thread, and **dialogue that names or explains him**, so the runtime stays continuous where possible. The automated ranges come from t"
     },
     {
       "slug": "matrix-reloaded-2003-unlinked",
@@ -84,9 +112,12 @@
       "title": "Matrix Reloaded (2003) \u2014 Unlinked",
       "originalTitle": "Matrix Reloaded (2003)",
       "status": "ready",
-      "blurb": "A pacing-focused cut of *The Matrix Reloaded* that strips many Link establishment sequences plus a few early-movie wreckers (orgasm-brownie, kiss), so the story moves without the Tank-replacement hand-holding.",
       "media": "Matrix Reloaded (2003) - Unlinked Edition.mkv",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "A pacing-focused cut of *The Matrix Reloaded* that strips many Link establishment sequences plus a few early-movie wreckers (orgasm-brownie, kiss), so the story moves without the Tank-replacement hand-holding."
     },
     {
       "slug": "matrix-revolutions-2003-unlinked",
@@ -95,9 +126,12 @@
       "title": "Matrix Revolutions (2003) \u2014 Unlinked",
       "originalTitle": "Matrix Revolutions (2003)",
       "status": "ready",
-      "blurb": "A companion cut to Reloaded \u2014 Unlinked that trims many Link establishment sequences from *The Matrix Revolutions*.",
       "media": "Matrix Revolutions (2003) - Unlinked Edition.mkv",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "A companion cut to Reloaded \u2014 Unlinked that trims many Link establishment sequences from *The Matrix Revolutions*."
     },
     {
       "slug": "mission-to-mars-2000-enhanced-citations",
@@ -106,22 +140,12 @@
       "title": "Mission to Mars (2000) \u2014 Enhanced Citations",
       "originalTitle": "Mission to Mars (2000)",
       "status": "wip",
-      "blurb": "Paradigm Threat [AU-062](https://paradigmthreat.net/influence/cayman/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md) \u00a78.1a / \u00a77.1.",
       "media": "",
+      "mediaWeb": "",
+      "mediaMobile": "",
       "image": "",
-      "subtitles": [
-        {
-          "src": "FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.english.srt",
-          "label": "English",
-          "lang": "en",
-          "default": true
-        },
-        {
-          "src": "FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.enhanced.srt",
-          "label": "Citations",
-          "lang": "en"
-        }
-      ]
+      "subtitles": [],
+      "blurb": "Paradigm Threat [AU-062](https://paradigmthreat.net/influence/cayman/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md) \u00a78.1a / \u00a77.1."
     },
     {
       "slug": "ninja-scroll-1993-minor-damage",
@@ -130,9 +154,12 @@
       "title": "Ninja Scroll (1993) \u2014 Minor Damage",
       "originalTitle": "Ninja Scroll (1993)",
       "status": "ready",
-      "blurb": "A FanEdit featuring additional songs from the Ninja Gaiden OST (Xbox). *Ninja Scroll* is a classic with few flaws; this cut reduces the imbalance in how women are portrayed, removes the rape scenes, and dials back the blood \u2014 while keeping the core friendships and betrayals intac",
       "media": "Ninja Scroll (1993) - Minor Damage.mkv",
-      "image": "FanMixes/Ninja Scroll (1993) - Minor Damage/Ninja Scroll (1993) - Minor Damage.jpg"
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "A FanEdit featuring additional songs from the Ninja Gaiden OST (Xbox). *Ninja Scroll* is a classic with few flaws; this cut reduces the imbalance in how women are portrayed, removes the rape scenes, and dials back the blood \u2014 while keeping the core friendships and betrayals intac"
     },
     {
       "slug": "riddick-2013-unjinxed",
@@ -141,9 +168,12 @@
       "title": "Riddick (2013) \u2014 Unjinxed",
       "originalTitle": "Riddick (2013)",
       "status": "ready",
-      "blurb": "A dialogue-trimmed *Riddick* that keeps the Unjinxed tone, front-loads the Necromonger \u201cwrong planet\u201d flashback as a linear prologue, and drops the opening predator beat so the desert survival story starts clean.",
       "media": "Riddick (2013) - Unjinxed.mkv",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "A dialogue-trimmed *Riddick* that keeps the Unjinxed tone, front-loads the Necromonger \u201cwrong planet\u201d flashback as a linear prologue, and drops the opening predator beat so the desert survival story starts clean."
     },
     {
       "slug": "serenity-2005-unjossed",
@@ -152,9 +182,12 @@
       "title": "Serenity (2005) \u2014 Unjossed Edition",
       "originalTitle": "Serenity (2005)",
       "status": "ready",
-      "blurb": "A family/kids cut of *Serenity*: strict on Reaver gore, keeps the action and core plot, and leaves favorite Whedon beats (including \u201cleaf on the wind\u201d and the final fight) alone unless they break tone after horror.",
       "media": "Serenity (2005) - Unjossed Edition.mkv",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "A family/kids cut of *Serenity*: strict on Reaver gore, keeps the action and core plot, and leaves favorite Whedon beats (including \u201cleaf on the wind\u201d and the final fight) alone unless they break tone after horror."
     },
     {
       "slug": "silent-hill-2006-nay-tomorrow",
@@ -163,9 +196,12 @@
       "title": "Silent Hill (2006) \u2014 Nay Tomorrow Edition",
       "originalTitle": "Silent Hill (2006)",
       "status": "ready",
-      "blurb": "My wife and I love this movie, but it's quite unwatchable in its current format. We wanted a cut that we could watch without having to turn away or fast-forward through sequences.",
       "media": "Silent Hill (2006) - Nay Tomorrow Edition.mkv",
-      "image": "FanMixes/Silent Hill (2006) - Nay Tomorrow/Silent Hill (2006) - Nay Tomorrow.jpg"
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "My wife and I love this movie, but it's quite unwatchable in its current format. We wanted a cut that we could watch without having to turn away or fast-forward through sequences."
     },
     {
       "slug": "sonic-2020-deschwartzed",
@@ -174,9 +210,12 @@
       "title": "Sonic (2020) \u2014 DeSchwartzed Edition",
       "originalTitle": "Sonic (2020)",
       "status": "ready",
-      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during",
       "media": "Sonic (2020) - DeSchwartzed Edition.mkv",
-      "image": "FanMixes/Sonic (2020) - DeSchwartzed/Sonic (2020) - DeSchwartzed.png"
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during"
     },
     {
       "slug": "sonic-2-2022-deschwartzed",
@@ -185,9 +224,12 @@
       "title": "Sonic 2 (2022) \u2014 DeSchwartzed Edition",
       "originalTitle": "Sonic 2 (2022)",
       "status": "ready",
-      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during",
       "media": "Sonic 2 (2022) - DeSchwartzed Edition.mkv",
-      "image": "FanMixes/Sonic 2 (2022) - DeSchwartzed/Sonic 2 (2022) - DeSchwartzed.png"
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during"
     },
     {
       "slug": "sonic-3-2024-deschwartzed",
@@ -196,9 +238,12 @@
       "title": "Sonic 3 (2024) \u2014 DeSchwartzed Edition",
       "originalTitle": "Sonic 3 (2024)",
       "status": "wip",
-      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during",
       "media": "",
-      "image": "FanMixes/Sonic 3 (2024) - DeSchwartzed/Sonic 3 (2024) - DeSchwartzed.png"
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during"
     },
     {
       "slug": "terminator-3-2003-brass-monkey",
@@ -207,9 +252,12 @@
       "title": "Terminator 3 (2003) \u2014 Brass Monkey Edition",
       "originalTitle": "Terminator 3 (2003)",
       "status": "wip",
-      "blurb": "In Brass Monkey Edition, I attempt to cut out all distracting dialog and sequences in Terminator 3 to be more like the first two movies.",
       "media": "",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "In Brass Monkey Edition, I attempt to cut out all distracting dialog and sequences in Terminator 3 to be more like the first two movies."
     },
     {
       "slug": "the-big-lebowski-1998-enhanced-citations",
@@ -218,22 +266,12 @@
       "title": "The Big Lebowski (1998) \u2014 Enhanced Citations",
       "originalTitle": "The Big Lebowski (1998)",
       "status": "wip",
-      "blurb": "Follow-up to [The Mummy (1999) - Debugged](../The%20Mummy%20%281999%29%20-%20Debugged/) and Paradigm Threat [AU-062](https://paradigmthreat.net/influence/eugene/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md).",
       "media": "",
+      "mediaWeb": "",
+      "mediaMobile": "",
       "image": "",
-      "subtitles": [
-        {
-          "src": "FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.english.srt",
-          "label": "English",
-          "lang": "en",
-          "default": true
-        },
-        {
-          "src": "FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.enhanced.srt",
-          "label": "Citations",
-          "lang": "en"
-        }
-      ]
+      "subtitles": [],
+      "blurb": "Follow-up to [The Mummy (1999) - Debugged](../The%20Mummy%20%281999%29%20-%20Debugged/) and Paradigm Threat [AU-062](https://paradigmthreat.net/influence/eugene/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md)."
     },
     {
       "slug": "the-chronicles-of-riddick-2004-fry-s-edition",
@@ -242,9 +280,12 @@
       "title": "The Chronicles Of Riddick (2004) \u2014 Fry's Edition",
       "originalTitle": "The Chronicles Of Riddick (2004)",
       "status": "wip",
-      "blurb": "This version removes many extended scenes and restores some audio from the Theatrical version. It also removes many poorly acted, sexist, or just irritating scenes with Thandiwe Newton (Dame Vaako) and Alexa Davalos (Kyra).",
       "media": "",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "This version removes many extended scenes and restores some audio from the Theatrical version. It also removes many poorly acted, sexist, or just irritating scenes with Thandiwe Newton (Dame Vaako) and Alexa Davalos (Kyra)."
     },
     {
       "slug": "the-day-after-tomorrow-2004-yuppocolypse",
@@ -253,9 +294,12 @@
       "title": "The Day After Tomorrow (2004) \u2014 Yuppocolypse",
       "originalTitle": "The Day After Tomorrow (2004)",
       "status": "wip",
-      "blurb": "A leaner *Day After Tomorrow* that spends less time establishing the yuppie protagonists before the climate disaster takes over.",
       "media": "",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "A leaner *Day After Tomorrow* that spends less time establishing the yuppie protagonists before the climate disaster takes over."
     },
     {
       "slug": "the-mummy-1999-debugged",
@@ -264,32 +308,34 @@
       "title": "The Mummy (1999) \u2014 Debugged",
       "originalTitle": "The Mummy (1999)",
       "status": "ready",
-      "blurb": "Kid-friendlier cut: **scarabs that kill or eat people** are removed. Adventure, Imhotep, and the later plagues stay. Not a full wipe of every gunfight.",
       "media": "The Mummy Debugged.mkv",
+      "mediaWeb": "",
+      "mediaMobile": "",
       "image": "",
       "subtitles": [
         {
-          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.english.srt",
-          "label": "English",
+          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.english.vtt",
+          "label": "English (default)",
           "lang": "en",
           "default": true
         },
         {
-          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.enhanced.srt",
-          "label": "Citations",
+          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.enhanced.vtt",
+          "label": "Enhanced / Citations",
           "lang": "en"
         },
         {
-          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.kdenlive.srt",
+          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.kdenlive.vtt",
           "label": "English",
           "lang": "en"
         },
         {
-          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.srt",
+          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.vtt",
           "label": "English",
           "lang": "en"
         }
-      ]
+      ],
+      "blurb": "Kid-friendlier cut: **scarabs that kill or eat people** are removed. Adventure, Imhotep, and the later plagues stay. Not a full wipe of every gunfight."
     },
     {
       "slug": "the-mummy-returns-2001-debugged",
@@ -298,9 +344,19 @@
       "title": "The Mummy Returns (2001) \u2014 Debugged",
       "originalTitle": "The Mummy Returns (2001)",
       "status": "ready",
-      "blurb": "Kid-friendlier cut to match *The Mummy (1999) - Debugged*. This film has no SRT-named scarab dump; v1 removes the **pygmy swarm** that kills the expedition (same \u201clittle creatures eating people\u201d beat). Confirm in [PLAN.md](PLAN.md).",
       "media": "The Mummy Returns Debugged.mkv",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [
+        {
+          "src": "FanMixes/The Mummy Returns (2001) - Debugged/subs/The Mummy Returns Debugged.english.vtt",
+          "label": "English (default)",
+          "lang": "en",
+          "default": true
+        }
+      ],
+      "blurb": "Kid-friendlier cut to match *The Mummy (1999) - Debugged*. This film has no SRT-named scarab dump; v1 removes the **pygmy swarm** that kills the expedition (same \u201clittle creatures eating people\u201d beat). Confirm in [PLAN.md](PLAN.md)."
     },
     {
       "slug": "the-pentagon-papers-2003-widescreen",
@@ -309,22 +365,12 @@
       "title": "The Pentagon Papers (2003) \u2014 Widescreen",
       "originalTitle": "The Pentagon Papers (2003)",
       "status": "wip",
-      "blurb": "Sharper **16:9** presentation of the FX / Paramount TV movie. No story cuts. The 4:3 PAL DVD is AI-upscaled, then center-cropped \u2014 not stretched, not outpainted.",
       "media": "",
+      "mediaWeb": "",
+      "mediaMobile": "",
       "image": "",
-      "subtitles": [
-        {
-          "src": "FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).english.srt",
-          "label": "English",
-          "lang": "en",
-          "default": true
-        },
-        {
-          "src": "FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).enhanced.srt",
-          "label": "Citations",
-          "lang": "en"
-        }
-      ]
+      "subtitles": [],
+      "blurb": "Sharper **16:9** presentation of the FX / Paramount TV movie. No story cuts. The 4:3 PAL DVD is AI-upscaled, then center-cropped \u2014 not stretched, not outpainted."
     },
     {
       "slug": "van-helsing-deanna-d",
@@ -333,22 +379,19 @@
       "title": "Van Helsing (2004) \u2014 DeAnna'd",
       "originalTitle": "Van Helsing (2004)",
       "status": "ready",
-      "blurb": "Cut that removes **Anna** as much as possible without plot or context regression, and strips as many cringe beats as we can \u2014 especially with the Frankenstein monster. Select score beds are swapped for *Castlevania: Symphony of the Night* cues (`castlevania-symphony_of_the_night_",
       "media": "Van Helsing - DeAnna'd.mkv",
+      "mediaWeb": "Van Helsing - DeAnna'd.web-1080p.mp4",
+      "mediaMobile": "",
       "image": "",
       "subtitles": [
         {
-          "src": "FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.english.srt",
-          "label": "English",
+          "src": "FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.english.vtt",
+          "label": "English (default)",
           "lang": "en",
           "default": true
-        },
-        {
-          "src": "FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.enhanced.srt",
-          "label": "Citations",
-          "lang": "en"
         }
-      ]
+      ],
+      "blurb": "Cut that removes **Anna** as much as possible without plot or context regression, and strips as many cringe beats as we can \u2014 especially with the Frankenstein monster. Select score beds are swapped for *Castlevania: Symphony of the Night* cues (`castlevania-symphony_of_the_night_"
     },
     {
       "slug": "war-of-the-worlds-2005-family-therapy",
@@ -357,9 +400,12 @@
       "title": "War of the Worlds (2005) \u2014 Family Therapy Edition",
       "originalTitle": "War of the Worlds (2005)",
       "status": "wip",
-      "blurb": "This FanMix eliminates nearly all the toxic family behavior featured in the movie, so that WotW (2005) becomes a movie about aliens and not allusions to Spielberg's trouble raising his own children.",
       "media": "",
-      "image": "FanMixes/War of the Worlds (2005) - Family Therapy/War of the Worlds (2005) - Family Therapy.png"
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "This FanMix eliminates nearly all the toxic family behavior featured in the movie, so that WotW (2005) becomes a movie about aliens and not allusions to Spielberg's trouble raising his own children."
     },
     {
       "slug": "bambi-1942-kidfriendly-edition",
@@ -368,9 +414,12 @@
       "title": "Bambi (1942) \u2014 KidFriendly Edition",
       "originalTitle": "Bambi (1942)",
       "status": "wip",
-      "blurb": "Toddler-safe cut (~3 years): removes hunting scares, mother's death, Ronno fight, forest fire, and wounded climax; keeps friends, meadow joy, winter play, romance, and twin-fawns ending.",
       "media": "",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "Toddler-safe cut (~3 years): removes hunting scares, mother's death, Ronno fight, forest fire, and wounded climax; keeps friends, meadow joy, winter play, romance, and twin-fawns ending."
     },
     {
       "slug": "cinderella-1950-kidfriendly-edition",
@@ -379,9 +428,12 @@
       "title": "Cinderella (1950) \u2014 KidFriendly Edition",
       "originalTitle": "Cinderella (1950)",
       "status": "wip",
-      "blurb": "Toddler-safe cut (~3 years): removes meanness, scary cat-vs-mouse violence, dress destruction, attic imprisonment, and the Bruno dream line about chasing cats.",
       "media": "",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "Toddler-safe cut (~3 years): removes meanness, scary cat-vs-mouse violence, dress destruction, attic imprisonment, and the Bruno dream line about chasing cats."
     },
     {
       "slug": "pee-wee-s-big-adventure-1985-kidfriendly-edition",
@@ -390,9 +442,12 @@
       "title": "Pee-wee's Big Adventure (1985) \u2014 KidFriendly Edition",
       "originalTitle": "Pee-wee's Big Adventure (1985)",
       "status": "wip",
-      "blurb": "Toddler-safe cut (~3 years): Francis breakfast/pool/basement removed; **Francis premiere kept**. No clown close-ups, Large Marge, Simone diner, T-rex dream, Andy, train, Lloyd rodeo, basement conspiracy, biker death threats, WB nightmare, or Twisted Sister hell song. Keeps Mickey",
       "media": "",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "Toddler-safe cut (~3 years): Francis breakfast/pool/basement removed; **Francis premiere kept**. No clown close-ups, Large Marge, Simone diner, T-rex dream, Andy, train, Lloyd rodeo, basement conspiracy, biker death threats, WB nightmare, or Twisted Sister hell song. Keeps Mickey"
     },
     {
       "slug": "spirited-away-2001-alena-edition",
@@ -401,9 +456,12 @@
       "title": "Spirited Away (2001) \u2014 Alena Edition",
       "originalTitle": "Spirited Away (2001)",
       "status": "wip",
-      "blurb": "English-dub cut for Alena. Same scary-beat removals as the Kid friendly edition, except **No-Face**: gold, eating the frog, the rampage, and the \u201ccalm down\u201d / dumpling confrontation are out. The join lands on **him spitting the frog back out**.",
       "media": "",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "English-dub cut for Alena. Same scary-beat removals as the Kid friendly edition, except **No-Face**: gold, eating the frog, the rampage, and the \u201ccalm down\u201d / dumpling confrontation are out. The join lands on **him spitting the frog back out**."
     },
     {
       "slug": "spirited-away-2001-kid-friendly",
@@ -412,9 +470,12 @@
       "title": "Spirited Away (2001) \u2014 Kid friendly",
       "originalTitle": "Spirited Away (2001)",
       "status": "wip",
-      "blurb": "English-dub cut for a **3-year-old** viewer: removes blood, body horror, predatory eating, witch intimidation, and sustained fright beats.",
       "media": "",
-      "image": ""
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "blurb": "English-dub cut for a **3-year-old** viewer: removes blood, body horror, predatory eating, witch intimidation, and sustained fright beats."
     }
   ]
 }

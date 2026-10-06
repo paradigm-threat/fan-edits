@@ -170,49 +170,150 @@ def media_root_poster(slug: str) -> str | None:
     return None
 
 
+WEB_SUFFIX = ".web-1080p.mp4"
+MOBILE_SUFFIX = ".mobile-720p.mp4"
+HEVC_SUFFIX = ".hevc.mp4"
+
+
+def is_web_or_skip_media(name: str) -> bool:
+    n = name.lower()
+    if n.endswith(WEB_SUFFIX) or n.endswith(MOBILE_SUFFIX):
+        return True
+    return any(p in n for p in ("seam", "preview", "proxy", "edit-1080"))
+
+
+def _media_rank(name: str) -> tuple[int, int, str]:
+    """Prefer HEVC MP4 archival masters over legacy MKV."""
+    n = name.lower()
+    if n.endswith(HEVC_SUFFIX):
+        tier = 0
+    elif n.endswith(".mp4") and not is_web_or_skip_media(name):
+        tier = 1
+    elif n.endswith(".mkv"):
+        tier = 2
+    else:
+        tier = 3
+    bonus = 0
+    if any(x in n for x in ("final", "edition", "debugged", "deanna")):
+        bonus = -1
+    return (tier, bonus, name)
+
+
+def media_available(folder: Path, folder_rel: str, basename: str, manifest_paths: set[str]) -> bool:
+    if not basename:
+        return False
+    logical = f"{folder_rel.rstrip('/')}/{basename}"
+    if logical in manifest_paths:
+        return True
+    stub = ASSETS_DIR / logical
+    if stub.with_suffix(stub.suffix + ".ipfs").is_file() or (ASSETS_DIR / f"{logical}.ipfs").is_file():
+        return True
+    local = folder / basename
+    try:
+        return local.is_file() and local.stat().st_size > 1_000_000
+    except OSError:
+        return False
+
+
+def find_named_rendition(
+    folder: Path, folder_rel: str, manifest_paths: set[str], suffix: str
+) -> str:
+    """Return basename ending with suffix if stub/file present, else ''."""
+    suffix_l = suffix.lower()
+    # Local files first
+    if folder.is_dir():
+        for p in sorted(folder.iterdir()):
+            if p.name.lower().endswith(suffix_l) and media_available(
+                folder, folder_rel, p.name, manifest_paths
+            ):
+                return p.name
+    prefix = folder_rel.rstrip("/") + "/"
+    for mp in sorted(manifest_paths):
+        if not mp.startswith(prefix):
+            continue
+        rest = mp[len(prefix) :]
+        if "/" in rest:
+            continue
+        if rest.lower().endswith(suffix_l) and media_available(
+            folder, folder_rel, rest, manifest_paths
+        ):
+            return rest
+    return ""
+
+
 def find_media(folder: Path, folder_rel: str, manifest_paths: set[str]) -> str | None:
-    """Return media basename relative to project folder if stub/manifest exists or local file present."""
+    """Return archival master basename (HEVC MP4 preferred; not web/mobile encodes)."""
     candidates: list[str] = []
-    # Prefer conventional names
-    for p in sorted(folder.iterdir()) if folder.is_dir() else []:
-        if p.suffix.lower() in (".mkv", ".mp4", ".webm") and p.is_file():
-            # skip seams / preview
-            name = p.name.lower()
-            if "seam" in name or "preview" in name or "proxy" in name or "edit-1080" in name:
-                continue
-            candidates.append(p.name)
-    # Also check manifest for paths under this project
+    if folder.is_dir():
+        for p in sorted(folder.iterdir()):
+            if p.suffix.lower() in (".mkv", ".mp4", ".webm") and (p.is_file() or p.is_symlink()):
+                if is_web_or_skip_media(p.name):
+                    continue
+                candidates.append(p.name)
     prefix = folder_rel.rstrip("/") + "/"
     for mp in manifest_paths:
         if mp.startswith(prefix):
             rest = mp[len(prefix) :]
             if "/" not in rest and rest.lower().endswith((".mkv", ".mp4", ".webm")):
+                if is_web_or_skip_media(rest):
+                    continue
                 if rest not in candidates:
-                    candidates.insert(0, rest)
+                    candidates.append(rest)
     if not candidates:
         return None
-    # Prefer non-final naming quirks: *Edition*, *Debugged*, exact folder-ish
-    for c in candidates:
-        cl = c.lower()
-        if "final" in cl or "edition" in cl or "debugged" in cl or "deanna" in cl:
-            return c
+    candidates.sort(key=_media_rank)
     return candidates[0]
 
 
+def _subtitle_label(name: str) -> tuple[str, bool]:
+    n = name.lower()
+    if "enhanced" in n or "citation" in n:
+        return "Enhanced / Citations", False
+    if "english" in n or "default" in n:
+        return "English (default)", True
+    return "English", False
+
+
+def ensure_vtt_for_srts(folder: Path) -> None:
+    """Generate sibling .vtt files for any .srt under folder/subs."""
+    subs_dir = folder / "subs"
+    if not subs_dir.is_dir():
+        return
+    helper = ROOT / "scripts" / "srt_to_vtt.py"
+    if not helper.is_file():
+        return
+    import subprocess
+    import sys
+
+    subprocess.run([sys.executable, str(helper), str(subs_dir)], cwd=ROOT, check=False)
+
+
 def find_subtitles(folder: Path, folder_rel: str) -> list[dict]:
+    """Prefer WebVTT sidecars for HTML5 <track>; convert SRT → VTT when needed."""
+    ensure_vtt_for_srts(folder)
     subs_dir = folder / "subs"
     out: list[dict] = []
     if not subs_dir.is_dir():
         return out
+    # Prefer .vtt; fall back to listing .srt only if no vtt for that stem
+    vtt_files = sorted(subs_dir.glob("*.vtt"))
+    seen_stems: set[str] = set()
+    for p in vtt_files:
+        label, default = _subtitle_label(p.name)
+        entry = {
+            "src": f"{folder_rel}/subs/{p.name}",
+            "label": label,
+            "lang": "en",
+        }
+        if default:
+            entry["default"] = True
+        out.append(entry)
+        seen_stems.add(p.stem.lower())
     for p in sorted(subs_dir.glob("*.srt")):
-        label = "English"
-        default = False
-        name = p.name.lower()
-        if "enhanced" in name or "citation" in name:
-            label = "Citations"
-        elif "english" in name:
-            label = "English"
-            default = True
+        if p.stem.lower() in seen_stems:
+            continue
+        # VTT missing (conversion failed) — still list SRT for catalog completeness
+        label, default = _subtitle_label(p.name)
         entry = {
             "src": f"{folder_rel}/subs/{p.name}",
             "label": label,
@@ -258,6 +359,8 @@ def main() -> None:
         reel_candidates = list(folder.glob("*.reel")) if folder.is_dir() else []
         reel = reel_candidates[0].as_posix() if len(reel_candidates) == 1 else None
         media = find_media(folder, folder_rel, manifest_paths)
+        media_web = find_named_rendition(folder, folder_rel, manifest_paths, WEB_SUFFIX)
+        media_mobile = find_named_rendition(folder, folder_rel, manifest_paths, MOBILE_SUFFIX)
         poster = find_poster(folder, folder_rel)
         if not poster:
             poster = media_root_poster(slug)
@@ -271,6 +374,11 @@ def main() -> None:
             # Always set so CleverScript property access never throws
             "originalTitle": original_title,
             "status": status,
+            "media": media if media else "",
+            "mediaWeb": media_web,
+            "mediaMobile": media_mobile,
+            "image": poster if poster else "",
+            "subtitles": subs,
         }
         if blurb:
             entry["blurb"] = blurb
@@ -278,14 +386,6 @@ def main() -> None:
             entry["blurb"] = ""
         if reel:
             entry["reel"] = reel
-        if media:
-            entry["media"] = media
-        else:
-            entry["media"] = ""
-        # Always include image so CleverScript property access never throws
-        entry["image"] = poster if poster else ""
-        if subs:
-            entry["subtitles"] = subs
         projects.append(entry)
 
     doc = {"projects": projects}

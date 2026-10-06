@@ -138,6 +138,21 @@ function canPlayAvcMp4() {
   }
 }
 
+function canPlayHevcMp4() {
+  try {
+    const doc = globalThis.document
+    if (!doc || typeof doc.createElement !== 'function') {
+      return false
+    }
+    const v = doc.createElement('video')
+    const a = v.canPlayType('video/mp4; codecs="hvc1.1.6.L93.B0"')
+    const b = v.canPlayType('video/mp4; codecs="hev1.1.6.L93.B0"')
+    return a === 'probably' || a === 'maybe' || b === 'probably' || b === 'maybe'
+  } catch (e) {
+    return false
+  }
+}
+
 function pickPlayableSrc(project) {
   if (!project) {
     return ''
@@ -146,10 +161,11 @@ function pickPlayableSrc(project) {
   const web = projectMediaField(project, 'mediaWeb')
   const master = projectMediaField(project, 'media')
   const avc = canPlayAvcMp4()
+  const hevc = canPlayHevcMp4()
   const desktop = prefersDesktopPlayback()
-  // Always lead with master MKV — host falls through on NotSupportedError.
+  // HEVC archival MP4 when the browser can decode it; else H.264 web/mobile ladder.
   let order = []
-  if (master.length > 0) {
+  if (hevc && master.length > 0) {
     order = order.concat([master])
   }
   if (desktop) {
@@ -165,6 +181,19 @@ function pickPlayableSrc(project) {
     }
     if (web.length > 0 && avc) {
       order = order.concat([web])
+    }
+  }
+  if ((!hevc || order.length === 0) && master.length > 0) {
+    // Last resort: try archival MP4 even if canPlayType was empty (some Chrome builds).
+    let has = false
+    for (let i = 0; i < order.length; i++) {
+      if (order[i] === master) {
+        has = true
+        break
+      }
+    }
+    if (!has) {
+      order = order.concat([master])
     }
   }
   if (order.length === 0) {

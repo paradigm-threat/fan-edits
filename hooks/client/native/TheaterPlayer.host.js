@@ -208,6 +208,17 @@
     }
   }
 
+  function canPlayHevcMp4() {
+    try {
+      const v = global.document.createElement('video');
+      const a = v.canPlayType('video/mp4; codecs="hvc1.1.6.L93.B0"');
+      const b = v.canPlayType('video/mp4; codecs="hev1.1.6.L93.B0"');
+      return a === 'probably' || a === 'maybe' || b === 'probably' || b === 'maybe';
+    } catch (_) {
+      return false;
+    }
+  }
+
   function looksMatroskaUrl(url) {
     const u = String(url || '')
       .split('?')[0]
@@ -248,13 +259,14 @@
     return relayWasmPrefix() + 'relay_video_wasm_pkg/relay_video_wasm_bg.wasm';
   }
 
-  /** Build ordered ladder: archival master first, then H.264 MP4 compatibility. */
+  /** Build ordered ladder: HEVC archival MP4 when decodable, then H.264 web/mobile. */
   function buildSrcLadder(props, preferredSrc) {
     const preferred = String(preferredSrc || prop(props, 'src', '') || '');
     const web = prop(props, 'srcWeb', '') || prop(props, 'data-src-web', '');
     const mobile = prop(props, 'srcMobile', '') || prop(props, 'data-src-mobile', '');
     const master = prop(props, 'srcMaster', '') || prop(props, 'data-src-master', '');
     const avc = canPlayAvcMp4();
+    const hevc = canPlayHevcMp4();
     const desktop = prefersDesktopPlayback();
     const order = [];
     function push(kind, url) {
@@ -265,8 +277,8 @@
       }
       order.push({ kind: kind, src: u });
     }
-    // Archival master first; host escalates via WASM or falls through to MP4.
-    push('master', master);
+    // HEVC archival first when the browser reports HEVC; else H.264 ladder then master fallback.
+    if (hevc) push('master', master);
     if (desktop) {
       if (avc) {
         push('web', web);
@@ -278,6 +290,7 @@
         push('web', web);
       }
     }
+    if (master && (!hevc || order.length === 0)) push('master', master);
     if (preferred) {
       let idx = -1;
       for (let i = 0; i < order.length; i++) {
@@ -513,17 +526,25 @@
   }
 
   function downloadLabelForKind(kind, src) {
-    if (kind === 'master') return 'Full quality (MKV)';
-    if (kind === 'web') return '1080p (MP4)';
-    if (kind === 'mobile') return '720p (MP4)';
+    if (kind === 'master') return 'Full quality (HEVC MP4)';
+    if (kind === 'web') return '1080p (H.264 MP4)';
+    if (kind === 'mobile') return '720p (H.264 MP4)';
+    if (kind === 'sub') {
+      const s = String(src || '').toLowerCase();
+      if (s.indexOf('enhanced') >= 0 || s.indexOf('citation') >= 0) return 'Subtitles (enhanced)';
+      if (s.indexOf('english') >= 0 || s.indexOf('default') >= 0) return 'Subtitles (default)';
+      return 'Subtitles';
+    }
     const s = String(src || '').toLowerCase();
-    if (s.indexOf('.mkv') >= 0) return 'Full quality (MKV)';
-    if (s.indexOf('1080') >= 0 || s.indexOf('.web-') >= 0) return '1080p (MP4)';
-    if (s.indexOf('720') >= 0 || s.indexOf('mobile') >= 0) return '720p (MP4)';
+    if (s.indexOf('.hevc.mp4') >= 0) return 'Full quality (HEVC MP4)';
+    if (s.indexOf('.mkv') >= 0) return 'Full quality (legacy MKV)';
+    if (s.indexOf('1080') >= 0 || s.indexOf('.web-') >= 0) return '1080p (H.264 MP4)';
+    if (s.indexOf('720') >= 0 || s.indexOf('mobile') >= 0) return '720p (H.264 MP4)';
+    if (s.indexOf('.vtt') >= 0 || s.indexOf('.srt') >= 0) return 'Subtitles';
     return 'Download';
   }
 
-  /** Calm download row: MKV + other resolutions (always below the player). */
+  /** Calm download row: MP4 rungs + shared subtitle files (always below the player). */
   function buildDownloadRow(props, ladder) {
     const wrap = global.document.createElement('div');
     wrap.className = 'fb-theater-downloads';
@@ -551,6 +572,20 @@
     add('web', prop(props, 'srcWeb', '') || prop(props, 'data-src-web', ''));
     add('mobile', prop(props, 'srcMobile', '') || prop(props, 'data-src-mobile', ''));
     add('media', prop(props, 'src', '') || prop(props, 'data-src', ''));
+    // Shared subs (not per-resolution) — same files the player uses for <track>.
+    let tracks = [];
+    try {
+      const raw = prop(props, 'subtitlesJson', '') || prop(props, 'data-subtitles-json', '') || '[]';
+      tracks = JSON.parse(raw);
+      if (!Array.isArray(tracks)) tracks = [];
+    } catch (_) {
+      tracks = [];
+    }
+    for (let t = 0; t < tracks.length; t++) {
+      const src = tracks[t] && tracks[t].src ? String(tracks[t].src) : '';
+      if (!src) continue;
+      add('sub', src.charAt(0) === '/' ? src : '/' + src);
+    }
     if (!items.length) {
       const empty = global.document.createElement('p');
       empty.className = 'fb-theater-downloads-empty';
@@ -570,7 +605,8 @@
     }
     const note = global.document.createElement('p');
     note.className = 'fb-theater-downloads-note';
-    note.textContent = 'Save a file, then open it in VLC or another video player on your computer.';
+    note.textContent =
+      'Save the MP4 and matching subtitle files together, then open them in VLC or another video player.';
     wrap.appendChild(note);
     const boardRow = global.document.createElement('p');
     boardRow.className = 'fb-theater-downloads-note';
