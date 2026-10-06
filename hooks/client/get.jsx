@@ -181,6 +181,16 @@ function canPlayMkvHevc() {
 }
 
 /** Absolute same-origin URL for VLC Open Network Stream. */
+function siteOrigin() {
+  try {
+    const loc = globalThis.location
+    if (loc && loc.origin && loc.origin.indexOf('http') === 0) {
+      return loc.origin
+    }
+  } catch (e) {}
+  return 'https://flashbackrepository.org'
+}
+
 function absoluteStreamUrl(path) {
   const p = str(path)
   if (p.length === 0) {
@@ -189,19 +199,11 @@ function absoluteStreamUrl(path) {
   if (p.indexOf('https://') === 0 || p.indexOf('http://') === 0) {
     return p
   }
-  try {
-    const loc = globalThis.location
-    if (loc && loc.origin) {
-      if (p.charAt(0) === '/') {
-        return loc.origin + p
-      }
-      return loc.origin + '/' + p
-    }
-  } catch (e) {}
+  const origin = siteOrigin()
   if (p.charAt(0) === '/') {
-    return p
+    return origin + p
   }
-  return '/' + p
+  return origin + '/' + p
 }
 
 function pickPlayableSrc(project) {
