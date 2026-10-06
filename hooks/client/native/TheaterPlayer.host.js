@@ -62,9 +62,10 @@
   const STUB_BYTES_MAX = 100000;
   const DEFAULT_REPO = 'fan-edits';
   const DEFAULT_PEER_FQDNS = [
-    'iad1.relaygateway.net',
+    // Prefer currently healthy US/APAC nodes; iad1 last while MKV Range often 504/hangs there.
     'ord1.relaygateway.net',
     'hkg1.relaygateway.net',
+    'iad1.relaygateway.net',
   ];
 
   function formatBytes(n) {
@@ -1240,11 +1241,23 @@
           if (advanceRendition(note)) return;
           reportTheaterIssue({
             severity: 'major',
-            code: 'wasm_hard_fail',
+            code:
+              err && err.code === 'SOURCE_TOO_LARGE' ? 'wasm_source_too_large' : 'wasm_hard_fail',
             message: note,
             rendition: currentRendition(srcLadder, ladderIndex),
             engine: 'wasm',
           });
+          pending.style.display = 'block';
+          shell.style.display = 'none';
+          msg.textContent = note;
+          hint.textContent =
+            err && err.code === 'SOURCE_TOO_LARGE'
+              ? 'Use “Download the movie” below for VLC / another player while we finish streaming demux and web MP4s.'
+              : 'You can download the movie below if a file is listed.';
+          liveLog.style.display = 'block';
+          liveLog.textContent = note;
+          retryBtn.style.display = 'inline-block';
+          reportPendingBtn.style.display = 'inline-block';
           ctx.setPlaybackError(note);
         });
     }
