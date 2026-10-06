@@ -635,8 +635,16 @@ function jsonEscapeStr(s) {
   return out
 }
 
-/** CleverScript-safe JSON for subtitle tracks (no JSON.stringify). */
+/** Prefer prebuilt string from index.json (CleverScript-safe); else build tracks. */
 function subtitlesJson(project) {
+  try {
+    if (project && project.subtitlesJson) {
+      const ready = str(project.subtitlesJson)
+      if (ready.length > 2) {
+        return ready
+      }
+    }
+  } catch (e0) {}
   try {
     const tracks = subtitleTracks(project)
     if (!tracks || tracks.length === 0) {

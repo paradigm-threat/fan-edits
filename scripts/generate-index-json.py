@@ -366,6 +366,20 @@ def main() -> None:
             poster = media_root_poster(slug)
         subs = find_subtitles(folder, folder_rel)
         status = status_for(folder, media, ROOT / rel)
+        # CleverScript SSR cannot reliably walk nested object arrays; ship a ready JSON string.
+        tracks_for_player = []
+        for t in subs:
+            src = t.get("src") or ""
+            if src and not src.startswith("/"):
+                src = "/" + src
+            track = {
+                "src": src,
+                "label": t.get("label") or "Subtitles",
+                "lang": t.get("lang") or "en",
+            }
+            if t.get("default") is True:
+                track["default"] = True
+            tracks_for_player.append(track)
         entry: dict = {
             "slug": slug,
             "category": category,
@@ -379,6 +393,7 @@ def main() -> None:
             "mediaMobile": media_mobile,
             "image": poster if poster else "",
             "subtitles": subs,
+            "subtitlesJson": json.dumps(tracks_for_player, separators=(",", ":")),
         }
         if blurb:
             entry["blurb"] = blurb
