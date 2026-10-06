@@ -1,0 +1,102 @@
+/**
+ * Static contract for Flashback Android hosts.
+ * These files are CleverScript the shell prefers over Foo.js.
+ * They are not executed here (JSX). Web hosts stay in native-hosts.spec.mjs.
+ * Run: node hooks/client/native/android-hosts.test.mjs
+ */
+import assert from 'node:assert/strict'
+import fs from 'node:fs'
+import path from 'node:path'
+import { fileURLToPath } from 'url'
+
+const dir = path.dirname(fileURLToPath(import.meta.url))
+
+function read(name) {
+  return fs.readFileSync(path.join(dir, name), 'utf8')
+}
+
+function exportFns(src) {
+  return [...src.matchAll(/export function (\w+)/g)].map((m) => m[1]).sort()
+}
+
+function codeOnly(src) {
+  return src.replace(/\/\*[\s\S]*?\*\//g, '')
+}
+
+function forbidHostOnly(name, src) {
+  const code = codeOnly(src)
+  assert.equal(code.includes('document'), false, `${name} must not use document`)
+  assert.equal(code.includes('window'), false, `${name} must not use window`)
+  assert.equal(code.includes('?.'), false, `${name} must not use optional chaining`)
+  assert.equal(/['"][^'"]*\.host\.js['"]/.test(code), false, `${name} must not import a web host`)
+  assert.equal(/['"][^'"]*\.web\.js['"]/.test(code), false, `${name} must not import a web file`)
+}
+
+const stub = read('Affirmation.js')
+const affirmation = read('Affirmation.android.js')
+const nowShowing = read('NowShowing.android.js')
+const theater = read('TheaterPlayer.android.js')
+const externalPlay = read('ExternalPlay.android.js')
+const externalStub = read('ExternalPlay.js')
+
+assert.deepEqual(exportFns(affirmation), exportFns(stub), 'android affirmation exports match the stub')
+assert.match(stub, /globalThis\.__relaySkipAffirmations === true/)
+assert.match(affirmation, /relaySkipAffirmations === true/)
+assert.match(affirmation, /globalThis\.__relaySkipAffirmations === true/)
+assert.match(affirmation, /return null/)
+assert.match(affirmation, /flashback\.ownershipAck\.v1/)
+assert.match(affirmation, /flashback\.movieOwn\.v1\./)
+assert.match(affirmation, /linksJson/)
+assert.match(affirmation, /<a /)
+assert.match(affirmation, /localStorage\.setItem/)
+
+assert.match(nowShowing, /data-relay-scroll="x"/)
+assert.match(nowShowing, /<a /)
+assert.match(nowShowing, /href=/)
+assert.equal(/lcd|marquee/i.test(nowShowing), false, 'android now-showing is a row, not the web marquee')
+
+assert.match(theater, /ExternalPlay/)
+assert.match(theater, /hooks\/client\/native\/ExternalPlay\.js/)
+assert.match(theater, /relayAssetStatus=1/)
+assert.match(theater, /p\.unlocked/)
+assert.match(theater, /p\.cid/)
+assert.match(theater, /srcMobile/)
+assert.match(theater, /srcWeb/)
+assert.match(theater, /srcMaster/)
+assert.match(theater, /androidSrcLadder|pickSeededSrc/)
+assert.match(theater, /Download the movie/)
+assert.match(theater, /Full quality \(MKV\)/)
+assert.match(theater, /data-playback-engine="external"/)
+assert.equal(theater.includes('externalWatchPanel'), false, 'theater delegates CTA to ExternalPlay')
+// MKV master is preferred before MP4 fallbacks
+assert.match(theater, /master\.length > 0/)
+assert.equal(theater.includes("from '@clevertree/video'"), false, 'android theater defaults to external player, not VideoPlayer')
+
+assert.match(externalStub, /data-relay-park-native="fb-external-play"/)
+assert.match(externalStub, /data-stream-url/)
+assert.match(externalStub, /data-unlocked/)
+assert.match(externalStub, /data-setup-href/)
+assert.match(externalPlay, /Open in external player/)
+assert.match(externalPlay, /intent:/)
+assert.match(externalPlay, /android\.intent\.action\.VIEW/)
+assert.match(externalPlay, /type=video\/\*/)
+assert.match(externalPlay, /scheme=https/)
+assert.match(externalPlay, /Download MKV/)
+assert.match(externalPlay, /play\.google\.com\/store\/apps\/details\?id=org\.videolan\.vlc/)
+assert.match(externalPlay, /data-fb-external-play/)
+assert.equal(
+  /vlc:\/\//.test(codeOnly(externalPlay)),
+  false,
+  'android ExternalPlay must not use vlc://',
+)
+
+for (const [name, src] of [
+  ['Affirmation.android.js', affirmation],
+  ['NowShowing.android.js', nowShowing],
+  ['TheaterPlayer.android.js', theater],
+  ['ExternalPlay.android.js', externalPlay],
+]) {
+  forbidHostOnly(name, src)
+}
+
+console.log('android-hosts.test.mjs OK')

@@ -1,0 +1,46 @@
+# Android APKs
+
+Flashback on Android is two builds of the Relay client (`clevertree/react-client-android`, checkout `relay-client-android`). Neither APK vendors this repo’s hooks or movies. Both load a live Relay origin and paint that site’s client hook as native views.
+
+## Playback (external player default)
+
+Published masters are **HEVC Matroska (`.mkv`)** with embedded subs. The theater default on Android matches the web:
+
+- **Open in external player** — `ACTION_VIEW` / `intent:` URL for the HTTPS stream so VLC (or the system chooser) streams with Range, without stuffing the Media3 cache.
+- **Download MKV** — offline open in any capable player.
+- In-app ExoPlayer (`@clevertree/video`) remains available later for native MKV/HEVC experiments; it is **not** the default for archival masters (avoids cache pressure and codec surprises).
+
+## Flavors
+
+| APK | Application id | What you see |
+|-----|----------------|--------------|
+| Generic Relay | `com.relay.pure` | Server list, repo tabs, and shell settings. Any Relay origin. Skip-affirmation lives here. |
+| Flashback Repository | `com.flashback.repository` | `https://flashbackrepository.org` is baked in. A lock flag (`RELAY_LOCK_ORIGIN`) never creates the server list, tabs, or shell settings. The site’s own screens, including its settings and gates, are the app. |
+
+Build both from `relay-client-android/android`:
+
+```bash
+./gradlew :app:assembleRelayDebug :app:assembleFlashbackDebug
+```
+
+## Site hooks
+
+CleverScript stays on `Foo.js` (web keeps `Foo.host.js`). Android prefers `Foo.android.js` when the shell fetches `hooks/client/native/`. Those files are CleverScript, not Kotlin:
+
+- `Affirmation.android.js` — confirm dialog, same storage keys as the web host. Honors `@hooks` `relaySkipAffirmations` from the generic client.
+- `NowShowing.android.js` — horizontal, remote-focusable row (`data-relay-scroll="x"`).
+- `TheaterPlayer.android.js` — external-player CTA for the seeded master stream URL; download links; optional later ExoPlayer.
+
+`npm test` includes `hooks/client/native/android-hosts.test.mjs`, which checks those files against the web stub’s exports, storage keys, and props. Playwright still covers `*.host.js` only.
+
+## Shell behavior
+
+- Import closure is fetched from the origin (not only `hooks.json`). Last good closure is the offline backup. Hooks are not copied into the APK.
+- Full hook reload after 24 hours in the foreground, deferred while a foreground stream/save is active, so edits that are not QUERY updates show up. Flashback’s catalog is `fetch('/index.json')` inside the hook.
+- Relative links navigate inside the app. The shell sets `globalThis.__relaySkipAffirmations` from the generic client’s setting and reads the site’s client GET path from `OPTIONS`. A `setTimeout` prelude lets the site’s hydrate gate open so playback can unlock.
+- Flashback traffic is HTTPS. The generic client allows cleartext only for a server the user adds (and for localhost).
+- Movie files can be saved in full under app-specific storage when the user chooses Download. Broad external-storage grants are not requested.
+
+## Permissions
+
+`INTERNET`, `ACCESS_NETWORK_STATE`, `POST_NOTIFICATIONS`, `FOREGROUND_SERVICE`, `FOREGROUND_SERVICE_DATA_SYNC`, `WAKE_LOCK`. Touchscreen and Leanback are optional so a remote can drive the same APK.

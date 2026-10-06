@@ -1,0 +1,1124 @@
+themes:
+  dark:
+    variables:
+      house: "#0d0505"
+      velvet: "#3a1018"
+      velvetDeep: "#1a080c"
+      gold: "#e8c872"
+      goldMid: "#d4a84b"
+      goldDim: "#b8860b"
+      cream: "#f5e6be"
+      creamMuted: "#c4b49a"
+      seat: "#120808"
+      screen: "#1c1410"
+      border: "#4a3028"
+      warn: "#c45c4a"
+      ok: "#6a9a6a"
+    breakpoints:
+      sm: "640px"
+      md: "900px"
+      lg: "1100px"
+    selectors:
+      body:
+        margin: "0"
+        minHeight: "100%"
+        overflowX: "hidden"
+        overflowY: "auto"
+        backgroundColor: "var(house)"
+        color: "var(cream)"
+        fontFamily: "Georgia, 'Times New Roman', Times, serif"
+        lineHeight: "1.55"
+      ".fb-app":
+        position: "relative"
+        minHeight: "100%"
+        display: "flex"
+        flexDirection: "column"
+        color: "var(cream)"
+        backgroundColor: "var(house)"
+        overflowX: "hidden"
+        overflowY: "visible"
+      ".fb-backdrop":
+        position: "fixed"
+        inset: "0"
+        zIndex: "0"
+        pointerEvents: "none"
+        background: "radial-gradient(ellipse 80% 50% at 50% 28%, #2a1810 0%, var(house) 70%)"
+      ".fb-curtain":
+        position: "absolute"
+        top: "0"
+        bottom: "0"
+        width: "18%"
+        maxWidth: "220px"
+        background: "linear-gradient(90deg, var(velvetDeep), var(velvet) 40%, var(velvetDeep))"
+        opacity: "0.85"
+        boxShadow: "inset -20px 0 40px rgba(0,0,0,0.45)"
+      ".fb-curtain-left":
+        left: "0"
+        borderRight: "1px solid var(border)"
+      ".fb-curtain-right":
+        right: "0"
+        borderLeft: "1px solid var(border)"
+        background: "linear-gradient(270deg, var(velvetDeep), var(velvet) 40%, var(velvetDeep))"
+        boxShadow: "inset 20px 0 40px rgba(0,0,0,0.45)"
+      ".fb-wall-lights":
+        position: "absolute"
+        top: "14%"
+        bottom: "22%"
+        width: "16%"
+        maxWidth: "200px"
+        display: "flex"
+        flexDirection: "column"
+        justifyContent: "space-evenly"
+        alignItems: "center"
+        pointerEvents: "none"
+        zIndex: "1"
+        opacity: "1"
+        transition: "opacity 1.6s ease"
+      ".fb-wall-lights-left":
+        left: "0"
+      ".fb-wall-lights-right":
+        right: "0"
+      ".fb-sconce":
+        display: "block"
+        width: "56px"
+        height: "88px"
+        borderRadius: "8px"
+        opacity: "0.55"
+        # Dim but sharp: small hard cores + short falloff (no CSS blur)
+        background: "radial-gradient(circle at 50% 22%, rgba(255,236,200,0.95) 0%, rgba(255,210,140,0.75) 10%, rgba(232,140,60,0.28) 28%, transparent 46%), radial-gradient(circle at 50% 52%, rgba(255,220,160,0.7) 0%, rgba(200,100,40,0.22) 16%, transparent 38%), radial-gradient(circle at 50% 78%, rgba(255,200,130,0.55) 0%, rgba(160,70,30,0.18) 14%, transparent 34%)"
+        filter: "none"
+        mixBlendMode: "screen"
+      ".fb-wall-lights-right .fb-sconce":
+        transform: "scaleX(-1)"
+      ".fb-backdrop-playing .fb-wall-lights":
+        opacity: "0"
+      ".fb-screen-glow":
+        position: "absolute"
+        left: "50%"
+        top: "12%"
+        width: "56%"
+        height: "28%"
+        transform: "translateX(-50%)"
+        background: "radial-gradient(ellipse at center, rgba(212,165,116,0.18) 0%, transparent 70%)"
+        opacity: "0.9"
+      ".fb-seats":
+        position: "absolute"
+        left: "10%"
+        right: "10%"
+        bottom: "0"
+        height: "28%"
+      ".fb-seat-row":
+        position: "absolute"
+        left: "0"
+        right: "0"
+        height: "28%"
+        borderRadius: "50% 50% 0 0"
+        background: "linear-gradient(180deg, transparent, var(seat))"
+        borderTop: "2px solid #2a1418"
+        opacity: "0.9"
+      ".fb-seat-row-1":
+        bottom: "0"
+        transform: "scaleX(1.05)"
+      ".fb-seat-row-2":
+        bottom: "22%"
+        opacity: "0.75"
+        transform: "scaleX(0.95)"
+      ".fb-seat-row-3":
+        bottom: "42%"
+        opacity: "0.55"
+        transform: "scaleX(0.85)"
+      ".fb-header":
+        position: "relative"
+        zIndex: "2"
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        alignItems: "center"
+        justifyContent: "space-between"
+        gap: "12px"
+        padding: "16px 20px"
+        borderBottom: "1px solid var(border)"
+        background: "linear-gradient(180deg, rgba(26,8,12,0.92), rgba(10,7,8,0.75))"
+      ".fb-brand":
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "center"
+        gap: "12px"
+        color: "var(gold)"
+        textDecoration: "none"
+        minWidth: "0"
+      ".fb-brand-logo":
+        display: "block"
+        height: "52px"
+        width: "auto"
+        maxWidth: "168px"
+        flexShrink: "0"
+        borderRadius: "0"
+        objectFit: "contain"
+      ".fb-brand-mark":
+        display: "block"
+        height: "28px"
+        width: "28px"
+        flexShrink: "0"
+        objectFit: "contain"
+      ".fb-brand-text":
+        display: "flex"
+        flexDirection: "column"
+        gap: "2px"
+      ".fb-brand-name":
+        fontSize: "1.35rem"
+        fontWeight: "700"
+        letterSpacing: "0.04em"
+        color: "var(cream)"
+      ".fb-brand-tag":
+        fontSize: "0.78rem"
+        color: "var(creamMuted)"
+        fontStyle: "italic"
+      ".fb-footer-brand":
+        display: "inline-flex"
+        flexDirection: "row"
+        alignItems: "center"
+        gap: "8px"
+        color: "var(gold)"
+      ".fb-nav":
+        display: "flex"
+        flexDirection: "row"
+        gap: "16px"
+        fontSize: "0.95rem"
+      ".fb-nav a":
+        color: "var(gold)"
+        textDecoration: "none"
+        borderBottom: "1px solid transparent"
+      ".fb-nav a:hover":
+        borderBottomColor: "var(goldDim)"
+      ".fb-marquee":
+        position: "relative"
+        zIndex: "2"
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "center"
+        justifyContent: "center"
+        gap: "8px"
+        padding: "7px 12px"
+        background: "linear-gradient(180deg, #14100a 0%, #0a0806 55%, #100c08 100%)"
+        borderBottom: "1px solid var(border)"
+        boxShadow: "inset 0 0 18px rgba(0,0,0,0.7)"
+        fontFamily: "ui-monospace, 'Courier New', Courier, monospace"
+        color: "var(gold)"
+      ".fb-marquee-lights":
+        display: "flex"
+        flexDirection: "row"
+        flexShrink: "0"
+        alignItems: "center"
+        gap: "3px"
+        color: "var(gold)"
+      ".fb-marquee-wing":
+        maxWidth: "28%"
+        overflow: "hidden"
+      ".fb-wing-letter":
+        display: "inline-block"
+        fontSize: "0.62rem"
+        letterSpacing: "0.08em"
+        textTransform: "lowercase"
+        color: "var(gold)"
+        textShadow: "0 0 6px rgba(212,165,116,0.55)"
+        lineHeight: "1"
+        padding: "0 1px"
+      ".fb-wing-gap":
+        display: "inline-block"
+        width: "4px"
+      ".fb-bulb":
+        opacity: "0.55"
+        flexShrink: "0"
+      ".fb-bulb-0":
+        opacity: "0.95"
+      ".fb-bulb-2":
+        opacity: "0.75"
+      ".fb-marquee-board":
+        flex: "1"
+        minWidth: "0"
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "center"
+        maxWidth: "720px"
+      ".fb-lcd":
+        flex: "1"
+        minWidth: "0"
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "center"
+        padding: "2px 0"
+        background: "transparent"
+        border: "none"
+        boxShadow: "none"
+        fontFamily: "inherit"
+        color: "inherit"
+      ".fb-lcd-window":
+        flex: "1"
+        minWidth: "0"
+        overflow: "hidden"
+        whiteSpace: "nowrap"
+        maskImage: "linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent)"
+      ".fb-lcd-track":
+        display: "inline-block"
+        whiteSpace: "nowrap"
+        fontSize: "0.78rem"
+        letterSpacing: "0.04em"
+        lineHeight: "1.35"
+        willChange: "transform"
+      ".fb-lcd-link":
+        color: "var(gold)"
+        textDecoration: "none"
+        textShadow: "0 0 5px rgba(212,165,116,0.35)"
+      ".fb-lcd-link:hover":
+        color: "var(cream)"
+        textDecoration: "underline"
+      ".fb-lcd-star":
+        opacity: "0.9"
+        textShadow: "0 0 6px rgba(212,165,116,0.35)"
+      ".fb-marquee-text":
+        margin: "0"
+        fontSize: "0.8rem"
+        letterSpacing: "0.12em"
+        textTransform: "uppercase"
+        color: "var(gold)"
+      ".fb-main":
+        position: "relative"
+        zIndex: "2"
+        flex: "1"
+        padding: "20px 18px 40px"
+        maxWidth: "960px"
+        width: "100%"
+        marginLeft: "auto"
+        marginRight: "auto"
+        boxSizing: "border-box"
+      ".fb-affirmation":
+        padding: "20px 18px 8px"
+        boxSizing: "border-box"
+      ".fb-footer":
+        position: "relative"
+        zIndex: "2"
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        justifyContent: "space-between"
+        alignItems: "center"
+        gap: "8px"
+        padding: "14px 20px"
+        borderTop: "1px solid var(border)"
+        background: "rgba(10,7,8,0.9)"
+        fontSize: "0.82rem"
+        color: "var(creamMuted)"
+      ".fb-footer a":
+        color: "var(gold)"
+        textDecoration: "none"
+      ".fb-footer-ipfs":
+        flex: "1 1 100%"
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        alignItems: "center"
+        gap: "8px"
+        marginTop: "4px"
+        paddingTop: "8px"
+        borderTop: "1px solid rgba(74,48,40,0.55)"
+      ".fb-footer-ipfs-label":
+        letterSpacing: "0.08em"
+        textTransform: "uppercase"
+        fontSize: "0.72rem"
+        color: "var(goldDim)"
+      ".fb-footer-ipfs-cid":
+        fontFamily: "ui-monospace, 'Courier New', monospace"
+        fontSize: "0.72rem"
+        color: "var(gold)"
+        wordBreak: "break-all"
+      ".fb-footer-ipfs-copy":
+        padding: "4px 10px"
+        fontSize: "0.75rem"
+      ".fb-section-title":
+        marginTop: "28px"
+        marginBottom: "12px"
+        fontSize: "1.15rem"
+        color: "var(gold)"
+        letterSpacing: "0.06em"
+        textTransform: "uppercase"
+      ".fb-title-grid":
+        display: "flex"
+        flexDirection: "column"
+        gap: "10px"
+      ".fb-title-card":
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "flex-start"
+        gap: "12px"
+        width: "100%"
+        textAlign: "left"
+        textDecoration: "none"
+        padding: "14px 16px"
+        background: "linear-gradient(135deg, rgba(42,24,16,0.9), rgba(18,10,12,0.95))"
+        border: "1px solid var(border)"
+        borderRadius: "2px"
+        color: "var(cream)"
+        cursor: "pointer"
+        fontFamily: "inherit"
+        boxSizing: "border-box"
+      ".fb-title-card:hover":
+        borderColor: "var(goldDim)"
+        transform: "translateY(-1px)"
+      ".fb-title-card-mark":
+        color: "var(gold)"
+        flexShrink: "0"
+        marginTop: "2px"
+      ".fb-title-card-body":
+        display: "flex"
+        flexDirection: "column"
+        gap: "4px"
+        minWidth: "0"
+      ".fb-title-card-name":
+        fontSize: "1.05rem"
+        fontWeight: "700"
+      ".fb-title-card-blurb":
+        fontSize: "0.88rem"
+        color: "var(creamMuted)"
+        lineHeight: "1.4"
+      ".fb-title-card-meta":
+        fontSize: "0.72rem"
+        letterSpacing: "0.08em"
+        textTransform: "uppercase"
+        color: "var(goldDim)"
+      ".fb-status-ready .fb-title-card-meta":
+        color: "var(ok)"
+      ".fb-status-showing .fb-title-card-meta":
+        color: "var(ok)"
+      ".fb-status-coming_soon .fb-title-card-meta":
+        color: "var(creamMuted)"
+      ".fb-status-needs-seed .fb-title-card-meta":
+        color: "var(warn)"
+      ".fb-home-lead":
+        display: "flex"
+        flexDirection: "column"
+        gap: "20px"
+        marginTop: "4px"
+        marginBottom: "12px"
+      ".fb-home-intro":
+        minWidth: "0"
+      ".fb-home-intro a":
+        color: "var(gold)"
+      ".fb-home-blog":
+        minWidth: "0"
+        padding: "14px 16px 16px"
+        background: "linear-gradient(160deg, rgba(42,18,22,0.92), rgba(14,8,10,0.96))"
+        border: "1px solid var(border)"
+      ".fb-home-blog .fb-section-title":
+        marginTop: "0"
+      ".fb-now-showing":
+        marginTop: "0"
+        marginBottom: "28px"
+      ".fb-now-showing-head":
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "baseline"
+        justifyContent: "space-between"
+        gap: "12px"
+        marginBottom: "10px"
+      ".fb-now-showing-title":
+        marginTop: "0"
+        marginBottom: "0"
+      ".fb-now-showing-count":
+        margin: "0"
+        fontSize: "0.78rem"
+        letterSpacing: "0.12em"
+        textTransform: "uppercase"
+        color: "var(goldDim)"
+      ".fb-slideshow":
+        position: "relative"
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "stretch"
+        gap: "8px"
+      ".fb-slide-nav":
+        flexShrink: "0"
+        width: "42px"
+        alignSelf: "stretch"
+        border: "1px solid var(goldDim)"
+        background: "linear-gradient(180deg, rgba(58,16,24,0.95), rgba(18,8,10,0.98))"
+        color: "var(gold)"
+        fontSize: "1.8rem"
+        lineHeight: "1"
+        cursor: "pointer"
+        fontFamily: "inherit"
+        borderRadius: "2px"
+      ".fb-slide-nav:hover":
+        borderColor: "var(gold)"
+        color: "var(cream)"
+      ".fb-slide":
+        flex: "1"
+        minWidth: "0"
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "stretch"
+        gap: "0"
+        textDecoration: "none"
+        color: "var(cream)"
+        border: "1px solid var(goldDim)"
+        borderRadius: "2px"
+        overflow: "hidden"
+        background: "linear-gradient(145deg, #2a1418 0%, #12080a 55%, #0d0505 100%)"
+        boxShadow: "0 12px 36px rgba(0,0,0,0.45)"
+        minHeight: "220px"
+      ".fb-slide:hover":
+        borderColor: "var(gold)"
+      ".fb-slide-art":
+        flex: "0 0 42%"
+        maxWidth: "280px"
+        background: "#0d0505"
+        display: "flex"
+        alignItems: "center"
+        justifyContent: "center"
+        overflow: "hidden"
+      ".fb-slide-img":
+        display: "block"
+        width: "100%"
+        height: "100%"
+        objectFit: "cover"
+      ".fb-slide-copy":
+        flex: "1"
+        minWidth: "0"
+        padding: "22px 20px 20px"
+        display: "flex"
+        flexDirection: "column"
+        gap: "8px"
+        justifyContent: "center"
+      ".fb-slide-text .fb-slide-copy":
+        padding: "28px 24px"
+      ".fb-slide-kicker":
+        margin: "0"
+        fontSize: "0.72rem"
+        letterSpacing: "0.16em"
+        textTransform: "uppercase"
+        color: "var(gold)"
+      ".fb-slide-name":
+        margin: "0"
+        fontSize: "1.35rem"
+        lineHeight: "1.25"
+        color: "var(cream)"
+      ".fb-slide-blurb":
+        margin: "0"
+        fontSize: "0.95rem"
+        lineHeight: "1.5"
+        color: "var(creamMuted)"
+      ".fb-slide-meta":
+        margin: "8px 0 0"
+        fontSize: "0.72rem"
+        letterSpacing: "0.1em"
+        textTransform: "uppercase"
+        color: "var(goldDim)"
+      ".fb-slide-meta.fb-status-ready":
+        color: "var(ok)"
+      ".fb-blog-empty":
+        color: "var(creamMuted)"
+        margin: "0"
+      ".fb-blog-post":
+        marginTop: "4px"
+      ".fb-blog-post + .fb-blog-post":
+        marginTop: "22px"
+        paddingTop: "18px"
+        borderTop: "1px solid var(border)"
+      ".fb-blog-date":
+        margin: "0 0 4px"
+        fontSize: "0.72rem"
+        letterSpacing: "0.08em"
+        textTransform: "uppercase"
+        color: "var(goldDim)"
+      ".fb-blog-title":
+        margin: "0 0 10px"
+        fontSize: "1.2rem"
+        color: "var(cream)"
+        lineHeight: "1.35"
+      ".fb-blog-body":
+        color: "var(creamMuted)"
+        fontSize: "0.95rem"
+      ".fb-blog-body a":
+        color: "var(gold)"
+      ".fb-blog-body p":
+        margin: "0 0 0.85em"
+      ".fb-blog-body ul":
+        margin: "0 0 0.85em"
+        paddingLeft: "1.2em"
+      ".fb-movie":
+        display: "flex"
+        flexDirection: "column"
+      ".fb-movie-title":
+        margin: "8px 0 10px"
+        fontSize: "1.75rem"
+        color: "var(cream)"
+      ".fb-movie-blurb":
+        color: "var(creamMuted)"
+        marginBottom: "16px"
+      ".fb-video-panel":
+        position: "relative"
+        marginBottom: "24px"
+        padding: "12px"
+        background: "var(screen)"
+        border: "1px solid var(border)"
+        order: "2"
+      ".fb-movie-nomedia":
+        order: "2"
+      ".fb-readme":
+        marginTop: "8px"
+        paddingTop: "16px"
+        borderTop: "1px solid var(border)"
+        fontSize: "0.95rem"
+        order: "3"
+      ".fb-back":
+        background: "transparent"
+        border: "none"
+        color: "var(gold)"
+        fontFamily: "inherit"
+        fontSize: "0.9rem"
+        cursor: "pointer"
+        padding: "0"
+        marginBottom: "8px"
+      ".fb-media-unlock-target":
+        display: "none"
+      ".fb-video-controls .fb-btn":
+        opacity: "0.45"
+        pointerEvents: "none"
+      ".fb-video-controls .fb-btn:disabled":
+        opacity: "0.4"
+        cursor: "not-allowed"
+        pointerEvents: "none"
+      # ExternalPlay CTAs must receive clicks before movie-ack (host shows locked status).
+      ".fb-external-play .fb-btn":
+        opacity: "1"
+        pointerEvents: "auto"
+        cursor: "pointer"
+      ".fb-external-play .fb-btn:disabled":
+        opacity: "0.45"
+        cursor: "not-allowed"
+      ".fb-btn-external-play":
+        opacity: "1"
+        pointerEvents: "auto"
+        cursor: "pointer"
+      ".fb-theater-copy-stream":
+        opacity: "1"
+        pointerEvents: "auto"
+        cursor: "pointer"
+      ".fb-theater-open-vlc":
+        opacity: "1"
+        pointerEvents: "auto"
+        cursor: "pointer"
+      ".fb-theater-open-intent":
+        opacity: "1"
+        pointerEvents: "auto"
+        cursor: "pointer"
+      ".fb-theater-download-mkv":
+        opacity: "1"
+        pointerEvents: "auto"
+        cursor: "pointer"
+      ".fb-btn-setup":
+        opacity: "1"
+        pointerEvents: "auto"
+        cursor: "pointer"
+      "html[data-fb-welcome-ack='1'] .fb-affirmation-native[data-fb-affirmation='welcome']":
+        display: "none !important"
+      "html[data-fb-welcome-ack='1'] .fb-gate:not([data-fb-affirmation='title'])":
+        display: "none !important"
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-media-locked":
+        display: "none"
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-media-unlock-target":
+        display: "block"
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-movie-ack":
+        display: "none"
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-video-controls .fb-btn:not(:disabled)":
+        opacity: "1"
+        pointerEvents: "auto"
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-video-controls .fb-btn:disabled":
+        opacity: "0.4"
+        pointerEvents: "none"
+        cursor: "not-allowed"
+      ".fb-movie-ack":
+        position: "absolute"
+        inset: "12px"
+        zIndex: "5"
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "center"
+        justifyContent: "center"
+        minHeight: "220px"
+        pointerEvents: "none"
+        background: "rgba(6,4,5,0.72)"
+      ".fb-movie-ack-card":
+        pointerEvents: "auto"
+        maxWidth: "28rem"
+        width: "100%"
+        padding: "22px 20px 18px"
+        background: "linear-gradient(165deg, #3a1820 0%, #1a0c10 55%, #12080a 100%)"
+        border: "1px solid var(gold)"
+        boxShadow: "0 18px 50px rgba(0,0,0,0.55)"
+        borderRadius: "4px"
+      ".fb-movie-ack-kicker":
+        margin: "0 0 6px"
+        fontSize: "0.72rem"
+        letterSpacing: "0.16em"
+        textTransform: "uppercase"
+        color: "var(gold)"
+      ".fb-movie-ack-title":
+        margin: "0 0 10px"
+        fontSize: "1.25rem"
+        lineHeight: "1.25"
+        color: "var(cream)"
+      ".fb-movie-ack-body":
+        margin: "0 0 12px"
+        fontSize: "0.95rem"
+        lineHeight: "1.5"
+        color: "var(creamMuted)"
+      ".fb-movie-ack-form":
+        margin: "0"
+      ".fb-movie-ack-check":
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "flex-start"
+        gap: "14px"
+        margin: "12px 0 8px"
+        padding: "14px"
+        background: "rgba(0,0,0,0.28)"
+        border: "1px solid var(goldDim)"
+        borderRadius: "4px"
+        fontSize: "1rem"
+        color: "var(cream)"
+        cursor: "pointer"
+        lineHeight: "1.45"
+      ".fb-movie-ack-checkbox":
+        width: "24px"
+        height: "24px"
+        minWidth: "24px"
+        flexShrink: "0"
+        marginTop: "1px"
+        accentColor: "var(gold)"
+        cursor: "pointer"
+      ".fb-movie-ack-hint":
+        margin: "0 0 14px"
+        fontSize: "0.88rem"
+        color: "var(creamMuted)"
+      ".fb-movie-ack-actions":
+        display: "flex"
+        flexDirection: "row"
+        gap: "10px"
+      ".fb-movie-ack-ok":
+        width: "100%"
+        justifyContent: "center"
+        padding: "12px 16px"
+        fontSize: "1.02rem"
+      ".fb-video-controls":
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        gap: "10px"
+        marginTop: "12px"
+      ".fb-theater-downloads":
+        marginTop: "14px"
+        padding: "12px 14px"
+        border: "1px solid var(border)"
+        background: "rgba(0,0,0,0.28)"
+      ".fb-theater-external":
+        marginTop: "0"
+        marginBottom: "14px"
+        padding: "12px 14px"
+        border: "1px solid #5a4a2a"
+        background: "rgba(40,28,12,0.45)"
+        display: "block"
+      ".fb-theater-external-steps":
+        margin: "0 0 12px"
+        paddingLeft: "1.25rem"
+        fontSize: "0.9rem"
+        color: "var(creamMuted)"
+        lineHeight: "1.45"
+      ".fb-theater-external-url":
+        display: "block"
+        fontSize: "0.75rem"
+        wordBreak: "break-all"
+        color: "var(cream)"
+      ".fb-theater-external-status":
+        margin: "10px 0 0"
+        fontSize: "0.88rem"
+        color: "var(gold)"
+        minHeight: "1.25em"
+      ".fb-external-play-host":
+        display: "block"
+        width: "100%"
+      ".fb-external-play":
+        display: "block"
+        width: "100%"
+      ".fb-external-play-actions":
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        gap: "10px"
+        marginTop: "10px"
+        marginBottom: "8px"
+      ".fb-theater-external-actions":
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        gap: "10px"
+        marginBottom: "8px"
+      ".fb-theater-downloads-label":
+        margin: "0 0 8px"
+        fontSize: "0.95rem"
+        color: "var(cream)"
+      ".fb-theater-downloads-links":
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        gap: "10px"
+      ".fb-theater-download-link":
+        color: "var(gold)"
+        fontSize: "0.95rem"
+      ".fb-theater-downloads-note":
+        margin: "10px 0 0"
+        fontSize: "0.85rem"
+        color: "var(creamMuted)"
+      ".fb-board":
+        marginBottom: "24px"
+      ".fb-board-form":
+        marginBottom: "28px"
+        padding: "16px"
+        border: "1px solid var(border)"
+        background: "rgba(0,0,0,0.28)"
+      ".fb-theater-tech":
+        marginTop: "12px"
+        fontSize: "0.85rem"
+        color: "var(creamMuted)"
+      ".fb-btn":
+        display: "inline-flex"
+        flexDirection: "row"
+        alignItems: "center"
+        gap: "8px"
+        padding: "10px 16px"
+        background: "rgba(26,8,12,0.9)"
+        border: "1px solid var(border)"
+        color: "var(cream)"
+        fontFamily: "inherit"
+        fontSize: "0.95rem"
+        cursor: "pointer"
+      ".fb-btn-primary":
+        background: "linear-gradient(180deg, #5a2030, #3a1018)"
+        borderColor: "var(goldDim)"
+        color: "var(cream)"
+      ".fb-btn:disabled":
+        opacity: "0.45"
+        cursor: "not-allowed"
+      ".fb-btn-icon":
+        width: "20px"
+        height: "20px"
+      ".fb-media":
+        minHeight: "120px"
+        display: "flex"
+        flexDirection: "column"
+        alignItems: "stretch"
+        justifyContent: "center"
+        gap: "8px"
+        padding: "16px"
+        background: "#0c0a09"
+        color: "var(creamMuted)"
+      ".fb-media-video":
+        display: "block"
+        width: "100%"
+        maxHeight: "70vh"
+        background: "#000"
+      ".fb-media-msg":
+        margin: "0"
+        color: "var(cream)"
+      ".fb-media-hint":
+        margin: "0"
+        fontSize: "0.88rem"
+      ".fb-media-live":
+        margin: "4px 0 0"
+        fontSize: "0.82rem"
+        color: "var(goldMid)"
+        fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        lineHeight: "1.4"
+        wordBreak: "break-word"
+      ".fb-media-cid":
+        fontSize: "0.75rem"
+        wordBreak: "break-all"
+        opacity: "0.7"
+      ".fb-media-inspect":
+        marginTop: "4px"
+        paddingTop: "10px"
+        borderTop: "1px solid var(border)"
+        display: "flex"
+        flexDirection: "column"
+        gap: "6px"
+        overflow: "visible"
+      ".fb-media-inspect-label":
+        margin: "0"
+        fontSize: "0.72rem"
+        letterSpacing: "0.12em"
+        textTransform: "uppercase"
+        color: "var(gold)"
+      ".fb-media-inspect-cid-row":
+        display: "flex"
+        flexWrap: "wrap"
+        alignItems: "center"
+        gap: "8px"
+      ".fb-media-inspect-cid":
+        flex: "1"
+        minWidth: "0"
+        fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        fontSize: "0.78rem"
+        wordBreak: "break-all"
+        color: "var(cream)"
+        opacity: "0.95"
+      ".fb-media-inspect-copy":
+        padding: "4px 10px"
+        fontSize: "0.78rem"
+        flexShrink: "0"
+      ".fb-media-inspect-links":
+        display: "flex"
+        flexWrap: "wrap"
+        gap: "8px 14px"
+        fontSize: "0.88rem"
+      ".fb-media-inspect-links a":
+        color: "var(gold)"
+        textDecoration: "underline"
+        textUnderlineOffset: "2px"
+      ".fb-media-inspect-note":
+        margin: "0"
+        fontSize: "0.72rem"
+        lineHeight: "1.4"
+        opacity: "0.7"
+        color: "var(creamMuted)"
+      ".fb-media-bar":
+        height: "6px"
+        background: "#2a1c18"
+        borderRadius: "3px"
+        overflow: "hidden"
+      ".fb-media-bar-fill":
+        height: "100%"
+        background: "var(gold)"
+      ".fb-doc":
+        fontSize: "1.02rem"
+      ".fb-request-form":
+        marginTop: "1.75rem"
+        marginBottom: "2rem"
+        maxWidth: "28rem"
+        display: "flex"
+        flexDirection: "column"
+        gap: "12px"
+      ".fb-request-field":
+        display: "flex"
+        flexDirection: "column"
+        gap: "4px"
+        fontSize: "0.9rem"
+        color: "var(creamMuted)"
+      ".fb-request-field input":
+        padding: "10px 12px"
+        background: "rgba(12,8,8,0.85)"
+        border: "1px solid var(border)"
+        color: "var(cream)"
+        fontFamily: "inherit"
+        fontSize: "0.95rem"
+      ".fb-request-hint":
+        margin: "0"
+        fontSize: "0.88rem"
+        color: "var(creamMuted)"
+      ".fb-request-submit":
+        alignSelf: "flex-start"
+        marginTop: "4px"
+      ".fb-request-fallback":
+        margin: "8px 0 0"
+        fontSize: "0.82rem"
+        color: "var(creamMuted)"
+      ".fb-request-fallback code":
+        color: "var(gold)"
+        fontSize: "0.8rem"
+      ".fb-prose":
+        color: "var(creamMuted)"
+        lineHeight: "1.6"
+      ".fb-prose a":
+        color: "var(gold)"
+        textDecoration: "underline"
+      ".fb-prose h1":
+        margin: "0 0 0.75em"
+        fontSize: "1.55rem"
+        lineHeight: "1.25"
+        color: "var(cream)"
+      ".fb-prose h2":
+        margin: "1.35em 0 0.55em"
+        fontSize: "1.25rem"
+        lineHeight: "1.3"
+        color: "var(cream)"
+      ".fb-prose h3":
+        margin: "1.15em 0 0.45em"
+        fontSize: "1.08rem"
+        lineHeight: "1.35"
+        color: "var(cream)"
+      ".fb-prose h4":
+        margin: "1em 0 0.4em"
+        fontSize: "1rem"
+        color: "var(cream)"
+      ".fb-prose p":
+        margin: "0 0 0.9em"
+      ".fb-prose ul":
+        margin: "0 0 0.9em"
+        paddingLeft: "1.35em"
+      ".fb-prose ol":
+        margin: "0 0 0.9em"
+        paddingLeft: "1.35em"
+      ".fb-prose li":
+        margin: "0 0 0.35em"
+      ".fb-prose strong":
+        color: "var(cream)"
+        fontWeight: "700"
+      ".fb-prose em":
+        fontStyle: "italic"
+      ".fb-prose code":
+        fontFamily: "ui-monospace, SFMono-Regular, Menlo, Consolas, monospace"
+        fontSize: "0.9em"
+        color: "var(goldDim)"
+      ".fb-prose img":
+        display: "block"
+        maxWidth: "100%"
+        height: "auto"
+        margin: "0.75em 0 1em"
+        border: "1px solid var(border)"
+      ".fb-prose blockquote":
+        margin: "0 0 0.9em"
+        padding: "0.2em 0 0.2em 0.9em"
+        borderLeft: "3px solid var(goldDim)"
+        color: "var(creamMuted)"
+      ".fb-movie-blurb.fb-prose":
+        marginBottom: "16px"
+      ".fb-movie-blurb.fb-prose p":
+        margin: "0 0 0.55em"
+      ".fb-movie-blurb.fb-prose p:last-child":
+        marginBottom: "0"
+      ".fb-gate":
+        position: "fixed"
+        inset: "0"
+        zIndex: "50"
+        display: "flex"
+        alignItems: "center"
+        justifyContent: "center"
+        padding: "22px"
+        background: "rgba(6,4,5,0.9)"
+      ".fb-gate-card":
+        maxWidth: "480px"
+        width: "100%"
+        padding: "28px 26px 24px"
+        background: "linear-gradient(165deg, #3a1820 0%, #1a0c10 55%, #12080a 100%)"
+        border: "1px solid var(gold)"
+        boxShadow: "0 24px 70px rgba(0,0,0,0.6)"
+        borderRadius: "4px"
+      ".fb-gate-kicker":
+        margin: "0 0 8px"
+        fontSize: "0.78rem"
+        letterSpacing: "0.16em"
+        textTransform: "uppercase"
+        color: "var(gold)"
+      ".fb-gate-title":
+        margin: "0 0 14px"
+        fontSize: "1.5rem"
+        lineHeight: "1.25"
+        color: "var(cream)"
+      ".fb-gate-body":
+        margin: "0 0 14px"
+        color: "var(creamMuted)"
+        fontSize: "1rem"
+        lineHeight: "1.55"
+      ".fb-gate-check":
+        display: "flex"
+        flexDirection: "row"
+        gap: "14px"
+        alignItems: "flex-start"
+        margin: "20px 0 8px"
+        padding: "14px 14px"
+        background: "rgba(0,0,0,0.28)"
+        border: "1px solid var(goldDim)"
+        borderRadius: "4px"
+        fontSize: "1rem"
+        lineHeight: "1.45"
+        color: "var(cream)"
+        cursor: "pointer"
+      ".fb-gate-form":
+        margin: "0"
+      ".fb-gate-checkbox":
+        width: "24px"
+        height: "24px"
+        minWidth: "24px"
+        flexShrink: "0"
+        marginTop: "1px"
+        accentColor: "var(gold)"
+        cursor: "pointer"
+      ".fb-gate-hint":
+        margin: "0 0 16px"
+        fontSize: "0.88rem"
+        color: "var(creamMuted)"
+      ".fb-gate-actions":
+        display: "flex"
+        flexDirection: "row"
+        gap: "10px"
+      ".fb-gate-ok":
+        width: "100%"
+        justifyContent: "center"
+        padding: "12px 18px"
+        fontSize: "1.02rem"
+      ".fb-gate-links":
+        margin: "16px 0 0"
+        fontSize: "0.85rem"
+        textAlign: "center"
+      ".fb-gate-links a":
+        color: "var(gold)"
+      ".fb-icon":
+        display: "block"
+        flexShrink: "0"
+      "@media (min-width: 900px)":
+        ".fb-home-lead":
+          display: "grid"
+          gridTemplateColumns: "minmax(0, 1.15fr) minmax(0, 0.85fr)"
+          gap: "22px"
+          alignItems: "start"
+        ".fb-title-grid":
+          display: "grid"
+          gridTemplateColumns: "1fr 1fr"
+          gap: "12px"
+        ".fb-main":
+          padding: "28px 28px 56px"
+        ".fb-curtain":
+          width: "14%"
+      "@media (max-width: 640px)":
+        ".fb-brand-logo":
+          height: "40px"
+          width: "auto"
+          maxWidth: "120px"
+          borderRadius: "0"
+        ".fb-brand-name":
+          fontSize: "1.1rem"
+        ".fb-brand-tag":
+          display: "none"
+        ".fb-header":
+          padding: "12px 14px"
+        ".fb-curtain":
+          width: "8%"
+          opacity: "0.55"
+        ".fb-wall-lights":
+          width: "10%"
+          opacity: "0.7"
+        ".fb-sconce":
+          width: "48px"
+          height: "72px"
+        ".fb-movie-title":
+          fontSize: "1.35rem"
+        ".fb-slide":
+          flexDirection: "column"
+          minHeight: "0"
+        ".fb-slide-art":
+          flex: "0 0 auto"
+          maxWidth: "none"
+          width: "100%"
+          maxHeight: "220px"
+        ".fb-slide-nav":
+          width: "36px"
+          fontSize: "1.5rem"
