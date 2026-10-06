@@ -334,7 +334,9 @@ function boardQueryFromLocation() {
       const rawPath = queryParam(q, 'path')
       if (rawPath.length > 0) {
         try {
-          path = decodeURIComponent(rawPath)
+          path = globalThis.decodeURIComponent
+            ? globalThis.decodeURIComponent(rawPath)
+            : rawPath
         } catch (e) {
           path = rawPath
         }
