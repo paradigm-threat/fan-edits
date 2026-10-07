@@ -1,0 +1,59 @@
+# Relay IPFS thin-repo (see relay-gateway/docs/RELAY_IPFS.md)
+.relay/asset-inbox/
+.relay/local-assets/
+
+.tmp*
+*.mkv
+*.mkv.log
+*.mkv.new
+*.mkv.bak
+*.mp3
+*.webm
+*.webp
+*.flac
+# Park-native web hosts (RN-style *.web.js) must not be ignored
+!hooks/client/native/*.web.js
+*.mp4*
+*.avi
+*.mov
+*.m2ts
+*.mts
+*.wav
+*.wmv
+ffmpeg2pass*.log*
+*.mbtree
+.tmp.render.mlt
+FanMixes/**/*.debug.json
+*.resume.xml
+*.ini
+*.m4a
+*.ac3
+*.idx
+*.sub
+*.lnk
+.idea
+desktop.ini
+gmail/output
+
+# Render / build artifacts
+*.log
+.render_filter_complex.txt
+__pycache__/
+*.pyc
+
+# Local source media (rips, OST folders, clip libraries)
+media/
+KidFriendly/Clips/
+*1080p BluRay*
+*2160p*
+*RARBG*
+*YIFY*
+*YTS*
+*BluRay*
+*OST*
+*MP3*
+render_launch_status.txt
+
+package-lock.json
+node_modules
+.env.local

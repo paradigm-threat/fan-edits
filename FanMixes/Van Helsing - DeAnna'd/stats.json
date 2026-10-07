@@ -1,0 +1,20 @@
+{
+  "original": "Van Helsing (2004)",
+  "type": "FanFix",
+  "edition": "DeAnna'd",
+  "filmRuntime": "2:11:37",
+  "filmRuntimeSeconds": 7896.555,
+  "faneditRuntime": "1:23:32",
+  "faneditRuntimeSeconds": 5011.967,
+  "timeCut": "0:48:05",
+  "timeCutSeconds": 2884.588,
+  "availableIn": "2160p HEVC MKV (AAC)",
+  "poster": "poster.jpg",
+  "videoCodec": "hevc",
+  "width": 3840,
+  "height": 2160,
+  "sizeBytes": 2613221013,
+  "sizeGB": 2.61,
+  "measuredAt": "2026-10-07",
+  "notes": "ffprobe on Van Helsing - DeAnna'd.clean.mkv vs YTS 4K BluRay source rip"
+}

@@ -955,12 +955,17 @@ function nowShowingItemsJson(projects, nowShowingSlugs) {
   }
 
   function posterFor(p) {
+    // Prefer index.json `image` (repo-relative path like FanMixes/…/poster.jpg).
+    // Legacy `poster` is a basename under `path`.
     let poster = ''
     try {
-      if (p && p.poster) {
+      if (p && p.image) {
+        poster = '' + p.image
+        if (poster.length > 0 && poster.charAt(0) !== '/') {
+          poster = '/' + poster
+        }
+      } else if (p && p.poster && p.path) {
         poster = '/' + p.path + '/' + p.poster
-      } else if (p && p.image) {
-        poster = '/' + p.path + '/' + p.image
       }
     } catch (e2) {}
     return poster
