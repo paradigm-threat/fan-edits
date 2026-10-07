@@ -1494,7 +1494,8 @@ export default function FlashbackApp() {
     }
     let streamUrl = ''
     if (selected) {
-      streamUrl = absoluteStreamUrl(mediaSrc(selected))
+      // VLC on macOS rejects MRLs with raw spaces or parentheses.
+      streamUrl = encodeMarkdownUrl(absoluteStreamUrl(mediaSrc(selected)))
     }
     const posterHref = encodeMarkdownUrl(absoluteStreamUrl(projectPosterPath(selected)))
     const readmeMd = rewriteReadmeAssetLinks(hero.body || '', selected ? selected.path : '')
