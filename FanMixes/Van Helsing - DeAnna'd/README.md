@@ -30,9 +30,26 @@ This edit exists because the movie is worth saving. **DeAnna:** keep only what t
 
 - Reduce Anna to story-essential beats only (drop excess establishers, intros, and bad line-readings)
 - Cut tone-breaking comedy and awkward Frankenstein-monster beats when the plot can stand without them
-- TODO: list specific Anna removal windows (describe from timeline/subs)
-- TODO: list specific Frankenstein / cringe removal windows (describe from timeline/subs)
-- TODO: list other tone-breaker trims for action flow (describe from timeline/subs)
+- **Keep cut:** Frankenstein-in-the-huge-ice-block travel beat after the painting portal (theatrical ~`01:34:32` “It’s cold…” through freeing him / “out of the cold” ~`01:36:44`). Jump portal → Castle Dracula is fine; that ice gag is the cringe to stay gone.
+- **Restore (plot hole):** werewolf-**cure** exposition. Current edit keeps only *“Now, if I’m not cured by the twelfth stroke of midnight…”* with no setup — audience never learns Dracula has an antidote, why he needs one, or the midnight deadline. See below.
+
+### Werewolf cure — SRT audit (theatrical English)
+
+Source: `Van.Helsing.2004.…-English.srt` under the YTS folder. Times are **theatrical**, not edit timeline.
+
+| Theatrical | Dialogue (compressed) | In edit? | Notes |
+| --- | --- | --- | --- |
+| `00:47:51` | “They say Dracula has a cure.” (Anna → Velkan) | **Cut** | Early seed; tied to Anna saving her brother. Optional restore; DeAnna can leave out. |
+| `00:49:50` | “Werewolves only shed before the first full moon…” | **Cut** | Shed/control lore. Optional. |
+| `00:50:53` | “Werewolves are such a nuisance during their first full moon…” | **Cut** | Dracula/Velkan. Optional. |
+| `01:23:24`–`01:23:40` | Carl: won’t turn until first full moon; can fight Dracula’s hold until **final stroke of midnight**; ~48 hours | **Cut** | **Restore** — rules of the curse after VH is bitten. |
+| `01:38:04`–`01:39:26` | Monster: “There is a cure” → Dracula’s antidote → **only a werewolf can kill him** → why Dracula keeps a cure → lead them to antidote → plan: kill at midnight bell, inject cure before final stroke | **Almost all cut** | **Must restore** — this is the missing explanation. Edit currently jumps Igor “Why not?” → “cured by the twelfth stroke…” |
+| `01:39:29` | “Now, if I’m not cured by the twelfth stroke of midnight…” | **Kept** | Orphan line without the block above. |
+| `01:44:35` / `01:46:04` | “antidote to Van Helsing” / “You must find the cure!” | **Cut** | Climax chase reminders; restore with climax if those beats return. |
+
+**Minimum restore (recommended):** theatrical **`01:38:04`–`01:39:26`** (Frankenstein explains cure + midnight plan), plus Carl’s bite rules **`01:23:24`–`01:23:40`**. Do **not** pull the ice-block travel back in to get there — those are separate; the cure talk is inside Castle Dracula with Igor after arrival.
+
+**Keep cut (intentional):** ice-block Frankenstein between portal snow (“It’s cold… See you on the other side”) and castle approach. Edit already omits “grateful to be out of the cold” — leave that out.
 
 ## Score note — Dracula's Castle ↔ Silvestri
 
