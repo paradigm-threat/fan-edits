@@ -1307,9 +1307,9 @@ export default function FlashbackApp() {
     const bq = boardQueryFromLocation()
     main = (
       <div className="fb-doc">
-        <button type="button" className="fb-back" onClick={() => { navigate('/') }}>
+        <a className="fb-back" href="/">
           ← Library
-        </button>
+        </a>
         <h1 className="fb-movie-title">Board</h1>
         <p className="fb-movie-blurb">
           Bugs, comments, and short reviews — public notes on the git comments branch.
@@ -1418,9 +1418,9 @@ export default function FlashbackApp() {
     }
     main = (
       <div className="fb-movie">
-        <button type="button" className="fb-back" onClick={() => { navigate('/') }}>
+        <a className="fb-back" href="/">
           ← Library
-        </button>
+        </a>
         <h1 className="fb-movie-title">{displayTitle}</h1>
         {displayBlurb.length > 0 ? (
           <div className="fb-movie-blurb fb-prose">
@@ -1556,10 +1556,7 @@ export default function FlashbackApp() {
           />
         ) : null}
         <header className="fb-header">
-          <a className="fb-brand" href="/" aria-label="Flashback Repository" onClick={(e) => {
-            try { e.preventDefault() } catch (err) {}
-            navigate('/')
-          }}>
+          <a className="fb-brand" href="/" aria-label="Flashback Repository">
             <img
               className="fb-brand-logo"
               src="/hooks/client/brand/png/logo-header.png"
@@ -1573,13 +1570,13 @@ export default function FlashbackApp() {
             </span>
           </a>
           <nav className="fb-nav">
-            <a href="/" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/') }}>Library</a>
-            <a href="/setup" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/setup') }}>Setup</a>
-            <a href="/request" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/request') }}>Request</a>
-            <a href="/motivation" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/motivation') }}>Why</a>
-            <a href="/submit" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/submit') }}>Submit</a>
-            <a href="/board" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/board') }}>Board</a>
-            <a href="/legal" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/legal') }}>Legal</a>
+            <a href="/">Library</a>
+            <a href="/setup">Setup</a>
+            <a href="/request">Request</a>
+            <a href="/motivation">Why</a>
+            <a href="/submit">Submit</a>
+            <a href="/board">Board</a>
+            <a href="/legal">Legal</a>
           </nav>
         </header>
         <NowShowing variant="lcd" itemsJson={nowShowingItemsJson(projects, nowShowingSlugs)} ariaLabel="Now showing titles" />

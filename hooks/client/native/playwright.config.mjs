@@ -1,7 +1,7 @@
 import { defineConfig } from '@playwright/test'
 export default defineConfig({
   testDir: '.',
-  testMatch: /(native-hosts|external-only|vh-live-block-player)\.spec\.mjs$/,
+  testMatch: /(native-hosts|external-only|vh-live-block-player|ssr-static-no-hydrate)\.spec\.mjs$/,
   timeout: 30000,
 })
 

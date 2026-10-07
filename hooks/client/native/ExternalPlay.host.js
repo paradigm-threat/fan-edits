@@ -256,8 +256,13 @@
     function refreshUnlocked() {
       unlocked = ownershipUnlocked(hostEl, false);
       try {
-        root.setAttribute('data-fb-unlocked', unlocked ? 'true' : 'false');
-        if (unlocked && hostEl && hostEl.setAttribute) {
+        const flag = unlocked ? 'true' : 'false';
+        // Only write attrs when changed — MutationObserver on data-unlocked would
+        // otherwise re-enter forever and freeze the tab (SSR-static / no CleverScript).
+        if (root.getAttribute('data-fb-unlocked') !== flag) {
+          root.setAttribute('data-fb-unlocked', flag);
+        }
+        if (unlocked && hostEl && hostEl.getAttribute && hostEl.getAttribute('data-unlocked') !== 'true') {
           hostEl.setAttribute('data-unlocked', 'true');
         }
       } catch (_) {}
