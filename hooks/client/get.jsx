@@ -224,6 +224,29 @@ function projectPosterPath(project) {
   return ''
 }
 
+/** Encode chars that break Markdown link targets. CleverScript has no encodeURIComponent. */
+function encodeMarkdownUrl(url) {
+  const raw = str(url)
+  let out = ''
+  for (let i = 0; i < raw.length; i++) {
+    const c = raw.charAt(i)
+    if (c === ' ') {
+      out = out + '%20'
+    } else if (c === '(') {
+      out = out + '%28'
+    } else if (c === ')') {
+      out = out + '%29'
+    } else if (c === "'") {
+      out = out + '%27'
+    } else if (c === '"') {
+      out = out + '%22'
+    } else {
+      out = out + c
+    }
+  }
+  return out
+}
+
 function leaveReadmeHref(href) {
   const h = str(href)
   if (h.length === 0) {
@@ -277,7 +300,7 @@ function rewriteReadmeAssetLinks(md, projectPath) {
       if (href.indexOf('./') === 0) {
         href = href.slice(2)
       }
-      href = absoluteStreamUrl('/' + base + '/' + href)
+      href = encodeMarkdownUrl(absoluteStreamUrl('/' + base + '/' + href))
     }
     out = out + href + rest + ')'
     i = close + 1
@@ -1473,7 +1496,7 @@ export default function FlashbackApp() {
     if (selected) {
       streamUrl = absoluteStreamUrl(mediaSrc(selected))
     }
-    const posterHref = absoluteStreamUrl(projectPosterPath(selected))
+    const posterHref = encodeMarkdownUrl(absoluteStreamUrl(projectPosterPath(selected)))
     const readmeMd = rewriteReadmeAssetLinks(hero.body || '', selected ? selected.path : '')
     let mediaSurface = null
     if (selected) {
