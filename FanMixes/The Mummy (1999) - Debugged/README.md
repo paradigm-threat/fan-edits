@@ -1,0 +1,117 @@
+# The Mummy (1999) — Debugged
+
+Kid-friendlier cut: **scarabs that kill or eat people** are removed. Adventure, Imhotep, and the later plagues stay. Not a full wipe of every gunfight.
+
+## Stats
+
+Machine-readable: [`stats.json`](stats.json) (ffprobe, 2026-10-07).
+
+| | |
+| --- | --- |
+| **Original** | The Mummy (1999) |
+| **Type** | FanFix |
+| **Film running time** | 2:04:49 |
+| **Fanedit running time** | 1:50:25 |
+| **Time cut** | 0:14:24 |
+| **Available in** | 2160p HEVC MKV (AAC), ~2.25 GB |
+| **Poster** | [`poster.jpg`](poster.jpg) |
+
+**Canonical Kdenlive blank:** `The Mummy Debugged.kdenlive` is the known-good full-timeline project format for new FanMixes. Clone it with `scripts/clone_kdenlive_blank.py` — do not invent `.kdenlive` XML from scratch (those files often fail to open).
+
+## Motivation
+
+Removals are usually **violence** — live beetles eating people, swarm close-ups, Burns finished with scarabs, Beni’s treasure-chamber death. Sometimes **unrealism**: Jonathan’s scarab/arm beat is out because a dirty-knife wound vanishes in the next shot. Gunfights, Imhotep, and the Magi stay. Details: [PLAN.md](PLAN.md), [INVESTIGATION.md](INVESTIGATION.md).
+
+## Changes
+
+- Hom-Dai: no live scarabs poured onto wrapped Imhotep (resume Magi narration “He was to remain sealed”)
+- No camp “ate him alive” / Hom-Dai / 10-plagues lecture (cut 2026-09-23)
+- No Hamunaptra scarab swarm / corridor chase after Book of the Dead (resume “Evelyn?”)
+- No Cairo scene of Imhotep finishing Burns with scarabs (resume biblical plague “rivers and waters…”)
+- No Beni treasure-chamber death (scarabs eat him after “Goodbye, Beni.”)
+- No Jonathan arm-reset (scarab under the skin, dirty hunting knife, next shot uninjured)
+- Hom-Dai: live scarabs poured onto wrapped Imhotep. Resume Magi narration 'He was to remain sealed'.
+- Camp lecture: scarab skeletons / ate him alive / Hom-Dai / 10 plagues (source 00:58:02.836–00:59:01.793, cut 2026-09-23). Wider than the original 20s eat-talk window. · [play 00:58:02.836–00:59:01.793](?t=00:58:02.836&end=00:59:01.793)
+- Hamunaptra: curse scarab swarm after Book of the Dead. Resume search 'Evelyn?'
+- Cairo: Imhotep/Beni finish Burns with scarabs. Resume biblical plague 'rivers and waters of Egypt ran red'.
+- Jonathan arm: scarab under the skin, dirty hunting knife, next shot uninjured (source 01:36:32.908–01:37:33.283). · [play 01:36:32.908–01:37:33.283](?t=01:36:32.908&end=01:37:33.283)
+- Beni treasure-chamber death: scarabs eat him after 'Goodbye, Beni.' (source 01:53:27.236–01:54:36.203). Resume 'Look out!' · [play 01:53:27.236–01:54:36.203](?t=01:53:27.236&end=01:54:36.203)
+
+## Subtitles (two English tracks)
+
+Sidecars live in `subs/` so players do not auto-load them beside the MKV.
+
+| File | Role |
+|------|------|
+| `The Mummy Debugged.kdenlive.srt` | Output-timeline dialogue (Kdenlive). Same text as default. |
+| `subs/The Mummy Debugged.english.srt` | **Default** mux — dialogue only. |
+| `subs/The Mummy Debugged.enhanced.srt` | **English (citations)** — dialogue plus beat-locked notes; conclusions overflow into the credits. |
+| `subs/The Mummy Debugged.srt` | Uncut YTS 119140 (source times). Do not mux. |
+
+Citations never go on the default track. Same rule on *The Mummy Returns*: Silvestri / Avengers lines are enhanced-only.
+
+Paradigm Threat cross-link: [AU-062 Mountain of Heaven](https://paradigmthreat.net/influence/cayman/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md) (opening sun-on-peak).
+
+After a new encode (or to swap subs only):
+
+```bash
+python3 scripts/remux_subtitles.py \
+  --video "FanMixes/The Mummy (1999) - Debugged/The Mummy Debugged.mkv" \
+  --subs "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.english.srt" \
+  --subs-enhanced "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.enhanced.srt" \
+  --out "FanMixes/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
+```
+
+Current `The Mummy Debugged.mkv` is the **2026-09-23** kdenlive render (`01:55:29`, tractor1). Dual English tracks remuxed after encode. The 2026-09-19 file was ~60s longer (flesh-eater lecture still in).
+
+## Source media (not in git)
+
+Local rip (Kdenlive):
+
+`/home/ari/Videos/The Mummy (1999) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/The.Mummy.1999.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv`
+
+Import from `subs/` via Project → Subtitles when editing.
+
+## Build
+
+```bash
+bash "FanMixes/The Mummy (1999) - Debugged/generate-mummy-debugged.sh"
+```
+
+Sparse kept-runs. No `--snap`. QC every join on the original (`seams/seam-NN.kdenlive`). Video master is **playlist4**, not playlist2 (audio split).
+
+```bash
+python3 scripts/check_kdenlive_sync.py \
+  --project "FanMixes/The Mummy (1999) - Debugged"
+```
+
+## Render
+
+Copy the rip to local disk first, then:
+
+```bash
+python3 "FanMixes/The Mummy (1999) - Debugged/render_final_mkv.py" \
+  --video "/media/ari/HD/FanEditRender/The Mummy (1999)/The.Mummy.1999.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv" \
+  --out "/media/ari/HD/FanEditRender/The Mummy (1999) - Debugged/The Mummy (1999) - Debugged - final.mkv"
+```
+
+Muxes `subs/The Mummy Debugged.english.srt` (default) and `subs/The Mummy Debugged.enhanced.srt` (citations) when present.
+
+## Sync back to server
+
+Copy the **project folder** to `Videos/FanEdits/FanMixes/…` — **exclude** the library rip. Then:
+
+```bash
+bash scripts/ensure-public-permissions.sh "FanMixes/The Mummy (1999) - Debugged"
+```
+
+## Changelog
+
+- 2026-09-27 — `seams.mkv` rebuilt from the finished NAS render (output join times), not the 4K rip.
+- 2026-09-27 — Cut Beni eaten by scarabs (source `01:53:27`–`01:54:36`, after “Goodbye, Beni.”).
+- 2026-09-26 — Per-seam Kdenlive projects in `seams/` (generic names, original 4K, no proxy) for join QC. `seams.mkv` is the short reel, not the feature.
+- 2026-09-25 — Proxy was +1 frame vs the 4K HEVC (`-vsync 1`). See PLAN.md; regenerate proxy with passthrough.
+- 2026-09-23 — Re-render 01:55:29 (flesh-eater + Jonathan in); dual English remuxed; NAS sync.
+- 2026-09-23 — Dual English tracks written; flesh-eater lecture + Jonathan arm cuts; INVESTIGATION.md.
+- 2026-09-19 — Documented as canonical blank for `clone_kdenlive_blank.py`.
+- 2026-09-19 — Project created; scarab cut list from SRT.

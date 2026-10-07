@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Flashback Repository">
+  <!-- Flat app mark: 3 film nodes + 2 Relay bridges -->
+  <rect width="120" height="120" rx="22" fill="#0D0505"/>
+  <rect x="6" y="6" width="108" height="108" rx="18" fill="none" stroke="#E8C872" stroke-width="5"/>
+
+  <!-- Left node -->
+  <rect x="18" y="22" width="24" height="76" rx="8" fill="none" stroke="#E8C872" stroke-width="4.5"/>
+  <circle cx="30" cy="38" r="5.5" fill="#E8C872"/>
+  <circle cx="30" cy="82" r="5.5" fill="#E8C872"/>
+
+  <!-- Center node -->
+  <rect x="48" y="22" width="24" height="76" rx="8" fill="none" stroke="#E8C872" stroke-width="4.5"/>
+  <circle cx="60" cy="38" r="5.5" fill="#E8C872"/>
+  <circle cx="60" cy="82" r="5.5" fill="#E8C872"/>
+
+  <!-- Right node -->
+  <rect x="78" y="22" width="24" height="76" rx="8" fill="none" stroke="#E8C872" stroke-width="4.5"/>
+  <circle cx="90" cy="38" r="5.5" fill="#E8C872"/>
+  <circle cx="90" cy="82" r="5.5" fill="#E8C872"/>
+
+  <!-- Relay bridges (3 points / 2 lines) -->
+  <rect x="40" y="56" width="10" height="8" rx="2" fill="#E8C872"/>
+  <rect x="70" y="56" width="10" height="8" rx="2" fill="#E8C872"/>
+</svg>
