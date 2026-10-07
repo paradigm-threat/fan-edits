@@ -15,7 +15,6 @@ import Affirmation, {
   movieStorageKey,
 } from 'hooks/client/native/Affirmation.js'
 import NowShowing from 'hooks/client/native/NowShowing.js'
-import TheaterPlayer from 'hooks/client/native/TheaterPlayer.js'
 import ExternalPlay from 'hooks/client/native/ExternalPlay.js'
 import Board from 'hooks/client/native/Board.js'
 
@@ -1396,25 +1395,7 @@ export default function FlashbackApp() {
       streamUrl = absoluteStreamUrl(mediaSrc(selected))
     }
     let mediaSurface = null
-    if (selected && inPageMkvOk === true) {
-      mediaSurface = (
-        <TheaterPlayer
-          src={pickPlayableSrc(selected)}
-          srcWeb={mediaSrcFor(selected, projectMediaField(selected, 'mediaWeb'))}
-          srcMobile={mediaSrcFor(selected, projectMediaField(selected, 'mediaMobile'))}
-          srcMaster={mediaSrc(selected)}
-          subtitlesJson={subtitlesJson(selected)}
-          cid={movieCid}
-          seedState="pending"
-          unlocked={movieAck === true && ack === true}
-          playing={playing === true}
-          command={command}
-          commandSeq={commandSeq}
-          commandArg=""
-          startAt={startAtVal}
-        />
-      )
-    } else if (selected) {
+    if (selected) {
       mediaSurface = (
         <ExternalPlay
           streamUrl={streamUrl}
