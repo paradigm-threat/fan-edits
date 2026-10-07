@@ -140,7 +140,7 @@ export default function OwnershipGate(props) {
           {"Before you play any fan edit here, please confirm you own a legal commercial copy of the corresponding original film. Same house rule fanedit communities have used for years: the edit is for people who already have the movie."}
         </p>
         <p className="fb-gate-body">
-          {"This site is a personal catalog of projects — not a pirate archive, and not a substitute for buying or renting the studio release."}
+          {"Copyrighted feature files are not stored in the public repos — they are on the IPFS network (servers may cache temporarily for streaming). Access here follows this ownership disclaimer. Not a pirate archive, and not a substitute for buying or renting the studio release."}
         </p>
         <form className="fb-gate-form" method="get" action="/">
           <input type="hidden" name="ownershipAck" value="1" />
