@@ -106,7 +106,7 @@ If the one-click button fails (browser blocked the scheme, handler not installed
 
 ## 4. Ownership gate
 
-Same house rule as always: confirm you own a legal commercial copy of the original film before you stream an edit. The site asks once per title on this browser.
+Same house rule as always: confirm you own a legal commercial copy of the original film before you stream an edit. The site asks once per title on this browser. Feature files are on IPFS (not in public git); see [Ownership policy](/legal).
 
 ## Troubleshooting
 

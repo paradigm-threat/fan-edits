@@ -38,7 +38,7 @@ Historic leaders have described controlled opposition as a containment strategy.
 
 ## Pushback by doing the work
 
-Flashback Repository is pushback under ownership rules: make the cut, document it, host it (primarily over IPFS), require that viewers own the commercial original. Watch via **external player stream** (VLC and friends) from the theater page, or later via the Android / TV app. No pirate archive. No apology for wanting better versions of films we already bought.
+Flashback Repository is pushback under ownership rules: make the cut, document it, host the **bytes on IPFS** (not as permanent public git blobs — repos keep notes, project files, and text pointers; servers may cache IPFS blocks for streaming), and require that viewers own the commercial original before unlocking stream access. Watch via **external player stream** (VLC and friends) from the theater page, or later via the Android / TV app. No pirate archive. No apology for wanting better versions of films we already bought. See [Ownership policy](/legal).
 
 Projects stay in **Kdenlive + melt** so the library remains editable with open-source tools — see [Submissions](/submit).
 

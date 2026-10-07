@@ -1442,7 +1442,7 @@ export default function FlashbackApp() {
               eyebrow="CONFIRM"
               title={'I confirm I own a legal copy of ' + projectOriginalTitle(selected)}
               body={
-                'Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nThis site is a personal catalog of projects — not a pirate archive.'
+                'Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nFeature video is on IPFS (not in public git repos); this site only unlocks stream access after you confirm ownership. Not a pirate archive.'
               }
               checkboxLabel={
                 'I confirm I own a legal copy of ' +
@@ -1543,7 +1543,7 @@ export default function FlashbackApp() {
             eyebrow="WELCOME"
             title="Own the original — then enjoy the edit"
             body={
-              'Before you play any fan edit here, please confirm you own a legal commercial copy of the corresponding original film. Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nThis site is a personal catalog of projects — not a pirate archive, and not a substitute for buying or renting the studio release.'
+              'Before you play any fan edit here, please confirm you own a legal commercial copy of the corresponding original film. Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nCopyrighted feature files are not stored in the public repos — they are on the IPFS network (servers may cache temporarily for streaming). Access here follows this ownership disclaimer. Not a pirate archive, and not a substitute for buying or renting the studio release.'
             }
             checkboxLabel="I confirm I own a legal copy of each original film before I play its edit."
             confirmLabel="OK — I confirm"

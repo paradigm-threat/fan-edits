@@ -4,6 +4,8 @@ Personal fan edits of films I own — family-safe cuts, taste-driven mixes, and 
 
 This is not a pirate archive. **You must own a legal copy of each original** before you play anything here. That is the same rule the fanedit community has used for years.
 
+**Copyrighted feature files are not in the git repos.** They live on **IPFS** (servers may cache blocks temporarily for streaming). Repos hold notes, edit projects, and text pointers — filenames in a `.kdenlive` file are not the film. Stream access on this site follows the ownership disclaimer. Details: [Ownership policy](/legal).
+
 ## Halloween watching (no obligations)
 
 Three remixed Universal creature / adventure pictures for the season — a linked Sommers / Silvestri / Ducsay set:
@@ -22,7 +24,7 @@ Own the original, confirm once, hit Play. Or ignore this and browse the full lib
 4. **Reaffirm for that film** the first time you open it (one checkbox; remembered forever on this device).
 5. Tap **Open in VLC** (or copy the stream URL into VLC → Media → Open Network Stream). There is also an **Android / TV APK** for couch watching.
 
-Media rides **thin IPFS**: if a file is not on the network yet, it **needs to be seeded** — the hash is known; the bytes just are not here yet.
+Media rides **thin IPFS**: the bytes are content-addressed on the network (not parked forever as public repo blobs). If a file is not seeded yet, it **needs to be seeded** — the hash is known; the bytes just are not available yet.
 
 **Why this exists:** it is not only about better cuts. It is about whether we are **allowed** to improve the films we own and share those cuts with friends. [Read the full motivation →](/motivation)
 
