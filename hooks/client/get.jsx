@@ -206,6 +206,85 @@ function absoluteStreamUrl(path) {
   return origin + '/' + p
 }
 
+/** Repo-root path for a title poster (`image` or `path` + `poster`). */
+function projectPosterPath(project) {
+  if (!project) {
+    return ''
+  }
+  if (project.image) {
+    let poster = str(project.image)
+    if (poster.length > 0 && poster.charAt(0) !== '/') {
+      poster = '/' + poster
+    }
+    return poster
+  }
+  if (project.poster && project.path) {
+    return '/' + str(project.path) + '/' + str(project.poster)
+  }
+  return ''
+}
+
+function leaveReadmeHref(href) {
+  const h = str(href)
+  if (h.length === 0) {
+    return true
+  }
+  const c0 = h.charAt(0)
+  if (c0 === '/' || c0 === '#' || c0 === '?') {
+    return true
+  }
+  if (h.indexOf('http://') === 0 || h.indexOf('https://') === 0 || h.indexOf('mailto:') === 0) {
+    return true
+  }
+  if (h.indexOf('../') === 0 || h.indexOf('./../') === 0) {
+    return true
+  }
+  return false
+}
+
+/**
+ * README links like poster.jpg resolve against the slug URL (`/poster.jpg` → 404).
+ * Rewrite same-folder targets to an absolute URL under project.path.
+ */
+function rewriteReadmeAssetLinks(md, projectPath) {
+  const raw = str(md)
+  const base = str(projectPath)
+  if (raw.length === 0 || base.length === 0) {
+    return raw
+  }
+  let out = ''
+  let i = 0
+  while (i < raw.length) {
+    const mark = raw.indexOf('](', i)
+    if (mark < 0) {
+      out = out + raw.slice(i)
+      break
+    }
+    const close = raw.indexOf(')', mark + 2)
+    if (close < 0) {
+      out = out + raw.slice(i)
+      break
+    }
+    out = out + raw.slice(i, mark + 2)
+    let href = raw.slice(mark + 2, close)
+    const sp = href.indexOf(' ')
+    let rest = ''
+    if (sp >= 0) {
+      rest = href.slice(sp)
+      href = href.slice(0, sp)
+    }
+    if (!leaveReadmeHref(href)) {
+      if (href.indexOf('./') === 0) {
+        href = href.slice(2)
+      }
+      href = absoluteStreamUrl('/' + base + '/' + href)
+    }
+    out = out + href + rest + ')'
+    i = close + 1
+  }
+  return out
+}
+
 function pickPlayableSrc(project) {
   if (!project) {
     return ''
@@ -1394,6 +1473,8 @@ export default function FlashbackApp() {
     if (selected) {
       streamUrl = absoluteStreamUrl(mediaSrc(selected))
     }
+    const posterHref = absoluteStreamUrl(projectPosterPath(selected))
+    const readmeMd = rewriteReadmeAssetLinks(hero.body || '', selected ? selected.path : '')
     let mediaSurface = null
     if (selected) {
       mediaSurface = (
@@ -1427,9 +1508,12 @@ export default function FlashbackApp() {
             <MarkdownRenderer content={displayBlurb} />
           </div>
         ) : null}
+        {posterHref.length > 0 ? (
+          <img className="fb-movie-poster" src={posterHref} alt="" width="280" />
+        ) : null}
         {/* README MD before video in tree order so SSR finishes links/lists; CSS order keeps it below the player. */}
         <div className="fb-readme fb-prose">
-          <MarkdownRenderer content={hero.body || ''} />
+          <MarkdownRenderer content={readmeMd} />
         </div>
         {selected &&
         (projectMediaField(selected, 'media').length > 0 ||

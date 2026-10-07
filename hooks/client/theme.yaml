@@ -555,6 +555,13 @@ themes:
       ".fb-movie-blurb":
         color: "var(creamMuted)"
         marginBottom: "16px"
+      ".fb-movie-poster":
+        display: "block"
+        width: "min(280px, 100%)"
+        height: "auto"
+        margin: "0 0 18px"
+        border: "1px solid var(border)"
+        background: "var(screen)"
       ".fb-video-panel":
         position: "relative"
         marginBottom: "24px"
