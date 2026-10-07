@@ -1,0 +1,10 @@
+{
+  "schema": "flashback.request.v2",
+  "requestEmail": "ari@asu.edu",
+  "alsoAccepts": ["ari.asulin@gmail.com"],
+  "subject": "Request: Flashback FanEdit Downloads",
+  "bodyHasWords": "Flashback FanEdit Downloads",
+  "templateTitle": "Request: Flashback FanEdit Downloads",
+  "driveLibrary": "https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link",
+  "notes": "Gmail filter: To ari@asu.edu OR ari.asulin@gmail.com; Subject exact; Has the words Flashback FanEdit Downloads; Send template Request: Flashback FanEdit Downloads; Mark as read; label Fan Edit Requests."
+}

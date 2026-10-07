@@ -2,6 +2,20 @@
 
 Cut that removes **Anna** as much as possible without plot or context regression, and strips as many cringe beats as we can — especially with the Frankenstein monster. Select score beds are swapped for *Castlevania: Symphony of the Night* cues (`castlevania-symphony_of_the_night_ost/`, not in git).
 
+## Stats
+
+Machine-readable: [`stats.json`](stats.json) (ffprobe, 2026-10-07).
+
+| | |
+| --- | --- |
+| **Original** | Van Helsing (2004) |
+| **Type** | FanFix |
+| **Film running time** | 2:11:37 |
+| **Fanedit running time** | 1:23:32 |
+| **Time cut** | 0:48:05 |
+| **Available in** | 2160p HEVC MKV (AAC), ~2.61 GB |
+| **Poster** | [`poster.jpg`](poster.jpg) |
+
 ## Motivation
 
 First contact was a pirate rip (not a theater night). The surprise was how much **flair and color** the movie had — ideas that felt new and unique at the time, a Van Helsing who had never quite been *wanted* like this before. Comic-book and tropey, yes, and that was mostly fine. What was not fine was the **editing**: constantly chopped, obnoxious, excessive, lined with cringey statements that kill the action flow. Most productions shoot more than they keep because some takes do not fit. Here too much of the wrong material stayed in.

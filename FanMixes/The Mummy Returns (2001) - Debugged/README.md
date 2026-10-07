@@ -2,6 +2,20 @@
 
 Kid-friendlier cut to match *The Mummy (1999) - Debugged*. This film has no SRT-named scarab dump; v1 removes the **pygmy swarm** that kills the expedition (same “little creatures eating people” beat). Confirm in [PLAN.md](PLAN.md).
 
+## Stats
+
+Machine-readable: [`stats.json`](stats.json) (ffprobe, 2026-10-07).
+
+| | |
+| --- | --- |
+| **Original** | The Mummy Returns (2001) |
+| **Type** | FanFix |
+| **Film running time** | 2:09:33 |
+| **Fanedit running time** | 1:58:57 |
+| **Time cut** | 0:10:36 |
+| **Available in** | 2160p HEVC MKV (AAC), ~2.89 GB |
+| **Poster** | [`poster.jpg`](poster.jpg) |
+
 ## Motivation
 
 Match the 1999 Debugged rule: no little creatures eating people on screen. The 1999 flesh-eating beetle dump is not repeated as a set piece here; the closest analogue is the **pygmy swarm** that overruns the expedition. Izzy later jokes about “mummies, pygmies, big bugs.” Scorpion King prologue, Anubis warriors, and the finale stay for v1.

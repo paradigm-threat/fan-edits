@@ -55,6 +55,17 @@ def original_title_from(display_title: str, folder_name: str) -> str:
     return raw or folder_name or display_title
 
 
+def load_stats(folder: Path) -> dict | None:
+    path = folder / "stats.json"
+    if not path.is_file():
+        return None
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return None
+    return data if isinstance(data, dict) else None
+
+
 def blurb_from_readme(readme: Path) -> str:
     """First description paragraph after H1 (skip Motivation/Changes heads)."""
     try:
@@ -125,6 +136,10 @@ def load_manifest_paths() -> set[str]:
     return paths
 
 
+# Canonical poster art per FanMix: put `poster.jpg` in the project folder
+# (or under `img/`). Preferred name is poster.jpg; also accepted: poster.png /
+# poster.webp and cover.*. Legacy: `<folder-name>.jpg`. Path is stored on
+# index.json as `image` (repo-relative) for the site carousel / now-showing.
 POSTER_BASENAMES = (
     "poster.jpg",
     "poster.jpeg",
@@ -148,7 +163,7 @@ def find_poster(folder: Path, folder_rel: str) -> str | None:
             p = base / name
             if p.is_file():
                 return f"{folder_rel}/{p.relative_to(folder).as_posix()}"
-    # Project-folder-named art (common for these mixes)
+    # Project-folder-named art (legacy)
     for ext in (".jpg", ".jpeg", ".png", ".webp"):
         for base in (folder, folder / "img"):
             if not base.is_dir():
@@ -160,9 +175,11 @@ def find_poster(folder: Path, folder_rel: str) -> str | None:
 
 
 def media_root_poster(slug: str) -> str | None:
+    """Optional shared art under media/ (only if the file still exists)."""
     mapped = {
         "sonic-2020-deschwartzed": "media/Sonic DeSchwartzed Edition Poster.png",
         "sonic-2-2022-deschwartzed": "media/Sonic DeSchwartzed Edition Poster.png",
+        "sonic-3-2024-deschwartzed": "media/Sonic DeSchwartzed Edition Poster.png",
     }
     rel = mapped.get(slug)
     if rel and (ROOT / rel).is_file():
@@ -440,6 +457,29 @@ def main() -> None:
             entry["blurb"] = ""
         if reel:
             entry["reel"] = reel
+        stats = load_stats(folder)
+        if stats:
+            for key in (
+                "filmRuntime",
+                "faneditRuntime",
+                "timeCut",
+                "filmRuntimeSeconds",
+                "faneditRuntimeSeconds",
+                "timeCutSeconds",
+                "availableIn",
+                "type",
+                "sizeBytes",
+                "sizeGB",
+                "width",
+                "height",
+                "videoCodec",
+                "poster",
+            ):
+                if key in stats and stats[key] is not None:
+                    entry[key] = stats[key]
+        # Always expose poster basename when image is the canonical poster.* path
+        if poster and "poster" not in entry:
+            entry["poster"] = Path(poster).name
         projects.append(entry)
 
     # Keep only slugs that still exist in the catalog (typos / retired titles drop out).

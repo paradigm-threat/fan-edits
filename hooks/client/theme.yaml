@@ -150,10 +150,11 @@ themes:
       ".fb-brand-logo":
         display: "block"
         height: "52px"
-        width: "52px"
+        width: "auto"
+        maxWidth: "168px"
         flexShrink: "0"
-        borderRadius: "10px"
-        objectFit: "cover"
+        borderRadius: "0"
+        objectFit: "contain"
       ".fb-brand-mark":
         display: "block"
         height: "28px"
@@ -899,6 +900,40 @@ themes:
         background: "var(gold)"
       ".fb-doc":
         fontSize: "1.02rem"
+      ".fb-request-form":
+        marginTop: "1.75rem"
+        marginBottom: "2rem"
+        maxWidth: "28rem"
+        display: "flex"
+        flexDirection: "column"
+        gap: "12px"
+      ".fb-request-field":
+        display: "flex"
+        flexDirection: "column"
+        gap: "4px"
+        fontSize: "0.9rem"
+        color: "var(creamMuted)"
+      ".fb-request-field input":
+        padding: "10px 12px"
+        background: "rgba(12,8,8,0.85)"
+        border: "1px solid var(border)"
+        color: "var(cream)"
+        fontFamily: "inherit"
+        fontSize: "0.95rem"
+      ".fb-request-hint":
+        margin: "0"
+        fontSize: "0.88rem"
+        color: "var(creamMuted)"
+      ".fb-request-submit":
+        alignSelf: "flex-start"
+        marginTop: "4px"
+      ".fb-request-fallback":
+        margin: "8px 0 0"
+        fontSize: "0.82rem"
+        color: "var(creamMuted)"
+      ".fb-request-fallback code":
+        color: "var(gold)"
+        fontSize: "0.8rem"
       ".fb-prose":
         color: "var(creamMuted)"
         lineHeight: "1.6"
@@ -1055,9 +1090,10 @@ themes:
           width: "14%"
       "@media (max-width: 640px)":
         ".fb-brand-logo":
-          height: "42px"
-          width: "42px"
-          borderRadius: "8px"
+          height: "40px"
+          width: "auto"
+          maxWidth: "120px"
+          borderRadius: "0"
         ".fb-brand-name":
           fontSize: "1.1rem"
         ".fb-brand-tag":

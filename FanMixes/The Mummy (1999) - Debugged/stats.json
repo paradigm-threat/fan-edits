@@ -1,0 +1,20 @@
+{
+  "original": "The Mummy (1999)",
+  "type": "FanFix",
+  "edition": "Debugged",
+  "filmRuntime": "2:04:49",
+  "filmRuntimeSeconds": 7489.067,
+  "faneditRuntime": "1:50:25",
+  "faneditRuntimeSeconds": 6625.342,
+  "timeCut": "0:14:24",
+  "timeCutSeconds": 863.725,
+  "availableIn": "2160p HEVC MKV (AAC)",
+  "poster": "poster.jpg",
+  "videoCodec": "hevc",
+  "width": 3840,
+  "height": 2160,
+  "sizeBytes": 2249964647,
+  "sizeGB": 2.25,
+  "measuredAt": "2026-10-07",
+  "notes": "ffprobe on current Debugged render vs YTS 4K BluRay source rip"
+}

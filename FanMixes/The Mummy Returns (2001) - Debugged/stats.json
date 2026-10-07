@@ -1,0 +1,20 @@
+{
+  "original": "The Mummy Returns (2001)",
+  "type": "FanFix",
+  "edition": "Debugged",
+  "filmRuntime": "2:09:33",
+  "filmRuntimeSeconds": 7773.003,
+  "faneditRuntime": "1:58:57",
+  "faneditRuntimeSeconds": 7137.256,
+  "timeCut": "0:10:36",
+  "timeCutSeconds": 635.747,
+  "availableIn": "2160p HEVC MKV (AAC)",
+  "poster": "poster.jpg",
+  "videoCodec": "hevc",
+  "width": 3840,
+  "height": 2160,
+  "sizeBytes": 2893240472,
+  "sizeGB": 2.89,
+  "measuredAt": "2026-10-07",
+  "notes": "ffprobe on current Debugged render vs YTS 4K BluRay source rip"
+}

@@ -793,13 +793,8 @@ function copyCidText(cid) {
 }
 
 function encodeCidForUrl(cid) {
-  const c = str(cid).trim()
-  try {
-    if (typeof globalThis !== 'undefined' && globalThis.encodeURIComponent) {
-      return globalThis.encodeURIComponent(c)
-    }
-  } catch (e) {}
-  return c
+  // CIDs are URL-safe as-is.
+  return str(cid).trim()
 }
 
 /** SSR-safe inspect row — lives in get.jsx so soft-hydrate always paints it. */
@@ -890,6 +885,9 @@ function routeKind(route) {
   if (route === '/setup' || route === '/playback' || route === '/vlc') {
     return { kind: 'md', file: 'content/setup.md', title: 'Setup for playback' }
   }
+  if (route === '/request' || route === '/downloads' || route === '/email') {
+    return { kind: 'request', file: 'content/request.md', title: 'Request downloads' }
+  }
   if (route === '/board' || route === '/feedback' || route === '/bugs') {
     return { kind: 'board' }
   }
@@ -957,12 +955,17 @@ function nowShowingItemsJson(projects, nowShowingSlugs) {
   }
 
   function posterFor(p) {
+    // Prefer index.json `image` (repo-relative path like FanMixes/…/poster.jpg).
+    // Legacy `poster` is a basename under `path`.
     let poster = ''
     try {
-      if (p && p.poster) {
+      if (p && p.image) {
+        poster = '' + p.image
+        if (poster.length > 0 && poster.charAt(0) !== '/') {
+          poster = '/' + poster
+        }
+      } else if (p && p.poster && p.path) {
         poster = '/' + p.path + '/' + p.poster
-      } else if (p && p.image) {
-        poster = '/' + p.path + '/' + p.image
       }
     } catch (e2) {}
     return poster
@@ -1070,9 +1073,15 @@ export default function FlashbackApp() {
       blogPosts = []
     }
   }
-  if (kind.kind === 'md') {
+  if (kind.kind === 'md' || kind.kind === 'request') {
     md = fetchText(kind.file)
   }
+
+  const REQUEST_EMAIL = 'ari@asu.edu'
+  const REQUEST_SUBJECT = 'Request: Flashback FanEdit Downloads'
+  const REQUEST_BODY = 'Flashback FanEdit Downloads'
+  const requestMailto =
+    'mailto:ari@asu.edu?subject=Request:%20Flashback%20FanEdit%20Downloads&body=Flashback%20FanEdit%20Downloads'
 
   const selected = kind.kind === 'movie' ? findProject(projects, kind.slug) : null
   if (kind.kind === 'movie' && selected) {
@@ -1313,6 +1322,50 @@ export default function FlashbackApp() {
         <MarkdownRenderer content={md || '# Loading…'} />
       </article>
     )
+  } else if (kind.kind === 'request') {
+    main = (
+      <article className="fb-doc fb-prose">
+        <MarkdownRenderer content={md || '# Request full-quality downloads'} />
+        <form
+          className="fb-request-form"
+          action={requestMailto}
+          method="get"
+          onSubmit={(e) => {
+            try {
+              e.preventDefault()
+            } catch (err) {}
+            try {
+              if (typeof globalThis !== 'undefined' && globalThis.location) {
+                globalThis.location.href = requestMailto
+              }
+            } catch (err2) {}
+          }}
+        >
+          <label className="fb-request-field">
+            <span>To</span>
+            <input type="text" name="to" value={REQUEST_EMAIL} readOnly />
+          </label>
+          <label className="fb-request-field">
+            <span>Subject</span>
+            <input type="text" name="subject" value={REQUEST_SUBJECT} readOnly />
+          </label>
+          <label className="fb-request-field">
+            <span>Body</span>
+            <input type="text" name="body" value={REQUEST_BODY} readOnly />
+          </label>
+          <p className="fb-request-hint">
+            Opens your email app. Send as-is — do not change the subject. The auto-reply has every download link.
+          </p>
+          <button type="submit" className="fb-btn fb-btn-primary fb-request-submit">
+            Open email app
+          </button>
+          <p className="fb-request-fallback">
+            Or mail <code>{REQUEST_EMAIL}</code> with subject{' '}
+            <code>{REQUEST_SUBJECT}</code>
+          </p>
+        </form>
+      </article>
+    )
   } else if (kind.kind === 'movie') {
     const movieCid = selected && selected.media ? resolveProjectCid(selected) : ''
     const folderName = selected
@@ -1524,10 +1577,10 @@ export default function FlashbackApp() {
           }}>
             <img
               className="fb-brand-logo"
-              src="/hooks/client/brand/png/icon-192.png"
+              src="/hooks/client/brand/png/logo-header.png"
               alt=""
-              width="64"
-              height="64"
+              width="160"
+              height="63"
             />
             <span className="fb-brand-text">
               <span className="fb-brand-name">Flashback Repository</span>
@@ -1537,6 +1590,7 @@ export default function FlashbackApp() {
           <nav className="fb-nav">
             <a href="/" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/') }}>Library</a>
             <a href="/setup" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/setup') }}>Setup</a>
+            <a href="/request" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/request') }}>Request</a>
             <a href="/motivation" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/motivation') }}>Why</a>
             <a href="/submit" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/submit') }}>Submit</a>
             <a href="/board" onClick={(e) => { try { e.preventDefault() } catch (err) {} navigate('/board') }}>Board</a>
@@ -1558,6 +1612,8 @@ export default function FlashbackApp() {
           </span>
           <span className="fb-footer-links">
             <a href="/setup">Setup / VLC</a>
+            {' · '}
+            <a href="/request">Request downloads</a>
             {' · '}
             <a href="/motivation">Why we’re doing this</a>
             {' · '}

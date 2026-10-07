@@ -2,6 +2,20 @@
 
 Kid-friendlier cut: **scarabs that kill or eat people** are removed. Adventure, Imhotep, and the later plagues stay. Not a full wipe of every gunfight.
 
+## Stats
+
+Machine-readable: [`stats.json`](stats.json) (ffprobe, 2026-10-07).
+
+| | |
+| --- | --- |
+| **Original** | The Mummy (1999) |
+| **Type** | FanFix |
+| **Film running time** | 2:04:49 |
+| **Fanedit running time** | 1:50:25 |
+| **Time cut** | 0:14:24 |
+| **Available in** | 2160p HEVC MKV (AAC), ~2.25 GB |
+| **Poster** | [`poster.jpg`](poster.jpg) |
+
 **Canonical Kdenlive blank:** `The Mummy Debugged.kdenlive` is the known-good full-timeline project format for new FanMixes. Clone it with `scripts/clone_kdenlive_blank.py` — do not invent `.kdenlive` XML from scratch (those files often fail to open).
 
 ## Motivation
