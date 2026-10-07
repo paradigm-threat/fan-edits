@@ -56,9 +56,7 @@ test('web host re-checks ownership from html movie-ack (not frozen stub attr)', 
   assert.match(host, /MutationObserver/)
 })
 
-test('registry loads ExternalPlay.host.js', () => {
+test('registry loads ExternalPlay.host.js and omits TheaterPlayer', () => {
   assert.match(registry, /ExternalPlay\.host\.js/)
-  const idx = registry.indexOf('ExternalPlay.host.js')
-  const theaterIdx = registry.indexOf('TheaterPlayer.host.js')
-  assert.ok(theaterIdx >= 0 && idx > theaterIdx, 'ExternalPlay loads after TheaterPlayer')
+  assert.doesNotMatch(registry, /['"]\/hooks\/client\/native\/TheaterPlayer\.host\.js['"]/)
 })

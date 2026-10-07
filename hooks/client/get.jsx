@@ -1099,7 +1099,9 @@ export default function FlashbackApp() {
   const command = cmdState[0]
   const setCommand = cmdState[1]
 
-  const inPageMkvOk = canPlayMkvHevc() === true
+  // Hard-off: TheaterPlayer (HTML5/WASM + mirror hunt) is disabled site-wide.
+  // In-browser MKV/HEVC was crashing tabs (notably Van Helsing); use ExternalPlay/VLC only.
+  const inPageMkvOk = false
 
   const seqState = useState(0)
   const commandSeq = seqState[0]
@@ -1475,26 +1477,28 @@ export default function FlashbackApp() {
                 setAck(true)
               }}
             />
-            <div className="fb-video-controls">
-              <button
-                type="button"
-                className="fb-btn fb-btn-inpage-play"
-                disabled={playDisabled}
-                title={playTitle}
-                onClick={sendPlay}
-              >
-                <PlayChevron className="fb-btn-icon" /> Play
-              </button>
-              <button
-                type="button"
-                className="fb-btn fb-btn-inpage-pause"
-                disabled={playDisabled}
-                title={pauseTitle}
-                onClick={sendPause}
-              >
-                Pause
-              </button>
-            </div>
+            {inPageMkvOk === true ? (
+              <div className="fb-video-controls">
+                <button
+                  type="button"
+                  className="fb-btn fb-btn-inpage-play"
+                  disabled={playDisabled}
+                  title={playTitle}
+                  onClick={sendPlay}
+                >
+                  <PlayChevron className="fb-btn-icon" /> Play
+                </button>
+                <button
+                  type="button"
+                  className="fb-btn fb-btn-inpage-pause"
+                  disabled={playDisabled}
+                  title={pauseTitle}
+                  onClick={sendPause}
+                >
+                  Pause
+                </button>
+              </div>
+            ) : null}
           </div>
         ) : (
           <p className="fb-movie-nomedia">Feature media is not catalogued yet for this title.</p>

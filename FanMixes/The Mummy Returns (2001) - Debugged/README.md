@@ -18,12 +18,13 @@ Machine-readable: [`stats.json`](stats.json) (ffprobe, 2026-10-07).
 
 ## Motivation
 
-Match the 1999 Debugged rule: no little creatures eating people on screen. The 1999 flesh-eating beetle dump is not repeated as a set piece here; the closest analogue is the **pygmy swarm** that overruns the expedition. Izzy later jokes about “mummies, pygmies, big bugs.” Scorpion King prologue, Anubis warriors, and the finale stay for v1.
+Match the 1999 Debugged rule: no little creatures eating people on screen. The 1999 flesh-eating beetle dump is not repeated as a set piece here; the closest analogue is the **pygmy swarm** that overruns the expedition. Izzy later jokes about “mummies, pygmies, big bugs.” Scorpion King prologue, Anubis warriors, and the finale stay; the ending is mostly **Izzy** trimmed (his late-film presence chopped, dialogue cut by more than half).
 
 ## Changes
 
 - First pygmy overrun after “Where’s the boy?” through snarling/screaming camp attack (resume “The black book!”)
 - Later pygmy eat/chase beat (yelling/snarling/gunfire) before “Let’s go / Thank God for that”
+- Ending: chop Izzy out of most late beats; reduce his remaining lines by more than 50%
 - Credits / extra music beds use metal covers of *Zombies Ate My Neighbors* cues (see Extra audio)
 
 ## Extra audio

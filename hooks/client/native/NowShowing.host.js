@@ -135,59 +135,207 @@
     const doc = global.document;
     root.className = 'fb-now-showing fb-now-showing-carousel';
     let idx = 0;
+    let busy = false;
+    let autoTimer = null;
     const list = items.filter((it) => it && it.title);
     if (list.length === 0) {
       root.textContent = 'No titles yet.';
       return;
     }
 
-    const counter = doc.createElement('div');
-    counter.className = 'fb-slideshow-count';
+    const reduceMotion = (function () {
+      try {
+        return (
+          global.matchMedia &&
+          global.matchMedia('(prefers-reduced-motion: reduce)').matches === true
+        );
+      } catch (_) {
+        return false;
+      }
+    })();
+
+    const head = doc.createElement('div');
+    head.className = 'fb-now-showing-head';
+    const h2 = doc.createElement('h2');
+    h2.className = 'fb-section-title fb-now-showing-title';
+    h2.textContent = 'Now showing';
+    const counter = doc.createElement('p');
+    counter.className = 'fb-now-showing-count fb-slideshow-count';
+    head.appendChild(h2);
+    head.appendChild(counter);
+
     const frame = doc.createElement('div');
     frame.className = 'fb-slideshow-frame';
-    const media = doc.createElement('a');
-    media.className = 'fb-slideshow-media';
-    const img = doc.createElement('img');
-    img.alt = '';
-    media.appendChild(img);
-    const title = doc.createElement('div');
-    title.className = 'fb-slideshow-title';
-    media.appendChild(title);
-    frame.appendChild(media);
+    frame.setAttribute('aria-live', 'polite');
+
+    const stage = doc.createElement('div');
+    stage.className = 'fb-slideshow-stage';
+
+    function makeLayer(cls) {
+      const a = doc.createElement('a');
+      a.className = 'fb-slideshow-media ' + cls;
+      a.setAttribute('aria-hidden', cls.indexOf('is-active') >= 0 ? 'false' : 'true');
+      const img = doc.createElement('img');
+      img.className = 'fb-slideshow-img';
+      img.alt = '';
+      img.decoding = 'async';
+      const copy = doc.createElement('div');
+      copy.className = 'fb-slideshow-copy';
+      const kicker = doc.createElement('p');
+      kicker.className = 'fb-slideshow-kicker';
+      kicker.textContent = 'Feature presentation';
+      const title = doc.createElement('h3');
+      title.className = 'fb-slideshow-title';
+      copy.appendChild(kicker);
+      copy.appendChild(title);
+      a.appendChild(img);
+      a.appendChild(copy);
+      return { a: a, img: img, title: title };
+    }
+
+    const front = makeLayer('fb-slideshow-layer is-active');
+    const back = makeLayer('fb-slideshow-layer');
+    stage.appendChild(back.a);
+    stage.appendChild(front.a);
+    frame.appendChild(stage);
+
+    const prev = doc.createElement('button');
+    prev.type = 'button';
+    prev.className = 'fb-slideshow-nav fb-slideshow-prev';
+    prev.setAttribute('aria-label', 'Previous title');
+    prev.textContent = '‹';
 
     const next = doc.createElement('button');
     next.type = 'button';
-    next.className = 'fb-slideshow-next';
-    next.setAttribute('aria-label', 'Next');
+    next.className = 'fb-slideshow-nav fb-slideshow-next';
+    next.setAttribute('aria-label', 'Next title');
     next.textContent = '›';
 
-    function paint() {
-      const it = list[idx];
-      counter.textContent = idx + 1 + ' / ' + list.length;
-      media.href = it.href || '#';
-      title.textContent = it.title;
+    function fillLayer(layer, it) {
+      layer.a.href = it.href || '#';
+      layer.title.textContent = it.title || '';
       if (it.poster) {
-        img.src = it.poster;
-        img.style.display = '';
+        layer.img.src = it.poster;
+        layer.img.style.display = '';
+        layer.a.classList.add('has-poster');
       } else {
-        img.removeAttribute('src');
-        img.style.display = 'none';
-        title.textContent = it.title;
+        layer.img.removeAttribute('src');
+        layer.img.style.display = 'none';
+        layer.a.classList.remove('has-poster');
       }
     }
 
-    next.addEventListener('click', () => {
-      idx = (idx + 1) % list.length;
-      paint();
+    function prefetch(i) {
+      const it = list[i];
+      if (!it || !it.poster) return;
+      try {
+        const pre = new global.Image();
+        pre.decoding = 'async';
+        pre.src = it.poster;
+      } catch (_) {}
+    }
+
+    function paintInstant() {
+      const it = list[idx];
+      counter.textContent = idx + 1 + ' / ' + list.length;
+      fillLayer(front, it);
+      front.a.classList.add('is-active');
+      front.a.setAttribute('aria-hidden', 'false');
+      back.a.classList.remove('is-active');
+      back.a.setAttribute('aria-hidden', 'true');
+      prefetch((idx + 1) % list.length);
+      prefetch((idx - 1 + list.length) % list.length);
+    }
+
+    function go(delta) {
+      if (list.length < 2) return;
+      if (busy) return;
+      const nextIdx = (idx + delta + list.length) % list.length;
+      if (reduceMotion) {
+        idx = nextIdx;
+        paintInstant();
+        armAuto();
+        return;
+      }
+      busy = true;
+      const incoming = list[nextIdx];
+      fillLayer(back, incoming);
+      // Force style flush so opacity transition runs.
+      void back.a.offsetWidth;
+      back.a.classList.add('is-active');
+      back.a.setAttribute('aria-hidden', 'false');
+      front.a.classList.remove('is-active');
+      front.a.setAttribute('aria-hidden', 'true');
+      counter.textContent = nextIdx + 1 + ' / ' + list.length;
+
+      const finish = function () {
+        // Swap roles: keep DOM order stable by copying active into front.
+        fillLayer(front, incoming);
+        front.a.classList.add('is-active');
+        front.a.setAttribute('aria-hidden', 'false');
+        back.a.classList.remove('is-active');
+        back.a.setAttribute('aria-hidden', 'true');
+        idx = nextIdx;
+        busy = false;
+        prefetch((idx + 1) % list.length);
+        armAuto();
+      };
+
+      let done = false;
+      const onEnd = function (ev) {
+        if (done) return;
+        if (ev && ev.target !== back.a) return;
+        done = true;
+        back.a.removeEventListener('transitionend', onEnd);
+        finish();
+      };
+      back.a.addEventListener('transitionend', onEnd);
+      global.setTimeout(function () {
+        if (done) return;
+        done = true;
+        back.a.removeEventListener('transitionend', onEnd);
+        finish();
+      }, 700);
+    }
+
+    function armAuto() {
+      if (autoTimer) {
+        global.clearTimeout(autoTimer);
+        autoTimer = null;
+      }
+      if (reduceMotion || list.length < 2) return;
+      autoTimer = global.setTimeout(function () {
+        go(1);
+      }, 6500);
+    }
+
+    prev.addEventListener('click', function () {
+      go(-1);
+    });
+    next.addEventListener('click', function () {
+      go(1);
     });
 
-    root.appendChild(counter);
+    // Pause autoplay while hovering / focused.
+    root.addEventListener('mouseenter', function () {
+      if (autoTimer) {
+        global.clearTimeout(autoTimer);
+        autoTimer = null;
+      }
+    });
+    root.addEventListener('mouseleave', function () {
+      armAuto();
+    });
+
+    root.appendChild(head);
     const row = doc.createElement('div');
     row.className = 'fb-slideshow-row';
+    row.appendChild(prev);
     row.appendChild(frame);
     row.appendChild(next);
     root.appendChild(row);
-    paint();
+    paintInstant();
+    armAuto();
   }
 
   function buildNowShowing(props) {

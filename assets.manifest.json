@@ -1,21 +1,39 @@
 {
   "schema": "relay.assets-manifest.v1",
+  "mediaRoot": "bafybeifm37ykittu4rz32c3mpwl2l3s7tmvbv6wlzpm3vrhxm2zyr36qje",
+  "mediaRootBuiltAt": "2026-10-07T14:35:50Z",
   "assets": [
     {
       "id": "FanMixes_The Mummy (1999) - Debugged_The Mummy Debugged.mkv",
       "path": "FanMixes/The Mummy (1999) - Debugged/The Mummy Debugged.mkv",
-      "ipfs": "bafybeifexp5jwty5pzylpqc5zctt3dyrp2yvrgqb72gssp35cxis2l6zzi",
+      "ipfs": "bafybeigizwmdbwapo45yw7azz34edeis44o7glynmnje6stusf76lxhxza",
       "contentType": "video/x-matroska",
-      "sha256": "fbe5d86c6888a836227a2a6b5b7a17ce49a04452042fc5065f35e3aadca8fbfb",
-      "bytes": 2318902656
+      "sha256": "8aba48c9036ec8448aa9890aea745d05f04c90ad86f588925728e231452de92f",
+      "bytes": 2249964647
+    },
+    {
+      "id": "FanMixes_The Mummy (1999) - Debugged_poster.jpg",
+      "path": "FanMixes/The Mummy (1999) - Debugged/poster.jpg",
+      "ipfs": "bafybeidfqzgb4cv5amaegpfejggzyxzhyqqbvbgdsv2ucgse2far56b4bm",
+      "contentType": "image/jpeg",
+      "sha256": "57e65e3d2aa3215c91003b7ae03b01389e9726c66d475c5afb9e8e4f162e9f3b",
+      "bytes": 497900
     },
     {
       "id": "FanMixes_The Mummy Returns (2001) - Debugged_The Mummy Returns Debugged.mkv",
       "path": "FanMixes/The Mummy Returns (2001) - Debugged/The Mummy Returns Debugged.mkv",
-      "ipfs": "bafybeifmi3xzhdawzjlgjw2dfcmtuxnuxnbgq4t7w7jcx2g6yrrhhhe574",
+      "ipfs": "bafybeicp6jhtsmny27g47fn35mrn5kepddmkapjd3epbpe7eymtjkyt3ti",
       "contentType": "video/x-matroska",
-      "sha256": "9e173e24c89c8db9238a85049450a49ffa38e8a2f2af25263f1d434ea625e93f",
-      "bytes": 2893298467
+      "sha256": "a1617a642db7c212d74be5c30123162f455ec66666edeb63f514d7715591df9a",
+      "bytes": 2893240472
+    },
+    {
+      "id": "FanMixes_The Mummy Returns (2001) - Debugged_poster.jpg",
+      "path": "FanMixes/The Mummy Returns (2001) - Debugged/poster.jpg",
+      "ipfs": "bafybeigdjcx7sgpdf4wnromuaye4c2vnuyzzkaragm62u3hdd6aupkafuq",
+      "contentType": "image/jpeg",
+      "sha256": "9e533dbf0d0f67de56dbecbc6dbdf547d44ac1b090a15d3362227d95221b6354",
+      "bytes": 556418
     },
     {
       "id": "FanMixes_Van Helsing - DeAnna'd_Van Helsing - DeAnna'd.mkv",
@@ -24,6 +42,14 @@
       "contentType": "video/x-matroska",
       "sha256": "5ad82814c9a34be6e700013bb2ace4420c7e6f0903652a1629bc8950bb8e6a42",
       "bytes": 2613221013
+    },
+    {
+      "id": "FanMixes_Van Helsing - DeAnna'd_poster.jpg",
+      "path": "FanMixes/Van Helsing - DeAnna'd/poster.jpg",
+      "ipfs": "bafybeibe3763mfqezr76q4gfugyh76byibam4ocgnflkwd5c7vtm3mxb5y",
+      "contentType": "image/jpeg",
+      "sha256": "35785edd8a9910bc7b5605d85a1cf393d38eb7d3189114dc16fc44bfd54fc731",
+      "bytes": 444320
     },
     {
       "id": "hooks_client_brand_png_icon-192.png",
