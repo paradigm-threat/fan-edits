@@ -1703,6 +1703,7 @@ export default function FlashbackApp() {
                 src={posterHref}
                 alt=""
                 className="fb-movie-poster"
+                data-fb-pop-image="1"
                 width={280}
                 height={420}
                 decoding="async"

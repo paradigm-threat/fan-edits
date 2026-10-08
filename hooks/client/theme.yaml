@@ -571,6 +571,7 @@ themes:
         margin: "0"
         border: "1px solid var(border)"
         background: "var(screen)"
+        cursor: "zoom-in"
       ".fb-video-panel":
         position: "relative"
         flex: "1 1 auto"
