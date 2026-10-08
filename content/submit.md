@@ -13,11 +13,34 @@ You can send a finished export as a **reference**, but the preferred path is tha
 
 That keeps every remix **editable with open-source tools**. Anyone with a decent CPU can open the project, tweak the cut, and re-render — no proprietary NLE required.
 
+## Get the catalog locally first
+
+Before you open an MR (or email a patch), clone the same tip the site serves so your paths match production:
+
+```bash
+# anonymous Relay peer (iad1 origin)
+git clone git://iad1.relaygateway.net:9418/fan-edits.git
+cd fan-edits
+```
+
+Or with a GitLab account (needed to push / open an MR):
+
+```bash
+git clone git@gitlab.com:clevertree/fan-edits.git
+# or: git clone https://gitlab.com/clevertree/fan-edits.git
+```
+
+More detail (peer fallbacks, what is / isn’t in git): [Setup — Clone the catalog](/setup#clone-repo).
+
+On each title page, the **Project files** section lists downloadable `.kdenlive`, `.srt`, and other small files already in the tip — useful if you only need one cut without a full clone.
+
 ## How to contribute
 
 1. **Email** a Kdenlive project (+ notes), or a finished file as reference only.  
 2. Or open a **merge request** on [GitLab: clevertree/fan-edits](https://gitlab.com/clevertree/fan-edits) under `FanMixes/` or `KidFriendly/`.  
 3. Include a short README: motivation, what you cut, and any music / remix credits.
+
+**Fixes on existing edits** (typos in a README, subtitle timing, a bad cut note) are welcome the same way — small MRs against the title folder are fine. Step-by-step “open an MR” docs will land here soon.
 
 ## What helps a submission land
 

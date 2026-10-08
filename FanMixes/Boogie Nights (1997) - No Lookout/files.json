@@ -1,0 +1,21 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "FanMixes/Boogie Nights (1997) - No Lookout",
+  "files": [
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 3035
+    },
+    {
+      "path": "subs/Boogie Nights (1997) - No Lookout.english.srt",
+      "kind": "srt",
+      "bytes": 141471
+    },
+    {
+      "path": "subs/Boogie Nights (1997) - No Lookout.english.vtt",
+      "kind": "vtt",
+      "bytes": 132220
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "FanMixes/The Pentagon Papers (2003) - Widescreen",
+  "files": [
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 5090
+    }
+  ]
+}

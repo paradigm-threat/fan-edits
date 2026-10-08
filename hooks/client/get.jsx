@@ -714,6 +714,96 @@ function fetchText(path) {
   return ''
 }
 
+function formatFileBytes(n) {
+  const v = typeof n === 'number' ? n : 0
+  if (v <= 0) {
+    return ''
+  }
+  if (v < 1024) {
+    return v + ' B'
+  }
+  if (v < 1024 * 1024) {
+    return Math.round(v / 102.4) / 10 + ' KB'
+  }
+  return Math.round(v / (1024 * 102.4)) / 10 + ' MB'
+}
+
+function kindLabel(kind) {
+  const k = str(kind)
+  if (k === 'kdenlive') {
+    return 'Kdenlive'
+  }
+  if (k === 'srt' || k === 'vtt' || k === 'subtitle') {
+    return 'Subtitles'
+  }
+  if (k === 'poster') {
+    return 'Poster'
+  }
+  if (k === 'stats') {
+    return 'Stats'
+  }
+  if (k === 'plan') {
+    return 'Plan'
+  }
+  if (k === 'readme') {
+    return 'Notes'
+  }
+  if (k === 'music') {
+    return 'Music'
+  }
+  return 'File'
+}
+
+/** Downloadable project files from files.json (feature MKVs are not listed). */
+function loadProjectFiles(projectPath) {
+  let out = []
+  const base = str(projectPath)
+  if (base.length === 0) {
+    return out
+  }
+  try {
+    const raw = fetchText(base + '/files.json')
+    if (!raw || raw.length === 0) {
+      return out
+    }
+    const data = JSON.parse(raw)
+    const list = data && data.files ? data.files : []
+    for (let i = 0; i < list.length; i++) {
+      const it = list[i]
+      if (!it || !it.path) {
+        continue
+      }
+      const rel = str(it.path)
+      if (rel.length === 0) {
+        continue
+      }
+      const lower = rel.toLowerCase()
+      if (lower.indexOf('.mkv') === lower.length - 4 && lower.length >= 4) {
+        continue
+      }
+      out = out.concat([
+        {
+          path: rel,
+          kind: str(it.kind || 'other'),
+          bytes: typeof it.bytes === 'number' ? it.bytes : 0,
+        },
+      ])
+    }
+  } catch (e) {
+    out = []
+  }
+  return out
+}
+
+function fileHref(projectPath, relPath) {
+  const base = str(projectPath)
+  const rel = str(relPath)
+  if (base.length === 0 || rel.length === 0) {
+    return ''
+  }
+  return encodeMarkdownUrl(absoluteStreamUrl('/' + base + '/' + rel))
+}
+
 function looksLikeCid(raw) {
   const s = str(raw).trim()
   if (s.length < 10) {
@@ -1521,6 +1611,22 @@ export default function FlashbackApp() {
     if (inPageMkvOk === true) {
       pauseTitle = 'Pause'
     }
+    const projectFiles = selected ? loadProjectFiles(selected.path) : []
+    let fileRows = []
+    for (let fi = 0; fi < projectFiles.length; fi++) {
+      const f = projectFiles[fi]
+      const href = fileHref(selected.path, f.path)
+      const sizeLabel = formatFileBytes(f.bytes)
+      fileRows = fileRows.concat([
+        <li key={f.path} className="fb-file-row">
+          <span className="fb-file-kind">{kindLabel(f.kind)}</span>
+          <a className="fb-file-link" href={href}>
+            {f.path}
+          </a>
+          {sizeLabel.length > 0 ? <span className="fb-file-size">{sizeLabel}</span> : null}
+        </li>,
+      ])
+    }
     main = (
       <div className="fb-movie">
         <a className="fb-back" href="/">
@@ -1532,66 +1638,88 @@ export default function FlashbackApp() {
             <MarkdownRenderer content={displayBlurb} />
           </div>
         ) : null}
-        <div className="fb-movie-stage">
-        {posterHref.length > 0 ? (
-          <img className="fb-movie-poster" src={posterHref} alt="" width="280" />
-        ) : null}
-        {selected &&
-        (projectMediaField(selected, 'media').length > 0 ||
-          projectMediaField(selected, 'mediaWeb').length > 0 ||
-          projectMediaField(selected, 'mediaMobile').length > 0) ? (
-          <div className="fb-video-panel">
-            {mediaSurface}
-            <Affirmation
-              mode="title"
-              eyebrow="CONFIRM"
-              title={'I confirm I own a legal copy of ' + projectOriginalTitle(selected)}
-              body={
-                'Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nFeature video is on IPFS (not in public git repos); this site only unlocks stream access after you confirm ownership. Not a pirate archive.'
-              }
-              checkboxLabel={
-                'I confirm I own a legal copy of ' +
-                projectOriginalTitle(selected) +
-                ' before I play its edit.'
-              }
-              confirmLabel="OK — I confirm"
-              storageKey={movieStorageKey(selected.slug)}
-              confirmed={movieAck === true}
-              linksJson='[{"label":"Ownership policy","href":"/legal"},{"label":"Terms","href":"/terms"}]'
-              onConfirm={() => {
-                setMovieAck(true)
-                setAck(true)
-              }}
-            />
-            {inPageMkvOk === true ? (
-              <div className="fb-video-controls">
-                <button
-                  type="button"
-                  className="fb-btn fb-btn-inpage-play"
-                  disabled={playDisabled}
-                  title={playTitle}
-                  onClick={sendPlay}
-                >
-                  <PlayChevron className="fb-btn-icon" /> Play
-                </button>
-                <button
-                  type="button"
-                  className="fb-btn fb-btn-inpage-pause"
-                  disabled={playDisabled}
-                  title={pauseTitle}
-                  onClick={sendPause}
-                >
-                  Pause
-                </button>
-              </div>
+        <section className="fb-movie-watch" aria-label="Watch">
+          <div className="fb-movie-stage">
+            {posterHref.length > 0 ? (
+              <img className="fb-movie-poster" src={posterHref} alt="" width="280" />
             ) : null}
+            {selected &&
+            (projectMediaField(selected, 'media').length > 0 ||
+              projectMediaField(selected, 'mediaWeb').length > 0 ||
+              projectMediaField(selected, 'mediaMobile').length > 0) ? (
+              <div className="fb-video-panel">
+                {mediaSurface}
+                <Affirmation
+                  mode="title"
+                  eyebrow="CONFIRM"
+                  title={'I confirm I own a legal copy of ' + projectOriginalTitle(selected)}
+                  body={
+                    'Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nFeature video is on IPFS (not in public git repos); this site only unlocks stream access after you confirm ownership. Not a pirate archive.'
+                  }
+                  checkboxLabel={
+                    'I confirm I own a legal copy of ' +
+                    projectOriginalTitle(selected) +
+                    ' before I play its edit.'
+                  }
+                  confirmLabel="OK — I confirm"
+                  storageKey={movieStorageKey(selected.slug)}
+                  confirmed={movieAck === true}
+                  linksJson='[{"label":"Ownership policy","href":"/legal"},{"label":"Terms","href":"/terms"}]'
+                  onConfirm={() => {
+                    setMovieAck(true)
+                    setAck(true)
+                  }}
+                />
+                {inPageMkvOk === true ? (
+                  <div className="fb-video-controls">
+                    <button
+                      type="button"
+                      className="fb-btn fb-btn-inpage-play"
+                      disabled={playDisabled}
+                      title={playTitle}
+                      onClick={sendPlay}
+                    >
+                      <PlayChevron className="fb-btn-icon" /> Play
+                    </button>
+                    <button
+                      type="button"
+                      className="fb-btn fb-btn-inpage-pause"
+                      disabled={playDisabled}
+                      title={pauseTitle}
+                      onClick={sendPause}
+                    >
+                      Pause
+                    </button>
+                  </div>
+                ) : null}
+              </div>
+            ) : (
+              <p className="fb-movie-nomedia">
+                Feature media is not catalogued for streaming yet. Project files are still listed
+                below when present.
+              </p>
+            )}
           </div>
-        ) : (
-          <p className="fb-movie-nomedia">Feature media is not catalogued yet for this title.</p>
-        )}
-        </div>
-        {/* README stays below the poster + play row; CSS order on .fb-readme. */}
+        </section>
+        <section className="fb-movie-files" aria-label="Project files">
+          <h2 className="fb-section-title">Project files</h2>
+          <p className="fb-files-lead">
+            Kdenlive projects, subtitles, and other files that live in the public git tree for this
+            title. Feature MKVs stay on IPFS and are unlocked above after ownership confirm. To pull
+            the whole catalog locally (every project folder), see{' '}
+            <a href="/setup#clone-repo">Setup — clone from a Relay server</a>.
+          </p>
+          {fileRows.length > 0 ? (
+            <ul className="fb-file-list">{fileRows}</ul>
+          ) : (
+            <p className="fb-files-empty">
+              No project files are published for this title yet. Clone the repo from{' '}
+              <a href="/setup#clone-repo">Setup</a> once they land, or check back later.
+            </p>
+          )}
+        </section>
         <div className="fb-readme fb-prose">
+          <h2 className="fb-section-title">Notes</h2>
           <MarkdownRenderer content={readmeMd} />
         </div>
       </div>

@@ -1,0 +1,61 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "FanMixes/The Mummy (1999) - Debugged",
+  "files": [
+    {
+      "path": "The Mummy Debugged.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 149325
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 6302
+    },
+    {
+      "path": "subs/The Mummy Debugged.english.srt",
+      "kind": "srt",
+      "bytes": 69154
+    },
+    {
+      "path": "subs/The Mummy Debugged.enhanced.srt",
+      "kind": "srt",
+      "bytes": 71937
+    },
+    {
+      "path": "subs/The Mummy Debugged.kdenlive.srt",
+      "kind": "srt",
+      "bytes": 69154
+    },
+    {
+      "path": "subs/The Mummy Debugged.srt",
+      "kind": "srt",
+      "bytes": 80466
+    },
+    {
+      "path": "stats.json",
+      "kind": "stats",
+      "bytes": 543
+    },
+    {
+      "path": "subs/The Mummy Debugged.english.vtt",
+      "kind": "vtt",
+      "bytes": 64861
+    },
+    {
+      "path": "subs/The Mummy Debugged.enhanced.vtt",
+      "kind": "vtt",
+      "bytes": 67565
+    },
+    {
+      "path": "subs/The Mummy Debugged.kdenlive.vtt",
+      "kind": "vtt",
+      "bytes": 64861
+    },
+    {
+      "path": "subs/The Mummy Debugged.vtt",
+      "kind": "vtt",
+      "bytes": 71384
+    }
+  ]
+}

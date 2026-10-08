@@ -1,0 +1,11 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star",
+  "files": [
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 3449
+    }
+  ]
+}

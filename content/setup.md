@@ -2,7 +2,7 @@
 
 Flashback streams **full-quality HEVC Matroska (`.mkv`)** files. Browsers still cannot play that combination in-page, so the honest path is an **external player** — usually [VLC](https://www.videolan.org/vlc/).
 
-This page gets your computer ready so a title’s **Open in VLC** button can launch the stream in one click via a `vlc://` link.
+This page gets your computer ready so a title’s **Open in VLC** button can launch the stream in one click via a `vlc://` link. It also explains how to **clone the project catalog** from a Relay server when you want Kdenlive projects, subtitles, and other git files locally.
 
 ## 1. Install VLC
 
@@ -36,7 +36,7 @@ Or download and run:
 Test:
 
 ```bash
-xdg-open 'vlc://https://www.videolan.org/vlc/video-dummy.mp4'
+xdg-open 'vlc://https://www.videolan.org/vlc/video/dummy.mp4'
 ```
 
 Uninstall: [/scripts/vlc-protocol/uninstall-linux.sh](/scripts/vlc-protocol/uninstall-linux.sh)
@@ -53,7 +53,7 @@ That installs `~/Applications/Flashback VLC Protocol.app` and registers `vlc://`
 Test:
 
 ```bash
-open 'vlc://https://www.videolan.org/vlc/video-dummy.mp4'
+open 'vlc://https://www.videolan.org/vlc/video/dummy.mp4'
 ```
 
 ### Windows
@@ -69,14 +69,14 @@ powershell -ExecutionPolicy Bypass -File .\install-windows.ps1
 Test:
 
 ```powershell
-start vlc://https://www.videolan.org/vlc/video-dummy.mp4
+start vlc://https://www.videolan.org/vlc/video/dummy.mp4
 ```
 
 Uninstall: [/scripts/vlc-protocol/uninstall-windows.ps1](/scripts/vlc-protocol/uninstall-windows.ps1)
 
 ### B. Chrome / Edge / Firefox extension (optional)
 
-[**Open in VLC™ media player**](https://chromewebstore.google.com/detail/open-in-vlc-media-player/ihpiinojhnfhpdmmacgmpoonphhimkaj) (also on [Firefox](https://addons.mozilla.org/en-US/firefox/addon/open-in-vlc/) / [Edge](https://microsoftedge.microsoft.com/addons/detail/open-in-vlc%E2%84%A2-media-player/hjfcjapkfahlmlefedkkpbbkeddpnnlc)) sends media URLs from the browser to VLC.
+[**Open in VLC™ media player**](https://chromewebstore.google.com/detail/open-in-vlc-media-player/ihpiinojhnfhpdmmacgmpoonphhimkaj) (also on [Firefox](https://addons.mozilla.org/en-US/firefox/addon/open-in-vlc/) / [Edge](https://microsoftedge.microsoft.com/addons/detail/open-in-vlc%E2%84%A2-media-player/hjfcjapkfahlmlefeddpnnlc)) sends media URLs from the browser to VLC.
 
 **Also required:** their small **native client** (the extension prompts you the first time — it bridges the browser to VLC; browsers block that without a helper).
 
@@ -108,6 +108,61 @@ If the one-click button fails (browser blocked the scheme, handler not installed
 
 Same house rule as always: confirm you own a legal commercial copy of the original film before you stream an edit. The site asks once per title on this browser. Feature files are on IPFS (not in public git); see [Ownership policy](/legal).
 
+## Clone the catalog from a Relay server {#clone-repo}
+
+The public site is a **thin git tip**: CleverScript, READMEs, Kdenlive projects, subtitles, posters, and other small files. **Feature `.mkv` masters are not in git** — they sync over IPFS and stream from the servers after you confirm ownership.
+
+To work on cuts locally (open `.kdenlive` in Kdenlive, edit `.srt` tracks, fix typos in a README), clone the same tip the fleet serves:
+
+### Option A — anonymous git protocol (Relay origin)
+
+Any of these peers should work; `iad1` is the usual publish origin:
+
+```bash
+git clone git://iad1.relaygateway.net:9418/fan-edits.git
+cd fan-edits
+```
+
+Fallbacks if one host is down:
+
+```bash
+git clone git://ord1.relaygateway.net:9418/fan-edits.git
+# or
+git clone git://hkg1.relaygateway.net:9418/fan-edits.git
+```
+
+You get the catalog tree (`FanMixes/…`, `KidFriendly/…`, `hooks/`, `content/`, `scripts/`, …). Open a title folder and look for `.kdenlive`, `subs/*.srt`, `stats.json`, and the README.
+
+Update later:
+
+```bash
+git pull
+```
+
+### Option B — GitLab (accounts / merge requests)
+
+For contributions you will push (or open a merge request against), use GitLab:
+
+```bash
+git clone git@gitlab.com:clevertree/fan-edits.git
+cd fan-edits
+```
+
+HTTPS:
+
+```bash
+git clone https://gitlab.com/clevertree/fan-edits.git
+```
+
+See [Submissions](/submit) for how we prefer Kdenlive projects and MRs. Step-by-step “open a PR / fix a typo” docs will land there next.
+
+### What you will not get from git alone
+
+- The multi‑gigabyte feature `.mkv` files (IPFS / stream unlock on the site)
+- Large local rips used only on the editor’s machine
+
+Streaming still uses the title page + VLC (sections above). Cloning is for **editing and packaging**, not a substitute for owning the studio release.
+
 ## Troubleshooting
 
 | Symptom | Fix |
@@ -117,6 +172,7 @@ Same house rule as always: confirm you own a legal commercial copy of the origin
 | “VLC not found” | Install VLC, or put `vlc` on your PATH |
 | 404 / seed message | That title’s bytes are not pinned on a reachable gateway yet — try later or another Now Showing title |
 | Works in VLC via paste but not via `vlc://` | Handler not registered for your user; re-run the OS installer above |
+| `git clone git://…` hangs | Try another peer (`ord1` / `hkg1`), or use the GitLab URL above |
 
 ## Android phone / tablet browser
 

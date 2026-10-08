@@ -1,0 +1,11 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "KidFriendly/Pee-wee's Big Adventure (1985) - KidFriendly Edition",
+  "files": [
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 2772
+    }
+  ]
+}

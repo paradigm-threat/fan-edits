@@ -1,0 +1,52 @@
+#!/usr/bin/env bash
+# Flashback Repository — vlc:// protocol handler (Linux / macOS).
+# Accepts: vlc://https://…  |  vlc://http//… (Chrome quirk)  |  vlc://weblink?url=…
+# Only http(s) media URLs are allowed.
+set -euo pipefail
+
+raw="${1-}"
+if [[ -z "$raw" ]]; then
+  echo "usage: flashback-vlc-open 'vlc://https://…'" >&2
+  exit 2
+fi
+
+url="$raw"
+url="${url#vlc://}"
+
+if [[ "$url" =~ ^weblink/?\?url= ]]; then
+  url="${url#weblink?url=}"
+  url="${url#weblink/?url=}"
+  # percent-decode via python (portable)
+  if command -v python3 >/dev/null 2>&1; then
+    url="$(python3 -c 'import sys,urllib.parse; print(urllib.parse.unquote(sys.argv[1]))' "$url")"
+  fi
+elif [[ "$url" =~ ^(https?)// ]]; then
+  # Chrome 130+ sometimes strips the colon: vlc://https//host/…
+  proto="${BASH_REMATCH[1]}"
+  url="${proto}:${url#"$proto"}"
+fi
+
+url="${url// /%20}"
+
+if [[ ! "$url" =~ ^https?:// ]]; then
+  echo "flashback-vlc-open: only http(s) URLs allowed: $url" >&2
+  exit 1
+fi
+
+open_vlc() {
+  if command -v vlc >/dev/null 2>&1; then
+    exec vlc --open "$url"
+  fi
+  if [[ "$(uname -s)" == "Darwin" ]]; then
+    if [[ -d "/Applications/VLC.app" ]]; then
+      exec open -na VLC --args "$url"
+    fi
+    if [[ -d "$HOME/Applications/VLC.app" ]]; then
+      exec open -na "$HOME/Applications/VLC.app" --args "$url"
+    fi
+  fi
+  echo "flashback-vlc-open: VLC not found. Install from https://www.videolan.org/vlc/" >&2
+  exit 1
+}
+
+open_vlc

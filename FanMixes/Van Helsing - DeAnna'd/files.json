@@ -1,0 +1,71 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "FanMixes/Van Helsing - DeAnna'd",
+  "files": [
+    {
+      "path": "Van Helsing - DeAnna'd.edit.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 378911
+    },
+    {
+      "path": "Van Helsing - DeAnna'd.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 379462
+    },
+    {
+      "path": "castlevania-symphony_of_the_night_ost/04 Symphony of the Night.mp3",
+      "kind": "music",
+      "bytes": 2417070
+    },
+    {
+      "path": "castlevania-symphony_of_the_night_ost/06 Dracula's Castle.mp3",
+      "kind": "music",
+      "bytes": 2695847
+    },
+    {
+      "path": "castlevania-symphony_of_the_night_ost/08 Marble Corridor.mp3",
+      "kind": "music",
+      "bytes": 2191951
+    },
+    {
+      "path": "castlevania-symphony_of_the_night_ost/09 Tower of Evil Fog.mp3",
+      "kind": "music",
+      "bytes": 3643842
+    },
+    {
+      "path": "castlevania-symphony_of_the_night_ost/11 Woodcarving Palteeta.mp3",
+      "kind": "music",
+      "bytes": 3571708
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 9083
+    },
+    {
+      "path": "subs/Van Helsing - DeAnna'd.english.srt",
+      "kind": "srt",
+      "bytes": 29758
+    },
+    {
+      "path": "Van Helsing - DeAnna'd.edit.kdenlive.srt",
+      "kind": "srt",
+      "bytes": 29718
+    },
+    {
+      "path": "Van Helsing - DeAnna'd.kdenlive.srt",
+      "kind": "srt",
+      "bytes": 29718
+    },
+    {
+      "path": "stats.json",
+      "kind": "stats",
+      "bytes": 555
+    },
+    {
+      "path": "subs/Van Helsing - DeAnna'd.english.vtt",
+      "kind": "vtt",
+      "bytes": 27844
+    }
+  ]
+}

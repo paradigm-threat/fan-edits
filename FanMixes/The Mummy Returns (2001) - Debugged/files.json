@@ -1,0 +1,46 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "FanMixes/The Mummy Returns (2001) - Debugged",
+  "files": [
+    {
+      "path": "music/Evening of the Undead (Metal Version).mp3",
+      "kind": "music",
+      "bytes": 2094414
+    },
+    {
+      "path": "music/kevin-mummy-spooked-s08e05.m4a",
+      "kind": "music",
+      "bytes": 768612
+    },
+    {
+      "path": "music/Pyramid of Fear (Metal Version).mp3",
+      "kind": "music",
+      "bytes": 2453922
+    },
+    {
+      "path": "music/Zombie Panic (Metal Version).mp3",
+      "kind": "music",
+      "bytes": 2350610
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 5145
+    },
+    {
+      "path": "subs/The Mummy Returns Debugged.english.srt",
+      "kind": "srt",
+      "bytes": 60924
+    },
+    {
+      "path": "stats.json",
+      "kind": "stats",
+      "bytes": 551
+    },
+    {
+      "path": "subs/The Mummy Returns Debugged.english.vtt",
+      "kind": "vtt",
+      "bytes": 56749
+    }
+  ]
+}

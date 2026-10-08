@@ -581,12 +581,70 @@ themes:
         order: "2"
       ".fb-movie-nomedia":
         order: "2"
+      ".fb-movie-watch":
+        order: "2"
+        marginBottom: "8px"
+      ".fb-movie-files":
+        order: "3"
+        marginTop: "18px"
+        paddingTop: "16px"
+        borderTop: "1px solid var(border)"
+      ".fb-files-lead":
+        margin: "0 0 12px"
+        color: "var(creamMuted)"
+        fontSize: "0.95rem"
+        lineHeight: "1.5"
+      ".fb-files-lead a":
+        color: "var(gold)"
+      ".fb-files-empty":
+        margin: "0"
+        color: "var(creamMuted)"
+        fontSize: "0.92rem"
+      ".fb-files-empty a":
+        color: "var(gold)"
+      ".fb-file-list":
+        listStyle: "none"
+        margin: "0"
+        padding: "0"
+        display: "flex"
+        flexDirection: "column"
+        gap: "6px"
+      ".fb-file-row":
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        alignItems: "baseline"
+        gap: "8px 12px"
+        padding: "8px 10px"
+        background: "rgba(0,0,0,0.22)"
+        border: "1px solid var(border)"
+      ".fb-file-kind":
+        flex: "0 0 auto"
+        minWidth: "5.5rem"
+        fontSize: "0.72rem"
+        letterSpacing: "0.08em"
+        textTransform: "uppercase"
+        color: "var(goldDim)"
+      ".fb-file-link":
+        flex: "1 1 12rem"
+        minWidth: "0"
+        color: "var(gold)"
+        wordBreak: "break-all"
+        textDecoration: "none"
+      ".fb-file-link:hover":
+        color: "var(cream)"
+        textDecoration: "underline"
+      ".fb-file-size":
+        flex: "0 0 auto"
+        fontSize: "0.78rem"
+        color: "var(creamMuted)"
+        fontFamily: "ui-monospace, 'Courier New', monospace"
       ".fb-readme":
-        marginTop: "8px"
+        marginTop: "18px"
         paddingTop: "16px"
         borderTop: "1px solid var(border)"
         fontSize: "0.95rem"
-        order: "3"
+        order: "4"
       ".fb-back":
         background: "transparent"
         border: "none"
