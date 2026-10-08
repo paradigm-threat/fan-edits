@@ -1,7 +1,7 @@
 {
   "schema": "relay.assets-manifest.v1",
-  "mediaRoot": "bafybeicjmycrghwuhugbdp74jovlhd3yeviz6muuhup62e677t7wlnaf2a",
-  "mediaRootBuiltAt": "2026-10-08T17:15:56Z",
+  "mediaRoot": "bafybeid7zmxfovcgpebtalojong2fw5nc7hnle2bxh2g7ihu74sbfigoya",
+  "mediaRootBuiltAt": "2026-10-08T21:26:32Z",
   "assets": [
     {
       "id": "FanMixes_The Mummy (1999) - Debugged_The Mummy Debugged.mkv",
@@ -12,14 +12,6 @@
       "bytes": 2250025989
     },
     {
-      "id": "FanMixes_The Mummy (1999) - Debugged_poster.jpg",
-      "path": "FanMixes/The Mummy (1999) - Debugged/poster.jpg",
-      "ipfs": "bafybeidfqzgb4cv5amaegpfejggzyxzhyqqbvbgdsv2ucgse2far56b4bm",
-      "contentType": "image/jpeg",
-      "sha256": "57e65e3d2aa3215c91003b7ae03b01389e9726c66d475c5afb9e8e4f162e9f3b",
-      "bytes": 497900
-    },
-    {
       "id": "FanMixes_The Mummy Returns (2001) - Debugged_The Mummy Returns Debugged.mkv",
       "path": "FanMixes/The Mummy Returns (2001) - Debugged/The Mummy Returns Debugged.mkv",
       "ipfs": "bafybeicp6jhtsmny27g47fn35mrn5kepddmkapjd3epbpe7eymtjkyt3ti",
@@ -28,60 +20,12 @@
       "bytes": 2893240472
     },
     {
-      "id": "FanMixes_The Mummy Returns (2001) - Debugged_poster.jpg",
-      "path": "FanMixes/The Mummy Returns (2001) - Debugged/poster.jpg",
-      "ipfs": "bafybeigdjcx7sgpdf4wnromuaye4c2vnuyzzkaragm62u3hdd6aupkafuq",
-      "contentType": "image/jpeg",
-      "sha256": "9e533dbf0d0f67de56dbecbc6dbdf547d44ac1b090a15d3362227d95221b6354",
-      "bytes": 556418
-    },
-    {
       "id": "FanMixes_Van Helsing - DeAnna'd_Van Helsing - DeAnna'd.mkv",
       "path": "FanMixes/Van Helsing - DeAnna'd/Van Helsing - DeAnna'd.mkv",
       "ipfs": "bafybeigflubnt5awsv4oqugzwdkwmt54tbbsjfuf2smhvbacl33kvuvhh4",
       "contentType": "video/x-matroska",
       "sha256": "5ad82814c9a34be6e700013bb2ace4420c7e6f0903652a1629bc8950bb8e6a42",
       "bytes": 2613221013
-    },
-    {
-      "id": "FanMixes_Van Helsing - DeAnna'd_poster.jpg",
-      "path": "FanMixes/Van Helsing - DeAnna'd/poster.jpg",
-      "ipfs": "bafybeibe3763mfqezr76q4gfugyh76byibam4ocgnflkwd5c7vtm3mxb5y",
-      "contentType": "image/jpeg",
-      "sha256": "35785edd8a9910bc7b5605d85a1cf393d38eb7d3189114dc16fc44bfd54fc731",
-      "bytes": 444320
-    },
-    {
-      "id": "hooks_client_brand_png_icon-192.png",
-      "path": "hooks/client/brand/png/icon-192.png",
-      "ipfs": "bafkreiatox2hwibcsclyyyvwo4dwgqhcs2ieixkro4xwwxoqyutl5t54m4",
-      "contentType": "image/png",
-      "sha256": "1375f47b202290978c62b677076340e29690445d51772f6b5dd0c526becfbc67",
-      "bytes": 12991
-    },
-    {
-      "id": "hooks_client_brand_png_icon-512.png",
-      "path": "hooks/client/brand/png/icon-512.png",
-      "ipfs": "bafkreieaux5fw654t52cuitsn2nk3xyn6lsjnvwujtjlggiue4ihfftrzq",
-      "contentType": "image/png",
-      "sha256": "80a5fa5b7bbc9f742a22726e9aaddf0df2e496d6d44cd2b319142710729671cc",
-      "bytes": 37350
-    },
-    {
-      "id": "hooks_client_brand_png_logo-header.png",
-      "path": "hooks/client/brand/png/logo-header.png",
-      "ipfs": "bafkreid5dfyrtins2nzpfcawb4bpd6bofptvx3g34htameev2sjeh6xl6u",
-      "contentType": "image/png",
-      "sha256": "7d197119a1b2d372f288160f02f1f82e2be75becdbe1e6061095d49243faebf5",
-      "bytes": 232543
-    },
-    {
-      "id": "hooks_client_brand_png_logo-primary-800.png",
-      "path": "hooks/client/brand/png/logo-primary-800.png",
-      "ipfs": "bafybeiafqeuc4rsdh3pqpkluiy4rhsa6gxsa7tyuojxzble3sj2lk36ksm",
-      "contentType": "image/png",
-      "sha256": "7d59954abe2c7b1999a96632a4adafc8fa91ea9acb0a90b5dc0eda9fc9b921a2",
-      "bytes": 563800
     }
   ]
 }

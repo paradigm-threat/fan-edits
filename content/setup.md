@@ -89,6 +89,6 @@ git clone git://iad1.relaygateway.net:9418/fan-edits.git
 
 Fallbacks: `ord1` / `hkg1` on the same port, or GitLab (`git@gitlab.com:clevertree/fan-edits.git`). Feature `.mkv` files stay on IPFS and stream after ownership confirm — see [Ownership](/legal) and [Submit](/submit).
 
-**Media root CID** (whole thin-media DAG): `bafybeicjmycrghwuhugbdp74jovlhd3yeviz6muuhup62e677t7wlnaf2a` — also in repo `IPFS_ROOT` / `assets.manifest.json` (`mediaRoot`). [Inspect](https://cid.ipfs.tech/#bafybeicjmycrghwuhugbdp74jovlhd3yeviz6muuhup62e677t7wlnaf2a).
+**Media root CID** (whole thin-media DAG): `bafybeid7zmxfovcgpebtalojong2fw5nc7hnle2bxh2g7ihu74sbfigoya` — also in repo `IPFS_ROOT` / `assets.manifest.json` (`mediaRoot`). [Inspect](https://cid.ipfs.tech/#bafybeid7zmxfovcgpebtalojong2fw5nc7hnle2bxh2g7ihu74sbfigoya).
 
 Optional browser extension (does **not** replace Step 2): [Open in VLC](https://chromewebstore.google.com/detail/open-in-vlc-media-player/ihpiinojhnfhpdmmacgmpoonphhimkaj).

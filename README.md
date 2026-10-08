@@ -27,9 +27,9 @@ The public site serves renders from **IPFS**, not from Git. Git only stores `.re
 
 **Media root** (UnixFS DAG of all thin media) lives in `assets.manifest.json` → `mediaRoot`, and is mirrored in tip file `IPFS_ROOT`:
 
-`bafybeicjmycrghwuhugbdp74jovlhd3yeviz6muuhup62e677t7wlnaf2a`
+`bafybeid7zmxfovcgpebtalojong2fw5nc7hnle2bxh2g7ihu74sbfigoya`
 
-Inspect: [cid.ipfs.tech](https://cid.ipfs.tech/#bafybeicjmycrghwuhugbdp74jovlhd3yeviz6muuhup62e677t7wlnaf2a).
+Inspect: [cid.ipfs.tech](https://cid.ipfs.tech/#bafybeid7zmxfovcgpebtalojong2fw5nc7hnle2bxh2g7ihu74sbfigoya).
 
 ## Android
 
