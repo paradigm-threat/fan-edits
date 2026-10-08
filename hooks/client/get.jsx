@@ -736,9 +736,11 @@ function projectsInCategory(projects, category) {
  * Never playback / VLC. Quiet null on failure.
  */
 function loadHits(pathOpt) {
-  let url = '/api/hits'
+  // local=1: SSR must not wait on peer mesh (that trips relay-ssr timeout).
+  // Fleet sum remains available via /api/hits without local=1 for non-SSR clients.
+  let url = '/api/hits?local=1'
   if (pathOpt && pathOpt.length > 0) {
-    url = url + '?path=' + pathOpt
+    url = url + '&path=' + pathOpt
   }
   try {
     const res = fetch(url)
