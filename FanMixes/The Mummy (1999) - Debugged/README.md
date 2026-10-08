@@ -12,14 +12,14 @@ Kid-friendlier cut: **scarabs that kill or eat people** are removed. Adventure, 
 
 ## Why this cut
 
-Removals are usually **violence** — live beetles eating people, swarm close-ups, Burns finished with scarabs, Beni’s treasure-chamber death. Sometimes **unrealism**: Jonathan’s scarab/arm beat is out because a dirty-knife wound vanishes in the next shot. Gunfights, Imhotep, and the Magi stay.
+Removals are usually **violence** — live beetles eating people, swarm close-ups, Burns’s mutilation and death, Beni’s treasure-chamber death. Sometimes **unrealism**: Jonathan’s scarab/arm beat is out because a dirty-knife wound vanishes in the next shot. Gunfights, Imhotep, and the Magi stay.
 
 ## What changed
 
 - Hom-Dai: no live scarabs poured onto wrapped Imhotep
 - Camp lecture about scarabs / “ate him alive” / the plagues trimmed out
 - Hamunaptra: no scarab swarm chase after the Book of the Dead
-- Cairo: Imhotep no longer finishes Burns with scarabs
+- Cairo: Burns’s eye/tongue removal and later death cut entirely (he is not killed on screen)
 - Jonathan’s arm / hunting-knife scarab beat removed
 - Beni’s treasure-chamber death (scarabs) removed
 

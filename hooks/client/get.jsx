@@ -17,7 +17,7 @@ import Affirmation, {
 import NowShowing from 'hooks/client/native/NowShowing.js'
 import ExternalPlay from 'hooks/client/native/ExternalPlay.js'
 import Board from 'hooks/client/native/Board.js'
-import { PopImage, ImageGalleryRoot } from '@relay/gallery'
+// SSR-static tip (`hydrate: false`): no embed.js, so gallery CEs never upgrade.
 
 function str(v) {
   if (v === null) {
@@ -952,33 +952,6 @@ function subtitlesJson(project) {
   }
 }
 
-/** mediaRoot from assets.manifest.json (UnixFS DAG of all thin assets). */
-function resolveMediaRootCid() {
-  const raw = fetchText('assets.manifest.json')
-  if (!raw || raw.length === 0) {
-    return ''
-  }
-  try {
-    const data = JSON.parse(raw)
-    if (data && typeof data.mediaRoot === 'string') {
-      const c = str(data.mediaRoot).trim()
-      if (looksLikeCid(c)) {
-        return c
-      }
-    }
-  } catch (e) {}
-  const tip = fetchText('IPFS_ROOT')
-  const tipLines = str(tip).split('\n')
-  let line = ''
-  if (tipLines.length > 0) {
-    line = str(tipLines[0])
-  }
-  if (looksLikeCid(line)) {
-    return line
-  }
-  return ''
-}
-
 function copyCidText(cid) {
   const t = str(cid)
   if (t.length === 0) {
@@ -1044,10 +1017,20 @@ function renderIpfsInspect(cidRaw) {
         </button>
       </div>
       <div className="fb-media-inspect-links">
-        <a href={'https://cid.ipfs.tech/#' + cid} target="_blank" rel="noopener noreferrer">
+        <a
+          className="fb-link"
+          href={'https://cid.ipfs.tech/#' + cid}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           CID Inspector
         </a>
-        <a href={'https://check.ipfs.network/?cid=' + enc} target="_blank" rel="noopener noreferrer">
+        <a
+          className="fb-link"
+          href={'https://check.ipfs.network/?cid=' + enc}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Providers
         </a>
       </div>
@@ -1716,11 +1699,13 @@ export default function FlashbackApp() {
         <section className="fb-movie-watch" aria-label="Watch">
           <div className="fb-movie-stage">
             {posterHref.length > 0 ? (
-              <PopImage
+              <img
                 src={posterHref}
                 alt=""
                 className="fb-movie-poster"
-                aspectRatio="2 / 3"
+                width={280}
+                height={420}
+                decoding="async"
               />
             ) : null}
             {selected &&
@@ -1781,29 +1766,41 @@ export default function FlashbackApp() {
             )}
           </div>
         </section>
+        <div className="fb-readme fb-prose">
+          <h2 className="fb-section-title">Notes</h2>
+          <MarkdownRenderer content={readmeMd} />
+        </div>
         <section className="fb-movie-files" aria-label="Project files">
           <h2 className="fb-section-title">Project files</h2>
           <p className="fb-files-lead">
             {
               'Subtitles and small project files for this title. Feature video unlocks above after ownership confirm. To clone the catalog or rebuild a cut, see '
             }
-            <a href="/setup">{'Setup'}</a>
+            <a className="fb-link" href="/setup">
+              {'Setup'}
+            </a>
             {' and '}
-            <a href="/submit">{'Submit'}</a>.
+            <a className="fb-link" href="/submit">
+              {'Submit'}
+            </a>
+            .
           </p>
           {fileRows.length > 0 ? (
             <ul className="fb-file-list">{fileRows}</ul>
           ) : (
             <p className="fb-files-empty">
               No project files are published for this title yet. See{' '}
-              <a href="/setup">Setup</a> or <a href="/submit">Submit</a> once they land.
+              <a className="fb-link" href="/setup">
+                Setup
+              </a>{' '}
+              or{' '}
+              <a className="fb-link" href="/submit">
+                Submit
+              </a>{' '}
+              once they land.
             </p>
           )}
         </section>
-        <div className="fb-readme fb-prose">
-          <h2 className="fb-section-title">Notes</h2>
-          <MarkdownRenderer content={readmeMd} />
-        </div>
       </div>
     )
   } else {
@@ -1833,7 +1830,6 @@ export default function FlashbackApp() {
     )
   }
 
-  const mediaRootCid = resolveMediaRootCid()
   const footerHitsEl = (
     <span className="fb-footer-hits" data-fb-hits="site" hidden />
   )
@@ -1893,13 +1889,27 @@ export default function FlashbackApp() {
             </span>
           </a>
           <nav className="fb-nav">
-            <a href="/">Library</a>
-            <a href="/setup">Setup</a>
-            <a href="/request">Request</a>
-            <a href="/motivation">Why</a>
-            <a href="/submit">Submit</a>
-            <a href="/board">Board</a>
-            <a href="/legal">Legal</a>
+            <a className="fb-link" href="/">
+              Library
+            </a>
+            <a className="fb-link" href="/setup">
+              Setup
+            </a>
+            <a className="fb-link" href="/request">
+              Request
+            </a>
+            <a className="fb-link" href="/motivation">
+              Why
+            </a>
+            <a className="fb-link" href="/submit">
+              Submit
+            </a>
+            <a className="fb-link" href="/board">
+              Board
+            </a>
+            <a className="fb-link" href="/legal">
+              Legal
+            </a>
           </nav>
         </header>
         <NowShowing variant="lcd" itemsJson={nowShowingItemsJson(projects, nowShowingSlugs)} ariaLabel="Now showing titles" />
@@ -1916,47 +1926,36 @@ export default function FlashbackApp() {
             Flashback Repository
           </span>
           <span className="fb-footer-links">
-            <a href="/setup">{'Setup / VLC'}</a>
+            <a className="fb-link" href="/setup">
+              {'Setup / VLC'}
+            </a>
             {' · '}
-            <a href="/request">{'Request downloads'}</a>
+            <a className="fb-link" href="/request">
+              {'Request downloads'}
+            </a>
             {' · '}
-            <a href="/motivation">{"Why we're doing this"}</a>
+            <a className="fb-link" href="/motivation">
+              {"Why we're doing this"}
+            </a>
             {' · '}
-            <a href="/submit">{'Submissions'}</a>
+            <a className="fb-link" href="/submit">
+              {'Submissions'}
+            </a>
             {' · '}
-            <a href="/board">{'Board / Report a problem'}</a>
+            <a className="fb-link" href="/board">
+              {'Board / Report a problem'}
+            </a>
             {' · '}
-            <a href="/legal">{'Ownership'}</a>
+            <a className="fb-link" href="/legal">
+              {'Ownership'}
+            </a>
             {' · '}
-            <a href="/terms">{'Terms'}</a>
+            <a className="fb-link" href="/terms">
+              {'Terms'}
+            </a>
           </span>
           {footerHitsEl}
-          {looksLikeCid(mediaRootCid) ? (
-              <div className="fb-footer-ipfs">
-                <span className="fb-footer-ipfs-label">{'Media root (IPFS)'}</span>
-                <code className="fb-footer-ipfs-cid" title="UnixFS DAG of all thin media">
-                  {mediaRootCid}
-                </code>
-                <button
-                  type="button"
-                  className="fb-btn fb-footer-ipfs-copy"
-                  onClick={() => {
-                    copyCidText(mediaRootCid)
-                  }}
-                >
-                  Copy
-                </button>
-                <a
-                  href={'https://cid.ipfs.tech/#' + mediaRootCid}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Inspect
-                </a>
-              </div>
-            ) : null}
         </footer>
-        <ImageGalleryRoot />
       </div>
     </StyleContext>
   )

@@ -28,6 +28,16 @@ themes:
         color: "var(cream)"
         fontFamily: "Georgia, 'Times New Roman', Times, serif"
         lineHeight: "1.55"
+      # Bare <a> (markdown prose, etc.) — descendant selectors are not emitted by the styler.
+      a:
+        color: "var(gold)"
+        textDecoration: "none"
+      "a:visited":
+        color: "var(gold)"
+        textDecoration: "none"
+      "a:hover":
+        color: "var(cream)"
+        textDecoration: "underline"
       ".fb-app":
         position: "relative"
         minHeight: "100%"
@@ -80,12 +90,14 @@ themes:
         right: "0"
       ".fb-sconce":
         display: "block"
-        width: "56px"
-        height: "88px"
-        borderRadius: "8px"
-        opacity: "0.55"
-        # Dim but sharp: small hard cores + short falloff (no CSS blur)
-        background: "radial-gradient(circle at 50% 22%, rgba(255,236,200,0.95) 0%, rgba(255,210,140,0.75) 10%, rgba(232,140,60,0.28) 28%, transparent 46%), radial-gradient(circle at 50% 52%, rgba(255,220,160,0.7) 0%, rgba(200,100,40,0.22) 16%, transparent 38%), radial-gradient(circle at 50% 78%, rgba(255,200,130,0.55) 0%, rgba(160,70,30,0.18) 14%, transparent 34%)"
+        width: "72px"
+        height: "136px"
+        borderRadius: "0"
+        opacity: "0.62"
+        backgroundImage: "url(/hooks/client/brand/png/sconce.png)"
+        backgroundRepeat: "no-repeat"
+        backgroundPosition: "center"
+        backgroundSize: "contain"
         filter: "none"
         mixBlendMode: "screen"
       ".fb-wall-lights-right .fb-sconce":
@@ -183,14 +195,20 @@ themes:
       ".fb-nav":
         display: "flex"
         flexDirection: "row"
+        flexWrap: "wrap"
         gap: "16px"
         fontSize: "0.95rem"
-      ".fb-nav a":
+      # Class on the <a> itself — descendant selectors like `.fb-nav a` are not emitted.
+      ".fb-link":
         color: "var(gold)"
         textDecoration: "none"
-        borderBottom: "1px solid transparent"
-      ".fb-nav a:hover":
-        borderBottomColor: "var(goldDim)"
+        letterSpacing: "0.02em"
+      ".fb-link:visited":
+        color: "var(gold)"
+        textDecoration: "none"
+      ".fb-link:hover":
+        color: "var(cream)"
+        textDecoration: "underline"
       ".fb-marquee":
         position: "relative"
         zIndex: "2"
@@ -309,9 +327,6 @@ themes:
         background: "rgba(10,7,8,0.9)"
         fontSize: "0.82rem"
         color: "var(creamMuted)"
-      ".fb-footer a":
-        color: "var(gold)"
-        textDecoration: "none"
       ".fb-footer-hits":
         color: "var(creamMuted)"
         fontSize: "0.78rem"
@@ -321,29 +336,6 @@ themes:
         color: "var(creamMuted)"
         fontSize: "0.85rem"
         letterSpacing: "0.03em"
-      ".fb-footer-ipfs":
-        flex: "1 1 100%"
-        display: "flex"
-        flexDirection: "row"
-        flexWrap: "wrap"
-        alignItems: "center"
-        gap: "8px"
-        marginTop: "4px"
-        paddingTop: "8px"
-        borderTop: "1px solid rgba(74,48,40,0.55)"
-      ".fb-footer-ipfs-label":
-        letterSpacing: "0.08em"
-        textTransform: "uppercase"
-        fontSize: "0.72rem"
-        color: "var(goldDim)"
-      ".fb-footer-ipfs-cid":
-        fontFamily: "ui-monospace, 'Courier New', monospace"
-        fontSize: "0.72rem"
-        color: "var(gold)"
-        wordBreak: "break-all"
-      ".fb-footer-ipfs-copy":
-        padding: "4px 10px"
-        fontSize: "0.75rem"
       ".fb-section-title":
         marginTop: "28px"
         marginBottom: "12px"
@@ -964,10 +956,6 @@ themes:
         flexWrap: "wrap"
         gap: "8px 14px"
         fontSize: "0.88rem"
-      ".fb-media-inspect-links a":
-        color: "var(gold)"
-        textDecoration: "underline"
-        textUnderlineOffset: "2px"
       ".fb-media-inspect-note":
         margin: "0"
         fontSize: "0.72rem"
@@ -1021,9 +1009,6 @@ themes:
       ".fb-prose":
         color: "var(creamMuted)"
         lineHeight: "1.6"
-      ".fb-prose a":
-        color: "var(gold)"
-        textDecoration: "underline"
       ".fb-prose h1":
         margin: "0 0 0.75em"
         fontSize: "1.55rem"
@@ -1191,8 +1176,8 @@ themes:
           width: "10%"
           opacity: "0.7"
         ".fb-sconce":
-          width: "48px"
-          height: "72px"
+          width: "52px"
+          height: "98px"
         ".fb-movie-title":
           fontSize: "1.35rem"
         ".fb-movie-stage":
