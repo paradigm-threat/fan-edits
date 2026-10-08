@@ -586,7 +586,7 @@ themes:
         order: "2"
         marginBottom: "8px"
       ".fb-movie-files":
-        order: "3"
+        order: "4"
         marginTop: "18px"
         paddingTop: "16px"
         borderTop: "1px solid var(border)"
@@ -645,7 +645,7 @@ themes:
         paddingTop: "16px"
         borderTop: "1px solid var(border)"
         fontSize: "0.95rem"
-        order: "4"
+        order: "3"
       ".fb-back":
         background: "transparent"
         border: "none"
