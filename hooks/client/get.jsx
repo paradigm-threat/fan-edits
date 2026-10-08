@@ -1517,11 +1517,45 @@ export default function FlashbackApp() {
       </div>
     )
   } else if (kind.kind === 'md') {
-    main = (
-      <article className="fb-doc fb-prose">
-        <MarkdownRenderer content={md || '# Loading…'} />
-      </article>
-    )
+    // Setup: expose #clone-repo (MarkdownRenderer escapes raw HTML anchors).
+    let setupBefore = ''
+    let setupClone = ''
+    let isSetup = false
+    try {
+      if (kind.file === 'content/setup.md') {
+        isSetup = true
+        const full = str(md || '')
+        const marker = '## Clone the catalog from a Relay server'
+        const at = full.indexOf(marker)
+        if (at >= 0) {
+          setupBefore = full.slice(0, at)
+          setupClone = full.slice(at)
+        } else {
+          setupBefore = full
+          setupClone = ''
+        }
+      }
+    } catch (eSetup) {
+      isSetup = false
+    }
+    if (isSetup === true) {
+      main = (
+        <article className="fb-doc fb-prose">
+          <MarkdownRenderer content={setupBefore || '# Loading…'} />
+          {setupClone.length > 0 ? (
+            <section id="clone-repo" aria-label="Clone the catalog from a Relay server">
+              <MarkdownRenderer content={setupClone} />
+            </section>
+          ) : null}
+        </article>
+      )
+    } else {
+      main = (
+        <article className="fb-doc fb-prose">
+          <MarkdownRenderer content={md || '# Loading…'} />
+        </article>
+      )
+    }
   } else if (kind.kind === 'request') {
     main = (
       <article className="fb-doc fb-prose">

@@ -108,8 +108,6 @@ If the one-click button fails (browser blocked the scheme, handler not installed
 
 Same house rule as always: confirm you own a legal commercial copy of the original film before you stream an edit. The site asks once per title on this browser. Feature files are on IPFS (not in public git); see [Ownership policy](/legal).
 
-<a id="clone-repo"></a>
-
 ## Clone the catalog from a Relay server
 
 The public site is a **thin git tip**: CleverScript, READMEs, Kdenlive projects, subtitles, posters, and other small files. **Feature `.mkv` masters are not in git** — they sync over IPFS and stream from the servers after you confirm ownership.
