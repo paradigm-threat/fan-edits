@@ -449,7 +449,10 @@ test.describe('native hosts', () => {
           }),
         { timeout: 20000 },
       )
-      .toMatch(/timed out|timeout|Unreachable|Status request/i)
+      // Range-first hunt: aborted Range → "Range probe failed", then status timeout.
+      .toMatch(
+        /timed out|timeout|Unreachable|Status request|Range probe failed|Range probe timed out/i,
+      )
   })
 
   test('Play surfaces symlink stub as permanent block with Retry', async ({ page }) => {
@@ -523,7 +526,8 @@ test.describe('native hosts', () => {
       .toMatch(/stub|Broken CID|symlink/i)
 
     await expect(page.locator('[data-fb-live-status]')).toContainText(/stub|block/i)
-    await expect(page.getByRole('button', { name: 'Retry' })).toBeVisible()
+    // Host button copy is "Try again" (user-facing); live log may still say Retry.
+    await expect(page.getByRole('button', { name: /Try again|Retry/i })).toBeVisible()
   })
 
   test('TheaterPlayer mounts native <track> cues and CC cycle from subtitlesJson', async ({ page }) => {

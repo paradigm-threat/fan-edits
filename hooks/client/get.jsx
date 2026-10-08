@@ -730,6 +730,49 @@ function projectsInCategory(projects, category) {
   return out
 }
 
+/**
+ * Affirmation-gated public hit counters (fleet-summed).
+ * Site: welcome checkbox uniques. Movie: title affirmation uniques.
+ * Never playback / VLC. Quiet null on failure.
+ */
+function loadHits(pathOpt) {
+  let url = '/api/hits'
+  if (pathOpt && pathOpt.length > 0) {
+    url = url + '?path=' + pathOpt
+  }
+  try {
+    const res = fetch(url)
+    if (!res) {
+      return null
+    }
+    let text = ''
+    if (typeof res.text === 'function') {
+      text = res.text()
+    } else if (typeof res === 'string') {
+      text = res
+    }
+    if (!text || text.length < 2) {
+      return null
+    }
+    return JSON.parse(text)
+  } catch (e) {
+    return null
+  }
+}
+
+function formatHitCount(n) {
+  if (typeof n !== 'number' || !(n >= 0)) {
+    return ''
+  }
+  if (n < 1000) {
+    return String(Math.floor(n))
+  }
+  if (n < 1000000) {
+    return (n / 1000).toFixed(n < 10000 ? 1 : 0) + 'k'
+  }
+  return (n / 1000000).toFixed(1) + 'M'
+}
+
 function fetchText(path) {
   try {
     let p = str(path)
@@ -1676,6 +1719,25 @@ export default function FlashbackApp() {
     if (inPageMkvOk === true) {
       pauseTitle = 'Pause'
     }
+    let movieHitsEl = null
+    const movieSlugPath = kind.slug ? '/' + kind.slug : ''
+    if (movieSlugPath.length > 0) {
+      const movieHits = loadHits(movieSlugPath)
+      if (movieHits && typeof movieHits.unique_24h === 'number' && movieHits.unique_24h >= 0) {
+        const mLabel = formatHitCount(movieHits.unique_24h)
+        if (mLabel.length > 0) {
+          let mTip = 'Unique title affirmations in the last 24 hours (not plays)'
+          if (typeof movieHits.unique_1h === 'number' && movieHits.unique_1h >= 0) {
+            mTip = mTip + ' · 1h: ' + formatHitCount(movieHits.unique_1h)
+          }
+          movieHitsEl = (
+            <p className="fb-movie-hits" title={mTip}>
+              {mLabel + ' theater entries (24h)'}
+            </p>
+          )
+        }
+      }
+    }
     const projectFiles = selected ? loadProjectFiles(selected.path) : []
     let fileRows = []
     for (let fi = 0; fi < projectFiles.length; fi++) {
@@ -1698,6 +1760,7 @@ export default function FlashbackApp() {
           ← Library
         </a>
         <h1 className="fb-movie-title">{displayTitle}</h1>
+        {movieHitsEl}
         {displayBlurb.length > 0 ? (
           <div className="fb-movie-blurb fb-prose">
             <MarkdownRenderer content={displayBlurb} />
@@ -1824,6 +1887,22 @@ export default function FlashbackApp() {
   }
 
   const mediaRootCid = resolveMediaRootCid()
+  let footerHitsEl = null
+  const siteHits = loadHits('')
+  if (siteHits && typeof siteHits.site_unique_24h === 'number' && siteHits.site_unique_24h >= 0) {
+    const siteLabel = formatHitCount(siteHits.site_unique_24h)
+    if (siteLabel.length > 0) {
+      let siteTip = 'Unique welcome affirmations across the fleet (24h) — not page bots'
+      if (typeof siteHits.site_unique_1h === 'number' && siteHits.site_unique_1h >= 0) {
+        siteTip = siteTip + ' · 1h: ' + formatHitCount(siteHits.site_unique_1h)
+      }
+      footerHitsEl = (
+        <span className="fb-footer-hits" title={siteTip}>
+          {siteLabel + ' visitors (24h)'}
+        </span>
+      )
+    }
+  }
 
   return (
     <StyleContext src="hooks/client/theme.yaml">
@@ -1917,6 +1996,7 @@ export default function FlashbackApp() {
             {' · '}
             <a href="/terms">{'Terms'}</a>
           </span>
+          {footerHitsEl}
           {looksLikeCid(mediaRootCid) ? (
               <div className="fb-footer-ipfs">
                 <span className="fb-footer-ipfs-label">{'Media root (IPFS)'}</span>

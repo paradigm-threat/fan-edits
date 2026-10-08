@@ -47,16 +47,73 @@
     }
   }
 
-  function persist(storageKey, mode, slugHint) {
+  /**
+   * Affirmation-gated unique hit (not playback / VLC).
+   * Fail closed if localStorage unavailable. setItem happens in persist() first;
+   * undercount if POST fails after write is intentional.
+   */
+  function reportHit(kind, path) {
     try {
-      if (global.localStorage && global.localStorage.setItem) {
-        global.localStorage.setItem(storageKey, '1');
-        // Any movie-title ack also satisfies site-wide welcome (unlock CSS needs both).
-        if (mode === 'title' || storageKey.indexOf(MPREF) === 0) {
-          global.localStorage.setItem(WKEY, '1');
+      var payload = { kind: kind };
+      if (path) payload.path = path;
+      var body = JSON.stringify(payload);
+      if (typeof navigator !== 'undefined' && typeof navigator.sendBeacon === 'function') {
+        var blob = new Blob([body], { type: 'application/json' });
+        if (navigator.sendBeacon('/api/hits', blob)) return;
+      }
+      if (typeof global.fetch === 'function') {
+        global.fetch('/api/hits', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: body,
+          keepalive: true,
+        }).catch(function () {});
+      }
+    } catch (_) {
+      /* optional */
+    }
+  }
+
+  function persist(storageKey, mode, slugHint) {
+    var wrote = false;
+    var isTitle = mode === 'title' || storageKey.indexOf(MPREF) === 0;
+    var isWelcome = mode === 'welcome' || storageKey === WKEY;
+    try {
+      if (typeof global.localStorage === 'undefined' || !global.localStorage.setItem) {
+        return;
+      }
+      // Already counted this browser — do not re-POST.
+      var already = false;
+      try {
+        already = global.localStorage.getItem(storageKey) === '1';
+      } catch (_) {
+        return;
+      }
+      global.localStorage.setItem(storageKey, '1');
+      wrote = true;
+      // Any movie-title ack also satisfies site-wide welcome (unlock CSS needs both).
+      if (isTitle) {
+        var hadWelcome = false;
+        try {
+          hadWelcome = global.localStorage.getItem(WKEY) === '1';
+        } catch (_) {}
+        global.localStorage.setItem(WKEY, '1');
+        if (!hadWelcome) {
+          reportHit('site_view', null);
         }
       }
-    } catch (_) {}
+      if (!already) {
+        if (isTitle) {
+          var slug = slugHint || slugFromKey(storageKey) || pathSlug();
+          if (slug) reportHit('movie_view', '/' + slug);
+        } else if (isWelcome) {
+          reportHit('site_view', null);
+        }
+      }
+    } catch (_) {
+      return;
+    }
+    if (!wrote) return;
     try {
       const root = global.document && global.document.documentElement;
       if (!root) return;

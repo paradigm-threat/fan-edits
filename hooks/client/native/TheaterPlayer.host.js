@@ -2063,10 +2063,11 @@
         })
         .catch(function (err) {
           const code = err && err.code ? err.code : 'network';
-          if (!st.message) {
-            st.error = code;
-            st.message = code === 'timeout' ? 'Status request timed out' : 'Unreachable';
-          }
+          const statusMsg = code === 'timeout' ? 'Status request timed out' : 'Unreachable';
+          st.error = code;
+          // Keep prior Range-fail detail, but always surface the status outcome
+          // so live UI / tests can see timeouts after a Range abort.
+          st.message = st.message ? st.message + ' → ' + statusMsg : statusMsg;
           return st;
         });
     }

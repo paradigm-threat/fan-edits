@@ -312,6 +312,15 @@ themes:
       ".fb-footer a":
         color: "var(gold)"
         textDecoration: "none"
+      ".fb-footer-hits":
+        color: "var(creamMuted)"
+        fontSize: "0.78rem"
+        letterSpacing: "0.04em"
+      ".fb-movie-hits":
+        margin: "0 0 12px"
+        color: "var(creamMuted)"
+        fontSize: "0.85rem"
+        letterSpacing: "0.03em"
       ".fb-footer-ipfs":
         flex: "1 1 100%"
         display: "flex"
