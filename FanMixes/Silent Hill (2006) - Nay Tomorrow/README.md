@@ -1,29 +1,24 @@
 # Silent Hill (2006) — Nay Tomorrow Edition
 
-My wife and I love this movie, but it's quite unwatchable in its current format. We wanted a cut that we could watch without having to turn away or fast-forward through sequences.
+A watchable *Silent Hill* cut — less gore and exposition, more room for the mystery, with Silent Hill 1 music woven in.
 
-## Motivation
+## Why this cut
 
-We also felt, as did many SH fans, that we don't need a scene explaining all the clues in the movie to us. It's a better movie if it leaves the viewer to figure out what happened on their own—just like the games did.
+The theatrical cut has long stretches that are hard to sit through, plus a late scene that explains every clue. The games leave you to figure it out; this edit aims for that same trust in the audience.
 
-## Changes
+## What changed
 
-- Cuts nearly all gross/gory/sexist sequences.
-- Much of Jodelle Ferland’s narration dialog removed, along with poorly acted Alessa sequences.
-- Cybil’s death sequence slightly shortened.
-- Christabella’s death removed.
-- Songs from the Silent Hill 1 PC OST added or replacing original soundtrack audio on some sequences.
-- SH1 2002 remix “Nay Tomorrow” by Tamimi used toward the end.
-- I use KDENLive for all edits.
-- The edit files are available if you'd like to open one of my edits, make changes, or re-render in higher def.
-- I tend to cut between scenes on the switching frame, which allows scenes to be stitched together easier by leaving more room on the wings.
+- Nearly all gross / gory / sexist sequences cut
+- Much of Jodelle Ferland’s narration removed, along with poorly acted Alessa sequences
+- Cybil’s death sequence slightly shortened
+- Christabella’s death removed
+- Songs from the Silent Hill 1 PC OST added or replacing original score on some sequences
+- SH1 2002 remix “Nay Tomorrow” by Tamimi used toward the end
 
+## Special thanks
 
-## Other Sources
+Tamimi — for an awesome remix that made us pay attention to Silent Hill.
 
-Songs from Silent Hill 1 PC OST were used for some sequences adding or replacing the original soundtrack audio.
-A SH1 2002 remix called 'Nay Tomorrow' by Tamimi was used towards the end of the movie.
+---
 
-## Special Thanks
-
-Tamimi for an awesome remix in the old days that made pay attention to SH
+Want to contribute a cut? See [Submit](/submit).

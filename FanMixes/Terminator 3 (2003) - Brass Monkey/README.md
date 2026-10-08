@@ -14,8 +14,10 @@ Everything about T3 was lackluster compared to the prequels. I honestly think it
 - Many other distracting or contradictory scenes trimmed — e.g. a trailer-sequence “cash only” sign (phones down) that contradicts the clerk’s police call going through later.
 - Background track “Dat Funky Man” replaced with Beastie Boys’ “Brass Monkey” (felt like the original song pick for that scene).
 
-DM me for a copy of the whole movie. Full picture-hole list (many TBD by cue): [CHANGES.md](CHANGES.md).
-
 ## Trailer
 
 [![Terminator 3 - Brass Monkey Edition](https://img.youtube.com/vi/h0aUj_RPQ_U/0.jpg)](https://www.youtube.com/watch?v=h0aUj_RPQ_U)
+
+---
+
+Want to contribute a cut or fix notes? See [Submit](/submit).

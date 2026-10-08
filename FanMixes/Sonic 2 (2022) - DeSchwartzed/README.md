@@ -25,8 +25,6 @@ Sometimes PP is subtle, like where Rachel is constantly telling Maddie to divorc
 - Predictive-programming beats (e.g. Rachel pushing divorce) removed where not plot-required.
 - Credit vocal songs replaced with Sonic game music remixes (four OC ReMixes from the corresponding game).
 
-Full picture-hole list (no source SRT in project; times only): [CHANGES.md](CHANGES.md).
-
 ## Credits for Sonic 2 (2022)
 
 [Bluest Sky OC ReMix](https://ocremix.org/remix/OCR00337)
@@ -40,3 +38,7 @@ by Sir_NutS
 
 [Chemical Blip OC ReMix](https://ocremix.org/remix/OCR02337)
 by Anti-Syne
+
+---
+
+Want to contribute a cut or fix notes? See [Submit](/submit).

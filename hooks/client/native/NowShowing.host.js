@@ -214,12 +214,24 @@
     function fillLayer(layer, it) {
       layer.a.href = it.href || '#';
       layer.title.textContent = it.title || '';
+      if (layer._softRetry) {
+        try {
+          layer._softRetry.cancel();
+        } catch (_) {}
+        layer._softRetry = null;
+      }
       if (it.poster) {
-        layer.img.src = it.poster;
         layer.img.style.display = '';
         layer.a.classList.add('has-poster');
+        const attach = global.__relayAttachSoftRetryImage;
+        if (typeof attach === 'function') {
+          layer._softRetry = attach(layer.img, it.poster, {});
+        } else {
+          layer.img.src = it.poster;
+        }
       } else {
         layer.img.removeAttribute('src');
+        layer.img.removeAttribute('data-relay-img-state');
         layer.img.style.display = 'none';
         layer.a.classList.remove('has-poster');
       }

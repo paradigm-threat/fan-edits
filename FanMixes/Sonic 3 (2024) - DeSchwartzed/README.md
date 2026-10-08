@@ -25,8 +25,6 @@ Sometimes PP is subtle, like where Rachel is constantly telling Maddie to divorc
 - Predictive-programming beats (e.g. Rachel pushing divorce) removed where not plot-required.
 - Credit vocal songs replaced with remixes from Sonic 3 and Sonic & Knuckles game music.
 
-Full picture-hole list (many TBD by cue): [CHANGES.md](CHANGES.md).
-
 ## Credits for Sonic 3 (2024)
 
 [Sonik Elektronik OC ReMix](https://ocremix.org/remix/OCR01181)
@@ -44,3 +42,7 @@ by Rellik
 by housethegrate
 
 [![Credits Trailer #2](https://img.youtube.com/vi/Y-2jS-OnWP8/0.jpg)](https://www.youtube.com/watch?v=Y-2jS-OnWP8)
+
+---
+
+Want to contribute a cut or fix notes? See [Submit](/submit).

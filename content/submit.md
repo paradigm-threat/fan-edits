@@ -38,7 +38,9 @@ On each title page, the **Project files** section lists downloadable `.kdenlive`
 
 1. **Email** a Kdenlive project (+ notes), or a finished file as reference only.  
 2. Or open a **merge request** on [GitLab: clevertree/fan-edits](https://gitlab.com/clevertree/fan-edits) under `FanMixes/` or `KidFriendly/`.  
-3. Include a short README: motivation, what you cut, and any music / remix credits.
+3. Include a short **audience** README: why the cut exists, what changed for viewers, and any music / remix credits.
+
+**Title READMEs stay non-technical.** Build steps, render commands, local paths, Kdenlive flags, and cut-list tooling belong on [Submit](/submit) and [Setup](/setup) — not on the movie page. Link here when someone needs to contribute or rebuild.
 
 **Fixes on existing edits** (typos in a README, subtitle timing, a bad cut note) are welcome the same way — small MRs against the title folder are fine. Step-by-step “open an MR” docs will land here soon.
 

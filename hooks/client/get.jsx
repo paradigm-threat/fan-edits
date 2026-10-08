@@ -17,6 +17,7 @@ import Affirmation, {
 import NowShowing from 'hooks/client/native/NowShowing.js'
 import ExternalPlay from 'hooks/client/native/ExternalPlay.js'
 import Board from 'hooks/client/native/Board.js'
+import { PopImage, ImageGalleryRoot } from '@relay/gallery'
 
 function str(v) {
   if (v === null) {
@@ -273,8 +274,31 @@ function leaveReadmeHref(href) {
 }
 
 /**
+ * Find the ')' that closes a Markdown link destination starting at `open`.
+ * Skips balanced inner parentheses so paths like `Foo (1999)/x.md` are safe.
+ */
+function markdownLinkCloseParen(raw, open) {
+  let depth = 1
+  let j = open
+  while (j < raw.length) {
+    const ch = raw.charAt(j)
+    if (ch === '(') {
+      depth = depth + 1
+    } else if (ch === ')') {
+      depth = depth - 1
+      if (depth === 0) {
+        return j
+      }
+    }
+    j = j + 1
+  }
+  return 0 - 1
+}
+
+/**
  * README links like poster.jpg resolve against the slug URL (`/poster.jpg` → 404).
  * Rewrite same-folder targets to an absolute URL under project.path.
+ * Destinations are closed with balanced-paren scan (project folders often contain `(1999)`).
  */
 function rewriteReadmeAssetLinks(md, projectPath) {
   const raw = str(md)
@@ -290,7 +314,7 @@ function rewriteReadmeAssetLinks(md, projectPath) {
       out = out + raw.slice(i)
       break
     }
-    const close = raw.indexOf(')', mark + 2)
+    const close = markdownLinkCloseParen(raw, mark + 2)
     if (close < 0) {
       out = out + raw.slice(i)
       break
@@ -1525,7 +1549,8 @@ export default function FlashbackApp() {
       if (kind.file === 'content/setup.md') {
         isSetup = true
         const full = str(md || '')
-        const marker = '## Clone the catalog from a Relay server'
+        // Anchor #clone-repo for movie-page deep links (advanced section on setup).
+        const marker = '## Advanced (editors only)'
         const at = full.indexOf(marker)
         if (at >= 0) {
           setupBefore = full.slice(0, at)
@@ -1681,7 +1706,12 @@ export default function FlashbackApp() {
         <section className="fb-movie-watch" aria-label="Watch">
           <div className="fb-movie-stage">
             {posterHref.length > 0 ? (
-              <img className="fb-movie-poster" src={posterHref} alt="" width="280" />
+              <PopImage
+                src={posterHref}
+                alt=""
+                className="fb-movie-poster"
+                aspectRatio="2 / 3"
+              />
             ) : null}
             {selected &&
             (projectMediaField(selected, 'media').length > 0 ||
@@ -1744,17 +1774,19 @@ export default function FlashbackApp() {
         <section className="fb-movie-files" aria-label="Project files">
           <h2 className="fb-section-title">Project files</h2>
           <p className="fb-files-lead">
-            Kdenlive projects, subtitles, and other files that live in the public git tree for this
-            title. Feature MKVs stay on IPFS and are unlocked above after ownership confirm. To pull
-            the whole catalog locally (every project folder), see{' '}
-            <a href="/setup#clone-repo">Setup — clone from a Relay server</a>.
+            {
+              'Subtitles and small project files for this title. Feature video unlocks above after ownership confirm. To clone the catalog or rebuild a cut, see '
+            }
+            <a href="/setup">{'Setup'}</a>
+            {' and '}
+            <a href="/submit">{'Submit'}</a>.
           </p>
           {fileRows.length > 0 ? (
             <ul className="fb-file-list">{fileRows}</ul>
           ) : (
             <p className="fb-files-empty">
-              No project files are published for this title yet. Clone the repo from{' '}
-              <a href="/setup#clone-repo">Setup</a> once they land, or check back later.
+              No project files are published for this title yet. See{' '}
+              <a href="/setup">Setup</a> or <a href="/submit">Submit</a> once they land.
             </p>
           )}
         </section>
@@ -1871,23 +1903,23 @@ export default function FlashbackApp() {
             Flashback Repository
           </span>
           <span className="fb-footer-links">
-            <a href="/setup">Setup / VLC</a>
+            <a href="/setup">{'Setup / VLC'}</a>
             {' · '}
-            <a href="/request">Request downloads</a>
+            <a href="/request">{'Request downloads'}</a>
             {' · '}
-            <a href="/motivation">Why we’re doing this</a>
+            <a href="/motivation">{"Why we're doing this"}</a>
             {' · '}
-            <a href="/submit">Submissions</a>
+            <a href="/submit">{'Submissions'}</a>
             {' · '}
             <a href="/board">{'Board / Report a problem'}</a>
             {' · '}
-            <a href="/legal">Ownership</a>
+            <a href="/legal">{'Ownership'}</a>
             {' · '}
-            <a href="/terms">Terms</a>
+            <a href="/terms">{'Terms'}</a>
           </span>
           {looksLikeCid(mediaRootCid) ? (
               <div className="fb-footer-ipfs">
-                <span className="fb-footer-ipfs-label">Media root (IPFS)</span>
+                <span className="fb-footer-ipfs-label">{'Media root (IPFS)'}</span>
                 <code className="fb-footer-ipfs-cid" title="UnixFS DAG of all thin media">
                   {mediaRootCid}
                 </code>
@@ -1910,6 +1942,7 @@ export default function FlashbackApp() {
               </div>
             ) : null}
         </footer>
+        <ImageGalleryRoot />
       </div>
     </StyleContext>
   )
