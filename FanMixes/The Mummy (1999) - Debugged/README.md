@@ -62,7 +62,7 @@ python3 scripts/remux_subtitles.py \
   --out "FanMixes/The Mummy (1999) - Debugged/The Mummy Debugged.mkv"
 ```
 
-Current `The Mummy Debugged.mkv` is the **2026-09-23** kdenlive render (`01:55:29`, tractor1). Dual English tracks remuxed after encode. The 2026-09-19 file was ~60s longer (flesh-eater lecture still in).
+Current `The Mummy Debugged.mkv` is the **01:50:25** Debugged master (Beni scarab-death cut included). Dual English tracks remuxed **2026-10-08** from `The Mummy Debugged.kdenlive.srt` (dialogue) + enhanced citations — the previous embedded track was still timed for the longer 01:55:29 cut and drifted ~5 minutes by the climax.
 
 ## Source media (not in git)
 
@@ -107,6 +107,7 @@ bash scripts/ensure-public-permissions.sh "FanMixes/The Mummy (1999) - Debugged"
 
 ## Changelog
 
+- 2026-10-08 — Dual English remux (dialogue + citations) retimed to 01:50:25 master; replaced stale 01:55:29-timed embedded track.
 - 2026-09-27 — `seams.mkv` rebuilt from the finished NAS render (output join times), not the 4K rip.
 - 2026-09-27 — Cut Beni eaten by scarabs (source `01:53:27`–`01:54:36`, after “Goodbye, Beni.”).
 - 2026-09-26 — Per-seam Kdenlive projects in `seams/` (generic names, original 4K, no proxy) for join QC. `seams.mkv` is the short reel, not the feature.
