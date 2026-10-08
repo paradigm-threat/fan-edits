@@ -1532,13 +1532,10 @@ export default function FlashbackApp() {
             <MarkdownRenderer content={displayBlurb} />
           </div>
         ) : null}
+        <div className="fb-movie-stage">
         {posterHref.length > 0 ? (
           <img className="fb-movie-poster" src={posterHref} alt="" width="280" />
         ) : null}
-        {/* README MD before video in tree order so SSR finishes links/lists; CSS order keeps it below the player. */}
-        <div className="fb-readme fb-prose">
-          <MarkdownRenderer content={readmeMd} />
-        </div>
         {selected &&
         (projectMediaField(selected, 'media').length > 0 ||
           projectMediaField(selected, 'mediaWeb').length > 0 ||
@@ -1592,6 +1589,11 @@ export default function FlashbackApp() {
         ) : (
           <p className="fb-movie-nomedia">Feature media is not catalogued yet for this title.</p>
         )}
+        </div>
+        {/* README stays below the poster + play row; CSS order on .fb-readme. */}
+        <div className="fb-readme fb-prose">
+          <MarkdownRenderer content={readmeMd} />
+        </div>
       </div>
     )
   } else {

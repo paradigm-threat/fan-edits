@@ -555,16 +555,26 @@ themes:
       ".fb-movie-blurb":
         color: "var(creamMuted)"
         marginBottom: "16px"
+      ".fb-movie-stage":
+        display: "flex"
+        flexDirection: "row"
+        alignItems: "flex-start"
+        gap: "18px"
+        order: "2"
+        marginBottom: "8px"
       ".fb-movie-poster":
         display: "block"
-        width: "min(280px, 100%)"
+        flex: "0 0 auto"
+        width: "min(280px, 42%)"
         height: "auto"
-        margin: "0 0 18px"
+        margin: "0"
         border: "1px solid var(border)"
         background: "var(screen)"
       ".fb-video-panel":
         position: "relative"
-        marginBottom: "24px"
+        flex: "1 1 auto"
+        minWidth: "0"
+        marginBottom: "0"
         padding: "12px"
         background: "var(screen)"
         border: "1px solid var(border)"
@@ -1118,6 +1128,10 @@ themes:
           height: "72px"
         ".fb-movie-title":
           fontSize: "1.35rem"
+        ".fb-movie-stage":
+          flexDirection: "column"
+        ".fb-movie-poster":
+          width: "min(280px, 100%)"
         ".fb-slide":
           flexDirection: "column"
           minHeight: "0"
