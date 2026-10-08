@@ -211,16 +211,23 @@ function projectPosterPath(project) {
   if (!project) {
     return ''
   }
-  if (project.image) {
-    let poster = str(project.image)
-    if (poster.length > 0 && poster.charAt(0) !== '/') {
-      poster = '/' + poster
+  try {
+    if (project.image) {
+      let poster = str(project.image)
+      if (poster.length > 0 && poster.charAt(0) !== '/') {
+        poster = '/' + poster
+      }
+      if (poster.length > 0) {
+        return poster
+      }
     }
-    return poster
-  }
-  if (project.poster && project.path) {
-    return '/' + str(project.path) + '/' + str(project.poster)
-  }
+  } catch (e) {}
+  // CleverScript throws on missing keys — only Now Showing titles carry `poster`.
+  try {
+    if (project.poster && project.path) {
+      return '/' + str(project.path) + '/' + str(project.poster)
+    }
+  } catch (e2) {}
   return ''
 }
 
@@ -1560,7 +1567,6 @@ export default function FlashbackApp() {
       </article>
     )
   } else if (kind.kind === 'movie') {
-    const movieCid = selected && selected.media ? resolveProjectCid(selected) : ''
     const folderName = selected
       ? folderNameFromPath(selected.path)
       : str(kind.slug)
