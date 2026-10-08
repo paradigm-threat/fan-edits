@@ -1132,6 +1132,18 @@ themes:
           flexDirection: "column"
         ".fb-movie-poster":
           width: "min(280px, 100%)"
+        ".fb-gate":
+          alignItems: "stretch"
+          justifyContent: "flex-start"
+          padding: "0"
+          overflow: "auto"
+        ".fb-gate-card":
+          maxWidth: "none"
+          width: "100%"
+          minHeight: "100%"
+          borderRadius: "0"
+          boxShadow: "none"
+          boxSizing: "border-box"
         ".fb-slide":
           flexDirection: "column"
           minHeight: "0"
