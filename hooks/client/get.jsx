@@ -1881,8 +1881,8 @@ export default function FlashbackApp() {
               className="fb-brand-logo"
               src="/hooks/client/brand/png/logo-header.png"
               alt=""
-              width="160"
-              height="63"
+              width="132"
+              height="52"
             />
             <span className="fb-brand-text">
               <span className="fb-brand-name">Flashback Repository</span>

@@ -163,7 +163,7 @@ themes:
         display: "block"
         height: "52px"
         width: "auto"
-        maxWidth: "168px"
+        maxWidth: "140px"
         flexShrink: "0"
         borderRadius: "0"
         objectFit: "contain"
