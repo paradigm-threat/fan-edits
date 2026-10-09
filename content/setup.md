@@ -55,13 +55,13 @@ curl -fsSL https://flashbackrepository.org/scripts/vlc-protocol/install-linux-on
 Browsers cannot play our full-quality HEVC MKV files. The **Flashback Repository** Android app can. It is sideloaded on purpose — there is no realistic Play Store path for this catalog ([why](/motivation#no-play-store-path)).
 
 1. On your phone, tablet, or Android / Google TV, open this link (or ask someone to send it):  
-   **[Download Flashback APK](/downloads/flashback.apk)** (~17 MB)
+   **[Download Flashback APK](/downloads/flashback.apk)** (~14 MB)
 2. If Android asks whether to allow installs from the browser or Files app, tap **Allow** / **Settings** and turn on install permission for that app, then go back and open the download.
 3. Tap the downloaded **flashback.apk** → **Install** → **Open**.
 4. Pick a title → tap **OK — I confirm** (ownership affirmation).
 5. The movie should start in the app (it may rotate to landscape for a larger picture).
 
-**“There was a problem parsing the package”** (Hisense / Google TV and some phones): the file you downloaded was probably not a real APK (often an HTML/JSON error page saved as `.apk`). Re-download from the link above and confirm the file is about **17 MB**; if the TV browser still mis-saves it, copy `flashback.apk` from a computer via USB.
+**“There was a problem parsing the package”** (Hisense / Google TV and some phones): the file you downloaded was probably not a real APK (often an HTML/JSON error page saved as `.apk`). Re-download from the link above and confirm the file is about **14 MB**; if the TV browser still mis-saves it, copy `flashback.apk` from a computer via USB.
 
 **“Unsafe app blocked” / Play Protect** (common on first install from outside the Play Store):
 

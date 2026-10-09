@@ -4,6 +4,8 @@ Flashback on Android is two builds of the Relay client (`clevertree/react-client
 
 Download (when published): **[flashback.apk](/downloads/flashback.apk)** — see [downloads/README.md](../downloads/README.md).
 
+Published APKs must be **release-signed** (`assembleFlashbackRelease`). Debug certs trigger Play Protect “unsafe app” more often; release signing helps but does not remove the sideload prompt — users still tap Install anyway (documented on [Setup](/setup)). Keystore: `~/.android/flashback-release.keystore` (not in git).
+
 Deferred player features (VLC/Nova-class, not in v1): **[ANDROID_PLAYER_BACKLOG.md](ANDROID_PLAYER_BACKLOG.md)**.
 
 ## Playback (Flashback native shell)
@@ -36,7 +38,11 @@ Web checklist: **[/android-lab](/android-lab)**.
 Build from `relay-client-android/android`:
 
 ```bash
+# Local testing
 ./gradlew :app:assembleRelayDebug :app:assembleFlashbackDebug
+
+# Site download (release-signed; needs android/keystore.properties)
+./gradlew :app:assembleFlashbackRelease
 ```
 
 ## Native reusable pieces
