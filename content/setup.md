@@ -50,13 +50,30 @@ irm https://flashbackrepository.org/scripts/vlc-protocol/install-windows.ps1 | i
 curl -fsSL https://flashbackrepository.org/scripts/vlc-protocol/install-linux-online.sh | bash
 ```
 
-### Phone / tablet (Android)
+### Phone / tablet (Android) — Flashback app (recommended)
 
-No computer installer. Install [VLC for Android](https://play.google.com/store/apps/details?id=org.videolan.vlc), open a title on Flashback, confirm ownership, tap **Open in external player**, and pick VLC.
+Browsers cannot play our full-quality HEVC MKV files. The **Flashback Repository** Android app can. It is sideloaded on purpose — there is no realistic Play Store path for this catalog ([why](/motivation#no-play-store-path)).
+
+1. On your phone or tablet, open this link (or ask someone to send it):  
+   **[Download Flashback APK](/downloads/flashback.apk)**
+2. If Android asks whether to allow installs from the browser or Files app, tap **Allow** / **Settings** and turn on install permission for that app, then go back and open the download.
+3. Tap the downloaded **flashback.apk** → **Install** → **Open**.
+4. Pick a title → tap **OK — I confirm** (ownership affirmation).
+5. The movie should start in the app (it may rotate to landscape for a larger picture).
+
+**If the movie will not play in the app** (some older phones lack HEVC hardware):
+
+1. Install [VLC for Android](https://play.google.com/store/apps/details?id=org.videolan.vlc) from the Play Store.
+2. In Flashback, tap **Open in external player**.
+3. Choose **VLC**. If Android asks “Just once” or “Always”, pick whichever you prefer.
+
+You do **not** need a computer or Terminal for Android.
+
+Maintainer / device matrix: **[Android APK lab](/android-lab)** (checklist + in-app **Lab** screen).
 
 ---
 
-## Step 3 — Watch a title
+## Step 3 — Watch a title (computer browser)
 
 1. Open a film on Flashback.
 2. Confirm you own a legal copy of the original (once per title on this browser).
@@ -73,7 +90,9 @@ If the button does nothing, use **Copy stream URL**, then in VLC: **Media → Op
 | Mac asks which app | Choose **Flashback VLC Protocol** |
 | “VLC not found” | Install VLC, then run the Step 2 command again |
 | Button does nothing | Use **Copy stream URL** → VLC → Open Network Stream |
-| Android chooser missing | Copy stream URL → VLC → Network → paste |
+| Android “blocked install” | Allow installs from Files / Chrome, then open the APK again |
+| Android in-app play fails | Install VLC → **Open in external player** |
+| Android chooser missing | Install VLC from the Play Store first |
 
 Uninstall (optional): [macOS / Linux helpers](/scripts/vlc-protocol/install-macos.sh) live under `/scripts/vlc-protocol/` — see `uninstall-linux.sh` / `uninstall-windows.ps1` in that folder.
 

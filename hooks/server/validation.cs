@@ -90,10 +90,13 @@ function isAllowedPath(p) {
   if (p === 'site.webmanifest') return true
   if (p === 'package.json') return true
   if (p === '.relay.yaml') return true
+  if (p === '.gitignore') return true
   if (startsWith(p, '.relay/assets/') && endsWith(p, '.ipfs')) return true
   if (startsWith(p, 'hooks/')) return true
   if (startsWith(p, 'scripts/')) return true
   if (startsWith(p, 'docs/') && (endsWith(p, '.md') || endsWith(p, '.MD'))) return true
+  // Flashback APK sideload + in-app update manifest (git tip, not IPFS)
+  if (startsWith(p, 'downloads/') && (endsWith(p, '.apk') || endsWith(p, '.json') || endsWith(p, '.md') || endsWith(p, '.MD'))) return true
   if (endsWith(p, '.md') || endsWith(p, '.MD')) return true
   if (endsWith(p, '.reel')) return true
   if (endsWith(p, '.srt') || endsWith(p, '.SRT')) return true
