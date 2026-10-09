@@ -1,0 +1,4 @@
+
+*.apk
+!downloads/
+!downloads/*.apk
