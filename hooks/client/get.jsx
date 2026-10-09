@@ -1166,71 +1166,88 @@ function projectStatsLine(p) {
  * CleverScript-safe (no regex literals).
  */
 function projectChangesBrief(p) {
-  let path = ''
   try {
-    if (p && p.path) {
-      path = str(p.path)
-    }
-  } catch (ePath) {
-    path = ''
-  }
-  if (path.length === 0) {
-    return ''
-  }
-  const readme = fetchText(path + '/README.md')
-  if (!readme || readme.length === 0) {
-    return ''
-  }
-  const lines = str(readme).split('\n')
-  let inSection = false
-  let bullets = []
-  for (let i = 0; i < lines.length; i++) {
-    const raw = lines[i]
-    let s = ''
+    let path = ''
     try {
-      s = str(raw).trim()
-    } catch (eTrim) {
-      s = ''
+      if (p && p.path) {
+        path = str(p.path)
+      }
+    } catch (ePath) {
+      path = ''
     }
-    if (s.indexOf('## ') === 0) {
-      const head = s.slice(3).toLowerCase()
-      if (inSection) {
+    if (path.length === 0) {
+      return ''
+    }
+    let readme = ''
+    try {
+      readme = fetchText(path + '/README.md')
+    } catch (eFetch) {
+      readme = ''
+    }
+    if (!readme || readme.length === 0) {
+      return ''
+    }
+    const lines = str(readme).split('\n')
+    let inSection = false
+    let bullets = []
+    for (let i = 0; i < lines.length; i++) {
+      const raw = lines[i]
+      let s = ''
+      try {
+        s = str(raw).trim()
+      } catch (eTrim) {
+        s = ''
+      }
+      if (s.indexOf('## ') === 0) {
+        const head = s.slice(3).toLowerCase()
+        if (inSection) {
+          break
+        }
+        if (
+          head.indexOf('what changed') >= 0 ||
+          head === 'changes' ||
+          head.indexOf('cut list') >= 0
+        ) {
+          inSection = true
+        }
+        continue
+      }
+      if (!inSection) {
+        continue
+      }
+      if (s.indexOf('#') === 0) {
         break
       }
-      if (
-        head.indexOf('what changed') >= 0 ||
-        head === 'changes' ||
-        head.indexOf('cut list') >= 0
-      ) {
-        inSection = true
-      }
-      continue
-    }
-    if (!inSection) {
-      continue
-    }
-    if (s.indexOf('#') === 0) {
-      break
-    }
-    if (s === '---') {
-      break
-    }
-    if (s.indexOf('- ') === 0 || s.indexOf('* ') === 0) {
-      bullets = bullets.concat([s])
-      if (bullets.length >= 4) {
+      if (s === '---') {
         break
       }
+      if (s.indexOf('- ') === 0 || s.indexOf('* ') === 0) {
+        bullets = bullets.concat([s])
+        if (bullets.length >= 4) {
+          break
+        }
+      }
     }
-  }
-  if (bullets.length === 0) {
+    if (bullets.length === 0) {
+      return ''
+    }
+    return bullets.join('\n')
+  } catch (eBrief) {
     return ''
   }
-  return bullets.join('\n')
 }
 
 /** Catalog items for park-native NowShowing (lcd + carousel).
  * Prefer index.nowShowing slug order; fall back to status=showing. */
 function nowShowingItemsJson(projects, nowShowingSlugs) {
+  try {
+    return nowShowingItemsJsonInner(projects, nowShowingSlugs)
+  } catch (eOuter) {
+    return '[]'
+  }
+}
+
+function nowShowingItemsJsonInner(projects, nowShowingSlugs) {
   let out = []
   let list = []
   let slugs = []
@@ -1278,14 +1295,26 @@ function nowShowingItemsJson(projects, nowShowingSlugs) {
       } catch (eBlurb) {
         blurb = ''
       }
+      let stats = ''
+      let changes = ''
+      try {
+        stats = projectStatsLine(p)
+      } catch (eStatsLine) {
+        stats = ''
+      }
+      try {
+        changes = projectChangesBrief(p)
+      } catch (eChanges) {
+        changes = ''
+      }
       out = out.concat([
         {
           title: t,
           href: '/' + s,
           poster: posterFor(p),
           blurb: blurb,
-          stats: projectStatsLine(p),
-          changes: projectChangesBrief(p),
+          stats: stats,
+          changes: changes,
         },
       ])
     }
@@ -1601,6 +1630,7 @@ export default function FlashbackApp() {
   for (let i = 0; i < kidFriendly.length; i++) {
     kidCards = kidCards.concat([titleCard(kidFriendly[i])])
   }
+  const nowItemsJson = nowShowingItemsJson(projects, nowShowingSlugs)
   let blogCards = []
   for (let i = 0; i < blogPosts.length; i++) {
     const post = blogPosts[i]
@@ -1926,7 +1956,7 @@ export default function FlashbackApp() {
   } else {
     main = (
       <div className="fb-home">
-        <NowShowing variant="carousel" itemsJson={nowShowingItemsJson(projects, nowShowingSlugs)} ariaLabel="Now showing" />
+        <NowShowing variant="carousel" itemsJson={nowItemsJson} ariaLabel="Now showing" />
         <div className="fb-home-lead">
           <div className="fb-home-intro fb-prose">
             <MarkdownRenderer content={homeMd || '# Welcome'} />
@@ -2032,7 +2062,7 @@ export default function FlashbackApp() {
             </a>
           </nav>
         </header>
-        <NowShowing variant="lcd" itemsJson={nowShowingItemsJson(projects, nowShowingSlugs)} ariaLabel="Now showing titles" />
+        <NowShowing variant="lcd" itemsJson={nowItemsJson} ariaLabel="Now showing titles" />
         <main className="fb-main">{main}</main>
         <footer className="fb-footer">
           <span className="fb-footer-brand">
