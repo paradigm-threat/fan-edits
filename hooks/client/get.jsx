@@ -1180,7 +1180,15 @@ function nowShowingItemsJson(projects, nowShowingSlugs) {
     let t = projectTitle(p)
     let s = projectSlug(p)
     if (t.length > 0 && s.length > 0) {
-      out = out.concat([{ title: t, href: '/' + s, poster: posterFor(p) }])
+      let blurb = ''
+      try {
+        if (p && p.blurb) {
+          blurb = '' + p.blurb
+        }
+      } catch (eBlurb) {
+        blurb = ''
+      }
+      out = out.concat([{ title: t, href: '/' + s, poster: posterFor(p), blurb: blurb }])
     }
   }
 

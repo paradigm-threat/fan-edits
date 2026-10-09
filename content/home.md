@@ -28,7 +28,7 @@ Media rides **thin IPFS**: the bytes are content-addressed on the network (not p
 
 **Why this exists:** it is not only about better cuts. It is about whether we are **allowed** to improve the films we own and share those cuts with friends. [Read the full motivation →](/motivation)
 
-**Want to contribute a cut?** Prefer Kdenlive + melt from source so everything stays editable with open-source tools. [Submissions →](/submit)
+**Want to contribute a cut?** Prefer an open-source NLE project (Kdenlive, Shotcut, OpenShot, Flowblade, Pitivi, Olive, …) so everything stays editable without proprietary tools. [Submissions →](/submit)
 
 ## Working on
 

@@ -40,7 +40,7 @@ Historic leaders have described controlled opposition as a containment strategy.
 
 Flashback Repository is pushback under ownership rules: make the cut, document it, host the **bytes on IPFS** (not as permanent public git blobs — repos keep notes, project files, and text pointers; servers may cache IPFS blocks for streaming), and require that viewers own the commercial original before unlocking stream access. Watch via **external player stream** (VLC and friends) from the theater page, or later via the Android / TV app. No pirate archive. No apology for wanting better versions of films we already bought. See [Ownership policy](/legal).
 
-Projects stay in **Kdenlive + melt** so the library remains editable with open-source tools — see [Submissions](/submit).
+Projects stay in **open-source NLEs** (this catalog is mostly Kdenlive + melt; Shotcut, OpenShot, Flowblade, Pitivi, Olive, and similar are welcome) so the library remains editable without proprietary tools — see [Submissions](/submit).
 
 ## Why MKV + HEVC (and an external player), not in-browser Play
 
