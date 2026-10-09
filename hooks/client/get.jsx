@@ -16,7 +16,18 @@ import Affirmation, {
 } from 'hooks/client/native/Affirmation.js'
 import NowShowing from 'hooks/client/native/NowShowing.js'
 import ExternalPlay from 'hooks/client/native/ExternalPlay.js'
+import TheaterPlayer from 'hooks/client/native/TheaterPlayer.js'
 import Board from 'hooks/client/native/Board.js'
+
+/** Android Relay shell sets this so we can enable in-app HEVC MKV (browsers stay ExternalPlay-only). */
+function isAndroidClient() {
+  try {
+    if (typeof globalThis !== 'undefined' && globalThis.__relayAndroidClient === true) {
+      return true
+    }
+  } catch (e) {}
+  return false
+}
 // SSR-static tip (`hydrate: false`): no embed.js, so gallery CEs never upgrade.
 
 function str(v) {
@@ -1090,6 +1101,9 @@ function routeKind(route) {
   if (route === '/setup' || route === '/playback' || route === '/vlc') {
     return { kind: 'md', file: 'content/setup.md', title: 'Setup for playback' }
   }
+  if (route === '/android-lab' || route === '/apk-lab' || route === '/android-test') {
+    return { kind: 'md', file: 'content/android-lab.md', title: 'Android APK lab' }
+  }
   if (route === '/request' || route === '/downloads' || route === '/email') {
     return { kind: 'request', file: 'content/request.md', title: 'Request downloads' }
   }
@@ -1647,13 +1661,38 @@ export default function FlashbackApp() {
     const readmeMd = rewriteReadmeAssetLinks(hero.body || '', selected ? selected.path : '')
     let mediaSurface = null
     if (selected) {
-      mediaSurface = (
-        <ExternalPlay
-          streamUrl={streamUrl}
-          unlocked={movieAck === true && ack === true}
-          setupHref="/setup"
-        />
-      )
+      if (isAndroidClient() === true) {
+        const srcWeb = encodeMarkdownUrl(
+          absoluteStreamUrl(mediaSrcFor(selected, projectMediaField(selected, 'mediaWeb'))),
+        )
+        const srcMobile = encodeMarkdownUrl(
+          absoluteStreamUrl(mediaSrcFor(selected, projectMediaField(selected, 'mediaMobile'))),
+        )
+        mediaSurface = (
+          <TheaterPlayer
+            src={streamUrl}
+            srcMaster={streamUrl}
+            srcWeb={srcWeb}
+            srcMobile={srcMobile}
+            cid={resolveProjectCid(selected)}
+            unlocked={movieAck === true && ack === true}
+            playing={playing === true}
+            command={command}
+            commandSeq={commandSeq}
+            commandArg=""
+            startAt={startAtVal}
+            seedState="pending"
+          />
+        )
+      } else {
+        mediaSurface = (
+          <ExternalPlay
+            streamUrl={streamUrl}
+            unlocked={movieAck === true && ack === true}
+            setupHref="/setup"
+          />
+        )
+      }
     }
     let playDisabled = true
     if (inPageMkvOk === true) {
@@ -1723,6 +1762,18 @@ export default function FlashbackApp() {
               projectMediaField(selected, 'mediaMobile').length > 0) ? (
               <div className="fb-video-panel">
                 {mediaSurface}
+                {isAndroidClient() !== true ? (
+                  <p className="fb-theater-downloads-note">
+                    {'Phone or tablet? '}
+                    <a className="fb-link" href="/downloads/flashback.apk">
+                      {'Download Flashback APK'}
+                    </a>
+                    {' · '}
+                    <a className="fb-link" href="/setup">
+                      {'Setup'}
+                    </a>
+                  </p>
+                ) : null}
                 <Affirmation
                   mode="title"
                   eyebrow="CONFIRM"
