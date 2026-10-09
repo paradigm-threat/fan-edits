@@ -50,16 +50,31 @@ irm https://flashbackrepository.org/scripts/vlc-protocol/install-windows.ps1 | i
 curl -fsSL https://flashbackrepository.org/scripts/vlc-protocol/install-linux-online.sh | bash
 ```
 
-### Phone / tablet (Android) — Flashback app (recommended)
+### Phone / tablet / Android TV — Flashback app (recommended)
 
 Browsers cannot play our full-quality HEVC MKV files. The **Flashback Repository** Android app can. It is sideloaded on purpose — there is no realistic Play Store path for this catalog ([why](/motivation#no-play-store-path)).
 
-1. On your phone or tablet, open this link (or ask someone to send it):  
-   **[Download Flashback APK](/downloads/flashback.apk)**
+1. On your phone, tablet, or Android / Google TV, open this link (or ask someone to send it):  
+   **[Download Flashback APK](/downloads/flashback.apk)** (~17 MB)
 2. If Android asks whether to allow installs from the browser or Files app, tap **Allow** / **Settings** and turn on install permission for that app, then go back and open the download.
 3. Tap the downloaded **flashback.apk** → **Install** → **Open**.
 4. Pick a title → tap **OK — I confirm** (ownership affirmation).
 5. The movie should start in the app (it may rotate to landscape for a larger picture).
+
+**“There was a problem parsing the package”** (Hisense / Google TV and some phones): the file you downloaded was probably not a real APK (often an HTML/JSON error page saved as `.apk`). Re-download from the link above and confirm the file is about **17 MB**; if the TV browser still mis-saves it, copy `flashback.apk` from a computer via USB.
+
+**“Unsafe app blocked” / Play Protect** (common on first install from outside the Play Store):
+
+This warning is normal for apps that are not on the Play Store. We cannot turn it off entirely without publishing there. The download is a normal **release-signed** APK from this site — not a random mystery file.
+
+1. On the warning screen, tap **More details** (or **Learn more**).
+2. Tap **Install anyway** / **Install without scanning** (wording varies by Android version).
+3. If it still blocks: open **Play Protect** in the Play Store app (profile → Play Protect → settings gear) and temporarily allow installs from this source, or turn off “Scan apps with Play Protect” only while you install, then turn scanning back on.
+4. Open the APK again and finish **Install**.
+
+You only need to do this once per phone for this app.
+
+**If you already installed an older Flashback build** and the new one will not update: uninstall the old app first, then install again (signing key changed when we moved off the debug certificate).
 
 **If the movie will not play in the app** (some older phones lack HEVC hardware):
 
@@ -91,6 +106,7 @@ If the button does nothing, use **Copy stream URL**, then in VLC: **Media → Op
 | “VLC not found” | Install VLC, then run the Step 2 command again |
 | Button does nothing | Use **Copy stream URL** → VLC → Open Network Stream |
 | Android “blocked install” | Allow installs from Files / Chrome, then open the APK again |
+| “Unsafe app blocked” / Play Protect | More details → Install anyway (see Android steps above). Normal for sideload; we are not on Play Store. |
 | Android in-app play fails | Install VLC → **Open in external player** |
 | Android chooser missing | Install VLC from the Play Store first |
 
