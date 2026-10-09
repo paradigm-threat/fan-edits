@@ -293,6 +293,22 @@ def _subtitle_label(name: str) -> tuple[str, bool]:
     return "English", False
 
 
+def _is_build_artifact_subtitle(name: str) -> bool:
+    """Skip Kdenlive export dumps and other non-player sidecars."""
+    return "kdenlive" in name.lower()
+
+
+def _is_named_player_subtitle(name: str) -> bool:
+    """Dialogue / citations tracks (not unlabeled duplicates of the same cut)."""
+    n = name.lower()
+    return (
+        "enhanced" in n
+        or "citation" in n
+        or "english" in n
+        or "default" in n
+    )
+
+
 def ensure_vtt_for_srts(folder: Path) -> None:
     """Generate sibling .vtt files for any .srt under folder/subs."""
     subs_dir = folder / "subs"
@@ -308,7 +324,12 @@ def ensure_vtt_for_srts(folder: Path) -> None:
 
 
 def find_subtitles(folder: Path, folder_rel: str) -> list[dict]:
-    """Prefer WebVTT sidecars for HTML5 <track>; convert SRT → VTT when needed."""
+    """Prefer WebVTT sidecars for HTML5 <track>; convert SRT → VTT when needed.
+
+    When a project has named player tracks (english / enhanced), expose only those —
+    e.g. Mummy Debugged: English (default) + Enhanced / Citations — not kdenlive or
+    unlabeled duplicate stems.
+    """
     ensure_vtt_for_srts(folder)
     subs_dir = folder / "subs"
     out: list[dict] = []
@@ -318,6 +339,8 @@ def find_subtitles(folder: Path, folder_rel: str) -> list[dict]:
     vtt_files = sorted(subs_dir.glob("*.vtt"))
     seen_stems: set[str] = set()
     for p in vtt_files:
+        if _is_build_artifact_subtitle(p.name):
+            continue
         label, default = _subtitle_label(p.name)
         entry = {
             "src": f"{folder_rel}/subs/{p.name}",
@@ -329,6 +352,8 @@ def find_subtitles(folder: Path, folder_rel: str) -> list[dict]:
         out.append(entry)
         seen_stems.add(p.stem.lower())
     for p in sorted(subs_dir.glob("*.srt")):
+        if _is_build_artifact_subtitle(p.name):
+            continue
         if p.stem.lower() in seen_stems:
             continue
         # VTT missing (conversion failed) — still list SRT for catalog completeness
@@ -341,6 +366,13 @@ def find_subtitles(folder: Path, folder_rel: str) -> list[dict]:
         if default:
             entry["default"] = True
         out.append(entry)
+    named = [
+        t
+        for t in out
+        if _is_named_player_subtitle(Path(t["src"]).name)
+    ]
+    if named:
+        out = named
     if out and not any(t.get("default") for t in out):
         out[0]["default"] = True
     return out

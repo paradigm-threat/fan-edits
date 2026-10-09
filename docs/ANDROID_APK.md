@@ -22,13 +22,36 @@ Soft FFmpeg decode is **not** shipped (APK size / licensing). See the backlog do
 ### How to test playback
 
 1. Install `downloads/flashback.apk` (or `assembleFlashbackDebug` output) on a device/emulator with **HEVC hardware**.
-2. Open the app → library loads from `https://flashbackrepository.org/index.json`.
+2. Open the app → library loads from `https://flashbackrepository.org/index.json` (+ `assets.manifest.json` for CIDs).
 3. Optional: **Lab** → HEVC probe, **Simulate decode error** (full card), **Try sample stream** (prefers a `showing` master such as The Mummy Debugged).
-4. Pick **The Mummy (1999) — Debugged** → **OK — I confirm** (hits POST once) → landscape theater should buffer and play.
-5. Scrub / pause; confirm Range/`Accept-Ranges` on the gateway if diagnosing stalls (`curl -I` the encoded `.mkv` URL).
+4. Pick **The Mummy (1999) — Debugged** → **OK — I confirm** (hits POST once) → **Play** → landscape theater should buffer and play.
+5. Scrub / pause; confirm Range/`Accept-Ranges` on the stream URL (see validation notes below).
 6. Force a decode failure path on non-HEVC hardware: error card → **Open in external player**.
 
 Web checklist: **[/android-lab](/android-lab)**.
+
+### Stream validation notes (HW HEVC)
+
+Validated on phone (CPH2419) and emulator with Flashback **1.0.17+**:
+
+| Check | Result |
+|-------|--------|
+| Device decode | `c2.qti.hevc.decoder` (or emulator MediaCodec HEVC) @ master resolution |
+| Transport | Progressive HTTPS with **bounded Range** windows (`RangeEnforcingDataSource`, 4 MiB) — full GET / open-ended `bytes=0-` can hang on Relay/IPFS |
+| Buffer | LoadControl min ~50 s / max ~120 s to avoid Wi‑Fi rebuffer thrash |
+| Catalog URL | Masters resolve via `assets.manifest.json` → `/ipfs/{cid}` when tip path→CID is unavailable; logical tip paths may 404 even when the CID streams |
+| Escape hatch | Decode / open failure → PlaybackErrors card → Open in external player (VLC) |
+
+**Requirement:** in-app play needs **hardware HEVC** (`minSdk 24`). Soft FFmpeg decode is not shipped. Without HW HEVC, use VLC via external handoff.
+
+Probe a known master CID (The Mummy Debugged):
+
+```bash
+curl -sI -H "Range: bytes=0-1048575" \
+  "https://flashbackrepository.org/ipfs/bafybeicfynx4o23njy4owttcziexmm4f6ibnqceharrhoxsvsbaaax7rxq"
+# expect HTTP 206, Accept-Ranges: bytes, Content-Type: video/x-matroska
+```
+
 ## Flavors
 
 | APK | Application id | What you see |
