@@ -1181,14 +1181,14 @@ function projectChangesBrief(p) {
   if (!readme || readme.length === 0) {
     return ''
   }
-  const lines = String(readme).split('\n')
+  const lines = str(readme).split('\n')
   let inSection = false
   let bullets = []
   for (let i = 0; i < lines.length; i++) {
     const raw = lines[i]
     let s = ''
     try {
-      s = String(raw).trim()
+      s = str(raw).trim()
     } catch (eTrim) {
       s = ''
     }
