@@ -1648,11 +1648,23 @@ export default function FlashbackApp() {
     let mediaSurface = null
     if (selected) {
       mediaSurface = (
-        <ExternalPlay
-          streamUrl={streamUrl}
-          unlocked={movieAck === true && ack === true}
-          setupHref="/setup"
-        />
+        <div>
+          <ExternalPlay
+            streamUrl={streamUrl}
+            unlocked={movieAck === true && ack === true}
+            setupHref="/setup"
+          />
+          <p className="fb-theater-downloads-note">
+            {'Phone or tablet? '}
+            <a className="fb-link" href="/downloads/flashback.apk">
+              {'Download Flashback APK'}
+            </a>
+            {' · '}
+            <a className="fb-link" href="/setup">
+              {'Setup'}
+            </a>
+          </p>
+        </div>
       )
     }
     let playDisabled = true
