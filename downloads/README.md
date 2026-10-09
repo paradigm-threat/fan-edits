@@ -1,8 +1,12 @@
 # Flashback APK downloads
 
-Published installs live at a stable same-origin URL:
+Published installs live at same-origin URLs:
 
-**https://flashbackrepository.org/downloads/flashback.apk**
+| File | Use |
+|------|-----|
+| **[flashback.apk](https://flashbackrepository.org/downloads/flashback.apk)** | Universal (arm64 + 32-bit). Default download / Setup link. |
+| **[flashback-arm64-v8a.apk](https://flashbackrepository.org/downloads/flashback-arm64-v8a.apk)** | Phones / 64-bit devices (smaller). |
+| **[flashback-armeabi-v7a.apk](https://flashbackrepository.org/downloads/flashback-armeabi-v7a.apk)** | Fire TV / older 32-bit Android TV. |
 
 Version metadata for in-app update checks:
 
@@ -10,15 +14,19 @@ Version metadata for in-app update checks:
 
 ```json
 {
-  "versionCode": 14,
-  "versionName": "1.0.17",
-  "apkUrl": "https://flashbackrepository.org/downloads/flashback.apk"
+  "versionCode": 20,
+  "versionName": "1.0.20",
+  "apkUrl": "https://flashbackrepository.org/downloads/flashback.apk",
+  "apkUrls": {
+    "armeabi-v7a": "https://flashbackrepository.org/downloads/flashback-armeabi-v7a.apk",
+    "arm64-v8a": "https://flashbackrepository.org/downloads/flashback-arm64-v8a.apk"
+  }
 }
 ```
 
-The Flashback APK fetches this JSON from `RELAY_DEFAULT_ORIGIN` (`/downloads/flashback.json`), compares `versionCode` to the installed app, and offers a one-tap install of `apkUrl` (absolute HTTPS, or a path resolved against the origin).
+The Flashback APK fetches this JSON from `RELAY_DEFAULT_ORIGIN` (`/downloads/flashback.json`), compares `versionCode` to the installed app, and offers a one-tap install of the ABI-matching URL when present (else `apkUrl`).
 
-The latest APK is kept in this folder in the **git tip** (not on IPFS / `.relay` assets). That is intentional so the public download link stays a normal site path.
+The latest APKs are kept in this folder in the **git tip** (not on IPFS / `.relay` assets). That is intentional so the public download link stays a normal site path.
 
 ## Signing (release, not debug)
 
@@ -41,36 +49,27 @@ apksigner verify -v --print-certs downloads/flashback.apk
 
 ## Publish a build
 
+Native `librelay_runtime.so` must exist for **armeabi-v7a** and **arm64-v8a** under
+`relay-client-android/android/app/src/main/jniLibs/` (build via
+`relay-runtime/scripts/build-android.sh`, which builds armv7 + arm64).
+
 From the Relay client checkout:
 
 ```bash
 cd /path/to/relay-client-android/android
 # Requires android/keystore.properties (see Signing above)
-./gradlew :app:assembleFlashbackRelease
-cp app/build/outputs/apk/flashback/release/app-flashback-release.apk \
-  /path/to/fan-edits/downloads/flashback.apk
-
-# Write version manifest from the same Gradle versionCode / versionName
-./gradlew :app:writeFlashbackVersionManifest \
+./gradlew :app:publishFlashbackDownloads \
+  -PflashbackDownloadsDir=/path/to/fan-edits/downloads \
   -PflashbackManifestOut=/path/to/fan-edits/downloads/flashback.json
 ```
 
+That runs `assembleFlashbackRelease` (ABI splits + universal), copies:
+
+- `flashback.apk` ← universal
+- `flashback-armeabi-v7a.apk`
+- `flashback-arm64-v8a.apk`
+- `flashback.json`
+
 Use `assembleFlashbackDebug` only for local device testing — do not copy debug APKs into `downloads/`.
 
-Or one-liner if you already know the version:
-
-```bash
-python3 - <<'PY'
-import json
-from pathlib import Path
-Path("downloads/flashback.json").write_text(json.dumps({
-    "versionCode": 14,
-    "versionName": "1.0.17",
-    "apkUrl": "https://flashbackrepository.org/downloads/flashback.apk",
-}, indent=2) + "\n")
-PY
-```
-
-Commit `downloads/flashback.apk` **and** `downloads/flashback.json` with the catalog tip, then push to the site’s publish remote (`iad1` → `main` for flashbackrepository.org). Do **not** add the APK under `.relay/assets` for the public download link.
-
-Versioned copies (optional): `flashback-1.0.17.apk` plus keep `flashback.apk` as the “latest” link.
+Commit the three APKs **and** `downloads/flashback.json` with the catalog tip, then push to the site’s publish remote (`iad1` → `main` for flashbackrepository.org). Do **not** add the APK under `.relay/assets` for the public download link.

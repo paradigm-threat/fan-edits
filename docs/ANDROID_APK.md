@@ -2,9 +2,11 @@
 
 Flashback on Android is two builds of the Relay client (`clevertree/react-client-android`, checkout `relay-client-android`). Neither APK vendors movies. The **Flashback** flavor is a **Kotlin-native shell** (catalog + ownership + ExoPlayer). The **Relay** flavor still loads any origin’s client hook via CleverScript.
 
-Download (when published): **[flashback.apk](/downloads/flashback.apk)** — see [downloads/README.md](../downloads/README.md).
+Download (when published): **[flashback.apk](/downloads/flashback.apk)** (universal), plus ABI splits **[arm64](/downloads/flashback-arm64-v8a.apk)** / **[armeabi-v7a](/downloads/flashback-armeabi-v7a.apk)** for Fire TV and smaller phone installs — see [downloads/README.md](../downloads/README.md).
 
-Published APKs must be **release-signed** (`assembleFlashbackRelease`). Debug certs trigger Play Protect “unsafe app” more often; release signing helps but does not remove the sideload prompt — users still tap Install anyway (documented on [Setup](/setup)). Keystore: `~/.android/flashback-release.keystore` (not in git).
+Published APKs must be **release-signed** (`assembleFlashbackRelease` / `publishFlashbackDownloads`). Debug certs trigger Play Protect “unsafe app” more often; release signing helps but does not remove the sideload prompt — users still tap Install anyway (documented on [Setup](/setup)). Keystore: `~/.android/flashback-release.keystore` (not in git).
+
+**Fire TV / 32-bit:** devices that only report `armeabi-v7a` need `librelay_runtime.so` for that ABI (or the universal APK that includes it). Older tip APKs shipped only arm64 + x86_64 and failed with `INSTALL_FAILED_NO_MATCHING_ABIS`.
 
 Deferred player features (VLC/Nova-class, not in v1): **[ANDROID_PLAYER_BACKLOG.md](ANDROID_PLAYER_BACKLOG.md)**.
 
@@ -64,8 +66,9 @@ Build from `relay-client-android/android`:
 # Local testing
 ./gradlew :app:assembleRelayDebug :app:assembleFlashbackDebug
 
-# Site download (release-signed; needs android/keystore.properties)
-./gradlew :app:assembleFlashbackRelease
+# Site downloads (release-signed ABI splits + universal; needs keystore.properties)
+./gradlew :app:publishFlashbackDownloads \
+  -PflashbackDownloadsDir=/path/to/fan-edits/downloads
 ```
 
 ## Native reusable pieces

@@ -1,5 +1,9 @@
 {
-  "versionCode": 19,
-  "versionName": "1.0.19",
-  "apkUrl": "https://flashbackrepository.org/downloads/flashback.apk"
+  "versionCode": 23,
+  "versionName": "1.0.23",
+  "apkUrl": "https://flashbackrepository.org/downloads/flashback.apk",
+  "apkUrls": {
+    "armeabi-v7a": "https://flashbackrepository.org/downloads/flashback-armeabi-v7a.apk",
+    "arm64-v8a": "https://flashbackrepository.org/downloads/flashback-arm64-v8a.apk"
+  }
 }
