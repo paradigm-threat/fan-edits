@@ -283,7 +283,6 @@ themes:
         fontSize: "0.78rem"
         letterSpacing: "0.04em"
         lineHeight: "1.35"
-        willChange: "transform"
       ".fb-lcd-link":
         color: "var(gold)"
         textDecoration: "none"

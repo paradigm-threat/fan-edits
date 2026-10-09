@@ -11,7 +11,7 @@ Version metadata for in-app update checks:
 ```json
 {
   "versionCode": 14,
-  "versionName": "1.0.14",
+  "versionName": "1.0.17",
   "apkUrl": "https://flashbackrepository.org/downloads/flashback.apk"
 }
 ```
@@ -65,7 +65,7 @@ import json
 from pathlib import Path
 Path("downloads/flashback.json").write_text(json.dumps({
     "versionCode": 14,
-    "versionName": "1.0.14",
+    "versionName": "1.0.17",
     "apkUrl": "https://flashbackrepository.org/downloads/flashback.apk",
 }, indent=2) + "\n")
 PY
@@ -73,4 +73,4 @@ PY
 
 Commit `downloads/flashback.apk` **and** `downloads/flashback.json` with the catalog tip, then push to the site’s publish remote (`iad1` → `main` for flashbackrepository.org). Do **not** add the APK under `.relay/assets` for the public download link.
 
-Versioned copies (optional): `flashback-1.0.14.apk` plus keep `flashback.apk` as the “latest” link.
+Versioned copies (optional): `flashback-1.0.17.apk` plus keep `flashback.apk` as the “latest” link.

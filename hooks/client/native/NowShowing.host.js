@@ -4,6 +4,13 @@
 (function (global) {
   'use strict';
 
+  var LCD_ANIM_STYLE_ID = 'fb-now-showing-lcd-anim';
+  var FADE_MS = 1100;
+  var AUTO_MS = 10000;
+  var LCD_MIN_S = 70;
+  var LCD_MAX_S = 240;
+  var LCD_CHAR_S = 0.14;
+
   function prop(props, key, fallback) {
     if (!props) return fallback;
     const keys = [key];
@@ -28,6 +35,79 @@
     } catch (_) {
       return [];
     }
+  }
+
+  function itemsSignature(items) {
+    try {
+      return JSON.stringify(items || []);
+    } catch (_) {
+      return String((items && items.length) || 0);
+    }
+  }
+
+  /** Escape text for safe HTML insertion. */
+  function esc(s) {
+    return String(s == null ? '' : s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;');
+  }
+
+  /**
+   * Lightweight markdown → HTML for carousel copy (emphasis, links, lists, code).
+   * Mirrors the intent of RelayMarkdownView / @clevertree/markdown for short blurbs.
+   */
+  function mdInline(raw) {
+    let s = esc(raw);
+    // [label](url) — only http(s) or relative paths
+    s = s.replace(/\[([^\]]+)\]\(([^)]+)\)/g, function (_, label, url) {
+      const u = String(url || '').trim();
+      if (!/^(https?:\/\/|\/|#)/i.test(u)) return label;
+      return '<a class="fb-slideshow-md-link" href="' + esc(u) + '">' + label + '</a>';
+    });
+    s = s.replace(/`([^`]+)`/g, '<code class="fb-slideshow-md-code">$1</code>');
+    s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
+    s = s.replace(/\*([^*]+)\*/g, '<em>$1</em>');
+    return s;
+  }
+
+  function setMarkdown(el, md) {
+    if (!el) return;
+    const text = String(md == null ? '' : md).trim();
+    if (!text) {
+      el.innerHTML = '';
+      return;
+    }
+    const lines = text.split(/\r?\n/);
+    const parts = [];
+    let inList = false;
+    function closeList() {
+      if (inList) {
+        parts.push('</ul>');
+        inList = false;
+      }
+    }
+    for (let i = 0; i < lines.length; i++) {
+      const raw = lines[i];
+      const t = raw.trim();
+      if (!t) {
+        closeList();
+        continue;
+      }
+      if (/^[-*]\s+/.test(t)) {
+        if (!inList) {
+          parts.push('<ul class="fb-slideshow-md-list">');
+          inList = true;
+        }
+        parts.push('<li>' + mdInline(t.replace(/^[-*]\s+/, '')) + '</li>');
+        continue;
+      }
+      closeList();
+      parts.push('<p>' + mdInline(t) + '</p>');
+    }
+    closeList();
+    el.innerHTML = parts.join('') || '<p>' + mdInline(text) + '</p>';
   }
 
   function bulb(doc, i) {
@@ -59,6 +139,31 @@
       w.appendChild(bulb(doc, bi++));
     });
     return w;
+  }
+
+  /** Single document-level LCD animation — avoids duplicate style tags / restart ghosts. */
+  function ensureLcdAnim(secs) {
+    try {
+      const doc = global.document;
+      if (!doc) return;
+      let st = doc.getElementById(LCD_ANIM_STYLE_ID);
+      if (!st) {
+        st = doc.createElement('style');
+        st.id = LCD_ANIM_STYLE_ID;
+        (doc.head || doc.documentElement).appendChild(st);
+      }
+      const dur = Math.max(LCD_MIN_S, Math.min(LCD_MAX_S, secs));
+      // Only rewrite if duration changed — rewriting restarts the animation.
+      const next =
+        '@keyframes fb-lcd-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}' +
+        '.fb-lcd-track{animation:fb-lcd-scroll ' +
+        dur +
+        's linear infinite;}' +
+        '@media (prefers-reduced-motion:reduce){.fb-lcd-track{animation:none!important;transform:none}}';
+      if (st.getAttribute('data-fb-dur') === String(dur)) return;
+      st.setAttribute('data-fb-dur', String(dur));
+      st.textContent = next;
+    } catch (_) {}
   }
 
   function buildLcd(root, items) {
@@ -118,17 +223,8 @@
     board.appendChild(wing(doc, 'showing'));
     root.appendChild(board);
 
-    const style = doc.createElement('style');
     const n = Math.max(24, (track.textContent || '').length);
-    const secs = Math.max(40, Math.min(180, n * 0.08));
-    style.textContent =
-      '@keyframes fb-lcd-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}' +
-      '.fb-lcd-track{display:inline-block;white-space:nowrap;will-change:transform;' +
-      'animation:fb-lcd-scroll ' +
-      secs +
-      's linear infinite;}' +
-      '@media (prefers-reduced-motion:reduce){.fb-lcd-track{animation:none!important;transform:none}}';
-    root.appendChild(style);
+    ensureLcdAnim(n * LCD_CHAR_S);
   }
 
   function buildCarousel(root, items) {
@@ -137,6 +233,7 @@
     let idx = 0;
     let busy = false;
     let autoTimer = null;
+    let fadeTimer = null;
     const list = items.filter((it) => it && it.title);
     if (list.length === 0) {
       root.textContent = 'No titles yet.';
@@ -186,14 +283,20 @@
       kicker.textContent = 'Feature presentation';
       const title = doc.createElement('h3');
       title.className = 'fb-slideshow-title';
-      const blurb = doc.createElement('p');
-      blurb.className = 'fb-slideshow-blurb';
+      const scroll = doc.createElement('div');
+      scroll.className = 'fb-slideshow-scroll';
+      const blurb = doc.createElement('div');
+      blurb.className = 'fb-slideshow-blurb fb-slideshow-md';
+      const meta = doc.createElement('div');
+      meta.className = 'fb-slideshow-meta';
+      scroll.appendChild(blurb);
+      scroll.appendChild(meta);
       copy.appendChild(kicker);
       copy.appendChild(title);
-      copy.appendChild(blurb);
+      copy.appendChild(scroll);
       a.appendChild(img);
       a.appendChild(copy);
-      return { a: a, img: img, title: title, blurb: blurb };
+      return { a: a, img: img, title: title, blurb: blurb, meta: meta, scroll: scroll };
     }
 
     const front = makeLayer('fb-slideshow-layer is-active');
@@ -214,17 +317,52 @@
     next.setAttribute('aria-label', 'Next title');
     next.textContent = '›';
 
+    function fillMeta(layer, it) {
+      const stats = it && it.stats ? String(it.stats).trim() : '';
+      const changes = it && it.changes ? String(it.changes).trim() : '';
+      if (!stats && !changes) {
+        layer.meta.innerHTML = '';
+        layer.meta.style.display = 'none';
+        return;
+      }
+      layer.meta.style.display = '';
+      let html = '';
+      if (stats) {
+        html +=
+          '<p class="fb-slideshow-stats"><span class="fb-slideshow-meta-label">Stats</span> ' +
+          mdInline(stats) +
+          '</p>';
+      }
+      if (changes) {
+        html +=
+          '<div class="fb-slideshow-changes"><span class="fb-slideshow-meta-label">Changes</span>' +
+          (function () {
+            // Prefer preformatted markdown list; otherwise wrap as paragraph.
+            const c = String(changes).trim();
+            if (/^[-*]\s/m.test(c) || c.indexOf('\n') >= 0) {
+              const box = doc.createElement('div');
+              setMarkdown(box, c);
+              return box.innerHTML;
+            }
+            return '<p>' + mdInline(c) + '</p>';
+          })() +
+          '</div>';
+      }
+      layer.meta.innerHTML = html;
+    }
+
     function fillLayer(layer, it) {
       layer.a.href = it.href || '#';
       layer.title.textContent = it.title || '';
       const blurbText = it && it.blurb ? String(it.blurb) : '';
       if (blurbText) {
-        layer.blurb.textContent = blurbText;
+        setMarkdown(layer.blurb, blurbText);
         layer.blurb.style.display = '';
       } else {
-        layer.blurb.textContent = '';
+        layer.blurb.innerHTML = '';
         layer.blurb.style.display = 'none';
       }
+      fillMeta(layer, it);
       if (layer._softRetry) {
         try {
           layer._softRetry.cancel();
@@ -283,7 +421,7 @@
       busy = true;
       const incoming = list[nextIdx];
       fillLayer(back, incoming);
-      // Force style flush so opacity transition runs.
+      // Force style flush so opacity transition runs once.
       void back.a.offsetWidth;
       back.a.classList.add('is-active');
       back.a.setAttribute('aria-hidden', 'false');
@@ -292,7 +430,6 @@
       counter.textContent = nextIdx + 1 + ' / ' + list.length;
 
       const finish = function () {
-        // Swap roles: keep DOM order stable by copying active into front.
         fillLayer(front, incoming);
         front.a.classList.add('is-active');
         front.a.setAttribute('aria-hidden', 'false');
@@ -307,18 +444,26 @@
       let done = false;
       const onEnd = function (ev) {
         if (done) return;
+        // Only opacity transition on the layer itself (ignore child transitions).
         if (ev && ev.target !== back.a) return;
+        if (ev && ev.propertyName && ev.propertyName !== 'opacity') return;
         done = true;
         back.a.removeEventListener('transitionend', onEnd);
+        if (fadeTimer) {
+          global.clearTimeout(fadeTimer);
+          fadeTimer = null;
+        }
         finish();
       };
       back.a.addEventListener('transitionend', onEnd);
-      global.setTimeout(function () {
+      if (fadeTimer) global.clearTimeout(fadeTimer);
+      fadeTimer = global.setTimeout(function () {
         if (done) return;
         done = true;
         back.a.removeEventListener('transitionend', onEnd);
+        fadeTimer = null;
         finish();
-      }, 700);
+      }, FADE_MS + 120);
     }
 
     function armAuto() {
@@ -329,13 +474,19 @@
       if (reduceMotion || list.length < 2) return;
       autoTimer = global.setTimeout(function () {
         go(1);
-      }, 6500);
+      }, AUTO_MS);
     }
 
-    prev.addEventListener('click', function () {
+    prev.addEventListener('click', function (ev) {
+      try {
+        ev.preventDefault();
+      } catch (_) {}
       go(-1);
     });
-    next.addEventListener('click', function () {
+    next.addEventListener('click', function (ev) {
+      try {
+        ev.preventDefault();
+      } catch (_) {}
       go(1);
     });
 
@@ -367,6 +518,8 @@
     const root = global.document.createElement('div');
     root.setAttribute('role', 'region');
     root.setAttribute('aria-label', prop(props, 'ariaLabel', 'Now showing'));
+    root.setAttribute('data-fb-items-sig', itemsSignature(items));
+    root.setAttribute('data-fb-variant', variant);
     if (variant === 'carousel') buildCarousel(root, items);
     else buildLcd(root, items);
     return root;
@@ -382,11 +535,22 @@
   }
 
   function needsUpgrade(host) {
+    if (!host) return false;
+    const props = attrsToProps(host);
+    const wantSig = itemsSignature(parseItems(props));
+    const wantVariant = prop(props, 'variant', 'lcd');
+    const existing = host.querySelector('.fb-marquee, .fb-now-showing-carousel');
+    if (existing) {
+      const haveSig = existing.getAttribute('data-fb-items-sig') || '';
+      const haveVariant = existing.getAttribute('data-fb-variant') || '';
+      // Same content already built — skip (prevents animation restart / ghosting).
+      if (haveSig === wantSig && haveVariant === wantVariant) return false;
+    }
     const fn = global.__fbHostNeedsUpgrade;
     if (typeof fn === 'function') {
       return fn(host, '.fb-marquee, .fb-now-showing-carousel');
     }
-    return host && !host.querySelector('.fb-marquee, .fb-now-showing-carousel');
+    return !existing;
   }
 
   function upgradePlaceholders() {
@@ -402,9 +566,12 @@
     } catch (_) {}
   }
 
+  var registered = false;
+
   function register() {
     if (typeof global.__relayRegisterParkNative === 'function') {
       global.__relayRegisterParkNative('fb-now-showing', buildNowShowing);
+      registered = true;
     }
     try {
       if (global.customElements && !global.customElements.get('fb-now-showing')) {
@@ -428,15 +595,17 @@
     register();
     let n = 0;
     const t = global.setInterval(() => {
-      register();
+      // Keep trying until park registry exists; after that only upgrade placeholders.
+      if (!registered) register();
+      else upgradePlaceholders();
       n += 1;
-      if (typeof global.__relayRegisterParkNative === 'function' || n > 80) {
+      if ((registered && n > 20) || n > 80) {
         global.clearInterval(t);
       }
     }, 50);
     const sched = global.__fbScheduleParkNativeReupgrade;
     if (typeof sched === 'function') {
-      sched(register);
+      sched(upgradePlaceholders);
     }
   }
 

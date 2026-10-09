@@ -1138,6 +1138,96 @@ function projectSlug(p) {
   return ''
 }
 
+/** Brief stats line from index.json fields (stats.json → generate-index-json). */
+function projectStatsLine(p) {
+  let parts = []
+  try {
+    const cut = projectMediaField(p, 'timeCut')
+    const edit = projectMediaField(p, 'faneditRuntime')
+    const avail = projectMediaField(p, 'availableIn')
+    if (edit.length > 0) {
+      parts = parts.concat(['edit ' + edit])
+    }
+    if (cut.length > 0) {
+      parts = parts.concat(['cut ' + cut])
+    }
+    if (avail.length > 0) {
+      parts = parts.concat([avail])
+    }
+  } catch (eStats) {}
+  if (parts.length === 0) {
+    return ''
+  }
+  return parts.join(' · ')
+}
+
+/**
+ * First bullets under ## What changed / ## Changes in project README.
+ * CleverScript-safe (no regex literals).
+ */
+function projectChangesBrief(p) {
+  let path = ''
+  try {
+    if (p && p.path) {
+      path = str(p.path)
+    }
+  } catch (ePath) {
+    path = ''
+  }
+  if (path.length === 0) {
+    return ''
+  }
+  const readme = fetchText(path + '/README.md')
+  if (!readme || readme.length === 0) {
+    return ''
+  }
+  const lines = String(readme).split('\n')
+  let inSection = false
+  let bullets = []
+  for (let i = 0; i < lines.length; i++) {
+    const raw = lines[i]
+    let s = ''
+    try {
+      s = String(raw).trim()
+    } catch (eTrim) {
+      s = ''
+    }
+    if (s.indexOf('## ') === 0) {
+      const head = s.slice(3).toLowerCase()
+      if (inSection) {
+        break
+      }
+      if (
+        head.indexOf('what changed') >= 0 ||
+        head === 'changes' ||
+        head.indexOf('cut list') >= 0
+      ) {
+        inSection = true
+      }
+      continue
+    }
+    if (!inSection) {
+      continue
+    }
+    if (s.indexOf('#') === 0) {
+      break
+    }
+    if (s === '---') {
+      break
+    }
+    if (s.indexOf('- ') === 0 || s.indexOf('* ') === 0) {
+      bullets = bullets.concat([s])
+      if (bullets.length >= 4) {
+        break
+      }
+    }
+  }
+  if (bullets.length === 0) {
+    return ''
+  }
+  return bullets.join('\n')
+}
+
 /** Catalog items for park-native NowShowing (lcd + carousel).
  * Prefer index.nowShowing slug order; fall back to status=showing. */
 function nowShowingItemsJson(projects, nowShowingSlugs) {
@@ -1188,7 +1278,16 @@ function nowShowingItemsJson(projects, nowShowingSlugs) {
       } catch (eBlurb) {
         blurb = ''
       }
-      out = out.concat([{ title: t, href: '/' + s, poster: posterFor(p), blurb: blurb }])
+      out = out.concat([
+        {
+          title: t,
+          href: '/' + s,
+          poster: posterFor(p),
+          blurb: blurb,
+          stats: projectStatsLine(p),
+          changes: projectChangesBrief(p),
+        },
+      ])
     }
   }
 

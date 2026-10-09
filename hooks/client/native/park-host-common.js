@@ -7,7 +7,7 @@
 (function (global) {
   'use strict';
 
-  var CSS_ID = 'fb-park-native-css';
+  var CSS_ID = 'fb-park-native-css-v3';
   var BRAND_LINKS_ID = 'fb-brand-head-links';
 
   function ensureBrandHeadLinks() {
@@ -44,7 +44,13 @@
   function ensureParkNativeCss() {
     try {
       ensureBrandHeadLinks();
-      if (!global.document || global.document.getElementById(CSS_ID)) return;
+      if (!global.document) return;
+      // Drop prior park CSS ids so layout revisions win after soft-hydrate.
+      ;['fb-park-native-css', 'fb-park-native-css-v2'].forEach(function (oldId) {
+        var old = global.document.getElementById(oldId);
+        if (old && old.parentNode) old.parentNode.removeChild(old);
+      });
+      if (global.document.getElementById(CSS_ID)) return;
       var st = global.document.createElement('style');
       st.id = CSS_ID;
       st.textContent = [
@@ -82,30 +88,52 @@
         '.fb-bulb-2{opacity:.75}',
         '.fb-lcd{flex:1;min-width:0;display:flex;flex-direction:row;align-items:center}',
         '.fb-lcd-window{flex:1;min-width:0;overflow:hidden;white-space:nowrap;mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}',
-        '.fb-lcd-track{display:inline-block;white-space:nowrap;font-size:.78rem;letter-spacing:.04em;line-height:1.35;will-change:transform}',
+        /* Animation duration injected once via #fb-now-showing-lcd-anim — do not restart here. */
+        '.fb-lcd-track{display:inline-block;white-space:nowrap;font-size:.78rem;letter-spacing:.04em;line-height:1.35}',
         '.fb-lcd-link{color:#e8c872;text-decoration:none;text-shadow:0 0 5px rgba(232,200,114,.35)}',
         '.fb-lcd-link:hover{color:#f5e6be;text-decoration:underline}',
         '.fb-lcd-star{opacity:.9}',
-        /* Carousel — crossfade poster stage */
+        /* Carousel — desktop 50/50; height tracks poster (no empty gap under art). */
         '.fb-now-showing-carousel{margin:12px 0 28px;color:#f5e6be}',
         '.fb-now-showing-carousel .fb-now-showing-head{display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 10px}',
         '.fb-now-showing-carousel .fb-now-showing-title{margin:0}',
         '.fb-slideshow-count{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#b8860b;margin:0}',
         '.fb-slideshow-row{display:flex;flex-direction:row;align-items:stretch;gap:8px}',
-        '.fb-slideshow-frame{flex:1;min-width:0;position:relative;border:1px solid #3a2a1a;background:linear-gradient(145deg,#2a1418 0%,#12080a 55%,#0d0505 100%);box-shadow:0 12px 36px rgba(0,0,0,.45);overflow:hidden;min-height:420px}',
-        '.fb-slideshow-stage{position:relative;width:100%;min-height:420px}',
-        '.fb-slideshow-layer{position:absolute;inset:0;display:flex;flex-direction:row;align-items:stretch;color:#e8c872;text-decoration:none;opacity:0;transform:scale(1.02);transition:opacity .55s ease,transform .55s ease;pointer-events:none;z-index:1}',
-        '.fb-slideshow-layer.is-active{opacity:1;transform:scale(1);pointer-events:auto;z-index:2}',
-        '.fb-slideshow-img{display:block;flex:0 0 42%;max-width:280px;width:42%;height:100%;object-fit:contain;object-position:center top;background:#0d0505}',
+        '.fb-slideshow-frame{flex:1;min-width:0;position:relative;border:1px solid #3a2a1a;background:linear-gradient(145deg,#2a1418 0%,#12080a 55%,#0d0505 100%);box-shadow:0 12px 36px rgba(0,0,0,.45);overflow:hidden}',
+        '.fb-slideshow-stage{position:relative;width:100%}',
+        /* Stack front/back in one grid cell; active layer sets height from poster. */
+        '.fb-slideshow-stage{display:grid}',
+        '.fb-slideshow-layer{grid-area:1/1;min-width:0;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;color:#e8c872;text-decoration:none;opacity:0;transition:opacity 1.1s ease-in-out;pointer-events:none;z-index:1}',
+        '.fb-slideshow-layer.is-active{opacity:1;pointer-events:auto;z-index:2}',
+        '.fb-slideshow-layer:not(.is-active){visibility:hidden}',
+        /* Poster column: intrinsic 2:3 height drives the whole card — no empty gap under art. */
+        '.fb-slideshow-img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:contain;object-position:center center;background:#0d0505}',
+        '.fb-slideshow-layer:not(.has-poster){grid-template-columns:1fr}',
         '.fb-slideshow-layer:not(.has-poster) .fb-slideshow-img{display:none}',
-        '.fb-slideshow-copy{flex:1;min-width:0;padding:28px 22px 24px;display:flex;flex-direction:column;gap:10px;justify-content:flex-start}',
-        '.fb-slideshow-kicker{margin:0;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#e8c872}',
-        '.fb-slideshow-title{margin:0;font-size:1.35rem;line-height:1.25;color:#f5e6be}',
+        /* Copy column: height:0 + min-height:100% matches poster row without growing the card. */
+        '.fb-slideshow-copy{min-width:0;height:0;min-height:100%;padding:22px 20px 18px;display:flex;flex-direction:column;gap:8px;justify-content:flex-start;box-sizing:border-box;overflow:hidden}',
+        '.fb-slideshow-kicker{margin:0;flex-shrink:0;font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:#e8c872}',
+        '.fb-slideshow-title{margin:0;flex-shrink:0;font-size:1.35rem;line-height:1.25;color:#f5e6be}',
+        '.fb-slideshow-scroll{flex:1 1 auto;min-height:0;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding-right:4px}',
         '.fb-slideshow-blurb{margin:0;font-size:.95rem;line-height:1.5;color:#c4b49a}',
+        '.fb-slideshow-blurb p{margin:0 0 .55em}',
+        '.fb-slideshow-blurb p:last-child{margin-bottom:0}',
+        '.fb-slideshow-md strong{color:#f5e6be;font-weight:600}',
+        '.fb-slideshow-md em{font-style:italic}',
+        '.fb-slideshow-md-code{font-family:ui-monospace,Consolas,monospace;font-size:.88em;color:#e8c872}',
+        '.fb-slideshow-md-link{color:#e8c872;text-decoration:underline}',
+        '.fb-slideshow-md-list{margin:.35em 0 .55em;padding-left:1.15em}',
+        '.fb-slideshow-meta{margin-top:10px;padding-top:8px;border-top:1px solid rgba(184,134,11,.35);font-size:.78rem;line-height:1.4;color:#a69788}',
+        '.fb-slideshow-meta-label{display:inline-block;margin-right:6px;letter-spacing:.1em;text-transform:uppercase;color:#b8860b;font-size:.68rem}',
+        '.fb-slideshow-stats{margin:0 0 6px}',
+        '.fb-slideshow-changes{margin:0}',
+        '.fb-slideshow-changes p,.fb-slideshow-changes ul{margin:4px 0 0}',
+        '.fb-slideshow-changes ul{padding-left:1.1em}',
         '.fb-slideshow-nav{flex-shrink:0;width:42px;align-self:stretch;border:1px solid #b8860b;background:linear-gradient(180deg,rgba(58,16,24,.95),rgba(18,8,10,.98));color:#e8c872;font-size:1.8rem;line-height:1;cursor:pointer;font-family:inherit;border-radius:2px}',
         '.fb-slideshow-nav:hover{border-color:#e8c872;color:#f5e6be}',
-        '@media (prefers-reduced-motion:reduce){.fb-slideshow-layer{transition:none!important;transform:none!important}}',
-        '@media (max-width:720px){.fb-slideshow-frame{min-height:0}.fb-slideshow-stage{min-height:0;display:grid}.fb-slideshow-layer{position:relative;inset:auto;grid-area:1/1;flex-direction:column}.fb-slideshow-layer:not(.is-active){visibility:hidden}.fb-slideshow-img{flex:0 0 auto;max-width:none;width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}.fb-slideshow-copy{padding:18px 16px 20px}}',
+        '@media (prefers-reduced-motion:reduce){.fb-slideshow-layer{transition:none!important}}',
+        /* Mobile stack — leave as stacked poster + copy (user: fine as-is). */
+        '@media (max-width:720px){.fb-slideshow-layer{display:flex;flex-direction:column;grid-template-columns:none}.fb-slideshow-layer:not(.is-active){visibility:hidden}.fb-slideshow-img{width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}.fb-slideshow-copy{height:auto;max-height:none;padding:18px 16px 20px;overflow:visible}.fb-slideshow-scroll{max-height:min(42vh,280px);overflow-y:auto}}',
         /* Theater player shell + seed status */
         '.fb-theater-player{margin:12px 0}',
         '.fb-media-locked,.fb-media-pending,.fb-media-failed{padding:16px;border:1px solid #3a2a1a;background:rgba(0,0,0,.35);color:#c4b49a}',
