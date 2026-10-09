@@ -1,8 +1,9 @@
 /**
  * Android CleverScript host for TheaterPlayer.
- * External CTA lives in ExternalPlay.android.js (intent VIEW). Downloads stay here.
+ * In-app Media3 (HW HEVC MKV) plus ExternalPlay escape hatch and downloads.
  */
 import React, { useState } from 'react'
+import { VideoPlayer } from '@clevertree/video'
 import ExternalPlay from 'hooks/client/native/ExternalPlay.js'
 
 function propStr(p, key) {
@@ -12,6 +13,18 @@ function propStr(p, key) {
     }
   } catch (e) {}
   return ''
+}
+
+function propBool(p, key) {
+  try {
+    if (p && p[key] === true) {
+      return true
+    }
+    if (propStr(p, key) === 'true') {
+      return true
+    }
+  } catch (e2) {}
+  return false
 }
 
 /** Prefer archival master MKV. */
@@ -106,7 +119,7 @@ function downloadLinks(p) {
       <p className="fb-theater-downloads-label">Download the movie</p>
       <div className="fb-theater-downloads-links">{links}</div>
       <p className="fb-theater-downloads-note">
-        Prefer Open in external player above. Download for offline, then open in VLC.
+        Play in the app when you can. Download for offline, or open in VLC if this device cannot decode HEVC.
       </p>
     </div>
   )
@@ -121,6 +134,9 @@ export default function TheaterPlayer(props) {
   const srcState = useState('')
   const chosenSrc = srcState[0]
   const setChosenSrc = srcState[1]
+  const errState = useState('')
+  const playError = errState[0]
+  const setPlayError = errState[1]
 
   if (p.unlocked !== true) {
     return (
@@ -165,8 +181,57 @@ export default function TheaterPlayer(props) {
       </div>
     )
   }
+
+  let playing = false
+  if (propBool(p, 'playing') === true) {
+    playing = true
+  }
+  let command = 0
+  try {
+    if (p.command !== null && p.command !== undefined) {
+      command = p.command
+    }
+  } catch (eCmd) {}
+  let commandSeq = 0
+  try {
+    if (p.commandSeq !== null && p.commandSeq !== undefined) {
+      commandSeq = p.commandSeq
+    }
+  } catch (eSeq) {}
+  let startAt = 0
+  try {
+    const raw = propStr(p, 'startAt')
+    if (raw.length > 0) {
+      startAt = parseFloat(raw)
+    }
+  } catch (eStart) {}
+
   return (
-    <div className="fb-theater-player" data-playback-engine="external">
+    <div className="fb-theater-player" data-playback-engine="native">
+      <div className="fb-theater-native-player">
+        <VideoPlayer
+          src={chosenSrc}
+          controls={true}
+          playing={playing}
+          command={command}
+          commandSeq={commandSeq}
+          currentTime={startAt}
+          className="fb-relay-video"
+          onError={() => {
+            setPlayError(
+              'This device could not play the movie in the app (often missing HEVC hardware). Use Open in external player below — VLC usually works.',
+            )
+          }}
+        />
+      </div>
+      {playError.length > 0 ? (
+        <p className="fb-theater-play-error">{playError}</p>
+      ) : (
+        <p className="fb-theater-downloads-note">
+          Full-quality HEVC MKV streams in this app when your device has hardware decode. Prefer
+          Open in external player if playback fails.
+        </p>
+      )}
       <ExternalPlay streamUrl={chosenSrc} unlocked={true} setupHref="/setup" />
       {downloadLinks(p)}
       {p.cid ? <p className="fb-theater-tech-body">CID {p.cid}</p> : null}

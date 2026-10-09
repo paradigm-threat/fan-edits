@@ -40,7 +40,13 @@ Historic leaders have described controlled opposition as a containment strategy.
 
 Flashback Repository is pushback under ownership rules: make the cut, document it, host the **bytes on IPFS** (not as permanent public git blobs — repos keep notes, project files, and text pointers; servers may cache IPFS blocks for streaming), and require that viewers own the commercial original before unlocking stream access. Watch via **external player stream** (VLC and friends) from the theater page, or later via the Android / TV app. No pirate archive. No apology for wanting better versions of films we already bought. See [Ownership policy](/legal).
 
-Projects stay in **Kdenlive + melt** so the library remains editable with open-source tools — see [Submissions](/submit).
+Projects stay in **open-source NLEs** (this catalog is mostly Kdenlive + melt; Shotcut, OpenShot, Flowblade, Pitivi, Olive, and similar are welcome) so the library remains editable without proprietary tools — see [Submissions](/submit).
+
+## No Play Store path
+
+There is no realistic public-store route for this kind of ownership-gated fan-edit theater. Cloud app stores reject or suspend the category. Waiting on Play Store (or similar) approval is waiting on a gate that will not open for us.
+
+So Flashback ships its **own website** and a **sideload APK**. That is the honest distribution path: people can reach the catalog without going through someone else’s store checklist. Install steps: [Setup for playback](/setup).
 
 ## Why MKV + HEVC (and an external player), not in-browser Play
 

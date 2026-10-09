@@ -28,6 +28,16 @@ themes:
         color: "var(cream)"
         fontFamily: "Georgia, 'Times New Roman', Times, serif"
         lineHeight: "1.55"
+      # Bare <a> (markdown prose, etc.) — descendant selectors are not emitted by the styler.
+      a:
+        color: "var(gold)"
+        textDecoration: "none"
+      "a:visited":
+        color: "var(gold)"
+        textDecoration: "none"
+      "a:hover":
+        color: "var(cream)"
+        textDecoration: "underline"
       ".fb-app":
         position: "relative"
         minHeight: "100%"
@@ -80,12 +90,14 @@ themes:
         right: "0"
       ".fb-sconce":
         display: "block"
-        width: "56px"
-        height: "88px"
-        borderRadius: "8px"
-        opacity: "0.55"
-        # Dim but sharp: small hard cores + short falloff (no CSS blur)
-        background: "radial-gradient(circle at 50% 22%, rgba(255,236,200,0.95) 0%, rgba(255,210,140,0.75) 10%, rgba(232,140,60,0.28) 28%, transparent 46%), radial-gradient(circle at 50% 52%, rgba(255,220,160,0.7) 0%, rgba(200,100,40,0.22) 16%, transparent 38%), radial-gradient(circle at 50% 78%, rgba(255,200,130,0.55) 0%, rgba(160,70,30,0.18) 14%, transparent 34%)"
+        width: "72px"
+        height: "136px"
+        borderRadius: "0"
+        opacity: "0.62"
+        backgroundImage: "url(/hooks/client/brand/png/sconce.png)"
+        backgroundRepeat: "no-repeat"
+        backgroundPosition: "center"
+        backgroundSize: "contain"
         filter: "none"
         mixBlendMode: "screen"
       ".fb-wall-lights-right .fb-sconce":
@@ -151,7 +163,7 @@ themes:
         display: "block"
         height: "52px"
         width: "auto"
-        maxWidth: "168px"
+        maxWidth: "140px"
         flexShrink: "0"
         borderRadius: "0"
         objectFit: "contain"
@@ -183,14 +195,20 @@ themes:
       ".fb-nav":
         display: "flex"
         flexDirection: "row"
+        flexWrap: "wrap"
         gap: "16px"
         fontSize: "0.95rem"
-      ".fb-nav a":
+      # Class on the <a> itself — descendant selectors like `.fb-nav a` are not emitted.
+      ".fb-link":
         color: "var(gold)"
         textDecoration: "none"
-        borderBottom: "1px solid transparent"
-      ".fb-nav a:hover":
-        borderBottomColor: "var(goldDim)"
+        letterSpacing: "0.02em"
+      ".fb-link:visited":
+        color: "var(gold)"
+        textDecoration: "none"
+      ".fb-link:hover":
+        color: "var(cream)"
+        textDecoration: "underline"
       ".fb-marquee":
         position: "relative"
         zIndex: "2"
@@ -309,32 +327,15 @@ themes:
         background: "rgba(10,7,8,0.9)"
         fontSize: "0.82rem"
         color: "var(creamMuted)"
-      ".fb-footer a":
-        color: "var(gold)"
-        textDecoration: "none"
-      ".fb-footer-ipfs":
-        flex: "1 1 100%"
-        display: "flex"
-        flexDirection: "row"
-        flexWrap: "wrap"
-        alignItems: "center"
-        gap: "8px"
-        marginTop: "4px"
-        paddingTop: "8px"
-        borderTop: "1px solid rgba(74,48,40,0.55)"
-      ".fb-footer-ipfs-label":
-        letterSpacing: "0.08em"
-        textTransform: "uppercase"
-        fontSize: "0.72rem"
-        color: "var(goldDim)"
-      ".fb-footer-ipfs-cid":
-        fontFamily: "ui-monospace, 'Courier New', monospace"
-        fontSize: "0.72rem"
-        color: "var(gold)"
-        wordBreak: "break-all"
-      ".fb-footer-ipfs-copy":
-        padding: "4px 10px"
-        fontSize: "0.75rem"
+      ".fb-footer-hits":
+        color: "var(creamMuted)"
+        fontSize: "0.78rem"
+        letterSpacing: "0.04em"
+      ".fb-movie-hits":
+        margin: "0 0 12px"
+        color: "var(creamMuted)"
+        fontSize: "0.85rem"
+        letterSpacing: "0.03em"
       ".fb-section-title":
         marginTop: "28px"
         marginBottom: "12px"
@@ -570,6 +571,7 @@ themes:
         margin: "0"
         border: "1px solid var(border)"
         background: "var(screen)"
+        cursor: "zoom-in"
       ".fb-video-panel":
         position: "relative"
         flex: "1 1 auto"
@@ -581,8 +583,66 @@ themes:
         order: "2"
       ".fb-movie-nomedia":
         order: "2"
+      ".fb-movie-watch":
+        order: "2"
+        marginBottom: "8px"
+      ".fb-movie-files":
+        order: "4"
+        marginTop: "18px"
+        paddingTop: "16px"
+        borderTop: "1px solid var(border)"
+      ".fb-files-lead":
+        margin: "0 0 12px"
+        color: "var(creamMuted)"
+        fontSize: "0.95rem"
+        lineHeight: "1.5"
+      ".fb-files-lead a":
+        color: "var(gold)"
+      ".fb-files-empty":
+        margin: "0"
+        color: "var(creamMuted)"
+        fontSize: "0.92rem"
+      ".fb-files-empty a":
+        color: "var(gold)"
+      ".fb-file-list":
+        listStyle: "none"
+        margin: "0"
+        padding: "0"
+        display: "flex"
+        flexDirection: "column"
+        gap: "6px"
+      ".fb-file-row":
+        display: "flex"
+        flexDirection: "row"
+        flexWrap: "wrap"
+        alignItems: "baseline"
+        gap: "8px 12px"
+        padding: "8px 10px"
+        background: "rgba(0,0,0,0.22)"
+        border: "1px solid var(border)"
+      ".fb-file-kind":
+        flex: "0 0 auto"
+        minWidth: "5.5rem"
+        fontSize: "0.72rem"
+        letterSpacing: "0.08em"
+        textTransform: "uppercase"
+        color: "var(goldDim)"
+      ".fb-file-link":
+        flex: "1 1 12rem"
+        minWidth: "0"
+        color: "var(gold)"
+        wordBreak: "break-all"
+        textDecoration: "none"
+      ".fb-file-link:hover":
+        color: "var(cream)"
+        textDecoration: "underline"
+      ".fb-file-size":
+        flex: "0 0 auto"
+        fontSize: "0.78rem"
+        color: "var(creamMuted)"
+        fontFamily: "ui-monospace, 'Courier New', monospace"
       ".fb-readme":
-        marginTop: "8px"
+        marginTop: "18px"
         paddingTop: "16px"
         borderTop: "1px solid var(border)"
         fontSize: "0.95rem"
@@ -897,10 +957,6 @@ themes:
         flexWrap: "wrap"
         gap: "8px 14px"
         fontSize: "0.88rem"
-      ".fb-media-inspect-links a":
-        color: "var(gold)"
-        textDecoration: "underline"
-        textUnderlineOffset: "2px"
       ".fb-media-inspect-note":
         margin: "0"
         fontSize: "0.72rem"
@@ -954,9 +1010,6 @@ themes:
       ".fb-prose":
         color: "var(creamMuted)"
         lineHeight: "1.6"
-      ".fb-prose a":
-        color: "var(gold)"
-        textDecoration: "underline"
       ".fb-prose h1":
         margin: "0 0 0.75em"
         fontSize: "1.55rem"
@@ -1109,7 +1162,7 @@ themes:
         ".fb-brand-logo":
           height: "40px"
           width: "auto"
-          maxWidth: "120px"
+          maxWidth: "110px"
           borderRadius: "0"
         ".fb-brand-name":
           fontSize: "1.1rem"
@@ -1124,14 +1177,26 @@ themes:
           width: "10%"
           opacity: "0.7"
         ".fb-sconce":
-          width: "48px"
-          height: "72px"
+          width: "52px"
+          height: "98px"
         ".fb-movie-title":
           fontSize: "1.35rem"
         ".fb-movie-stage":
           flexDirection: "column"
         ".fb-movie-poster":
           width: "min(280px, 100%)"
+        ".fb-gate":
+          alignItems: "stretch"
+          justifyContent: "flex-start"
+          padding: "0"
+          overflow: "auto"
+        ".fb-gate-card":
+          maxWidth: "none"
+          width: "100%"
+          minHeight: "100%"
+          borderRadius: "0"
+          boxShadow: "none"
+          boxSizing: "border-box"
         ".fb-slide":
           flexDirection: "column"
           minHeight: "0"

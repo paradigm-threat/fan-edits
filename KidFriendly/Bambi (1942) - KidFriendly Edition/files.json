@@ -1,0 +1,11 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "KidFriendly/Bambi (1942) - KidFriendly Edition",
+  "files": [
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 998
+    }
+  ]
+}

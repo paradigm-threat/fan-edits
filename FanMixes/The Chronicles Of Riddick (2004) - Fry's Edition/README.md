@@ -16,4 +16,6 @@ The extended version of TCoR (2004) was far worse. There was extra sleaze, and e
 - Irritating Kyra (Alexa Davalos) scenes trimmed.
 - Unproblematic extended sequences left in.
 
-Full picture-hole list (many TBD by cue): [CHANGES.md](CHANGES.md).
+---
+
+Want to contribute a cut? See [Submit](/submit).

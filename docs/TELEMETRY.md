@@ -10,16 +10,31 @@ We **refuse product analytics** and session-replay style tooling. The browser is
 
 - Typed **failure / error** beacons when playback or page JS hard-fails (and optional sampled soft errors)
 - Optional coarse page **vitals** already used by Relay RUM (LCP/TTFC-style), when RUM is enabled — not a clickstream
+- **Affirmation-gated hit beacons** (`POST /api/hits`) — see below. Not a clickstream.
 
 **What we deliberately do not monitor**
 
 - Clicks, taps, scrolls, mouse movement, heatmaps
 - Dwell time, funnel steps, “which title you lingered on”
+- Play clicks, VLC / Open Network Stream opens, or byte-range / stream traffic as “views”
 - Form field contents, clipboard, or keystrokes
 - Third-party analytics (Google Analytics, Plausible-as-product-surveillance, Mixpanel, Amplitude, etc.)
 - Sentry / GlitchTip / similar SaaS error inboxes that ship PII-prone stacks off-node by default
 
 Watching how someone uses the theater would be an invasion of privacy. We only care whether **published media is broken** so operators can fix the mesh — counts and codes on our nodes, not profiles of viewers.
+
+## Public hit counters (`/api/hits`)
+
+Anonymous **localStorage-unique** counts, gated by the ownership affirmation checkboxes (bots that never check the box do not count). Fail closed if JS or `localStorage` is unavailable — no beacon, no increment.
+
+| Kind | When | Meaning |
+|------|------|---------|
+| `site_view` | Welcome checkbox OK (front page) | “Walked into the lobby” once per browser profile |
+| `movie_view` | Title affirmation OK (movie page) | “Entered that theater” once per browser profile — **not** staying for the film / play / VLC |
+
+- No cookies, fingerprints, or client IPs in the payload.
+- Fleet nodes mesh-sum peers’ local totals (cached ~60s) for the footer / movie line.
+- Middleware HTML request stats remain for **operators** (`/api/status` → `http`); they are not the public “visitors” number.
 
 ## What lights up (operators)
 

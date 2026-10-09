@@ -57,3 +57,8 @@ render_launch_status.txt
 package-lock.json
 node_modules
 .env.local
+
+# Ignore stray APKs; keep the published Flashback download trackable in-repo.
+*.apk
+!downloads/
+!downloads/*.apk

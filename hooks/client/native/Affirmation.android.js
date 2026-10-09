@@ -3,7 +3,7 @@
  * Same exports as Affirmation.js so the shell can prefer this file for the import.
  * Web keeps Affirmation.js + Affirmation.host.js.
  */
-import React, { useState } from 'react'
+import React from 'react'
 import { relaySkipAffirmations } from '@hooks'
 
 var WELCOME_KEY = 'flashback.ownershipAck.v1'
@@ -74,12 +74,8 @@ export default function Affirmation(props) {
   if (skipAffirmations() === true || p.confirmed === true) {
     return null
   }
-  const checkedState = useState(false)
-  const checked = checkedState[0]
-  const setChecked = checkedState[1]
   const title = p.title || ''
   const body = p.body || ''
-  const checkboxLabel = p.checkboxLabel || 'I confirm'
   const confirmLabel = p.confirmLabel || 'OK — I confirm'
   const storageKey = p.storageKey || WELCOME_KEY
   let links = []
@@ -103,10 +99,7 @@ export default function Affirmation(props) {
       </a>,
     ])
   }
-  let checkText = checkboxLabel
-  if (checked === true) {
-    checkText = 'Checked — ' + checkboxLabel
-  }
+  // Android: single CTA — no checkbox (desktop web only).
   return (
     <div className="fb-affirmation">
       {p.eyebrow ? <p>{p.eyebrow}</p> : null}
@@ -116,21 +109,6 @@ export default function Affirmation(props) {
       <button
         type="button"
         onClick={() => {
-          if (checked === true) {
-            setChecked(false)
-          } else {
-            setChecked(true)
-          }
-        }}
-      >
-        {checkText}
-      </button>
-      <button
-        type="button"
-        onClick={() => {
-          if (checked !== true) {
-            return
-          }
           try {
             localStorage.setItem(storageKey, '1')
             if (p.mode === 'title' || ('' + storageKey).indexOf('flashback.movieOwn.v1.') === 0) {

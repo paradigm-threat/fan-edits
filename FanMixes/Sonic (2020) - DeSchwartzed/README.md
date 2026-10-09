@@ -25,8 +25,6 @@ Sometimes PP is subtle, like in this movie where Rachel is constantly telling Ma
 - Predictive-programming beats (e.g. Rachel pushing divorce) removed where not plot-required.
 - Credit vocal songs replaced with Sonic game music remixes (four OC ReMixes from the corresponding game).
 
-Full picture-hole list (many TBD by cue): [CHANGES.md](CHANGES.md).
-
 ## Credits for Sonic 1 (2020)
 
 [Still in Your Marble Zone OC ReMix](https://ocremix.org/remix/OCR01580)
@@ -40,3 +38,7 @@ bys AeroZ & Tepid
 
 [Live at the Springyard OC ReMix](https://ocremix.org/remix/OCR01346)
 by Harmony
+
+---
+
+Want to contribute a cut or fix notes? See [Submit](/submit).

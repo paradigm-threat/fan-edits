@@ -13,8 +13,9 @@
   "videoCodec": "hevc",
   "width": 3840,
   "height": 2160,
-  "sizeBytes": 2249964647,
+  "sizeBytes": 2250025989,
   "sizeGB": 2.25,
-  "measuredAt": "2026-10-07",
-  "notes": "ffprobe on current Debugged render vs YTS 4K BluRay source rip"
+  "measuredAt": "2026-10-08",
+  "notes": "Debugged render; dual English subs remux 2026-10-08 (synced to 01:50:25 cut)",
+  "sha256": "86f0ee4fa216bbd40d67c5c3b3eedc2392e7bdbc65f13f80760207da764a9076"
 }

@@ -3,12 +3,24 @@
  *
  * CleverScript / park notes:
  * - Hydrated onClick is unreliable (SSR gate can resurrect; hid handlers flake).
- * - Use a native GET form + required checkbox so confirm works even without JS.
+ * - Native GET form confirms without JS. Checkbox is desktop fine-pointer only;
+ *   mobile web uses a single OK submit (same as the Android app).
  * - On return with ?ownershipAck=1, persist to localStorage; React unmounts once live.
  */
 import React from 'react'
 
 var ACK_KEY = 'flashback.ownershipAck.v1'
+
+function preferDesktopCheckbox() {
+  try {
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return false
+    }
+    return window.matchMedia('(hover: hover) and (pointer: fine)').matches
+  } catch (e) {
+    return false
+  }
+}
 
 function readAckFromDocFlag() {
   try {
@@ -144,21 +156,25 @@ export default function OwnershipGate(props) {
         </p>
         <form className="fb-gate-form" method="get" action="/">
           <input type="hidden" name="ownershipAck" value="1" />
-          <label className="fb-gate-check">
-            <input
-              type="checkbox"
-              className="fb-gate-checkbox"
-              name="confirm"
-              value="1"
-              required
-            />
-            <span>
-              {"I confirm I own a legal copy of each original film before I play its edit."}
-            </span>
-          </label>
-          <p className="fb-gate-hint">
-            {"Check the box above, then tap OK to continue."}
-          </p>
+          {preferDesktopCheckbox() === true ? (
+            <div className="fb-gate-desktop-check">
+              <label className="fb-gate-check">
+                <input
+                  type="checkbox"
+                  className="fb-gate-checkbox"
+                  name="confirm"
+                  value="1"
+                  required
+                />
+                <span>
+                  {"I confirm I own a legal copy of each original film before I play its edit."}
+                </span>
+              </label>
+              <p className="fb-gate-hint">
+                {"Check the box above, then tap OK to continue."}
+              </p>
+            </div>
+          ) : null}
           <div className="fb-gate-actions">
             <button type="submit" className="fb-btn fb-btn-primary fb-gate-ok">
               OK — I confirm

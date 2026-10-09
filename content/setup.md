@@ -1,138 +1,113 @@
 # Setup for playback
 
-Flashback streams **full-quality HEVC Matroska (`.mkv`)** files. Browsers still cannot play that combination in-page, so the honest path is an **external player** — usually [VLC](https://www.videolan.org/vlc/).
+Flashback plays **full-quality movie files** in [VLC](https://www.videolan.org/vlc/) (browsers cannot play them in the page). One short setup on your computer makes the **Open in VLC** button work.
 
-This page gets your computer ready so a title’s **Open in VLC** button can launch the stream in one click via a `vlc://` link.
+You only need to do this **once per computer**.
 
-## 1. Install VLC
+---
 
-Download the official build for your OS: [videolan.org/vlc](https://www.videolan.org/vlc/).
+## Step 1 — Install VLC
 
-Confirm it runs. You do **not** need extra codecs for our streams.
+Download and install VLC from the official site: **[videolan.org/vlc](https://www.videolan.org/vlc/)**.
 
-## 2. Pick one way to hand the stream to VLC
+Open VLC once so macOS / Windows finishes any first-run prompts.
 
-Browsers will not open VLC by themselves. Choose **A** (works with Flashback’s **Open in VLC** button on every OS) or **B** (Chrome / Edge / Firefox extension).
+---
 
-### A. Register the `vlc://` URL scheme (recommended)
+## Step 2 — Enable one-click Open in VLC
 
-A tiny **protocol handler** on your machine maps `vlc://…` → open VLC with the HTTPS stream URL. Flashback’s **Open in VLC** button uses this.
+### Mac
 
-We ship per-OS installers in this repo (HTTPS-only; no shell injection of arbitrary URLs).
-
-### Linux
-
-```bash
-# from a clone of this repo, or download the two files below into one folder
-chmod +x scripts/vlc-protocol/install-linux.sh scripts/vlc-protocol/flashback-vlc-open
-./scripts/vlc-protocol/install-linux.sh
-```
-
-Or download and run:
-
-- [/scripts/vlc-protocol/flashback-vlc-open](/scripts/vlc-protocol/flashback-vlc-open)
-- [/scripts/vlc-protocol/install-linux.sh](/scripts/vlc-protocol/install-linux.sh)
-
-Test:
+1. Open **Terminal** (press `Cmd + Space`, type `Terminal`, press Return).
+2. Copy the line below, paste it into Terminal, press Return:
 
 ```bash
-xdg-open 'vlc://https://www.videolan.org/vlc/video-dummy.mp4'
+curl -fsSL https://flashbackrepository.org/scripts/vlc-protocol/install-macos-online.sh | bash
 ```
 
-Uninstall: [/scripts/vlc-protocol/uninstall-linux.sh](/scripts/vlc-protocol/uninstall-linux.sh)
+3. When you first use **Open in VLC** on the site, if your Mac asks which app should open the link, choose **Flashback VLC Protocol** and allow it to remember that choice.
 
-### macOS
+That is the whole Mac setup. No test video, no extra downloads.
 
-```bash
-chmod +x scripts/vlc-protocol/install-macos.sh scripts/vlc-protocol/flashback-vlc-open
-./scripts/vlc-protocol/install-macos.sh
-```
-
-That installs `~/Applications/Flashback VLC Protocol.app` and registers `vlc://`. If the browser asks which app should open the link, choose **Flashback VLC Protocol**.
-
-Test:
-
-```bash
-open 'vlc://https://www.videolan.org/vlc/video-dummy.mp4'
-```
+Direct download of the same installer (advanced): [install-macos-online.sh](/scripts/vlc-protocol/install-macos-online.sh)
 
 ### Windows
 
-1. Install VLC (default path is fine).
-2. Download [/scripts/vlc-protocol/install-windows.ps1](/scripts/vlc-protocol/install-windows.ps1).
-3. In PowerShell (current user is enough — no admin):
+1. Install VLC (Step 1).
+2. Open **PowerShell**.
+3. Paste this line and press Enter:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\install-windows.ps1
+irm https://flashbackrepository.org/scripts/vlc-protocol/install-windows.ps1 | iex
 ```
 
-Test:
+### Linux
 
-```powershell
-start vlc://https://www.videolan.org/vlc/video-dummy.mp4
+1. Install VLC (e.g. `sudo apt install vlc`).
+2. In a terminal:
+
+```bash
+curl -fsSL https://flashbackrepository.org/scripts/vlc-protocol/install-linux-online.sh | bash
 ```
 
-Uninstall: [/scripts/vlc-protocol/uninstall-windows.ps1](/scripts/vlc-protocol/uninstall-windows.ps1)
+### Phone / tablet (Android) — Flashback app (recommended)
 
-### B. Chrome / Edge / Firefox extension (optional)
+Browsers cannot play our full-quality HEVC MKV files. The **Flashback Repository** Android app can. It is sideloaded on purpose — there is no realistic Play Store path for this catalog ([why](/motivation#no-play-store-path)).
 
-[**Open in VLC™ media player**](https://chromewebstore.google.com/detail/open-in-vlc-media-player/ihpiinojhnfhpdmmacgmpoonphhimkaj) (also on [Firefox](https://addons.mozilla.org/en-US/firefox/addon/open-in-vlc/) / [Edge](https://microsoftedge.microsoft.com/addons/detail/open-in-vlc%E2%84%A2-media-player/hjfcjapkfahlmlefedkkpbbkeddpnnlc)) sends media URLs from the browser to VLC.
+1. On your phone or tablet, open this link (or ask someone to send it):  
+   **[Download Flashback APK](/downloads/flashback.apk)**
+2. If Android asks whether to allow installs from the browser or Files app, tap **Allow** / **Settings** and turn on install permission for that app, then go back and open the download.
+3. Tap the downloaded **flashback.apk** → **Install** → **Open**.
+4. Pick a title → tap **OK — I confirm** (ownership affirmation).
+5. The movie should start in the app (it may rotate to landscape for a larger picture).
 
-**Also required:** their small **native client** (the extension prompts you the first time — it bridges the browser to VLC; browsers block that without a helper).
-
-How to use it on Flashback:
-
-1. Install the extension + native client; keep VLC installed.
-2. Open a title, confirm ownership, wait for the **stream URL** to show.
-3. Either:
-   - Right‑click the stream URL (or **Copy stream URL**) and use the extension’s **Open in VLC** context menu / toolbar button, or
-   - Paste the HTTPS URL if the extension asks for a link.
-
-**Caveats:** third‑party extension + Node-based native host (trust / update surface). It does **not** power our one-click **Open in VLC** button — that still needs path **A** (`vlc://`). Fine to use both; path **A** is enough alone.
-
-## 3. How the link works
-
-Title pages expose an HTTPS stream, for example:
-
-`https://flashbackrepository.org/FanMixes/Van%20Helsing%20-%20DeAnna'd/Van%20Helsing%20-%20DeAnna'd.mkv`
-
-**Open in VLC** uses a custom scheme (spaces and punctuation encoded safely):
-
-`vlc://weblink?url=https%3A%2F%2Fflashbackrepository.org%2F…`
-
-Your handler strips the `vlc://` wrapper, checks that the inner URL is `http`/`https`, and starts VLC with that stream (Range-friendly network open).
-
-If the one-click button fails (browser blocked the scheme, handler not installed), use **Copy stream URL** and in VLC: **Media → Open Network Stream… → paste → Play**.
-
-## 4. Ownership gate
-
-Same house rule as always: confirm you own a legal commercial copy of the original film before you stream an edit. The site asks once per title on this browser. Feature files are on IPFS (not in public git); see [Ownership policy](/legal).
-
-## Troubleshooting
-
-| Symptom | Fix |
-| --- | --- |
-| Click does nothing (desktop) | Run the installer again; allow the browser’s “Open VLC / Flashback VLC Protocol?” prompt |
-| Click does nothing (Android) | Install VLC from Play Store; allow the app chooser; or Copy stream URL → VLC → Network |
-| “VLC not found” | Install VLC, or put `vlc` on your PATH |
-| 404 / seed message | That title’s bytes are not pinned on a reachable gateway yet — try later or another Now Showing title |
-| Works in VLC via paste but not via `vlc://` | Handler not registered for your user; re-run the OS installer above |
-
-## Android phone / tablet browser
-
-You do **not** need the desktop `vlc://` installers. Flashback detects Android browsers and uses an **`intent:`** link so the system app chooser can open the HTTPS stream in VLC (or another player).
+**If the movie will not play in the app** (some older phones lack HEVC hardware):
 
 1. Install [VLC for Android](https://play.google.com/store/apps/details?id=org.videolan.vlc) from the Play Store.
-2. Open a title in Chrome (or another Android browser) → confirm ownership.
-3. Tap **Open in external player** → pick **VLC** (or another app that plays network video).
-4. If the chooser does not appear: **Copy stream URL** → open VLC → **Network** / **Open network stream** → paste → Play.
+2. In Flashback, tap **Open in external player**.
+3. Choose **VLC**. If Android asks “Just once” or “Always”, pick whichever you prefer.
 
-The Flashback **Android / TV APK** uses the same intent path inside the app shell.
+You do **not** need a computer or Terminal for Android.
 
-## Manual fallback (any OS)
+Maintainer / device matrix: **[Android APK lab](/android-lab)** (checklist + in-app **Lab** screen).
 
-1. Open the title on Flashback → confirm ownership.
-2. **Copy stream URL**.
-3. VLC → **Media → Open Network Stream…** (Android: **Network**) → paste → **Play**.
+---
 
-You can skip the protocol handler entirely and always use this path.
+## Step 3 — Watch a title (computer browser)
+
+1. Open a film on Flashback.
+2. Confirm you own a legal copy of the original (once per title on this browser).
+3. Tap **Open in VLC**.
+
+If the button does nothing, use **Copy stream URL**, then in VLC: **Media → Open Network Stream… → paste → Play**.
+
+---
+
+## If something goes wrong
+
+| What you see | What to do |
+| --- | --- |
+| Mac asks which app | Choose **Flashback VLC Protocol** |
+| “VLC not found” | Install VLC, then run the Step 2 command again |
+| Button does nothing | Use **Copy stream URL** → VLC → Open Network Stream |
+| Android “blocked install” | Allow installs from Files / Chrome, then open the APK again |
+| Android in-app play fails | Install VLC → **Open in external player** |
+| Android chooser missing | Install VLC from the Play Store first |
+
+Uninstall (optional): [macOS / Linux helpers](/scripts/vlc-protocol/install-macos.sh) live under `/scripts/vlc-protocol/` — see `uninstall-linux.sh` / `uninstall-windows.ps1` in that folder.
+
+---
+
+## Advanced (editors only)
+
+Clone the **project catalog** (Kdenlive projects, subtitles, READMEs — not the big movie files):
+
+```bash
+git clone git://iad1.relaygateway.net:9418/fan-edits.git
+```
+
+Fallbacks: `ord1` / `hkg1` on the same port, or GitLab (`git@gitlab.com:clevertree/fan-edits.git`). Feature `.mkv` files stay on IPFS and stream after ownership confirm — see [Ownership](/legal) and [Submit](/submit).
+
+**Media root CID** (whole thin-media DAG): `bafybeid7zmxfovcgpebtalojong2fw5nc7hnle2bxh2g7ihu74sbfigoya` — also in repo `IPFS_ROOT` / `assets.manifest.json` (`mediaRoot`). [Inspect](https://cid.ipfs.tech/#bafybeid7zmxfovcgpebtalojong2fw5nc7hnle2bxh2g7ihu74sbfigoya).
+
+Optional browser extension (does **not** replace Step 2): [Open in VLC](https://chromewebstore.google.com/detail/open-in-vlc-media-player/ihpiinojhnfhpdmmacgmpoonphhimkaj).

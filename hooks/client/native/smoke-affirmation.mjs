@@ -35,9 +35,19 @@ const origin = `http://127.0.0.1:${port}`
 const browser = await chromium.launch({ channel: 'chrome', headless: true }).catch(() =>
   chromium.launch({ headless: true }),
 )
+// Desktop fine-pointer so the optional checkbox path is exercised when present.
 const page = await browser.newPage()
+await page.emulateMedia({ media: 'screen' })
+await page.addInitScript(() => {
+  const real = window.matchMedia.bind(window)
+  window.matchMedia = (q) => {
+    if (q === '(hover: hover) and (pointer: fine)') {
+      return { matches: true, media: q, addListener() {}, removeListener() {}, addEventListener() {}, removeEventListener() {}, dispatchEvent() { return false } }
+    }
+    return real(q)
+  }
+})
 await page.goto(origin + '/')
-await page.locator('input.fb-gate-check').check()
 await page.evaluate(() => {
   const cb = document.querySelector('input.fb-gate-check')
   const btn = document.querySelector('.fb-gate-ok')

@@ -17,6 +17,21 @@ server:
       path: hooks/server/validation.cs
   tls:
     plugin: park
+# Affirmation-gated public counters (see /api/hits). Not playback / VLC.
+hits:
+  public: true
+  movieUnique: true
+  exclude:
+    - /setup
+    - /submit
+    - /board
+    - /legal
+    - /terms
+    - /request
+    - /motivation
+  windows:
+    - 1h
+    - 24h
 git:
   branchRules:
     default:

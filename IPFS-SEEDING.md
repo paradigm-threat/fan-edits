@@ -1,6 +1,6 @@
 # Seeding fan-edit video on IPFS (Flashback Repository)
 
-Flashback Repository ([flashbackrepository.org](https://flashbackrepository.org/)) is a **thin IPFS** Relay catalog repo: Git holds CleverScript, metadata, and **text pointer stubs** under `.relay/assets/`. The actual `.mkv` files live on IPFS and are pinned by whoever seeds them (your workstation and/or the Relay fleet).
+Flashback Repository ([flashbackrepository.org](https://flashbackrepository.org/)) is a **thin IPFS** Relay catalog repo: Git holds CleverScript, metadata, posters/brand images, and **text pointer stubs** under `.relay/assets/` for **feature video only** (`.mkv`). Posters and UI PNGs are normal tip blobs — not IPFS. The actual `.mkv` files live on IPFS and are pinned by whoever seeds them (your workstation and/or the Relay fleet).
 
 **Playback is same-origin only.** The browser requests `/FanMixes/…/….mkv` on this site. Relay resolves the CID, pins it into the **node’s local Kubo**, and serves bytes (Range) from that Kubo. The browser does **not** talk to `ipfs.io` / Helia / public gateways for video.
 
@@ -150,7 +150,7 @@ Per-file CIDs stay in `.relay/assets/**/*.ipfs` and `assets.manifest.json` `asse
 }
 ```
 
-The same CID is written to tip file **`IPFS_ROOT`**. That CID is a **UnixFS directory** whose paths mirror logical media paths only (`FanMixes/…`, favicons, `og-image.png`, …) — not CleverScript or Git history.
+The same CID is written to tip file **`IPFS_ROOT`**. That CID is a **UnixFS directory** whose paths mirror feature-video paths only (`FanMixes/…/*.mkv`) — not posters, PNGs, CleverScript, or Git history — not CleverScript or Git history.
 
 ### Full library sync after clone
 

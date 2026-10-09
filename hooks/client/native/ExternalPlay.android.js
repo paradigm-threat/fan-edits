@@ -82,10 +82,10 @@ export default function ExternalPlay(props) {
       data-fb-external-play="1"
       data-playback-engine="external"
     >
-      <p className="fb-theater-downloads-label">Watch in an external player</p>
+      <p className="fb-theater-downloads-label">Or watch in another app</p>
       <p className="fb-theater-downloads-note">
-        Full-quality HEVC MKV streams best in VLC or another app — not the in-app browser cache.
-        Tap below to open the stream with an app on this device.
+        Use this if in-app play fails, or you prefer VLC. Android will ask which app should open the
+        stream — pick VLC and optionally Always.
       </p>
       <code className="fb-theater-external-url">{abs}</code>
       <div className="fb-external-play-actions fb-theater-external-actions">

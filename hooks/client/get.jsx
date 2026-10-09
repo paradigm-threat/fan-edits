@@ -16,7 +16,19 @@ import Affirmation, {
 } from 'hooks/client/native/Affirmation.js'
 import NowShowing from 'hooks/client/native/NowShowing.js'
 import ExternalPlay from 'hooks/client/native/ExternalPlay.js'
+import TheaterPlayer from 'hooks/client/native/TheaterPlayer.js'
 import Board from 'hooks/client/native/Board.js'
+
+/** Android Relay shell sets this so we can enable in-app HEVC MKV (browsers stay ExternalPlay-only). */
+function isAndroidClient() {
+  try {
+    if (typeof globalThis !== 'undefined' && globalThis.__relayAndroidClient === true) {
+      return true
+    }
+  } catch (e) {}
+  return false
+}
+// SSR-static tip (`hydrate: false`): no embed.js, so gallery CEs never upgrade.
 
 function str(v) {
   if (v === null) {
@@ -211,16 +223,23 @@ function projectPosterPath(project) {
   if (!project) {
     return ''
   }
-  if (project.image) {
-    let poster = str(project.image)
-    if (poster.length > 0 && poster.charAt(0) !== '/') {
-      poster = '/' + poster
+  try {
+    if (project.image) {
+      let poster = str(project.image)
+      if (poster.length > 0 && poster.charAt(0) !== '/') {
+        poster = '/' + poster
+      }
+      if (poster.length > 0) {
+        return poster
+      }
     }
-    return poster
-  }
-  if (project.poster && project.path) {
-    return '/' + str(project.path) + '/' + str(project.poster)
-  }
+  } catch (e) {}
+  // CleverScript throws on missing keys — only Now Showing titles carry `poster`.
+  try {
+    if (project.poster && project.path) {
+      return '/' + str(project.path) + '/' + str(project.poster)
+    }
+  } catch (e2) {}
   return ''
 }
 
@@ -266,8 +285,31 @@ function leaveReadmeHref(href) {
 }
 
 /**
+ * Find the ')' that closes a Markdown link destination starting at `open`.
+ * Skips balanced inner parentheses so paths like `Foo (1999)/x.md` are safe.
+ */
+function markdownLinkCloseParen(raw, open) {
+  let depth = 1
+  let j = open
+  while (j < raw.length) {
+    const ch = raw.charAt(j)
+    if (ch === '(') {
+      depth = depth + 1
+    } else if (ch === ')') {
+      depth = depth - 1
+      if (depth === 0) {
+        return j
+      }
+    }
+    j = j + 1
+  }
+  return 0 - 1
+}
+
+/**
  * README links like poster.jpg resolve against the slug URL (`/poster.jpg` → 404).
  * Rewrite same-folder targets to an absolute URL under project.path.
+ * Destinations are closed with balanced-paren scan (project folders often contain `(1999)`).
  */
 function rewriteReadmeAssetLinks(md, projectPath) {
   const raw = str(md)
@@ -283,7 +325,7 @@ function rewriteReadmeAssetLinks(md, projectPath) {
       out = out + raw.slice(i)
       break
     }
-    const close = raw.indexOf(')', mark + 2)
+    const close = markdownLinkCloseParen(raw, mark + 2)
     if (close < 0) {
       out = out + raw.slice(i)
       break
@@ -714,6 +756,96 @@ function fetchText(path) {
   return ''
 }
 
+function formatFileBytes(n) {
+  const v = typeof n === 'number' ? n : 0
+  if (v <= 0) {
+    return ''
+  }
+  if (v < 1024) {
+    return v + ' B'
+  }
+  if (v < 1024 * 1024) {
+    return Math.round(v / 102.4) / 10 + ' KB'
+  }
+  return Math.round(v / (1024 * 102.4)) / 10 + ' MB'
+}
+
+function kindLabel(kind) {
+  const k = str(kind)
+  if (k === 'kdenlive') {
+    return 'Kdenlive'
+  }
+  if (k === 'srt' || k === 'vtt' || k === 'subtitle') {
+    return 'Subtitles'
+  }
+  if (k === 'poster') {
+    return 'Poster'
+  }
+  if (k === 'stats') {
+    return 'Stats'
+  }
+  if (k === 'plan') {
+    return 'Plan'
+  }
+  if (k === 'readme') {
+    return 'Notes'
+  }
+  if (k === 'music') {
+    return 'Music'
+  }
+  return 'File'
+}
+
+/** Downloadable project files from files.json (feature MKVs are not listed). */
+function loadProjectFiles(projectPath) {
+  let out = []
+  const base = str(projectPath)
+  if (base.length === 0) {
+    return out
+  }
+  try {
+    const raw = fetchText(base + '/files.json')
+    if (!raw || raw.length === 0) {
+      return out
+    }
+    const data = JSON.parse(raw)
+    const list = data && data.files ? data.files : []
+    for (let i = 0; i < list.length; i++) {
+      const it = list[i]
+      if (!it || !it.path) {
+        continue
+      }
+      const rel = str(it.path)
+      if (rel.length === 0) {
+        continue
+      }
+      const lower = rel.toLowerCase()
+      if (lower.indexOf('.mkv') === lower.length - 4 && lower.length >= 4) {
+        continue
+      }
+      out = out.concat([
+        {
+          path: rel,
+          kind: str(it.kind || 'other'),
+          bytes: typeof it.bytes === 'number' ? it.bytes : 0,
+        },
+      ])
+    }
+  } catch (e) {
+    out = []
+  }
+  return out
+}
+
+function fileHref(projectPath, relPath) {
+  const base = str(projectPath)
+  const rel = str(relPath)
+  if (base.length === 0 || rel.length === 0) {
+    return ''
+  }
+  return encodeMarkdownUrl(absoluteStreamUrl('/' + base + '/' + rel))
+}
+
 function looksLikeCid(raw) {
   const s = str(raw).trim()
   if (s.length < 10) {
@@ -831,33 +963,6 @@ function subtitlesJson(project) {
   }
 }
 
-/** mediaRoot from assets.manifest.json (UnixFS DAG of all thin assets). */
-function resolveMediaRootCid() {
-  const raw = fetchText('assets.manifest.json')
-  if (!raw || raw.length === 0) {
-    return ''
-  }
-  try {
-    const data = JSON.parse(raw)
-    if (data && typeof data.mediaRoot === 'string') {
-      const c = str(data.mediaRoot).trim()
-      if (looksLikeCid(c)) {
-        return c
-      }
-    }
-  } catch (e) {}
-  const tip = fetchText('IPFS_ROOT')
-  const tipLines = str(tip).split('\n')
-  let line = ''
-  if (tipLines.length > 0) {
-    line = str(tipLines[0])
-  }
-  if (looksLikeCid(line)) {
-    return line
-  }
-  return ''
-}
-
 function copyCidText(cid) {
   const t = str(cid)
   if (t.length === 0) {
@@ -923,10 +1028,20 @@ function renderIpfsInspect(cidRaw) {
         </button>
       </div>
       <div className="fb-media-inspect-links">
-        <a href={'https://cid.ipfs.tech/#' + cid} target="_blank" rel="noopener noreferrer">
+        <a
+          className="fb-link"
+          href={'https://cid.ipfs.tech/#' + cid}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           CID Inspector
         </a>
-        <a href={'https://check.ipfs.network/?cid=' + enc} target="_blank" rel="noopener noreferrer">
+        <a
+          className="fb-link"
+          href={'https://check.ipfs.network/?cid=' + enc}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Providers
         </a>
       </div>
@@ -985,6 +1100,9 @@ function routeKind(route) {
   }
   if (route === '/setup' || route === '/playback' || route === '/vlc') {
     return { kind: 'md', file: 'content/setup.md', title: 'Setup for playback' }
+  }
+  if (route === '/android-lab' || route === '/apk-lab' || route === '/android-test') {
+    return { kind: 'md', file: 'content/android-lab.md', title: 'Android APK lab' }
   }
   if (route === '/request' || route === '/downloads' || route === '/email') {
     return { kind: 'request', file: 'content/request.md', title: 'Request downloads' }
@@ -1076,7 +1194,15 @@ function nowShowingItemsJson(projects, nowShowingSlugs) {
     let t = projectTitle(p)
     let s = projectSlug(p)
     if (t.length > 0 && s.length > 0) {
-      out = out.concat([{ title: t, href: '/' + s, poster: posterFor(p) }])
+      let blurb = ''
+      try {
+        if (p && p.blurb) {
+          blurb = '' + p.blurb
+        }
+      } catch (eBlurb) {
+        blurb = ''
+      }
+      out = out.concat([{ title: t, href: '/' + s, poster: posterFor(p), blurb: blurb }])
     }
   }
 
@@ -1420,11 +1546,46 @@ export default function FlashbackApp() {
       </div>
     )
   } else if (kind.kind === 'md') {
-    main = (
-      <article className="fb-doc fb-prose">
-        <MarkdownRenderer content={md || '# Loading…'} />
-      </article>
-    )
+    // Setup: expose #clone-repo (MarkdownRenderer escapes raw HTML anchors).
+    let setupBefore = ''
+    let setupClone = ''
+    let isSetup = false
+    try {
+      if (kind.file === 'content/setup.md') {
+        isSetup = true
+        const full = str(md || '')
+        // Anchor #clone-repo for movie-page deep links (advanced section on setup).
+        const marker = '## Advanced (editors only)'
+        const at = full.indexOf(marker)
+        if (at >= 0) {
+          setupBefore = full.slice(0, at)
+          setupClone = full.slice(at)
+        } else {
+          setupBefore = full
+          setupClone = ''
+        }
+      }
+    } catch (eSetup) {
+      isSetup = false
+    }
+    if (isSetup === true) {
+      main = (
+        <article className="fb-doc fb-prose">
+          <MarkdownRenderer content={setupBefore || '# Loading…'} />
+          {setupClone.length > 0 ? (
+            <section id="clone-repo" aria-label="Clone the catalog from a Relay server">
+              <MarkdownRenderer content={setupClone} />
+            </section>
+          ) : null}
+        </article>
+      )
+    } else {
+      main = (
+        <article className="fb-doc fb-prose">
+          <MarkdownRenderer content={md || '# Loading…'} />
+        </article>
+      )
+    }
   } else if (kind.kind === 'request') {
     main = (
       <article className="fb-doc fb-prose">
@@ -1470,7 +1631,6 @@ export default function FlashbackApp() {
       </article>
     )
   } else if (kind.kind === 'movie') {
-    const movieCid = selected && selected.media ? resolveProjectCid(selected) : ''
     const folderName = selected
       ? folderNameFromPath(selected.path)
       : str(kind.slug)
@@ -1501,13 +1661,38 @@ export default function FlashbackApp() {
     const readmeMd = rewriteReadmeAssetLinks(hero.body || '', selected ? selected.path : '')
     let mediaSurface = null
     if (selected) {
-      mediaSurface = (
-        <ExternalPlay
-          streamUrl={streamUrl}
-          unlocked={movieAck === true && ack === true}
-          setupHref="/setup"
-        />
-      )
+      if (isAndroidClient() === true) {
+        const srcWeb = encodeMarkdownUrl(
+          absoluteStreamUrl(mediaSrcFor(selected, projectMediaField(selected, 'mediaWeb'))),
+        )
+        const srcMobile = encodeMarkdownUrl(
+          absoluteStreamUrl(mediaSrcFor(selected, projectMediaField(selected, 'mediaMobile'))),
+        )
+        mediaSurface = (
+          <TheaterPlayer
+            src={streamUrl}
+            srcMaster={streamUrl}
+            srcWeb={srcWeb}
+            srcMobile={srcMobile}
+            cid={resolveProjectCid(selected)}
+            unlocked={movieAck === true && ack === true}
+            playing={playing === true}
+            command={command}
+            commandSeq={commandSeq}
+            commandArg=""
+            startAt={startAtVal}
+            seedState="pending"
+          />
+        )
+      } else {
+        mediaSurface = (
+          <ExternalPlay
+            streamUrl={streamUrl}
+            unlocked={movieAck === true && ack === true}
+            setupHref="/setup"
+          />
+        )
+      }
     }
     let playDisabled = true
     if (inPageMkvOk === true) {
@@ -1521,79 +1706,161 @@ export default function FlashbackApp() {
     if (inPageMkvOk === true) {
       pauseTitle = 'Pause'
     }
+    // Hits filled client-side by Hits.host.js (SSR must not fetch /api/hits — self-deadlock).
+    const movieHitsEl = kind.slug ? (
+      <p
+        className="fb-movie-hits"
+        data-fb-hits="movie"
+        data-fb-hits-path={'/' + kind.slug}
+        hidden
+      />
+    ) : null
+    const projectFiles = selected ? loadProjectFiles(selected.path) : []
+    let fileRows = []
+    for (let fi = 0; fi < projectFiles.length; fi++) {
+      const f = projectFiles[fi]
+      const href = fileHref(selected.path, f.path)
+      const sizeLabel = formatFileBytes(f.bytes)
+      fileRows = fileRows.concat([
+        <li key={f.path} className="fb-file-row">
+          <span className="fb-file-kind">{kindLabel(f.kind)}</span>
+          <a className="fb-file-link" href={href}>
+            {f.path}
+          </a>
+          {sizeLabel.length > 0 ? <span className="fb-file-size">{sizeLabel}</span> : null}
+        </li>,
+      ])
+    }
     main = (
       <div className="fb-movie">
         <a className="fb-back" href="/">
           ← Library
         </a>
         <h1 className="fb-movie-title">{displayTitle}</h1>
+        {movieHitsEl}
         {displayBlurb.length > 0 ? (
           <div className="fb-movie-blurb fb-prose">
             <MarkdownRenderer content={displayBlurb} />
           </div>
         ) : null}
-        <div className="fb-movie-stage">
-        {posterHref.length > 0 ? (
-          <img className="fb-movie-poster" src={posterHref} alt="" width="280" />
-        ) : null}
-        {selected &&
-        (projectMediaField(selected, 'media').length > 0 ||
-          projectMediaField(selected, 'mediaWeb').length > 0 ||
-          projectMediaField(selected, 'mediaMobile').length > 0) ? (
-          <div className="fb-video-panel">
-            {mediaSurface}
-            <Affirmation
-              mode="title"
-              eyebrow="CONFIRM"
-              title={'I confirm I own a legal copy of ' + projectOriginalTitle(selected)}
-              body={
-                'Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nFeature video is on IPFS (not in public git repos); this site only unlocks stream access after you confirm ownership. Not a pirate archive.'
-              }
-              checkboxLabel={
-                'I confirm I own a legal copy of ' +
-                projectOriginalTitle(selected) +
-                ' before I play its edit.'
-              }
-              confirmLabel="OK — I confirm"
-              storageKey={movieStorageKey(selected.slug)}
-              confirmed={movieAck === true}
-              linksJson='[{"label":"Ownership policy","href":"/legal"},{"label":"Terms","href":"/terms"}]'
-              onConfirm={() => {
-                setMovieAck(true)
-                setAck(true)
-              }}
-            />
-            {inPageMkvOk === true ? (
-              <div className="fb-video-controls">
-                <button
-                  type="button"
-                  className="fb-btn fb-btn-inpage-play"
-                  disabled={playDisabled}
-                  title={playTitle}
-                  onClick={sendPlay}
-                >
-                  <PlayChevron className="fb-btn-icon" /> Play
-                </button>
-                <button
-                  type="button"
-                  className="fb-btn fb-btn-inpage-pause"
-                  disabled={playDisabled}
-                  title={pauseTitle}
-                  onClick={sendPause}
-                >
-                  Pause
-                </button>
-              </div>
+        <section className="fb-movie-watch" aria-label="Watch">
+          <div className="fb-movie-stage">
+            {posterHref.length > 0 ? (
+              <img
+                src={posterHref}
+                alt=""
+                className="fb-movie-poster"
+                data-fb-pop-image="1"
+                width={280}
+                height={420}
+                decoding="async"
+              />
             ) : null}
+            {selected &&
+            (projectMediaField(selected, 'media').length > 0 ||
+              projectMediaField(selected, 'mediaWeb').length > 0 ||
+              projectMediaField(selected, 'mediaMobile').length > 0) ? (
+              <div className="fb-video-panel">
+                {mediaSurface}
+                {isAndroidClient() !== true ? (
+                  <p className="fb-theater-downloads-note">
+                    {'Phone or tablet? '}
+                    <a className="fb-link" href="/downloads/flashback.apk">
+                      {'Download Flashback APK'}
+                    </a>
+                    {' · '}
+                    <a className="fb-link" href="/setup">
+                      {'Setup'}
+                    </a>
+                  </p>
+                ) : null}
+                <Affirmation
+                  mode="title"
+                  eyebrow="CONFIRM"
+                  title={'I confirm I own a legal copy of ' + projectOriginalTitle(selected)}
+                  body={
+                    'Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nFeature video is on IPFS (not in public git repos); this site only unlocks stream access after you confirm ownership. Not a pirate archive.'
+                  }
+                  checkboxLabel={
+                    'I confirm I own a legal copy of ' +
+                    projectOriginalTitle(selected) +
+                    ' before I play its edit.'
+                  }
+                  confirmLabel="OK — I confirm"
+                  storageKey={movieStorageKey(selected.slug)}
+                  confirmed={movieAck === true}
+                  linksJson='[{"label":"Ownership policy","href":"/legal"},{"label":"Terms","href":"/terms"}]'
+                  onConfirm={() => {
+                    setMovieAck(true)
+                    setAck(true)
+                  }}
+                />
+                {inPageMkvOk === true ? (
+                  <div className="fb-video-controls">
+                    <button
+                      type="button"
+                      className="fb-btn fb-btn-inpage-play"
+                      disabled={playDisabled}
+                      title={playTitle}
+                      onClick={sendPlay}
+                    >
+                      <PlayChevron className="fb-btn-icon" /> Play
+                    </button>
+                    <button
+                      type="button"
+                      className="fb-btn fb-btn-inpage-pause"
+                      disabled={playDisabled}
+                      title={pauseTitle}
+                      onClick={sendPause}
+                    >
+                      Pause
+                    </button>
+                  </div>
+                ) : null}
+              </div>
+            ) : (
+              <p className="fb-movie-nomedia">
+                Feature media is not catalogued for streaming yet. Project files are still listed
+                below when present.
+              </p>
+            )}
           </div>
-        ) : (
-          <p className="fb-movie-nomedia">Feature media is not catalogued yet for this title.</p>
-        )}
-        </div>
-        {/* README stays below the poster + play row; CSS order on .fb-readme. */}
+        </section>
         <div className="fb-readme fb-prose">
+          <h2 className="fb-section-title">Notes</h2>
           <MarkdownRenderer content={readmeMd} />
         </div>
+        <section className="fb-movie-files" aria-label="Project files">
+          <h2 className="fb-section-title">Project files</h2>
+          <p className="fb-files-lead">
+            {
+              'Subtitles and small project files for this title. Feature video unlocks above after ownership confirm. To clone the catalog or rebuild a cut, see '
+            }
+            <a className="fb-link" href="/setup">
+              {'Setup'}
+            </a>
+            {' and '}
+            <a className="fb-link" href="/submit">
+              {'Submit'}
+            </a>
+            .
+          </p>
+          {fileRows.length > 0 ? (
+            <ul className="fb-file-list">{fileRows}</ul>
+          ) : (
+            <p className="fb-files-empty">
+              No project files are published for this title yet. See{' '}
+              <a className="fb-link" href="/setup">
+                Setup
+              </a>{' '}
+              or{' '}
+              <a className="fb-link" href="/submit">
+                Submit
+              </a>{' '}
+              once they land.
+            </p>
+          )}
+        </section>
       </div>
     )
   } else {
@@ -1623,13 +1890,15 @@ export default function FlashbackApp() {
     )
   }
 
-  const mediaRootCid = resolveMediaRootCid()
+  const footerHitsEl = (
+    <span className="fb-footer-hits" data-fb-hits="site" hidden />
+  )
 
   return (
     <StyleContext src="hooks/client/theme.yaml">
       <div className="fb-app">
         <style>
-          {'@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}@keyframes fb-bulb{0%,100%{opacity:0.4}50%{opacity:1}}@keyframes fb-sconce-breathe{0%,100%{opacity:0.5}50%{opacity:0.78}}@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}.fb-bulb-0{animation:fb-bulb 2.2s ease-in-out infinite}.fb-bulb-1{animation:fb-bulb 2.2s ease-in-out 0.4s infinite}.fb-bulb-2{animation:fb-bulb 2.2s ease-in-out 0.8s infinite}.fb-bulb-3{animation:fb-bulb 2.2s ease-in-out 1.2s infinite}.fb-sconce-1{animation:fb-sconce-breathe 7.5s ease-in-out infinite}.fb-sconce-2{animation:fb-sconce-breathe 7.5s ease-in-out 1.6s infinite}.fb-sconce-3{animation:fb-sconce-breathe 7.5s ease-in-out 3.2s infinite}}@media (prefers-reduced-motion:reduce){.fb-screen-glow,.fb-bulb,.fb-sconce{animation:none!important}}@media (max-width:640px){.fb-movie-stage{flex-direction:column}.fb-movie-poster{width:min(280px,100%)}}'}
+          {'@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}@keyframes fb-bulb{0%,100%{opacity:0.4}50%{opacity:1}}@keyframes fb-sconce-breathe{0%,100%{opacity:0.5}50%{opacity:0.78}}@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}.fb-bulb-0{animation:fb-bulb 2.2s ease-in-out infinite}.fb-bulb-1{animation:fb-bulb 2.2s ease-in-out 0.4s infinite}.fb-bulb-2{animation:fb-bulb 2.2s ease-in-out 0.8s infinite}.fb-bulb-3{animation:fb-bulb 2.2s ease-in-out 1.2s infinite}.fb-sconce-1{animation:fb-sconce-breathe 7.5s ease-in-out infinite}.fb-sconce-2{animation:fb-sconce-breathe 7.5s ease-in-out 1.6s infinite}.fb-sconce-3{animation:fb-sconce-breathe 7.5s ease-in-out 3.2s infinite}}@media (prefers-reduced-motion:reduce){.fb-screen-glow,.fb-bulb,.fb-sconce{animation:none!important}}@media (max-width:640px){.fb-movie-stage{flex-direction:column}.fb-movie-poster{width:min(280px,100%)}.fb-gate,.fb-affirmation-native{align-items:stretch;justify-content:flex-start;padding:0;overflow:auto}.fb-gate-panel,.fb-gate-card{max-width:none;width:100%;min-height:100%;border-radius:0;box-shadow:none;box-sizing:border-box;padding:max(20px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))}}'}
         </style>
         <div className={playing === true ? 'fb-backdrop fb-backdrop-playing' : 'fb-backdrop'} aria-hidden="true">
           <div className="fb-curtain fb-curtain-left" />
@@ -1671,8 +1940,8 @@ export default function FlashbackApp() {
               className="fb-brand-logo"
               src="/hooks/client/brand/png/logo-header.png"
               alt=""
-              width="160"
-              height="63"
+              width="132"
+              height="52"
             />
             <span className="fb-brand-text">
               <span className="fb-brand-name">Flashback Repository</span>
@@ -1680,13 +1949,27 @@ export default function FlashbackApp() {
             </span>
           </a>
           <nav className="fb-nav">
-            <a href="/">Library</a>
-            <a href="/setup">Setup</a>
-            <a href="/request">Request</a>
-            <a href="/motivation">Why</a>
-            <a href="/submit">Submit</a>
-            <a href="/board">Board</a>
-            <a href="/legal">Legal</a>
+            <a className="fb-link" href="/">
+              Library
+            </a>
+            <a className="fb-link" href="/setup">
+              Setup
+            </a>
+            <a className="fb-link" href="/request">
+              Request
+            </a>
+            <a className="fb-link" href="/motivation">
+              Why
+            </a>
+            <a className="fb-link" href="/submit">
+              Submit
+            </a>
+            <a className="fb-link" href="/board">
+              Board
+            </a>
+            <a className="fb-link" href="/legal">
+              Legal
+            </a>
           </nav>
         </header>
         <NowShowing variant="lcd" itemsJson={nowShowingItemsJson(projects, nowShowingSlugs)} ariaLabel="Now showing titles" />
@@ -1703,44 +1986,35 @@ export default function FlashbackApp() {
             Flashback Repository
           </span>
           <span className="fb-footer-links">
-            <a href="/setup">Setup / VLC</a>
+            <a className="fb-link" href="/setup">
+              {'Setup / VLC'}
+            </a>
             {' · '}
-            <a href="/request">Request downloads</a>
+            <a className="fb-link" href="/request">
+              {'Request downloads'}
+            </a>
             {' · '}
-            <a href="/motivation">Why we’re doing this</a>
+            <a className="fb-link" href="/motivation">
+              {"Why we're doing this"}
+            </a>
             {' · '}
-            <a href="/submit">Submissions</a>
+            <a className="fb-link" href="/submit">
+              {'Submissions'}
+            </a>
             {' · '}
-            <a href="/board">{'Board / Report a problem'}</a>
+            <a className="fb-link" href="/board">
+              {'Board / Report a problem'}
+            </a>
             {' · '}
-            <a href="/legal">Ownership</a>
+            <a className="fb-link" href="/legal">
+              {'Ownership'}
+            </a>
             {' · '}
-            <a href="/terms">Terms</a>
+            <a className="fb-link" href="/terms">
+              {'Terms'}
+            </a>
           </span>
-          {looksLikeCid(mediaRootCid) ? (
-              <div className="fb-footer-ipfs">
-                <span className="fb-footer-ipfs-label">Media root (IPFS)</span>
-                <code className="fb-footer-ipfs-cid" title="UnixFS DAG of all thin media">
-                  {mediaRootCid}
-                </code>
-                <button
-                  type="button"
-                  className="fb-btn fb-footer-ipfs-copy"
-                  onClick={() => {
-                    copyCidText(mediaRootCid)
-                  }}
-                >
-                  Copy
-                </button>
-                <a
-                  href={'https://cid.ipfs.tech/#' + mediaRootCid}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Inspect
-                </a>
-              </div>
-            ) : null}
+          {footerHitsEl}
         </footer>
       </div>
     </StyleContext>

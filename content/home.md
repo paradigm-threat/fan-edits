@@ -19,16 +19,16 @@ Own the original, confirm once, hit Play. Or ignore this and browse the full lib
 ## How to use it
 
 1. **Confirm ownership** on the welcome screen (once per browser).
-2. **One-time computer setup:** install VLC and the `vlc://` handler — see [Setup for playback](/setup).
+2. **Computer:** one-time VLC setup — see [Setup for playback](/setup). **Phone/tablet:** install the [Flashback APK](/downloads/flashback.apk) (plain-language steps on Setup).
 3. **Pick a title** from the library below — each page explains what changed.
 4. **Reaffirm for that film** the first time you open it (one checkbox; remembered forever on this device).
-5. Tap **Open in VLC** (or copy the stream URL into VLC → Media → Open Network Stream). There is also an **Android / TV APK** for couch watching.
+5. On a computer, tap **Open in VLC**. On Android, play in the Flashback app (or **Open in external player** if needed).
 
 Media rides **thin IPFS**: the bytes are content-addressed on the network (not parked forever as public repo blobs). If a file is not seeded yet, it **needs to be seeded** — the hash is known; the bytes just are not available yet.
 
 **Why this exists:** it is not only about better cuts. It is about whether we are **allowed** to improve the films we own and share those cuts with friends. [Read the full motivation →](/motivation)
 
-**Want to contribute a cut?** Prefer Kdenlive + melt from source so everything stays editable with open-source tools. [Submissions →](/submit)
+**Want to contribute a cut?** Prefer an open-source NLE project (Kdenlive, Shotcut, OpenShot, Flowblade, Pitivi, Olive, …) so everything stays editable without proprietary tools. [Submissions →](/submit)
 
 ## Working on
 

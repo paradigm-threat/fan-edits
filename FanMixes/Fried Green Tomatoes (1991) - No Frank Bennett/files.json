@@ -1,0 +1,16 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett",
+  "files": [
+    {
+      "path": ".render_filter_complex.txt",
+      "kind": "other",
+      "bytes": 3421
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 756
+    }
+  ]
+}

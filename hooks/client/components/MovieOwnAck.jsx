@@ -1,10 +1,22 @@
 /**
- * Per-title ownership reaffirm — native form + checkbox + OK (CleverScript-safe).
+ * Per-title ownership reaffirm — native form + OK (CleverScript-safe).
  *
  * Same pattern as OwnershipGate: GET ?movieOwnAck=<slug> persists via injected
  * script / client consume; no reliance on hydrated onClick.
+ * Checkbox is desktop fine-pointer only; mobile web is a single OK submit.
  */
 import React from 'react'
+
+function preferDesktopCheckbox() {
+  try {
+    if (typeof window === 'undefined' || !window.matchMedia) {
+      return false
+    }
+    return window.matchMedia('(hover: hover) and (pointer: fine)').matches
+  } catch (e) {
+    return false
+  }
+}
 
 var PREFIX = 'flashback.movieOwn.v1.'
 var WELCOME_KEY = 'flashback.ownershipAck.v1'
@@ -302,33 +314,40 @@ export default function MovieOwnAck(props) {
 
   let action = '/' + slug
   let checkLabel = 'I confirm I own a legal copy of ' + ownName + '.'
+  let desktopCheck = preferDesktopCheckbox() === true
+  let bodyHint =
+    desktopCheck === true
+      ? 'Check the box and tap OK to unlock playback for this title. Same house rule as the welcome screen: the edit is for people who already have the movie.'
+      : 'Tap OK to unlock playback for this title. Same house rule as the welcome screen: the edit is for people who already have the movie.'
 
   return (
     <div className="fb-movie-ack" role="dialog" aria-label="Confirm you own this title">
       <div className="fb-movie-ack-card">
         <p className="fb-movie-ack-kicker">Before you play</p>
         <h2 className="fb-movie-ack-title">{"Own the original — then enjoy the edit"}</h2>
-        <p className="fb-movie-ack-body">
-          {"Check the box and tap OK to unlock playback for this title. Same house rule as the welcome screen: the edit is for people who already have the movie."}
-        </p>
+        <p className="fb-movie-ack-body">{bodyHint}</p>
         <form className="fb-movie-ack-form" method="get" action={action}>
           <input type="hidden" name="movieOwnAck" value={slug} />
           {needWelcome === true ? (
             <input type="hidden" name="ownershipAck" value="1" />
           ) : null}
-          <label className="fb-movie-ack-check">
-            <input
-              type="checkbox"
-              className="fb-movie-ack-checkbox"
-              name="confirm"
-              value="1"
-              required
-            />
-            <span>{checkLabel}</span>
-          </label>
-          <p className="fb-movie-ack-hint">
-            {"Check the box above, then tap OK to continue."}
-          </p>
+          {desktopCheck === true ? (
+            <div className="fb-movie-ack-desktop-check">
+              <label className="fb-movie-ack-check">
+                <input
+                  type="checkbox"
+                  className="fb-movie-ack-checkbox"
+                  name="confirm"
+                  value="1"
+                  required
+                />
+                <span>{checkLabel}</span>
+              </label>
+              <p className="fb-movie-ack-hint">
+                {"Check the box above, then tap OK to continue."}
+              </p>
+            </div>
+          ) : null}
           <div className="fb-movie-ack-actions">
             <button type="submit" className="fb-btn fb-btn-primary fb-movie-ack-ok">
               OK — I confirm

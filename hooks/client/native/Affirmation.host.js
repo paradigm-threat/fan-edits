@@ -1,12 +1,23 @@
 /**
  * Web host for park-native tag `fb-affirmation`.
- * Modern JS/CSS; owns checkbox + CTA + localStorage (CleverScript must not).
+ * Modern JS/CSS; owns CTA + localStorage (CleverScript must not).
+ * Checkbox is desktop fine-pointer only — mobile web / touch get a single OK button.
  */
 (function (global) {
   'use strict';
 
   var WKEY = 'flashback.ownershipAck.v1';
   var MPREF = 'flashback.movieOwn.v1.';
+
+  /** Desktop mouse/trackpad: show checkbox. Phones/tablets: one-tap confirm. */
+  function preferDesktopCheckbox() {
+    try {
+      if (!global.matchMedia) return false;
+      return global.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    } catch (_) {
+      return false;
+    }
+  }
 
   function prop(props, key, fallback) {
     if (!props) return fallback;
@@ -47,16 +58,73 @@
     }
   }
 
-  function persist(storageKey, mode, slugHint) {
+  /**
+   * Affirmation-gated unique hit (not playback / VLC).
+   * Fail closed if localStorage unavailable. setItem happens in persist() first;
+   * undercount if POST fails after write is intentional.
+   */
+  function reportHit(kind, path) {
     try {
-      if (global.localStorage && global.localStorage.setItem) {
-        global.localStorage.setItem(storageKey, '1');
-        // Any movie-title ack also satisfies site-wide welcome (unlock CSS needs both).
-        if (mode === 'title' || storageKey.indexOf(MPREF) === 0) {
-          global.localStorage.setItem(WKEY, '1');
+      var payload = { kind: kind };
+      if (path) payload.path = path;
+      var body = JSON.stringify(payload);
+      if (typeof navigator !== 'undefined' && typeof navigator.sendBeacon === 'function') {
+        var blob = new Blob([body], { type: 'application/json' });
+        if (navigator.sendBeacon('/api/hits', blob)) return;
+      }
+      if (typeof global.fetch === 'function') {
+        global.fetch('/api/hits', {
+          method: 'POST',
+          headers: { 'content-type': 'application/json' },
+          body: body,
+          keepalive: true,
+        }).catch(function () {});
+      }
+    } catch (_) {
+      /* optional */
+    }
+  }
+
+  function persist(storageKey, mode, slugHint) {
+    var wrote = false;
+    var isTitle = mode === 'title' || storageKey.indexOf(MPREF) === 0;
+    var isWelcome = mode === 'welcome' || storageKey === WKEY;
+    try {
+      if (typeof global.localStorage === 'undefined' || !global.localStorage.setItem) {
+        return;
+      }
+      // Already counted this browser — do not re-POST.
+      var already = false;
+      try {
+        already = global.localStorage.getItem(storageKey) === '1';
+      } catch (_) {
+        return;
+      }
+      global.localStorage.setItem(storageKey, '1');
+      wrote = true;
+      // Any movie-title ack also satisfies site-wide welcome (unlock CSS needs both).
+      if (isTitle) {
+        var hadWelcome = false;
+        try {
+          hadWelcome = global.localStorage.getItem(WKEY) === '1';
+        } catch (_) {}
+        global.localStorage.setItem(WKEY, '1');
+        if (!hadWelcome) {
+          reportHit('site_view', null);
         }
       }
-    } catch (_) {}
+      if (!already) {
+        if (isTitle) {
+          var slug = slugHint || slugFromKey(storageKey) || pathSlug();
+          if (slug) reportHit('movie_view', '/' + slug);
+        } else if (isWelcome) {
+          reportHit('site_view', null);
+        }
+      }
+    } catch (_) {
+      return;
+    }
+    if (!wrote) return;
     try {
       const root = global.document && global.document.documentElement;
       if (!root) return;
@@ -244,22 +312,27 @@
     });
     panel.appendChild(bodyEl);
 
-    const box = global.document.createElement('label');
-    box.className = 'fb-gate-check-box';
-    const cb = global.document.createElement('input');
-    cb.type = 'checkbox';
-    cb.className = 'fb-gate-check';
-    cb.setAttribute('aria-required', 'true');
-    const cbText = global.document.createElement('span');
-    cbText.textContent = checkboxLabel;
-    box.appendChild(cb);
-    box.appendChild(cbText);
-    panel.appendChild(box);
+    const desktopCheck = preferDesktopCheckbox();
+    let cb = null;
+    let box = null;
+    if (desktopCheck) {
+      box = global.document.createElement('label');
+      box.className = 'fb-gate-check-box';
+      cb = global.document.createElement('input');
+      cb.type = 'checkbox';
+      cb.className = 'fb-gate-check';
+      cb.setAttribute('aria-required', 'true');
+      const cbText = global.document.createElement('span');
+      cbText.textContent = checkboxLabel;
+      box.appendChild(cb);
+      box.appendChild(cbText);
+      panel.appendChild(box);
 
-    const hint = global.document.createElement('p');
-    hint.className = 'fb-gate-hint';
-    hint.textContent = 'Check the box above, then tap OK to continue.';
-    panel.appendChild(hint);
+      const hint = global.document.createElement('p');
+      hint.className = 'fb-gate-hint';
+      hint.textContent = 'Check the box above, then tap OK to continue.';
+      panel.appendChild(hint);
+    }
 
     const btn = global.document.createElement('button');
     btn.type = 'button';
@@ -267,9 +340,9 @@
     btn.textContent = confirmLabel;
 
     function doConfirm() {
-      if (!cb.checked) {
+      if (cb && !cb.checked) {
         cb.focus();
-        box.classList.add('fb-gate-check-box-warn');
+        if (box) box.classList.add('fb-gate-check-box-warn');
         return;
       }
       persist(storageKey, mode, slugHint);
@@ -289,7 +362,7 @@
 
     btn.addEventListener('click', doConfirm);
     btn.addEventListener('pointerdown', () => {
-      if (cb.checked) persist(storageKey, mode, slugHint);
+      if (!cb || cb.checked) persist(storageKey, mode, slugHint);
     });
     panel.appendChild(btn);
 

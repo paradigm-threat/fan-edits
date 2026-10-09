@@ -1,45 +1,61 @@
 # Android APKs
 
-Flashback on Android is two builds of the Relay client (`clevertree/react-client-android`, checkout `relay-client-android`). Neither APK vendors this repo’s hooks or movies. Both load a live Relay origin and paint that site’s client hook as native views.
+Flashback on Android is two builds of the Relay client (`clevertree/react-client-android`, checkout `relay-client-android`). Neither APK vendors movies. The **Flashback** flavor is a **Kotlin-native shell** (catalog + ownership + ExoPlayer). The **Relay** flavor still loads any origin’s client hook via CleverScript.
 
-## Playback (external player default)
+Download (when published): **[flashback.apk](/downloads/flashback.apk)** — see [downloads/README.md](../downloads/README.md).
 
-Published masters are **HEVC Matroska (`.mkv`)** with embedded subs. The theater default on Android matches the web:
+Deferred player features (VLC/Nova-class, not in v1): **[ANDROID_PLAYER_BACKLOG.md](ANDROID_PLAYER_BACKLOG.md)**.
 
-- **Open in external player** — `ACTION_VIEW` / `intent:` URL for the HTTPS stream so VLC (or the system chooser) streams with Range, without stuffing the Media3 cache.
-- **Download MKV** — offline open in any capable player.
-- In-app ExoPlayer (`@clevertree/video`) remains available later for native MKV/HEVC experiments; it is **not** the default for archival masters (avoids cache pressure and codec surprises).
+## Playback (Flashback native shell)
 
+Published masters are **HEVC Matroska (`.mkv`)**. In-app play uses **Media3 ExoPlayer** with the device’s **hardware HEVC** decoder over progressive HTTPS (Range requests; no multi‑GB disk cache thrash). Catalog paths with spaces are percent-encoded before bind.
+
+- **Play in app** — after ownership confirm → immersive landscape theater (full-bleed player).
+- **Open in external player** — theater “External” chip or error-card action (`ACTION_VIEW` / `video/*`); pick VLC and optionally Always.
+- **Save offline** — full file under app-private storage (notification while downloading).
+- If decode fails (common on devices without HEVC hardware): **PlaybackErrors** card (not a truncated Toast) plus Open in external player / Get VLC. Install [VLC for Android](https://play.google.com/store/apps/details?id=org.videolan.vlc) for that long tail.
+
+Soft FFmpeg decode is **not** shipped (APK size / licensing). See the backlog doc.
+
+### How to test playback
+
+1. Install `downloads/flashback.apk` (or `assembleFlashbackDebug` output) on a device/emulator with **HEVC hardware**.
+2. Open the app → library loads from `https://flashbackrepository.org/index.json`.
+3. Optional: **Lab** → HEVC probe, **Simulate decode error** (full card), **Try sample stream** (prefers a `showing` master such as The Mummy Debugged).
+4. Pick **The Mummy (1999) — Debugged** → **OK — I confirm** (hits POST once) → landscape theater should buffer and play.
+5. Scrub / pause; confirm Range/`Accept-Ranges` on the gateway if diagnosing stalls (`curl -I` the encoded `.mkv` URL).
+6. Force a decode failure path on non-HEVC hardware: error card → **Open in external player**.
+
+Web checklist: **[/android-lab](/android-lab)**.
 ## Flavors
 
 | APK | Application id | What you see |
 |-----|----------------|--------------|
-| Generic Relay | `com.relay.pure` | Server list, repo tabs, and shell settings. Any Relay origin. Skip-affirmation lives here. |
-| Flashback Repository | `com.flashback.repository` | `https://flashbackrepository.org` is baked in. A lock flag (`RELAY_LOCK_ORIGIN`) never creates the server list, tabs, or shell settings. The site’s own screens, including its settings and gates, are the app. |
-
-Build both from `relay-client-android/android`:
+| Generic Relay | `com.relay.pure` | Server list, repo tabs, shell settings. Any Relay origin via **HookRenderer** + client hook. |
+| Flashback Repository | `com.flashback.repository` | Baked `https://flashbackrepository.org`. **Native UI** (no CleverScript paint): library from `/index.json`, title + ownership keys shared with the web, ExoPlayer theater. Menu opens Setup / Legal / Motivation / Terms / Request via fetched `content/*.md` (`RelayMarkdownView`); Board opens the site in a browser; Lab is in-app. |
+Build from `relay-client-android/android`:
 
 ```bash
 ./gradlew :app:assembleRelayDebug :app:assembleFlashbackDebug
 ```
 
-## Site hooks
+## Native reusable pieces
 
-CleverScript stays on `Foo.js` (web keeps `Foo.host.js`). Android prefers `Foo.android.js` when the shell fetches `hooks/client/native/`. Those files are CleverScript, not Kotlin:
+- `RelayVideoPlayerView` — ExoPlayer + MediaSession + external handoff (also used if the hook path mounts `relay-video-player`). Decode failures use a full-screen error **card** (not a truncated Toast) with Open in external player / Get VLC. Native Flashback theater hides the Save-offline chrome so it does not cover PlayerView controls.
+- `FlashbackCatalog` — `/index.json` parse + percent-encoded `masterStreamUrl` (spaces in paths); JVM unit-tested.- `PlaybackErrors` — classified user copy (decoder / network / format); JVM unit-tested.
+- `HevcCapability` — MediaCodec HEVC hardware probe for the in-app **Lab**.
+- `ExternalMediaIntents` — `intent:` / HTTPS / chooser open helper.
+- `RelayMarkdownView` — Markwon-based markdown TextView for blurbs and docs **without** themed-styler (same origin `.md` files the web uses).
 
-- `Affirmation.android.js` — confirm dialog, same storage keys as the web host. Honors `@hooks` `relaySkipAffirmations` from the generic client.
-- `NowShowing.android.js` — horizontal, remote-focusable row (`data-relay-scroll="x"`).
-- `TheaterPlayer.android.js` — external-player CTA for the seeded master stream URL; download links; optional later ExoPlayer.
+## Compatibility testing
 
-`npm test` includes `hooks/client/native/android-hosts.test.mjs`, which checks those files against the web stub’s exports, storage keys, and props. Playwright still covers `*.host.js` only.
+- In-app: library → **Lab** (HEVC probe, simulate error overlay, sample stream).
+- Web checklist: **[/android-lab](/android-lab)** (`content/android-lab.md`).
+- Unit tests: `./gradlew :app:testFlashbackDebugUnitTest` in `relay-client-android/android`.
 
-## Shell behavior
+## Client-hook path (deferred polish)
 
-- Import closure is fetched from the origin (not only `hooks.json`). Last good closure is the offline backup. Hooks are not copied into the APK.
-- Full hook reload after 24 hours in the foreground, deferred while a foreground stream/save is active, so edits that are not QUERY updates show up. Flashback’s catalog is `fetch('/index.json')` inside the hook.
-- Relative links navigate inside the app. The shell sets `globalThis.__relaySkipAffirmations` from the generic client’s setting and reads the site’s client GET path from `OPTIONS`. A `setTimeout` prelude lets the site’s hydrate gate open so playback can unlock.
-- Flashback traffic is HTTPS. The generic client allows cleartext only for a server the user adds (and for localhost).
-- Movie files can be saved in full under app-specific storage when the user chooses Download. Broad external-storage grants are not requested.
+CleverScript hosts under `hooks/client/native/*.android.js` remain for the generic Relay client and future Flashback hook-parity work. Flashback product v1 does **not** require hook paint. Ownership storage keys stay aligned: `flashback.ownershipAck.v1`, `flashback.movieOwn.v1.<slug>`.
 
 ## Permissions
 

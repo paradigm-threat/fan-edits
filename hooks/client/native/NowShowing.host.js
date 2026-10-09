@@ -186,11 +186,14 @@
       kicker.textContent = 'Feature presentation';
       const title = doc.createElement('h3');
       title.className = 'fb-slideshow-title';
+      const blurb = doc.createElement('p');
+      blurb.className = 'fb-slideshow-blurb';
       copy.appendChild(kicker);
       copy.appendChild(title);
+      copy.appendChild(blurb);
       a.appendChild(img);
       a.appendChild(copy);
-      return { a: a, img: img, title: title };
+      return { a: a, img: img, title: title, blurb: blurb };
     }
 
     const front = makeLayer('fb-slideshow-layer is-active');
@@ -214,12 +217,32 @@
     function fillLayer(layer, it) {
       layer.a.href = it.href || '#';
       layer.title.textContent = it.title || '';
+      const blurbText = it && it.blurb ? String(it.blurb) : '';
+      if (blurbText) {
+        layer.blurb.textContent = blurbText;
+        layer.blurb.style.display = '';
+      } else {
+        layer.blurb.textContent = '';
+        layer.blurb.style.display = 'none';
+      }
+      if (layer._softRetry) {
+        try {
+          layer._softRetry.cancel();
+        } catch (_) {}
+        layer._softRetry = null;
+      }
       if (it.poster) {
-        layer.img.src = it.poster;
         layer.img.style.display = '';
         layer.a.classList.add('has-poster');
+        const attach = global.__relayAttachSoftRetryImage;
+        if (typeof attach === 'function') {
+          layer._softRetry = attach(layer.img, it.poster, {});
+        } else {
+          layer.img.src = it.poster;
+        }
       } else {
         layer.img.removeAttribute('src');
+        layer.img.removeAttribute('data-relay-img-state');
         layer.img.style.display = 'none';
         layer.a.classList.remove('has-poster');
       }

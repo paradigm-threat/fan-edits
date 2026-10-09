@@ -15,13 +15,6 @@ Aside from all the obvious problems with Spielberg's directing style, crappy pac
 - Score features music from Jeff Wayne’s *War of the Worlds* album and the Orson Welles 1938 broadcast.
 - Morgan Freeman’s intro replaced by Richard Burton’s.
 
-Full picture-hole list (many TBD by cue): [CHANGES.md](CHANGES.md).
+---
 
-## Info
-
-Type: FanMix  
-Method: DM  
-Original: War of the Worlds (2005)  
-Release Date: 7/16/2025  
-Original Runtime: 1:56:31  
-New Runtime: 1:24:05
+Want to contribute a cut? See [Submit](/submit).

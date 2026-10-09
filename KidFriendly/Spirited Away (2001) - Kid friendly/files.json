@@ -1,0 +1,11 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "KidFriendly/Spirited Away (2001) - Kid friendly",
+  "files": [
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 827
+    }
+  ]
+}
