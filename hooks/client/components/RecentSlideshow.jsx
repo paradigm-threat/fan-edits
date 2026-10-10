@@ -159,7 +159,17 @@ export default function RecentSlideshow(props) {
   return (
     <section className="fb-now-showing" aria-label="Now showing">
       <div className="fb-now-showing-head">
-        <h2 className="fb-section-title fb-now-showing-title">Now showing</h2>
+        <div className="fb-now-showing-title-block">
+          <h2 className="fb-section-title fb-now-showing-title">Now showing</h2>
+          <p className="fb-now-showing-sub">
+            Ready to play or download on the server right now — not the full library. Other titles:
+            stream/download via IPFS when peers are online, or{' '}
+            <a className="fb-link" href="/request">
+              request Drive links
+            </a>
+            .
+          </p>
+        </div>
         <p className="fb-now-showing-count">{label}</p>
       </div>
       <div className="fb-slideshow">
