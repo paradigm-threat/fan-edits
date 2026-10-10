@@ -34,7 +34,7 @@ Soft FFmpeg decode is **not** shipped (APK size / licensing). See the backlog do
 
 ### How to test playback
 
-1. Install `downloads/flashback.apk` (or ABI split) **1.0.29+** on a device with **HEVC hardware** (arm64 phone or armeabi-v7a Fire TV).
+1. Install `downloads/flashback.apk` (or ABI split) **1.0.30+** on a device with **HEVC hardware** (arm64 phone or armeabi-v7a Fire TV).
 2. Open the app → library loads from `https://flashbackrepository.org/index.json` (+ `assets.manifest.json` for CIDs). Kubo starts in the background.
 3. **Lab** → **IPFS (embedded Kubo)** → Start node → Gateway Range probe; **Try sample via IPFS localhost**.
 4. Pick **The Mummy (1999) — Debugged** → **OK — I confirm** → optional **Keep offline copy** → **Play** → theater streams from `127.0.0.1:18080/ipfs/{cid}` (status chip briefly).

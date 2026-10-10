@@ -44,7 +44,8 @@ themes:
         flexDirection: "column"
         color: "var(cream)"
         backgroundColor: "var(house)"
-        overflowX: "hidden"
+        # clip (not hidden) so sticky header can stick to the viewport
+        overflowX: "clip"
         overflowY: "visible"
       ".fb-backdrop":
         position: "fixed"
@@ -54,13 +55,15 @@ themes:
         backgroundColor: "var(house)"
         backgroundImage: "url(/hooks/client/brand/png/wall-texture.png)"
         backgroundRepeat: "repeat-y"
-        backgroundPosition: "center top"
+        # Align first tile under the sticky header band (~logo + padding)
+        backgroundPosition: "center 5.25rem"
         backgroundSize: "100% auto"
       ".fb-curtain":
         display: "none"
       ".fb-wall-lights":
         position: "absolute"
-        top: "0"
+        # Restart sconce columns just below the sticky header
+        top: "5.25rem"
         bottom: "0"
         width: "22%"
         maxWidth: "280px"
@@ -89,8 +92,9 @@ themes:
         background: "radial-gradient(ellipse at center, rgba(212,165,116,0.18) 0%, transparent 70%)"
         opacity: "0.9"
       ".fb-header":
-        position: "relative"
-        zIndex: "2"
+        position: "sticky"
+        top: "0"
+        zIndex: "40"
         display: "flex"
         flexDirection: "row"
         flexWrap: "wrap"
@@ -99,7 +103,8 @@ themes:
         gap: "12px"
         padding: "16px 20px"
         borderBottom: "1px solid var(border)"
-        background: "linear-gradient(180deg, rgba(26,8,12,0.92), rgba(10,7,8,0.75))"
+        background: "linear-gradient(180deg, #1a0a0c 0%, #120608 100%)"
+        boxShadow: "0 8px 24px rgba(0,0,0,0.45)"
       ".fb-brand":
         display: "flex"
         flexDirection: "row"
@@ -1169,7 +1174,10 @@ themes:
           display: "none"
         ".fb-header":
           padding: "12px 14px"
+        ".fb-backdrop":
+          backgroundPosition: "center 4.25rem"
         ".fb-wall-lights":
+          top: "4.25rem"
           width: "16%"
           maxWidth: "120px"
           opacity: "0.85"
