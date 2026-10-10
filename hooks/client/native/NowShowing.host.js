@@ -261,12 +261,20 @@
 
     const head = doc.createElement('div');
     head.className = 'fb-now-showing-head';
+    const titleBlock = doc.createElement('div');
+    titleBlock.className = 'fb-now-showing-title-block';
     const h2 = doc.createElement('h2');
     h2.className = 'fb-section-title fb-now-showing-title';
     h2.textContent = 'Now showing';
+    const sub = doc.createElement('p');
+    sub.className = 'fb-now-showing-sub';
+    sub.textContent =
+      'Ready to play or download on the server right now — not the full library. Other titles: stream/download via IPFS when peers are online, or request Drive links.';
+    titleBlock.appendChild(h2);
+    titleBlock.appendChild(sub);
     const counter = doc.createElement('p');
     counter.className = 'fb-now-showing-count fb-slideshow-count';
-    head.appendChild(h2);
+    head.appendChild(titleBlock);
     head.appendChild(counter);
 
     const frame = doc.createElement('div');
