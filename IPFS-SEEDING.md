@@ -1,10 +1,16 @@
 # Seeding fan-edit video on IPFS (Flashback Repository)
 
-Flashback Repository ([flashbackrepository.org](https://flashbackrepository.org/)) is a **thin IPFS** Relay catalog repo: Git holds CleverScript, metadata, posters/brand images, and **text pointer stubs** under `.relay/assets/` for **feature video only** (`.mkv`). Posters and UI PNGs are normal tip blobs — not IPFS. The actual `.mkv` files live on IPFS and are pinned by whoever seeds them (your workstation and/or the Relay fleet).
+Flashback Repository ([flashbackrepository.org](https://flashbackrepository.org/)) is a **thin IPFS** Relay catalog repo: Git holds CleverScript, metadata, posters/brand images, and **text pointer stubs** under `.relay/assets/` for **feature video only** (masters — usually `.mkv`). Posters and UI/brand PNGs are **normal tip blobs — never IPFS**. The actual movie bytes live on IPFS and are pinned by whoever seeds them.
 
-**Web playback is same-origin only.** The browser requests `/FanMixes/…/….mkv` on this site. Relay resolves the CID, pins it into the **node’s local Kubo**, and serves bytes (Range) from that Kubo. The browser does **not** talk to `ipfs.io` / Helia / public gateways for video.
+**What IPFS is for:** shareable feature masters in the free catalog (titles others may keep). Download on the website and Keep/Save in the APK use `/ipfs/{cid}` when a stub exists.
 
-**Flashback APK (1.0.26+)** embeds Kubo and fetches/seeds catalog CIDs over Bitswap directly (ExoPlayer → `127.0.0.1` gateway). See [docs/ANDROID_APK.md](docs/ANDROID_APK.md) and `relay-client-android/android/ipfs-kubo/`.
+**What IPFS is not for:** brand/UI assets, and (going forward) “Now showing” server streams. Now showing titles are meant to be **manually uploaded files on the host**, separate from the IPFS catalog. Do **not** treat Relay tip push or fleet sync as uploading movie binaries — the tip only carries stubs + `assets.manifest.json` + `index.json`.
+
+**Seeder storage rule:** a host that plans to seed must keep the feature files on **local disk** (SSD, HDD, or NAS mount used as ordinary files). Pin with local Kubo (`ipfs add --pin` / `relay-ipfs-ingest`). Putting `IPFS_PATH` on a flaky UNC share is unsupported. The Relay fleet is not a substitute for your own pins of multi‑GB masters.
+
+**Web playback** for same-origin logical paths (when a gateway has the CID) still resolves stubs into that node’s Kubo. The browser does **not** talk to `ipfs.io` / Helia / public gateways for video. The primary **download** path for non–Now-showing titles is `/ipfs/{cid}`.
+
+**Flashback APK** embeds Kubo and fetches/seeds catalog CIDs over Bitswap (ExoPlayer → `127.0.0.1` gateway when playing from IPFS). See [docs/ANDROID_APK.md](docs/ANDROID_APK.md) and `relay-client-android/android/ipfs-kubo/`.
 
 See also: [docs/RELAY_DESKTOP.md](docs/RELAY_DESKTOP.md), [docs/PARKED_THIN_VIDEO.md](docs/PARKED_THIN_VIDEO.md), and **`relay-gateway/docs/RELAY_IPFS.md`** in your relay-gateway checkout (Kubo install, gateway env, status JSON).
 
@@ -50,7 +56,7 @@ Prefer **Kubo pin + Range** over stuffing every mkv into the relay file cache.
 
 **Do not run Kubo on the NAS (NobiServe).** The NAS holds file copies and this doc checkout for humans; seeding is for PCs with local disk + enough RAM.
 
-Fleet Relay nodes remain the always-on backbone. Home workstations **add** providers.
+Fleet Relay nodes may still pin when operators choose to, but **you should not assume the fleet has every master**. Home workstations (or any seeder with local copies) **are** the reliable providers for catalog downloads.
 
 ### Ubuntu (Paradigm-style)
 
