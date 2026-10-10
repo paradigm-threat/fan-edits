@@ -32,11 +32,73 @@ Prefer **Kubo pin + Range** over stuffing every mkv into the relay file cache.
    ```
 
    **Web UI:** open [http://127.0.0.1:5001/webui](http://127.0.0.1:5001/webui) in a browser on this computer (API is bound to localhost only).
+
+   **Accelerated DHT (workstation seeders):** so catalog CIDs stay findable while providing:
+
+   ```bash
+   ipfs config --json Routing.AcceleratedDHTClient true
+   systemctl --user restart ipfs
+   ```
+
 2. **`relay-ipfs-ingest`** — from a **relay-gateway** checkout, typically:
    `~/dev/relay/relay-gateway/scripts/relay-ipfs-ingest`
    (must be on `PATH` or invoked by full path; `scripts/ingest-fanedit-renders.py` hardcodes this path).
 3. Optional: install repo hooks so staged binaries are ingested before commit:
    `relay-ipfs-ingest --install-hooks`
+
+## Workstation seeder (Ubuntu / Windows)
+
+**Do not run Kubo on the NAS (NobiServe).** The NAS holds file copies and this doc checkout for humans; seeding is for PCs with local disk + enough RAM.
+
+Fleet Relay nodes remain the always-on backbone. Home workstations **add** providers.
+
+### Ubuntu (Paradigm-style)
+
+1. User unit `~/.config/systemd/user/ipfs.service` + `loginctl enable-linger "$USER"` so Kubo survives logout.
+2. Repo on a **local** drive (`IPFS_PATH` / `~/.ipfs` → e.g. `/media/…/ipfs-kubo`), never on `\\nas\…`.
+3. Accelerated DHT (above).
+4. Pin the catalog from this repo:
+
+   ```bash
+   cd ~/dev/fan-edits
+   ./scripts/ipfs-pin-catalog-local.sh          # pin missing CIDs
+   ./scripts/ipfs-pin-catalog-local.sh --report # audit only (exit 1 if any missing)
+   ```
+
+5. Hourly timer (example units already used on Paradigm):
+
+   ```bash
+   systemctl --user enable --now ipfs-pin-catalog.timer
+   systemctl --user status ipfs-pin-catalog.timer
+   ```
+
+6. Optional but stronger for multi‑GB Bitswap: forward **TCP+UDP 4001** on the home router to this machine. Browsers/APKs do **not** need that port to *fetch*; it helps this box *provide*.
+
+**Validate:** WebUI Peers / Pins, `--report` table, and title-page seed line (`?relayAssetStatus=1`).
+
+### Windows
+
+1. Install [Kubo](https://docs.ipfs.tech/install/command-line/), set `IPFS_PATH` to a folder on a **local** drive (copy/sync `.mkv` / renditions from NAS `Public/Videos/FanEdits` via SMB **as ordinary files**, then `ipfs add` / ingest — never put `IPFS_PATH` on a UNC share).
+2. Run `ipfs daemon` at login (Task Scheduler or a shortcut).
+3. Clone or pull `fan-edits`, then:
+
+   ```powershell
+   cd C:\path\to\fan-edits
+   .\scripts\ipfs-pin-catalog-local.ps1
+   .\scripts\ipfs-pin-catalog-local.ps1 -Report
+   ```
+
+4. Same optional router **4001** forward when this PC is the primary home seeder.
+
+### NAS doc sync
+
+After updating this file in git, on the NobiServe checkout (example path):
+
+```bash
+cd /share/CACHEDEV1_DATA/Public/Videos/FanEdits && git pull
+```
+
+Windows can open the same instructions from the share; it still seeds from **local** Kubo only.
 
 ## Source renders (local disk)
 
