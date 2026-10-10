@@ -10,6 +10,14 @@ export default function ExternalPlay(props) {
   if (p.streamUrl !== null && p.streamUrl !== undefined) {
     streamUrl = '' + p.streamUrl
   }
+  let streamUrlWeb = ''
+  if (p.streamUrlWeb !== null && p.streamUrlWeb !== undefined) {
+    streamUrlWeb = '' + p.streamUrlWeb
+  }
+  let streamUrlMobile = ''
+  if (p.streamUrlMobile !== null && p.streamUrlMobile !== undefined) {
+    streamUrlMobile = '' + p.streamUrlMobile
+  }
   let unlocked = 'false'
   if (p.unlocked === true || p.unlocked === 'true') {
     unlocked = 'true'
@@ -23,6 +31,8 @@ export default function ExternalPlay(props) {
       className="fb-external-play-host"
       data-relay-park-native="fb-external-play"
       data-stream-url={streamUrl}
+      data-stream-url-web={streamUrlWeb}
+      data-stream-url-mobile={streamUrlMobile}
       data-unlocked={unlocked}
       data-setup-href={setupHref}
     />

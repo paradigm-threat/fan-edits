@@ -19,7 +19,7 @@ Own the original, confirm once, hit Play. Or ignore this and browse the full lib
 ## How to use it
 
 1. **Confirm ownership** on the welcome screen (once per browser).
-2. **Computer:** one-time VLC setup — see [Setup for playback](/setup). **Phone/tablet:** install the [Flashback APK](/downloads/flashback.apk) (plain-language steps on Setup).
+2. **Computer:** one-time VLC setup — see [Setup for playback](/setup). **Phone/tablet / Fire TV:** install the [Flashback App](/app). **iPhone/iPad:** browser + VLC only (no sideload app).
 3. **Pick a title** from the library below — each page explains what changed.
 4. **Reaffirm for that film** the first time you open it (one checkbox; remembered forever on this device).
 5. On a computer, tap **Open in VLC**. On Android, play in the Flashback app (or **Open in external player** if needed).

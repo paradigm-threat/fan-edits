@@ -1,12 +1,14 @@
 # Flashback APK downloads
 
-Published installs live at same-origin URLs:
+**Public install page (share this, not raw APK URLs):** [flashbackrepository.org/app](https://flashbackrepository.org/app)
+
+Published APK binaries (linked from `/app` with version labels):
 
 | File | Use |
 |------|-----|
-| **[flashback.apk](https://flashbackrepository.org/downloads/flashback.apk)** | Universal (arm64 + 32-bit). Default download / Setup link. |
-| **[flashback-arm64-v8a.apk](https://flashbackrepository.org/downloads/flashback-arm64-v8a.apk)** | Phones / 64-bit devices (smaller). |
-| **[flashback-armeabi-v7a.apk](https://flashbackrepository.org/downloads/flashback-armeabi-v7a.apk)** | Fire TV / older 32-bit Android TV. |
+| `flashback.apk` | Universal (arm64 + 32-bit). Default on `/app`. |
+| `flashback-arm64-v8a.apk` | Phones / 64-bit devices (smaller). |
+| `flashback-armeabi-v7a.apk` | Fire TV / older 32-bit Android TV. |
 
 Version metadata for in-app update checks:
 
@@ -36,7 +38,7 @@ Publish **`assembleFlashbackRelease`** only. Debug-signed APKs (`CN=Android Debu
 - Credentials file (gitignored): `relay-client-android/android/keystore.properties` (copy of `~/.android/flashback-release.keystore.credentials`)
 - Gradle wires `signingConfigs.release` from that file, or from `-PKEYSTORE_PATH` / `ANDROID_KEYSTORE_*` for CI
 
-Release signing does **not** silence Play Protect for sideload. Users still allow install once (see [Setup](/setup)). Without Play Store distribution, that allow step is the practical path.
+Release signing does **not** silence Play Protect for sideload. Users still allow install once (see [App](/app)). Without Play Store distribution, that allow step is the practical path.
 
 **Signer change:** anyone who installed an older debug-signed build must **uninstall** before installing this release-signed APK (Android will not update across different signatures).
 

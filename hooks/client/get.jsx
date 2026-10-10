@@ -17,6 +17,7 @@ import Affirmation, {
 import NowShowing from 'hooks/client/native/NowShowing.js'
 import ExternalPlay from 'hooks/client/native/ExternalPlay.js'
 import Board from 'hooks/client/native/Board.js'
+import AppDownloads from 'hooks/client/components/AppDownloads.jsx'
 // SSR-static tip (`hydrate: false`): no embed.js, so gallery CEs never upgrade.
 
 function str(v) {
@@ -1090,6 +1091,12 @@ function routeKind(route) {
   if (route === '/setup' || route === '/playback' || route === '/vlc') {
     return { kind: 'md', file: 'content/setup.md', title: 'Setup for playback' }
   }
+  if (route === '/app' || route === '/android' || route === '/apk') {
+    return { kind: 'app', file: 'content/app.md', title: 'Flashback App' }
+  }
+  if (route === '/android-lab') {
+    return { kind: 'md', file: 'content/android-lab.md', title: 'Android APK lab' }
+  }
   if (route === '/request' || route === '/downloads' || route === '/email') {
     return { kind: 'request', file: 'content/request.md', title: 'Request downloads' }
   }
@@ -1414,8 +1421,54 @@ export default function FlashbackApp() {
       blogPosts = []
     }
   }
-  if (kind.kind === 'md' || kind.kind === 'request') {
+  if (kind.kind === 'md' || kind.kind === 'request' || kind.kind === 'app') {
     md = fetchText(kind.file)
+  }
+
+  let apkMeta = {
+    versionName: '',
+    versionCode: '',
+    apkUrl: '/downloads/flashback.apk',
+    apkArm64: '/downloads/flashback-arm64-v8a.apk',
+    apkArmv7: '/downloads/flashback-armeabi-v7a.apk',
+  }
+  if (kind.kind === 'app') {
+    try {
+      const raw = fetchText('downloads/flashback.json')
+      if (raw && raw.length > 0) {
+        const j = JSON.parse(raw)
+        if (j) {
+          if (j.versionName) {
+            apkMeta.versionName = str(j.versionName)
+          }
+          if (j.versionCode !== null && j.versionCode !== undefined) {
+            apkMeta.versionCode = str(j.versionCode)
+          }
+          if (j.apkUrl) {
+            const u = str(j.apkUrl)
+            if (u.indexOf('/downloads/') >= 0) {
+              apkMeta.apkUrl = u.slice(u.indexOf('/downloads/'))
+            } else if (u.indexOf('http') !== 0) {
+              apkMeta.apkUrl = u.charAt(0) === '/' ? u : '/' + u
+            }
+          }
+          if (j.apkUrls) {
+            if (j.apkUrls['arm64-v8a']) {
+              const u = str(j.apkUrls['arm64-v8a'])
+              if (u.indexOf('/downloads/') >= 0) {
+                apkMeta.apkArm64 = u.slice(u.indexOf('/downloads/'))
+              }
+            }
+            if (j.apkUrls['armeabi-v7a']) {
+              const u = str(j.apkUrls['armeabi-v7a'])
+              if (u.indexOf('/downloads/') >= 0) {
+                apkMeta.apkArmv7 = u.slice(u.indexOf('/downloads/'))
+              }
+            }
+          }
+        }
+      }
+    } catch (eApk) {}
   }
 
   const REQUEST_EMAIL = 'ari@asu.edu'
@@ -1660,6 +1713,19 @@ export default function FlashbackApp() {
         <Board path={bq.path} kind={bq.kind} />
       </div>
     )
+  } else if (kind.kind === 'app') {
+    main = (
+      <article className="fb-doc fb-prose">
+        <AppDownloads
+          versionName={apkMeta.versionName}
+          versionCode={apkMeta.versionCode}
+          apkUrl={apkMeta.apkUrl}
+          apkArm64={apkMeta.apkArm64}
+          apkArmv7={apkMeta.apkArmv7}
+        />
+        <MarkdownRenderer content={md || '# Loading…'} />
+      </article>
+    )
   } else if (kind.kind === 'md') {
     // Setup: expose #clone-repo (MarkdownRenderer escapes raw HTML anchors).
     let setupBefore = ''
@@ -1768,9 +1834,19 @@ export default function FlashbackApp() {
       startAtVal = startAtNum
     }
     let streamUrl = ''
+    let streamUrlWeb = ''
+    let streamUrlMobile = ''
     if (selected) {
       // VLC on macOS rejects MRLs with raw spaces or parentheses.
       streamUrl = encodeMarkdownUrl(absoluteStreamUrl(mediaSrc(selected)))
+      const webRel = projectMediaField(selected, 'mediaWeb')
+      const mobileRel = projectMediaField(selected, 'mediaMobile')
+      if (webRel.length > 0) {
+        streamUrlWeb = encodeMarkdownUrl(absoluteStreamUrl(mediaSrcFor(selected, webRel)))
+      }
+      if (mobileRel.length > 0) {
+        streamUrlMobile = encodeMarkdownUrl(absoluteStreamUrl(mediaSrcFor(selected, mobileRel)))
+      }
     }
     const posterHref = encodeMarkdownUrl(absoluteStreamUrl(projectPosterPath(selected)))
     const readmeMd = rewriteReadmeAssetLinks(hero.body || '', selected ? selected.path : '')
@@ -1780,17 +1856,19 @@ export default function FlashbackApp() {
         <div>
           <ExternalPlay
             streamUrl={streamUrl}
+            streamUrlWeb={streamUrlWeb}
+            streamUrlMobile={streamUrlMobile}
             unlocked={movieAck === true && ack === true}
             setupHref="/setup"
           />
           <p className="fb-theater-downloads-note">
             {'Phone or tablet? '}
-            <a className="fb-link" href="/downloads/flashback.apk">
-              {'Download Flashback APK'}
+            <a className="fb-link" href="/app">
+              {'Flashback App'}
             </a>
             {' · '}
             <a className="fb-link" href="/setup">
-              {'Setup'}
+              {'Setup / VLC'}
             </a>
           </p>
         </div>
@@ -2042,6 +2120,9 @@ export default function FlashbackApp() {
             <a className="fb-link" href="/">
               Library
             </a>
+            <a className="fb-link" href="/app">
+              App
+            </a>
             <a className="fb-link" href="/setup">
               Setup
             </a>
@@ -2076,6 +2157,10 @@ export default function FlashbackApp() {
             Flashback Repository
           </span>
           <span className="fb-footer-links">
+            <a className="fb-link" href="/app">
+              {'App'}
+            </a>
+            {' · '}
             <a className="fb-link" href="/setup">
               {'Setup / VLC'}
             </a>

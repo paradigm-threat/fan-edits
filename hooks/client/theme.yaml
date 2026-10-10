@@ -888,6 +888,30 @@ themes:
       ".fb-btn-icon":
         width: "20px"
         height: "20px"
+      ".fb-app-downloads":
+        margin: "0 0 28px"
+        padding: "16px 18px"
+        border: "1px solid var(border)"
+        background: "rgba(0,0,0,0.28)"
+      ".fb-app-downloads-version":
+        margin: "0 0 12px"
+        fontSize: "1.05rem"
+        color: "var(cream)"
+        letterSpacing: "0.02em"
+      ".fb-app-downloads-actions":
+        display: "flex"
+        flexWrap: "wrap"
+        gap: "10px 12px"
+        margin: "0 0 8px"
+      ".fb-btn-quality.is-active":
+        borderColor: "var(gold)"
+        color: "var(cream)"
+        background: "linear-gradient(180deg, #5a2030, #3a1018)"
+      ".fb-external-play-quality":
+        display: "flex"
+        flexWrap: "wrap"
+        gap: "8px 10px"
+        margin: "0 0 12px"
       ".fb-media":
         minHeight: "120px"
         display: "flex"

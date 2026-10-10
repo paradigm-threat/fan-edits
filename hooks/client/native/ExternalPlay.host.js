@@ -153,7 +153,26 @@
   }
 
   function buildExternalPlay(props, hostEl) {
-    const streamUrl = absoluteHttps(prop(props, 'streamUrl', ''));
+    const masterUrl = absoluteHttps(prop(props, 'streamUrl', ''));
+    const webUrl = absoluteHttps(prop(props, 'streamUrlWeb', '') || prop(props, 'data-stream-url-web', ''));
+    const mobileUrl = absoluteHttps(
+      prop(props, 'streamUrlMobile', '') || prop(props, 'data-stream-url-mobile', ''),
+    );
+    const ladder = [];
+    function pushRung(kind, label, url) {
+      const u = String(url || '');
+      if (!u) return;
+      for (let i = 0; i < ladder.length; i++) {
+        if (ladder[i].url === u) return;
+      }
+      ladder.push({ kind: kind, label: label, url: u });
+    }
+    pushRung('master', 'Full quality (MKV)', masterUrl);
+    pushRung('web', '1080p (H.264)', webUrl);
+    pushRung('mobile', '720p (H.264)', mobileUrl);
+    let streamUrl = ladder.length ? ladder[0].url : '';
+    let dlLink = null;
+
     let unlocked = ownershipUnlocked(hostEl, prop(props, 'unlocked', 'false') === 'true');
     const setupHref = prop(props, 'setupHref', '/setup') || '/setup';
     const android = isAndroidBrowser();
@@ -170,6 +189,52 @@
     heading.className = 'fb-theater-downloads-label';
     heading.textContent = 'Watch in an external player';
     root.appendChild(heading);
+
+    if (ladder.length > 1) {
+      const qualityLabel = global.document.createElement('p');
+      qualityLabel.className = 'fb-theater-downloads-label';
+      qualityLabel.textContent = 'Quality';
+      root.appendChild(qualityLabel);
+      const qualityHint = global.document.createElement('p');
+      qualityHint.className = 'fb-theater-downloads-note';
+      qualityHint.textContent =
+        'Full quality needs HEVC. Pick 1080p or 720p for phones/TVs that cannot decode the master.';
+      root.appendChild(qualityHint);
+      const qualityRow = global.document.createElement('div');
+      qualityRow.className = 'fb-external-play-quality';
+      qualityRow.setAttribute('role', 'radiogroup');
+      qualityRow.setAttribute('aria-label', 'Stream quality');
+      for (let qi = 0; qi < ladder.length; qi++) {
+        ;(function (idx) {
+          const btn = global.document.createElement('button');
+          btn.type = 'button';
+          btn.className = 'fb-btn fb-btn-quality' + (idx === 0 ? ' is-active' : '');
+          btn.textContent = ladder[idx].label;
+          btn.setAttribute('role', 'radio');
+          btn.setAttribute('aria-checked', idx === 0 ? 'true' : 'false');
+          btn.addEventListener('click', function () {
+            streamUrl = ladder[idx].url;
+            code.textContent = streamUrl || 'No stream URL yet.';
+            code.setAttribute('data-fb-stream-url', '1');
+            copyBtn.disabled = !streamUrl;
+            if (dlLink) {
+              dlLink.href = streamUrl;
+              dlLink.textContent =
+                ladder[idx].kind === 'master' ? 'Download MKV' : 'Download MP4';
+            }
+            const kids = qualityRow.querySelectorAll('.fb-btn-quality');
+            for (let k = 0; k < kids.length; k++) {
+              const on = k === idx;
+              kids[k].classList.toggle('is-active', on);
+              kids[k].setAttribute('aria-checked', on ? 'true' : 'false');
+            }
+            setStatus('Selected ' + ladder[idx].label + '.');
+          });
+          qualityRow.appendChild(btn);
+        })(qi);
+      }
+      root.appendChild(qualityRow);
+    }
 
     const steps = global.document.createElement('ol');
     steps.className = 'fb-theater-external-steps';
@@ -359,12 +424,12 @@
     actions.appendChild(copyBtn);
 
     if (android && streamUrl) {
-      const dl = global.document.createElement('a');
-      dl.className = 'fb-btn fb-theater-download-mkv';
-      dl.href = streamUrl;
-      dl.setAttribute('download', '');
-      dl.textContent = 'Download MKV';
-      actions.appendChild(dl);
+      dlLink = global.document.createElement('a');
+      dlLink.className = 'fb-btn fb-theater-download-mkv';
+      dlLink.href = streamUrl;
+      dlLink.setAttribute('download', '');
+      dlLink.textContent = ladder[0] && ladder[0].kind === 'master' ? 'Download MKV' : 'Download MP4';
+      actions.appendChild(dlLink);
     }
 
     const setupLink = global.document.createElement('a');

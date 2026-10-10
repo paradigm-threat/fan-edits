@@ -52,41 +52,9 @@ curl -fsSL https://flashbackrepository.org/scripts/vlc-protocol/install-linux-on
 
 ### Phone / tablet / Android TV — Flashback app (recommended)
 
-Browsers cannot play our full-quality HEVC MKV files. The **Flashback Repository** Android app can. It is sideloaded on purpose — there is no realistic Play Store path for this catalog ([why](/motivation#no-play-store-path)).
+Browsers cannot play our full-quality HEVC MKV files. Install the sideloaded **Flashback Repository** app instead — versioned APKs, Fire TV notes, Play Protect steps, and iOS limits are all on **[Flashback App](/app)**.
 
-1. On your phone, tablet, or Android / Google TV, open this link (or ask someone to send it):  
-   **[Download Flashback APK](/downloads/flashback.apk)** (universal; phones + most TVs)
-2. If Android asks whether to allow installs from the browser or Files app, tap **Allow** / **Settings** and turn on install permission for that app, then go back and open the download.
-3. Tap the downloaded **flashback.apk** → **Install** → **Open**.
-4. Pick a title → tap **OK — I confirm** (ownership affirmation).
-5. The movie should start in the app (it may rotate to landscape for a larger picture).
-
-**Amazon Fire TV / older 32-bit Android TV** (“App not installed” / library / ABI error): use the smaller 32-bit build instead — **[flashback-armeabi-v7a.apk](/downloads/flashback-armeabi-v7a.apk)**. Most phones can keep using the universal link above (or **[arm64-only](/downloads/flashback-arm64-v8a.apk)**).
-
-**“There was a problem parsing the package”** (Hisense / Google TV and some phones): the file you downloaded was probably not a real APK (often an HTML/JSON error page saved as `.apk`). Re-download from the link above and confirm the file is several MB (not a few KB); if the TV browser still mis-saves it, copy the APK from a computer via USB.
-
-**“Unsafe app blocked” / Play Protect** (common on first install from outside the Play Store):
-
-This warning is normal for apps that are not on the Play Store. We cannot turn it off entirely without publishing there. The download is a normal **release-signed** APK from this site — not a random mystery file.
-
-1. On the warning screen, tap **More details** (or **Learn more**).
-2. Tap **Install anyway** / **Install without scanning** (wording varies by Android version).
-3. If it still blocks: open **Play Protect** in the Play Store app (profile → Play Protect → settings gear) and temporarily allow installs from this source, or turn off “Scan apps with Play Protect” only while you install, then turn scanning back on.
-4. Open the APK again and finish **Install**.
-
-You only need to do this once per phone for this app.
-
-**If you already installed an older Flashback build** and the new one will not update: uninstall the old app first, then install again (signing key changed when we moved off the debug certificate).
-
-**If the movie will not play in the app** (some older phones lack HEVC hardware):
-
-1. Install [VLC for Android](https://play.google.com/store/apps/details?id=org.videolan.vlc) from the Play Store.
-2. In Flashback, tap **Open in external player**.
-3. Choose **VLC**. If Android asks “Just once” or “Always”, pick whichever you prefer.
-
-You do **not** need a computer or Terminal for Android.
-
-Maintainer / device matrix: **[Android APK lab](/android-lab)** (checklist + in-app **Lab** screen).
+iPhone / iPad: there is no sideload app; use this Setup page + VLC in the browser.
 
 ---
 
@@ -107,9 +75,8 @@ If the button does nothing, use **Copy stream URL**, then in VLC: **Media → Op
 | Mac asks which app | Choose **Flashback VLC Protocol** |
 | “VLC not found” | Install VLC, then run the Step 2 command again |
 | Button does nothing | Use **Copy stream URL** → VLC → Open Network Stream |
-| Android “blocked install” | Allow installs from Files / Chrome, then open the APK again |
-| “Unsafe app blocked” / Play Protect | More details → Install anyway (see Android steps above). Normal for sideload; we are not on Play Store. |
-| Android in-app play fails | Install VLC → **Open in external player** |
+| Android install / Play Protect / Fire TV ABI | See **[Flashback App](/app)** |
+| Android in-app play fails | Install VLC → **Open in external player** (or a lower quality rung on the title page) |
 | Android chooser missing | Install VLC from the Play Store first |
 
 Uninstall (optional): [macOS / Linux helpers](/scripts/vlc-protocol/install-macos.sh) live under `/scripts/vlc-protocol/` — see `uninstall-linux.sh` / `uninstall-windows.ps1` in that folder.

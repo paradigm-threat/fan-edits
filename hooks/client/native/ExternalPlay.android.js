@@ -1,8 +1,8 @@
 /**
  * Android CleverScript host for ExternalPlay.
- * Opens HTTPS MKV via intent ACTION_VIEW (system chooser / VLC). No vlc://.
+ * Opens HTTPS media via intent ACTION_VIEW (system chooser / VLC). No vlc://.
  */
-import React from 'react'
+import React, { useState } from 'react'
 
 function propStr(p, key) {
   try {
@@ -27,7 +27,6 @@ function absoluteHref(href) {
       if (h.charAt(0) === '/') {
         return origin + h
       }
-      return origin + '/' + h
     }
   } catch (e2) {}
   return h
@@ -44,9 +43,34 @@ function intentHrefFor(abs) {
   return abs
 }
 
+function buildLadder(p) {
+  const master = absoluteHref(propStr(p, 'streamUrl'))
+  const web = absoluteHref(propStr(p, 'streamUrlWeb'))
+  const mobile = absoluteHref(propStr(p, 'streamUrlMobile'))
+  let out = []
+  function push(kind, label, url) {
+    if (!url || url.length === 0) {
+      return
+    }
+    for (let i = 0; i < out.length; i++) {
+      if (out[i].url === url) {
+        return
+      }
+    }
+    out = out.concat([{ kind: kind, label: label, url: url }])
+  }
+  push('master', 'Full quality (MKV)', master)
+  push('web', '1080p (H.264)', web)
+  push('mobile', '720p (H.264)', mobile)
+  return out
+}
+
 export default function ExternalPlay(props) {
   const p = props || {}
-  const abs = absoluteHref(propStr(p, 'streamUrl'))
+  const ladder = buildLadder(p)
+  const idxState = useState(0)
+  const activeIndex = idxState[0]
+  const setActiveIndex = idxState[1]
   let unlocked = false
   try {
     if (p.unlocked === true || propStr(p, 'unlocked') === 'true') {
@@ -55,10 +79,48 @@ export default function ExternalPlay(props) {
   } catch (e) {}
   const setupHref = propStr(p, 'setupHref') || '/setup'
 
-  if (abs.length === 0) {
+  if (ladder.length === 0) {
     return (
       <div className="fb-external-play" data-fb-external-play="1">
         <p className="fb-theater-downloads-note">No stream URL for this title yet.</p>
+      </div>
+    )
+  }
+
+  const active = ladder[activeIndex] || ladder[0]
+  const abs = active.url
+  const intentHref = intentHrefFor(abs)
+  const dlLabel = active.kind === 'master' ? 'Download MKV' : 'Download MP4'
+
+  let qualityRow = null
+  if (ladder.length > 1) {
+    let buttons = []
+    for (let i = 0; i < ladder.length; i++) {
+      const idx = i
+      const on = idx === activeIndex
+      buttons = buttons.concat([
+        <button
+          type="button"
+          className={on ? 'fb-btn fb-btn-quality is-active' : 'fb-btn fb-btn-quality'}
+          role="radio"
+          aria-checked={on ? 'true' : 'false'}
+          onClick={() => {
+            setActiveIndex(idx)
+          }}
+        >
+          {ladder[idx].label}
+        </button>,
+      ])
+    }
+    qualityRow = (
+      <div>
+        <p className="fb-theater-downloads-label">Quality</p>
+        <p className="fb-theater-downloads-note">
+          Full quality needs HEVC. Pick 1080p or 720p if the master will not play on this device.
+        </p>
+        <div className="fb-external-play-quality" role="radiogroup" aria-label="Stream quality">
+          {buttons}
+        </div>
       </div>
     )
   }
@@ -67,6 +129,7 @@ export default function ExternalPlay(props) {
     return (
       <div className="fb-external-play fb-theater-external" data-fb-external-play="1">
         <p className="fb-theater-downloads-label">Watch in an external player</p>
+        {qualityRow}
         <p className="fb-theater-downloads-note">
           Confirm you own a legal copy above, then open the stream in VLC or another player.
         </p>
@@ -75,7 +138,6 @@ export default function ExternalPlay(props) {
     )
   }
 
-  const intentHref = intentHrefFor(abs)
   return (
     <div
       className="fb-external-play fb-theater-external"
@@ -83,9 +145,10 @@ export default function ExternalPlay(props) {
       data-playback-engine="external"
     >
       <p className="fb-theater-downloads-label">Watch in an external player</p>
+      {qualityRow}
       <p className="fb-theater-downloads-note">
-        Full-quality HEVC MKV streams best in VLC or another app — not the in-app browser cache.
-        Tap below to open the stream with an app on this device.
+        Full-quality HEVC MKV streams best in VLC when this device has HEVC hardware. Use 1080p
+        H.264 on older Fire TV / phones. Tap below to open the selected stream.
       </p>
       <code className="fb-theater-external-url">{abs}</code>
       <div className="fb-external-play-actions fb-theater-external-actions">
@@ -93,7 +156,7 @@ export default function ExternalPlay(props) {
           Open in external player
         </a>
         <a className="fb-btn fb-theater-download-mkv" href={abs} download="">
-          Download MKV
+          {dlLabel}
         </a>
         <a className="fb-btn fb-btn-setup" href={setupHref}>
           Setup

@@ -181,8 +181,15 @@ def render_one(
     env.setdefault("QT_QPA_PLATFORM", "offscreen")
     # Relative audio/music paths resolve against project directory
     r = subprocess.run(cmd, cwd=str(project.parent), env=env)
-    if r.returncode != 0 or not partial.is_file() or partial.stat().st_size < 1_000_000:
-        print(f"FAIL melt {out} (rc={r.returncode})", file=sys.stderr, flush=True)
+    # Feature-length 1080p/720p H.264 should be hundreds of MB; reject truncated races.
+    min_bytes = 200_000_000 if "1080" in profile or "web" in out.name else 80_000_000
+    if r.returncode != 0 or not partial.is_file() or partial.stat().st_size < min_bytes:
+        print(
+            f"FAIL melt {out} (rc={r.returncode} size="
+            f"{partial.stat().st_size if partial.exists() else 0})",
+            file=sys.stderr,
+            flush=True,
+        )
         if partial.exists():
             partial.unlink(missing_ok=True)
         return False
