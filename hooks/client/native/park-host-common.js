@@ -7,7 +7,7 @@
 (function (global) {
   'use strict';
 
-  var CSS_ID = 'fb-park-native-css-v7';
+  var CSS_ID = 'fb-park-native-css-v8';
   var BRAND_LINKS_ID = 'fb-brand-head-links';
 
   function ensureBrandHeadLinks() {
@@ -53,6 +53,7 @@
         'fb-park-native-css-v4',
         'fb-park-native-css-v5',
         'fb-park-native-css-v6',
+        'fb-park-native-css-v7',
       ].forEach(
         function (oldId) {
           var old = global.document.getElementById(oldId);
@@ -110,10 +111,24 @@
         '.fb-now-showing-sub{margin:6px 0 0;font-size:.85rem;line-height:1.45;color:#a69788;max-width:42rem}',
         '.fb-now-showing-sub .fb-link{color:#e8c872}',
         '.fb-theater-seed-status{margin:0 0 10px;color:#c4b49a}',
-        '.fb-movie-actions{display:flex;flex-wrap:wrap;gap:10px 12px;margin:12px 0 0}',
-        /* Gate feature download until ownership ack; App/Setup/Request stay available. */
-        '.fb-movie-actions .fb-theater-download-mkv{opacity:.45;pointer-events:none}',
-        'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-movie-actions .fb-theater-download-mkv{opacity:1;pointer-events:auto}',
+        /* Ways to watch — large type, three clear paths */
+        '.fb-ways-to-watch{margin:14px 0 0;padding:18px 16px 16px;border:1px solid #5a4a2a;background:rgba(40,28,12,.45)}',
+        '.fb-ways-title{margin:0 0 10px;font-size:1.35rem;line-height:1.3;color:#f5e6be;font-weight:600}',
+        '.fb-ways-lead{margin:0 0 16px;font-size:1.08rem;line-height:1.5;color:#d4c4a8}',
+        '.fb-ways-quality{margin:0 0 16px}',
+        '.fb-ways-section-label{margin:0 0 8px;font-size:1.05rem;color:#f5e6be}',
+        '.fb-ways-section{margin:0 0 18px;padding:0 0 14px;border-bottom:1px solid #3a2a1a}',
+        '.fb-ways-section:last-of-type{border-bottom:0;padding-bottom:0;margin-bottom:12px}',
+        '.fb-ways-section-title{margin:0 0 8px;font-size:1.2rem;line-height:1.3;color:#e8c872;font-weight:600}',
+        '.fb-ways-section-help{margin:0 0 12px;font-size:1.05rem;line-height:1.45;color:#c4b49a}',
+        '.fb-ways-actions{display:flex;flex-wrap:wrap;gap:10px 12px;margin:0 0 8px}',
+        '.fb-ways-to-watch .fb-btn{padding:8px 14px;font-size:1.05rem;line-height:1.25;min-height:0}',
+        '.fb-ways-to-watch .fb-btn.is-disabled,.fb-ways-to-watch .fb-btn:disabled,.fb-ways-to-watch a.fb-btn[aria-disabled="true"]{opacity:.4;pointer-events:none;cursor:not-allowed}',
+        '.fb-ways-status{margin:0;font-size:1.02rem;line-height:1.4;color:#c4b49a}',
+        '.fb-ways-helpers{margin:4px 0 0;font-size:1.02rem;line-height:1.45;color:#a69788}',
+        '.fb-ways-helpers .fb-link{color:#e8c872}',
+        '.fb-ways-feedback{margin:10px 0 0;font-size:1.02rem;color:#e8c872}',
+        '.fb-ways-stream-url-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}',
         '.fb-slideshow-count{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#b8860b;margin:0}',
         '.fb-slideshow-row{display:flex;flex-direction:row;align-items:stretch;gap:8px}',
         '.fb-slideshow-frame{flex:1;min-width:0;position:relative;border:1px solid #3a2a1a;background:linear-gradient(145deg,#2a1418 0%,#12080a 55%,#0d0505 100%);box-shadow:0 12px 36px rgba(0,0,0,.45);overflow:hidden}',
@@ -180,12 +195,8 @@
         '.fb-theater-tech-body{margin:8px 0 0;padding:10px;border:1px solid #3a2a1a;background:rgba(0,0,0,.28);color:#a69788;white-space:pre-wrap;word-break:break-word}',
         '.fb-theater-downloads{margin:14px 0 0;padding:12px 14px;border:1px solid #3a2a1a;background:rgba(0,0,0,.28)}',
         '.fb-theater-external{margin:14px 0 0;padding:12px 14px;border:1px solid #5a4a2a;background:rgba(40,28,12,.45)}',
-        '.fb-theater-external-steps{margin:0 0 12px;padding-left:1.25rem;color:#d4c4a8;font-size:.9rem;line-height:1.45}',
-        '.fb-theater-external-url-row{margin:0 0 10px;overflow:auto}',
-        /* Clickable HTTPS stream (webOS / smart TV browsers open this when VLC is unavailable). */
-        '.fb-theater-external-url{display:block;font-size:.8rem;word-break:break-all;color:#e8c872;text-decoration:underline;line-height:1.4;padding:8px 0}',
-        '.fb-theater-external-url:focus,.fb-theater-external-url:hover{color:#f5e6be;outline:2px solid #e8c872;outline-offset:2px}',
-        '.fb-theater-external-actions{display:flex;flex-wrap:wrap;gap:10px 16px;margin:0 0 8px}',
+        '.fb-theater-external.fb-ways-to-watch{padding:18px 16px 16px}',
+        '.fb-theater-external-actions{display:flex;flex-wrap:wrap;gap:10px 12px;margin:0 0 8px}',
         '.fb-theater-downloads-label{margin:0 0 8px;font-size:.95rem;color:#f5e6be}',
         '.fb-theater-downloads-links{display:flex;flex-wrap:wrap;gap:10px 16px}',
         '.fb-theater-download-link{color:#e8c872;font-size:.95rem;text-decoration:underline}',

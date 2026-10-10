@@ -692,21 +692,47 @@ themes:
         opacity: "1"
         pointerEvents: "auto"
         cursor: "pointer"
-      ".fb-movie-actions":
-        display: "flex"
-        flexWrap: "wrap"
-        gap: "10px 12px"
-        margin: "12px 0 0"
-      ".fb-movie-actions .fb-theater-download-mkv":
-        opacity: "0.45"
+      ".fb-external-play .fb-btn.is-disabled":
+        opacity: "0.4"
         pointerEvents: "none"
-      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-movie-actions .fb-theater-download-mkv":
-        opacity: "1"
-        pointerEvents: "auto"
+        cursor: "not-allowed"
+      ".fb-external-play a.fb-btn[aria-disabled='true']":
+        opacity: "0.4"
+        pointerEvents: "none"
+        cursor: "not-allowed"
       ".fb-btn-setup":
         opacity: "1"
         pointerEvents: "auto"
         cursor: "pointer"
+      ".fb-ways-title":
+        margin: "0 0 10px"
+        fontSize: "1.35rem"
+        lineHeight: "1.3"
+        color: "var(cream)"
+      ".fb-ways-lead":
+        margin: "0 0 16px"
+        fontSize: "1.08rem"
+        lineHeight: "1.5"
+        color: "var(creamMuted)"
+      ".fb-ways-section-title":
+        margin: "0 0 8px"
+        fontSize: "1.2rem"
+        lineHeight: "1.3"
+        color: "var(gold)"
+      ".fb-ways-section-help":
+        margin: "0 0 12px"
+        fontSize: "1.05rem"
+        lineHeight: "1.45"
+        color: "var(creamMuted)"
+      ".fb-ways-status":
+        margin: "0"
+        fontSize: "1.02rem"
+        lineHeight: "1.4"
+        color: "var(creamMuted)"
+      ".fb-ways-to-watch .fb-btn":
+        padding: "8px 14px"
+        fontSize: "1.05rem"
+        lineHeight: "1.25"
       "html[data-fb-welcome-ack='1'] .fb-affirmation-native[data-fb-affirmation='welcome']":
         display: "none !important"
       "html[data-fb-welcome-ack='1'] .fb-gate:not([data-fb-affirmation='title'])":
@@ -811,24 +837,13 @@ themes:
       ".fb-theater-external":
         marginTop: "0"
         marginBottom: "14px"
-        padding: "12px 14px"
+        padding: "18px 16px 16px"
         border: "1px solid #5a4a2a"
         background: "rgba(40,28,12,0.45)"
         display: "block"
-      ".fb-theater-external-steps":
-        margin: "0 0 12px"
-        paddingLeft: "1.25rem"
-        fontSize: "0.9rem"
-        color: "var(creamMuted)"
-        lineHeight: "1.45"
-      ".fb-theater-external-url":
-        display: "block"
-        fontSize: "0.75rem"
-        wordBreak: "break-all"
-        color: "var(cream)"
       ".fb-theater-external-status":
         margin: "10px 0 0"
-        fontSize: "0.88rem"
+        fontSize: "1.02rem"
         color: "var(gold)"
         minHeight: "1.25em"
       ".fb-external-play-host":
@@ -882,12 +897,13 @@ themes:
         flexDirection: "row"
         alignItems: "center"
         gap: "8px"
-        padding: "10px 16px"
+        padding: "8px 14px"
         background: "rgba(26,8,12,0.9)"
         border: "1px solid var(border)"
         color: "var(cream)"
         fontFamily: "inherit"
-        fontSize: "0.95rem"
+        fontSize: "1.05rem"
+        lineHeight: "1.25"
         cursor: "pointer"
       ".fb-btn-primary":
         background: "linear-gradient(180deg, #5a2030, #3a1018)"

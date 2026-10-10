@@ -1,7 +1,6 @@
 /**
  * Web host for `fb-external-play`.
- * Desktop: Open in VLC via vlc://. Android browsers: intent ACTION_VIEW (video/*).
- * CleverScript only passes data attrs — all click handling lives here.
+ * “Ways to watch” panel: Stream (server-ready) / Download (IPFS CID) / Email.
  */
 (function (global) {
   'use strict';
@@ -10,9 +9,12 @@
     if (!props) return fallback;
     const keys = [key];
     if (key.indexOf('data-') !== 0) {
-      keys.push('data-' + key.replace(/[A-Z]/g, function (m) {
-        return '-' + m.toLowerCase();
-      }));
+      keys.push(
+        'data-' +
+          key.replace(/[A-Z]/g, function (m) {
+            return '-' + m.toLowerCase();
+          }),
+      );
     }
     for (let i = 0; i < keys.length; i++) {
       const v = props[keys[i]];
@@ -40,14 +42,12 @@
     return 'https://flashbackrepository.org/' + u;
   }
 
-  /** Chrome / Firefox / Samsung Internet / WebView on Android (not iOS). */
   function isAndroidBrowser() {
     try {
       const nav = global.navigator;
       if (!nav) return false;
       const ua = String(nav.userAgent || '');
       if (/Android/i.test(ua) && !/Windows Phone/i.test(ua)) return true;
-      // Chromium client hints (when available)
       const uaData = nav.userAgentData;
       if (uaData && typeof uaData.platform === 'string') {
         if (String(uaData.platform).toLowerCase() === 'android') return true;
@@ -56,10 +56,6 @@
     return false;
   }
 
-  /**
-   * Living-room browsers that often lack VLC / vlc:// but can open an HTTPS
-   * progressive stream (webOS, Tizen, Android TV browser, etc.).
-   */
   function isSmartTvBrowser() {
     try {
       const ua = String((global.navigator && global.navigator.userAgent) || '');
@@ -68,7 +64,6 @@
         return true;
       }
       if (/Android/i.test(ua) && /(TV|AFT|SHIELD|MIBOX|MiBOX)/i.test(ua)) return true;
-      // Large leanback viewport + no touch is a soft signal for TV browsers.
       if (
         global.matchMedia &&
         global.matchMedia('(pointer: coarse)').matches === false &&
@@ -92,7 +87,6 @@
     return 'vlc://' + u;
   }
 
-  /** Android Chrome intent URL — system chooser / VLC (no package pin). */
   function intentViewUrl(httpsUrl) {
     const u = absoluteHttps(httpsUrl);
     if (u.indexOf('https://') !== 0 && u.indexOf('http://') !== 0) return '';
@@ -103,10 +97,6 @@
     );
   }
 
-  /**
-   * Navigate to a custom scheme / intent from a user gesture.
-   * Prefer a temporary <a> click (Chrome Android is pickier about location.href for intent:).
-   */
   function navigateExternal(href) {
     const h = String(href || '');
     if (!h) return false;
@@ -195,31 +185,6 @@
     };
   }
 
-  function formatSeedLine(st) {
-    if (!st) return 'Checking seed status…';
-    if (st.seedState === 'cached' || st.ok) {
-      const n = st.providers;
-      if (typeof n === 'number') {
-        return n > 0
-          ? 'Ready on the network — ' + n + ' provider' + (n === 1 ? '' : 's') + '.'
-          : 'Cached on this gateway (provider count unknown).';
-      }
-      return 'Ready to stream or download on this gateway.';
-    }
-    if (st.seedState === 'fetching') {
-      return 'Gateway is fetching this CID from IPFS — stream/download may start shortly.';
-    }
-    if (typeof st.providers === 'number' && st.providers === 0) {
-      return 'No providers yet — needs seeding. Try Request Drive links, or check back when peers are online.';
-    }
-    if (st.message && /need[s]? to be seeded/i.test(st.message)) {
-      return 'Needs seeding on IPFS. Stream/download when peers appear, or Request Drive links.';
-    }
-    if (st.message) return st.message;
-    return 'Seed status unavailable — Open stream / Download may still work.';
-  }
-
-  /** Live unlock: stub attrs can lag Affirmation; html data-fb-* is authoritative. */
   function ownershipUnlocked(hostEl, propsUnlocked) {
     if (propsUnlocked === true) return true;
     try {
@@ -238,12 +203,38 @@
     }
   }
 
+  function el(tag, className, text) {
+    const node = global.document.createElement(tag);
+    if (className) node.className = className;
+    if (text != null && text !== '') node.textContent = text;
+    return node;
+  }
+
+  function setControlEnabled(node, on) {
+    if (!node) return;
+    if (node.tagName === 'BUTTON') {
+      node.disabled = !on;
+    }
+    if (on) {
+      node.removeAttribute('aria-disabled');
+      node.classList.remove('is-disabled');
+    } else {
+      node.setAttribute('aria-disabled', 'true');
+      node.classList.add('is-disabled');
+    }
+  }
+
   function buildExternalPlay(props, hostEl) {
     const masterUrl = absoluteHttps(prop(props, 'streamUrl', ''));
     const webUrl = absoluteHttps(prop(props, 'streamUrlWeb', '') || prop(props, 'data-stream-url-web', ''));
     const mobileUrl = absoluteHttps(
       prop(props, 'streamUrlMobile', '') || prop(props, 'data-stream-url-mobile', ''),
     );
+    const catalogStatus = String(prop(props, 'status', '') || prop(props, 'data-status', '') || '')
+      .trim()
+      .toLowerCase();
+    const catalogShowing = catalogStatus === 'showing';
+
     const ladder = [];
     function pushRung(kind, label, url) {
       const u = String(url || '');
@@ -253,11 +244,11 @@
       }
       ladder.push({ kind: kind, label: label, url: u });
     }
-    pushRung('master', 'Full quality (MKV)', masterUrl);
-    pushRung('web', '1080p (H.264)', webUrl);
-    pushRung('mobile', '720p (H.264)', mobileUrl);
+    pushRung('master', 'Full quality', masterUrl);
+    pushRung('web', '1080p', webUrl);
+    pushRung('mobile', '720p', mobileUrl);
+
     const smartTv = isSmartTvBrowser();
-    // Prefer H.264 rungs on smart TVs (HEVC MKV often fails; MP4 plays in the TV browser).
     let selectedIdx = 0;
     if (smartTv) {
       const webIdx = ladder.findIndex(function (r) {
@@ -269,13 +260,14 @@
       if (webIdx >= 0) selectedIdx = webIdx;
       else if (mobileIdx >= 0) selectedIdx = mobileIdx;
     }
+
     let streamUrl = ladder.length ? ladder[selectedIdx].url : '';
-    let dlLink = null;
     const masterCid = String(prop(props, 'cid', '') || prop(props, 'data-cid', '') || '').trim();
     const downloadNameProp = String(
       prop(props, 'downloadName', '') || prop(props, 'data-download-name', '') || '',
     ).trim();
     const masterIpfsUrl = masterCid ? absoluteHttps('/ipfs/' + masterCid) : '';
+    const inCatalog = masterCid.length >= 8;
 
     function basenameFromUrl(url) {
       const raw = String(url || '');
@@ -306,67 +298,38 @@
     const android = isAndroidBrowser();
     const openMode = android ? 'android-intent' : smartTv ? 'https-stream' : 'vlc-protocol';
 
-    const root = global.document.createElement('div');
-    root.className = 'fb-external-play fb-theater-external';
+    let gatewayReady = false;
+    let seedPhase = streamUrl ? 'checking' : 'none'; // checking | ready | unavailable | none
+
+    const root = el('div', 'fb-external-play fb-theater-external fb-ways-to-watch');
     root.setAttribute('data-fb-external-play', '1');
     root.setAttribute('data-playback-engine', 'external');
     root.setAttribute('data-fb-open-mode', openMode);
     root.setAttribute('data-fb-unlocked', unlocked ? 'true' : 'false');
+    root.setAttribute('data-fb-catalog-status', catalogStatus || 'unknown');
     if (smartTv) root.setAttribute('data-fb-smart-tv', '1');
 
-    const heading = global.document.createElement('p');
-    heading.className = 'fb-theater-downloads-label';
-    heading.textContent = smartTv ? 'Watch on this TV' : 'Watch in an external player';
-    root.appendChild(heading);
+    root.appendChild(el('h2', 'fb-ways-title', 'Ways to watch this movie'));
+    root.appendChild(
+      el(
+        'p',
+        'fb-ways-lead',
+        'This browser cannot play the movie file here. Choose one of the three ways below.',
+      ),
+    );
 
-    function applyStreamUrl(url, kind) {
-      streamUrl = String(url || '');
-      if (streamUrl) {
-        streamLink.href = streamUrl;
-        streamLink.textContent = streamUrl;
-        streamLink.removeAttribute('aria-disabled');
-      } else {
-        streamLink.removeAttribute('href');
-        streamLink.textContent = 'No stream URL yet.';
-        streamLink.setAttribute('aria-disabled', 'true');
-      }
-      streamLink.setAttribute('data-fb-stream-url', '1');
-      copyBtn.disabled = !streamUrl;
-      openHttpsBtn.disabled = !streamUrl;
-      if (dlLink) {
-        const dlHref = downloadHrefFor(kind, streamUrl);
-        const dlName = downloadFilenameFor(kind, streamUrl);
-        dlLink.href = dlHref || '#';
-        dlLink.setAttribute('download', dlName);
-        dlLink.textContent =
-          kind === 'master' || /\.mkv($|\?)/i.test(dlName) ? 'Download MKV' : 'Download MP4';
-        if (!dlHref) dlLink.setAttribute('aria-disabled', 'true');
-        else dlLink.removeAttribute('aria-disabled');
-      }
-      pollSeedStatus(streamUrl);
-    }
-
+    // Quality (optional)
+    let qualityRow = null;
     if (ladder.length > 1) {
-      const qualityLabel = global.document.createElement('p');
-      qualityLabel.className = 'fb-theater-downloads-label';
-      qualityLabel.textContent = 'Quality';
-      root.appendChild(qualityLabel);
-      const qualityHint = global.document.createElement('p');
-      qualityHint.className = 'fb-theater-downloads-note';
-      qualityHint.textContent = smartTv
-        ? 'On webOS and similar TVs, prefer 1080p/720p (H.264 MP4). Full quality MKV needs a player that supports HEVC Matroska.'
-        : 'Full quality needs HEVC. Pick 1080p or 720p for phones/TVs that cannot decode the master.';
-      root.appendChild(qualityHint);
-      const qualityRow = global.document.createElement('div');
-      qualityRow.className = 'fb-external-play-quality';
+      const qWrap = el('div', 'fb-ways-quality');
+      qWrap.appendChild(el('p', 'fb-ways-section-label', 'Quality'));
+      qualityRow = el('div', 'fb-external-play-quality');
       qualityRow.setAttribute('role', 'radiogroup');
       qualityRow.setAttribute('aria-label', 'Stream quality');
       for (let qi = 0; qi < ladder.length; qi++) {
         ;(function (idx) {
-          const btn = global.document.createElement('button');
+          const btn = el('button', 'fb-btn fb-btn-quality' + (idx === selectedIdx ? ' is-active' : ''));
           btn.type = 'button';
-          btn.className =
-            'fb-btn fb-btn-quality' + (idx === selectedIdx ? ' is-active' : '');
           btn.textContent = ladder[idx].label;
           btn.setAttribute('role', 'radio');
           btn.setAttribute('aria-checked', idx === selectedIdx ? 'true' : 'false');
@@ -379,45 +342,131 @@
               kids[k].classList.toggle('is-active', on);
               kids[k].setAttribute('aria-checked', on ? 'true' : 'false');
             }
-            setStatus('Selected ' + ladder[idx].label + '.');
           });
           qualityRow.appendChild(btn);
         })(qi);
       }
-      root.appendChild(qualityRow);
+      qWrap.appendChild(qualityRow);
+      root.appendChild(qWrap);
     }
 
-    const steps = global.document.createElement('ol');
-    steps.className = 'fb-theater-external-steps';
-    const stepTexts = android
-      ? [
-          'Install VLC (or another video app) from the Play Store.',
-          'Tap Open in external player — Android asks which app should open the stream.',
-          'If nothing opens: Copy stream URL → open VLC → Network → paste the HTTPS link.',
-        ]
-      : smartTv
-        ? [
-            'Confirm ownership above (same house rule as always).',
-            'Pick 1080p or 720p if Full quality fails on this TV.',
-            'Select Open stream link (or the blue URL) — the TV browser / media player opens the HTTPS file.',
-          ]
-        : [
-            'One-time: install VLC and the playback setup (vlc:// handler).',
-            'Tap Open in VLC — or Open stream link / the clickable URL on TVs without VLC.',
-            'If nothing opens: VLC → Media → Open Network Stream… → paste → Play.',
-          ];
-    for (let i = 0; i < stepTexts.length; i++) {
-      const li = global.document.createElement('li');
-      li.textContent = stepTexts[i];
-      steps.appendChild(li);
-    }
-    root.appendChild(steps);
+    // --- 1. Stream ---
+    const streamSec = el('section', 'fb-ways-section fb-ways-stream');
+    streamSec.appendChild(el('h3', 'fb-ways-section-title', '1. Stream it now'));
+    streamSec.appendChild(
+      el(
+        'p',
+        'fb-ways-section-help',
+        'Works when this server has the file ready (Now showing titles).',
+      ),
+    );
+    const streamActions = el('div', 'fb-ways-actions fb-theater-external-actions');
 
-    const urlRow = global.document.createElement('div');
-    urlRow.className = 'fb-theater-external-url-row';
-    // Real <a href> so webOS / smart TV remotes can activate the HTTPS stream.
-    const streamLink = global.document.createElement('a');
-    streamLink.className = 'fb-theater-external-url';
+    const openHttpsBtn = el('button', 'fb-btn fb-theater-open-https' + (smartTv ? ' fb-btn-primary' : ''));
+    openHttpsBtn.type = 'button';
+    openHttpsBtn.textContent = 'Open stream link';
+
+    const openBtn = el(
+      'button',
+      'fb-btn fb-btn-external-play' +
+        (android ? ' fb-btn-primary fb-theater-open-intent' : '') +
+        (!android && !smartTv ? ' fb-btn-primary fb-theater-open-vlc' : '') +
+        (smartTv ? ' fb-theater-open-vlc' : ''),
+    );
+    openBtn.type = 'button';
+    openBtn.textContent = android ? 'Open in external player' : 'Open in VLC';
+
+    const copyBtn = el('button', 'fb-btn fb-theater-copy-stream');
+    copyBtn.type = 'button';
+    copyBtn.textContent = 'Copy link';
+
+    if (smartTv) {
+      streamActions.appendChild(openHttpsBtn);
+      streamActions.appendChild(openBtn);
+    } else {
+      streamActions.appendChild(openBtn);
+      streamActions.appendChild(openHttpsBtn);
+    }
+    streamActions.appendChild(copyBtn);
+    streamSec.appendChild(streamActions);
+
+    const streamStatus = el('p', 'fb-ways-status fb-theater-seed-status');
+    streamStatus.setAttribute('data-fb-seed-status', '1');
+    streamSec.appendChild(streamStatus);
+    root.appendChild(streamSec);
+
+    // --- 2. Download ---
+    const dlSec = el('section', 'fb-ways-section fb-ways-download');
+    dlSec.appendChild(el('h3', 'fb-ways-section-title', '2. Download the file'));
+    dlSec.appendChild(
+      el(
+        'p',
+        'fb-ways-section-help',
+        'Saves through this site’s IPFS gateway. Open the file in VLC when it finishes.',
+      ),
+    );
+    const dlActions = el('div', 'fb-ways-actions fb-theater-external-actions');
+    const dlLink = el('a', 'fb-btn fb-theater-download-mkv');
+    const kind0 = ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master';
+    const dlHref0 = downloadHrefFor(kind0, streamUrl);
+    const dlName0 = downloadFilenameFor(kind0, streamUrl);
+    dlLink.href = dlHref0 || '#';
+    dlLink.setAttribute('download', dlName0);
+    dlLink.textContent =
+      kind0 === 'master' || /\.mkv($|\?)/i.test(dlName0) ? 'Download MKV' : 'Download MP4';
+    dlActions.appendChild(dlLink);
+    dlSec.appendChild(dlActions);
+    const dlStatus = el('p', 'fb-ways-status');
+    dlSec.appendChild(dlStatus);
+    root.appendChild(dlSec);
+
+    // --- 3. Email ---
+    const emailSec = el('section', 'fb-ways-section fb-ways-email');
+    emailSec.appendChild(el('h3', 'fb-ways-section-title', '3. Get links by email'));
+    emailSec.appendChild(
+      el(
+        'p',
+        'fb-ways-section-help',
+        'Send the request email — the automatic reply includes the shared Drive library.',
+      ),
+    );
+    const emailActions = el('div', 'fb-ways-actions fb-theater-external-actions');
+    const requestLink = el('a', 'fb-btn fb-theater-request-drive', 'Request Drive links');
+    requestLink.href = '/request';
+    emailActions.appendChild(requestLink);
+    emailSec.appendChild(emailActions);
+    root.appendChild(emailSec);
+
+    // Helpers (not primary)
+    const helpers = el('p', 'fb-ways-helpers');
+    const setupLink = el('a', 'fb-link', 'Setup / VLC');
+    setupLink.href = setupHref;
+    helpers.appendChild(setupLink);
+    if (!smartTv) {
+      helpers.appendChild(global.document.createTextNode(' · '));
+      const vlcGet = el('a', 'fb-link', android ? 'Get VLC (Play Store)' : 'Get VLC');
+      if (android) {
+        vlcGet.href = 'https://play.google.com/store/apps/details?id=org.videolan.vlc';
+      } else {
+        vlcGet.href = 'https://www.videolan.org/vlc/';
+      }
+      vlcGet.target = '_blank';
+      vlcGet.rel = 'noopener noreferrer';
+      helpers.appendChild(vlcGet);
+    }
+    helpers.appendChild(global.document.createTextNode(' · '));
+    const appLink = el('a', 'fb-link', 'Flashback App');
+    appLink.href = '/app';
+    helpers.appendChild(appLink);
+    root.appendChild(helpers);
+
+    const feedback = el('p', 'fb-theater-external-status fb-ways-feedback');
+    feedback.setAttribute('data-fb-external-status', '1');
+    feedback.hidden = true;
+    root.appendChild(feedback);
+
+    // Hidden stream URL for accessibility / smart-TV fallback (not shown as a wall of text)
+    const streamLink = el('a', 'fb-theater-external-url fb-ways-stream-url-sr');
     streamLink.setAttribute('data-fb-stream-url', '1');
     streamLink.setAttribute('rel', 'noopener noreferrer');
     if (streamUrl) {
@@ -427,58 +476,178 @@
       streamLink.textContent = 'No stream URL yet.';
       streamLink.setAttribute('aria-disabled', 'true');
     }
-    streamLink.addEventListener('click', function (ev) {
-      refreshUnlocked();
-      if (!streamUrl) {
-        ev.preventDefault();
-        setStatus('No stream URL yet.');
-        return;
-      }
-      if (!unlocked) {
-        ev.preventDefault();
-        setStatus('Confirm ownership first, then open the stream link.');
-        try {
-          const gate = global.document.querySelector(
-            '.fb-affirmation-native, .fb-gate, [aria-modal="true"]',
-          );
-          if (gate && gate.scrollIntoView) {
-            gate.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }
-        } catch (_) {}
-      }
-    });
-    urlRow.appendChild(streamLink);
-    root.appendChild(urlRow);
-
-    const status = global.document.createElement('p');
-    status.className = 'fb-theater-external-status';
-    status.setAttribute('data-fb-external-status', '1');
-    status.hidden = true;
-    root.appendChild(status);
-
-    const seedLine = global.document.createElement('p');
-    seedLine.className = 'fb-theater-downloads-note fb-theater-seed-status';
-    seedLine.setAttribute('data-fb-seed-status', '1');
-    seedLine.textContent = streamUrl ? 'Checking seed status…' : '';
-    if (!streamUrl) seedLine.hidden = true;
-    root.appendChild(seedLine);
+    root.appendChild(streamLink);
 
     let failTimer = null;
     let leftPage = false;
     let seedPollGen = 0;
 
+    function setFeedback(msg) {
+      const m = String(msg || '');
+      if (!m) {
+        feedback.textContent = '';
+        feedback.hidden = true;
+        return;
+      }
+      feedback.textContent = m;
+      feedback.hidden = false;
+    }
+
+    function clearFailTimer() {
+      if (failTimer) {
+        global.clearTimeout(failTimer);
+        failTimer = null;
+      }
+    }
+
+    function syncUnlockedFlag() {
+      unlocked = ownershipUnlocked(hostEl, false);
+      try {
+        const flag = unlocked ? 'true' : 'false';
+        if (root.getAttribute('data-fb-unlocked') !== flag) {
+          root.setAttribute('data-fb-unlocked', flag);
+        }
+        if (unlocked && hostEl && hostEl.getAttribute && hostEl.getAttribute('data-unlocked') !== 'true') {
+          hostEl.setAttribute('data-unlocked', 'true');
+        }
+      } catch (_) {}
+    }
+
+    function streamServerReady() {
+      if (!streamUrl) return false;
+      if (catalogShowing) return true;
+      return gatewayReady === true;
+    }
+
+    function applyAvailability() {
+      syncUnlockedFlag();
+      const own = unlocked;
+      const serverOk = streamServerReady();
+      const streamOn = own && !!streamUrl && serverOk;
+      const dlHrefNow = downloadHrefFor(
+        ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master',
+        streamUrl,
+      );
+      const downloadOn = own && inCatalog && !!dlHrefNow;
+
+      setControlEnabled(openBtn, streamOn);
+      setControlEnabled(openHttpsBtn, streamOn);
+      setControlEnabled(copyBtn, streamOn);
+      setControlEnabled(dlLink, downloadOn);
+
+      if (!own) {
+        streamStatus.textContent = 'Confirm ownership above first.';
+        dlStatus.textContent = 'Confirm ownership above first.';
+      } else {
+        if (!streamUrl) {
+          streamStatus.textContent = 'No stream URL for this title yet.';
+        } else if (seedPhase === 'checking' && !catalogShowing) {
+          streamStatus.textContent = 'Checking if this server has the file…';
+        } else if (serverOk) {
+          streamStatus.textContent = catalogShowing
+            ? 'Ready on this server (Now showing).'
+            : 'Ready on this server.';
+        } else {
+          streamStatus.textContent =
+            'Not on this server right now. Try Download (if listed) or Request Drive links.';
+        }
+
+        if (!inCatalog) {
+          dlStatus.textContent = 'This title is not in the IPFS catalog yet.';
+        } else {
+          dlStatus.textContent = 'Ready to download via IPFS.';
+        }
+      }
+    }
+
+    function requireStreamAction(hint) {
+      syncUnlockedFlag();
+      if (!unlocked) {
+        setFeedback(hint || 'Confirm ownership first, then stream.');
+        scrollToGate();
+        return false;
+      }
+      if (!streamUrl) {
+        setFeedback('No stream URL yet.');
+        return false;
+      }
+      if (!streamServerReady()) {
+        setFeedback('This server does not have the file ready yet.');
+        return false;
+      }
+      return true;
+    }
+
+    function requireDownloadAction() {
+      syncUnlockedFlag();
+      if (!unlocked) {
+        setFeedback('Confirm ownership first, then download.');
+        scrollToGate();
+        return false;
+      }
+      if (!inCatalog) {
+        setFeedback('This title is not in the IPFS catalog yet.');
+        return false;
+      }
+      return true;
+    }
+
+    function scrollToGate() {
+      try {
+        const gate = global.document.querySelector(
+          '.fb-affirmation-native, .fb-gate, [aria-modal="true"]',
+        );
+        if (gate && gate.scrollIntoView) {
+          gate.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      } catch (_) {}
+    }
+
+    function applyStreamUrl(url, kind) {
+      streamUrl = String(url || '');
+      if (streamUrl) {
+        streamLink.href = streamUrl;
+        streamLink.textContent = streamUrl;
+        streamLink.removeAttribute('aria-disabled');
+      } else {
+        streamLink.removeAttribute('href');
+        streamLink.textContent = 'No stream URL yet.';
+        streamLink.setAttribute('aria-disabled', 'true');
+      }
+      const dlHref = downloadHrefFor(kind, streamUrl);
+      const dlName = downloadFilenameFor(kind, streamUrl);
+      dlLink.href = dlHref || '#';
+      dlLink.setAttribute('download', dlName);
+      dlLink.textContent =
+        kind === 'master' || /\.mkv($|\?)/i.test(dlName) ? 'Download MKV' : 'Download MP4';
+      if (!catalogShowing) {
+        gatewayReady = false;
+        seedPhase = streamUrl ? 'checking' : 'none';
+      }
+      pollSeedStatus(streamUrl);
+      applyAvailability();
+    }
+
     function pollSeedStatus(url) {
       const target = String(url || '');
       if (!target) {
-        seedLine.hidden = true;
-        seedLine.textContent = '';
+        seedPhase = 'none';
+        gatewayReady = false;
+        applyAvailability();
         return;
       }
-      seedLine.hidden = false;
-      seedLine.textContent = 'Checking seed status…';
+      // Now showing: stream can stay on while we still poll for a nicer status line.
+      if (!catalogShowing) {
+        seedPhase = 'checking';
+        gatewayReady = false;
+        applyAvailability();
+      } else {
+        seedPhase = 'ready';
+        gatewayReady = true;
+        applyAvailability();
+      }
       const gen = ++seedPollGen;
-      const statusUrl =
-        target + (target.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1';
+      const statusUrl = target + (target.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1';
       fetchWithTimeout(
         statusUrl,
         {
@@ -496,282 +665,151 @@
         })
         .then(function (j) {
           if (gen !== seedPollGen) return;
-          seedLine.textContent = formatSeedLine(parseSeedStatusJson(j));
+          const st = parseSeedStatusJson(j);
+          const cached = !!(st && (st.seedState === 'cached' || st.ok));
+          const needsSeed =
+            st &&
+            ((typeof st.providers === 'number' && st.providers === 0) ||
+              (st.message && /need[s]? to be seeded/i.test(st.message)) ||
+              st.seedState === 'missing' ||
+              st.seedState === 'absent');
+          if (cached) {
+            gatewayReady = true;
+            seedPhase = 'ready';
+          } else if (needsSeed) {
+            gatewayReady = false;
+            seedPhase = 'unavailable';
+          } else if (st && st.seedState === 'fetching') {
+            // Fetching: not ready for stream unless already Now showing
+            gatewayReady = catalogShowing;
+            seedPhase = catalogShowing ? 'ready' : 'unavailable';
+          } else {
+            // Probe failed or unknown — keep Now showing enabled; otherwise off
+            gatewayReady = catalogShowing;
+            seedPhase = catalogShowing ? 'ready' : 'unavailable';
+          }
+          applyAvailability();
         })
         .catch(function () {
           if (gen !== seedPollGen) return;
-          seedLine.textContent =
-            'Seed status unreachable — Open stream / Download may still work if the gateway has bytes.';
+          gatewayReady = catalogShowing;
+          seedPhase = catalogShowing ? 'ready' : 'unavailable';
+          applyAvailability();
         });
     }
 
-    function onPageHide() {
-      leftPage = true;
-      clearFailTimer();
-    }
-    function onVisibility() {
-      try {
-        if (global.document && global.document.visibilityState === 'hidden') {
-          leftPage = true;
-          clearFailTimer();
-        }
-      } catch (_) {}
-    }
-    try {
-      global.addEventListener('pagehide', onPageHide);
-      global.addEventListener('visibilitychange', onVisibility);
-    } catch (_) {}
-
-    function setStatus(msg) {
-      const m = String(msg || '');
-      if (!m) {
-        status.textContent = '';
-        status.hidden = true;
-        return;
-      }
-      status.textContent = m;
-      status.hidden = false;
-    }
-
-    function clearFailTimer() {
-      if (failTimer) {
-        global.clearTimeout(failTimer);
-        failTimer = null;
-      }
-    }
-
-    const actions = global.document.createElement('div');
-    actions.className = 'fb-external-play-actions fb-theater-external-actions';
-
-    function refreshUnlocked() {
-      unlocked = ownershipUnlocked(hostEl, false);
-      try {
-        const flag = unlocked ? 'true' : 'false';
-        // Only write attrs when changed — MutationObserver on data-unlocked would
-        // otherwise re-enter forever and freeze the tab (SSR-static / no CleverScript).
-        if (root.getAttribute('data-fb-unlocked') !== flag) {
-          root.setAttribute('data-fb-unlocked', flag);
-        }
-        if (unlocked && hostEl && hostEl.getAttribute && hostEl.getAttribute('data-unlocked') !== 'true') {
-          hostEl.setAttribute('data-unlocked', 'true');
-        }
-      } catch (_) {}
-      return unlocked;
-    }
-
-    function requireUnlocked(actionHint) {
-      refreshUnlocked();
-      if (!streamUrl) {
-        setStatus('No stream URL yet.');
-        return false;
-      }
-      if (!unlocked) {
-        setStatus(actionHint || 'Confirm ownership first, then open the stream.');
-        try {
-          const gate = global.document.querySelector(
-            '.fb-affirmation-native, .fb-gate, [aria-modal="true"]',
-          );
-          if (gate && gate.scrollIntoView) {
-            gate.scrollIntoView({ behavior: 'smooth', block: 'center' });
-          }
-        } catch (_) {}
-        return false;
-      }
-      return true;
-    }
-
-    // Direct HTTPS — primary on webOS / smart TVs; available everywhere as fallback.
-    const openHttpsBtn = global.document.createElement('button');
-    openHttpsBtn.type = 'button';
-    openHttpsBtn.className =
-      'fb-btn fb-theater-open-https' + (smartTv ? ' fb-btn-primary' : '');
-    openHttpsBtn.textContent = 'Open stream link';
-    openHttpsBtn.disabled = !streamUrl;
     openHttpsBtn.addEventListener('click', function () {
       clearFailTimer();
       leftPage = false;
-      if (
-        !requireUnlocked(
-          smartTv
-            ? 'Confirm ownership first, then tap Open stream link.'
-            : 'Confirm ownership first, then open the stream link.',
-        )
-      ) {
-        return;
-      }
-      setStatus(smartTv ? 'Opening stream on this TV…' : 'Opening HTTPS stream…');
+      if (!requireStreamAction('Confirm ownership first, then open the stream link.')) return;
+      setFeedback(smartTv ? 'Opening stream on this TV…' : 'Opening stream link…');
       if (!navigateExternal(streamUrl)) {
-        setStatus('Could not open the stream link — try selecting the URL above.');
+        setFeedback('Could not open the stream link. Try Copy link.');
       }
     });
 
-    const openBtn = global.document.createElement('button');
-    openBtn.type = 'button';
-    openBtn.className =
-      'fb-btn fb-btn-external-play' +
-      (android ? ' fb-btn-primary fb-theater-open-intent' : '') +
-      (!android && !smartTv ? ' fb-btn-primary fb-theater-open-vlc' : '') +
-      (smartTv ? ' fb-theater-open-vlc' : '');
-    openBtn.textContent = android ? 'Open in external player' : 'Open in VLC';
     openBtn.addEventListener('click', function () {
       clearFailTimer();
       leftPage = false;
       if (
-        !requireUnlocked(
+        !requireStreamAction(
           android
-            ? 'Confirm ownership first, then tap Open in external player.'
-            : 'Confirm ownership first, then tap Open in VLC.',
+            ? 'Confirm ownership first, then open in an external player.'
+            : 'Confirm ownership first, then open in VLC.',
         )
       ) {
         return;
       }
-
       let launch = '';
       if (android) {
         launch = intentViewUrl(streamUrl);
         if (!launch) {
-          setStatus('Could not build Android intent link. Use Open stream link or Copy instead.');
+          setFeedback('Could not build the player link. Try Open stream link or Copy link.');
           return;
         }
-        setStatus('Opening player…');
+        setFeedback('Opening player…');
       } else {
         launch = vlcProtocolUrl(streamUrl);
         if (!launch) {
-          setStatus('Could not build vlc:// link. Use Open stream link or Copy instead.');
+          setFeedback('Could not build the VLC link. Try Open stream link or Copy link.');
           return;
         }
-        setStatus('Opening VLC…');
+        setFeedback('Opening VLC…');
       }
-
       if (!navigateExternal(launch)) {
-        setStatus(
+        setFeedback(
           android
-            ? 'Could not open an external player. Use Open stream link or Copy.'
-            : 'Could not launch vlc://. Use Open stream link or finish Setup.',
+            ? 'Could not open a player. Try Open stream link or Copy link.'
+            : 'VLC did not open. Try Open stream link, or finish Setup.',
         );
         return;
       }
-
       failTimer = global.setTimeout(function () {
         failTimer = null;
         if (leftPage) return;
         try {
           if (global.document && global.document.visibilityState === 'hidden') return;
         } catch (_) {}
-        setStatus(
+        setFeedback(
           android
-            ? 'No player opened — try Open stream link, or install VLC from the Play Store.'
-            : 'VLC did not open — try Open stream link (works on many TVs), or finish Setup.',
+            ? 'No player opened — try Open stream link, or install VLC.'
+            : 'VLC did not open — try Open stream link, or finish Setup.',
         );
       }, 1400);
     });
 
-    // Smart TV: HTTPS first. Phone/desktop: VLC/intent first, HTTPS still available.
-    if (smartTv) {
-      actions.appendChild(openHttpsBtn);
-      actions.appendChild(openBtn);
-    } else {
-      actions.appendChild(openBtn);
-      actions.appendChild(openHttpsBtn);
-    }
-
-    const copyBtn = global.document.createElement('button');
-    copyBtn.type = 'button';
-    copyBtn.className = 'fb-btn fb-theater-copy-stream';
-    copyBtn.textContent = 'Copy stream URL';
-    copyBtn.disabled = !streamUrl;
     copyBtn.addEventListener('click', function () {
       clearFailTimer();
-      if (!streamUrl) {
-        setStatus('No stream URL yet.');
-        return;
-      }
+      if (!requireStreamAction('Confirm ownership first, then copy the link.')) return;
       if (copyText(streamUrl)) {
-        setStatus(
-          smartTv
-            ? 'Copied — paste into your TV’s browser or media apps if Open stream link fails.'
-            : android
-              ? 'Copied — open VLC → Network / Open network stream → paste.'
-              : 'Copied — paste into VLC → Media → Open Network Stream.',
+        setFeedback(
+          android
+            ? 'Copied — open VLC → Network → paste the link.'
+            : 'Copied — paste into VLC → Media → Open Network Stream.',
         );
       } else {
-        setStatus('Copy failed — select the URL above manually.');
+        setFeedback('Copy failed — try Open stream link instead.');
       }
     });
-    actions.appendChild(copyBtn);
 
-    // Same-origin /ipfs (or tip path) download — save to disk, open locally in VLC.
-    dlLink = global.document.createElement('a');
-    dlLink.className = 'fb-btn fb-theater-download-mkv';
-    const kind0 = ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master';
-    const dlHref0 = downloadHrefFor(kind0, streamUrl);
-    const dlName0 = downloadFilenameFor(kind0, streamUrl);
-    dlLink.href = dlHref0 || '#';
-    dlLink.setAttribute('download', dlName0);
-    dlLink.textContent =
-      kind0 === 'master' || /\.mkv($|\?)/i.test(dlName0) ? 'Download MKV' : 'Download MP4';
-    if (!dlHref0) dlLink.setAttribute('aria-disabled', 'true');
     dlLink.addEventListener('click', function (ev) {
-      if (!requireUnlocked('Confirm ownership first, then download the file to this device.')) {
+      if (!requireDownloadAction()) {
         ev.preventDefault();
         return;
       }
       if (!dlLink.getAttribute('href') || dlLink.getAttribute('href') === '#') {
         ev.preventDefault();
-        setStatus('No download URL yet.');
+        setFeedback('No download URL yet.');
         return;
       }
-      setStatus(
-        'Downloading via this site’s IPFS gateway — large file; open it locally in VLC or Files when finished.',
-      );
+      setFeedback('Download starting — large file; open it in VLC when finished.');
     });
-    actions.appendChild(dlLink);
 
-    const requestLink = global.document.createElement('a');
-    requestLink.className = 'fb-btn fb-theater-request-drive';
-    requestLink.href = '/request';
-    requestLink.textContent = 'Request Drive links';
-    actions.appendChild(requestLink);
-
-    const setupLink = global.document.createElement('a');
-    setupLink.className = 'fb-btn fb-btn-setup';
-    setupLink.href = setupHref;
-    setupLink.textContent = 'Setup';
-    actions.appendChild(setupLink);
-
-    if (!smartTv) {
-      const vlcGet = global.document.createElement('a');
-      vlcGet.className = 'fb-btn fb-theater-get-vlc';
-      if (android) {
-        vlcGet.href = 'https://play.google.com/store/apps/details?id=org.videolan.vlc';
-        vlcGet.textContent = 'Get VLC (Play Store)';
-      } else {
-        vlcGet.href = 'https://www.videolan.org/vlc/';
-        vlcGet.textContent = 'Get VLC';
+    streamLink.addEventListener('click', function (ev) {
+      if (!requireStreamAction('Confirm ownership first, then open the stream link.')) {
+        ev.preventDefault();
       }
-      vlcGet.target = '_blank';
-      vlcGet.rel = 'noopener noreferrer';
-      actions.appendChild(vlcGet);
-    }
+    });
 
-    root.appendChild(actions);
+    try {
+      global.addEventListener('pagehide', function () {
+        leftPage = true;
+        clearFailTimer();
+      });
+      global.addEventListener('visibilitychange', function () {
+        try {
+          if (global.document && global.document.visibilityState === 'hidden') {
+            leftPage = true;
+            clearFailTimer();
+          }
+        } catch (_) {}
+      });
+    } catch (_) {}
 
-    const note = global.document.createElement('p');
-    note.className = 'fb-theater-downloads-note';
-    note.innerHTML = android
-      ? 'Browsers cannot play Matroska + HEVC in-page. <strong>Stream</strong> via Open in external player, <strong>Download</strong> the file to this device and open it locally, or <a class="fb-link" href="/request">Request Drive links</a> by email. Download uses this site’s IPFS gateway (not in-browser playback).'
-      : smartTv
-        ? 'Many TV browsers cannot run VLC. Prefer <strong>Open stream link</strong> with 1080p/720p H.264. Or <a class="fb-link" href="/request">Request Drive links</a> and play from Files / USB.'
-        : 'Browsers cannot play Matroska + HEVC in-page. <strong>Stream</strong> in VLC, <strong>Download</strong> the file (save to disk, then open locally), or <a class="fb-link" href="/request">Request Drive links</a> by email. Now showing is only what is ready on the server right now — the full library still uses these paths when peers are online.';
-    root.appendChild(note);
-
-    pollSeedStatus(streamUrl);
-
-    // Affirmation sets html data-fb-* after first build — keep unlocked in sync.
     try {
       if (global.MutationObserver) {
         const sync = function () {
-          refreshUnlocked();
+          applyAvailability();
         };
         if (hostEl) {
           new global.MutationObserver(sync).observe(hostEl, {
@@ -787,15 +825,16 @@
         }
       }
     } catch (_) {}
-    refreshUnlocked();
 
+    pollSeedStatus(streamUrl);
+    applyAvailability();
     return root;
   }
 
-  function attrsToProps(el) {
+  function attrsToProps(elNode) {
     const props = {};
-    for (let i = 0; i < el.attributes.length; i++) {
-      const a = el.attributes[i];
+    for (let i = 0; i < elNode.attributes.length; i++) {
+      const a = elNode.attributes[i];
       props[a.name] = a.value;
     }
     return props;

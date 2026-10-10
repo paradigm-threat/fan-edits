@@ -1,6 +1,5 @@
 /**
- * Android CleverScript host for ExternalPlay.
- * Opens HTTPS media via intent ACTION_VIEW (system chooser / VLC). No vlc://.
+ * Android CleverScript host for ExternalPlay — Ways to watch parity with web host.
  */
 import React, { useEffect, useState } from 'react'
 
@@ -59,37 +58,29 @@ function buildLadder(p) {
     }
     out = out.concat([{ kind: kind, label: label, url: url }])
   }
-  push('master', 'Full quality (MKV)', master)
-  push('web', '1080p (H.264)', web)
-  push('mobile', '720p (H.264)', mobile)
+  push('master', 'Full quality', master)
+  push('web', '1080p', web)
+  push('mobile', '720p', mobile)
   return out
 }
 
-function formatSeedLine(j) {
+function parseSeed(j) {
   if (!j || typeof j !== 'object') {
-    return 'Seed status unavailable — Open stream / Download may still work.'
+    return { ready: false, checking: false }
   }
   const seed = j.seed && typeof j.seed === 'object' ? j.seed : {}
   const state = typeof seed.state === 'string' ? seed.state : ''
   const providers = typeof seed.providers === 'number' ? seed.providers : null
   if (j.error === 'ok' || state === 'cached') {
-    if (providers !== null) {
-      return providers > 0
-        ? 'Ready on the network — ' + providers + ' provider' + (providers === 1 ? '' : 's') + '.'
-        : 'Cached on this gateway (provider count unknown).'
-    }
-    return 'Ready to stream or download on this gateway.'
+    return { ready: true, checking: false }
   }
   if (state === 'fetching') {
-    return 'Gateway is fetching this CID from IPFS — stream/download may start shortly.'
+    return { ready: false, checking: false }
   }
   if (providers === 0) {
-    return 'No providers yet — needs seeding. Try Request Drive links, or check back when peers are online.'
+    return { ready: false, checking: false }
   }
-  if (typeof j.message === 'string' && j.message.length > 0) {
-    return j.message
-  }
-  return 'Seed status unavailable — Open stream / Download may still work.'
+  return { ready: false, checking: false }
 }
 
 export default function ExternalPlay(props) {
@@ -98,9 +89,13 @@ export default function ExternalPlay(props) {
   const idxState = useState(0)
   const activeIndex = idxState[0]
   const setActiveIndex = idxState[1]
-  const seedState = useState('Checking seed status…')
-  const seedLine = seedState[0]
-  const setSeedLine = seedState[1]
+  const seedReadyState = useState(false)
+  const gatewayReady = seedReadyState[0]
+  const setGatewayReady = seedReadyState[1]
+  const seedPhaseState = useState('checking')
+  const seedPhase = seedPhaseState[0]
+  const setSeedPhase = seedPhaseState[1]
+
   let unlocked = false
   try {
     if (p.unlocked === true || propStr(p, 'unlocked') === 'true') {
@@ -108,11 +103,33 @@ export default function ExternalPlay(props) {
     }
   } catch (e) {}
   const setupHref = propStr(p, 'setupHref') || '/setup'
+  const catalogStatus = (propStr(p, 'status') || propStr(p, 'data-status') || '').toLowerCase()
+  const catalogShowing = catalogStatus === 'showing'
+
+  let masterCid = ''
+  try {
+    masterCid = propStr(p, 'cid') || propStr(p, 'data-cid') || ''
+  } catch (eCid) {}
+  const inCatalog = masterCid.length >= 8
+
+  let downloadName = ''
+  try {
+    downloadName = propStr(p, 'downloadName') || propStr(p, 'data-download-name') || ''
+  } catch (eDn) {}
 
   if (ladder.length === 0) {
     return (
-      <div className="fb-external-play" data-fb-external-play="1">
-        <p className="fb-theater-downloads-note">No stream URL for this title yet.</p>
+      <div className="fb-external-play fb-ways-to-watch" data-fb-external-play="1">
+        <h2 className="fb-ways-title">Ways to watch this movie</h2>
+        <p className="fb-ways-lead">No stream URL for this title yet.</p>
+        <section className="fb-ways-section">
+          <h3 className="fb-ways-section-title">3. Get links by email</h3>
+          <div className="fb-ways-actions">
+            <a className="fb-btn fb-theater-request-drive" href="/request">
+              Request Drive links
+            </a>
+          </div>
+        </section>
       </div>
     )
   }
@@ -121,16 +138,8 @@ export default function ExternalPlay(props) {
   const abs = active.url
   const intentHref = intentHrefFor(abs)
   const dlLabel = active.kind === 'master' ? 'Download MKV' : 'Download MP4'
-  let masterCid = ''
-  try {
-    masterCid = propStr(p, 'cid') || propStr(p, 'data-cid') || ''
-  } catch (eCid) {}
-  let downloadName = ''
-  try {
-    downloadName = propStr(p, 'downloadName') || propStr(p, 'data-download-name') || ''
-  } catch (eDn) {}
   let dlHref = abs
-  if (active.kind === 'master' && masterCid.length >= 8) {
+  if (active.kind === 'master' && inCatalog) {
     try {
       const origin =
         globalThis.location && globalThis.location.origin
@@ -156,10 +165,17 @@ export default function ExternalPlay(props) {
   useEffect(() => {
     let cancelled = false
     if (!abs) {
-      setSeedLine('')
+      setSeedPhase('none')
+      setGatewayReady(false)
       return
     }
-    setSeedLine('Checking seed status…')
+    if (catalogShowing) {
+      setGatewayReady(true)
+      setSeedPhase('ready')
+    } else {
+      setGatewayReady(false)
+      setSeedPhase('checking')
+    }
     const statusUrl = abs + (abs.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1'
     const ctrl = typeof AbortController === 'function' ? new AbortController() : null
     const timer =
@@ -177,13 +193,20 @@ export default function ExternalPlay(props) {
     })
       .then((r) => (r ? r.json() : null))
       .then((j) => {
-        if (!cancelled) setSeedLine(formatSeedLine(j))
+        if (cancelled) return
+        const parsed = parseSeed(j)
+        if (parsed.ready) {
+          setGatewayReady(true)
+          setSeedPhase('ready')
+        } else {
+          setGatewayReady(catalogShowing)
+          setSeedPhase(catalogShowing ? 'ready' : 'unavailable')
+        }
       })
       .catch(() => {
         if (!cancelled) {
-          setSeedLine(
-            'Seed status unreachable — Open stream / Download may still work if the gateway has bytes.',
-          )
+          setGatewayReady(catalogShowing)
+          setSeedPhase(catalogShowing ? 'ready' : 'unavailable')
         }
       })
       .then(() => {
@@ -198,7 +221,34 @@ export default function ExternalPlay(props) {
         } catch (e2) {}
       }
     }
-  }, [abs])
+  }, [abs, catalogShowing])
+
+  const serverOk = !!abs && (catalogShowing || gatewayReady === true)
+  const streamOn = unlocked === true && serverOk
+  const downloadOn = unlocked === true && inCatalog
+
+  let streamStatus = 'Confirm ownership above first.'
+  if (unlocked === true) {
+    if (!abs) {
+      streamStatus = 'No stream URL for this title yet.'
+    } else if (seedPhase === 'checking' && !catalogShowing) {
+      streamStatus = 'Checking if this server has the file…'
+    } else if (serverOk) {
+      streamStatus = catalogShowing
+        ? 'Ready on this server (Now showing).'
+        : 'Ready on this server.'
+    } else {
+      streamStatus =
+        'Not on this server right now. Try Download (if listed) or Request Drive links.'
+    }
+  }
+
+  let dlStatus = 'Confirm ownership above first.'
+  if (unlocked === true) {
+    dlStatus = inCatalog
+      ? 'Ready to download via IPFS.'
+      : 'This title is not in the IPFS catalog yet.'
+  }
 
   let qualityRow = null
   if (ladder.length > 1) {
@@ -221,11 +271,8 @@ export default function ExternalPlay(props) {
       ])
     }
     qualityRow = (
-      <div>
-        <p className="fb-theater-downloads-label">Quality</p>
-        <p className="fb-theater-downloads-note">
-          Full quality needs HEVC. Pick 1080p or 720p if the master will not play on this device.
-        </p>
+      <div className="fb-ways-quality">
+        <p className="fb-ways-section-label">Quality</p>
         <div className="fb-external-play-quality" role="radiogroup" aria-label="Stream quality">
           {buttons}
         </div>
@@ -233,70 +280,105 @@ export default function ExternalPlay(props) {
     )
   }
 
-  const seedEl =
-    seedLine && seedLine.length > 0 ? (
-      <p className="fb-theater-downloads-note fb-theater-seed-status" data-fb-seed-status="1">
-        {seedLine}
-      </p>
-    ) : null
-
-  if (unlocked !== true) {
-    return (
-      <div className="fb-external-play fb-theater-external" data-fb-external-play="1">
-        <p className="fb-theater-downloads-label">Watch in an external player</p>
-        {qualityRow}
-        <p className="fb-theater-downloads-note">
-          Confirm you own a legal copy above, then stream, download, or request Drive links.
-        </p>
-        <a className="fb-theater-external-url" href={abs} data-fb-stream-url="1" rel="noopener noreferrer">
-          {abs}
-        </a>
-        {seedEl}
-      </div>
-    )
-  }
+  const streamCls = streamOn ? 'fb-btn' : 'fb-btn is-disabled'
+  const dlCls = downloadOn ? 'fb-btn fb-theater-download-mkv' : 'fb-btn fb-theater-download-mkv is-disabled'
 
   return (
     <div
-      className="fb-external-play fb-theater-external"
+      className="fb-external-play fb-theater-external fb-ways-to-watch"
       data-fb-external-play="1"
       data-playback-engine="external"
     >
-      <p className="fb-theater-downloads-label">Watch in an external player</p>
-      {qualityRow}
-      <p className="fb-theater-downloads-note">
-        Stream in VLC, download the file to this device and open it locally, or request Google Drive
-        links by email. Download uses this site’s IPFS gateway (not in-browser playback).
+      <h2 className="fb-ways-title">Ways to watch this movie</h2>
+      <p className="fb-ways-lead">
+        This browser cannot play the movie file here. Choose one of the three ways below.
       </p>
-      <a className="fb-theater-external-url" href={abs} data-fb-stream-url="1" rel="noopener noreferrer">
-        {abs}
-      </a>
-      {seedEl}
-      <div className="fb-external-play-actions fb-theater-external-actions">
-        <a className="fb-btn fb-btn-primary fb-btn-external-play fb-theater-open-intent" href={intentHref}>
-          Open in external player
+      {qualityRow}
+
+      <section className="fb-ways-section fb-ways-stream">
+        <h3 className="fb-ways-section-title">1. Stream it now</h3>
+        <p className="fb-ways-section-help">
+          Works when this server has the file ready (Now showing titles).
+        </p>
+        <div className="fb-ways-actions fb-theater-external-actions">
+          <a
+            className={streamCls + ' fb-btn-primary fb-btn-external-play fb-theater-open-intent'}
+            href={streamOn ? intentHref : undefined}
+            aria-disabled={streamOn ? 'false' : 'true'}
+            onClick={(ev) => {
+              if (!streamOn) ev.preventDefault()
+            }}
+          >
+            Open in external player
+          </a>
+          <a
+            className={streamCls + ' fb-theater-open-https'}
+            href={streamOn ? abs : undefined}
+            rel="noopener noreferrer"
+            aria-disabled={streamOn ? 'false' : 'true'}
+            onClick={(ev) => {
+              if (!streamOn) ev.preventDefault()
+            }}
+          >
+            Open stream link
+          </a>
+        </div>
+        <p className="fb-ways-status" data-fb-seed-status="1">
+          {streamStatus}
+        </p>
+      </section>
+
+      <section className="fb-ways-section fb-ways-download">
+        <h3 className="fb-ways-section-title">2. Download the file</h3>
+        <p className="fb-ways-section-help">
+          Saves through this site’s IPFS gateway. Open the file in VLC when it finishes.
+        </p>
+        <div className="fb-ways-actions fb-theater-external-actions">
+          <a
+            className={dlCls}
+            href={downloadOn ? dlHref : undefined}
+            download={downloadName}
+            aria-disabled={downloadOn ? 'false' : 'true'}
+            onClick={(ev) => {
+              if (!downloadOn) ev.preventDefault()
+            }}
+          >
+            {dlLabel}
+          </a>
+        </div>
+        <p className="fb-ways-status">{dlStatus}</p>
+      </section>
+
+      <section className="fb-ways-section fb-ways-email">
+        <h3 className="fb-ways-section-title">3. Get links by email</h3>
+        <p className="fb-ways-section-help">
+          Send the request email — the automatic reply includes the shared Drive library.
+        </p>
+        <div className="fb-ways-actions fb-theater-external-actions">
+          <a className="fb-btn fb-theater-request-drive" href="/request">
+            Request Drive links
+          </a>
+        </div>
+      </section>
+
+      <p className="fb-ways-helpers">
+        <a className="fb-link" href={setupHref}>
+          Setup / VLC
         </a>
-        <a className="fb-btn fb-theater-open-https" href={abs} rel="noopener noreferrer">
-          Open stream link
-        </a>
-        <a className="fb-btn fb-theater-download-mkv" href={dlHref} download={downloadName}>
-          {dlLabel}
-        </a>
-        <a className="fb-btn fb-theater-request-drive" href="/request">
-          Request Drive links
-        </a>
-        <a className="fb-btn fb-btn-setup" href={setupHref}>
-          Setup
-        </a>
+        {' · '}
         <a
-          className="fb-btn fb-theater-get-vlc"
+          className="fb-link"
           href="https://play.google.com/store/apps/details?id=org.videolan.vlc"
           target="_blank"
           rel="noopener noreferrer"
         >
           Get VLC (Play Store)
         </a>
-      </div>
+        {' · '}
+        <a className="fb-link" href="/app">
+          Flashback App
+        </a>
+      </p>
     </div>
   )
 }
