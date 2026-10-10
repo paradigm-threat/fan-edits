@@ -14,7 +14,8 @@ We try to stick to the ownership rules as they are commonly understood in fanedi
 
 - **Git / public repos do not hold the movie files.** Catalog history, CleverScript, READMEs, cut notes, and **text-only** pointers (content hashes and paths) live in the repository. **Kdenlive project files** and similar may mention source **filenames** as plain text so the edit stays reproducible. A filename or hash in a text file is not the film, and is not a way to pirate the film by itself.
 - **Feature video (the copyrighted edit masters) is stored on the IPFS network**, addressed by content hash — not checked into any public git remote as binary media.
-- **Servers may cache IPFS blocks temporarily** so streams and seeks work with `Range` requests. That is a **network cache**, not a permanent public file locker and not a substitute for “the movie lives forever on this disk for everyone.” Cache can be garbage-collected; availability depends on peers who still pin the CID.
+- **Servers may cache IPFS blocks temporarily** so streams and seeks work with `Range` requests. That is a **network cache**, not a permanent public file locker and not a substitute for “the movie lives forever on this disk for everyone.” Cache can be garbage-collected; availability depends on peers who still pin the CID. **Now showing** means titles ready to play or download on the server **right now** — not a promise that every catalog entry is always hot-cached.
+- **Offline alternatives:** download the file via this site’s IPFS gateway when providers exist, or [request Google Drive links](/request) by email.
 - **Access on this site is gated.** Theater stream / download chrome is for visitors who have confirmed ownership via the disclaimer. This is a personal catalog under that rule — not an open pirate mirror.
 
 If you do not own the original, do not play the edit. Confirm ownership on the disclaimer when you first visit, and again whenever that acknowledgment is cleared.
