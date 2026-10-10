@@ -1160,16 +1160,6 @@ function navigate(path) {
   } catch (e) {}
 }
 
-function SeatRows() {
-  return (
-    <div className="fb-seats" aria-hidden="true">
-      <div className="fb-seat-row fb-seat-row-1" />
-      <div className="fb-seat-row fb-seat-row-2" />
-      <div className="fb-seat-row fb-seat-row-3" />
-    </div>
-  )
-}
-
 function projectSlug(p) {
   try {
     if (p && p.slug) {
@@ -2108,23 +2098,12 @@ export default function FlashbackApp() {
     <StyleContext src="hooks/client/theme.yaml">
       <div className="fb-app">
         <style>
-          {'@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}@keyframes fb-bulb{0%,100%{opacity:0.4}50%{opacity:1}}@keyframes fb-sconce-breathe{0%,100%{opacity:0.5}50%{opacity:0.78}}@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}.fb-bulb-0{animation:fb-bulb 2.2s ease-in-out infinite}.fb-bulb-1{animation:fb-bulb 2.2s ease-in-out 0.4s infinite}.fb-bulb-2{animation:fb-bulb 2.2s ease-in-out 0.8s infinite}.fb-bulb-3{animation:fb-bulb 2.2s ease-in-out 1.2s infinite}.fb-sconce-1{animation:fb-sconce-breathe 7.5s ease-in-out infinite}.fb-sconce-2{animation:fb-sconce-breathe 7.5s ease-in-out 1.6s infinite}.fb-sconce-3{animation:fb-sconce-breathe 7.5s ease-in-out 3.2s infinite}}@media (prefers-reduced-motion:reduce){.fb-screen-glow,.fb-bulb,.fb-sconce{animation:none!important}}@media (max-width:640px){.fb-movie-stage{flex-direction:column}.fb-movie-poster{width:min(280px,100%)}.fb-gate,.fb-affirmation-native{align-items:stretch;justify-content:flex-start;padding:0;overflow:auto}.fb-gate-panel,.fb-gate-card{max-width:none;width:100%;min-height:100%;border-radius:0;box-shadow:none;box-sizing:border-box;padding:max(20px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))}}'}
+          {'@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}}@media (prefers-reduced-motion:reduce){.fb-screen-glow{animation:none!important}}@media (max-width:640px){.fb-movie-stage{flex-direction:column}.fb-movie-poster{width:min(280px,100%)}.fb-gate,.fb-affirmation-native{align-items:stretch;justify-content:flex-start;padding:0;overflow:auto}.fb-gate-panel,.fb-gate-card{max-width:none;width:100%;min-height:100%;border-radius:0;box-shadow:none;box-sizing:border-box;padding:max(20px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))}}'}
         </style>
         <div className={playing === true ? 'fb-backdrop fb-backdrop-playing' : 'fb-backdrop'} aria-hidden="true">
-          <div className="fb-curtain fb-curtain-left" />
-          <div className="fb-curtain fb-curtain-right" />
-          <div className="fb-wall-lights fb-wall-lights-left">
-            <span className="fb-sconce fb-sconce-1" />
-            <span className="fb-sconce fb-sconce-2" />
-            <span className="fb-sconce fb-sconce-3" />
-          </div>
-          <div className="fb-wall-lights fb-wall-lights-right">
-            <span className="fb-sconce fb-sconce-1" />
-            <span className="fb-sconce fb-sconce-2" />
-            <span className="fb-sconce fb-sconce-3" />
-          </div>
+          <div className="fb-wall-lights fb-wall-lights-left" />
+          <div className="fb-wall-lights fb-wall-lights-right" />
           <div className="fb-screen-glow" />
-          <SeatRows />
         </div>
         {kind.kind !== 'movie' ? (
           <Affirmation

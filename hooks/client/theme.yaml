@@ -9,7 +9,6 @@ themes:
       goldDim: "#b8860b"
       cream: "#f5e6be"
       creamMuted: "#c4b49a"
-      seat: "#120808"
       screen: "#1c1410"
       border: "#4a3028"
       warn: "#c45c4a"
@@ -52,56 +51,32 @@ themes:
         inset: "0"
         zIndex: "0"
         pointerEvents: "none"
-        background: "radial-gradient(ellipse 80% 50% at 50% 28%, #2a1810 0%, var(house) 70%)"
+        backgroundColor: "var(house)"
+        backgroundImage: "url(/hooks/client/brand/png/wall-texture.png)"
+        backgroundRepeat: "repeat-y"
+        backgroundPosition: "center top"
+        backgroundSize: "100% auto"
       ".fb-curtain":
+        display: "none"
+      ".fb-wall-lights":
         position: "absolute"
         top: "0"
         bottom: "0"
-        width: "18%"
-        maxWidth: "220px"
-        background: "linear-gradient(90deg, var(velvetDeep), var(velvet) 40%, var(velvetDeep))"
-        opacity: "0.85"
-        boxShadow: "inset -20px 0 40px rgba(0,0,0,0.45)"
-      ".fb-curtain-left":
-        left: "0"
-        borderRight: "1px solid var(border)"
-      ".fb-curtain-right":
-        right: "0"
-        borderLeft: "1px solid var(border)"
-        background: "linear-gradient(270deg, var(velvetDeep), var(velvet) 40%, var(velvetDeep))"
-        boxShadow: "inset 20px 0 40px rgba(0,0,0,0.45)"
-      ".fb-wall-lights":
-        position: "absolute"
-        top: "14%"
-        bottom: "22%"
-        width: "16%"
-        maxWidth: "200px"
-        display: "flex"
-        flexDirection: "column"
-        justifyContent: "space-evenly"
-        alignItems: "center"
+        width: "22%"
+        maxWidth: "280px"
         pointerEvents: "none"
         zIndex: "1"
         opacity: "1"
         transition: "opacity 1.6s ease"
+        backgroundRepeat: "repeat-y"
+        backgroundPosition: "center top"
+        backgroundSize: "100% auto"
       ".fb-wall-lights-left":
         left: "0"
+        backgroundImage: "url(/hooks/client/brand/png/wall-sconce-left.png)"
       ".fb-wall-lights-right":
         right: "0"
-      ".fb-sconce":
-        display: "block"
-        width: "72px"
-        height: "136px"
-        borderRadius: "0"
-        opacity: "0.62"
-        backgroundImage: "url(/hooks/client/brand/png/sconce.png)"
-        backgroundRepeat: "no-repeat"
-        backgroundPosition: "center"
-        backgroundSize: "contain"
-        filter: "none"
-        mixBlendMode: "screen"
-      ".fb-wall-lights-right .fb-sconce":
-        transform: "scaleX(-1)"
+        backgroundImage: "url(/hooks/client/brand/png/wall-sconce-right.png)"
       ".fb-backdrop-playing .fb-wall-lights":
         opacity: "0"
       ".fb-screen-glow":
@@ -113,32 +88,6 @@ themes:
         transform: "translateX(-50%)"
         background: "radial-gradient(ellipse at center, rgba(212,165,116,0.18) 0%, transparent 70%)"
         opacity: "0.9"
-      ".fb-seats":
-        position: "absolute"
-        left: "10%"
-        right: "10%"
-        bottom: "0"
-        height: "28%"
-      ".fb-seat-row":
-        position: "absolute"
-        left: "0"
-        right: "0"
-        height: "28%"
-        borderRadius: "50% 50% 0 0"
-        background: "linear-gradient(180deg, transparent, var(seat))"
-        borderTop: "2px solid #2a1418"
-        opacity: "0.9"
-      ".fb-seat-row-1":
-        bottom: "0"
-        transform: "scaleX(1.05)"
-      ".fb-seat-row-2":
-        bottom: "22%"
-        opacity: "0.75"
-        transform: "scaleX(0.95)"
-      ".fb-seat-row-3":
-        bottom: "42%"
-        opacity: "0.55"
-        transform: "scaleX(0.85)"
       ".fb-header":
         position: "relative"
         zIndex: "2"
@@ -1206,8 +1155,6 @@ themes:
           gap: "12px"
         ".fb-main":
           padding: "28px 28px 56px"
-        ".fb-curtain":
-          width: "14%"
       "@media (max-width: 640px)":
         ".fb-brand-logo":
           height: "40px"
@@ -1220,15 +1167,10 @@ themes:
           display: "none"
         ".fb-header":
           padding: "12px 14px"
-        ".fb-curtain":
-          width: "8%"
-          opacity: "0.55"
         ".fb-wall-lights":
-          width: "10%"
-          opacity: "0.7"
-        ".fb-sconce":
-          width: "52px"
-          height: "98px"
+          width: "16%"
+          maxWidth: "120px"
+          opacity: "0.85"
         ".fb-movie-title":
           fontSize: "1.35rem"
         ".fb-movie-stage":

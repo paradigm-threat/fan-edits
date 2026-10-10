@@ -10,6 +10,9 @@ Antique gold on near-black. **Header logo** = cinematic three-frame film strip (
 | `png/logo-primary-800.png` | Large logo still |
 | `png/icon-512.png` | App / PWA icon |
 | `png/icon-192.png` | PWA icon |
+| `png/wall-texture.png` | Theatre wall fill (`repeat-y` on `.fb-backdrop`) |
+| `png/wall-sconce-left.png` | Left wall sconce column (`repeat-y`) |
+| `png/wall-sconce-right.png` | Right wall sconce column (`repeat-y`) |
 | `svg/logo-primary.svg` | Legacy full wordmark (optional) |
 | `svg/logo-compact.svg` | Legacy header wordmark (optional) |
 | `svg/logo-mono.svg` | Legacy white mono |

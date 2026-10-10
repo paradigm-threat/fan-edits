@@ -26,6 +26,30 @@
       "contentType": "video/x-matroska",
       "sha256": "b48135ebe3e90670bf8e53a9a8b304be8c2f5269960d140a9364a90ce43fbba0",
       "bytes": 2613252313
+    },
+    {
+      "id": "hooks_client_brand_png_wall-sconce-left.png",
+      "path": "hooks/client/brand/png/wall-sconce-left.png",
+      "ipfs": "bafkreihqohvm6i5fi6vcdnbp6qcyugxknd45bp6vhu4mpju4tzcb22irwa",
+      "contentType": "image/png",
+      "sha256": "f071eacf23a547aa21b42ff4058a1aea68f9d0bfd53d38c7a69c9e441d6911b0",
+      "bytes": 93893
+    },
+    {
+      "id": "hooks_client_brand_png_wall-sconce-right.png",
+      "path": "hooks/client/brand/png/wall-sconce-right.png",
+      "ipfs": "bafkreiawrvpmw54n7o2zasmf6iv74flnk46qijbanv4a7kgizawa2wqpuq",
+      "contentType": "image/png",
+      "sha256": "168d5ecb778dfbb5904985f22bfe156d573d0424206d780fa8c8c82c0d5a0fa4",
+      "bytes": 91885
+    },
+    {
+      "id": "hooks_client_brand_png_wall-texture.png",
+      "path": "hooks/client/brand/png/wall-texture.png",
+      "ipfs": "bafkreif6bex6ve2i4zj6t7k4qrme57m35xcnqahnjbjx4ycmfxbs6eocea",
+      "contentType": "image/png",
+      "sha256": "be092fea9348e653e9fd5c84584efd9bedc4d800ed48537e604c2dc32f11c220",
+      "bytes": 191860
     }
   ]
 }
