@@ -21,7 +21,7 @@ themes:
       body:
         margin: "0"
         minHeight: "100%"
-        overflowX: "hidden"
+        overflowX: "clip"
         overflowY: "auto"
         backgroundColor: "var(house)"
         color: "var(cream)"
