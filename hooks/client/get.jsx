@@ -81,6 +81,33 @@ function mediaSrc(project) {
   return '/' + project.path + '/' + project.media
 }
 
+/**
+ * Now showing = title is uploaded on this server (tip media is playable).
+ * Everyone else is IPFS / email only — never advertise tip /FanMixes/… URLs.
+ */
+function projectIsNowShowing(project, nowShowingSlugs) {
+  if (!project) {
+    return false
+  }
+  try {
+    if (str(project.status).toLowerCase() === 'showing') {
+      return true
+    }
+  } catch (eSt) {}
+  const slug = str(project.slug)
+  if (slug.length === 0 || !nowShowingSlugs) {
+    return false
+  }
+  let i = 0
+  while (i < nowShowingSlugs.length) {
+    if (str(nowShowingSlugs[i]) === slug) {
+      return true
+    }
+    i = i + 1
+  }
+  return false
+}
+
 function projectMediaField(project, key) {
   try {
     if (project && project[key]) {
@@ -1864,28 +1891,39 @@ export default function FlashbackApp() {
     let downloadName = 'movie.mkv'
     let projectStatus = ''
     if (selected) {
-      // VLC on macOS rejects MRLs with raw spaces or parentheses.
-      streamUrl = encodeMarkdownUrl(absoluteStreamUrl(mediaSrc(selected)))
-      const webRel = projectMediaField(selected, 'mediaWeb')
-      const mobileRel = projectMediaField(selected, 'mediaMobile')
-      if (webRel.length > 0) {
-        streamUrlWeb = encodeMarkdownUrl(absoluteStreamUrl(mediaSrcFor(selected, webRel)))
-      }
-      if (mobileRel.length > 0) {
-        streamUrlMobile = encodeMarkdownUrl(absoluteStreamUrl(mediaSrcFor(selected, mobileRel)))
+      const onServer = projectIsNowShowing(selected, nowShowingSlugs)
+      // Tip /FanMixes/… paths only for Now showing (bytes on this server).
+      // Other titles: no streamUrl — Download uses /ipfs/{cid} when catalogued.
+      if (onServer) {
+        // VLC on macOS rejects MRLs with raw spaces or parentheses.
+        streamUrl = encodeMarkdownUrl(absoluteStreamUrl(mediaSrc(selected)))
+        const webRel = projectMediaField(selected, 'mediaWeb')
+        const mobileRel = projectMediaField(selected, 'mediaMobile')
+        if (webRel.length > 0) {
+          streamUrlWeb = encodeMarkdownUrl(absoluteStreamUrl(mediaSrcFor(selected, webRel)))
+        }
+        if (mobileRel.length > 0) {
+          streamUrlMobile = encodeMarkdownUrl(
+            absoluteStreamUrl(mediaSrcFor(selected, mobileRel)),
+          )
+        }
+        projectStatus = 'showing'
+      } else {
+        try {
+          if (selected.status) {
+            projectStatus = str(selected.status)
+          }
+        } catch (eSt) {}
       }
       masterCid = resolveProjectCid(selected)
       const masterBase = projectMediaField(selected, 'media')
       if (masterBase.length > 0) {
         downloadName = downloadBasename(masterBase)
-      } else {
+      } else if (streamUrl.length > 0) {
         downloadName = downloadBasename(streamUrl)
+      } else if (masterCid.length >= 8) {
+        downloadName = downloadBasename(str(selected.slug) + '.mkv')
       }
-      try {
-        if (selected.status) {
-          projectStatus = str(selected.status)
-        }
-      } catch (eSt) {}
     }
     const posterHref = encodeMarkdownUrl(absoluteStreamUrl(projectPosterPath(selected)))
     const readmeMd = rewriteReadmeAssetLinks(hero.body || '', selected ? selected.path : '')

@@ -167,7 +167,12 @@ export default function TheaterPlayer(props) {
   }
   return (
     <div className="fb-theater-player" data-playback-engine="external">
-      <ExternalPlay streamUrl={chosenSrc} unlocked={true} setupHref="/setup" />
+      <ExternalPlay
+        streamUrl={chosenSrc}
+        status="showing"
+        unlocked={true}
+        setupHref="/setup"
+      />
       {downloadLinks(p)}
       {p.cid ? <p className="fb-theater-tech-body">CID {p.cid}</p> : null}
     </div>

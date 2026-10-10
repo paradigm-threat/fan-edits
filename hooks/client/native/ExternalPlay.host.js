@@ -284,8 +284,11 @@
     }
 
     function downloadHrefFor(kind, url) {
-      if (kind === 'master' && masterIpfsUrl) return masterIpfsUrl;
-      return String(url || '') || masterIpfsUrl || '';
+      // Prefer IPFS gateway for every download; never fall back to tip media paths
+      // (those 404 unless the title is Now showing — and stream covers that case).
+      if (masterIpfsUrl) return masterIpfsUrl;
+      if (catalogShowing && url) return String(url);
+      return '';
     }
 
     function downloadFilenameFor(kind, url) {
@@ -514,21 +517,22 @@
     }
 
     function streamServerReady() {
-      if (!streamUrl) return false;
-      if (catalogShowing) return true;
-      return gatewayReady === true;
+      // Stream is exclusive to Now showing (bytes uploaded on this server).
+      // Never enable from tip-path probes — non-showing titles are IPFS/email only.
+      return !!streamUrl && catalogShowing === true;
     }
 
     function applyAvailability() {
       syncUnlockedFlag();
       const own = unlocked;
       const serverOk = streamServerReady();
-      const streamOn = own && !!streamUrl && serverOk;
-      const dlHrefNow = downloadHrefFor(
+      const streamOn = own && serverOk;
+      const dlHrefNow = masterIpfsUrl || downloadHrefFor(
         ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master',
         streamUrl,
       );
-      const downloadOn = own && inCatalog && !!dlHrefNow;
+      // Download is IPFS-only (never a tip /FanMixes/… path that may 404).
+      const downloadOn = own && inCatalog && !!masterIpfsUrl;
 
       setControlEnabled(openBtn, streamOn);
       setControlEnabled(openHttpsBtn, streamOn);
@@ -539,20 +543,14 @@
         streamStatus.textContent = 'Confirm ownership above first.';
         dlStatus.textContent = 'Confirm ownership above first.';
       } else {
-        if (!streamUrl) {
-          streamStatus.textContent = 'No stream URL for this title yet.';
-        } else if (seedPhase === 'checking' && !catalogShowing) {
-          streamStatus.textContent = 'Checking if this server has the file…';
-        } else if (serverOk) {
-          streamStatus.textContent = catalogShowing
-            ? 'Ready on this server (Now showing).'
-            : 'Ready on this server.';
-        } else {
+        if (!catalogShowing || !streamUrl) {
           streamStatus.textContent =
-            'Not on this server right now. Try Download (if listed) or Request Drive links.';
+            'Not on this server (not Now showing). Use Download via IPFS or Request Drive links.';
+        } else {
+          streamStatus.textContent = 'Ready on this server (Now showing).';
         }
 
-        if (!inCatalog) {
+        if (!inCatalog || !masterIpfsUrl) {
           dlStatus.textContent = 'This title is not in the IPFS catalog yet.';
         } else {
           dlStatus.textContent = 'Ready to download via IPFS.';
@@ -630,22 +628,23 @@
 
     function pollSeedStatus(url) {
       const target = String(url || '');
+      // Non–Now showing: do not probe tip paths (they 404 and are not stream sources).
+      if (!catalogShowing) {
+        seedPhase = target ? 'unavailable' : 'none';
+        gatewayReady = false;
+        applyAvailability();
+        return;
+      }
       if (!target) {
         seedPhase = 'none';
         gatewayReady = false;
         applyAvailability();
         return;
       }
-      // Now showing: stream can stay on while we still poll for a nicer status line.
-      if (!catalogShowing) {
-        seedPhase = 'checking';
-        gatewayReady = false;
-        applyAvailability();
-      } else {
-        seedPhase = 'ready';
-        gatewayReady = true;
-        applyAvailability();
-      }
+      seedPhase = 'ready';
+      gatewayReady = true;
+      applyAvailability();
+      // Optional status line polish for Now showing — never gates availability.
       const gen = ++seedPollGen;
       const statusUrl = target + (target.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1';
       fetchWithTimeout(
@@ -663,37 +662,16 @@
             return null;
           });
         })
-        .then(function (j) {
+        .then(function () {
           if (gen !== seedPollGen) return;
-          const st = parseSeedStatusJson(j);
-          const cached = !!(st && (st.seedState === 'cached' || st.ok));
-          const needsSeed =
-            st &&
-            ((typeof st.providers === 'number' && st.providers === 0) ||
-              (st.message && /need[s]? to be seeded/i.test(st.message)) ||
-              st.seedState === 'missing' ||
-              st.seedState === 'absent');
-          if (cached) {
-            gatewayReady = true;
-            seedPhase = 'ready';
-          } else if (needsSeed) {
-            gatewayReady = false;
-            seedPhase = 'unavailable';
-          } else if (st && st.seedState === 'fetching') {
-            // Fetching: not ready for stream unless already Now showing
-            gatewayReady = catalogShowing;
-            seedPhase = catalogShowing ? 'ready' : 'unavailable';
-          } else {
-            // Probe failed or unknown — keep Now showing enabled; otherwise off
-            gatewayReady = catalogShowing;
-            seedPhase = catalogShowing ? 'ready' : 'unavailable';
-          }
+          gatewayReady = true;
+          seedPhase = 'ready';
           applyAvailability();
         })
         .catch(function () {
           if (gen !== seedPollGen) return;
-          gatewayReady = catalogShowing;
-          seedPhase = catalogShowing ? 'ready' : 'unavailable';
+          gatewayReady = true;
+          seedPhase = 'ready';
           applyAvailability();
         });
     }

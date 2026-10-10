@@ -1,7 +1,8 @@
 /**
  * Android CleverScript host for ExternalPlay — Ways to watch parity with web host.
+ * Stream = Now showing (server tip) only. Download = IPFS CID only.
  */
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 
 function propStr(p, key) {
   try {
@@ -64,37 +65,10 @@ function buildLadder(p) {
   return out
 }
 
-function parseSeed(j) {
-  if (!j || typeof j !== 'object') {
-    return { ready: false, checking: false }
-  }
-  const seed = j.seed && typeof j.seed === 'object' ? j.seed : {}
-  const state = typeof seed.state === 'string' ? seed.state : ''
-  const providers = typeof seed.providers === 'number' ? seed.providers : null
-  if (j.error === 'ok' || state === 'cached') {
-    return { ready: true, checking: false }
-  }
-  if (state === 'fetching') {
-    return { ready: false, checking: false }
-  }
-  if (providers === 0) {
-    return { ready: false, checking: false }
-  }
-  return { ready: false, checking: false }
-}
-
 export default function ExternalPlay(props) {
   const p = props || {}
   const ladder = buildLadder(p)
-  const idxState = useState(0)
-  const activeIndex = idxState[0]
-  const setActiveIndex = idxState[1]
-  const seedReadyState = useState(false)
-  const gatewayReady = seedReadyState[0]
-  const setGatewayReady = seedReadyState[1]
-  const seedPhaseState = useState('checking')
-  const seedPhase = seedPhaseState[0]
-  const setSeedPhase = seedPhaseState[1]
+  const activeIndex = 0
 
   let unlocked = false
   try {
@@ -117,42 +91,25 @@ export default function ExternalPlay(props) {
     downloadName = propStr(p, 'downloadName') || propStr(p, 'data-download-name') || ''
   } catch (eDn) {}
 
-  if (ladder.length === 0) {
-    return (
-      <div className="fb-external-play fb-ways-to-watch" data-fb-external-play="1">
-        <h2 className="fb-ways-title">Ways to watch this movie</h2>
-        <p className="fb-ways-lead">No stream URL for this title yet.</p>
-        <section className="fb-ways-section">
-          <h3 className="fb-ways-section-title">3. Get links by email</h3>
-          <div className="fb-ways-actions">
-            <a className="fb-btn fb-theater-request-drive" href="/request">
-              Request Drive links
-            </a>
-          </div>
-        </section>
-      </div>
-    )
-  }
+  const active = ladder[activeIndex] || null
+  const abs = catalogShowing && active ? active.url : ''
+  const intentHref = abs ? intentHrefFor(abs) : ''
+  const dlLabel =
+    !active || active.kind === 'master' || /\.mkv($|\?)/i.test(downloadName)
+      ? 'Download MKV'
+      : 'Download MP4'
 
-  const active = ladder[activeIndex] || ladder[0]
-  const abs = active.url
-  const intentHref = intentHrefFor(abs)
-  const dlLabel = active.kind === 'master' ? 'Download MKV' : 'Download MP4'
-  let dlHref = abs
-  if (active.kind === 'master' && inCatalog) {
-    try {
-      const origin =
-        globalThis.location && globalThis.location.origin
-          ? globalThis.location.origin
-          : 'https://flashbackrepository.org'
-      dlHref = origin + '/ipfs/' + masterCid
-    } catch (eIpfs) {
-      dlHref = abs
+  let origin = 'https://flashbackrepository.org'
+  try {
+    if (globalThis.location && globalThis.location.origin) {
+      origin = globalThis.location.origin
     }
-  }
+  } catch (eOrigin) {}
+  const dlHref = inCatalog ? origin + '/ipfs/' + masterCid : ''
+
   if (!downloadName) {
     try {
-      const parts = String(abs || '').split('/')
+      const parts = String(abs || dlHref || '').split('/')
       downloadName = parts.length ? parts[parts.length - 1] : 'movie.mkv'
       const q = downloadName.indexOf('?')
       if (q >= 0) downloadName = downloadName.slice(0, q)
@@ -162,84 +119,17 @@ export default function ExternalPlay(props) {
     }
   }
 
-  useEffect(() => {
-    let cancelled = false
-    if (!abs) {
-      setSeedPhase('none')
-      setGatewayReady(false)
-      return
-    }
-    if (catalogShowing) {
-      setGatewayReady(true)
-      setSeedPhase('ready')
-    } else {
-      setGatewayReady(false)
-      setSeedPhase('checking')
-    }
-    const statusUrl = abs + (abs.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1'
-    const ctrl = typeof AbortController === 'function' ? new AbortController() : null
-    const timer =
-      ctrl &&
-      setTimeout(() => {
-        try {
-          ctrl.abort()
-        } catch (e) {}
-      }, 10000)
-    fetch(statusUrl, {
-      credentials: 'omit',
-      cache: 'no-store',
-      headers: { Accept: 'application/vnd.relay.asset-status+json, application/json' },
-      signal: ctrl ? ctrl.signal : undefined,
-    })
-      .then((r) => (r ? r.json() : null))
-      .then((j) => {
-        if (cancelled) return
-        const parsed = parseSeed(j)
-        if (parsed.ready) {
-          setGatewayReady(true)
-          setSeedPhase('ready')
-        } else {
-          setGatewayReady(catalogShowing)
-          setSeedPhase(catalogShowing ? 'ready' : 'unavailable')
-        }
-      })
-      .catch(() => {
-        if (!cancelled) {
-          setGatewayReady(catalogShowing)
-          setSeedPhase(catalogShowing ? 'ready' : 'unavailable')
-        }
-      })
-      .then(() => {
-        if (timer) clearTimeout(timer)
-      })
-    return () => {
-      cancelled = true
-      if (timer) clearTimeout(timer)
-      if (ctrl) {
-        try {
-          ctrl.abort()
-        } catch (e2) {}
-      }
-    }
-  }, [abs, catalogShowing])
-
-  const serverOk = !!abs && (catalogShowing || gatewayReady === true)
-  const streamOn = unlocked === true && serverOk
-  const downloadOn = unlocked === true && inCatalog
+  // Stream exclusive to Now showing — never tip-path probes for other titles.
+  const streamOn = unlocked === true && catalogShowing === true && !!abs
+  const downloadOn = unlocked === true && inCatalog && !!dlHref
 
   let streamStatus = 'Confirm ownership above first.'
   if (unlocked === true) {
-    if (!abs) {
-      streamStatus = 'No stream URL for this title yet.'
-    } else if (seedPhase === 'checking' && !catalogShowing) {
-      streamStatus = 'Checking if this server has the file…'
-    } else if (serverOk) {
-      streamStatus = catalogShowing
-        ? 'Ready on this server (Now showing).'
-        : 'Ready on this server.'
+    if (catalogShowing && abs) {
+      streamStatus = 'Ready on this server (Now showing).'
     } else {
       streamStatus =
-        'Not on this server right now. Try Download (if listed) or Request Drive links.'
+        'Not on this server (not Now showing). Use Download via IPFS or Request Drive links.'
     }
   }
 
@@ -251,22 +141,18 @@ export default function ExternalPlay(props) {
   }
 
   let qualityRow = null
-  if (ladder.length > 1) {
+  if (catalogShowing && ladder.length > 1) {
     let buttons = []
     for (let i = 0; i < ladder.length; i++) {
-      const idx = i
-      const on = idx === activeIndex
+      const on = i === activeIndex
       buttons = buttons.concat([
         <button
           type="button"
           className={on ? 'fb-btn fb-btn-quality is-active' : 'fb-btn fb-btn-quality'}
           role="radio"
           aria-checked={on ? 'true' : 'false'}
-          onClick={() => {
-            setActiveIndex(idx)
-          }}
         >
-          {ladder[idx].label}
+          {ladder[i].label}
         </button>,
       ])
     }
@@ -281,13 +167,16 @@ export default function ExternalPlay(props) {
   }
 
   const streamCls = streamOn ? 'fb-btn' : 'fb-btn is-disabled'
-  const dlCls = downloadOn ? 'fb-btn fb-theater-download-mkv' : 'fb-btn fb-theater-download-mkv is-disabled'
+  const dlCls = downloadOn
+    ? 'fb-btn fb-theater-download-mkv'
+    : 'fb-btn fb-theater-download-mkv is-disabled'
 
   return (
     <div
       className="fb-external-play fb-theater-external fb-ways-to-watch"
       data-fb-external-play="1"
       data-playback-engine="external"
+      data-fb-catalog-status={catalogStatus || 'unknown'}
     >
       <h2 className="fb-ways-title">Ways to watch this movie</h2>
       <p className="fb-ways-lead">
