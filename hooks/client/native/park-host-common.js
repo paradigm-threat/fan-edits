@@ -7,7 +7,7 @@
 (function (global) {
   'use strict';
 
-  var CSS_ID = 'fb-park-native-css-v5';
+  var CSS_ID = 'fb-park-native-css-v6';
   var BRAND_LINKS_ID = 'fb-brand-head-links';
 
   function ensureBrandHeadLinks() {
@@ -97,8 +97,12 @@
         '.fb-lcd-star{opacity:.9}',
         /* Carousel — desktop 50/50; height tracks poster (no empty gap under art). */
         '.fb-now-showing-carousel{margin:12px 0 28px;color:#f5e6be}',
-        '.fb-now-showing-carousel .fb-now-showing-head{display:flex;flex-direction:row;align-items:baseline;justify-content:space-between;gap:12px;margin:0 0 10px}',
+        '.fb-now-showing-carousel .fb-now-showing-head{display:flex;flex-direction:row;align-items:flex-start;justify-content:space-between;gap:12px;margin:0 0 10px}',
+        '.fb-now-showing-carousel .fb-now-showing-title-block{min-width:0;flex:1}',
         '.fb-now-showing-carousel .fb-now-showing-title{margin:0}',
+        '.fb-now-showing-sub{margin:6px 0 0;font-size:.85rem;line-height:1.45;color:#a69788;max-width:42rem}',
+        '.fb-now-showing-sub .fb-link{color:#e8c872}',
+        '.fb-theater-seed-status{margin:0 0 10px;color:#c4b49a}',
         '.fb-slideshow-count{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:#b8860b;margin:0}',
         '.fb-slideshow-row{display:flex;flex-direction:row;align-items:stretch;gap:8px}',
         '.fb-slideshow-frame{flex:1;min-width:0;position:relative;border:1px solid #3a2a1a;background:linear-gradient(145deg,#2a1418 0%,#12080a 55%,#0d0505 100%);box-shadow:0 12px 36px rgba(0,0,0,.45);overflow:hidden}',
