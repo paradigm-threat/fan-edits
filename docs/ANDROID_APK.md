@@ -12,23 +12,37 @@ Deferred player features (VLC/Nova-class, not in v1): **[ANDROID_PLAYER_BACKLOG.
 
 ## Playback (Flashback native shell)
 
-Published masters are **HEVC Matroska (`.mkv`)**. In-app play uses **Media3 ExoPlayer** with the device’s **hardware HEVC** decoder over progressive HTTPS (Range requests; no multi‑GB disk cache thrash). Catalog paths with spaces are percent-encoded before bind.
+Published masters are **HEVC Matroska (`.mkv`)**. In-app play uses **Media3 ExoPlayer** with the device’s **hardware HEVC** decoder. **Media bytes are fetched over IPFS (Bitswap)** by an embedded Kubo daemon (`libkubo_daemon.so`) and streamed from `http://127.0.0.1:18080/ipfs/{cid}` with bounded Range requests — **not** via the Relay HTTPS `/ipfs/` gateway. Catalog JSON (`index.json`, `assets.manifest.json`) still loads over HTTPS from the origin.
 
-- **Play in app** — after ownership confirm → immersive landscape theater (full-bleed player).
+- **Play in app** — after ownership confirm → immersive landscape theater (full-bleed player) once Kubo is ready.
 - **Open in external player** — theater “External” chip or error-card action (`ACTION_VIEW` / `video/*`); pick VLC and optionally Always.
-- **Save offline** — full file under app-private storage (notification while downloading).
+- **Keep offline** — title toggle pins the CID in on-device Kubo (`IpfsOfflineStore` + `ipfs pin add`). Delete unpins and runs repo GC. Ephemeral play fetches without a lasting pin.
 - If decode fails (common on devices without HEVC hardware): **PlaybackErrors** card (not a truncated Toast) plus Open in external player / Get VLC. Install [VLC for Android](https://play.google.com/store/apps/details?id=org.videolan.vlc) for that long tail.
+
+### IPFS / ABI notes (1.0.26+)
+
+| ABI | Artifact | Mode |
+|-----|----------|------|
+| `arm64-v8a` | `flashback-arm64-v8a.apk` | Embedded Kubo (`IpfsSession.abiMode=kubo`) |
+| `armeabi-v7a` | `flashback-armeabi-v7a.apk` | Same Kubo binary (GOARM / NDK armv7) |
+
+Hardening: daemon auto-restart watchdog, `Datastore.StorageMax` (8 GB TV / 20 GB phone), GC watermark 90%, leave-theater `maybeGcIfOverBudget`. Sideload APKs omit x86_64 (emulator: `-PipfsIncludeX86=true`).
+
+Rebuild Kubo prebuilts: `android/ipfs-kubo/build-kubo-android.sh` then `./gradlew :app:syncIpfsKubo`. Lab → **IPFS (embedded Kubo)** shows ABI mode, peers, Range probe, and Keep list.
 
 Soft FFmpeg decode is **not** shipped (APK size / licensing). See the backlog doc.
 
 ### How to test playback
 
-1. Install `downloads/flashback.apk` (or `assembleFlashbackDebug` output) on a device/emulator with **HEVC hardware**.
-2. Open the app → library loads from `https://flashbackrepository.org/index.json` (+ `assets.manifest.json` for CIDs).
-3. Optional: **Lab** → HEVC probe, **Simulate decode error** (full card), **Try sample stream** (prefers a `showing` master such as The Mummy Debugged).
-4. Pick **The Mummy (1999) — Debugged** → **OK — I confirm** (hits POST once) → **Play** → landscape theater should buffer and play.
-5. Scrub / pause; confirm Range/`Accept-Ranges` on the stream URL (see validation notes below).
+1. Install `downloads/flashback.apk` (or ABI split) **1.0.26+** on a device with **HEVC hardware** (arm64 phone or armeabi-v7a Fire TV).
+2. Open the app → library loads from `https://flashbackrepository.org/index.json` (+ `assets.manifest.json` for CIDs). Kubo starts in the background.
+3. **Lab** → **IPFS (embedded Kubo)** → Start node → Gateway Range probe; **Try sample via IPFS localhost**.
+4. Pick **The Mummy (1999) — Debugged** → **OK — I confirm** → optional **Keep offline copy** → **Play** → theater streams from `127.0.0.1:18080/ipfs/{cid}` (status chip briefly).
+5. Scrub once into a colder region; confirm rebuffer then resume (Bitswap catching up).
 6. Force a decode failure path on non-HEVC hardware: error card → **Open in external player**.
+
+Instrumented smoke (emulator x86_64 with prebuilt Kubo):  
+`./gradlew :app:connectedFlashbackDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class=com.relay.client.IpfsNodeSmokeTest`
 
 Web checklist: **[/android-lab](/android-lab)**.
 
@@ -39,9 +53,9 @@ Validated on phone (CPH2419) and emulator with Flashback **1.0.17+**:
 | Check | Result |
 |-------|--------|
 | Device decode | `c2.qti.hevc.decoder` (or emulator MediaCodec HEVC) @ master resolution |
-| Transport | Progressive HTTPS with **bounded Range** windows (`RangeEnforcingDataSource`, 4 MiB) — full GET / open-ended `bytes=0-` can hang on Relay/IPFS |
-| Buffer | LoadControl min ~50 s / max ~120 s to avoid Wi‑Fi rebuffer thrash |
-| Catalog URL | Masters resolve via `assets.manifest.json` → `/ipfs/{cid}` when tip path→CID is unavailable; logical tip paths may 404 even when the CID streams |
+| Transport | Embedded Kubo → localhost gateway with **bounded Range** (`RangeEnforcingDataSource`, 4 MiB); catalog CIDs from `assets.manifest.json` |
+| Buffer | LoadControl min ~50 s / max ~120 s for Bitswap / cold DHT |
+| In-app URL | `http://127.0.0.1:18080/ipfs/{cid}` when Kubo ready — **no** Relay HTTPS `/ipfs/` fallback for Play |
 | Escape hatch | Decode / open failure → PlaybackErrors card → Open in external player (VLC) |
 
 **Requirement:** in-app play needs **hardware HEVC** (`minSdk 24`). Soft FFmpeg decode is not shipped. Without HW HEVC, use VLC via external handoff.

@@ -7,7 +7,7 @@
 (function (global) {
   'use strict';
 
-  var CSS_ID = 'fb-park-native-css-v3';
+  var CSS_ID = 'fb-park-native-css-v4';
   var BRAND_LINKS_ID = 'fb-brand-head-links';
 
   function ensureBrandHeadLinks() {
@@ -46,10 +46,12 @@
       ensureBrandHeadLinks();
       if (!global.document) return;
       // Drop prior park CSS ids so layout revisions win after soft-hydrate.
-      ;['fb-park-native-css', 'fb-park-native-css-v2'].forEach(function (oldId) {
-        var old = global.document.getElementById(oldId);
-        if (old && old.parentNode) old.parentNode.removeChild(old);
-      });
+      ;['fb-park-native-css', 'fb-park-native-css-v2', 'fb-park-native-css-v3'].forEach(
+        function (oldId) {
+          var old = global.document.getElementById(oldId);
+          if (old && old.parentNode) old.parentNode.removeChild(old);
+        },
+      );
       if (global.document.getElementById(CSS_ID)) return;
       var st = global.document.createElement('style');
       st.id = CSS_ID;

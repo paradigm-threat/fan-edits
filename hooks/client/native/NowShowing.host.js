@@ -7,6 +7,14 @@
   var LCD_ANIM_STYLE_ID = 'fb-now-showing-lcd-anim';
   var FADE_MS = 1100;
   var AUTO_MS = 10000;
+
+  /** Test / harness override: `{ fadeMs, autoMs }` (autoMs 0 disables autoplay). */
+  function timing() {
+    const t = global.__fbNowShowingTiming || {};
+    const fadeMs = typeof t.fadeMs === 'number' && t.fadeMs > 0 ? t.fadeMs : FADE_MS;
+    const autoMs = typeof t.autoMs === 'number' ? t.autoMs : AUTO_MS;
+    return { fadeMs: fadeMs, autoMs: autoMs };
+  }
   var LCD_MIN_S = 70;
   var LCD_MAX_S = 240;
   var LCD_CHAR_S = 0.14;
@@ -414,6 +422,7 @@
       if (list.length < 2) return;
       if (busy) return;
       const nextIdx = (idx + delta + list.length) % list.length;
+      const { fadeMs } = timing();
       if (reduceMotion) {
         idx = nextIdx;
         paintInstant();
@@ -466,7 +475,7 @@
         incomingEl.removeEventListener('transitionend', onEnd);
         fadeTimer = null;
         finish();
-      }, FADE_MS + 120);
+      }, fadeMs + 120);
     }
 
     function armAuto() {
@@ -474,10 +483,11 @@
         global.clearTimeout(autoTimer);
         autoTimer = null;
       }
-      if (reduceMotion || list.length < 2) return;
+      const { autoMs } = timing();
+      if (reduceMotion || list.length < 2 || autoMs <= 0) return;
       autoTimer = global.setTimeout(function () {
         go(1);
-      }, AUTO_MS);
+      }, autoMs);
     }
 
     prev.addEventListener('click', function (ev) {

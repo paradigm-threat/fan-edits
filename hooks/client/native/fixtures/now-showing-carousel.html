@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Now Showing carousel harness</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      background: #0d0505;
+      color: #f5e6be;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      padding: 24px;
+    }
+    h1 { font-size: 1.1rem; color: #e8c872; margin: 0 0 8px; }
+    .hint { color: #a69788; font-size: 0.9rem; margin: 0 0 20px; max-width: 52rem; line-height: 1.45; }
+    #mount { max-width: 960px; }
+  </style>
+</head>
+<body>
+  <h1>Now Showing carousel (park-native harness)</h1>
+  <p class="hint">
+    Click ‹ / › to crossfade. Expect one smooth old→new fade — not a double flash.
+    Autoplay is off in this harness (<code>__fbNowShowingTiming.autoMs = 0</code>).
+  </p>
+  <div id="mount"></div>
+  <script src="/hooks/client/native/park-host-common.js"></script>
+  <script src="/hooks/client/native/NowShowing.host.js"></script>
+  <script>
+    window.__fbNowShowingTiming = { fadeMs: 1100, autoMs: 0 };
+    const items = [
+      {
+        title: 'The Mummy (1999) — Debugged',
+        href: '/the-mummy-1999-debugged',
+        blurb: 'Kid-friendlier cut: scarabs that kill are removed. Adventure stays.',
+        stats: 'edit 1:50:25 · cut 0:14:24',
+        changes: '- Removes killing scarab beats\n- Keeps Imhotep adventure',
+        poster:
+          'data:image/svg+xml,' +
+          encodeURIComponent(
+            '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600">' +
+              '<rect fill="#3a1820" width="100%" height="100%"/>' +
+              '<text x="50%" y="50%" fill="#e8c872" font-size="28" text-anchor="middle" font-family="Georgia">Mummy 1</text>' +
+              '</svg>',
+          ),
+      },
+      {
+        title: 'The Mummy Returns (2001) — Debugged',
+        href: '/the-mummy-returns-2001-debugged',
+        blurb: 'Companion cut: removes the pygmy swarm that kills the expedition.',
+        stats: 'edit 1:58:57 · cut 0:10:36',
+        changes: '- Removes pygmy swarm kill\n- Keeps Anubis finale',
+        poster:
+          'data:image/svg+xml,' +
+          encodeURIComponent(
+            '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600">' +
+              '<rect fill="#1a2030" width="100%" height="100%"/>' +
+              '<text x="50%" y="50%" fill="#e8c872" font-size="28" text-anchor="middle" font-family="Georgia">Mummy 2</text>' +
+              '</svg>',
+          ),
+      },
+      {
+        title: "Van Helsing (2004) — DeAnna'd",
+        href: '/van-helsing-deanna-d',
+        blurb: 'Cuts Anna as much as possible; some Castlevania score beds.',
+        stats: 'edit 1:23:32 · cut 0:48:05',
+        changes: '- Minimizes Anna\n- Castlevania cues',
+        poster:
+          'data:image/svg+xml,' +
+          encodeURIComponent(
+            '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="600">' +
+              '<rect fill="#201018" width="100%" height="100%"/>' +
+              '<text x="50%" y="50%" fill="#e8c872" font-size="28" text-anchor="middle" font-family="Georgia">Van Helsing</text>' +
+              '</svg>',
+          ),
+      },
+    ];
+    const built = window.__fbBuildNowShowing({
+      variant: 'carousel',
+      itemsJson: JSON.stringify(items),
+      ariaLabel: 'Now showing harness',
+    });
+    document.getElementById('mount').appendChild(built);
+  </script>
+</body>
+</html>

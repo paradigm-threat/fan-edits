@@ -2,7 +2,9 @@
 
 Flashback Repository ([flashbackrepository.org](https://flashbackrepository.org/)) is a **thin IPFS** Relay catalog repo: Git holds CleverScript, metadata, posters/brand images, and **text pointer stubs** under `.relay/assets/` for **feature video only** (`.mkv`). Posters and UI PNGs are normal tip blobs — not IPFS. The actual `.mkv` files live on IPFS and are pinned by whoever seeds them (your workstation and/or the Relay fleet).
 
-**Playback is same-origin only.** The browser requests `/FanMixes/…/….mkv` on this site. Relay resolves the CID, pins it into the **node’s local Kubo**, and serves bytes (Range) from that Kubo. The browser does **not** talk to `ipfs.io` / Helia / public gateways for video.
+**Web playback is same-origin only.** The browser requests `/FanMixes/…/….mkv` on this site. Relay resolves the CID, pins it into the **node’s local Kubo**, and serves bytes (Range) from that Kubo. The browser does **not** talk to `ipfs.io` / Helia / public gateways for video.
+
+**Flashback APK (1.0.26+)** embeds Kubo and fetches/seeds catalog CIDs over Bitswap directly (ExoPlayer → `127.0.0.1` gateway). See [docs/ANDROID_APK.md](docs/ANDROID_APK.md) and `relay-client-android/android/ipfs-kubo/`.
 
 See also: [docs/RELAY_DESKTOP.md](docs/RELAY_DESKTOP.md), [docs/PARKED_THIN_VIDEO.md](docs/PARKED_THIN_VIDEO.md), and **`relay-gateway/docs/RELAY_IPFS.md`** in your relay-gateway checkout (Kubo install, gateway env, status JSON).
 

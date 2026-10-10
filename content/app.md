@@ -14,7 +14,7 @@ Share this page (`/app`) — not a raw `.apk` URL — so people always get the c
 2. If Android asks whether to allow installs from the browser or Files app, tap **Allow** / open **Settings** and turn on install permission for that app, then go back and open the download.
 3. Open the downloaded **flashback.apk** → **Install** → **Open**.
 4. Pick a title → tap **OK — I confirm** (ownership affirmation).
-5. Tap **Play**. The picture may rotate to landscape.
+5. Tap **Play**. The picture may rotate to landscape. Playback pulls the feature over **IPFS** on the device (local Kubo); use **Keep offline copy** on the title page to pin it.
 
 You do **not** need a computer or Terminal for Android. Already installed? Use **Check for updates** in the app menu, or re-open this page on the site.
 

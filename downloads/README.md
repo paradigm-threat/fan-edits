@@ -16,8 +16,8 @@ Version metadata for in-app update checks:
 
 ```json
 {
-  "versionCode": 20,
-  "versionName": "1.0.20",
+  "versionCode": 26,
+  "versionName": "1.0.26",
   "apkUrl": "https://flashbackrepository.org/downloads/flashback.apk",
   "apkUrls": {
     "armeabi-v7a": "https://flashbackrepository.org/downloads/flashback-armeabi-v7a.apk",
