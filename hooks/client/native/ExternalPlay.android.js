@@ -2,7 +2,7 @@
  * Android CleverScript host for ExternalPlay.
  * Opens HTTPS media via intent ACTION_VIEW (system chooser / VLC). No vlc://.
  */
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function propStr(p, key) {
   try {
@@ -65,12 +65,42 @@ function buildLadder(p) {
   return out
 }
 
+function formatSeedLine(j) {
+  if (!j || typeof j !== 'object') {
+    return 'Seed status unavailable — Open stream / Download may still work.'
+  }
+  const seed = j.seed && typeof j.seed === 'object' ? j.seed : {}
+  const state = typeof seed.state === 'string' ? seed.state : ''
+  const providers = typeof seed.providers === 'number' ? seed.providers : null
+  if (j.error === 'ok' || state === 'cached') {
+    if (providers !== null) {
+      return providers > 0
+        ? 'Ready on the network — ' + providers + ' provider' + (providers === 1 ? '' : 's') + '.'
+        : 'Cached on this gateway (provider count unknown).'
+    }
+    return 'Ready to stream or download on this gateway.'
+  }
+  if (state === 'fetching') {
+    return 'Gateway is fetching this CID from IPFS — stream/download may start shortly.'
+  }
+  if (providers === 0) {
+    return 'No providers yet — needs seeding. Try Request Drive links, or check back when peers are online.'
+  }
+  if (typeof j.message === 'string' && j.message.length > 0) {
+    return j.message
+  }
+  return 'Seed status unavailable — Open stream / Download may still work.'
+}
+
 export default function ExternalPlay(props) {
   const p = props || {}
   const ladder = buildLadder(p)
   const idxState = useState(0)
   const activeIndex = idxState[0]
   const setActiveIndex = idxState[1]
+  const seedState = useState('Checking seed status…')
+  const seedLine = seedState[0]
+  const setSeedLine = seedState[1]
   let unlocked = false
   try {
     if (p.unlocked === true || propStr(p, 'unlocked') === 'true') {
@@ -91,6 +121,53 @@ export default function ExternalPlay(props) {
   const abs = active.url
   const intentHref = intentHrefFor(abs)
   const dlLabel = active.kind === 'master' ? 'Download MKV' : 'Download MP4'
+
+  useEffect(() => {
+    let cancelled = false
+    if (!abs) {
+      setSeedLine('')
+      return
+    }
+    setSeedLine('Checking seed status…')
+    const statusUrl = abs + (abs.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1'
+    const ctrl = typeof AbortController === 'function' ? new AbortController() : null
+    const timer =
+      ctrl &&
+      setTimeout(() => {
+        try {
+          ctrl.abort()
+        } catch (e) {}
+      }, 10000)
+    fetch(statusUrl, {
+      credentials: 'omit',
+      cache: 'no-store',
+      headers: { Accept: 'application/vnd.relay.asset-status+json, application/json' },
+      signal: ctrl ? ctrl.signal : undefined,
+    })
+      .then((r) => (r ? r.json() : null))
+      .then((j) => {
+        if (!cancelled) setSeedLine(formatSeedLine(j))
+      })
+      .catch(() => {
+        if (!cancelled) {
+          setSeedLine(
+            'Seed status unreachable — Open stream / Download may still work if the gateway has bytes.',
+          )
+        }
+      })
+      .then(() => {
+        if (timer) clearTimeout(timer)
+      })
+    return () => {
+      cancelled = true
+      if (timer) clearTimeout(timer)
+      if (ctrl) {
+        try {
+          ctrl.abort()
+        } catch (e2) {}
+      }
+    }
+  }, [abs])
 
   let qualityRow = null
   if (ladder.length > 1) {
@@ -125,17 +202,25 @@ export default function ExternalPlay(props) {
     )
   }
 
+  const seedEl =
+    seedLine && seedLine.length > 0 ? (
+      <p className="fb-theater-downloads-note fb-theater-seed-status" data-fb-seed-status="1">
+        {seedLine}
+      </p>
+    ) : null
+
   if (unlocked !== true) {
     return (
       <div className="fb-external-play fb-theater-external" data-fb-external-play="1">
         <p className="fb-theater-downloads-label">Watch in an external player</p>
         {qualityRow}
         <p className="fb-theater-downloads-note">
-          Confirm you own a legal copy above, then open the stream in VLC or another player.
+          Confirm you own a legal copy above, then stream, download, or request Drive links.
         </p>
         <a className="fb-theater-external-url" href={abs} data-fb-stream-url="1" rel="noopener noreferrer">
           {abs}
         </a>
+        {seedEl}
       </div>
     )
   }
@@ -149,12 +234,13 @@ export default function ExternalPlay(props) {
       <p className="fb-theater-downloads-label">Watch in an external player</p>
       {qualityRow}
       <p className="fb-theater-downloads-note">
-        Full-quality HEVC MKV streams best in VLC when this device has HEVC hardware. Use 1080p
-        H.264 on older Fire TV / phones. Tap below to open the selected stream.
+        Stream in VLC, download the file to this device and open it locally, or request Google Drive
+        links by email. Download uses this site’s IPFS gateway (not in-browser playback).
       </p>
       <a className="fb-theater-external-url" href={abs} data-fb-stream-url="1" rel="noopener noreferrer">
         {abs}
       </a>
+      {seedEl}
       <div className="fb-external-play-actions fb-theater-external-actions">
         <a className="fb-btn fb-btn-primary fb-btn-external-play fb-theater-open-intent" href={intentHref}>
           Open in external player
@@ -164,6 +250,9 @@ export default function ExternalPlay(props) {
         </a>
         <a className="fb-btn fb-theater-download-mkv" href={abs} download="">
           {dlLabel}
+        </a>
+        <a className="fb-btn fb-theater-request-drive" href="/request">
+          Request Drive links
         </a>
         <a className="fb-btn fb-btn-setup" href={setupHref}>
           Setup
