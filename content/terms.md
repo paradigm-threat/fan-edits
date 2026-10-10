@@ -11,7 +11,7 @@ Everything is provided **as-is**, without warranty of any kind — express or im
 - You confirm you **own a legal copy** of each original film before playback ([Ownership policy](/legal)).
 - You will not use this site to circumvent paywalls, share credentials, or redistribute commercial masters.
 - You accept that **feature video is not stored in the public git repos** — only on the **IPFS** network (with possible temporary server cache for streaming). Filenames and hashes in project text are not the movie files.
-- You accept that media may be unavailable until it is **seeded** on IPFS; a known content hash is not the same as bytes on every node.
+- You accept that media may be unavailable until it is **seeded** on IPFS; a known content hash is not the same as bytes on every node. **Now showing** is temporary readiness on the server, not a guarantee that every library title stays immediately playable. Drive email ([Request downloads](/request)) and same-origin download remain valid ways to obtain files when the swarm is quiet.
 
 ## Liability
 
