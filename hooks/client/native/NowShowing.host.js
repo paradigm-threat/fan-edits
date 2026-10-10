@@ -299,8 +299,10 @@
       return { a: a, img: img, title: title, blurb: blurb, meta: meta, scroll: scroll };
     }
 
-    const front = makeLayer('fb-slideshow-layer is-active');
-    const back = makeLayer('fb-slideshow-layer');
+    // Mutable roles: after each crossfade we swap pointers so the visible
+    // layer stays "front" without a second opacity animation.
+    let front = makeLayer('fb-slideshow-layer is-active');
+    let back = makeLayer('fb-slideshow-layer');
     stage.appendChild(back.a);
     stage.appendChild(front.a);
     frame.appendChild(stage);
@@ -420,21 +422,22 @@
       }
       busy = true;
       const incoming = list[nextIdx];
+      const outgoingEl = front.a;
+      const incomingEl = back.a;
       fillLayer(back, incoming);
-      // Force style flush so opacity transition runs once.
-      void back.a.offsetWidth;
-      back.a.classList.add('is-active');
-      back.a.setAttribute('aria-hidden', 'false');
-      front.a.classList.remove('is-active');
-      front.a.setAttribute('aria-hidden', 'true');
+      // Force style flush so opacity transition runs once (old → new crossfade).
+      void incomingEl.offsetWidth;
+      incomingEl.classList.add('is-active');
+      incomingEl.setAttribute('aria-hidden', 'false');
+      outgoingEl.classList.remove('is-active');
+      outgoingEl.setAttribute('aria-hidden', 'true');
       counter.textContent = nextIdx + 1 + ' / ' + list.length;
 
       const finish = function () {
-        fillLayer(front, incoming);
-        front.a.classList.add('is-active');
-        front.a.setAttribute('aria-hidden', 'false');
-        back.a.classList.remove('is-active');
-        back.a.setAttribute('aria-hidden', 'true');
+        // Swap roles only — do not toggle is-active again (that caused a 2nd fade-in).
+        const tmp = front;
+        front = back;
+        back = tmp;
         idx = nextIdx;
         busy = false;
         prefetch((idx + 1) % list.length);
@@ -444,23 +447,23 @@
       let done = false;
       const onEnd = function (ev) {
         if (done) return;
-        // Only opacity transition on the layer itself (ignore child transitions).
-        if (ev && ev.target !== back.a) return;
+        // Only opacity transition on the incoming layer (ignore child transitions).
+        if (ev && ev.target !== incomingEl) return;
         if (ev && ev.propertyName && ev.propertyName !== 'opacity') return;
         done = true;
-        back.a.removeEventListener('transitionend', onEnd);
+        incomingEl.removeEventListener('transitionend', onEnd);
         if (fadeTimer) {
           global.clearTimeout(fadeTimer);
           fadeTimer = null;
         }
         finish();
       };
-      back.a.addEventListener('transitionend', onEnd);
+      incomingEl.addEventListener('transitionend', onEnd);
       if (fadeTimer) global.clearTimeout(fadeTimer);
       fadeTimer = global.setTimeout(function () {
         if (done) return;
         done = true;
-        back.a.removeEventListener('transitionend', onEnd);
+        incomingEl.removeEventListener('transitionend', onEnd);
         fadeTimer = null;
         finish();
       }, FADE_MS + 120);

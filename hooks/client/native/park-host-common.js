@@ -103,9 +103,9 @@
         '.fb-slideshow-stage{position:relative;width:100%}',
         /* Stack front/back in one grid cell; active layer sets height from poster. */
         '.fb-slideshow-stage{display:grid}',
+        /* Opacity-only crossfade — do not use visibility:hidden on inactive (kills old-card fade). */
         '.fb-slideshow-layer{grid-area:1/1;min-width:0;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;color:#e8c872;text-decoration:none;opacity:0;transition:opacity 1.1s ease-in-out;pointer-events:none;z-index:1}',
         '.fb-slideshow-layer.is-active{opacity:1;pointer-events:auto;z-index:2}',
-        '.fb-slideshow-layer:not(.is-active){visibility:hidden}',
         /* Poster column: intrinsic 2:3 height drives the whole card — no empty gap under art. */
         '.fb-slideshow-img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:contain;object-position:center center;background:#0d0505}',
         '.fb-slideshow-layer:not(.has-poster){grid-template-columns:1fr}',
@@ -133,7 +133,7 @@
         '.fb-slideshow-nav:hover{border-color:#e8c872;color:#f5e6be}',
         '@media (prefers-reduced-motion:reduce){.fb-slideshow-layer{transition:none!important}}',
         /* Mobile stack — leave as stacked poster + copy (user: fine as-is). */
-        '@media (max-width:720px){.fb-slideshow-layer{display:flex;flex-direction:column;grid-template-columns:none}.fb-slideshow-layer:not(.is-active){visibility:hidden}.fb-slideshow-img{width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}.fb-slideshow-copy{height:auto;max-height:none;padding:18px 16px 20px;overflow:visible}.fb-slideshow-scroll{max-height:min(42vh,280px);overflow-y:auto}}',
+        '@media (max-width:720px){.fb-slideshow-layer{display:flex;flex-direction:column;grid-template-columns:none}.fb-slideshow-img{width:100%;height:auto;aspect-ratio:2/3;object-fit:contain}.fb-slideshow-copy{height:auto;max-height:none;padding:18px 16px 20px;overflow:visible}.fb-slideshow-scroll{max-height:min(42vh,280px);overflow-y:auto}}',
         /* Theater player shell + seed status */
         '.fb-theater-player{margin:12px 0}',
         '.fb-media-locked,.fb-media-pending,.fb-media-failed{padding:16px;border:1px solid #3a2a1a;background:rgba(0,0,0,.35);color:#c4b49a}',
