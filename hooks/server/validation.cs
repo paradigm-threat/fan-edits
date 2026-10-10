@@ -86,6 +86,7 @@ function isBlockedMedia(p) {
 function isAllowedPath(p) {
   if (p === 'index.json') return true
   if (p === 'assets.manifest.json') return true
+  if (p === 'now-showing.json') return true
   if (p === 'IPFS_ROOT') return true
   if (p === 'site.webmanifest') return true
   if (p === 'package.json') return true
