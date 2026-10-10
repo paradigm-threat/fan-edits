@@ -208,6 +208,39 @@ function absoluteStreamUrl(path) {
   return origin + '/' + p
 }
 
+/** Same-origin /ipfs/{cid} URL for gateway download (not tip path). */
+function ipfsGatewayUrl(cid) {
+  const c = str(cid).trim()
+  if (c.length < 8) {
+    return ''
+  }
+  return absoluteStreamUrl('/ipfs/' + c)
+}
+
+/** Basename for the HTML download attribute (Save As filename). */
+function downloadBasename(pathOrUrl) {
+  const raw = str(pathOrUrl)
+  if (raw.length === 0) {
+    return 'movie.mkv'
+  }
+  let path = raw
+  const q = path.indexOf('?')
+  if (q >= 0) {
+    path = path.slice(0, q)
+  }
+  const slash = path.lastIndexOf('/')
+  let name = slash >= 0 ? path.slice(slash + 1) : path
+  try {
+    if (typeof decodeURIComponent === 'function') {
+      name = decodeURIComponent(name)
+    }
+  } catch (eDec) {}
+  if (name.length === 0) {
+    return 'movie.mkv'
+  }
+  return name
+}
+
 /** Repo-root path for a title poster (`image` or `path` + `poster`). */
 function projectPosterPath(project) {
   if (!project) {
@@ -1836,6 +1869,10 @@ export default function FlashbackApp() {
     let streamUrl = ''
     let streamUrlWeb = ''
     let streamUrlMobile = ''
+    let masterCid = ''
+    let downloadHref = ''
+    let downloadName = 'movie.mkv'
+    let downloadLabel = 'Download MKV'
     if (selected) {
       // VLC on macOS rejects MRLs with raw spaces or parentheses.
       streamUrl = encodeMarkdownUrl(absoluteStreamUrl(mediaSrc(selected)))
@@ -1846,6 +1883,22 @@ export default function FlashbackApp() {
       }
       if (mobileRel.length > 0) {
         streamUrlMobile = encodeMarkdownUrl(absoluteStreamUrl(mediaSrcFor(selected, mobileRel)))
+      }
+      masterCid = resolveProjectCid(selected)
+      const ipfsHref = ipfsGatewayUrl(masterCid)
+      if (ipfsHref.length > 0) {
+        downloadHref = encodeMarkdownUrl(ipfsHref)
+      } else {
+        downloadHref = streamUrl
+      }
+      const masterBase = projectMediaField(selected, 'media')
+      if (masterBase.length > 0) {
+        downloadName = downloadBasename(masterBase)
+      } else {
+        downloadName = downloadBasename(streamUrl)
+      }
+      if (downloadName.toLowerCase().indexOf('.mp4') >= 0) {
+        downloadLabel = 'Download MP4'
       }
     }
     const posterHref = encodeMarkdownUrl(absoluteStreamUrl(projectPosterPath(selected)))
@@ -1858,18 +1911,36 @@ export default function FlashbackApp() {
             streamUrl={streamUrl}
             streamUrlWeb={streamUrlWeb}
             streamUrlMobile={streamUrlMobile}
+            cid={masterCid}
+            downloadName={downloadName}
             unlocked={movieAck === true && ack === true}
             setupHref="/setup"
           />
-          <p className="fb-theater-downloads-note">
-            {'Phone or tablet? '}
-            <a className="fb-link" href="/app">
+          <div className="fb-movie-actions" aria-label="Get this title">
+            {downloadHref.length > 0 ? (
+              <a
+                className="fb-btn fb-theater-download-mkv"
+                href={downloadHref}
+                download={downloadName}
+                data-fb-movie-download="1"
+              >
+                {downloadLabel}
+              </a>
+            ) : null}
+            <a className="fb-btn" href="/app">
               {'Flashback App'}
             </a>
-            {' · '}
-            <a className="fb-link" href="/setup">
+            <a className="fb-btn fb-btn-setup" href="/setup">
               {'Setup / VLC'}
             </a>
+            <a className="fb-btn fb-theater-request-drive" href="/request">
+              {'Request Drive links'}
+            </a>
+          </div>
+          <p className="fb-theater-downloads-note">
+            {
+              'Download pulls the file through this site’s IPFS gateway (save to disk, then open in VLC). Confirm ownership above first. Phone or tablet? Prefer the Flashback App for offline play.'
+            }
           </p>
         </div>
       )

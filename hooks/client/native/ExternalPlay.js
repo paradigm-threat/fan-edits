@@ -26,6 +26,14 @@ export default function ExternalPlay(props) {
   if (p.setupHref !== null && p.setupHref !== undefined && ('' + p.setupHref).length > 0) {
     setupHref = '' + p.setupHref
   }
+  let cid = ''
+  if (p.cid !== null && p.cid !== undefined) {
+    cid = '' + p.cid
+  }
+  let downloadName = ''
+  if (p.downloadName !== null && p.downloadName !== undefined) {
+    downloadName = '' + p.downloadName
+  }
   return (
     <div
       className="fb-external-play-host"
@@ -33,6 +41,8 @@ export default function ExternalPlay(props) {
       data-stream-url={streamUrl}
       data-stream-url-web={streamUrlWeb}
       data-stream-url-mobile={streamUrlMobile}
+      data-cid={cid}
+      data-download-name={downloadName}
       data-unlocked={unlocked}
       data-setup-href={setupHref}
     />

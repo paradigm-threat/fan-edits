@@ -692,6 +692,17 @@ themes:
         opacity: "1"
         pointerEvents: "auto"
         cursor: "pointer"
+      ".fb-movie-actions":
+        display: "flex"
+        flexWrap: "wrap"
+        gap: "10px 12px"
+        margin: "12px 0 0"
+      ".fb-movie-actions .fb-theater-download-mkv":
+        opacity: "0.45"
+        pointerEvents: "none"
+      "html[data-fb-welcome-ack='1'][data-fb-movie-ack] .fb-movie-actions .fb-theater-download-mkv":
+        opacity: "1"
+        pointerEvents: "auto"
       ".fb-btn-setup":
         opacity: "1"
         pointerEvents: "auto"

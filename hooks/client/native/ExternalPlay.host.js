@@ -271,6 +271,35 @@
     }
     let streamUrl = ladder.length ? ladder[selectedIdx].url : '';
     let dlLink = null;
+    const masterCid = String(prop(props, 'cid', '') || prop(props, 'data-cid', '') || '').trim();
+    const downloadNameProp = String(
+      prop(props, 'downloadName', '') || prop(props, 'data-download-name', '') || '',
+    ).trim();
+    const masterIpfsUrl = masterCid ? absoluteHttps('/ipfs/' + masterCid) : '';
+
+    function basenameFromUrl(url) {
+      const raw = String(url || '');
+      if (!raw) return 'movie.mkv';
+      let path = raw;
+      const q = path.indexOf('?');
+      if (q >= 0) path = path.slice(0, q);
+      const slash = path.lastIndexOf('/');
+      let name = slash >= 0 ? path.slice(slash + 1) : path;
+      try {
+        if (global.decodeURIComponent) name = global.decodeURIComponent(name);
+      } catch (_) {}
+      return name || 'movie.mkv';
+    }
+
+    function downloadHrefFor(kind, url) {
+      if (kind === 'master' && masterIpfsUrl) return masterIpfsUrl;
+      return String(url || '') || masterIpfsUrl || '';
+    }
+
+    function downloadFilenameFor(kind, url) {
+      if (downloadNameProp && kind === 'master') return downloadNameProp;
+      return basenameFromUrl(url || downloadNameProp);
+    }
 
     let unlocked = ownershipUnlocked(hostEl, prop(props, 'unlocked', 'false') === 'true');
     const setupHref = prop(props, 'setupHref', '/setup') || '/setup';
@@ -305,9 +334,13 @@
       copyBtn.disabled = !streamUrl;
       openHttpsBtn.disabled = !streamUrl;
       if (dlLink) {
-        dlLink.href = streamUrl || '#';
-        dlLink.textContent = kind === 'master' ? 'Download MKV' : 'Download MP4';
-        if (!streamUrl) dlLink.setAttribute('aria-disabled', 'true');
+        const dlHref = downloadHrefFor(kind, streamUrl);
+        const dlName = downloadFilenameFor(kind, streamUrl);
+        dlLink.href = dlHref || '#';
+        dlLink.setAttribute('download', dlName);
+        dlLink.textContent =
+          kind === 'master' || /\.mkv($|\?)/i.test(dlName) ? 'Download MKV' : 'Download MP4';
+        if (!dlHref) dlLink.setAttribute('aria-disabled', 'true');
         else dlLink.removeAttribute('aria-disabled');
       }
       pollSeedStatus(streamUrl);
@@ -667,27 +700,32 @@
     });
     actions.appendChild(copyBtn);
 
-    // Same-origin /ipfs download for desktop + Android (save to disk, open locally).
-    if (streamUrl) {
-      dlLink = global.document.createElement('a');
-      dlLink.className = 'fb-btn fb-theater-download-mkv';
-      dlLink.href = streamUrl;
-      dlLink.setAttribute('download', '');
-      const kind0 = ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master';
-      dlLink.textContent = kind0 === 'master' ? 'Download MKV' : 'Download MP4';
-      dlLink.addEventListener('click', function (ev) {
-        if (
-          !requireUnlocked('Confirm ownership first, then download the file to this device.')
-        ) {
-          ev.preventDefault();
-          return;
-        }
-        setStatus(
-          'Downloading via this site’s IPFS gateway — large file; open it locally in VLC or Files when finished.',
-        );
-      });
-      actions.appendChild(dlLink);
-    }
+    // Same-origin /ipfs (or tip path) download — save to disk, open locally in VLC.
+    dlLink = global.document.createElement('a');
+    dlLink.className = 'fb-btn fb-theater-download-mkv';
+    const kind0 = ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master';
+    const dlHref0 = downloadHrefFor(kind0, streamUrl);
+    const dlName0 = downloadFilenameFor(kind0, streamUrl);
+    dlLink.href = dlHref0 || '#';
+    dlLink.setAttribute('download', dlName0);
+    dlLink.textContent =
+      kind0 === 'master' || /\.mkv($|\?)/i.test(dlName0) ? 'Download MKV' : 'Download MP4';
+    if (!dlHref0) dlLink.setAttribute('aria-disabled', 'true');
+    dlLink.addEventListener('click', function (ev) {
+      if (!requireUnlocked('Confirm ownership first, then download the file to this device.')) {
+        ev.preventDefault();
+        return;
+      }
+      if (!dlLink.getAttribute('href') || dlLink.getAttribute('href') === '#') {
+        ev.preventDefault();
+        setStatus('No download URL yet.');
+        return;
+      }
+      setStatus(
+        'Downloading via this site’s IPFS gateway — large file; open it locally in VLC or Files when finished.',
+      );
+    });
+    actions.appendChild(dlLink);
 
     const requestLink = global.document.createElement('a');
     requestLink.className = 'fb-btn fb-theater-request-drive';

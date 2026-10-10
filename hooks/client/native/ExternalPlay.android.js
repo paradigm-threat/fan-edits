@@ -121,6 +121,37 @@ export default function ExternalPlay(props) {
   const abs = active.url
   const intentHref = intentHrefFor(abs)
   const dlLabel = active.kind === 'master' ? 'Download MKV' : 'Download MP4'
+  let masterCid = ''
+  try {
+    masterCid = propStr(p, 'cid') || propStr(p, 'data-cid') || ''
+  } catch (eCid) {}
+  let downloadName = ''
+  try {
+    downloadName = propStr(p, 'downloadName') || propStr(p, 'data-download-name') || ''
+  } catch (eDn) {}
+  let dlHref = abs
+  if (active.kind === 'master' && masterCid.length >= 8) {
+    try {
+      const origin =
+        globalThis.location && globalThis.location.origin
+          ? globalThis.location.origin
+          : 'https://flashbackrepository.org'
+      dlHref = origin + '/ipfs/' + masterCid
+    } catch (eIpfs) {
+      dlHref = abs
+    }
+  }
+  if (!downloadName) {
+    try {
+      const parts = String(abs || '').split('/')
+      downloadName = parts.length ? parts[parts.length - 1] : 'movie.mkv'
+      const q = downloadName.indexOf('?')
+      if (q >= 0) downloadName = downloadName.slice(0, q)
+      downloadName = decodeURIComponent(downloadName)
+    } catch (eName) {
+      downloadName = 'movie.mkv'
+    }
+  }
 
   useEffect(() => {
     let cancelled = false
@@ -248,7 +279,7 @@ export default function ExternalPlay(props) {
         <a className="fb-btn fb-theater-open-https" href={abs} rel="noopener noreferrer">
           Open stream link
         </a>
-        <a className="fb-btn fb-theater-download-mkv" href={abs} download="">
+        <a className="fb-btn fb-theater-download-mkv" href={dlHref} download={downloadName}>
           {dlLabel}
         </a>
         <a className="fb-btn fb-theater-request-drive" href="/request">
