@@ -110,7 +110,11 @@ test.describe('external-only (no TheaterPlayer)', () => {
     const external = page.locator('[data-fb-external-play="1"]')
     await expect(external).toBeVisible({ timeout: 10000 })
     await expect(page.getByRole('button', { name: /Open in VLC/i })).toBeVisible()
+    await expect(page.getByRole('button', { name: /Open stream link/i })).toBeVisible()
     await expect(page.getByRole('button', { name: /Copy stream URL/i })).toBeVisible()
+    const streamA = page.locator('a.fb-theater-external-url[data-fb-stream-url="1"]')
+    await expect(streamA).toBeVisible()
+    await expect(streamA).toHaveAttribute('href', STREAM)
     await expect(page.locator('video')).toHaveCount(0)
     await expect(page.locator('.fb-theater-player')).toHaveCount(0)
 

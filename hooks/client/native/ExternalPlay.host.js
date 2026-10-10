@@ -56,6 +56,31 @@
     return false;
   }
 
+  /**
+   * Living-room browsers that often lack VLC / vlc:// but can open an HTTPS
+   * progressive stream (webOS, Tizen, Android TV browser, etc.).
+   */
+  function isSmartTvBrowser() {
+    try {
+      const ua = String((global.navigator && global.navigator.userAgent) || '');
+      if (/Web0S|webOS|WebOS/i.test(ua)) return true;
+      if (/Tizen|SmartTV|Smart-TV|SMART-TV|AppleTV|BRAVIA|Viera|NetCast|HbbTV/i.test(ua)) {
+        return true;
+      }
+      if (/Android/i.test(ua) && /(TV|AFT|SHIELD|MIBOX|MiBOX)/i.test(ua)) return true;
+      // Large leanback viewport + no touch is a soft signal for TV browsers.
+      if (
+        global.matchMedia &&
+        global.matchMedia('(pointer: coarse)').matches === false &&
+        global.innerWidth >= 1200 &&
+        /TV|SMART/i.test(ua)
+      ) {
+        return true;
+      }
+    } catch (_) {}
+    return false;
+  }
+
   function vlcProtocolUrl(httpsUrl) {
     const u = absoluteHttps(httpsUrl);
     if (u.indexOf('https://') !== 0 && u.indexOf('http://') !== 0) return '';
@@ -170,13 +195,26 @@
     pushRung('master', 'Full quality (MKV)', masterUrl);
     pushRung('web', '1080p (H.264)', webUrl);
     pushRung('mobile', '720p (H.264)', mobileUrl);
-    let streamUrl = ladder.length ? ladder[0].url : '';
+    const smartTv = isSmartTvBrowser();
+    // Prefer H.264 rungs on smart TVs (HEVC MKV often fails; MP4 plays in the TV browser).
+    let selectedIdx = 0;
+    if (smartTv) {
+      const webIdx = ladder.findIndex(function (r) {
+        return r.kind === 'web';
+      });
+      const mobileIdx = ladder.findIndex(function (r) {
+        return r.kind === 'mobile';
+      });
+      if (webIdx >= 0) selectedIdx = webIdx;
+      else if (mobileIdx >= 0) selectedIdx = mobileIdx;
+    }
+    let streamUrl = ladder.length ? ladder[selectedIdx].url : '';
     let dlLink = null;
 
     let unlocked = ownershipUnlocked(hostEl, prop(props, 'unlocked', 'false') === 'true');
     const setupHref = prop(props, 'setupHref', '/setup') || '/setup';
     const android = isAndroidBrowser();
-    const openMode = android ? 'android-intent' : 'vlc-protocol';
+    const openMode = android ? 'android-intent' : smartTv ? 'https-stream' : 'vlc-protocol';
 
     const root = global.document.createElement('div');
     root.className = 'fb-external-play fb-theater-external';
@@ -184,11 +222,32 @@
     root.setAttribute('data-playback-engine', 'external');
     root.setAttribute('data-fb-open-mode', openMode);
     root.setAttribute('data-fb-unlocked', unlocked ? 'true' : 'false');
+    if (smartTv) root.setAttribute('data-fb-smart-tv', '1');
 
     const heading = global.document.createElement('p');
     heading.className = 'fb-theater-downloads-label';
-    heading.textContent = 'Watch in an external player';
+    heading.textContent = smartTv ? 'Watch on this TV' : 'Watch in an external player';
     root.appendChild(heading);
+
+    function applyStreamUrl(url, kind) {
+      streamUrl = String(url || '');
+      if (streamUrl) {
+        streamLink.href = streamUrl;
+        streamLink.textContent = streamUrl;
+        streamLink.removeAttribute('aria-disabled');
+      } else {
+        streamLink.removeAttribute('href');
+        streamLink.textContent = 'No stream URL yet.';
+        streamLink.setAttribute('aria-disabled', 'true');
+      }
+      streamLink.setAttribute('data-fb-stream-url', '1');
+      copyBtn.disabled = !streamUrl;
+      openHttpsBtn.disabled = !streamUrl;
+      if (dlLink) {
+        dlLink.href = streamUrl || '#';
+        dlLink.textContent = kind === 'master' ? 'Download MKV' : 'Download MP4';
+      }
+    }
 
     if (ladder.length > 1) {
       const qualityLabel = global.document.createElement('p');
@@ -197,8 +256,9 @@
       root.appendChild(qualityLabel);
       const qualityHint = global.document.createElement('p');
       qualityHint.className = 'fb-theater-downloads-note';
-      qualityHint.textContent =
-        'Full quality needs HEVC. Pick 1080p or 720p for phones/TVs that cannot decode the master.';
+      qualityHint.textContent = smartTv
+        ? 'On webOS and similar TVs, prefer 1080p/720p (H.264 MP4). Full quality MKV needs a player that supports HEVC Matroska.'
+        : 'Full quality needs HEVC. Pick 1080p or 720p for phones/TVs that cannot decode the master.';
       root.appendChild(qualityHint);
       const qualityRow = global.document.createElement('div');
       qualityRow.className = 'fb-external-play-quality';
@@ -208,20 +268,14 @@
         ;(function (idx) {
           const btn = global.document.createElement('button');
           btn.type = 'button';
-          btn.className = 'fb-btn fb-btn-quality' + (idx === 0 ? ' is-active' : '');
+          btn.className =
+            'fb-btn fb-btn-quality' + (idx === selectedIdx ? ' is-active' : '');
           btn.textContent = ladder[idx].label;
           btn.setAttribute('role', 'radio');
-          btn.setAttribute('aria-checked', idx === 0 ? 'true' : 'false');
+          btn.setAttribute('aria-checked', idx === selectedIdx ? 'true' : 'false');
           btn.addEventListener('click', function () {
-            streamUrl = ladder[idx].url;
-            code.textContent = streamUrl || 'No stream URL yet.';
-            code.setAttribute('data-fb-stream-url', '1');
-            copyBtn.disabled = !streamUrl;
-            if (dlLink) {
-              dlLink.href = streamUrl;
-              dlLink.textContent =
-                ladder[idx].kind === 'master' ? 'Download MKV' : 'Download MP4';
-            }
+            selectedIdx = idx;
+            applyStreamUrl(ladder[idx].url, ladder[idx].kind);
             const kids = qualityRow.querySelectorAll('.fb-btn-quality');
             for (let k = 0; k < kids.length; k++) {
               const on = k === idx;
@@ -244,11 +298,17 @@
           'Tap Open in external player — Android asks which app should open the stream.',
           'If nothing opens: Copy stream URL → open VLC → Network → paste the HTTPS link.',
         ]
-      : [
-          'One-time: install VLC and the playback setup (vlc:// handler).',
-          'Tap Open in VLC (or Copy stream URL).',
-          'If nothing opens: VLC → Media → Open Network Stream… → paste → Play.',
-        ];
+      : smartTv
+        ? [
+            'Confirm ownership above (same house rule as always).',
+            'Pick 1080p or 720p if Full quality fails on this TV.',
+            'Select Open stream link (or the blue URL) — the TV browser / media player opens the HTTPS file.',
+          ]
+        : [
+            'One-time: install VLC and the playback setup (vlc:// handler).',
+            'Tap Open in VLC — or Open stream link / the clickable URL on TVs without VLC.',
+            'If nothing opens: VLC → Media → Open Network Stream… → paste → Play.',
+          ];
     for (let i = 0; i < stepTexts.length; i++) {
       const li = global.document.createElement('li');
       li.textContent = stepTexts[i];
@@ -258,11 +318,39 @@
 
     const urlRow = global.document.createElement('div');
     urlRow.className = 'fb-theater-external-url-row';
-    const code = global.document.createElement('code');
-    code.className = 'fb-theater-external-url';
-    code.setAttribute('data-fb-stream-url', '1');
-    code.textContent = streamUrl || 'No stream URL yet.';
-    urlRow.appendChild(code);
+    // Real <a href> so webOS / smart TV remotes can activate the HTTPS stream.
+    const streamLink = global.document.createElement('a');
+    streamLink.className = 'fb-theater-external-url';
+    streamLink.setAttribute('data-fb-stream-url', '1');
+    streamLink.setAttribute('rel', 'noopener noreferrer');
+    if (streamUrl) {
+      streamLink.href = streamUrl;
+      streamLink.textContent = streamUrl;
+    } else {
+      streamLink.textContent = 'No stream URL yet.';
+      streamLink.setAttribute('aria-disabled', 'true');
+    }
+    streamLink.addEventListener('click', function (ev) {
+      refreshUnlocked();
+      if (!streamUrl) {
+        ev.preventDefault();
+        setStatus('No stream URL yet.');
+        return;
+      }
+      if (!unlocked) {
+        ev.preventDefault();
+        setStatus('Confirm ownership first, then open the stream link.');
+        try {
+          const gate = global.document.querySelector(
+            '.fb-affirmation-native, .fb-gate, [aria-modal="true"]',
+          );
+          if (gate && gate.scrollIntoView) {
+            gate.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
+        } catch (_) {}
+      }
+    });
+    urlRow.appendChild(streamLink);
     root.appendChild(urlRow);
 
     const status = global.document.createElement('p');
@@ -312,12 +400,6 @@
     const actions = global.document.createElement('div');
     actions.className = 'fb-external-play-actions fb-theater-external-actions';
 
-    const openBtn = global.document.createElement('button');
-    openBtn.type = 'button';
-    openBtn.className =
-      'fb-btn fb-btn-primary fb-btn-external-play' +
-      (android ? ' fb-theater-open-intent' : ' fb-theater-open-vlc');
-    openBtn.textContent = android ? 'Open in external player' : 'Open in VLC';
     function refreshUnlocked() {
       unlocked = ownershipUnlocked(hostEl, false);
       try {
@@ -334,20 +416,14 @@
       return unlocked;
     }
 
-    openBtn.addEventListener('click', function () {
-      clearFailTimer();
-      leftPage = false;
+    function requireUnlocked(actionHint) {
       refreshUnlocked();
       if (!streamUrl) {
         setStatus('No stream URL yet.');
-        return;
+        return false;
       }
       if (!unlocked) {
-        setStatus(
-          android
-            ? 'Confirm ownership first, then tap Open in external player.'
-            : 'Confirm ownership first, then tap Open in VLC.',
-        );
+        setStatus(actionHint || 'Confirm ownership first, then open the stream.');
         try {
           const gate = global.document.querySelector(
             '.fb-affirmation-native, .fb-gate, [aria-modal="true"]',
@@ -356,6 +432,54 @@
             gate.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
         } catch (_) {}
+        return false;
+      }
+      return true;
+    }
+
+    // Direct HTTPS — primary on webOS / smart TVs; available everywhere as fallback.
+    const openHttpsBtn = global.document.createElement('button');
+    openHttpsBtn.type = 'button';
+    openHttpsBtn.className =
+      'fb-btn fb-theater-open-https' + (smartTv ? ' fb-btn-primary' : '');
+    openHttpsBtn.textContent = 'Open stream link';
+    openHttpsBtn.disabled = !streamUrl;
+    openHttpsBtn.addEventListener('click', function () {
+      clearFailTimer();
+      leftPage = false;
+      if (
+        !requireUnlocked(
+          smartTv
+            ? 'Confirm ownership first, then tap Open stream link.'
+            : 'Confirm ownership first, then open the stream link.',
+        )
+      ) {
+        return;
+      }
+      setStatus(smartTv ? 'Opening stream on this TV…' : 'Opening HTTPS stream…');
+      if (!navigateExternal(streamUrl)) {
+        setStatus('Could not open the stream link — try selecting the URL above.');
+      }
+    });
+
+    const openBtn = global.document.createElement('button');
+    openBtn.type = 'button';
+    openBtn.className =
+      'fb-btn fb-btn-external-play' +
+      (android ? ' fb-btn-primary fb-theater-open-intent' : '') +
+      (!android && !smartTv ? ' fb-btn-primary fb-theater-open-vlc' : '') +
+      (smartTv ? ' fb-theater-open-vlc' : '');
+    openBtn.textContent = android ? 'Open in external player' : 'Open in VLC';
+    openBtn.addEventListener('click', function () {
+      clearFailTimer();
+      leftPage = false;
+      if (
+        !requireUnlocked(
+          android
+            ? 'Confirm ownership first, then tap Open in external player.'
+            : 'Confirm ownership first, then tap Open in VLC.',
+        )
+      ) {
         return;
       }
 
@@ -363,14 +487,14 @@
       if (android) {
         launch = intentViewUrl(streamUrl);
         if (!launch) {
-          setStatus('Could not build Android intent link. Use Copy stream URL instead.');
+          setStatus('Could not build Android intent link. Use Open stream link or Copy instead.');
           return;
         }
         setStatus('Opening player…');
       } else {
         launch = vlcProtocolUrl(streamUrl);
         if (!launch) {
-          setStatus('Could not build vlc:// link. Use Copy stream URL instead.');
+          setStatus('Could not build vlc:// link. Use Open stream link or Copy instead.');
           return;
         }
         setStatus('Opening VLC…');
@@ -379,8 +503,8 @@
       if (!navigateExternal(launch)) {
         setStatus(
           android
-            ? 'Could not open an external player. Copy the stream URL and paste it in VLC.'
-            : 'Could not launch vlc://. Copy the stream URL or finish Setup.',
+            ? 'Could not open an external player. Use Open stream link or Copy.'
+            : 'Could not launch vlc://. Use Open stream link or finish Setup.',
         );
         return;
       }
@@ -393,12 +517,20 @@
         } catch (_) {}
         setStatus(
           android
-            ? 'No player opened — install VLC from the Play Store, or Copy stream URL and open it in VLC → Network.'
-            : 'VLC did not open — install the vlc:// handler on Setup, or Copy stream URL and paste in VLC.',
+            ? 'No player opened — try Open stream link, or install VLC from the Play Store.'
+            : 'VLC did not open — try Open stream link (works on many TVs), or finish Setup.',
         );
       }, 1400);
     });
-    actions.appendChild(openBtn);
+
+    // Smart TV: HTTPS first. Phone/desktop: VLC/intent first, HTTPS still available.
+    if (smartTv) {
+      actions.appendChild(openHttpsBtn);
+      actions.appendChild(openBtn);
+    } else {
+      actions.appendChild(openBtn);
+      actions.appendChild(openHttpsBtn);
+    }
 
     const copyBtn = global.document.createElement('button');
     copyBtn.type = 'button';
@@ -413,9 +545,11 @@
       }
       if (copyText(streamUrl)) {
         setStatus(
-          android
-            ? 'Copied — open VLC → Network / Open network stream → paste.'
-            : 'Copied — paste into VLC → Media → Open Network Stream.',
+          smartTv
+            ? 'Copied — paste into your TV’s browser or media apps if Open stream link fails.'
+            : android
+              ? 'Copied — open VLC → Network / Open network stream → paste.'
+              : 'Copied — paste into VLC → Media → Open Network Stream.',
         );
       } else {
         setStatus('Copy failed — select the URL above manually.');
@@ -428,7 +562,8 @@
       dlLink.className = 'fb-btn fb-theater-download-mkv';
       dlLink.href = streamUrl;
       dlLink.setAttribute('download', '');
-      dlLink.textContent = ladder[0] && ladder[0].kind === 'master' ? 'Download MKV' : 'Download MP4';
+      const kind0 = ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master';
+      dlLink.textContent = kind0 === 'master' ? 'Download MKV' : 'Download MP4';
       actions.appendChild(dlLink);
     }
 
@@ -438,18 +573,20 @@
     setupLink.textContent = 'Setup';
     actions.appendChild(setupLink);
 
-    const vlcGet = global.document.createElement('a');
-    vlcGet.className = 'fb-btn fb-theater-get-vlc';
-    if (android) {
-      vlcGet.href = 'https://play.google.com/store/apps/details?id=org.videolan.vlc';
-      vlcGet.textContent = 'Get VLC (Play Store)';
-    } else {
-      vlcGet.href = 'https://www.videolan.org/vlc/';
-      vlcGet.textContent = 'Get VLC';
+    if (!smartTv) {
+      const vlcGet = global.document.createElement('a');
+      vlcGet.className = 'fb-btn fb-theater-get-vlc';
+      if (android) {
+        vlcGet.href = 'https://play.google.com/store/apps/details?id=org.videolan.vlc';
+        vlcGet.textContent = 'Get VLC (Play Store)';
+      } else {
+        vlcGet.href = 'https://www.videolan.org/vlc/';
+        vlcGet.textContent = 'Get VLC';
+      }
+      vlcGet.target = '_blank';
+      vlcGet.rel = 'noopener noreferrer';
+      actions.appendChild(vlcGet);
     }
-    vlcGet.target = '_blank';
-    vlcGet.rel = 'noopener noreferrer';
-    actions.appendChild(vlcGet);
 
     root.appendChild(actions);
 
@@ -457,7 +594,9 @@
     note.className = 'fb-theater-downloads-note';
     note.textContent = android
       ? 'Browsers cannot play Matroska + HEVC in-page yet. On Android, Open in external player hands the HTTPS stream to VLC (or another app) via the system chooser.'
-      : 'Browsers cannot play Matroska + HEVC in-page yet. A local vlc:// handler (Setup) opens the HTTPS stream in VLC.';
+      : smartTv
+        ? 'Many TV browsers (webOS, Tizen, …) cannot run VLC. Open stream link uses the same HTTPS file URL — prefer 1080p/720p H.264 when Full quality fails.'
+        : 'Browsers cannot play Matroska + HEVC in-page yet. Open in VLC uses a local vlc:// handler (Setup). On TVs without VLC, use Open stream link or the clickable URL.';
     root.appendChild(note);
 
     // Affirmation sets html data-fb-* after first build — keep unlocked in sync.
@@ -566,5 +705,6 @@
   }
   global.__fbBuildExternalPlay = buildExternalPlay;
   global.__fbExternalPlayIsAndroid = isAndroidBrowser;
+  global.__fbExternalPlayIsSmartTv = isSmartTvBrowser;
   global.__fbExternalPlayIntentUrl = intentViewUrl;
 })(typeof globalThis !== 'undefined' ? globalThis : window);

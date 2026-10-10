@@ -7,7 +7,7 @@
 (function (global) {
   'use strict';
 
-  var CSS_ID = 'fb-park-native-css-v4';
+  var CSS_ID = 'fb-park-native-css-v5';
   var BRAND_LINKS_ID = 'fb-brand-head-links';
 
   function ensureBrandHeadLinks() {
@@ -167,7 +167,9 @@
         '.fb-theater-external{margin:14px 0 0;padding:12px 14px;border:1px solid #5a4a2a;background:rgba(40,28,12,.45)}',
         '.fb-theater-external-steps{margin:0 0 12px;padding-left:1.25rem;color:#d4c4a8;font-size:.9rem;line-height:1.45}',
         '.fb-theater-external-url-row{margin:0 0 10px;overflow:auto}',
-        '.fb-theater-external-url{display:block;font-size:.75rem;word-break:break-all;color:#f5e6be}',
+        /* Clickable HTTPS stream (webOS / smart TV browsers open this when VLC is unavailable). */
+        '.fb-theater-external-url{display:block;font-size:.8rem;word-break:break-all;color:#e8c872;text-decoration:underline;line-height:1.4;padding:8px 0}',
+        '.fb-theater-external-url:focus,.fb-theater-external-url:hover{color:#f5e6be;outline:2px solid #e8c872;outline-offset:2px}',
         '.fb-theater-external-actions{display:flex;flex-wrap:wrap;gap:10px 16px;margin:0 0 8px}',
         '.fb-theater-downloads-label{margin:0 0 8px;font-size:.95rem;color:#f5e6be}',
         '.fb-theater-downloads-links{display:flex;flex-wrap:wrap;gap:10px 16px}',

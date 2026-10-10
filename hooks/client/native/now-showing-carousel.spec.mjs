@@ -70,14 +70,14 @@ test.describe('Now Showing carousel crossfade', () => {
       page.locator('.fb-slideshow-layer.is-active .fb-slideshow-title'),
     ).toContainText('Mummy (1999)')
 
-    // Park CSS must be v4 (no visibility:hidden on inactive layers).
+    // Park CSS must be current (no visibility:hidden on inactive layers).
     const cssId = await page.evaluate(() => {
-      const st = document.getElementById('fb-park-native-css-v4')
+      const st = document.getElementById('fb-park-native-css-v5')
       return st ? st.id : null
     })
-    expect(cssId).toBe('fb-park-native-css-v4')
+    expect(cssId).toBe('fb-park-native-css-v5')
     const hasVisHidden = await page.evaluate(() => {
-      const st = document.getElementById('fb-park-native-css-v4')
+      const st = document.getElementById('fb-park-native-css-v5')
       return st ? /visibility\s*:\s*hidden/.test(st.textContent || '') : true
     })
     expect(hasVisHidden).toBe(false)

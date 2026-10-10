@@ -133,7 +133,9 @@ export default function ExternalPlay(props) {
         <p className="fb-theater-downloads-note">
           Confirm you own a legal copy above, then open the stream in VLC or another player.
         </p>
-        <code className="fb-theater-external-url">{abs}</code>
+        <a className="fb-theater-external-url" href={abs} data-fb-stream-url="1" rel="noopener noreferrer">
+          {abs}
+        </a>
       </div>
     )
   }
@@ -150,10 +152,15 @@ export default function ExternalPlay(props) {
         Full-quality HEVC MKV streams best in VLC when this device has HEVC hardware. Use 1080p
         H.264 on older Fire TV / phones. Tap below to open the selected stream.
       </p>
-      <code className="fb-theater-external-url">{abs}</code>
+      <a className="fb-theater-external-url" href={abs} data-fb-stream-url="1" rel="noopener noreferrer">
+        {abs}
+      </a>
       <div className="fb-external-play-actions fb-theater-external-actions">
         <a className="fb-btn fb-btn-primary fb-btn-external-play fb-theater-open-intent" href={intentHref}>
           Open in external player
+        </a>
+        <a className="fb-btn fb-theater-open-https" href={abs} rel="noopener noreferrer">
+          Open stream link
         </a>
         <a className="fb-btn fb-theater-download-mkv" href={abs} download="">
           {dlLabel}

@@ -594,19 +594,44 @@
 
     const urlRow = global.document.createElement('div');
     urlRow.className = 'fb-theater-external-url-row';
-    const code = global.document.createElement('code');
-    code.className = 'fb-theater-external-url';
-    code.setAttribute('data-fb-stream-url', '1');
-    code.textContent = 'Resolving stream URL…';
-    urlRow.appendChild(code);
+    const streamLink = global.document.createElement('a');
+    streamLink.className = 'fb-theater-external-url';
+    streamLink.setAttribute('data-fb-stream-url', '1');
+    streamLink.setAttribute('rel', 'noopener noreferrer');
+    streamLink.textContent = 'Resolving stream URL…';
+    streamLink.setAttribute('aria-disabled', 'true');
+    urlRow.appendChild(streamLink);
     wrap.appendChild(urlRow);
 
     const actions = global.document.createElement('div');
     actions.className = 'fb-theater-external-actions fb-theater-downloads-links';
 
+    const openHttpsBtn = global.document.createElement('button');
+    openHttpsBtn.type = 'button';
+    openHttpsBtn.className = 'fb-btn fb-btn-primary fb-theater-open-https';
+    openHttpsBtn.textContent = 'Open stream link';
+    openHttpsBtn.disabled = true;
+    openHttpsBtn.addEventListener('click', function () {
+      const u = wrap.getAttribute('data-stream-url') || '';
+      if (!u) return;
+      try {
+        global.location.href = u;
+      } catch (_) {
+        try {
+          const a = global.document.createElement('a');
+          a.href = u;
+          a.rel = 'noopener noreferrer';
+          global.document.body.appendChild(a);
+          a.click();
+          global.document.body.removeChild(a);
+        } catch (_) {}
+      }
+    });
+    actions.appendChild(openHttpsBtn);
+
     const copyBtn = global.document.createElement('button');
     copyBtn.type = 'button';
-    copyBtn.className = 'fb-btn fb-btn-primary fb-theater-copy-stream';
+    copyBtn.className = 'fb-btn fb-theater-copy-stream';
     copyBtn.textContent = 'Copy stream URL';
     copyBtn.disabled = true;
     copyBtn.addEventListener('click', function () {
@@ -664,7 +689,10 @@
       if (!abs) return;
       wrap.setAttribute('data-stream-url', abs);
       wrap.style.display = 'block';
-      code.textContent = abs;
+      streamLink.href = abs;
+      streamLink.textContent = abs;
+      streamLink.removeAttribute('aria-disabled');
+      openHttpsBtn.disabled = false;
       copyBtn.disabled = false;
     };
     return wrap;
