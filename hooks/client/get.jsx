@@ -230,9 +230,10 @@ function downloadBasename(pathOrUrl) {
   }
   const slash = path.lastIndexOf('/')
   let name = slash >= 0 ? path.slice(slash + 1) : path
+  // CleverScript SSR has no decodeURIComponent — never reference the bare name.
   try {
-    if (typeof decodeURIComponent === 'function') {
-      name = decodeURIComponent(name)
+    if (typeof globalThis !== 'undefined' && globalThis.decodeURIComponent) {
+      name = globalThis.decodeURIComponent(name)
     }
   } catch (eDec) {}
   if (name.length === 0) {
