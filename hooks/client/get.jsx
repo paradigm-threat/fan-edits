@@ -2134,7 +2134,9 @@ export default function FlashbackApp() {
             />
             <span className="fb-brand-text">
               <span className="fb-brand-name">Flashback Repository</span>
-              <span className="fb-brand-tag">Own the original. Then improve it.</span>
+              <span className="fb-brand-tag">
+                Reasserting our 1st Amendment Rights one Movie at a time
+              </span>
             </span>
           </a>
           <nav className="fb-nav">

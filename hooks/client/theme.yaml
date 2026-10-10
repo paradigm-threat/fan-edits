@@ -132,7 +132,9 @@ themes:
         letterSpacing: "0.04em"
         color: "var(cream)"
       ".fb-brand-tag":
-        fontSize: "0.78rem"
+        fontSize: "0.72rem"
+        lineHeight: "1.25"
+        maxWidth: "22rem"
         color: "var(creamMuted)"
         fontStyle: "italic"
       ".fb-footer-brand":
