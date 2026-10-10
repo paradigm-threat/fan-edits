@@ -158,6 +158,67 @@
     }
   }
 
+  function fetchWithTimeout(url, opts, ms) {
+    const ctrl = typeof global.AbortController === 'function' ? new global.AbortController() : null;
+    let timer = null;
+    const options = opts ? Object.assign({}, opts) : {};
+    if (ctrl) options.signal = ctrl.signal;
+    const p = global.fetch(url, options).then(
+      function (r) {
+        if (timer) global.clearTimeout(timer);
+        return r;
+      },
+      function (err) {
+        if (timer) global.clearTimeout(timer);
+        throw err;
+      },
+    );
+    if (ctrl) {
+      timer = global.setTimeout(function () {
+        try {
+          ctrl.abort();
+        } catch (_) {}
+      }, ms || 8000);
+    }
+    return p;
+  }
+
+  function parseSeedStatusJson(j) {
+    if (!j || typeof j !== 'object') return null;
+    const seed = j.seed && typeof j.seed === 'object' ? j.seed : {};
+    return {
+      ok: j.error === 'ok',
+      error: typeof j.error === 'string' ? j.error : 'unknown',
+      message: typeof j.message === 'string' ? j.message : '',
+      seedState: typeof seed.state === 'string' ? seed.state : 'unknown',
+      providers: typeof seed.providers === 'number' ? seed.providers : null,
+    };
+  }
+
+  function formatSeedLine(st) {
+    if (!st) return 'Checking seed status…';
+    if (st.seedState === 'cached' || st.ok) {
+      const n = st.providers;
+      if (typeof n === 'number') {
+        return n > 0
+          ? 'Ready on the network — ' + n + ' provider' + (n === 1 ? '' : 's') + '.'
+          : 'Cached on this gateway (provider count unknown).';
+      }
+      return 'Ready to stream or download on this gateway.';
+    }
+    if (st.seedState === 'fetching') {
+      return 'Gateway is fetching this CID from IPFS — stream/download may start shortly.';
+    }
+    if (typeof st.providers === 'number' && st.providers === 0) {
+      return 'No providers yet — needs seeding. Try Request Drive links, or check back when peers are online.';
+    }
+    if (st.message && /need[s]? to be seeded/i.test(st.message)) {
+      return 'Needs seeding on IPFS. Stream/download when peers appear, or Request Drive links.';
+    }
+    if (st.message) return st.message;
+    return 'Seed status unavailable — Open stream / Download may still work.';
+  }
+
   /** Live unlock: stub attrs can lag Affirmation; html data-fb-* is authoritative. */
   function ownershipUnlocked(hostEl, propsUnlocked) {
     if (propsUnlocked === true) return true;
@@ -246,7 +307,10 @@
       if (dlLink) {
         dlLink.href = streamUrl || '#';
         dlLink.textContent = kind === 'master' ? 'Download MKV' : 'Download MP4';
+        if (!streamUrl) dlLink.setAttribute('aria-disabled', 'true');
+        else dlLink.removeAttribute('aria-disabled');
       }
+      pollSeedStatus(streamUrl);
     }
 
     if (ladder.length > 1) {
@@ -359,8 +423,54 @@
     status.hidden = true;
     root.appendChild(status);
 
+    const seedLine = global.document.createElement('p');
+    seedLine.className = 'fb-theater-downloads-note fb-theater-seed-status';
+    seedLine.setAttribute('data-fb-seed-status', '1');
+    seedLine.textContent = streamUrl ? 'Checking seed status…' : '';
+    if (!streamUrl) seedLine.hidden = true;
+    root.appendChild(seedLine);
+
     let failTimer = null;
     let leftPage = false;
+    let seedPollGen = 0;
+
+    function pollSeedStatus(url) {
+      const target = String(url || '');
+      if (!target) {
+        seedLine.hidden = true;
+        seedLine.textContent = '';
+        return;
+      }
+      seedLine.hidden = false;
+      seedLine.textContent = 'Checking seed status…';
+      const gen = ++seedPollGen;
+      const statusUrl =
+        target + (target.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1';
+      fetchWithTimeout(
+        statusUrl,
+        {
+          credentials: 'omit',
+          cache: 'no-store',
+          headers: { Accept: 'application/vnd.relay.asset-status+json, application/json' },
+        },
+        10000,
+      )
+        .then(function (r) {
+          if (!r) throw new Error('no response');
+          return r.json().catch(function () {
+            return null;
+          });
+        })
+        .then(function (j) {
+          if (gen !== seedPollGen) return;
+          seedLine.textContent = formatSeedLine(parseSeedStatusJson(j));
+        })
+        .catch(function () {
+          if (gen !== seedPollGen) return;
+          seedLine.textContent =
+            'Seed status unreachable — Open stream / Download may still work if the gateway has bytes.';
+        });
+    }
 
     function onPageHide() {
       leftPage = true;
@@ -557,15 +667,33 @@
     });
     actions.appendChild(copyBtn);
 
-    if (android && streamUrl) {
+    // Same-origin /ipfs download for desktop + Android (save to disk, open locally).
+    if (streamUrl) {
       dlLink = global.document.createElement('a');
       dlLink.className = 'fb-btn fb-theater-download-mkv';
       dlLink.href = streamUrl;
       dlLink.setAttribute('download', '');
       const kind0 = ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master';
       dlLink.textContent = kind0 === 'master' ? 'Download MKV' : 'Download MP4';
+      dlLink.addEventListener('click', function (ev) {
+        if (
+          !requireUnlocked('Confirm ownership first, then download the file to this device.')
+        ) {
+          ev.preventDefault();
+          return;
+        }
+        setStatus(
+          'Downloading via this site’s IPFS gateway — large file; open it locally in VLC or Files when finished.',
+        );
+      });
       actions.appendChild(dlLink);
     }
+
+    const requestLink = global.document.createElement('a');
+    requestLink.className = 'fb-btn fb-theater-request-drive';
+    requestLink.href = '/request';
+    requestLink.textContent = 'Request Drive links';
+    actions.appendChild(requestLink);
 
     const setupLink = global.document.createElement('a');
     setupLink.className = 'fb-btn fb-btn-setup';
@@ -592,12 +720,14 @@
 
     const note = global.document.createElement('p');
     note.className = 'fb-theater-downloads-note';
-    note.textContent = android
-      ? 'Browsers cannot play Matroska + HEVC in-page yet. On Android, Open in external player hands the HTTPS stream to VLC (or another app) via the system chooser.'
+    note.innerHTML = android
+      ? 'Browsers cannot play Matroska + HEVC in-page. <strong>Stream</strong> via Open in external player, <strong>Download</strong> the file to this device and open it locally, or <a class="fb-link" href="/request">Request Drive links</a> by email. Download uses this site’s IPFS gateway (not in-browser playback).'
       : smartTv
-        ? 'Many TV browsers (webOS, Tizen, …) cannot run VLC. Open stream link uses the same HTTPS file URL — prefer 1080p/720p H.264 when Full quality fails.'
-        : 'Browsers cannot play Matroska + HEVC in-page yet. Open in VLC uses a local vlc:// handler (Setup). On TVs without VLC, use Open stream link or the clickable URL.';
+        ? 'Many TV browsers cannot run VLC. Prefer <strong>Open stream link</strong> with 1080p/720p H.264. Or <a class="fb-link" href="/request">Request Drive links</a> and play from Files / USB.'
+        : 'Browsers cannot play Matroska + HEVC in-page. <strong>Stream</strong> in VLC, <strong>Download</strong> the file (save to disk, then open locally), or <a class="fb-link" href="/request">Request Drive links</a> by email. Now showing is only what is ready on the server right now — the full library still uses these paths when peers are online.';
     root.appendChild(note);
+
+    pollSeedStatus(streamUrl);
 
     // Affirmation sets html data-fb-* after first build — keep unlocked in sync.
     try {
