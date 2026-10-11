@@ -108,14 +108,15 @@ Server-side move/copy: S3 API at `https://de-s3.storage.bunnycdn.com` (Access Ke
 | Step | Done? |
 |------|--------|
 | Move 3 masters to slug folders | yes |
-| Rename `master.mkv` → titled filenames (underscores) | yes (2026-10-11) |
+| Rename `master.mkv` → titled filenames (underscores) | yes (2026-10-11) — no `master.*` under `now-showing/` |
 | CDN HEAD/Range 200/206 on titled paths | yes |
 | Delete flat root MKVs | yes (purge CDN if old URLs still cache) |
 | Wire `streamHttps` in catalog + ExternalPlay | yes |
 | Disable 1080p/720p until Bunny ladder exists | yes |
+| Upload helper enforces titled names (`scripts/bunny-now-showing-put.sh`) | yes |
 | Upload web-1080p / mobile-720p + enable URLs | pending |
 | Fleet IPFS movie cache retired | pending |
-| `git push` tip / publish | pending |
+| `git push` tip / publish | yes (titled `streamHttps` on tip) |
 
 ---
 
