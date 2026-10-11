@@ -25,6 +25,16 @@ They belong to **us**.
 
 The public site catalogs renders on **IPFS**, not in Git. Git only stores `.relay/assets/**/*.ipfs` stubs and `assets.manifest.json`. The Relay fleet does **not** cache movie files — seed on a workstation; APK/browser pull CIDs from the swarm. **Now showing** titles are manually uploaded on the host. End-to-end ingest, local pin, publish: **[IPFS-SEEDING.md](IPFS-SEEDING.md)**.
 
+**Media root** (UnixFS DAG of all thin media) lives in `assets.manifest.json` → `mediaRoot`, and is mirrored in tip file `IPFS_ROOT`:
+
+`bafybeid7zmxfovcgpebtalojong2fw5nc7hnle2bxh2g7ihu74sbfigoya`
+
+Inspect: [cid.ipfs.tech](https://cid.ipfs.tech/#bafybeid7zmxfovcgpebtalojong2fw5nc7hnle2bxh2g7ihu74sbfigoya).
+
+## Android
+
+The Flashback APK loads this site from `https://flashbackrepository.org`. It does not ship the client hook or the movies. A second, generic Relay APK can open any Relay origin and is the one with the server list and shell settings. Goals, flavors, offline saves, and the 24h hook reload: **[docs/ANDROID_APK.md](docs/ANDROID_APK.md)**.
+
 ## Current list of completed Fan Edits:
 
 [2012 (2009) - Salvation](/FanMixes/2012%20(2009)%20-%20Salvation "2012 (2009) - Salvation")
@@ -67,38 +77,14 @@ Sharing fan edits of movies between people who both own a copy of the original m
 **still illegal** however there has never been any real enforcement of this rule, and so the easiest way
 to get a copy of my movies is to ask my in private message (on any social network). 
 
-## Automative Movie Request Link
+## Automatic download request
 
-To automatically request a download link to any of my movies, please click on the email link below 
-which should open your email client. Email me with the subject 'Request: ${title}' exactly.
+The only way to get download links is to email **ari@asu.edu** with this exact subject
+(or use the form at [flashbackrepository.org/request](https://flashbackrepository.org/request)):
 
-[Alien Resurrection UnJossed](mailto:ari@asu.edu?subject=Request:%20Alien%20Resurrection%20UnJossed)
+[Request: Flashback FanEdit Downloads](mailto:ari@asu.edu?subject=Request:%20Flashback%20FanEdit%20Downloads)
 
-[Congo Incel](mailto:ari@asu.edu?subject=Request:%20Congo%20Incel)
-
-[Final Fantasy The Phantom Menace](mailto:ari@asu.edu?subject=Request:%20Final%20Fantasy%20The%20Phantom%20Menace)
-
-[Matrix Reloaded Unlinked](mailto:ari@asu.edu?subject=Request:%20Matrix%20Reloaded%20Unlinked)
-
-[Matrix Revolutions Unlinked](mailto:ari@asu.edu?subject=Request:%20Matrix%20Revolutions%20Unlinked)
-
-[Riddick Unjinxed](mailto:ari@asu.edu?subject=Request:%20Riddick%20Unjinxed)
-
-[Silent Hill Nay Tomorrow](mailto:ari@asu.edu?subject=Request:%20Silent%20Hill%20Nay%20Tomorrow)
-
-[Sonic DeSchwartzed](mailto:ari@asu.edu?subject=Request:%20Sonic%20DeSchwartzed)
-
-[Sonic 2 DeSchwartzed](mailto:ari@asu.edu?subject=Request:%20Sonic%202%20DeSchwartzed)
-
-[Sonic 3 DeSchwartzed](mailto:ari@asu.edu?subject=Request:%20Sonic%203%20DeSchwartzed)
-
-[Terminator 3 Brass Monkey](mailto:ari@asu.edu?subject=Request:%20Terminator%203%20Brass%20Monkey)
-
-[The Chronicles Of Riddick Fry's Edition](mailto:ari@asu.edu?subject=Request:%20The%20Chronicles%20Of%20Riddick%20Fry's%20Edition)
-
-[The Day After Tomorrow Yuppocolypse](mailto:ari@asu.edu?subject=Request:%20The%20Day%20After%20Tomorrow%20Yuppocolypse)
-
-[War of the Worlds Family Therapy](mailto:ari@asu.edu?subject=Request:%20War%20of%20the%20Worlds%20Family%20Therapy)
+Gmail sends one auto-reply with the shared Drive library. See `gmail/README.md` for the filter setup.
 
 ## How to make Chrome open the "mailto" links in Gmail Desktop
 Step 1: Enable your Gmail protocols. 
