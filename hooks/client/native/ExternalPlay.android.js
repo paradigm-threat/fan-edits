@@ -47,6 +47,12 @@ function buildLadder(p) {
   const master = absoluteHref(propStr(p, 'streamUrl'))
   const web = absoluteHref(propStr(p, 'streamUrlWeb'))
   const mobile = absoluteHref(propStr(p, 'streamUrlMobile'))
+  const disableWeb =
+    p.disableWeb === true || propStr(p, 'disableWeb') === 'true' || propStr(p, 'data-disable-web') === 'true'
+  const disableMobile =
+    p.disableMobile === true ||
+    propStr(p, 'disableMobile') === 'true' ||
+    propStr(p, 'data-disable-mobile') === 'true'
   let out = []
   function push(kind, label, url) {
     if (!url || url.length === 0) {
@@ -57,11 +63,12 @@ function buildLadder(p) {
         return
       }
     }
-    out = out.concat([{ kind: kind, label: label, url: url }])
+    out = out.concat([{ kind: kind, label: label, url: url, disabled: false }])
   }
   push('master', 'Full quality', master)
-  push('web', '1080p', web)
-  push('mobile', '720p', mobile)
+  // Hide 1080p/720p until Bunny ladder URLs exist (disable* means not ready).
+  if (!disableWeb) push('web', '1080p', web)
+  if (!disableMobile) push('mobile', '720p', mobile)
   return out
 }
 
@@ -105,7 +112,12 @@ export default function ExternalPlay(props) {
       origin = globalThis.location.origin
     }
   } catch (eOrigin) {}
-  const dlHref = inCatalog ? origin + '/ipfs/' + masterCid : ''
+  let dlHref = ''
+  if (catalogShowing && abs) {
+    dlHref = abs
+  } else if (inCatalog) {
+    dlHref = origin + '/ipfs/' + masterCid
+  }
 
   if (!downloadName) {
     try {
@@ -121,23 +133,27 @@ export default function ExternalPlay(props) {
 
   // Stream exclusive to Now showing — never tip-path probes for other titles.
   const streamOn = unlocked === true && catalogShowing === true && !!abs
-  const downloadOn = unlocked === true && inCatalog && !!dlHref
+  const downloadOn = unlocked === true && !!dlHref
 
   let streamStatus = 'Confirm ownership above first.'
   if (unlocked === true) {
     if (catalogShowing && abs) {
-      streamStatus = 'Ready on this server (Now showing).'
+      streamStatus = 'Ready on Bunny CDN (Now showing).'
     } else {
       streamStatus =
-        'Not on this server (not Now showing). Use Download via IPFS or Request Drive links.'
+        'Not Now showing. Use Download via IPFS or Request Drive links.'
     }
   }
 
   let dlStatus = 'Confirm ownership above first.'
   if (unlocked === true) {
-    dlStatus = inCatalog
-      ? 'Ready to download via IPFS.'
-      : 'This title is not in the IPFS catalog yet.'
+    if (catalogShowing && abs) {
+      dlStatus = 'Ready to download MKV from Bunny CDN.'
+    } else if (inCatalog) {
+      dlStatus = 'Ready to download via IPFS.'
+    } else {
+      dlStatus = 'This title is not in the IPFS catalog yet.'
+    }
   }
 
   let qualityRow = null

@@ -1887,26 +1887,35 @@ export default function FlashbackApp() {
     let streamUrl = ''
     let streamUrlWeb = ''
     let streamUrlMobile = ''
+    let disableWeb = false
+    let disableMobile = false
     let masterCid = ''
     let downloadName = 'movie.mkv'
     let projectStatus = ''
     if (selected) {
       const onServer = projectIsNowShowing(selected, nowShowingSlugs)
-      // Tip /FanMixes/… paths only for Now showing (bytes on this server).
+      // Now showing: prefer Bunny streamHttps; tip /FanMixes/… is legacy fallback.
       // Other titles: no streamUrl — Download uses /ipfs/{cid} when catalogued.
       if (onServer) {
-        // VLC on macOS rejects MRLs with raw spaces or parentheses.
-        streamUrl = encodeMarkdownUrl(absoluteStreamUrl(mediaSrc(selected)))
-        const webRel = projectMediaField(selected, 'mediaWeb')
-        const mobileRel = projectMediaField(selected, 'mediaMobile')
-        if (webRel.length > 0) {
-          streamUrlWeb = encodeMarkdownUrl(absoluteStreamUrl(mediaSrcFor(selected, webRel)))
+        const bunnyMaster = projectMediaField(selected, 'streamHttps')
+        if (bunnyMaster.length > 0) {
+          streamUrl = encodeMarkdownUrl(absoluteStreamUrl(bunnyMaster))
+        } else {
+          // VLC on macOS rejects MRLs with raw spaces or parentheses.
+          streamUrl = encodeMarkdownUrl(absoluteStreamUrl(mediaSrc(selected)))
         }
-        if (mobileRel.length > 0) {
-          streamUrlMobile = encodeMarkdownUrl(
-            absoluteStreamUrl(mediaSrcFor(selected, mobileRel)),
-          )
+        const bunnyWeb = projectMediaField(selected, 'streamHttpsWeb')
+        const bunnyMobile = projectMediaField(selected, 'streamHttpsMobile')
+        // Live 1080p/720p only when Bunny ladder URLs exist — never tip phantoms.
+        if (bunnyWeb.length > 0) {
+          streamUrlWeb = encodeMarkdownUrl(absoluteStreamUrl(bunnyWeb))
         }
+        if (bunnyMobile.length > 0) {
+          streamUrlMobile = encodeMarkdownUrl(absoluteStreamUrl(bunnyMobile))
+        }
+        // Hide 1080p/720p until Bunny ladder uploads exist (ExternalPlay omits empty/disabled).
+        disableWeb = bunnyWeb.length === 0
+        disableMobile = bunnyMobile.length === 0
         projectStatus = 'showing'
       } else {
         try {
@@ -1935,6 +1944,8 @@ export default function FlashbackApp() {
             streamUrl={streamUrl}
             streamUrlWeb={streamUrlWeb}
             streamUrlMobile={streamUrlMobile}
+            disableWeb={disableWeb}
+            disableMobile={disableMobile}
             cid={masterCid}
             downloadName={downloadName}
             status={projectStatus}

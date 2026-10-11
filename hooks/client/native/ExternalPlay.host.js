@@ -235,18 +235,30 @@
       .toLowerCase();
     const catalogShowing = catalogStatus === 'showing';
 
+    const disableWeb =
+      prop(props, 'disableWeb', 'false') === true ||
+      prop(props, 'disableWeb', 'false') === 'true' ||
+      prop(props, 'data-disable-web', 'false') === 'true';
+    const disableMobile =
+      prop(props, 'disableMobile', 'false') === true ||
+      prop(props, 'disableMobile', 'false') === 'true' ||
+      prop(props, 'data-disable-mobile', 'false') === 'true';
+
     const ladder = [];
     function pushRung(kind, label, url) {
       const u = String(url || '');
+      // Only live URLs — hide 1080p/720p until Bunny ladder (streamHttpsWeb/Mobile) exists.
       if (!u) return;
       for (let i = 0; i < ladder.length; i++) {
         if (ladder[i].url === u) return;
       }
-      ladder.push({ kind: kind, label: label, url: u });
+      ladder.push({ kind: kind, label: label, url: u, disabled: false });
     }
     pushRung('master', 'Full quality', masterUrl);
-    pushRung('web', '1080p', webUrl);
-    pushRung('mobile', '720p', mobileUrl);
+    if (!disableWeb) pushRung('web', '1080p', webUrl);
+    if (!disableMobile) pushRung('mobile', '720p', mobileUrl);
+    // When disable* flags are set, rungs stay hidden (placeholders only). When flags
+    // are false and URLs exist, show them.
 
     const smartTv = isSmartTvBrowser();
     let selectedIdx = 0;
@@ -284,10 +296,10 @@
     }
 
     function downloadHrefFor(kind, url) {
-      // Prefer IPFS gateway for every download; never fall back to tip media paths
-      // (those 404 unless the title is Now showing — and stream covers that case).
-      if (masterIpfsUrl) return masterIpfsUrl;
+      // Now showing: Bunny (or tip) HTTPS master first so MKV download works offline from IPFS.
+      // Other titles: IPFS gateway only — never tip /FanMixes/… phantoms.
       if (catalogShowing && url) return String(url);
+      if (masterIpfsUrl) return masterIpfsUrl;
       return '';
     }
 
@@ -321,7 +333,7 @@
       ),
     );
 
-    // Quality (optional)
+    // Quality row only when more than one live rung (hide until Bunny 1080/720 exist).
     let qualityRow = null;
     if (ladder.length > 1) {
       const qWrap = el('div', 'fb-ways-quality');
@@ -360,7 +372,7 @@
       el(
         'p',
         'fb-ways-section-help',
-        'Works when this server has the file ready (Now showing titles).',
+        'Works for Now showing titles (Bunny CDN HTTPS). Other titles use Download via IPFS.',
       ),
     );
     const streamActions = el('div', 'fb-ways-actions fb-theater-external-actions');
@@ -527,12 +539,20 @@
       const own = unlocked;
       const serverOk = streamServerReady();
       const streamOn = own && serverOk;
-      const dlHrefNow = masterIpfsUrl || downloadHrefFor(
+      const dlHrefNow = downloadHrefFor(
         ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master',
         streamUrl,
       );
-      // Download is IPFS-only (never a tip /FanMixes/… path that may 404).
-      const downloadOn = own && inCatalog && !!masterIpfsUrl;
+      // Now showing: Bunny HTTPS MKV. Other titles: IPFS only.
+      const downloadOn = own && !!dlHrefNow;
+      if (dlHrefNow && dlLink) {
+        dlLink.href = dlHrefNow;
+        const fname = downloadFilenameFor(
+          ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master',
+          dlHrefNow,
+        );
+        if (fname) dlLink.setAttribute('download', fname);
+      }
 
       setControlEnabled(openBtn, streamOn);
       setControlEnabled(openHttpsBtn, streamOn);
@@ -545,12 +565,14 @@
       } else {
         if (!catalogShowing || !streamUrl) {
           streamStatus.textContent =
-            'Not on this server (not Now showing). Use Download via IPFS or Request Drive links.';
+            'Not Now showing. Use Download via IPFS or Request Drive links.';
         } else {
-          streamStatus.textContent = 'Ready on this server (Now showing).';
+          streamStatus.textContent = 'Ready on Bunny CDN (Now showing).';
         }
 
-        if (!inCatalog || !masterIpfsUrl) {
+        if (catalogShowing && streamUrl) {
+          dlStatus.textContent = 'Ready to download MKV from Bunny CDN.';
+        } else if (!inCatalog || !masterIpfsUrl) {
           dlStatus.textContent = 'This title is not in the IPFS catalog yet.';
         } else {
           dlStatus.textContent = 'Ready to download via IPFS.';
@@ -583,8 +605,16 @@
         scrollToGate();
         return false;
       }
-      if (!inCatalog) {
-        setFeedback('This title is not in the IPFS catalog yet.');
+      const href = downloadHrefFor(
+        ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master',
+        streamUrl,
+      );
+      if (!href) {
+        setFeedback(
+          catalogShowing
+            ? 'No download URL for this Now showing title yet.'
+            : 'This title is not in the IPFS catalog yet.',
+        );
         return false;
       }
       return true;

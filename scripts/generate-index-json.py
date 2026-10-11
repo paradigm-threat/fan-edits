@@ -396,29 +396,54 @@ def status_for(folder: Path, media: str | None, readme: Path) -> str:
 
 
 # Edit now-showing.json to change the marquee / carousel rotation.
-# generate-index-json maps those slugs → status=showing and copies the list into index.json.
+# Entries may be slug strings or objects:
+#   { "slug": "…", "streamHttps": "https://….b-cdn.net/now-showing/<slug>/master.mkv",
+#     "streamHttpsWeb": "…", "streamHttpsMobile": "…" }
+# generate-index-json maps those slugs → status=showing, copies slug list into
+# index.json.nowShowing, and stamps streamHttps* onto matching projects.
 NOW_SHOWING_FILE = ROOT / "now-showing.json"
 
+STREAM_HTTPS_KEYS = ("streamHttps", "streamHttpsWeb", "streamHttpsMobile")
 
-def load_now_showing_slugs() -> list[str]:
-    """Ordered slug list from now-showing.json (single source of truth)."""
+
+def load_now_showing() -> tuple[list[str], dict[str, dict]]:
+    """Ordered slugs + per-slug Bunny HTTPS fields from now-showing.json."""
     if not NOW_SHOWING_FILE.is_file():
-        return []
+        return [], {}
     try:
         data = json.loads(NOW_SHOWING_FILE.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError):
-        return []
+        return [], {}
     if not isinstance(data, list):
-        return []
+        return [], {}
     out: list[str] = []
+    meta: dict[str, dict] = {}
     seen: set[str] = set()
     for item in data:
-        slug = str(item or "").strip()
+        fields: dict = {}
+        if isinstance(item, str):
+            slug = item.strip()
+        elif isinstance(item, dict):
+            slug = str(item.get("slug") or "").strip()
+            for key in STREAM_HTTPS_KEYS:
+                val = item.get(key)
+                if isinstance(val, str) and val.strip():
+                    fields[key] = val.strip()
+        else:
+            continue
         if not slug or slug in seen:
             continue
         seen.add(slug)
         out.append(slug)
-    return out
+        if fields:
+            meta[slug] = fields
+    return out, meta
+
+
+def load_now_showing_slugs() -> list[str]:
+    """Ordered slug list from now-showing.json (single source of truth)."""
+    slugs, _meta = load_now_showing()
+    return slugs
 
 
 def publish_status(slug: str, raw: str, now_showing: set[str]) -> str:
@@ -432,7 +457,7 @@ def publish_status(slug: str, raw: str, now_showing: set[str]) -> str:
 
 def main() -> None:
     manifest_paths = load_manifest_paths()
-    now_showing = load_now_showing_slugs()
+    now_showing, now_showing_meta = load_now_showing()
     now_showing_set = set(now_showing)
     projects = []
     for rel in sorted(git_readmes()):
@@ -483,6 +508,20 @@ def main() -> None:
             "subtitles": subs,
             "subtitlesJson": json.dumps(tracks_for_player, separators=(",", ":")),
         }
+        # Bunny Now showing HTTPS (optional). Keep mediaWeb/mediaMobile basenames for
+        # catalog UI (disabled until streamHttpsWeb/Mobile exist). Live ladder URLs
+        # only when those Bunny fields are set.
+        bunny = now_showing_meta.get(slug) or {}
+        for key in STREAM_HTTPS_KEYS:
+            if key in bunny:
+                entry[key] = bunny[key]
+        if status == "showing" and bunny.get("streamHttps"):
+            # Ladder UI only when Bunny streamHttpsWeb/Mobile exist (no tip MP4 phantoms).
+            entry["qualityWebEnabled"] = bool(bunny.get("streamHttpsWeb"))
+            entry["qualityMobileEnabled"] = bool(bunny.get("streamHttpsMobile"))
+        else:
+            entry["qualityWebEnabled"] = bool(media_web)
+            entry["qualityMobileEnabled"] = bool(media_mobile)
         if blurb:
             entry["blurb"] = blurb
         else:

@@ -1,5 +1,14 @@
 [
-  "the-mummy-1999-debugged",
-  "the-mummy-returns-2001-debugged",
-  "van-helsing-deanna-d"
+  {
+    "slug": "the-mummy-1999-debugged",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/master.mkv"
+  },
+  {
+    "slug": "the-mummy-returns-2001-debugged",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/master.mkv"
+  },
+  {
+    "slug": "van-helsing-deanna-d",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/master.mkv"
+  }
 ]
