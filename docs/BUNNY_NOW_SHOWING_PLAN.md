@@ -37,10 +37,10 @@ Object names must be **URL-path safe without percent-encoding**: only `A–Z` `a
 | **No** `%` encoding in `streamHttps` path segments | link basename == object name |
 | Keep slug **folder**; title lives in the **filename** | `now-showing/<slug>/<Title_Safe>.mkv` |
 
-Optional ladder (same title stem):
+Optional ladder (same title stem; H.264 MP4 from `encode-ladder-nvenc.sh`):
 
-- `now-showing/<slug>/<Title_Safe>_web-1080p.mkv`
-- `now-showing/<slug>/<Title_Safe>_mobile-720p.mkv`
+- `now-showing/<slug>/<Title_Safe>_web-1080p.mp4`
+- `now-showing/<slug>/<Title_Safe>_mobile-720p.mp4`
 
 ---
 
@@ -50,8 +50,8 @@ Optional ladder (same title stem):
 now-showing/
   <slug>/
     <Title_Safe>.mkv              # required for Now showing
-    <Title_Safe>_web-1080p.mkv    # optional — enable only when present
-    <Title_Safe>_mobile-720p.mkv  # optional — enable only when present
+    <Title_Safe>_web-1080p.mp4    # optional — enable only when present
+    <Title_Safe>_mobile-720p.mp4  # optional — enable only when present
 ```
 
 **CDN host:** `flashbackrepository.b-cdn.net`
@@ -68,8 +68,8 @@ Then add to `now-showing.json`:
 {
   "slug": "the-mummy-1999-debugged",
   "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged.mkv",
-  "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_web-1080p.mkv",
-  "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_mobile-720p.mkv"
+  "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_web-1080p.mp4",
+  "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_mobile-720p.mp4"
 }
 ```
 
@@ -119,7 +119,7 @@ Server-side move/copy: S3 API at `https://de-s3.storage.bunnycdn.com` (Access Ke
 | Wire `streamHttps` in catalog + ExternalPlay | yes |
 | Disable 1080p/720p until Bunny ladder exists | yes |
 | Upload helper enforces titled names (`scripts/bunny-now-showing-put.sh`) | yes |
-| Upload web-1080p / mobile-720p + enable URLs | pending |
+| Upload web-1080p / mobile-720p + enable URLs | in progress (this host; publish per title) |
 | Fleet IPFS movie cache retired | pending |
 | `git push` tip / publish | yes (titled `streamHttps` on tip) |
 

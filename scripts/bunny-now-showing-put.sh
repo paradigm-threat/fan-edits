@@ -8,6 +8,9 @@
 #
 # Usage:
 #   ./scripts/bunny-now-showing-put.sh put <slug> "<Display Title>" /path/to/file.mkv
+#   ./scripts/bunny-now-showing-put.sh put-as <slug> <Remote_Safe_Name.ext> /path/to/file
+#   ./scripts/bunny-now-showing-put.sh ladder <slug> "<Display Title>" <web.mp4> <mobile.mp4>
+#       Uploads Title_Safe_web-1080p.mp4 + Title_Safe_mobile-720p.mp4; prints streamHttps* lines.
 #   ./scripts/bunny-now-showing-put.sh rename <slug> "<Display Title>" [source-name]
 #       source-name defaults to master.mkv (legacy); destination is always titled.
 #   ./scripts/bunny-now-showing-put.sh title "<Display Title>"   # print basename only
@@ -65,10 +68,11 @@ storage_put() {
   local remote_path="$1" local_file="$2"
   local url="https://${HOST}/${ZONE}/${remote_path}"
   echo "PUT $url" >&2
+  # -T streams the file (do not use --data-binary @ — OOM on multi‑GB MKVs/MP4s)
   curl -sS --fail -X PUT \
     -H "AccessKey: ${PASS}" \
     -H "Content-Type: application/octet-stream" \
-    --data-binary @"${local_file}" \
+    -T "${local_file}" \
     "$url" >/dev/null
 }
 
@@ -118,6 +122,39 @@ case "$cmd" in
     storage_put "$remote" "$file"
     echo "streamHttps=$(cdn_url "$slug" "$base")"
     ;;
+  put-as)
+    slug="${2:?slug}"
+    base="${3:?remote basename}"
+    file="${4:?local file}"
+    [[ -f "$file" ]] || { echo "missing file: $file" >&2; exit 1; }
+    if [[ "${base,,}" == master.* ]] || [[ "$base" == *"/"* ]] || [[ "$base" == *"%"* ]]; then
+      echo "refusing unsafe remote basename: $base" >&2
+      exit 1
+    fi
+    if ! [[ "$base" =~ ^[A-Za-z0-9._-]+$ ]]; then
+      echo "remote basename not URL-safe: $base" >&2
+      exit 1
+    fi
+    remote="now-showing/${slug}/${base}"
+    storage_put "$remote" "$file"
+    echo "url=$(cdn_url "$slug" "$base")"
+    ;;
+  ladder)
+    slug="${2:?slug}"
+    title="${3:?display title}"
+    web="${4:?web-1080p file}"
+    mob="${5:?mobile-720p file}"
+    [[ -f "$web" ]] || { echo "missing web: $web" >&2; exit 1; }
+    [[ -f "$mob" ]] || { echo "missing mobile: $mob" >&2; exit 1; }
+    stem="$(title_to_basename "$title")"
+    stem="${stem%.*}"
+    web_base="${stem}_web-1080p.mp4"
+    mob_base="${stem}_mobile-720p.mp4"
+    storage_put "now-showing/${slug}/${web_base}" "$web"
+    storage_put "now-showing/${slug}/${mob_base}" "$mob"
+    echo "streamHttpsWeb=$(cdn_url "$slug" "$web_base")"
+    echo "streamHttpsMobile=$(cdn_url "$slug" "$mob_base")"
+    ;;
   rename)
     slug="${2:?slug}"
     title="${3:?display title}"
@@ -133,6 +170,8 @@ case "$cmd" in
 Usage:
   bunny-now-showing-put.sh title "<Display Title>"
   bunny-now-showing-put.sh put <slug> "<Display Title>" /path/to/file.mkv
+  bunny-now-showing-put.sh put-as <slug> <Remote_Safe_Name.ext> /path/to/file
+  bunny-now-showing-put.sh ladder <slug> "<Display Title>" <web.mp4> <mobile.mp4>
   bunny-now-showing-put.sh rename <slug> "<Display Title>" [source-name]
 Never uploads or renames to master.*
 EOF

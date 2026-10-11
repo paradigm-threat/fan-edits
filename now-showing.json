@@ -9,6 +9,8 @@
   },
   {
     "slug": "van-helsing-deanna-d",
-    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d.mkv"
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d_web-1080p.mp4",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d_mobile-720p.mp4"
   }
 ]
