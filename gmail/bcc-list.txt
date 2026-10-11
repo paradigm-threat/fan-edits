@@ -1,0 +1,43 @@
+# Flashback Repository launch — BCC ONLY
+# Do not put these in To or Cc. Paste into BCC field.
+# Draft — not sent. One address per line. Deduped, lowercase.
+# 2026-10-06
+
+## Video game remix community (your list)
+rebeccaetripp@gmail.com
+fern.ivy@gmail.com
+rebecca_tripp@brown.edu
+stemage@gmail.com
+peach@vgmusic.com
+press@ocremix.org
+admin@ocremix.org
+info@materiacollective.com
+
+## Google Contacts → OCRemix group (have emails)
+greensweetpea@gmail.com
+lizz.rinker@gmail.com
+
+## Gmail Takeout — OCR / remix correspondence (see bcc-from-mbox.txt)
+creator@overclocked.org
+dlloyd@vacoxmail.com
+butterball503@aol.com
+tarkkio.akseli@gmail.com
+the_weeman_cometh@go.com
+webmaster@bogusred.net
+mbearden@txucom.net
+r.saunders@telus.net
+krawlie@hotmail.com
+aming14@cs.com
+aming14o@cs.com
+sgtrama@aol.com
+ss4goku007@yahoo.com
+mop_stop@hotmail.com
+dkosak@softnex.net
+erichansen24@hotmail.com
+kdsofficemanager@aol.com
+
+## Paste your existing personal / fan-edit list below
+# (You said you already have one — drop it here or merge before send.)
+
+## --- paste-ready BCC (comma-separated) ---
+# rebeccaetripp@gmail.com, fern.ivy@gmail.com, rebecca_tripp@brown.edu, stemage@gmail.com, peach@vgmusic.com, press@ocremix.org, admin@ocremix.org, info@materiacollective.com, greensweetpea@gmail.com, lizz.rinker@gmail.com, creator@overclocked.org, dlloyd@vacoxmail.com, butterball503@aol.com, tarkkio.akseli@gmail.com, the_weeman_cometh@go.com, webmaster@bogusred.net, mbearden@txucom.net, r.saunders@telus.net, krawlie@hotmail.com, aming14@cs.com, aming14o@cs.com, sgtrama@aol.com, ss4goku007@yahoo.com, mop_stop@hotmail.com, dkosak@softnex.net, erichansen24@hotmail.com, kdsofficemanager@aol.com

@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Encode progressive H.264 web/mobile MP4 renditions beside a master MKV/MP4.
+"""Encode progressive HEVC (H.265) MKV web/mobile renditions beside a master.
 
 Outputs (next to the source file):
-  <stem>.web-1080p.mp4   — max 1920w, CRF 20, AAC ~160k, faststart
-  <stem>.mobile-720p.mp4 — max 1280w, CRF 23, AAC ~128k, faststart
+  <stem>.web-1080p.mkv   — max 1920w, libx265 CRF 22, AAC ~160k
+  <stem>.mobile-720p.mkv — max 1280w, libx265 CRF 26, AAC ~128k
 
 Also converts subs/*.srt → .vtt when a project subs/ directory is present.
 """
@@ -18,8 +18,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 # Suffixes used by generate-index-json / player ladder
-WEB_SUFFIX = ".web-1080p.mp4"
-MOBILE_SUFFIX = ".mobile-720p.mp4"
+WEB_SUFFIX = ".web-1080p.mkv"
+MOBILE_SUFFIX = ".mobile-720p.mkv"
 
 SKIP_NAME_PARTS = (
     "seam",
@@ -40,11 +40,13 @@ def which_ffmpeg() -> str:
 
 def is_web_rendition(name: str) -> bool:
     n = name.lower()
-    return n.endswith(WEB_SUFFIX) or n.endswith(MOBILE_SUFFIX) or any(p in n for p in SKIP_NAME_PARTS)
+    return n.endswith(WEB_SUFFIX) or n.endswith(MOBILE_SUFFIX) or any(
+        p in n for p in SKIP_NAME_PARTS
+    )
 
 
 def find_master(folder: Path) -> Path | None:
-    """Pick archival master (prefer .hevc.mp4, then .mkv; skip web/mobile/proxy)."""
+    """Pick archival master (prefer .mkv over legacy .hevc.mp4; skip web/mobile/proxy)."""
     cands: list[Path] = []
     if not folder.is_dir():
         return None
@@ -63,13 +65,6 @@ def find_master(folder: Path) -> Path | None:
         cands.append(p)
     if not cands:
         return None
-    hevcs = [c for c in cands if c.name.lower().endswith(".hevc.mp4")]
-    if hevcs:
-        for c in hevcs:
-            cl = c.name.lower()
-            if "final" in cl or "edition" in cl or "debugged" in cl or "deanna" in cl:
-                return c
-        return hevcs[0]
     for c in cands:
         cl = c.name.lower()
         if c.suffix.lower() == ".mkv" and (
@@ -77,7 +72,12 @@ def find_master(folder: Path) -> Path | None:
         ):
             return c
     mkvs = [c for c in cands if c.suffix.lower() == ".mkv"]
-    return mkvs[0] if mkvs else cands[0]
+    if mkvs:
+        return mkvs[0]
+    hevcs = [c for c in cands if c.name.lower().endswith(".hevc.mp4")]
+    if hevcs:
+        return hevcs[0]
+    return cands[0]
 
 
 def out_paths(master: Path) -> tuple[Path, Path]:
@@ -86,8 +86,7 @@ def out_paths(master: Path) -> tuple[Path, Path]:
         if stem.endswith(suf):
             stem = stem[: -len(suf)]
             break
-    # Avoid double suffixes if master already named oddly
-    for junk in (".web-1080p", ".mobile-720p"):
+    for junk in (".web-1080p", ".mobile-720p", ".hevc"):
         if stem.endswith(junk):
             stem = stem[: -len(junk)]
     return (
@@ -120,7 +119,6 @@ def encode_one(
     if should_skip(out, master, force=force):
         print(f"SKIP {out.relative_to(ROOT)} (up to date)", flush=True)
         return True
-    # scale=-2: keep even dims; only downscale
     vf = f"scale='min({max_w},iw)':-2"
     cmd = [
         ffmpeg,
@@ -132,13 +130,15 @@ def encode_one(
         "-map",
         "0:a:0?",
         "-c:v",
-        "libx264",
+        "libx265",
         "-preset",
         preset,
         "-crf",
         str(crf),
         "-pix_fmt",
         "yuv420p",
+        "-tag:v",
+        "hvc1",
         "-vf",
         vf,
         "-c:a",
@@ -147,8 +147,6 @@ def encode_one(
         f"{aac_k}k",
         "-ac",
         "2",
-        "-movflags",
-        "+faststart",
         str(out),
     ]
     print(f"ENCODE {' '.join(cmd[3:])}", flush=True)
@@ -188,7 +186,7 @@ def encode_master(
                 master,
                 web,
                 max_w=1920,
-                crf=20,
+                crf=22,
                 aac_k=160,
                 preset=preset,
                 force=force,
@@ -203,7 +201,7 @@ def encode_master(
                 master,
                 mobile,
                 max_w=1280,
-                crf=23,
+                crf=26,
                 aac_k=128,
                 preset=preset,
                 force=force,
@@ -234,12 +232,15 @@ def main() -> int:
     ap.add_argument(
         "--preset",
         default="medium",
-        help="libx264 preset (use veryfast for quicker pilots)",
+        help="libx265 preset (use faster/veryfast for quicker pilots)",
     )
     args = ap.parse_args()
     targets = args.targets
     if not targets:
-        print("usage: encode-web-renditions.py <project-folder|master.mkv> [...]", file=sys.stderr)
+        print(
+            "usage: encode-web-renditions.py <project-folder|master.mkv> [...]",
+            file=sys.stderr,
+        )
         return 2
 
     failed = 0
@@ -253,7 +254,7 @@ def main() -> int:
                 print(f"NO MASTER {path}", file=sys.stderr)
                 failed += 1
                 continue
-        elif path.is_file():
+        elif path.is_file() or path.is_symlink():
             master = path
         else:
             print(f"MISSING {path}", file=sys.stderr)

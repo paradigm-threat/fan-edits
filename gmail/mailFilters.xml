@@ -1,0 +1,660 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+	<title>Mail Filters</title>
+	<id>tag:mail.google.com,2008:filters:z6ac57481*7f775991e577e988,z6ac57481*342edb90f0f5c55a,z6ac57481*ca6400af88f91634,z6ac57481*4e8f6a79588af6f0,z6ac57481*e51f5ad05d506556,z6ac57481*0ab7b0e0525c4cd9,z6ac57481*bcfaac80be58a5a7,z6ac57481*7f83cfb6905a5c5a,z6ac57481*4091b9c61b4e6763,z6ac57481*aae1f4b8a464432e,z6ac57481*c740327ec944f893,z6ac57481*4a4a47a79ab3e128,z6ac57481*7fb8b8ef2d33f812,z6ac57481*7aafa75386787aa9,z6ac57481*a0ce439d6a265279</id>
+	<updated>2026-10-06T22:21:53Z</updated>
+	<author>
+		<name>Ariel Asulin</name>
+		<email>arasulin@asu.edu</email>
+	</author>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*7f775991e577e988</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Alien Resurrection UnJossed'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:7f775991e577e988'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*342edb90f0f5c55a</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Congo Incel'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:342edb90f0f5c55a'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*ca6400af88f91634</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Final Fantasy The Phantom Menace'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:ca6400af88f91634'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*4e8f6a79588af6f0</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Matrix Reloaded Unlinked'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:4e8f6a79588af6f0'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*e51f5ad05d506556</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Matrix Revolutions Unlinked'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:e51f5ad05d506556'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*0ab7b0e0525c4cd9</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Riddick Unjinxed'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:0ab7b0e0525c4cd9'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*bcfaac80be58a5a7</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Silent Hill Nay Tomorrow'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:bcfaac80be58a5a7'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*7f83cfb6905a5c5a</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Sonic DeSchwartzed'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:7f83cfb6905a5c5a'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*4091b9c61b4e6763</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Sonic 2 DeSchwartzed'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:4091b9c61b4e6763'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*aae1f4b8a464432e</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Sonic 3 DeSchwartzed'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:aae1f4b8a464432e'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*c740327ec944f893</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Terminator 3 Brass Monkey'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:c740327ec944f893'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*4a4a47a79ab3e128</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: The Chronicles Of Riddick Fry&apos;s Edition'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:4a4a47a79ab3e128'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*7fb8b8ef2d33f812</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: The Day After Tomorrow Yuppocolypse'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:7fb8b8ef2d33f812'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*7aafa75386787aa9</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: War of the Worlds Family Therapy'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:7aafa75386787aa9'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='filter'></category>
+		<title>Mail Filter</title>
+		<id>tag:mail.google.com,2008:filter:z6ac57481*a0ce439d6a265279</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content></content>
+		<apps:property name='subject' value='Request: Sonic Trilogy DeShwartzed'/>
+		<apps:property name='shouldMarkAsRead' value='true'/>
+		<apps:property name='cannedResponse' value='tag:mail.google.com,2009:cannedResponse:a0ce439d6a265279'/>
+		<apps:property name='sizeOperator' value='s_sl'/>
+		<apps:property name='sizeUnit' value='s_smb'/>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Alien Resurrection (1997) - UnJossed</title>
+		<id>tag:mail.google.com,2009:cannedResponse:7f775991e577e988</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1x3d-051h15JqnpIw0mVi1FOdn-tI1h8i?usp=drive_link"&gt;Alien Resurrection (1997) — UnJossed&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Alien Resurrection (1997) — UnJossed&lt;/h1&gt;
+&lt;p&gt;A leaner Alien Resurrection that strips out most of the gross, Joss Whedon–flavored body-horror gags while keeping the Betty crew’s escape intact.&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Removes most gross (Joss Whedon–inspired) sequences, including the birth and death of the hybrid alien.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Congo (1995) - Incel</title>
+		<id>tag:mail.google.com,2009:cannedResponse:342edb90f0f5c55a</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1ovdyyfUufyBw-168KbRl9YWMSjDSpxEQ?usp=drive_link"&gt;Congo (1995) — Incel&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Congo (1995) — Incel&lt;/h1&gt;
+&lt;p&gt;A leaner Congo that trims Dr. Elliot’s incel-ish dialogue, some Travis/Captain Wanta screaming, and a bit of gore — and fixes a travel plot hole by moving the Bob Driscoll encounter forward.&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Removes much of Dr. Elliot’s irritating (incel-ish) dialogue.&lt;/li&gt;
+&lt;li&gt;Trims some screaming scenes by Travis and Captain Wanta.&lt;/li&gt;
+&lt;li&gt;Cuts or reduces some gore.&lt;/li&gt;
+&lt;li&gt;Moves the Bob Driscoll forest encounter forward so the group finds him right outside the campsite where he was attacked (instead of days of travel later).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Final Fantasy (2001) - The Phantom Menace</title>
+		<id>tag:mail.google.com,2009:cannedResponse:ca6400af88f91634</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1kSxirEf2iK2hQWZKVioe61Shup6V99W3?usp=drive_link"&gt;Final Fantasy (2001) — The Phantom Menace&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Final Fantasy (2001) — The Phantom Menace&lt;/h1&gt;
+&lt;p&gt;Final Fantasy: The Spirits Within (2001) — Phantom Menace Edition. A minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy–like title placement — with the rare Japanese track and remix soundtrack upgra&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Removes distracting or poorly acted scenes.&lt;/li&gt;
+&lt;li&gt;Includes the rare Japanese track as a 2nd audio option.&lt;/li&gt;
+&lt;li&gt;Adds the Final Fantasy remix “A Temple of Chaos” by Tim Sheehy.&lt;/li&gt;
+&lt;li&gt;Replaces the credits song Spirit Dreams Inside with the Final Fantasy IV remix “Hymn to the Crystals” by RebeccaETripp.&lt;/li&gt;
+&lt;li&gt;Moves the title scene from the first scene to after the intro sequence (more traditional for Final Fantasy stories).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Matrix Reloaded (2003) - Unlinked</title>
+		<id>tag:mail.google.com,2009:cannedResponse:4e8f6a79588af6f0</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1NWQjQyUXL7BBH_v8CcKdRRuJk9LYLOWy?usp=drive_link"&gt;Matrix Reloaded (2003) — Unlinked&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Matrix Reloaded (2003) — Unlinked&lt;/h1&gt;
+&lt;p&gt;A pacing-focused cut of The Matrix Reloaded that strips many Link establishment sequences plus a few early-movie wreckers (orgasm-brownie, kiss), so the story moves without the Tank-replacement hand-holding.&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Removes many Link establishment sequences.&lt;/li&gt;
+&lt;li&gt;Removes the orgasm-brownie sequence.&lt;/li&gt;
+&lt;li&gt;Removes the kiss sequence.&lt;/li&gt;
+&lt;li&gt;Removes a few other early-pacing wreckers.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Matrix Revolutions (2003) - Unlinked</title>
+		<id>tag:mail.google.com,2009:cannedResponse:e51f5ad05d506556</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1MZUnqPi7GJFW1Vgmq2aGdLBeb8dYgJ8e?usp=drive_link"&gt;Matrix Revolutions (2003) — Unlinked&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Matrix Revolutions (2003) — Unlinked&lt;/h1&gt;
+&lt;p&gt;A companion cut to Reloaded — Unlinked that trims many Link establishment sequences from The Matrix Revolutions.&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Removes many Link establishment sequences.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Riddick (2013) - Unjinxed</title>
+		<id>tag:mail.google.com,2009:cannedResponse:0ab7b0e0525c4cd9</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1nOE4hEWJmFOhmKRTwdDuL8ecCYXqWUpL?usp=drive_link"&gt;Riddick (2013) — Unjinxed&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Riddick (2013) — Unjinxed&lt;/h1&gt;
+&lt;p&gt;A dialogue-trimmed Riddick that keeps the Unjinxed tone, front-loads the Necromonger “wrong planet” flashback as a linear prologue, and drops the opening predator beat so the desert survival story starts clean.&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Removes distracting, sexist, and exaggerated dialogue throughout (legacy Unjinxed trims in `playlist2`).&lt;/li&gt;
+&lt;li&gt;vulture/pterosaur kill — QC refine in Kdenlive&lt;/li&gt;
+&lt;li&gt;Vaako / Furya-bait conspiracy — keep removed&lt;/li&gt;
+&lt;li&gt;flashback block A — plays in prologue only&lt;/li&gt;
+&lt;li&gt;flashback block B — plays in prologue only; main omits 654-1371 except savanna 1371-1443&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Silent Hill (2006) - Nay Tomorrow</title>
+		<id>tag:mail.google.com,2009:cannedResponse:bcfaac80be58a5a7</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1gSDWYYHbyn25NEWnChrtwfpgrmTXrONV?usp=drive_link"&gt;Silent Hill (2006) — Nay Tomorrow Edition&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Silent Hill (2006) — Nay Tomorrow Edition&lt;/h1&gt;
+&lt;p&gt;My wife and I love this movie, but it&amp;#x27;s quite unwatchable in its current format. We wanted a cut that we could watch without having to turn away or fast-forward through sequences.&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Cuts nearly all gross/gory/sexist sequences.&lt;/li&gt;
+&lt;li&gt;Much of Jodelle Ferland’s narration dialog removed, along with poorly acted Alessa sequences.&lt;/li&gt;
+&lt;li&gt;Cybil’s death sequence slightly shortened.&lt;/li&gt;
+&lt;li&gt;Christabella’s death removed.&lt;/li&gt;
+&lt;li&gt;Songs from the Silent Hill 1 PC OST added or replacing original soundtrack audio on some sequences.&lt;/li&gt;
+&lt;li&gt;SH1 2002 remix “Nay Tomorrow” by Tamimi used toward the end.&lt;/li&gt;
+&lt;li&gt;I use KDENLive for all edits.&lt;/li&gt;
+&lt;li&gt;The edit files are available if you&amp;#x27;d like to open one of my edits, make changes, or re-render in higher def.&lt;/li&gt;
+&lt;li&gt;I tend to cut between scenes on the switching frame, which allows scenes to be stitched together easier by leaving more room on the wings.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Sonic (2020) - DeSchwartzed</title>
+		<id>tag:mail.google.com,2009:cannedResponse:7f83cfb6905a5c5a</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1PJsSUq4MGtTBE5O6y3gUXy2y88YCucXb?usp=drive_link"&gt;Sonic (2020) — DeSchwartzed Edition&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Sonic (2020) — DeSchwartzed Edition&lt;/h1&gt;
+&lt;p&gt;The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, racist, and otherwise agenda-driven dialog during&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Much of Sonic’s sardonic commentary dialogue (voiced by Ben Schwartz) removed.&lt;/li&gt;
+&lt;li&gt;Some Knuckles / Tails dialog trimmed.&lt;/li&gt;
+&lt;li&gt;Nearly all dialogue and scenes with Wade and Rachel removed.&lt;/li&gt;
+&lt;li&gt;Many sappy family scenes removed.&lt;/li&gt;
+&lt;li&gt;Predictive-programming beats (e.g. Rachel pushing divorce) removed where not plot-required.&lt;/li&gt;
+&lt;li&gt;Credit vocal songs replaced with Sonic game music remixes (four OC ReMixes from the corresponding game).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full picture-hole list (many TBD by cue): CHANGES.md.&lt;/p&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Sonic 2 (2022) - DeSchwartzed</title>
+		<id>tag:mail.google.com,2009:cannedResponse:4091b9c61b4e6763</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1SrXyU9a6IW5aAwTkbuBTzSSCtht2dW1e?usp=drive_link"&gt;Sonic 2 (2022) — DeSchwartzed Edition&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Sonic 2 (2022) — DeSchwartzed Edition&lt;/h1&gt;
+&lt;p&gt;The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, racist, and otherwise agenda-driven dialog during&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Much of Sonic’s sardonic commentary dialogue (voiced by Ben Schwartz) removed.&lt;/li&gt;
+&lt;li&gt;Some Knuckles / Tails dialog trimmed.&lt;/li&gt;
+&lt;li&gt;Nearly all dialogue and scenes with Wade and Rachel removed.&lt;/li&gt;
+&lt;li&gt;Many sappy family scenes removed.&lt;/li&gt;
+&lt;li&gt;Predictive-programming beats (e.g. Rachel pushing divorce) removed where not plot-required.&lt;/li&gt;
+&lt;li&gt;Credit vocal songs replaced with Sonic game music remixes (four OC ReMixes from the corresponding game).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full picture-hole list (no source SRT in project; times only): CHANGES.md.&lt;/p&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Sonic 3 (2024) - DeSchwartzed</title>
+		<id>tag:mail.google.com,2009:cannedResponse:aae1f4b8a464432e</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1aRNQi_34WDdiffURCSgyRSnYmubNHKax?usp=drive_link"&gt;Sonic 3 (2024) — DeSchwartzed Edition&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Sonic 3 (2024) — DeSchwartzed Edition&lt;/h1&gt;
+&lt;p&gt;The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, racist, and otherwise agenda-driven dialog during&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Much of Sonic’s sardonic commentary dialogue (voiced by Ben Schwartz) removed.&lt;/li&gt;
+&lt;li&gt;Some Knuckles / Tails dialog trimmed.&lt;/li&gt;
+&lt;li&gt;Nearly all dialogue and scenes with Wade and Rachel removed.&lt;/li&gt;
+&lt;li&gt;Many sappy family scenes removed.&lt;/li&gt;
+&lt;li&gt;Predictive-programming beats (e.g. Rachel pushing divorce) removed where not plot-required.&lt;/li&gt;
+&lt;li&gt;Credit vocal songs replaced with remixes from Sonic 3 and Sonic &amp;amp; Knuckles game music.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full picture-hole list (many TBD by cue): CHANGES.md.&lt;/p&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Terminator 3 (2003) - Brass Monkey</title>
+		<id>tag:mail.google.com,2009:cannedResponse:c740327ec944f893</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/12exHsbQHXRGxq4OdXaIGN6bkpxsYsZ3-?usp=drive_link"&gt;Terminator 3 (2003) — Brass Monkey Edition&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Terminator 3 (2003) — Brass Monkey Edition&lt;/h1&gt;
+&lt;p&gt;In Brass Monkey Edition, I attempt to cut out all distracting dialog and sequences in Terminator 3 to be more like the first two movies.&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Nick Stahl removed as much as possible, along with his narration.&lt;/li&gt;
+&lt;li&gt;Stripper scene removed.&lt;/li&gt;
+&lt;li&gt;Dialog about Kate worrying over her wedding removed.&lt;/li&gt;
+&lt;li&gt;Many other distracting or contradictory scenes trimmed — e.g. a trailer-sequence “cash only” sign (phones down) that contradicts the clerk’s police call going through later.&lt;/li&gt;
+&lt;li&gt;Background track “Dat Funky Man” replaced with Beastie Boys’ “Brass Monkey” (felt like the original song pick for that scene).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;DM me for a copy of the whole movie. Full picture-hole list (many TBD by cue): CHANGES.md.&lt;/p&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: The Chronicles Of Riddick (2004) - Fry&apos;s Edition</title>
+		<id>tag:mail.google.com,2009:cannedResponse:4a4a47a79ab3e128</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1MVg8HlolJECDWUYY2GdFCL1I1c6oTVfJ?usp=drive_link"&gt;The Chronicles Of Riddick (2004) — Fry&amp;#x27;s Edition&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;The Chronicles Of Riddick (2004) — Fry&amp;#x27;s Edition&lt;/h1&gt;
+&lt;p&gt;This version removes many extended scenes and restores some audio from the Theatrical version. It also removes many poorly acted, sexist, or just irritating scenes with Thandiwe Newton (Dame Vaako) and Alexa Davalos (Kyra).&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Extended-cut sleaze and generic prophecy/vision sequences trimmed toward a high-def theatrical-leaning pace.&lt;/li&gt;
+&lt;li&gt;Some Theatrical-version audio restored where useful.&lt;/li&gt;
+&lt;li&gt;Poorly acted, sexist, or irritating Dame Vaako (Thandiwe Newton) sequences removed or reduced so she reads as a bystander.&lt;/li&gt;
+&lt;li&gt;Irritating Kyra (Alexa Davalos) scenes trimmed.&lt;/li&gt;
+&lt;li&gt;Unproblematic extended sequences left in.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full picture-hole list (many TBD by cue): CHANGES.md.&lt;/p&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: The Day After Tomorrow (2004) - Yuppocolypse</title>
+		<id>tag:mail.google.com,2009:cannedResponse:7fb8b8ef2d33f812</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1MhZKdLwAEGq_MlQgiaRnMF7nQKBN79V_?usp=drive_link"&gt;The Day After Tomorrow (2004) — Yuppocolypse&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;The Day After Tomorrow (2004) — Yuppocolypse&lt;/h1&gt;
+&lt;p&gt;A leaner Day After Tomorrow that spends less time establishing the yuppie protagonists before the climate disaster takes over.&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Removes many establishment scenes for the yuppie protagonists.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full hole list with subtitle cues: CHANGES.md.&lt;/p&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: War of the Worlds (2005) - Family Therapy</title>
+		<id>tag:mail.google.com,2009:cannedResponse:7aafa75386787aa9</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1B2ryOWkhDf0Q5pA8BL2PDL2HIIp4TZjD?usp=drive_link"&gt;War of the Worlds (2005) — Family Therapy Edition&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;War of the Worlds (2005) — Family Therapy Edition&lt;/h1&gt;
+&lt;p&gt;This FanMix eliminates nearly all the toxic family behavior featured in the movie, so that WotW (2005) becomes a movie about aliens and not allusions to Spielberg&amp;#x27;s trouble raising his own children.&lt;/p&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Scenes with tense, abrasive, and/or childish family behavior shortened where that behavior isn’t caused by the alien invasion.&lt;/li&gt;
+&lt;li&gt;All dialog from Ray’s friends Vincent and Julio arguing about solar flares removed.&lt;/li&gt;
+&lt;li&gt;SpongeBob scenes removed.&lt;/li&gt;
+&lt;li&gt;Some alien sequences removed (alien death near the end; aliens traveling in lightning).&lt;/li&gt;
+&lt;li&gt;Score features music from Jeff Wayne’s War of the Worlds album and the Orson Welles 1938 broadcast.&lt;/li&gt;
+&lt;li&gt;Morgan Freeman’s intro replaced by Richard Burton’s.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full picture-hole list (many TBD by cue): CHANGES.md.&lt;/p&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+	<entry>
+		<category term='cannedResponse'></category>
+		<title>Request: Sonic Trilogy DeSchwartzed</title>
+		<id>tag:mail.google.com,2009:cannedResponse:a0ce439d6a265279</id>
+		<updated>2026-10-06T22:21:53Z</updated>
+		<content type='html'>&lt;div dir="ltr"&gt;&lt;div class="gmail_quote"&gt;
+&lt;p&gt;Welcome to Ari&amp;#39;s Flashback Repository answering machine.&lt;/p&gt;
+&lt;p&gt;This is an automatic reply with the &lt;strong&gt;full-quality HEVC Matroska&lt;/strong&gt; download for the title you requested. Own a legal copy of the commercial original before you watch the edit.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Your download:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1PJsSUq4MGtTBE5O6y3gUXy2y88YCucXb?usp=drive_link"&gt;Sonic (2020) - DeSchwartzed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/file/d/1NPS1_HiXhVWQaEf-ak4mKxQuhJLqo5VX/view?usp=drive_link"&gt;Sonic 2 (2022) - DeSchwartzed&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/file/d/1NAxJuiGNn0xniHzR_CqhBaPQOAKlbQZ7/view?usp=drive_link"&gt;Sonic 3 (2024) - DeSchwartzed&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;Sonic (2020) — DeSchwartzed Edition&lt;/h1&gt;
+&lt;h2&gt;Changes&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Much of Sonic’s sardonic commentary dialogue (voiced by Ben Schwartz) removed.&lt;/li&gt;
+&lt;li&gt;Some Knuckles / Tails dialog trimmed.&lt;/li&gt;
+&lt;li&gt;Nearly all dialogue and scenes with Wade and Rachel removed.&lt;/li&gt;
+&lt;li&gt;Many sappy family scenes removed.&lt;/li&gt;
+&lt;li&gt;Predictive-programming beats (e.g. Rachel pushing divorce) removed where not plot-required.&lt;/li&gt;
+&lt;li&gt;Credit vocal songs replaced with Sonic game music remixes (four OC ReMixes from the corresponding game).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Full picture-hole list (many TBD by cue): CHANGES.md.&lt;/p&gt;
+&lt;h2&gt;Flashback Repository&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/"&gt;Library / Now Showing&lt;/a&gt; — stream seeded titles in VLC&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/request"&gt;Request any title&lt;/a&gt; — email form with the correct subject line&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/motivation"&gt;Why we&amp;#x27;re doing this&lt;/a&gt; — ownership, craft, and culture&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://flashbackrepository.org/setup"&gt;Setup for playback&lt;/a&gt; — VLC / vlc:// one-click&lt;/p&gt;
+&lt;h2&gt;Additional links&lt;/h2&gt;
+&lt;p&gt;&lt;a href="https://drive.google.com/drive/folders/1_L1ofj4rDew7V1fA_u91Dp1CX-JiYzv9?usp=drive_link"&gt;All of my FanEdit downloads&lt;/a&gt; (Google Drive)&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://gitlab.com/clevertree/fan-edits"&gt;Source READMEs and project files on GitLab&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Thanks for watching — feedback welcome on the &lt;a href="https://flashbackrepository.org/board"&gt;Board&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;-Ari&lt;/p&gt;
+&lt;/div&gt;&lt;/div&gt;</content>
+	</entry>
+</feed>

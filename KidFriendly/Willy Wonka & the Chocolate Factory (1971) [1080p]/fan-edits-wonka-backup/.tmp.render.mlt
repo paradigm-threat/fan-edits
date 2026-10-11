@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mlt LC_NUMERIC="en_US.UTF-8" producer="tractor3" root="/home/ari/dev/fan-edits/KidFriendly/Willy Wonka &amp; the Chocolate Factory (1971) [1080p]" version="7.33.0">
+ <profile colorspace="709" description="1920x1080 23.98fps" display_aspect_num="1" display_aspect_den="1" frame_rate_num="24000" frame_rate_den="1001" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" width="1920" />
+ <producer id="producer0" in="00:00:00.000" out="01:37:33.305">
+  <property name="length">2147483647</property>
+  <property name="eof">continue</property>
+  <property name="resource">black</property>
+  <property name="aspect_ratio">1</property>
+  <property name="mlt_service">color</property>
+  <property name="kdenlive:playlistid">black_track</property>
+  <property name="mlt_image_format">rgba</property>
+  <property name="set.test_audio">0</property>
+  </producer>
+ <playlist id="playlist0" />
+ <playlist id="playlist1" />
+ <tractor id="tractor0" in="00:00:00.000">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="video" producer="playlist0" />
+  <track hide="video" producer="playlist1" />
+  </tractor>
+ <chain id="chain0" out="01:39:45.354">
+  <property name="length">143505</property>
+  <property name="eof">pause</property>
+  <property name="resource">/home/ari/dev/fan-edits/KidFriendly/Willy Wonka &amp; the Chocolate Factory (1971) [1080p]/Willy.Wonka.&amp;.the.Chocolate.Factory.1971.1080p.BrRip.720p.x264.YIFY.mp4</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">0</property>
+  <property name="vstream">0</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:control_uuid">{231b6613-f3a2-4824-be82-2a55259a4d22}</property>
+  <property name="kdenlive:id">5</property>
+  <property name="kdenlive:clip_type">0</property>
+  <property name="kdenlive:folderid">-1</property>
+  </chain>
+ <playlist id="playlist2">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:00.000" out="01:03:21.426" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="filter_a_out" in="01:03:18.426" out="01:03:21.426">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadeout</property>
+    <property name="gain">1</property>
+    <property name="end">0</property>
+    <property name="kdenlive:collapsed">0</property>
+    </filter>
+   </entry>
+  <entry in="01:05:33.475" out="01:39:45.354" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="filter_a_in" in="01:05:33.475" out="01:05:36.475">
+    <property name="window">75</property>
+    <property name="max_gain">20dB</property>
+    <property name="mlt_service">volume</property>
+    <property name="kdenlive_id">fadein</property>
+    <property name="gain">0</property>
+    <property name="end">1</property>
+    </filter>
+   </entry>
+  </playlist>
+ <playlist id="playlist3">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:00.000" out="01:03:21.426" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="filter_v_out" in="01:03:18.426" out="01:03:21.426">
+    <property name="start">1</property>
+    <property name="level">1</property>
+    <property name="mlt_service">brightness</property>
+    <property name="kdenlive_id">fade_to_black</property>
+    <property name="alpha">00:00:00.000=1;00:00:03.000=0</property>
+    </filter>
+   </entry>
+  <entry in="01:05:33.475" out="01:39:45.354" producer="chain0">
+   <property name="kdenlive:id">5</property>
+   <filter id="filter_v_in" in="01:05:33.475" out="01:05:36.475">
+    <property name="start">1</property>
+    <property name="level">1</property>
+    <property name="mlt_service">brightness</property>
+    <property name="kdenlive_id">fade_from_black</property>
+    <property name="alpha">00:00:00.000=0;00:00:03.000=1</property>
+    </filter>
+   </entry>
+  </playlist>
+ <tractor id="tractor1" in="00:00:00.000" out="01:37:33.305">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format" />
+  <property name="kdenlive:audio_rec" />
+  <track hide="video" producer="playlist2" />
+  </tractor>
+ <tractor id="tractor2" in="00:00:00.000" out="01:37:33.305">
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format" />
+  <property name="kdenlive:audio_rec" />
+  <track hide="audio" producer="playlist3" />
+  </tractor>
+ <tractor id="tractor3" in="00:00:00.000" out="01:37:33.305">
+  <property name="kdenlive:duration">01:37:33.305</property>
+  <property name="kdenlive:clipname">Sequence 1</property>
+  <property name="kdenlive:uuid">{24a769bd-ba56-4f6b-86a6-8f56143366cb}</property>
+  <property name="kdenlive:producer_type">17</property>
+  <property name="kdenlive:control_uuid">{24a769bd-ba56-4f6b-86a6-8f56143366cb}</property>
+  <property name="kdenlive:id">3</property>
+  <property name="kdenlive:clip_type">0</property>
+  <property name="kdenlive:sequenceproperties.hidesubtitle">0</property>
+  <property name="kdenlive:sequenceproperties.tracks">2</property>
+  <property name="kdenlive:sequenceproperties.tracksCount">2</property>
+  <property name="kdenlive:sequenceproperties.subtitlesList">[
+    {
+        "file": "Willy Wonka - KidFriendly remove tunnel.kdenlive.ass",
+        "id": 0,
+        "name": "Subtitles"
+    }
+]</property>
+  <track producer="producer0" />
+  <track producer="tractor1" />
+  <track producer="tractor2" />
+  <transition id="transition2">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="sum">1</property>
+   </transition>
+  <transition id="transition3">
+   <property name="a_track">0</property>
+   <property name="b_track">2</property>
+   <property name="compositing">0</property>
+   <property name="distort">0</property>
+   <property name="rotate_center">0</property>
+   <property name="mlt_service">qtblend</property>
+   <property name="kdenlive_id">qtblend</property>
+   <property name="internal_added">237</property>
+   <property name="always_active">1</property>
+   </transition>
+  <filter id="filter8">
+   <property name="mlt_service">avfilter.subtitles</property>
+   <property name="av.alpha">1</property>
+   <property name="internal_added">237</property>
+   <property name="av.filename">Willy Wonka - KidFriendly remove tunnel.kdenlive.ass</property>
+   <property name="disable">1</property>
+   </filter>
+  </tractor>
+ <playlist id="main_bin">
+  <property name="kdenlive:docproperties.uuid">{24a769bd-ba56-4f6b-86a6-8f56143366cb}</property>
+  <property name="kdenlive:docproperties.kdenliveversion">25.04.2</property>
+  <property name="kdenlive:docproperties.documentid">4296577490</property>
+  </playlist>
+ </mlt>

@@ -11,8 +11,8 @@ ROOT = Path(__file__).resolve().parents[1]
 RENDER = Path("/media/ari/HD/FanEditRender")
 INGEST = Path.home() / "dev/relay/relay-gateway/scripts/relay-ipfs-ingest"
 
-WEB_GLOBS = ("*.web-1080p.mp4", "*.mobile-720p.mp4")
-HEVC_GLOBS = ("*.hevc.mp4",)
+WEB_GLOBS = ("*.web-1080p.mkv", "*.mobile-720p.mkv")
+HEVC_GLOBS = ("*.hevc.mp4",)  # legacy; prefer .mkv
 MASTER_GLOBS = ("*.mkv", "*.hevc.mp4")  # prefer final MKV with embedded subs
 
 

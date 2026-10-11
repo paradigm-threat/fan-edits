@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mlt LC_NUMERIC="C" version="7.33.0" title="FF vs Matrix - Sequential" producer="main_bin">
+ <profile description="HD 1080p 23.98 fps" width="1920" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="24000" frame_rate_den="1001" colorspace="709"/>
+ <producer id="producer0" in="00:00:00.000" out="00:00:34.000">
+  <property name="length">2147483647</property>
+  <property name="eof">continue</property>
+  <property name="resource">black</property>
+  <property name="mlt_service">color</property>
+  <property name="kdenlive:playlistid">black_track</property>
+  <property name="mlt_image_format">rgba</property>
+  <property name="set.test_audio">0</property>
+ </producer>
+ <chain id="chain_ff" out="00:00:23.940">
+  <property name="resource">clips/ff-tpm-moment.mkv</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="kdenlive:clip_type">0</property>
+  <property name="kdenlive:folderid">-1</property>
+ </chain>
+ <chain id="chain_mx" out="00:00:16.237">
+  <property name="resource">clips/matrix-rev-moment.mkv</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="kdenlive:clip_type">0</property>
+  <property name="kdenlive:folderid">-1</property>
+ </chain>
+ <playlist id="playlist0">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:00.000" out="00:00:23.940" producer="chain_ff"/>
+  <entry in="00:00:00.000" out="00:00:16.237" producer="chain_mx"/>
+ </playlist>
+ <playlist id="playlist1"/>
+ <tractor id="tractor0" title="Video 1" in="00:00:00.000" out="00:00:40.177">
+  <property name="kdenlive:trackheight">50</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <property name="kdenlive:collapsed">0</property>
+  <property name="kdenlive:thumbs_format"/>
+  <property name="kdenlive:audio_rec"/>
+  <track hide="video" producer="playlist1"/>
+  <track hide="audio" producer="playlist0"/>
+ </tractor>
+ <playlist id="sequence_sequential">
+  <property name="kdenlive:clipname">Sequential</property>
+  <entry in="00:00:00.000" out="00:00:40.177" producer="tractor0"/>
+ </playlist>
+ <tractor id="{11111111-1111-1111-1111-111111111111}" in="00:00:00.000" out="00:00:40.177">
+  <property name="kdenlive:uuid">{11111111-1111-1111-1111-111111111111}</property>
+  <property name="kdenlive:clipname">Sequential</property>
+  <property name="kdenlive:sequenceproperties.hasAudio">1</property>
+  <property name="kdenlive:sequenceproperties.hasVideo">1</property>
+  <property name="kdenlive:sequenceproperties.documentuuid">{11111111-1111-1111-1111-111111111111}</property>
+  <track in="00:00:00.000" out="00:00:40.177" producer="tractor0"/>
+ </tractor>
+ <playlist id="main_bin">
+  <property name="kdenlive:folder.-1.2">Sequences</property>
+  <property name="kdenlive:sequenceFolder">2</property>
+  <property name="kdenlive:docproperties.profile">atsc_1080p_2398</property>
+  <property name="kdenlive:docproperties.uuid">{aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa}</property>
+  <property name="kdenlive:docproperties.activetimeline">{11111111-1111-1111-1111-111111111111}</property>
+  <property name="kdenlive:docproperties.opensequences">{11111111-1111-1111-1111-111111111111},{22222222-2222-2222-2222-222222222222},{33333333-3333-3333-3333-333333333333}</property>
+  <property name="kdenlive:docproperties.renderurl">clips/sequential.mp4</property>
+  <entry in="00:00:00.000" out="00:00:00.000" producer="{11111111-1111-1111-1111-111111111111}"/>
+  <entry in="00:00:00.000" out="00:00:00.000" producer="{22222222-2222-2222-2222-222222222222}"/>
+  <entry in="00:00:00.000" out="00:00:00.000" producer="{33333333-3333-3333-3333-333333333333}"/>
+  <entry in="00:00:00.000" out="00:00:23.940" producer="chain_ff"/>
+  <entry in="00:00:00.000" out="00:00:16.237" producer="chain_mx"/>
+ </playlist>
+ <tractor id="tractor_project" in="00:00:00.000" out="00:00:40.177">
+  <property name="kdenlive:projectTractor">1</property>
+  <track in="00:00:00.000" out="00:00:40.177" producer="{11111111-1111-1111-1111-111111111111}"/>
+ </tractor>
+</mlt>

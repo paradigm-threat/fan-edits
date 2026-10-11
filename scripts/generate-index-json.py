@@ -187,8 +187,8 @@ def media_root_poster(slug: str) -> str | None:
     return None
 
 
-WEB_SUFFIX = ".web-1080p.mp4"
-MOBILE_SUFFIX = ".mobile-720p.mp4"
+WEB_SUFFIX = ".web-1080p.mkv"
+MOBILE_SUFFIX = ".mobile-720p.mkv"
 HEVC_SUFFIX = ".hevc.mp4"
 
 

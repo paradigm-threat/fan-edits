@@ -24,8 +24,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-WEB_SUFFIX = ".web-1080p.mp4"
-MOBILE_SUFFIX = ".mobile-720p.mp4"
+WEB_SUFFIX = ".web-1080p.mkv"
+MOBILE_SUFFIX = ".mobile-720p.mkv"
 
 PROXY_CACHE_RE = re.compile(r".*/\.cache/kdenlive/proxy/")
 N_VIDEOS_RE = re.compile(r"N:/Videos/", re.I)

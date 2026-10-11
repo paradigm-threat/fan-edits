@@ -24,7 +24,7 @@ render_title() {
     --force \
     2>&1 | tee -a "$LOG"
   log "SOURCE RENDER done: $stem"
-  ls -lh "$out_dir/$stem".web-1080p.mp4 "$out_dir/$stem".mobile-720p.mp4 2>&1 | tee -a "$LOG"
+  ls -lh "$out_dir/$stem".web-1080p.mkv "$out_dir/$stem".mobile-720p.mkv 2>&1 | tee -a "$LOG"
 }
 
 ingest_path() {
@@ -41,7 +41,7 @@ ingest_title() {
   local folder="$1"
   local dir="$ROOT/$folder"
   shopt -s nullglob
-  for f in "$dir"/*.mkv "$dir"/*.web-1080p.mp4 "$dir"/*.mobile-720p.mp4; do
+  for f in "$dir"/*.mkv "$dir"/*.web-1080p.mkv "$dir"/*.mobile-720p.mkv; do
     [[ -f "$f" || -L "$f" ]] || continue
     local base
     base="$(basename "$f")"
@@ -80,7 +80,7 @@ main() {
     ensure_symlink "FanMixes/The Mummy (1999) - Debugged" "The Mummy Debugged.mkv" "The Mummy (1999) - Debugged"
   fi
 
-  # Drop incomplete master-transcode leftovers
+  # Drop legacy H.264 MP4 ladder leftovers
   rm -f \
     "$ROOT/FanMixes/Van Helsing - DeAnna'd/"*.web-1080p.mp4 \
     "$ROOT/FanMixes/Van Helsing - DeAnna'd/"*.mobile-720p.mp4 \

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mlt LC_NUMERIC="C" version="7.33.0" title="FF vs Matrix - Desktop Horizontal" producer="main_bin">
+ <profile description="HD 1080p 23.98 fps" width="1920" height="1080" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="16" display_aspect_den="9" frame_rate_num="24000" frame_rate_den="1001" colorspace="709"/>
+ <chain id="chain_ff" out="00:00:23.940">
+  <property name="resource">clips/ff-tpm-moment.mkv</property>
+  <property name="mlt_service">avformat-novalidate</property>
+ </chain>
+ <chain id="chain_mx" out="00:00:16.237">
+  <property name="resource">clips/matrix-rev-moment.mkv</property>
+  <property name="mlt_service">avformat-novalidate</property>
+ </chain>
+ <producer id="background" in="00:00:00.000" out="00:00:23.940">
+  <property name="resource">black</property>
+  <property name="mlt_service">color</property>
+  <property name="mlt_image_format">rgba</property>
+  <property name="set.test_audio">0</property>
+ </producer>
+ <playlist id="playlist_bg">
+  <entry in="00:00:00.000" out="00:00:23.940" producer="background"/>
+ </playlist>
+ <playlist id="playlist_ff">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:00.000" out="00:00:23.940" producer="chain_ff"/>
+ </playlist>
+ <playlist id="playlist_mx">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:00.000" out="00:00:16.237" producer="chain_mx"/>
+ </playlist>
+ <tractor id="tractor0" in="00:00:00.000" out="00:00:23.940">
+  <track producer="playlist_bg"/>
+  <track producer="playlist_ff"/>
+  <track producer="playlist_mx"/>
+  <transition mlt_service="composite">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="geometry">0/0:960x1080:100</property>
+   <property name="operator">over</property>
+  </transition>
+  <transition mlt_service="composite">
+   <property name="a_track">0</property>
+   <property name="b_track">2</property>
+   <property name="geometry">960/0:960x1080:100</property>
+   <property name="operator">over</property>
+  </transition>
+ </tractor>
+ <tractor id="{33333333-3333-3333-3333-333333333333}" in="00:00:00.000" out="00:00:23.940">
+  <property name="kdenlive:uuid">{33333333-3333-3333-3333-333333333333}</property>
+  <property name="kdenlive:clipname">Desktop Horizontal</property>
+  <property name="kdenlive:sequenceproperties.hasAudio">1</property>
+  <property name="kdenlive:sequenceproperties.hasVideo">1</property>
+  <property name="kdenlive:sequenceproperties.documentuuid">{33333333-3333-3333-3333-333333333333}</property>
+  <track in="00:00:00.000" out="00:00:23.940" producer="tractor0"/>
+ </tractor>
+ <playlist id="main_bin">
+  <property name="kdenlive:docproperties.profile">atsc_1080p_2398</property>
+  <property name="kdenlive:docproperties.renderurl">clips/side-by-side-desktop.mp4</property>
+  <entry in="00:00:00.000" out="00:00:00.000" producer="{33333333-3333-3333-3333-333333333333}"/>
+ </playlist>
+</mlt>
