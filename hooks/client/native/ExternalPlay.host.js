@@ -296,9 +296,11 @@
     }
 
     function downloadHrefFor(kind, url) {
-      // Now showing: Bunny (or tip) HTTPS master first so MKV download works offline from IPFS.
-      // Other titles: IPFS gateway only — never tip /FanMixes/… phantoms.
-      if (catalogShowing && url) return String(url);
+      const u = String(url || '');
+      // Prefer absolute CDN/stream URL (Bunny) whenever present — never /ipfs/ for Now showing.
+      if (u.indexOf('https://') === 0 || u.indexOf('http://') === 0) return u;
+      if (catalogShowing && u) return u;
+      // Non–Now showing: IPFS gateway only — never tip /FanMixes/… phantoms.
       if (masterIpfsUrl) return masterIpfsUrl;
       return '';
     }
@@ -417,7 +419,9 @@
       el(
         'p',
         'fb-ways-section-help',
-        'Saves through this site’s IPFS gateway. Open the file in VLC when it finishes.',
+        catalogShowing
+          ? 'Saves the MKV from Bunny CDN (Now showing). Open it in VLC when it finishes.'
+          : 'Saves through this site’s IPFS gateway. Open the file in VLC when it finishes.',
       ),
     );
     const dlActions = el('div', 'fb-ways-actions fb-theater-external-actions');
@@ -426,11 +430,27 @@
     const dlHref0 = downloadHrefFor(kind0, streamUrl);
     const dlName0 = downloadFilenameFor(kind0, streamUrl);
     dlLink.href = dlHref0 || '#';
-    dlLink.setAttribute('download', dlName0);
+    // Cross-origin Bunny: drop download= so the browser navigates to the CDN URL
+    // (download attr is ignored cross-origin and confuses “Copy link address”).
+    if (dlHref0 && dlHref0.indexOf('b-cdn.net') >= 0) {
+      dlLink.removeAttribute('download');
+    } else {
+      dlLink.setAttribute('download', dlName0);
+    }
     dlLink.textContent =
       kind0 === 'master' || /\.mkv($|\?)/i.test(dlName0) ? 'Download MKV' : 'Download MP4';
     dlActions.appendChild(dlLink);
     dlSec.appendChild(dlActions);
+    // Show the real HTTPS URL for Now showing (same as stream) so it is copyable.
+    if (catalogShowing && dlHref0 && dlHref0.indexOf('http') === 0) {
+      const dlUrlLine = el('p', 'fb-ways-url-line');
+      const dlUrlA = el('a', 'fb-link fb-theater-download-url', dlHref0);
+      dlUrlA.href = dlHref0;
+      dlUrlA.setAttribute('target', '_blank');
+      dlUrlA.setAttribute('rel', 'noopener noreferrer');
+      dlUrlLine.appendChild(dlUrlA);
+      dlSec.appendChild(dlUrlLine);
+    }
     const dlStatus = el('p', 'fb-ways-status');
     dlSec.appendChild(dlStatus);
     root.appendChild(dlSec);
@@ -551,7 +571,11 @@
           ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master',
           dlHrefNow,
         );
-        if (fname) dlLink.setAttribute('download', fname);
+        if (dlHrefNow.indexOf('b-cdn.net') >= 0) {
+          dlLink.removeAttribute('download');
+        } else if (fname) {
+          dlLink.setAttribute('download', fname);
+        }
       }
 
       setControlEnabled(openBtn, streamOn);
