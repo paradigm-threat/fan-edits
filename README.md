@@ -23,7 +23,7 @@ They belong to **us**.
 
 ## Maintainers: seeding video on IPFS (Flashback Repository)
 
-The public site serves renders from **IPFS**, not from Git. Git only stores `.relay/assets/**/*.ipfs` stubs and `assets.manifest.json`. End-to-end ingest, pin, publish, fleet pin, and verification: **[IPFS-SEEDING.md](IPFS-SEEDING.md)**.
+The public site catalogs renders on **IPFS**, not in Git. Git only stores `.relay/assets/**/*.ipfs` stubs and `assets.manifest.json`. The Relay fleet does **not** cache movie files — seed on a workstation; APK/browser pull CIDs from the swarm. **Now showing** titles are manually uploaded on the host. End-to-end ingest, local pin, publish: **[IPFS-SEEDING.md](IPFS-SEEDING.md)**.
 
 ## Current list of completed Fan Edits:
 

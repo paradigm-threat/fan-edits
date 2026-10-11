@@ -10,7 +10,8 @@ Everything is provided **as-is**, without warranty of any kind — express or im
 
 - You confirm you **own a legal copy** of each original film before playback ([Ownership policy](/legal)).
 - You will not use this site to circumvent paywalls, share credentials, or redistribute commercial masters.
-- You accept that media may be unavailable until it is **seeded** on IPFS; a known content hash is not the same as bytes on every node.
+- You accept that **feature video is not stored in the public git repos** and is **not** held as a Relay server movie cache — only content hashes in the catalog, with bytes on the **IPFS** network when peers seed them.
+- You accept that media may be unavailable until it is **seeded** on IPFS; a known content hash is not the same as bytes on every node. **Now showing** is temporary readiness from **manual host upload**, not a guarantee that every library title stays immediately playable.
 
 ## Liability
 

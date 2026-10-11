@@ -26,6 +26,6 @@ Historic leaders have described controlled opposition as a containment strategy.
 
 ## Pushback by doing the work
 
-Flashback Repository is pushback under ownership rules: make the cut, document it, host it, require that viewers own the commercial original. No pirate archive. No apology for wanting better versions of films we already bought.
+Flashback Repository is pushback under ownership rules: make the cut, document it, publish the **catalog on Relay** and the **bytes on IPFS** (not as permanent public git blobs or a fleet movie cache), and require that viewers own the commercial original. No pirate archive. No apology for wanting better versions of films we already bought. See [Ownership policy](/legal).
 
 The allowed part is the point. The rest is craft.
