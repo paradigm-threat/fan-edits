@@ -394,7 +394,7 @@
         }
       ],
       "subtitlesJson": "[{\"src\":\"/FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
-      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/master.mkv",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_(1999)_-_Debugged.mkv",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "Kid-friendlier cut: **scarabs that kill or eat people** are removed. Adventure, Imhotep, and the later plagues stay. Not a full wipe of every gunfight.",
@@ -433,7 +433,7 @@
         }
       ],
       "subtitlesJson": "[{\"src\":\"/FanMixes/The Mummy Returns (2001) - Debugged/subs/The Mummy Returns Debugged.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true}]",
-      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/master.mkv",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/The_Mummy_Returns_(2001)_-_Debugged.mkv",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "Kid-friendlier cut to match *The Mummy (1999) \u2014 Debugged*. Removes the **pygmy swarm** that kills the expedition (same \u201clittle creatures eating people\u201d idea). Adventure, Anubis, and the finale stay.",
@@ -489,7 +489,7 @@
         }
       ],
       "subtitlesJson": "[{\"src\":\"/FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true}]",
-      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/master.mkv",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_(2004)_-_DeAnna%27d.mkv",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "Cut that removes **Anna** as much as possible without breaking the story, and strips as many cringe beats as we can \u2014 especially around the Frankenstein monster. Some score beds are swapped for *Castlevania: Symphony of the Night* cues.",

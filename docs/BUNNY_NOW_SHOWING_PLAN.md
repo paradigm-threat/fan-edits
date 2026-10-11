@@ -1,6 +1,6 @@
 # Plan: Bunny for Now Showing only (IPFS stays primary)
 
-**Status:** masters live under slug folders; catalog wired with `streamHttps`.  
+**Status:** titled masters under slug folders; catalog wired with `streamHttps`.  
 **Updated:** 2026-10-11.
 
 **NAS sync (this session — only this folder):** `//nobiserv/Public/Videos/FanEdits/`  
@@ -22,37 +22,50 @@ Do **not** put Bunny URLs into `media` / `mediaWeb` / `mediaMobile`. Use `stream
 
 ---
 
+## File naming (locked — all Bunny / S3 uploads)
+
+**Never** store uploads as `master.mkv`, `master.mp4`, etc. Downloads keep the object basename; `master` is untrackable in a downloads folder.
+
+| Rule | Example |
+|------|---------|
+| Object name = **full display title**, spaces → `_` | `The Mummy (1999) — Debugged` → `The_Mummy_(1999)_-_Debugged.mkv` |
+| Normalize em/en dashes to ASCII `-` | `—` / `–` → `-` |
+| URL-encode unsafe chars in `streamHttps` | `DeAnna'd` → `DeAnna%27d` in the HTTPS link |
+| Keep slug **folder**; title lives in the **filename** | `now-showing/<slug>/<Title_With_Underscores>.mkv` |
+
+Optional ladder (same title stem):
+
+- `now-showing/<slug>/<Title_With_Underscores>_web-1080p.mkv`
+- `now-showing/<slug>/<Title_With_Underscores>_mobile-720p.mkv`
+
+---
+
 ## Bunny layout (required format — follow this)
 
 ```text
 now-showing/
   <slug>/
-    master.mkv                 # required for Now showing
-    web-1080p.mkv              # optional — enable only when present
-    mobile-720p.mkv            # optional — enable only when present
+    <Title_With_Underscores>.mkv              # required for Now showing
+    <Title_With_Underscores>_web-1080p.mkv    # optional — enable only when present
+    <Title_With_Underscores>_mobile-720p.mkv  # optional — enable only when present
 ```
 
 **CDN host:** `flashbackrepository.b-cdn.net`
 
 | Slug | Live master URL |
 |------|-----------------|
-| `the-mummy-1999-debugged` | `https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/master.mkv` |
-| `the-mummy-returns-2001-debugged` | `https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/master.mkv` |
-| `van-helsing-deanna-d` | `https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/master.mkv` |
-
-When adding 1080p/720p later, upload as:
-
-- `now-showing/<slug>/web-1080p.mkv`
-- `now-showing/<slug>/mobile-720p.mkv`
+| `the-mummy-1999-debugged` | `https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_(1999)_-_Debugged.mkv` |
+| `the-mummy-returns-2001-debugged` | `https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/The_Mummy_Returns_(2001)_-_Debugged.mkv` |
+| `van-helsing-deanna-d` | `https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_(2004)_-_DeAnna%27d.mkv` |
 
 Then add to `now-showing.json`:
 
 ```json
 {
   "slug": "the-mummy-1999-debugged",
-  "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/master.mkv",
-  "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/web-1080p.mkv",
-  "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/mobile-720p.mkv"
+  "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_(1999)_-_Debugged.mkv",
+  "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_(1999)_-_Debugged_web-1080p.mkv",
+  "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_(1999)_-_Debugged_mobile-720p.mkv"
 }
 ```
 
@@ -68,7 +81,7 @@ Prefer objects (slug-only strings still work for rotation without Bunny):
 [
   {
     "slug": "the-mummy-1999-debugged",
-    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/master.mkv"
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_(1999)_-_Debugged.mkv"
   }
 ]
 ```
@@ -94,10 +107,11 @@ Server-side move/copy: S3 API at `https://de-s3.storage.bunnycdn.com` (Access Ke
 
 | Step | Done? |
 |------|--------|
-| Move 3 masters to `now-showing/<slug>/master.mkv` | yes |
-| CDN HEAD/Range 200/206 on new paths | yes |
+| Move 3 masters to slug folders | yes |
+| Rename `master.mkv` → titled filenames (underscores) | yes (2026-10-11) |
+| CDN HEAD/Range 200/206 on titled paths | yes |
 | Delete flat root MKVs | yes (purge CDN if old URLs still cache) |
-| Wire `streamHttps` in catalog + ExternalPlay | yes (local tip; publish when ready) |
+| Wire `streamHttps` in catalog + ExternalPlay | yes |
 | Disable 1080p/720p until Bunny ladder exists | yes |
 | Upload web-1080p / mobile-720p + enable URLs | pending |
 | Fleet IPFS movie cache retired | pending |
