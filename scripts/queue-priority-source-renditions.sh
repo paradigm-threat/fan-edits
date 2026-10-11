@@ -7,7 +7,7 @@ cd "$ROOT"
 INGEST="${HOME}/dev/relay/relay-gateway/scripts/relay-ipfs-ingest"
 LOG="/tmp/priority-source-renditions.log"
 PRESET="${PRESET:-veryfast}"
-VID_FM="/home/ari/Videos/FanEdits/FanMixes"
+VID_FM="$ROOT/FanMixes"
 
 log() { echo "[$(date -Iseconds)] $*" | tee -a "$LOG"; }
 

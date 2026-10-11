@@ -1,6 +1,6 @@
 /**
  * Android CleverScript host for ExternalPlay — Ways to watch parity with web host.
- * Stream = Now showing (server tip) only. Download = IPFS CID only.
+ * Stream / Bunny download = Now showing. Catalog = clickable ipfs:// (no site gateway).
  */
 import React from 'react'
 
@@ -47,6 +47,12 @@ function buildLadder(p) {
   const master = absoluteHref(propStr(p, 'streamUrl'))
   const web = absoluteHref(propStr(p, 'streamUrlWeb'))
   const mobile = absoluteHref(propStr(p, 'streamUrlMobile'))
+  const disableWeb =
+    p.disableWeb === true || propStr(p, 'disableWeb') === 'true' || propStr(p, 'data-disable-web') === 'true'
+  const disableMobile =
+    p.disableMobile === true ||
+    propStr(p, 'disableMobile') === 'true' ||
+    propStr(p, 'data-disable-mobile') === 'true'
   let out = []
   function push(kind, label, url) {
     if (!url || url.length === 0) {
@@ -57,11 +63,12 @@ function buildLadder(p) {
         return
       }
     }
-    out = out.concat([{ kind: kind, label: label, url: url }])
+    out = out.concat([{ kind: kind, label: label, url: url, disabled: false }])
   }
   push('master', 'Full quality', master)
-  push('web', '1080p', web)
-  push('mobile', '720p', mobile)
+  // Hide 1080p/720p until Bunny ladder URLs exist (disable* means not ready).
+  if (!disableWeb) push('web', '1080p', web)
+  if (!disableMobile) push('mobile', '720p', mobile)
   return out
 }
 
@@ -77,6 +84,8 @@ export default function ExternalPlay(props) {
     }
   } catch (e) {}
   const setupHref = propStr(p, 'setupHref') || '/setup'
+  const setupIpfsHref =
+    setupHref.indexOf('#') >= 0 ? setupHref : setupHref.replace(/\/?$/, '') + '#ipfs'
   const catalogStatus = (propStr(p, 'status') || propStr(p, 'data-status') || '').toLowerCase()
   const catalogShowing = catalogStatus === 'showing'
 
@@ -85,6 +94,7 @@ export default function ExternalPlay(props) {
     masterCid = propStr(p, 'cid') || propStr(p, 'data-cid') || ''
   } catch (eCid) {}
   const inCatalog = masterCid.length >= 8
+  const ipfsUri = inCatalog ? 'ipfs://' + masterCid : ''
 
   let downloadName = ''
   try {
@@ -99,17 +109,15 @@ export default function ExternalPlay(props) {
       ? 'Download MKV'
       : 'Download MP4'
 
-  let origin = 'https://flashbackrepository.org'
-  try {
-    if (globalThis.location && globalThis.location.origin) {
-      origin = globalThis.location.origin
-    }
-  } catch (eOrigin) {}
-  const dlHref = inCatalog ? origin + '/ipfs/' + masterCid : ''
+  // Bunny HTTPS for Now showing only — never site /ipfs/ gateway.
+  let bunnyHref = ''
+  if (catalogShowing && abs) {
+    bunnyHref = abs
+  }
 
-  if (!downloadName) {
+  if (!downloadName && bunnyHref) {
     try {
-      const parts = String(abs || dlHref || '').split('/')
+      const parts = String(bunnyHref).split('/')
       downloadName = parts.length ? parts[parts.length - 1] : 'movie.mkv'
       const q = downloadName.indexOf('?')
       if (q >= 0) downloadName = downloadName.slice(0, q)
@@ -119,25 +127,29 @@ export default function ExternalPlay(props) {
     }
   }
 
-  // Stream exclusive to Now showing — never tip-path probes for other titles.
   const streamOn = unlocked === true && catalogShowing === true && !!abs
-  const downloadOn = unlocked === true && inCatalog && !!dlHref
+  const bunnyOn = unlocked === true && !!bunnyHref
+  const ipfsOn = unlocked === true && inCatalog && !!ipfsUri
 
   let streamStatus = 'Confirm ownership above first.'
   if (unlocked === true) {
     if (catalogShowing && abs) {
-      streamStatus = 'Ready on this server (Now showing).'
+      streamStatus = 'Ready on Bunny CDN (Now showing).'
     } else {
       streamStatus =
-        'Not on this server (not Now showing). Use Download via IPFS or Request Drive links.'
+        'Not Now showing. Open the IPFS link below, use the Flashback App, or Request Drive.'
     }
   }
 
   let dlStatus = 'Confirm ownership above first.'
   if (unlocked === true) {
-    dlStatus = inCatalog
-      ? 'Ready to download via IPFS.'
-      : 'This title is not in the IPFS catalog yet.'
+    if (catalogShowing && abs) {
+      dlStatus = 'Ready to download MKV from Bunny CDN.'
+    } else if (inCatalog) {
+      dlStatus = 'Open the IPFS link in a supporting client (see Setup).'
+    } else {
+      dlStatus = 'This title is not in the IPFS catalog yet.'
+    }
   }
 
   let qualityRow = null
@@ -167,9 +179,12 @@ export default function ExternalPlay(props) {
   }
 
   const streamCls = streamOn ? 'fb-btn' : 'fb-btn is-disabled'
-  const dlCls = downloadOn
+  const bunnyCls = bunnyOn
     ? 'fb-btn fb-theater-download-mkv'
     : 'fb-btn fb-theater-download-mkv is-disabled'
+  const ipfsCls = ipfsOn
+    ? 'fb-btn fb-theater-ipfs-uri'
+    : 'fb-btn fb-theater-ipfs-uri is-disabled'
 
   return (
     <div
@@ -187,7 +202,8 @@ export default function ExternalPlay(props) {
       <section className="fb-ways-section fb-ways-stream">
         <h3 className="fb-ways-section-title">1. Stream it now</h3>
         <p className="fb-ways-section-help">
-          Works when this server has the file ready (Now showing titles).
+          Works for Now showing titles (Bunny CDN HTTPS). Other titles: open the IPFS link below,
+          use the Flashback App, or Request Drive.
         </p>
         <div className="fb-ways-actions fb-theater-external-actions">
           <a
@@ -218,23 +234,52 @@ export default function ExternalPlay(props) {
       </section>
 
       <section className="fb-ways-section fb-ways-download">
-        <h3 className="fb-ways-section-title">2. Download the file</h3>
+        <h3 className="fb-ways-section-title">
+          {catalogShowing ? '2. Download the file' : '2. Open over IPFS'}
+        </h3>
         <p className="fb-ways-section-help">
-          Saves through this site’s IPFS gateway. Open the file in VLC when it finishes.
+          {catalogShowing
+            ? 'Saves the MKV from Bunny CDN (Now showing). Open it in VLC when it finishes.'
+            : 'Catalog masters are content hashes on IPFS — not a download from this site. Open the link in a supporting client, or use the Flashback App.'}
         </p>
         <div className="fb-ways-actions fb-theater-external-actions">
-          <a
-            className={dlCls}
-            href={downloadOn ? dlHref : undefined}
-            download={downloadName}
-            aria-disabled={downloadOn ? 'false' : 'true'}
-            onClick={(ev) => {
-              if (!downloadOn) ev.preventDefault()
-            }}
-          >
-            {dlLabel}
-          </a>
+          {catalogShowing ? (
+            <a
+              className={bunnyCls}
+              href={bunnyOn ? bunnyHref : undefined}
+              download={bunnyHref && bunnyHref.indexOf('b-cdn.net') < 0 ? downloadName : undefined}
+              aria-disabled={bunnyOn ? 'false' : 'true'}
+              onClick={(ev) => {
+                if (!bunnyOn) ev.preventDefault()
+              }}
+            >
+              {dlLabel}
+            </a>
+          ) : (
+            <a
+              className={ipfsCls}
+              href={ipfsOn ? ipfsUri : undefined}
+              rel="noopener noreferrer"
+              aria-disabled={ipfsOn ? 'false' : 'true'}
+              onClick={(ev) => {
+                if (!ipfsOn) ev.preventDefault()
+              }}
+            >
+              {ipfsUri || 'No IPFS CID'}
+            </a>
+          )}
         </div>
+        {!catalogShowing && inCatalog ? (
+          <p className="fb-ways-helpers fb-ways-ipfs-how">
+            <a className="fb-link" href={setupIpfsHref}>
+              How to open IPFS links
+            </a>
+            {' (Setup) · '}
+            <a className="fb-link" href="/app">
+              Flashback App
+            </a>
+          </p>
+        ) : null}
         <p className="fb-ways-status">{dlStatus}</p>
       </section>
 

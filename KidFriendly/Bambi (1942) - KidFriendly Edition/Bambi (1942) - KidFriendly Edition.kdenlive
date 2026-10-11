@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="//NobiServ/Public/Videos/FanEdits/KidFriendly/Bambi (1942) - KidFriendly Edition" version="7.33.0">
+ <profile colorspace="709" description="918x720 24000/1001fps" frame_rate_num="24000" frame_rate_den="1001" height="720" progressive="1" sample_aspect_num="1" sample_aspect_den="1" width="918" />
+ <producer id="producer0" in="00:00:00.000" out="00:53:09.591">
+  <property name="length">2147483647</property>
+  <property name="eof">continue</property>
+  <property name="resource">black</property>
+  <property name="aspect_ratio">1</property>
+  <property name="mlt_service">color</property>
+  <property name="kdenlive:playlistid">black_track</property>
+  <property name="mlt_image_format">rgba</property>
+  <property name="set.test_audio">0</property>
+ </producer>
+ <playlist id="playlist0" />
+ <playlist id="playlist1" />
+ <tractor id="tractor0" in="00:00:00.000">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="video" producer="playlist0" />
+  <track hide="video" producer="playlist1" />
+ </tractor>
+ <chain id="chain0" out="01:09:50.549">
+  <property name="eof">pause</property>
+  <property name="resource">/FanEditRender/Bambi.1942.720p.BRrip.x264.GAZ.YIFY.mp4</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">0</property>
+  <property name="vstream">0</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:id">5</property>
+  <property name="kdenlive:clip_type">0</property>
+  <property name="kdenlive:folderid">-1</property>
+ </chain>
+ <playlist id="playlist2">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:00.000" out="00:30:17.733" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:32:41.793" out="00:40:12.702" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:43:26.562" out="00:53:46.265" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:55:55.936" out="00:58:36.972" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="01:07:30.338" out="01:09:50.549" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+ </playlist>
+ <playlist id="playlist3">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:00.000" out="00:30:17.733" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:32:41.793" out="00:40:12.702" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:43:26.562" out="00:53:46.265" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:55:55.936" out="00:58:36.972" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="01:07:30.338" out="01:09:50.549" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+ </playlist>
+ <tractor id="tractor1" in="00:00:00.000" out="00:53:09.591">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="video" producer="playlist2" />
+ </tractor>
+ <tractor id="tractor2" in="00:00:00.000" out="00:53:09.591">
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="audio" producer="playlist3" />
+ </tractor>
+ <tractor id="tractor3" in="00:00:00.000" out="00:53:09.591">
+  <property name="kdenlive:duration">00:53:09.591</property>
+  <property name="kdenlive:clipname">Sequence 1</property>
+  <property name="kdenlive:uuid">{b7cd342f-f846-46d4-a422-0fe9b7f1b6d4}</property>
+  <property name="kdenlive:sequenceproperties.subtitlesList">[
+    {
+        "file": "Bambi (1942) - KidFriendly Edition.kdenlive.ass",
+        "id": 0,
+        "name": "Subtitles"
+    }
+]</property>
+  <track producer="producer0" />
+  <track producer="tractor1" />
+  <track producer="tractor2" />
+  <transition id="transition2">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="always_active">1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="sum">1</property>
+  </transition>
+  <transition id="transition3">
+   <property name="a_track">0</property>
+   <property name="b_track">2</property>
+   <property name="compositing">0</property>
+   <property name="mlt_service">qtblend</property>
+   <property name="kdenlive_id">qtblend</property>
+   <property name="always_active">1</property>
+  </transition>
+ </tractor>
+ <playlist id="main_bin">
+  <property name="kdenlive:docproperties.uuid">{b7cd342f-f846-46d4-a422-0fe9b7f1b6d4}</property>
+  <property name="kdenlive:docproperties.kdenliveversion">25.04.2</property>
+ </playlist>
+</mlt>

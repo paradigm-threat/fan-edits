@@ -18,6 +18,14 @@ export default function ExternalPlay(props) {
   if (p.streamUrlMobile !== null && p.streamUrlMobile !== undefined) {
     streamUrlMobile = '' + p.streamUrlMobile
   }
+  let disableWeb = 'false'
+  if (p.disableWeb === true || p.disableWeb === 'true') {
+    disableWeb = 'true'
+  }
+  let disableMobile = 'false'
+  if (p.disableMobile === true || p.disableMobile === 'true') {
+    disableMobile = 'true'
+  }
   let unlocked = 'false'
   if (p.unlocked === true || p.unlocked === 'true') {
     unlocked = 'true'
@@ -45,6 +53,8 @@ export default function ExternalPlay(props) {
       data-stream-url={streamUrl}
       data-stream-url-web={streamUrlWeb}
       data-stream-url-mobile={streamUrlMobile}
+      data-disable-web={disableWeb}
+      data-disable-mobile={disableMobile}
       data-cid={cid}
       data-download-name={downloadName}
       data-status={status}
