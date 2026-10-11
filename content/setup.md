@@ -68,8 +68,6 @@ If the button does nothing, use **Copy stream URL**, then in VLC: **Media → Op
 
 ---
 
-<a id="ipfs"></a>
-
 ## Open catalog titles over IPFS
 
 **Now showing** titles use Bunny CDN (Steps 1–3 above). The rest of the library is addressed by **content hash** on the IPFS network — title pages show a clickable `ipfs://…` link, not a download from this site’s servers.

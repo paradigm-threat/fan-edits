@@ -1680,22 +1680,34 @@ export default function FlashbackApp() {
       </article>
     )
   } else if (kind.kind === 'md') {
-    // Setup: expose #clone-repo (MarkdownRenderer escapes raw HTML anchors).
+    // Setup: expose #ipfs and #clone-repo (MarkdownRenderer escapes raw HTML anchors).
     let setupBefore = ''
+    let setupIpfs = ''
     let setupClone = ''
     let isSetup = false
     try {
       if (kind.file === 'content/setup.md') {
         isSetup = true
         const full = str(md || '')
-        // Anchor #clone-repo for movie-page deep links (advanced section on setup).
-        const marker = '## Advanced (editors only)'
-        const at = full.indexOf(marker)
-        if (at >= 0) {
-          setupBefore = full.slice(0, at)
-          setupClone = full.slice(at)
+        const ipfsMarker = '## Open catalog titles over IPFS'
+        const advancedMarker = '## Advanced (editors only)'
+        const ipfsAt = full.indexOf(ipfsMarker)
+        const advAt = full.indexOf(advancedMarker)
+        if (ipfsAt >= 0 && advAt > ipfsAt) {
+          setupBefore = full.slice(0, ipfsAt)
+          setupIpfs = full.slice(ipfsAt, advAt)
+          setupClone = full.slice(advAt)
+        } else if (advAt >= 0) {
+          setupBefore = full.slice(0, advAt)
+          setupIpfs = ''
+          setupClone = full.slice(advAt)
+        } else if (ipfsAt >= 0) {
+          setupBefore = full.slice(0, ipfsAt)
+          setupIpfs = full.slice(ipfsAt)
+          setupClone = ''
         } else {
           setupBefore = full
+          setupIpfs = ''
           setupClone = ''
         }
       }
@@ -1706,6 +1718,11 @@ export default function FlashbackApp() {
       main = (
         <article className="fb-doc fb-prose">
           <MarkdownRenderer content={setupBefore || '# Loading…'} />
+          {setupIpfs.length > 0 ? (
+            <section id="ipfs" aria-label="Open catalog titles over IPFS">
+              <MarkdownRenderer content={setupIpfs} />
+            </section>
+          ) : null}
           {setupClone.length > 0 ? (
             <section id="clone-repo" aria-label="Clone the catalog from a Relay server">
               <MarkdownRenderer content={setupClone} />
