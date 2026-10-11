@@ -26,17 +26,21 @@ Do **not** put Bunny URLs into `media` / `mediaWeb` / `mediaMobile`. Use `stream
 
 **Never** store uploads as `master.mkv`, `master.mp4`, etc. Downloads keep the object basename; `master` is untrackable in a downloads folder.
 
+Object names must be **URL-path safe without percent-encoding**: only `A–Z` `a–z` `0–9` `_` `-` `.`
+
 | Rule | Example |
 |------|---------|
-| Object name = **full display title**, spaces → `_` | `The Mummy (1999) — Debugged` → `The_Mummy_(1999)_-_Debugged.mkv` |
+| Object name = **full display title**, spaces → `_` | `The Mummy (1999) — Debugged` → `The_Mummy_1999_-_Debugged.mkv` |
 | Normalize em/en dashes to ASCII `-` | `—` / `–` → `-` |
-| URL-encode unsafe chars in `streamHttps` | `DeAnna'd` → `DeAnna%27d` in the HTTPS link |
-| Keep slug **folder**; title lives in the **filename** | `now-showing/<slug>/<Title_With_Underscores>.mkv` |
+| Drop parentheses (years stay as digits) | `(1999)` → `1999` |
+| Apostrophe / other punctuation → `_` or drop | `DeAnna'd` → `DeAnna_d` |
+| **No** `%` encoding in `streamHttps` path segments | link basename == object name |
+| Keep slug **folder**; title lives in the **filename** | `now-showing/<slug>/<Title_Safe>.mkv` |
 
 Optional ladder (same title stem):
 
-- `now-showing/<slug>/<Title_With_Underscores>_web-1080p.mkv`
-- `now-showing/<slug>/<Title_With_Underscores>_mobile-720p.mkv`
+- `now-showing/<slug>/<Title_Safe>_web-1080p.mkv`
+- `now-showing/<slug>/<Title_Safe>_mobile-720p.mkv`
 
 ---
 
@@ -45,27 +49,27 @@ Optional ladder (same title stem):
 ```text
 now-showing/
   <slug>/
-    <Title_With_Underscores>.mkv              # required for Now showing
-    <Title_With_Underscores>_web-1080p.mkv    # optional — enable only when present
-    <Title_With_Underscores>_mobile-720p.mkv  # optional — enable only when present
+    <Title_Safe>.mkv              # required for Now showing
+    <Title_Safe>_web-1080p.mkv    # optional — enable only when present
+    <Title_Safe>_mobile-720p.mkv  # optional — enable only when present
 ```
 
 **CDN host:** `flashbackrepository.b-cdn.net`
 
 | Slug | Live master URL |
 |------|-----------------|
-| `the-mummy-1999-debugged` | `https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_(1999)_-_Debugged.mkv` |
-| `the-mummy-returns-2001-debugged` | `https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/The_Mummy_Returns_(2001)_-_Debugged.mkv` |
-| `van-helsing-deanna-d` | `https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_(2004)_-_DeAnna%27d.mkv` |
+| `the-mummy-1999-debugged` | `https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged.mkv` |
+| `the-mummy-returns-2001-debugged` | `https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/The_Mummy_Returns_2001_-_Debugged.mkv` |
+| `van-helsing-deanna-d` | `https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d.mkv` |
 
 Then add to `now-showing.json`:
 
 ```json
 {
   "slug": "the-mummy-1999-debugged",
-  "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_(1999)_-_Debugged.mkv",
-  "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_(1999)_-_Debugged_web-1080p.mkv",
-  "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_(1999)_-_Debugged_mobile-720p.mkv"
+  "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged.mkv",
+  "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_web-1080p.mkv",
+  "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_mobile-720p.mkv"
 }
 ```
 
@@ -81,7 +85,7 @@ Prefer objects (slug-only strings still work for rotation without Bunny):
 [
   {
     "slug": "the-mummy-1999-debugged",
-    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_(1999)_-_Debugged.mkv"
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged.mkv"
   }
 ]
 ```
@@ -109,6 +113,7 @@ Server-side move/copy: S3 API at `https://de-s3.storage.bunnycdn.com` (Access Ke
 |------|--------|
 | Move 3 masters to slug folders | yes |
 | Rename `master.mkv` → titled filenames (underscores) | yes (2026-10-11) — no `master.*` under `now-showing/` |
+| Drop parens / encoding chars from object names | yes — e.g. `The_Mummy_1999_-_Debugged.mkv` |
 | CDN HEAD/Range 200/206 on titled paths | yes |
 | Delete flat root MKVs | yes (purge CDN if old URLs still cache) |
 | Wire `streamHttps` in catalog + ExternalPlay | yes |

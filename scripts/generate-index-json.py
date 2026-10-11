@@ -398,10 +398,10 @@ def status_for(folder: Path, media: str | None, readme: Path) -> str:
 # Edit now-showing.json to change the marquee / carousel rotation.
 # Entries may be slug strings or objects:
 #   { "slug": "…",
-#     "streamHttps": "https://….b-cdn.net/now-showing/<slug>/<Title_With_Underscores>.mkv",
-#     "streamHttpsWeb": "…/<Title_With_Underscores>_web-1080p.mkv",
-#     "streamHttpsMobile": "…/<Title_With_Underscores>_mobile-720p.mkv" }
-# Never use master.mkv — basename = full title, spaces → underscores (see docs/BUNNY_NOW_SHOWING_PLAN.md).
+#     "streamHttps": "https://….b-cdn.net/now-showing/<slug>/<Title_Safe>.mkv",
+#     "streamHttpsWeb": "…/<Title_Safe>_web-1080p.mkv",
+#     "streamHttpsMobile": "…/<Title_Safe>_mobile-720p.mkv" }
+# Never master.mkv / parens / %encoding — see docs/BUNNY_NOW_SHOWING_PLAN.md.
 # generate-index-json maps those slugs → status=showing, copies slug list into
 # index.json.nowShowing, and stamps streamHttps* onto matching projects.
 NOW_SHOWING_FILE = ROOT / "now-showing.json"

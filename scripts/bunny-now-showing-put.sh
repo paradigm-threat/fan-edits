@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Upload (or server-side rename) Now showing masters on Bunny storage.
-# Object basename = full display title, spaces → underscores. Never master.mkv.
+# Object basename = full display title, URL-safe only (A–Z a–z 0–9 _ - .).
+# Never master.mkv; never parentheses / apostrophes / %encoding in the path.
 #
 # Env: ~/.config/flashback/bunny.env (BUNNY_STORAGE_ZONE, BUNNY_STORAGE_PASSWORD,
 #      BUNNY_STORAGE_REGION_HOST, BUNNY_CDN_HOST)
@@ -28,41 +29,36 @@ CDN="${BUNNY_CDN_HOST:-flashbackrepository.b-cdn.net}"
 S3_ENDPOINT="${BUNNY_S3_ENDPOINT:-https://de-s3.storage.bunnycdn.com}"
 
 title_to_basename() {
-  local t="$1"
-  # em/en dash → ASCII hyphen; smart quotes → ASCII
-  t="${t//—/-}"
-  t="${t//–/-}"
-  t="${t//’/'}"
-  t="${t//‘/'}"
-  t="${t//“/}"
-  t="${t//”/}"
-  t="${t// /_}"
-  # refuse empty / master
-  if [[ -z "$t" || "$t" == "master" || "$t" == "master.mkv" || "$t" == "master.mp4" ]]; then
-    echo "refusing basename derived from title: '$1'" >&2
-    exit 1
-  fi
-  if [[ "$t" != *.mkv && "$t" != *.mp4 ]]; then
-    t="${t}.mkv"
-  fi
-  # basename must not be master.*
-  local base="${t##*/}"
-  if [[ "${base,,}" == master.* ]]; then
-    echo "refusing master.* object name: $base" >&2
-    exit 1
-  fi
-  printf '%s' "$base"
+  python3 - "$1" <<'PY'
+import re, sys
+t = sys.argv[1]
+for a, b in (("—", "-"), ("–", "-"), ("\u2019", "'"), ("\u2018", "'"), ("\u201c", ""), ("\u201d", "")):
+    t = t.replace(a, b)
+t = t.replace(" ", "_")
+# Drop parens; apostrophe → underscore (no %27 in CDN URLs)
+t = t.replace("(", "").replace(")", "")
+t = t.replace("'", "_")
+# Keep only unreserved path-safe chars
+t = re.sub(r"[^A-Za-z0-9._-]+", "_", t)
+t = re.sub(r"_+", "_", t).strip("._-")
+if not t or t.lower() in ("master", "master.mkv", "master.mp4"):
+    raise SystemExit(f"refusing basename derived from title: {sys.argv[1]!r}")
+if not t.lower().endswith((".mkv", ".mp4")):
+    t += ".mkv"
+base = t.rsplit("/", 1)[-1]
+if base.lower().startswith("master."):
+    raise SystemExit(f"refusing master.* object name: {base}")
+# Must not need percent-encoding
+if re.search(r"[^A-Za-z0-9._-]", base):
+    raise SystemExit(f"basename not URL-safe: {base}")
+print(base, end="")
+PY
 }
 
 cdn_url() {
   local slug="$1" base="$2"
-  # URL-encode path segment (keep common safe chars)
-  python3 - "$CDN" "$slug" "$base" <<'PY'
-import sys, urllib.parse
-cdn, slug, base = sys.argv[1], sys.argv[2], sys.argv[3]
-enc = urllib.parse.quote(base, safe="()._-'")
-print(f"https://{cdn}/now-showing/{slug}/{enc}")
-PY
+  # Basename is already URL-safe — no percent-encoding.
+  printf 'https://%s/now-showing/%s/%s\n' "$CDN" "$slug" "$base"
 }
 
 storage_put() {
