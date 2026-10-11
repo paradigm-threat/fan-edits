@@ -269,7 +269,7 @@
     const sub = doc.createElement('p');
     sub.className = 'fb-now-showing-sub';
     sub.textContent =
-      'Ready to play or download on the server right now — not the full library. Other titles: stream/download via IPFS when peers are online, or request Drive links.';
+      'Ready to play or download on the server right now (Bunny CDN) — not the full library. Other titles: open the ipfs:// link (see Setup), use the Flashback App, or request Drive links.';
     titleBlock.appendChild(h2);
     titleBlock.appendChild(sub);
     const counter = doc.createElement('p');

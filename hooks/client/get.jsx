@@ -235,15 +235,6 @@ function absoluteStreamUrl(path) {
   return origin + '/' + p
 }
 
-/** Same-origin /ipfs/{cid} URL for gateway download (not tip path). */
-function ipfsGatewayUrl(cid) {
-  const c = str(cid).trim()
-  if (c.length < 8) {
-    return ''
-  }
-  return absoluteStreamUrl('/ipfs/' + c)
-}
-
 /** Basename for the HTML download attribute (Save As filename). */
 function downloadBasename(pathOrUrl) {
   const raw = str(pathOrUrl)
@@ -1012,95 +1003,6 @@ function subtitlesJson(project) {
   } catch (e) {
     return '[]'
   }
-}
-
-function copyCidText(cid) {
-  const t = str(cid)
-  if (t.length === 0) {
-    return
-  }
-  try {
-    if (
-      typeof globalThis !== 'undefined' &&
-      globalThis.navigator &&
-      globalThis.navigator.clipboard &&
-      globalThis.navigator.clipboard.writeText
-    ) {
-      globalThis.navigator.clipboard.writeText(t)
-      return
-    }
-  } catch (e) {}
-  try {
-    if (typeof globalThis === 'undefined' || !globalThis.document) {
-      return
-    }
-    const doc = globalThis.document
-    const el = doc.createElement('textarea')
-    el.value = t
-    el.setAttribute('readonly', '')
-    el.style.position = 'fixed'
-    el.style.left = '-9999px'
-    doc.body.appendChild(el)
-    el.select()
-    if (doc.execCommand) {
-      doc.execCommand('copy')
-    }
-    doc.body.removeChild(el)
-  } catch (e2) {}
-}
-
-function encodeCidForUrl(cid) {
-  // CIDs are URL-safe as-is.
-  return str(cid).trim()
-}
-
-/** SSR-safe inspect row — lives in get.jsx so soft-hydrate always paints it. */
-function renderIpfsInspect(cidRaw) {
-  const cid = str(cidRaw).trim()
-  if (!looksLikeCid(cid)) {
-    return null
-  }
-  const enc = encodeCidForUrl(cid)
-  return (
-    <div className="fb-media-inspect" data-ipfs-inspect="1">
-      <p className="fb-media-inspect-label">Inspect on IPFS</p>
-      <div className="fb-media-inspect-cid-row">
-        <code className="fb-media-inspect-cid" title="Content identifier">
-          {cid}
-        </code>
-        <button
-          type="button"
-          className="fb-btn fb-media-inspect-copy"
-          onClick={() => {
-            copyCidText(cid)
-          }}
-        >
-          Copy CID
-        </button>
-      </div>
-      <div className="fb-media-inspect-links">
-        <a
-          className="fb-link"
-          href={'https://cid.ipfs.tech/#' + cid}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          CID Inspector
-        </a>
-        <a
-          className="fb-link"
-          href={'https://check.ipfs.network/?cid=' + enc}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Providers
-        </a>
-      </div>
-      <p className="fb-media-inspect-note">
-        Playback is same-origin only. The server pins this CID into local IPFS; public gateways are not used for video.
-      </p>
-    </div>
-  )
 }
 
 function isNarrowViewport() {
@@ -1895,7 +1797,7 @@ export default function FlashbackApp() {
     if (selected) {
       const onServer = projectIsNowShowing(selected, nowShowingSlugs)
       // Now showing: prefer Bunny streamHttps; tip /FanMixes/… is legacy fallback.
-      // Other titles: no streamUrl — Download uses /ipfs/{cid} when catalogued.
+      // Other titles: no streamUrl — ExternalPlay shows clickable ipfs://{cid} (not site gateway).
       if (onServer) {
         const bunnyMaster = projectMediaField(selected, 'streamHttps')
         if (bunnyMaster.length > 0) {

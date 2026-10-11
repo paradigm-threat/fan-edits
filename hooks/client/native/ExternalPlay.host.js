@@ -1,6 +1,6 @@
 /**
  * Web host for `fb-external-play`.
- * “Ways to watch” panel: Stream (server-ready) / Download (IPFS CID) / Email.
+ * Ways to watch: Stream (Bunny Now showing) / Download (Bunny) or IPFS link / Email.
  */
 (function (global) {
   'use strict';
@@ -148,43 +148,6 @@
     }
   }
 
-  function fetchWithTimeout(url, opts, ms) {
-    const ctrl = typeof global.AbortController === 'function' ? new global.AbortController() : null;
-    let timer = null;
-    const options = opts ? Object.assign({}, opts) : {};
-    if (ctrl) options.signal = ctrl.signal;
-    const p = global.fetch(url, options).then(
-      function (r) {
-        if (timer) global.clearTimeout(timer);
-        return r;
-      },
-      function (err) {
-        if (timer) global.clearTimeout(timer);
-        throw err;
-      },
-    );
-    if (ctrl) {
-      timer = global.setTimeout(function () {
-        try {
-          ctrl.abort();
-        } catch (_) {}
-      }, ms || 8000);
-    }
-    return p;
-  }
-
-  function parseSeedStatusJson(j) {
-    if (!j || typeof j !== 'object') return null;
-    const seed = j.seed && typeof j.seed === 'object' ? j.seed : {};
-    return {
-      ok: j.error === 'ok',
-      error: typeof j.error === 'string' ? j.error : 'unknown',
-      message: typeof j.message === 'string' ? j.message : '',
-      seedState: typeof seed.state === 'string' ? seed.state : 'unknown',
-      providers: typeof seed.providers === 'number' ? seed.providers : null,
-    };
-  }
-
   function ownershipUnlocked(hostEl, propsUnlocked) {
     if (propsUnlocked === true) return true;
     try {
@@ -278,7 +241,7 @@
     const downloadNameProp = String(
       prop(props, 'downloadName', '') || prop(props, 'data-download-name', '') || '',
     ).trim();
-    const masterIpfsUrl = masterCid ? absoluteHttps('/ipfs/' + masterCid) : '';
+    const ipfsUri = masterCid ? 'ipfs://' + masterCid : '';
     const inCatalog = masterCid.length >= 8;
 
     function basenameFromUrl(url) {
@@ -295,13 +258,11 @@
       return name || 'movie.mkv';
     }
 
-    function downloadHrefFor(kind, url) {
+    /** Bunny HTTPS download for Now showing only — never site /ipfs/ gateway. */
+    function bunnyDownloadHref(url) {
       const u = String(url || '');
-      // Prefer absolute CDN/stream URL (Bunny) whenever present — never /ipfs/ for Now showing.
+      if (!catalogShowing) return '';
       if (u.indexOf('https://') === 0 || u.indexOf('http://') === 0) return u;
-      if (catalogShowing && u) return u;
-      // Non–Now showing: IPFS gateway only — never tip /FanMixes/… phantoms.
-      if (masterIpfsUrl) return masterIpfsUrl;
       return '';
     }
 
@@ -312,11 +273,10 @@
 
     let unlocked = ownershipUnlocked(hostEl, prop(props, 'unlocked', 'false') === 'true');
     const setupHref = prop(props, 'setupHref', '/setup') || '/setup';
+    const setupIpfsHref =
+      setupHref.indexOf('#') >= 0 ? setupHref : setupHref.replace(/\/?$/, '') + '#ipfs';
     const android = isAndroidBrowser();
     const openMode = android ? 'android-intent' : smartTv ? 'https-stream' : 'vlc-protocol';
-
-    let gatewayReady = false;
-    let seedPhase = streamUrl ? 'checking' : 'none'; // checking | ready | unavailable | none
 
     const root = el('div', 'fb-external-play fb-theater-external fb-ways-to-watch');
     root.setAttribute('data-fb-external-play', '1');
@@ -374,7 +334,7 @@
       el(
         'p',
         'fb-ways-section-help',
-        'Works for Now showing titles (Bunny CDN HTTPS). Other titles use Download via IPFS.',
+        'Works for Now showing titles (Bunny CDN HTTPS). Other titles: open the IPFS link below, use the Flashback App, or Request Drive.',
       ),
     );
     const streamActions = el('div', 'fb-ways-actions fb-theater-external-actions');
@@ -412,36 +372,58 @@
     streamSec.appendChild(streamStatus);
     root.appendChild(streamSec);
 
-    // --- 2. Download ---
+    // --- 2. Download (Bunny) or IPFS link (catalog) ---
     const dlSec = el('section', 'fb-ways-section fb-ways-download');
-    dlSec.appendChild(el('h3', 'fb-ways-section-title', '2. Download the file'));
+    dlSec.appendChild(
+      el(
+        'h3',
+        'fb-ways-section-title',
+        catalogShowing ? '2. Download the file' : '2. Open over IPFS',
+      ),
+    );
     dlSec.appendChild(
       el(
         'p',
         'fb-ways-section-help',
         catalogShowing
           ? 'Saves the MKV from Bunny CDN (Now showing). Open it in VLC when it finishes.'
-          : 'Saves through this site’s IPFS gateway. Open the file in VLC when it finishes.',
+          : 'Catalog masters are content hashes on IPFS — not a download from this site. Open the link in a supporting client, or use the Flashback App.',
       ),
     );
     const dlActions = el('div', 'fb-ways-actions fb-theater-external-actions');
-    const dlLink = el('a', 'fb-btn fb-theater-download-mkv');
     const kind0 = ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master';
-    const dlHref0 = downloadHrefFor(kind0, streamUrl);
+    const dlHref0 = bunnyDownloadHref(streamUrl);
     const dlName0 = downloadFilenameFor(kind0, streamUrl);
+
+    // Bunny download button (Now showing only)
+    const dlLink = el('a', 'fb-btn fb-theater-download-mkv');
     dlLink.href = dlHref0 || '#';
-    // Cross-origin Bunny: drop download= so the browser navigates to the CDN URL
-    // (download attr is ignored cross-origin and confuses “Copy link address”).
     if (dlHref0 && dlHref0.indexOf('b-cdn.net') >= 0) {
       dlLink.removeAttribute('download');
-    } else {
+    } else if (dlHref0) {
       dlLink.setAttribute('download', dlName0);
     }
     dlLink.textContent =
       kind0 === 'master' || /\.mkv($|\?)/i.test(dlName0) ? 'Download MKV' : 'Download MP4';
-    dlActions.appendChild(dlLink);
+
+    // Catalog: clickable ipfs:// + Copy CID (never site /ipfs/ gateway download)
+    const ipfsLink = el('a', 'fb-btn fb-theater-ipfs-uri');
+    ipfsLink.href = ipfsUri || '#';
+    ipfsLink.textContent = ipfsUri || 'No IPFS CID';
+    ipfsLink.setAttribute('rel', 'noopener noreferrer');
+
+    const copyCidBtn = el('button', 'fb-btn fb-theater-copy-cid');
+    copyCidBtn.type = 'button';
+    copyCidBtn.textContent = 'Copy CID';
+
+    if (catalogShowing) {
+      dlActions.appendChild(dlLink);
+    } else {
+      dlActions.appendChild(ipfsLink);
+      dlActions.appendChild(copyCidBtn);
+    }
     dlSec.appendChild(dlActions);
-    // Show the real HTTPS URL for Now showing (same as stream) so it is copyable.
+
     if (catalogShowing && dlHref0 && dlHref0.indexOf('http') === 0) {
       const dlUrlLine = el('p', 'fb-ways-url-line');
       const dlUrlA = el('a', 'fb-link fb-theater-download-url', dlHref0);
@@ -451,6 +433,19 @@
       dlUrlLine.appendChild(dlUrlA);
       dlSec.appendChild(dlUrlLine);
     }
+
+    if (!catalogShowing && inCatalog) {
+      const ipfsHow = el('p', 'fb-ways-helpers fb-ways-ipfs-how');
+      const howLink = el('a', 'fb-link', 'How to open IPFS links');
+      howLink.href = setupIpfsHref;
+      ipfsHow.appendChild(howLink);
+      ipfsHow.appendChild(global.document.createTextNode(' (Setup) · '));
+      const appHow = el('a', 'fb-link', 'Flashback App');
+      appHow.href = '/app';
+      ipfsHow.appendChild(appHow);
+      dlSec.appendChild(ipfsHow);
+    }
+
     const dlStatus = el('p', 'fb-ways-status');
     dlSec.appendChild(dlStatus);
     root.appendChild(dlSec);
@@ -515,7 +510,6 @@
 
     let failTimer = null;
     let leftPage = false;
-    let seedPollGen = 0;
 
     function setFeedback(msg) {
       const m = String(msg || '');
@@ -559,29 +553,36 @@
       const own = unlocked;
       const serverOk = streamServerReady();
       const streamOn = own && serverOk;
-      const dlHrefNow = downloadHrefFor(
-        ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master',
-        streamUrl,
-      );
-      // Now showing: Bunny HTTPS MKV. Other titles: IPFS only.
-      const downloadOn = own && !!dlHrefNow;
-      if (dlHrefNow && dlLink) {
-        dlLink.href = dlHrefNow;
+      const bunnyHref = bunnyDownloadHref(streamUrl);
+      const bunnyOn = own && !!bunnyHref;
+      const ipfsOn = own && inCatalog && !!ipfsUri;
+
+      if (catalogShowing && bunnyHref && dlLink) {
+        dlLink.href = bunnyHref;
         const fname = downloadFilenameFor(
           ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master',
-          dlHrefNow,
+          bunnyHref,
         );
-        if (dlHrefNow.indexOf('b-cdn.net') >= 0) {
+        if (bunnyHref.indexOf('b-cdn.net') >= 0) {
           dlLink.removeAttribute('download');
         } else if (fname) {
           dlLink.setAttribute('download', fname);
         }
       }
+      if (!catalogShowing && ipfsLink) {
+        ipfsLink.href = ipfsUri || '#';
+        ipfsLink.textContent = ipfsUri || 'No IPFS CID';
+      }
 
       setControlEnabled(openBtn, streamOn);
       setControlEnabled(openHttpsBtn, streamOn);
       setControlEnabled(copyBtn, streamOn);
-      setControlEnabled(dlLink, downloadOn);
+      if (catalogShowing) {
+        setControlEnabled(dlLink, bunnyOn);
+      } else {
+        setControlEnabled(ipfsLink, ipfsOn);
+        setControlEnabled(copyCidBtn, ipfsOn);
+      }
 
       if (!own) {
         streamStatus.textContent = 'Confirm ownership above first.';
@@ -589,17 +590,17 @@
       } else {
         if (!catalogShowing || !streamUrl) {
           streamStatus.textContent =
-            'Not Now showing. Use Download via IPFS or Request Drive links.';
+            'Not Now showing. Open the IPFS link below, use the Flashback App, or Request Drive.';
         } else {
           streamStatus.textContent = 'Ready on Bunny CDN (Now showing).';
         }
 
         if (catalogShowing && streamUrl) {
           dlStatus.textContent = 'Ready to download MKV from Bunny CDN.';
-        } else if (!inCatalog || !masterIpfsUrl) {
+        } else if (!inCatalog || !ipfsUri) {
           dlStatus.textContent = 'This title is not in the IPFS catalog yet.';
         } else {
-          dlStatus.textContent = 'Ready to download via IPFS.';
+          dlStatus.textContent = 'Open the IPFS link in a supporting client (see Setup).';
         }
       }
     }
@@ -622,23 +623,30 @@
       return true;
     }
 
-    function requireDownloadAction() {
+    function requireBunnyDownload() {
       syncUnlockedFlag();
       if (!unlocked) {
         setFeedback('Confirm ownership first, then download.');
         scrollToGate();
         return false;
       }
-      const href = downloadHrefFor(
-        ladder[selectedIdx] ? ladder[selectedIdx].kind : 'master',
-        streamUrl,
-      );
+      const href = bunnyDownloadHref(streamUrl);
       if (!href) {
-        setFeedback(
-          catalogShowing
-            ? 'No download URL for this Now showing title yet.'
-            : 'This title is not in the IPFS catalog yet.',
-        );
+        setFeedback('No download URL for this Now showing title yet.');
+        return false;
+      }
+      return true;
+    }
+
+    function requireIpfsAction() {
+      syncUnlockedFlag();
+      if (!unlocked) {
+        setFeedback('Confirm ownership first, then open the IPFS link.');
+        scrollToGate();
+        return false;
+      }
+      if (!ipfsUri) {
+        setFeedback('This title is not in the IPFS catalog yet.');
         return false;
       }
       return true;
@@ -666,68 +674,19 @@
         streamLink.textContent = 'No stream URL yet.';
         streamLink.setAttribute('aria-disabled', 'true');
       }
-      const dlHref = downloadHrefFor(kind, streamUrl);
-      const dlName = downloadFilenameFor(kind, streamUrl);
-      dlLink.href = dlHref || '#';
-      dlLink.setAttribute('download', dlName);
-      dlLink.textContent =
-        kind === 'master' || /\.mkv($|\?)/i.test(dlName) ? 'Download MKV' : 'Download MP4';
-      if (!catalogShowing) {
-        gatewayReady = false;
-        seedPhase = streamUrl ? 'checking' : 'none';
+      if (catalogShowing) {
+        const dlHref = bunnyDownloadHref(streamUrl);
+        const dlName = downloadFilenameFor(kind, streamUrl);
+        dlLink.href = dlHref || '#';
+        if (dlHref && dlHref.indexOf('b-cdn.net') >= 0) {
+          dlLink.removeAttribute('download');
+        } else if (dlHref) {
+          dlLink.setAttribute('download', dlName);
+        }
+        dlLink.textContent =
+          kind === 'master' || /\.mkv($|\?)/i.test(dlName) ? 'Download MKV' : 'Download MP4';
       }
-      pollSeedStatus(streamUrl);
       applyAvailability();
-    }
-
-    function pollSeedStatus(url) {
-      const target = String(url || '');
-      // Non–Now showing: do not probe tip paths (they 404 and are not stream sources).
-      if (!catalogShowing) {
-        seedPhase = target ? 'unavailable' : 'none';
-        gatewayReady = false;
-        applyAvailability();
-        return;
-      }
-      if (!target) {
-        seedPhase = 'none';
-        gatewayReady = false;
-        applyAvailability();
-        return;
-      }
-      seedPhase = 'ready';
-      gatewayReady = true;
-      applyAvailability();
-      // Optional status line polish for Now showing — never gates availability.
-      const gen = ++seedPollGen;
-      const statusUrl = target + (target.indexOf('?') >= 0 ? '&' : '?') + 'relayAssetStatus=1';
-      fetchWithTimeout(
-        statusUrl,
-        {
-          credentials: 'omit',
-          cache: 'no-store',
-          headers: { Accept: 'application/vnd.relay.asset-status+json, application/json' },
-        },
-        10000,
-      )
-        .then(function (r) {
-          if (!r) throw new Error('no response');
-          return r.json().catch(function () {
-            return null;
-          });
-        })
-        .then(function () {
-          if (gen !== seedPollGen) return;
-          gatewayReady = true;
-          seedPhase = 'ready';
-          applyAvailability();
-        })
-        .catch(function () {
-          if (gen !== seedPollGen) return;
-          gatewayReady = true;
-          seedPhase = 'ready';
-          applyAvailability();
-        });
     }
 
     openHttpsBtn.addEventListener('click', function () {
@@ -804,18 +763,36 @@
       }
     });
 
-    dlLink.addEventListener('click', function (ev) {
-      if (!requireDownloadAction()) {
-        ev.preventDefault();
-        return;
-      }
-      if (!dlLink.getAttribute('href') || dlLink.getAttribute('href') === '#') {
-        ev.preventDefault();
-        setFeedback('No download URL yet.');
-        return;
-      }
-      setFeedback('Download starting — large file; open it in VLC when finished.');
-    });
+    if (catalogShowing) {
+      dlLink.addEventListener('click', function (ev) {
+        if (!requireBunnyDownload()) {
+          ev.preventDefault();
+          return;
+        }
+        if (!dlLink.getAttribute('href') || dlLink.getAttribute('href') === '#') {
+          ev.preventDefault();
+          setFeedback('No download URL yet.');
+          return;
+        }
+        setFeedback('Download starting — large file; open it in VLC when finished.');
+      });
+    } else {
+      ipfsLink.addEventListener('click', function (ev) {
+        if (!requireIpfsAction()) {
+          ev.preventDefault();
+          return;
+        }
+        setFeedback('Opening IPFS URI — use a supporting client if your browser asks.');
+      });
+      copyCidBtn.addEventListener('click', function () {
+        if (!requireIpfsAction()) return;
+        if (copyText(masterCid)) {
+          setFeedback('CID copied — paste into IPFS Desktop, Kubo, or Companion.');
+        } else {
+          setFeedback('Copy failed — select the IPFS link instead.');
+        }
+      });
+    }
 
     streamLink.addEventListener('click', function (ev) {
       if (!requireStreamAction('Confirm ownership first, then open the stream link.')) {
@@ -858,7 +835,6 @@
       }
     } catch (_) {}
 
-    pollSeedStatus(streamUrl);
     applyAvailability();
     return root;
   }

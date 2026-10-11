@@ -68,6 +68,37 @@ If the button does nothing, use **Copy stream URL**, then in VLC: **Media → Op
 
 ---
 
+<a id="ipfs"></a>
+
+## Open catalog titles over IPFS
+
+**Now showing** titles use Bunny CDN (Steps 1–3 above). The rest of the library is addressed by **content hash** on the IPFS network — title pages show a clickable `ipfs://…` link, not a download from this site’s servers.
+
+You need a client that understands `ipfs://` (or the Flashback App). Bytes are available only while a peer is seeding that CID.
+
+### Flashback App (recommended on Android / Fire TV)
+
+Install the sideloaded **Flashback Repository** app — it runs an embedded IPFS node (Bitswap) and can play or keep titles offline. See **[Flashback App](/app)**.
+
+### Browser extensions
+
+- **[IPFS Companion](https://github.com/ipfs/ipfs-companion)** — official extension for **Chrome / Chromium** and **Firefox**. Detects `ipfs://` links, routes them to your local or public gateway, and helps you download.
+- **Pinata extension** (optional) — if you already use Pinata’s pinning service, their toolbar extension can help manage and fetch IPFS content.
+
+### Desktop and CLI
+
+- **[IPFS Desktop](https://docs.ipfs.tech/install/ipfs-desktop/)** — official GUI node for Windows, macOS, and Linux; open or pin files from the app.
+- **[Kubo](https://docs.ipfs.tech/install/command-line/)** (Go-IPFS) — CLI daemon; e.g. `ipfs get <cid>` or `ipfs pin add <cid>` after copying the CID from a title page.
+
+### Browsers with built-in `ipfs://` support
+
+- **Brave** — native IPFS settings; can use a local node or a public gateway.
+- **Opera** — built-in `ipfs://` support on desktop and mobile.
+
+After you have a client, open a catalog title → confirm ownership → click the **`ipfs://…`** link (or **Copy CID** and paste into Desktop / Kubo). Peers must be online for the file to arrive.
+
+---
+
 ## If something goes wrong
 
 | What you see | What to do |

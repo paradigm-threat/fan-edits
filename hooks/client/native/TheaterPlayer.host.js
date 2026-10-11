@@ -698,83 +698,24 @@
     return wrap;
   }
 
-  /** Calm download row: master MKV + optional rungs + shared subtitle files. */
-  function buildDownloadRow(props, ladder) {
+  /**
+   * Theater host is not loaded in production (ExternalPlay only).
+   * Stub: no tip-path / site-gateway download row.
+   */
+  function buildDownloadRow(_props, _ladder) {
     const wrap = global.document.createElement('div');
     wrap.className = 'fb-theater-downloads';
     wrap.setAttribute('data-fb-downloads', '1');
-    const heading = global.document.createElement('p');
-    heading.className = 'fb-theater-downloads-label';
-    heading.textContent = 'Download the movie';
-    wrap.appendChild(heading);
-    const list = global.document.createElement('div');
-    list.className = 'fb-theater-downloads-links';
-    const seen = {};
-    const items = [];
-    function add(kind, url) {
-      const u = String(url || '');
-      if (!u || seen[u]) return;
-      seen[u] = true;
-      items.push({ kind: kind, src: u });
-    }
-    if (ladder && ladder.length) {
-      for (let i = 0; i < ladder.length; i++) {
-        add(ladder[i].kind, ladder[i].src);
-      }
-    }
-    add('master', prop(props, 'srcMaster', '') || prop(props, 'data-src-master', ''));
-    add('web', prop(props, 'srcWeb', '') || prop(props, 'data-src-web', ''));
-    add('mobile', prop(props, 'srcMobile', '') || prop(props, 'data-src-mobile', ''));
-    add('media', prop(props, 'src', '') || prop(props, 'data-src', ''));
-    // Shared subs (not per-resolution) — same files the player uses for <track>.
-    let tracks = [];
-    try {
-      const raw = prop(props, 'subtitlesJson', '') || prop(props, 'data-subtitles-json', '') || '[]';
-      tracks = JSON.parse(raw);
-      if (!Array.isArray(tracks)) tracks = [];
-    } catch (_) {
-      tracks = [];
-    }
-    for (let t = 0; t < tracks.length; t++) {
-      const src = tracks[t] && tracks[t].src ? String(tracks[t].src) : '';
-      if (!src) continue;
-      add('sub', src.charAt(0) === '/' ? src : '/' + src);
-    }
-    if (!items.length) {
-      const empty = global.document.createElement('p');
-      empty.className = 'fb-theater-downloads-empty';
-      empty.textContent = 'No downloadable files listed for this title yet.';
-      wrap.appendChild(empty);
-    } else {
-      for (let j = 0; j < items.length; j++) {
-        const a = global.document.createElement('a');
-        a.className = 'fb-theater-download-link';
-        a.href = items[j].src;
-        a.setAttribute('download', '');
-        a.rel = 'noopener';
-        a.textContent = downloadLabelForKind(items[j].kind, items[j].src);
-        list.appendChild(a);
-      }
-      wrap.appendChild(list);
-    }
     const note = global.document.createElement('p');
     note.className = 'fb-theater-downloads-note';
     note.textContent =
-      'Prefer Copy stream URL above for playback. Download the MKV for offline use, then open it in VLC (embedded subs travel with the file).';
+      'Use Ways to watch: Bunny Download for Now showing, or the clickable ipfs:// link for catalog titles. See Setup → Open catalog titles over IPFS.';
     wrap.appendChild(note);
-    const boardRow = global.document.createElement('p');
-    boardRow.className = 'fb-theater-downloads-note';
-    const boardLink = global.document.createElement('a');
-    boardLink.className = 'fb-theater-download-link';
-    let pagePath = '/';
-    try {
-      pagePath = (global.location && global.location.pathname) || '/';
-    } catch (_) {}
-    boardLink.href =
-      '/board?kind=bug&path=' + encodeURIComponent(pagePath);
-    boardLink.textContent = 'Report a problem on the Board';
-    boardRow.appendChild(boardLink);
-    wrap.appendChild(boardRow);
+    const setup = global.document.createElement('a');
+    setup.className = 'fb-theater-download-link';
+    setup.href = '/setup#ipfs';
+    setup.textContent = 'How to open IPFS links';
+    wrap.appendChild(setup);
     return wrap;
   }
 
@@ -789,75 +730,22 @@
     } catch (_) {}
   }
 
-  function buildInspect(cid, providers, bytesTotal) {
+  /** Stub — public gateway inspect UI retired; CID opens via ExternalPlay ipfs://. */
+  function buildInspect(cid, _providers, _bytesTotal) {
     const wrap = global.document.createElement('div');
     wrap.className = 'fb-media-inspect';
     wrap.setAttribute('data-ipfs-inspect', '1');
     if (!cid) return wrap;
-
-    const label = global.document.createElement('p');
-    label.className = 'fb-media-inspect-label';
-    label.textContent = 'Inspect on IPFS';
-    wrap.appendChild(label);
-
-    const row = global.document.createElement('div');
-    row.className = 'fb-media-inspect-cid-row';
-    const code = global.document.createElement('code');
-    code.className = 'fb-media-inspect-cid';
-    code.textContent = cid;
-    row.appendChild(code);
-    const copy = global.document.createElement('button');
-    copy.type = 'button';
-    copy.className = 'fb-btn fb-media-inspect-copy';
-    copy.textContent = 'Copy CID';
-    copy.addEventListener('click', () => {
-      try {
-        if (global.navigator && global.navigator.clipboard && global.navigator.clipboard.writeText) {
-          global.navigator.clipboard.writeText(cid);
-        }
-      } catch (_) {}
-    });
-    row.appendChild(copy);
-    wrap.appendChild(row);
-
-    const links = global.document.createElement('div');
-    links.className = 'fb-media-inspect-links';
-    const enc = encodeURIComponent(cid);
-    const specs = [
-      ['CID Inspector', 'https://cid.ipfs.tech/#' + cid],
-      ['Providers', 'https://check.ipfs.network/?cid=' + enc],
-    ];
-    specs.forEach((pair) => {
-      const a = global.document.createElement('a');
-      a.href = pair[1];
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      a.textContent = pair[0];
-      links.appendChild(a);
-    });
-    wrap.appendChild(links);
-
-    const playNote = global.document.createElement('p');
-    playNote.className = 'fb-media-inspect-note';
-    playNote.textContent =
-      'Playback is same-origin only. Public gateways are not used for video.';
-    wrap.appendChild(playNote);
-
-    if (providers != null || (typeof bytesTotal === 'number' && bytesTotal > 0)) {
-      const note = global.document.createElement('p');
-      note.className = 'fb-media-inspect-note';
-      const parts = [];
-      if (typeof bytesTotal === 'number' && bytesTotal > 0) {
-        parts.push('Reported size ' + formatBytes(bytesTotal));
-      }
-      if (providers != null) {
-        if (providers === 0) parts.push('0 providers');
-        else if (providers === 1) parts.push('1 provider');
-        else parts.push(providers + ' providers');
-      }
-      note.textContent = parts.join(' · ');
-      wrap.appendChild(note);
-    }
+    const note = global.document.createElement('p');
+    note.className = 'fb-media-inspect-note';
+    note.textContent =
+      'Catalog CID: open the ipfs:// link in Ways to watch, or see Setup for clients.';
+    wrap.appendChild(note);
+    const a = global.document.createElement('a');
+    a.className = 'fb-link';
+    a.href = '/setup#ipfs';
+    a.textContent = 'How to open IPFS links';
+    wrap.appendChild(a);
     return wrap;
   }
 
