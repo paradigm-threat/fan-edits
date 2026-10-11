@@ -1,30 +1,20 @@
 # Seeding fan-edit video on IPFS (Flashback Repository)
 
-Flashback Repository ([flashbackrepository.org](https://flashbackrepository.org/)) is a **thin IPFS** Relay catalog repo: Git holds CleverScript, metadata, posters/brand images, and **text pointer stubs** under `.relay/assets/` for **feature video only** (masters — usually `.mkv`). Posters and UI/brand PNGs are **normal tip blobs — never IPFS**. The actual movie bytes live on IPFS and are pinned by whoever seeds them.
+Flashback Repository ([flashbackrepository.org](https://flashbackrepository.org/)) is a **thin IPFS catalog** Relay repo: Git holds CleverScript, metadata, posters, and **text pointer stubs** under `.relay/assets/` for feature masters (usually `.mkv`). The movie bytes live on the **IPFS network**; this repo is the **catalog of seeded CIDs**, not a server-side media cache.
 
-**What IPFS is for:** shareable feature masters in the free catalog (titles others may keep). Download on the website and Keep/Save in the APK use `/ipfs/{cid}` when a stub exists.
+**Roles (retired vs current):**
 
-**What IPFS is not for:** brand/UI assets, and (going forward) “Now showing” server streams. Now showing titles are meant to be **manually uploaded files on the host**, separate from the IPFS catalog. Do **not** treat Relay tip push or fleet sync as uploading movie binaries — the tip only carries stubs + `assets.manifest.json` + `index.json`.
+| Surface | Role |
+|---------|------|
+| **Git / Relay tip** | Catalog only — stubs, `assets.manifest.json`, `index.json`. No movie binaries. |
+| **Workstation Kubo** | Pin/seed masters so APK and browsers can pull them **directly from the IPFS swarm**. |
+| **Relay fleet** | Does **not** cache or pin Flashback movie files. Fleet IPFS disk cache for multi‑GB video is **retired**. |
+| **Now showing** | Manually uploaded files on the host for the carousel — **not** IPFS-cache “hot titles.” |
+| **APK / some browsers** | Fetch catalog CIDs over IPFS (embedded Kubo / Bitswap), not via a Relay movie cache. |
 
-**Seeder storage rule:** a host that plans to seed must keep the feature files on **local disk** (SSD, HDD, or NAS mount used as ordinary files). Pin with local Kubo (`ipfs add --pin` / `relay-ipfs-ingest`). Putting `IPFS_PATH` on a flaky UNC share is unsupported. The Relay fleet is not a substitute for your own pins of multi‑GB masters.
+Small-binary IPFS caching (images, APKs elsewhere) is outside this repo; see relay-gateway `RELAY_IPFS.md`.
 
-**Web playback** for same-origin logical paths (when a gateway has the CID) still resolves stubs into that node’s Kubo. The browser does **not** talk to `ipfs.io` / Helia / public gateways for video. The primary **download** path for non–Now-showing titles is `/ipfs/{cid}`.
-
-**Flashback APK** embeds Kubo and fetches/seeds catalog CIDs over Bitswap (ExoPlayer → `127.0.0.1` gateway when playing from IPFS). See [docs/ANDROID_APK.md](docs/ANDROID_APK.md) and `relay-client-android/android/ipfs-kubo/`.
-
-See also: [docs/RELAY_DESKTOP.md](docs/RELAY_DESKTOP.md), [docs/PARKED_THIN_VIDEO.md](docs/PARKED_THIN_VIDEO.md), and **`relay-gateway/docs/RELAY_IPFS.md`** in your relay-gateway checkout (Kubo install, gateway env, status JSON).
-
-## Fleet fetch limits (movie exception)
-
-For multi‑GB fan-edits, gateway defaults are raised:
-
-| Env | Default (thin-video) |
-|-----|----------------------|
-| `RELAY_IPFS_MAX_FETCH_BYTES` | **8 GiB** |
-| `RELAY_IPFS_MAX_RANGE_BYTES` | **64 MiB** (per Range response) |
-| `RELAY_IPFS_CACHE_MAX_BYTES` | **200 GiB** |
-
-Prefer **Kubo pin + Range** over stuffing every mkv into the relay file cache.
+See also: [docs/RELAY_DESKTOP.md](docs/RELAY_DESKTOP.md), [docs/PARKED_THIN_VIDEO.md](docs/PARKED_THIN_VIDEO.md), and **`relay-gateway/docs/RELAY_IPFS.md`**.
 
 ## Prerequisites
 
@@ -38,73 +28,11 @@ Prefer **Kubo pin + Range** over stuffing every mkv into the relay file cache.
    ```
 
    **Web UI:** open [http://127.0.0.1:5001/webui](http://127.0.0.1:5001/webui) in a browser on this computer (API is bound to localhost only).
-
-   **Accelerated DHT (workstation seeders):** so catalog CIDs stay findable while providing:
-
-   ```bash
-   ipfs config --json Routing.AcceleratedDHTClient true
-   systemctl --user restart ipfs
-   ```
-
 2. **`relay-ipfs-ingest`** — from a **relay-gateway** checkout, typically:
    `~/dev/relay/relay-gateway/scripts/relay-ipfs-ingest`
    (must be on `PATH` or invoked by full path; `scripts/ingest-fanedit-renders.py` hardcodes this path).
 3. Optional: install repo hooks so staged binaries are ingested before commit:
    `relay-ipfs-ingest --install-hooks`
-
-## Workstation seeder (Ubuntu / Windows)
-
-**Do not run Kubo on the NAS (NobiServe).** The NAS holds file copies and this doc checkout for humans; seeding is for PCs with local disk + enough RAM.
-
-Fleet Relay nodes may still pin when operators choose to, but **you should not assume the fleet has every master**. Home workstations (or any seeder with local copies) **are** the reliable providers for catalog downloads.
-
-### Ubuntu (Paradigm-style)
-
-1. User unit `~/.config/systemd/user/ipfs.service` + `loginctl enable-linger "$USER"` so Kubo survives logout.
-2. Repo on a **local** drive (`IPFS_PATH` / `~/.ipfs` → e.g. `/media/…/ipfs-kubo`), never on `\\nas\…`.
-3. Accelerated DHT (above).
-4. Pin the catalog from this repo:
-
-   ```bash
-   cd ~/dev/fan-edits
-   ./scripts/ipfs-pin-catalog-local.sh          # pin missing CIDs
-   ./scripts/ipfs-pin-catalog-local.sh --report # audit only (exit 1 if any missing)
-   ```
-
-5. Hourly timer (example units already used on Paradigm):
-
-   ```bash
-   systemctl --user enable --now ipfs-pin-catalog.timer
-   systemctl --user status ipfs-pin-catalog.timer
-   ```
-
-6. Optional but stronger for multi‑GB Bitswap: forward **TCP+UDP 4001** on the home router to this machine. Browsers/APKs do **not** need that port to *fetch*; it helps this box *provide*.
-
-**Validate:** WebUI Peers / Pins, `--report` table, and title-page seed line (`?relayAssetStatus=1`).
-
-### Windows
-
-1. Install [Kubo](https://docs.ipfs.tech/install/command-line/), set `IPFS_PATH` to a folder on a **local** drive (copy/sync `.mkv` / renditions from NAS `Public/Videos/FanEdits` via SMB **as ordinary files**, then `ipfs add` / ingest — never put `IPFS_PATH` on a UNC share).
-2. Run `ipfs daemon` at login (Task Scheduler or a shortcut).
-3. Clone or pull `fan-edits`, then:
-
-   ```powershell
-   cd C:\path\to\fan-edits
-   .\scripts\ipfs-pin-catalog-local.ps1
-   .\scripts\ipfs-pin-catalog-local.ps1 -Report
-   ```
-
-4. Same optional router **4001** forward when this PC is the primary home seeder.
-
-### NAS doc sync
-
-After updating this file in git, on the NobiServe checkout (example path):
-
-```bash
-cd /share/CACHEDEV1_DATA/Public/Videos/FanEdits && git pull
-```
-
-Windows can open the same instructions from the share; it still seeds from **local** Kubo only.
 
 ## Source renders (local disk)
 
@@ -116,46 +44,6 @@ Final encodes are kept **outside Git** on NAS/local disk. The bulk helper expect
 | `FanMixes/<ProjectFolder>/` or `KidFriendly/...` | Kdenlive project tree; ingest symlinks the chosen `.mkv` here (gitignored). |
 
 There is **no environment variable** for the render root today — change `RENDER` at the top of `scripts/ingest-fanedit-renders.py` if your mount differs.
-
-## Web / mobile H.264 renditions (compatibility only)
-
-Archival masters stay **HEVC/Matroska** (full quality). Progressive **H.264 + AAC MP4** rungs are for browsers/devices that cannot demux/decode the master (no max-res MP4 encode):
-
-| File suffix | Role |
-|-------------|------|
-| `*.web-1080p.mp4` | Desktop / wide viewport compatibility (~1080p, CRF 20) |
-| `*.mobile-720p.mp4` | Phones / Save-Data / slow nets (~720p, CRF 23) |
-
-Encode beside the master (idempotent; skips up-to-date outputs):
-
-```bash
-python3 scripts/encode-web-renditions.py 'FanMixes/Boogie Nights (1997) - No Lookout'
-# flags: --force  --dry-run  --which web|mobile|all
-```
-
-Then ingest the MP4s (thin stubs only — same as masters):
-
-```bash
-python3 scripts/ingest-fanedit-renders.py --web-renditions-only
-# or after masters: python3 scripts/ingest-fanedit-renders.py --web-renditions
-```
-
-`generate-index-json.py` always emits CleverScript-safe `mediaWeb` / `mediaMobile` (empty string when missing).
-
-**Player pick:** try archival **master first** (native HTML5, else Relay video WASM demux → WebCodecs). If that fails or WebCodecs rejects (common for HEVC on Linux/Firefox), fall back to `mediaWeb` (1080p MP4) then `mediaMobile` (720p).
-
-**Do not batch-encode every title on one PC.** Sync the repo to the NAS and claim titles — see [docs/WEB_RENDITIONS.md](docs/WEB_RENDITIONS.md).
-
-### Subtitles (WebVTT)
-
-HTML5 `<track>` needs **`.vtt`**, not `.srt`. Convert sidecars:
-
-```bash
-python3 scripts/srt_to_vtt.py
-# or: python3 scripts/srt_to_vtt.py 'FanMixes/…/subs'
-```
-
-Index gen prefers `subs/*.vtt` and auto-converts sibling `.srt` when present. VTT stays **git text** (tiny); do not IPFS-ingest unless policy changes. TheaterPlayer shows a **CC** button to cycle Off → each track.
 
 ## Run bulk ingest
 
@@ -178,9 +66,6 @@ For each matched title the script:
 ```bash
 cd ~/dev/fan-edits
 ~/dev/relay/relay-gateway/scripts/relay-ipfs-ingest 'FanMixes/…/….mkv'
-# after encode:
-~/dev/relay/relay-gateway/scripts/relay-ipfs-ingest 'FanMixes/…/….web-1080p.mp4'
-~/dev/relay/relay-gateway/scripts/relay-ipfs-ingest 'FanMixes/…/….mobile-720p.mp4'
 ```
 
 Useful flags (see `relay-ipfs-ingest --help`): **`--dry-run`**, **`--ingest-staged`**, **`--check-staged`**.
@@ -220,7 +105,7 @@ Per-file CIDs stay in `.relay/assets/**/*.ipfs` and `assets.manifest.json` `asse
 }
 ```
 
-The same CID is written to tip file **`IPFS_ROOT`**. That CID is a **UnixFS directory** whose paths mirror feature-video paths only (`FanMixes/…/*.mkv`) — not posters, PNGs, CleverScript, or Git history — not CleverScript or Git history.
+The same CID is written to tip file **`IPFS_ROOT`**. That CID is a **UnixFS directory** whose paths mirror logical media paths only (`FanMixes/…`, favicons, `og-image.png`, …) — not CleverScript or Git history.
 
 ### Full library sync after clone
 
@@ -281,68 +166,59 @@ Catalog **`publish_origin`** for this site is **`iad1.relaygateway.net`** ([docs
 
 **Bare hook overlays** (operators, rare): relay-gateway dev tooling applies hook changes with **`git commit-tree`** on a bare repo without rewriting your checkout branch — see **`relay-gateway/scripts/docker-ipfs-dev-prepare.sh`** and **`relay-gateway/docs/DOCKER_IPFS_DEV.md`**. Not required for day-to-day stub publishes.
 
-## Fleet pinning
+## Fleet: no movie cache / no fleet pin (retired)
 
-Production nodes run Kubo plus **`relay-ipfs-pin-catalog`** (systemd timer **`relay-ipfs-pin-catalog.timer`**) to pin CIDs referenced from thin repos’ **`.relay/assets/**/*.ipfs`** and **`assets.manifest.json`**. That is **IPFS seeding**, not `git ensure-bare`.
+Flashback **does not** use Relay fleet nodes as IPFS seeders or disk caches for feature video.
 
-**Preferred:** recursively pin the tip’s **`mediaRoot`** (one pin pulls the whole UnixFS tree of media leaves):
+- Do **not** run `relay-ipfs-pin-catalog` against `fan-edits` for multi‑GB masters.
+- Do **not** expect `/opt/relay/ipfs-cache` to hold MKVs; that path is for small binaries elsewhere, not this catalog.
+- Catalog `limits.fleet_pin_ipfs` is **`false`**. Tip-push `spawn_pin_repo_tip` should skip this slug (`RELAY_IPFS_SKIP_PIN_REPOS=fan-edits` / `RELAY_IPFS_FLEET_PIN=0` on fleet).
+
+**Your job as publisher:** pin masters on a workstation (or any durable peer), keep swarm **4001** reachable, publish stubs to `iad1`. Clients (Flashback APK, browsers that speak IPFS) pull CIDs from the network.
+
+Workstation pin helper (this machine):
 
 ```bash
-ROOT=$(jq -r .mediaRoot /path/to/fan-edits/assets.manifest.json)
+cd ~/dev/fan-edits
+./scripts/ipfs-pin-catalog-local.sh          # pin missing CIDs locally
+./scripts/ipfs-pin-catalog-local.sh --report # audit only
+```
+
+Optional recursive pin of the tip **`mediaRoot`** (local seeder only):
+
+```bash
+ROOT=$(jq -r .mediaRoot assets.manifest.json)
 ipfs pin add --recursive "/ipfs/$ROOT"
 ```
 
-**Fallback:** pin-catalog still walks per-file stubs / `assets[]` entries until fleet tooling pins `mediaRoot` automatically. Either way, operators can verify with `ipfs pin ls` and `?relayAssetStatus=1` on a logical path.
-
-On a fleet host (paths from install):
-
-```bash
-RELAY_REPO_PATH=/opt/relay/data IPFS_PATH=/opt/relay/ipfs \
-  /opt/relay/bin/relay-ipfs-pin-catalog [--dry-run]
-```
-
-See **`relay-gateway/docs/RELAY_IPFS.md`** (Fleet Kubo section).
-
-## Verify playback and seed status
+## Verify seed status (catalog + local peers)
 
 ### Status probe (`relayAssetStatus=1`)
 
-Append **`?relayAssetStatus=1`** to the **logical media URL** (or send `Accept: application/vnd.relay.asset-status+json`). The site player (`hooks/client/components/RelayMedia.jsx`) polls this before starting video.
+Append **`?relayAssetStatus=1`** to a **logical media URL** (or send `Accept: application/vnd.relay.asset-status+json`). Prefer this for debugging pointers — **not** as proof the fleet has bytes.
 
-| What you see | JSON `message` (typical) | Meaning |
-|--------------|--------------------------|---------|
-| Player **Ready** / video starts | **`asset available`**, `"error": "ok"`, `seed.state`: **`cached`** | Gateway (or cache) has bytes; playback should work. |
-| **This file needs to be seeded** | **`This file needs to be seeded`**, errors like **`ipfs-not-found`**, **`ipfs-pending`** | CID is in Git; **no provider** (or not on this gateway yet). Pin/seed locally or wait for fleet pin + fetch. |
-| **Seeding…** / progress bar | `seed.state`: **`fetching`** | Gateway is pulling the CID (retryable). |
-
-Example (replace path and host with your title):
+| What you see | Meaning |
+|--------------|---------|
+| **`This file needs to be seeded`** / `ipfs-not-found` | CID is in Git; **no reachable provider** (pin on a seeder). |
+| Seed / providers present | Some peer (often your workstation or a client) is providing the CID. |
 
 ```bash
 curl -sS 'https://flashbackrepository.org/FanMixes/Sonic%20(2020)%20-%20DeSchwartzed/Sonic%20(2020)%20-%20DeSchwartzed%20Edition.mkv?relayAssetStatus=1' \
   -H 'Accept: application/vnd.relay.asset-status+json' | jq .
 ```
 
-Per-CID probe on a Relay node:
-
-```bash
-curl -sS 'https://iad1.relaygateway.net/ipfs/bafybei…?relayAssetStatus=1' | jq .
-```
-
-### Local vs gateway bytes
+### Local seeder checks
 
 | Check | Command |
 |-------|---------|
 | Local Kubo has block | `ipfs block stat /ipfs/$CID` |
 | Local Kubo can read | `ipfs cat /ipfs/$CID \| wc -c` (compare to `bytes` in `assets.manifest.json`) |
-| Loopback gateway (fleet/dev) | `curl -I "http://127.0.0.1:8081/ipfs/$CID"` |
-| Public site path | Same URL as the player `src` with `?relayAssetStatus=1` |
-
-**`GET /api/status`** on a fleet FQDN (schema ≥ 3) includes **`ipfs_ok`** and per-repo IPFS cache counts when Kubo is healthy — see RELAY_IPFS.md.
+| Local gateway | `curl -I "http://127.0.0.1:8080/ipfs/$CID"` (or your Kubo gateway port) |
 
 ## Troubleshooting
 
 - **`missing … relay-ipfs-ingest`** — build/checkout relay-gateway; fix `INGEST` in `scripts/ingest-fanedit-renders.py`.
 - **`NO CAND` / `SKIP` in ingest script** — no matching folder under `FanEditRender`, or filename scored too low; fix folder name or pick the `.mkv` manually and run `relay-ipfs-ingest` on that logical path.
 - **`CID not pinned locally`** — start `ipfs daemon` and re-run ingest, or `ipfs pin add`.
-- Site shows seed message after push — pointers reached Relay, but **IPFS bytes** are not pinned anywhere reachable; pin on your machine and/or confirm fleet **`relay-ipfs-pin-catalog`** ran for `fan-edits` (or recursively pin **`mediaRoot`**).
+- Clients cannot fetch after push — pointers reached Relay, but **no IPFS provider**; pin on your workstation (fleet will not hold the MKV).
 - **`build-ipfs-media-root.py` exits with missing CIDs** — some manifest entries are not in local Kubo; finish ingest/pin, or use `--skip-missing` only for a temporary partial root (re-run full build before publish).
