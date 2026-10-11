@@ -1683,6 +1683,7 @@ export default function FlashbackApp() {
     // Setup: expose #ipfs and #clone-repo (MarkdownRenderer escapes raw HTML anchors).
     let setupBefore = ''
     let setupIpfs = ''
+    let setupAfterIpfs = ''
     let setupClone = ''
     let isSetup = false
     try {
@@ -1690,24 +1691,36 @@ export default function FlashbackApp() {
         isSetup = true
         const full = str(md || '')
         const ipfsMarker = '## Open catalog titles over IPFS'
+        const afterIpfsMarker = '## If something goes wrong'
         const advancedMarker = '## Advanced (editors only)'
         const ipfsAt = full.indexOf(ipfsMarker)
+        const afterIpfsAt = full.indexOf(afterIpfsMarker)
         const advAt = full.indexOf(advancedMarker)
-        if (ipfsAt >= 0 && advAt > ipfsAt) {
+        // Document order: Steps → #ipfs → troubleshooting → #clone-repo (Advanced)
+        if (ipfsAt >= 0 && afterIpfsAt > ipfsAt && advAt > afterIpfsAt) {
+          setupBefore = full.slice(0, ipfsAt)
+          setupIpfs = full.slice(ipfsAt, afterIpfsAt)
+          setupAfterIpfs = full.slice(afterIpfsAt, advAt)
+          setupClone = full.slice(advAt)
+        } else if (ipfsAt >= 0 && advAt > ipfsAt) {
           setupBefore = full.slice(0, ipfsAt)
           setupIpfs = full.slice(ipfsAt, advAt)
+          setupAfterIpfs = ''
           setupClone = full.slice(advAt)
         } else if (advAt >= 0) {
           setupBefore = full.slice(0, advAt)
           setupIpfs = ''
+          setupAfterIpfs = ''
           setupClone = full.slice(advAt)
         } else if (ipfsAt >= 0) {
           setupBefore = full.slice(0, ipfsAt)
           setupIpfs = full.slice(ipfsAt)
+          setupAfterIpfs = ''
           setupClone = ''
         } else {
           setupBefore = full
           setupIpfs = ''
+          setupAfterIpfs = ''
           setupClone = ''
         }
       }
@@ -1723,6 +1736,7 @@ export default function FlashbackApp() {
               <MarkdownRenderer content={setupIpfs} />
             </section>
           ) : null}
+          {setupAfterIpfs.length > 0 ? <MarkdownRenderer content={setupAfterIpfs} /> : null}
           {setupClone.length > 0 ? (
             <section id="clone-repo" aria-label="Clone the catalog from a Relay server">
               <MarkdownRenderer content={setupClone} />
