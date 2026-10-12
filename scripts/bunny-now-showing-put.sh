@@ -46,7 +46,10 @@ t = re.sub(r"[^A-Za-z0-9._-]+", "_", t)
 t = re.sub(r"_+", "_", t).strip("._-")
 if not t or t.lower() in ("master", "master.mkv", "master.mp4"):
     raise SystemExit(f"refusing basename derived from title: {sys.argv[1]!r}")
-if not t.lower().endswith((".mkv", ".mp4")):
+# Now showing product is MKV only (refuse leaving a bare stem as .mp4).
+if t.lower().endswith(".mp4"):
+    t = t[: -4] + ".mkv"
+elif not t.lower().endswith(".mkv"):
     t += ".mkv"
 base = t.rsplit("/", 1)[-1]
 if base.lower().startswith("master."):

@@ -403,8 +403,8 @@
     } else if (dlHref0) {
       dlLink.setAttribute('download', dlName0);
     }
-    dlLink.textContent =
-      kind0 === 'master' || /\.mkv($|\?)/i.test(dlName0) ? 'Download MKV' : 'Download MP4';
+    // Ladder + master are always MKV (no H.264 MP4 product).
+    dlLink.textContent = 'Download MKV';
 
     // Catalog: clickable ipfs:// + Copy CID (never site /ipfs/ gateway download)
     const ipfsLink = el('a', 'fb-btn fb-theater-ipfs-uri');
@@ -424,9 +424,10 @@
     }
     dlSec.appendChild(dlActions);
 
+    let dlUrlA = null;
     if (catalogShowing && dlHref0 && dlHref0.indexOf('http') === 0) {
       const dlUrlLine = el('p', 'fb-ways-url-line');
-      const dlUrlA = el('a', 'fb-link fb-theater-download-url', dlHref0);
+      dlUrlA = el('a', 'fb-link fb-theater-download-url', dlHref0);
       dlUrlA.href = dlHref0;
       dlUrlA.setAttribute('target', '_blank');
       dlUrlA.setAttribute('rel', 'noopener noreferrer');
@@ -683,8 +684,11 @@
         } else if (dlHref) {
           dlLink.setAttribute('download', dlName);
         }
-        dlLink.textContent =
-          kind === 'master' || /\.mkv($|\?)/i.test(dlName) ? 'Download MKV' : 'Download MP4';
+        dlLink.textContent = 'Download MKV';
+        if (dlUrlA && dlHref && dlHref.indexOf('http') === 0) {
+          dlUrlA.href = dlHref;
+          dlUrlA.textContent = dlHref;
+        }
       }
       applyAvailability();
     }

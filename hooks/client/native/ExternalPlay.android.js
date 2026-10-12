@@ -104,10 +104,8 @@ export default function ExternalPlay(props) {
   const active = ladder[activeIndex] || null
   const abs = catalogShowing && active ? active.url : ''
   const intentHref = abs ? intentHrefFor(abs) : ''
-  const dlLabel =
-    !active || active.kind === 'master' || /\.mkv($|\?)/i.test(downloadName)
-      ? 'Download MKV'
-      : 'Download MP4'
+  // Ladder + master are always MKV (no H.264 MP4 product).
+  const dlLabel = 'Download MKV'
 
   // Bunny HTTPS for Now showing only — never site /ipfs/ gateway.
   let bunnyHref = ''

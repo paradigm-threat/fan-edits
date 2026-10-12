@@ -1363,7 +1363,7 @@
           ctx.setPlaybackError(note);
           hint.textContent =
             err && err.code === 'SOURCE_TOO_LARGE'
-              ? 'Use “Download the movie” below for VLC / another player while we finish streaming demux and web MP4s.'
+              ? 'Use “Download the movie” below for VLC / another player while we finish streaming demux and web MKVs.'
               : 'You can download the movie below if a file is listed.';
           liveLog.style.display = 'block';
           liveLog.textContent = note;

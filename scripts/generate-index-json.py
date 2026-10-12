@@ -187,14 +187,15 @@ def media_root_poster(slug: str) -> str | None:
     return None
 
 
-WEB_SUFFIX = ".web-1080p.mp4"
-MOBILE_SUFFIX = ".mobile-720p.mp4"
+# Ladder containers are MKV only (no H.264 MP4 product).
+WEB_SUFFIXES = (".web-1080p.mkv",)
+MOBILE_SUFFIXES = (".mobile-720p.mkv",)
 HEVC_SUFFIX = ".hevc.mp4"
 
 
 def is_web_or_skip_media(name: str) -> bool:
     n = name.lower()
-    if n.endswith(WEB_SUFFIX) or n.endswith(MOBILE_SUFFIX):
+    if n.endswith(WEB_SUFFIXES) or n.endswith(MOBILE_SUFFIXES):
         return True
     return any(p in n for p in ("seam", "preview", "proxy", "edit-1080"))
 
@@ -235,28 +236,32 @@ def media_available(folder: Path, folder_rel: str, basename: str, manifest_paths
 
 
 def find_named_rendition(
-    folder: Path, folder_rel: str, manifest_paths: set[str], suffix: str
+    folder: Path, folder_rel: str, manifest_paths: set[str], suffixes: str | tuple[str, ...]
 ) -> str:
-    """Return basename ending with suffix if stub/file present, else ''."""
-    suffix_l = suffix.lower()
-    # Local files first
+    """Return basename ending with any of suffixes if stub/file present, else ''."""
+    if isinstance(suffixes, str):
+        suffixes = (suffixes,)
+    suffixes_l = tuple(s.lower() for s in suffixes)
+    # Local files first (prefer first matching suffix order, e.g. .mkv before .mp4)
     if folder.is_dir():
-        for p in sorted(folder.iterdir()):
-            if p.name.lower().endswith(suffix_l) and media_available(
-                folder, folder_rel, p.name, manifest_paths
-            ):
-                return p.name
+        for suf in suffixes_l:
+            for p in sorted(folder.iterdir()):
+                if p.name.lower().endswith(suf) and media_available(
+                    folder, folder_rel, p.name, manifest_paths
+                ):
+                    return p.name
     prefix = folder_rel.rstrip("/") + "/"
-    for mp in sorted(manifest_paths):
-        if not mp.startswith(prefix):
-            continue
-        rest = mp[len(prefix) :]
-        if "/" in rest:
-            continue
-        if rest.lower().endswith(suffix_l) and media_available(
-            folder, folder_rel, rest, manifest_paths
-        ):
-            return rest
+    for suf in suffixes_l:
+        for mp in sorted(manifest_paths):
+            if not mp.startswith(prefix):
+                continue
+            rest = mp[len(prefix) :]
+            if "/" in rest:
+                continue
+            if rest.lower().endswith(suf) and media_available(
+                folder, folder_rel, rest, manifest_paths
+            ):
+                return rest
     return ""
 
 
@@ -475,8 +480,8 @@ def main() -> None:
         reel_candidates = list(folder.glob("*.reel")) if folder.is_dir() else []
         reel = reel_candidates[0].as_posix() if len(reel_candidates) == 1 else None
         media = find_media(folder, folder_rel, manifest_paths)
-        media_web = find_named_rendition(folder, folder_rel, manifest_paths, WEB_SUFFIX)
-        media_mobile = find_named_rendition(folder, folder_rel, manifest_paths, MOBILE_SUFFIX)
+        media_web = find_named_rendition(folder, folder_rel, manifest_paths, WEB_SUFFIXES)
+        media_mobile = find_named_rendition(folder, folder_rel, manifest_paths, MOBILE_SUFFIXES)
         poster = find_poster(folder, folder_rel)
         if not poster:
             poster = media_root_poster(slug)

@@ -41,7 +41,16 @@ git -C "$ROOT" worktree add --detach "$WT" "$TIP"
 cp -a "$ROOT/now-showing.json" "$WT/now-showing.json"
 cp -a "$ROOT/index.json" "$WT/index.json"
 # also ship helper scripts if changed
-for f in scripts/bunny-now-showing-put.sh scripts/encode-ladder-nvenc.sh scripts/publish-now-showing-ladder.sh docs/BUNNY_NOW_SHOWING_PLAN.md; do
+for f in \
+  scripts/bunny-now-showing-put.sh \
+  scripts/encode-ladder-nvenc.sh \
+  scripts/publish-now-showing-ladder.sh \
+  scripts/generate-index-json.py \
+  docs/BUNNY_NOW_SHOWING_PLAN.md \
+  hooks/client/native/ExternalPlay.host.js \
+  hooks/client/native/ExternalPlay.android.js \
+  hooks/client/native/TheaterPlayer.host.js
+do
   if [[ -f "$ROOT/$f" ]]; then
     mkdir -p "$WT/$(dirname "$f")"
     cp -a "$ROOT/$f" "$WT/$f"
@@ -51,7 +60,9 @@ cd "$WT"
 git checkout -B "now-showing-ladder-$SLUG"
 git add now-showing.json index.json \
   scripts/bunny-now-showing-put.sh scripts/encode-ladder-nvenc.sh scripts/publish-now-showing-ladder.sh \
-  docs/BUNNY_NOW_SHOWING_PLAN.md 2>/dev/null || true
+  scripts/generate-index-json.py docs/BUNNY_NOW_SHOWING_PLAN.md \
+  hooks/client/native/ExternalPlay.host.js hooks/client/native/ExternalPlay.android.js \
+  hooks/client/native/TheaterPlayer.host.js 2>/dev/null || true
 if git diff --cached --quiet; then
   echo "nothing to publish"
 else
