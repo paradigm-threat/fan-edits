@@ -7,7 +7,9 @@
   },
   {
     "slug": "the-mummy-returns-2001-debugged",
-    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/The_Mummy_Returns_2001_-_Debugged.mkv"
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/The_Mummy_Returns_2001_-_Debugged.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/The_Mummy_Returns_2001_-_Debugged_web-1080p.mp4",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/The_Mummy_Returns_2001_-_Debugged_mobile-720p.mp4"
   },
   {
     "slug": "van-helsing-deanna-d",
