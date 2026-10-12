@@ -39,8 +39,8 @@ Object names must be **URL-path safe without percent-encoding**: only `A–Z` `a
 
 Optional ladder (same title stem; H.264 MP4 from `encode-ladder-nvenc.sh`):
 
-- `now-showing/<slug>/<Title_Safe>_web-1080p.mp4`
-- `now-showing/<slug>/<Title_Safe>_mobile-720p.mp4`
+- `now-showing/<slug>/<Title_Safe>_web-1080p.mkv`
+- `now-showing/<slug>/<Title_Safe>_mobile-720p.mkv`
 
 ---
 
@@ -50,8 +50,8 @@ Optional ladder (same title stem; H.264 MP4 from `encode-ladder-nvenc.sh`):
 now-showing/
   <slug>/
     <Title_Safe>.mkv              # required for Now showing
-    <Title_Safe>_web-1080p.mp4    # optional — enable only when present
-    <Title_Safe>_mobile-720p.mp4  # optional — enable only when present
+    <Title_Safe>_web-1080p.mkv    # optional — enable only when present
+    <Title_Safe>_mobile-720p.mkv  # optional — enable only when present
 ```
 
 **CDN host:** `flashbackrepository.b-cdn.net`
@@ -68,8 +68,8 @@ Then add to `now-showing.json`:
 {
   "slug": "the-mummy-1999-debugged",
   "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged.mkv",
-  "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_web-1080p.mp4",
-  "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_mobile-720p.mp4"
+  "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_web-1080p.mkv",
+  "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_mobile-720p.mkv"
 }
 ```
 

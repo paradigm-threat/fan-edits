@@ -9,8 +9,8 @@
 # Usage:
 #   ./scripts/bunny-now-showing-put.sh put <slug> "<Display Title>" /path/to/file.mkv
 #   ./scripts/bunny-now-showing-put.sh put-as <slug> <Remote_Safe_Name.ext> /path/to/file
-#   ./scripts/bunny-now-showing-put.sh ladder <slug> "<Display Title>" <web.mp4> <mobile.mp4>
-#       Uploads Title_Safe_web-1080p.mp4 + Title_Safe_mobile-720p.mp4; prints streamHttps* lines.
+#   ./scripts/bunny-now-showing-put.sh ladder <slug> "<Display Title>" <web.mkv> <mobile.mkv>
+#       Uploads Title_Safe_web-1080p.mkv + Title_Safe_mobile-720p.mkv; prints streamHttps* lines.
 #   ./scripts/bunny-now-showing-put.sh rename <slug> "<Display Title>" [source-name]
 #       source-name defaults to master.mkv (legacy); destination is always titled.
 #   ./scripts/bunny-now-showing-put.sh title "<Display Title>"   # print basename only
@@ -148,8 +148,9 @@ case "$cmd" in
     [[ -f "$mob" ]] || { echo "missing mobile: $mob" >&2; exit 1; }
     stem="$(title_to_basename "$title")"
     stem="${stem%.*}"
-    web_base="${stem}_web-1080p.mp4"
-    mob_base="${stem}_mobile-720p.mp4"
+    # Ladder is MKV (remux of H.264/AAC); never .mp4 on Bunny for Now showing.
+    web_base="${stem}_web-1080p.mkv"
+    mob_base="${stem}_mobile-720p.mkv"
     storage_put "now-showing/${slug}/${web_base}" "$web"
     storage_put "now-showing/${slug}/${mob_base}" "$mob"
     echo "streamHttpsWeb=$(cdn_url "$slug" "$web_base")"
@@ -171,7 +172,7 @@ Usage:
   bunny-now-showing-put.sh title "<Display Title>"
   bunny-now-showing-put.sh put <slug> "<Display Title>" /path/to/file.mkv
   bunny-now-showing-put.sh put-as <slug> <Remote_Safe_Name.ext> /path/to/file
-  bunny-now-showing-put.sh ladder <slug> "<Display Title>" <web.mp4> <mobile.mp4>
+  bunny-now-showing-put.sh ladder <slug> "<Display Title>" <web.mkv> <mobile.mkv>
   bunny-now-showing-put.sh rename <slug> "<Display Title>" [source-name]
 Never uploads or renames to master.*
 EOF

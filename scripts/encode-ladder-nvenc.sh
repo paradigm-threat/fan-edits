@@ -11,8 +11,9 @@ base="$(basename "$MASTER")"
 stem="${base%.*}"
 stem="${stem%.web-1080p}"
 stem="${stem%.mobile-720p}"
-WEB="$dir/${stem}.web-1080p.mp4"
-MOB="$dir/${stem}.mobile-720p.mp4"
+# Container is MKV (H.264 + AAC inside); matches Bunny Now showing ladder naming.
+WEB="$dir/${stem}.web-1080p.mkv"
+MOB="$dir/${stem}.mobile-720p.mkv"
 LOG="${ENCODE_LOG:-/tmp/encode-ladder-$(basename "$stem").log}"
 
 # Prefer NVENC only when CUDA loads; else libx264 veryfast.
@@ -38,7 +39,6 @@ encode() {
       -vf "$vf" -pix_fmt yuv420p \
       -c:v h264_nvenc -preset p4 -cq "$cq" -rc vbr -b:v 0 \
       -c:a aac -b:a "${aac}k" -ac 2 \
-      -movflags +faststart \
       "$out" 2>&1 | tee -a "$LOG"
   else
     ffmpeg -y -hide_banner -loglevel info -stats \
@@ -47,7 +47,6 @@ encode() {
       -vf "$vf" -pix_fmt yuv420p \
       -c:v libx264 -preset veryfast -crf "$cq" \
       -c:a aac -b:a "${aac}k" -ac 2 \
-      -movflags +faststart \
       "$out" 2>&1 | tee -a "$LOG"
   fi
   ls -lh "$out" | tee -a "$LOG"
