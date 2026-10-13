@@ -19,7 +19,9 @@
   },
   {
     "slug": "final-fantasy-2001-the-phantom-menace",
-    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/final-fantasy-2001-the-phantom-menace/Final_Fantasy_2001_-_The_Phantom_Menace.mkv"
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/final-fantasy-2001-the-phantom-menace/Final_Fantasy_2001_-_The_Phantom_Menace.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/final-fantasy-2001-the-phantom-menace/Final_Fantasy_2001_-_The_Phantom_Menace_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/final-fantasy-2001-the-phantom-menace/Final_Fantasy_2001_-_The_Phantom_Menace_mobile-720p.mkv"
   },
   {
     "slug": "sonic-2020-deschwartzed",

@@ -115,8 +115,10 @@
       "subtitles": [],
       "subtitlesJson": "[]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/final-fantasy-2001-the-phantom-menace/Final_Fantasy_2001_-_The_Phantom_Menace.mkv",
-      "qualityWebEnabled": false,
-      "qualityMobileEnabled": false,
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/final-fantasy-2001-the-phantom-menace/Final_Fantasy_2001_-_The_Phantom_Menace_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/final-fantasy-2001-the-phantom-menace/Final_Fantasy_2001_-_The_Phantom_Menace_mobile-720p.mkv",
+      "qualityWebEnabled": true,
+      "qualityMobileEnabled": true,
       "blurb": "*Final Fantasy: The Spirits Within* \u2014 a minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy\u2013like title placement \u2014 with the rare Japanese track and remix soundtrack upgrades.",
       "poster": "poster.jpg"
     },
