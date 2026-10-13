@@ -31,7 +31,9 @@
   },
   {
     "slug": "sonic-2-2022-deschwartzed",
-    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/sonic-2-2022-deschwartzed/Sonic_2_2022_-_DeSchwartzed_Edition.mkv"
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/sonic-2-2022-deschwartzed/Sonic_2_2022_-_DeSchwartzed_Edition.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/sonic-2-2022-deschwartzed/Sonic_2_2022_-_DeSchwartzed_Edition_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/sonic-2-2022-deschwartzed/Sonic_2_2022_-_DeSchwartzed_Edition_mobile-720p.mkv"
   },
   {
     "slug": "sonic-3-2024-deschwartzed",
