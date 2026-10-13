@@ -109,7 +109,8 @@
         '.fb-now-showing-carousel .fb-now-showing-title-block{min-width:0;flex:1}',
         '.fb-now-showing-carousel .fb-now-showing-title{margin:0}',
         '.fb-now-showing-sub{margin:6px 0 0;font-size:.85rem;line-height:1.45;color:#a69788;max-width:42rem}',
-        '.fb-now-showing-sub .fb-link{color:#e8c872}',
+        '.fb-now-showing-sub .fb-link{color:#e8c872;text-decoration:none}',
+        '.fb-now-showing-sub .fb-link:hover{color:#f5e6be;text-decoration:none}',
         '.fb-theater-seed-status{margin:0 0 10px;color:#c4b49a}',
         /* Ways to watch — large type, three clear paths */
         '.fb-ways-to-watch{margin:14px 0 0;padding:18px 16px 16px;border:1px solid #5a4a2a;background:rgba(40,28,12,.45)}',
@@ -137,6 +138,7 @@
         '.fb-slideshow-stage{display:grid}',
         /* Opacity-only crossfade — do not use visibility:hidden on inactive (kills old-card fade). */
         '.fb-slideshow-layer{grid-area:1/1;min-width:0;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;color:#e8c872;text-decoration:none;opacity:0;transition:opacity 1.1s ease-in-out;pointer-events:none;z-index:1}',
+        '.fb-slideshow-layer:hover,.fb-slideshow-layer:focus{text-decoration:none}',
         '.fb-slideshow-layer.is-active{opacity:1;pointer-events:auto;z-index:2}',
         /* Poster column: intrinsic 2:3 height drives the whole card — no empty gap under art. */
         '.fb-slideshow-img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:contain;object-position:center center;background:#0d0505}',
@@ -153,7 +155,8 @@
         '.fb-slideshow-md strong{color:#f5e6be;font-weight:600}',
         '.fb-slideshow-md em{font-style:italic}',
         '.fb-slideshow-md-code{font-family:ui-monospace,Consolas,monospace;font-size:.88em;color:#e8c872}',
-        '.fb-slideshow-md-link{color:#e8c872;text-decoration:underline}',
+        '.fb-slideshow-md-link{color:#e8c872;text-decoration:none}',
+        '.fb-slideshow-md-link:hover,.fb-slideshow-md-link:focus{color:#f5e6be;text-decoration:none}',
         '.fb-slideshow-md-list{margin:.35em 0 .55em;padding-left:1.15em}',
         '.fb-slideshow-meta{margin-top:10px;padding-top:8px;border-top:1px solid rgba(184,134,11,.35);font-size:.78rem;line-height:1.4;color:#a69788}',
         '.fb-slideshow-meta-label{display:inline-block;margin-right:6px;letter-spacing:.1em;text-transform:uppercase;color:#b8860b;font-size:.68rem}',

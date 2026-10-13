@@ -16,5 +16,9 @@
     "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d.mkv",
     "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d_web-1080p.mkv",
     "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d_mobile-720p.mkv"
+  },
+  {
+    "slug": "final-fantasy-2001-the-phantom-menace",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/final-fantasy-2001-the-phantom-menace/Final_Fantasy_2001_-_The_Phantom_Menace.mkv"
   }
 ]

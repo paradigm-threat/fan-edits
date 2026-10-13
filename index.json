@@ -2,7 +2,8 @@
   "nowShowing": [
     "the-mummy-1999-debugged",
     "the-mummy-returns-2001-debugged",
-    "van-helsing-deanna-d"
+    "van-helsing-deanna-d",
+    "final-fantasy-2001-the-phantom-menace"
   ],
   "projects": [
     {
@@ -103,16 +104,18 @@
       "path": "FanMixes/Final Fantasy (2001) - The Phantom Menace",
       "title": "Final Fantasy (2001) \u2014 The Phantom Menace",
       "originalTitle": "Final Fantasy (2001)",
-      "status": "coming_soon",
+      "status": "showing",
       "media": "Final Fantasy (2001) - The Phantom Menace.mkv",
       "mediaWeb": "",
       "mediaMobile": "",
-      "image": "",
+      "image": "FanMixes/Final Fantasy (2001) - The Phantom Menace/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/final-fantasy-2001-the-phantom-menace/Final_Fantasy_2001_-_The_Phantom_Menace.mkv",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
-      "blurb": "*Final Fantasy: The Spirits Within* \u2014 a minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy\u2013like title placement \u2014 with the rare Japanese track and remix soundtrack upgrades."
+      "blurb": "*Final Fantasy: The Spirits Within* \u2014 a minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy\u2013like title placement \u2014 with the rare Japanese track and remix soundtrack upgrades.",
+      "poster": "poster.jpg"
     },
     {
       "slug": "fried-green-tomatoes-1991-no-frank-bennett",
