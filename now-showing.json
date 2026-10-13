@@ -20,5 +20,13 @@
   {
     "slug": "final-fantasy-2001-the-phantom-menace",
     "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/final-fantasy-2001-the-phantom-menace/Final_Fantasy_2001_-_The_Phantom_Menace.mkv"
+  },
+  {
+    "slug": "sonic-2020-deschwartzed",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/sonic-2020-deschwartzed/Sonic_2020_-_DeSchwartzed_Edition.mkv"
+  },
+  {
+    "slug": "sonic-2-2022-deschwartzed",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/sonic-2-2022-deschwartzed/Sonic_2_2022_-_DeSchwartzed_Edition.mkv"
   }
 ]

@@ -3,7 +3,9 @@
     "the-mummy-1999-debugged",
     "the-mummy-returns-2001-debugged",
     "van-helsing-deanna-d",
-    "final-fantasy-2001-the-phantom-menace"
+    "final-fantasy-2001-the-phantom-menace",
+    "sonic-2020-deschwartzed",
+    "sonic-2-2022-deschwartzed"
   ],
   "projects": [
     {
@@ -259,16 +261,18 @@
       "path": "FanMixes/Sonic (2020) - DeSchwartzed",
       "title": "Sonic (2020) \u2014 DeSchwartzed Edition",
       "originalTitle": "Sonic (2020)",
-      "status": "coming_soon",
+      "status": "showing",
       "media": "Sonic (2020) - DeSchwartzed Edition.mkv",
       "mediaWeb": "",
       "mediaMobile": "",
-      "image": "",
+      "image": "FanMixes/Sonic (2020) - DeSchwartzed/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/sonic-2020-deschwartzed/Sonic_2020_-_DeSchwartzed_Edition.mkv",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
-      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during"
+      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during",
+      "poster": "poster.jpg"
     },
     {
       "slug": "sonic-2-2022-deschwartzed",
@@ -276,16 +280,18 @@
       "path": "FanMixes/Sonic 2 (2022) - DeSchwartzed",
       "title": "Sonic 2 (2022) \u2014 DeSchwartzed Edition",
       "originalTitle": "Sonic 2 (2022)",
-      "status": "coming_soon",
+      "status": "showing",
       "media": "Sonic 2 (2022) - DeSchwartzed Edition.mkv",
       "mediaWeb": "",
       "mediaMobile": "",
-      "image": "",
+      "image": "FanMixes/Sonic 2 (2022) - DeSchwartzed/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/sonic-2-2022-deschwartzed/Sonic_2_2022_-_DeSchwartzed_Edition.mkv",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
-      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during"
+      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during",
+      "poster": "poster.jpg"
     },
     {
       "slug": "sonic-3-2024-deschwartzed",
@@ -297,12 +303,13 @@
       "media": "",
       "mediaWeb": "",
       "mediaMobile": "",
-      "image": "",
+      "image": "FanMixes/Sonic 3 (2024) - DeSchwartzed/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
-      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during"
+      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during",
+      "poster": "poster.jpg"
     },
     {
       "slug": "terminator-3-2003-brass-monkey",
