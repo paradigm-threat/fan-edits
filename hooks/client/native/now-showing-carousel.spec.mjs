@@ -72,12 +72,12 @@ test.describe('Now Showing carousel crossfade', () => {
 
     // Park CSS must be current (no visibility:hidden on inactive layers).
     const cssId = await page.evaluate(() => {
-      const st = document.getElementById('fb-park-native-css-v5')
+      const st = document.getElementById('fb-park-native-css-v11')
       return st ? st.id : null
     })
-    expect(cssId).toBe('fb-park-native-css-v5')
+    expect(cssId).toBe('fb-park-native-css-v11')
     const hasVisHidden = await page.evaluate(() => {
-      const st = document.getElementById('fb-park-native-css-v5')
+      const st = document.getElementById('fb-park-native-css-v11')
       return st ? /visibility\s*:\s*hidden/.test(st.textContent || '') : true
     })
     expect(hasVisHidden).toBe(false)

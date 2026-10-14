@@ -99,8 +99,29 @@
     for (let i = 0; i < lines.length; i++) {
       const raw = lines[i];
       const t = raw.trim();
-      if (!t) {
+      if (!t || t === '---') {
         closeList();
+        continue;
+      }
+      // Skip GFM tables (carousel is prose; full tables live on the title page).
+      if (t.charAt(0) === '|') {
+        closeList();
+        continue;
+      }
+      const heading = t.match(/^(#{1,3})\s+(.+)$/);
+      if (heading) {
+        closeList();
+        const level = heading[1].length;
+        const tag = level === 1 ? 'h4' : level === 2 ? 'h4' : 'h5';
+        parts.push(
+          '<' +
+            tag +
+            ' class="fb-slideshow-md-h">' +
+            mdInline(heading[2]) +
+            '</' +
+            tag +
+            '>',
+        );
         continue;
       }
       if (/^[-*]\s+/.test(t)) {
@@ -303,16 +324,27 @@
       scroll.className = 'fb-slideshow-scroll';
       const blurb = doc.createElement('div');
       blurb.className = 'fb-slideshow-blurb fb-slideshow-md';
+      const readme = doc.createElement('div');
+      readme.className = 'fb-slideshow-readme fb-slideshow-md';
       const meta = doc.createElement('div');
       meta.className = 'fb-slideshow-meta';
       scroll.appendChild(blurb);
+      scroll.appendChild(readme);
       scroll.appendChild(meta);
       copy.appendChild(kicker);
       copy.appendChild(title);
       copy.appendChild(scroll);
       a.appendChild(img);
       a.appendChild(copy);
-      return { a: a, img: img, title: title, blurb: blurb, meta: meta, scroll: scroll };
+      return {
+        a: a,
+        img: img,
+        title: title,
+        blurb: blurb,
+        readme: readme,
+        meta: meta,
+        scroll: scroll,
+      };
     }
 
     // Mutable roles: after each crossfade we swap pointers so the visible
@@ -380,6 +412,19 @@
         layer.blurb.innerHTML = '';
         layer.blurb.style.display = 'none';
       }
+      // README body (sections after the lead blurb) — scroll clipped to poster height.
+      const readmeText = it && it.readme ? String(it.readme) : '';
+      if (readmeText.trim()) {
+        setMarkdown(layer.readme, readmeText);
+        layer.readme.style.display = '';
+      } else {
+        layer.readme.innerHTML = '';
+        layer.readme.style.display = 'none';
+      }
+      // Reset scroll so a long previous title doesn't leave the pane mid-page.
+      try {
+        layer.scroll.scrollTop = 0;
+      } catch (_) {}
       fillMeta(layer, it);
       if (layer._softRetry) {
         try {

@@ -7,7 +7,7 @@
 (function (global) {
   'use strict';
 
-  var CSS_ID = 'fb-park-native-css-v10';
+  var CSS_ID = 'fb-park-native-css-v11';
   var BRAND_LINKS_ID = 'fb-brand-head-links';
   var THEATER_BG_CSS = '/hooks/client/brand/theater-bg.css';
   var THEATER_THEME_KEY = 'flashback.theaterTheme.v1';
@@ -139,6 +139,7 @@
         'fb-park-native-css-v7',
         'fb-park-native-css-v8',
         'fb-park-native-css-v9',
+        'fb-park-native-css-v10',
       ].forEach(
         function (oldId) {
           var old = global.document.getElementById(oldId);
@@ -237,6 +238,11 @@
         '.fb-slideshow-blurb{margin:0;font-size:.95rem;line-height:1.5;color:#c4b49a}',
         '.fb-slideshow-blurb p{margin:0 0 .55em}',
         '.fb-slideshow-blurb p:last-child{margin-bottom:0}',
+        '.fb-slideshow-readme{margin:10px 0 0;font-size:.88rem;line-height:1.45;color:#b8a890}',
+        '.fb-slideshow-readme p{margin:0 0 .55em}',
+        '.fb-slideshow-readme p:last-child{margin-bottom:0}',
+        '.fb-slideshow-md-h{margin:.85em 0 .35em;font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;color:#e8c872;font-weight:600;line-height:1.3}',
+        '.fb-slideshow-readme .fb-slideshow-md-h:first-child{margin-top:0}',
         '.fb-slideshow-md strong{color:#f5e6be;font-weight:600}',
         '.fb-slideshow-md em{font-style:italic}',
         '.fb-slideshow-md-code{font-family:ui-monospace,Consolas,monospace;font-size:.88em;color:#e8c872}',

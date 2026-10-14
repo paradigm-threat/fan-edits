@@ -1365,6 +1365,15 @@ function nowShowingItemsJsonInner(projects, nowShowingSlugs) {
       }
       let stats = ''
       let changes = ''
+      let readmeBody = ''
+      let projectPath = ''
+      try {
+        if (p && p.path) {
+          projectPath = str(p.path)
+        }
+      } catch (ePath) {
+        projectPath = ''
+      }
       try {
         stats = projectStatsLine(p)
       } catch (eStatsLine) {
@@ -1375,12 +1384,35 @@ function nowShowingItemsJsonInner(projects, nowShowingSlugs) {
       } catch (eChanges) {
         changes = ''
       }
+      // Full README (minus H1 + lead blurb) for carousel scroll pane.
+      if (projectPath.length > 0) {
+        try {
+          let rawReadme = ''
+          try {
+            rawReadme = fetchText(projectPath + '/README.md')
+          } catch (eFetch) {
+            rawReadme = ''
+          }
+          if (rawReadme && str(rawReadme).length > 0) {
+            const hero = parseReadmeHero(rawReadme, t)
+            if (blurb.length === 0 && hero.blurb && hero.blurb.length > 0) {
+              blurb = hero.blurb
+            }
+            if (hero.body && hero.body.length > 0) {
+              readmeBody = rewriteReadmeAssetLinks(hero.body, projectPath)
+            }
+          }
+        } catch (eReadme) {
+          readmeBody = ''
+        }
+      }
       out = out.concat([
         {
           title: t,
           href: '/' + s,
           poster: posterFor(p),
           blurb: blurb,
+          readme: readmeBody,
           stats: stats,
           changes: changes,
         },
