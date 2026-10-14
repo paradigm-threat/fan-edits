@@ -73,7 +73,7 @@ curl -sI -H "Range: bytes=0-1048575" \
 | APK | Application id | What you see |
 |-----|----------------|--------------|
 | Generic Relay | `com.relay.pure` | Server list, repo tabs, shell settings. Any Relay origin via **HookRenderer** + client hook. |
-| Flashback Repository | `com.flashback.repository` | Baked `https://flashbackrepository.org`. **Native UI** (no CleverScript paint): library from `/index.json`, title + ownership keys shared with the web, ExoPlayer theater. Menu opens Setup / Legal / Motivation / Terms / Request via fetched `content/*.md` (`RelayMarkdownView`); Board and **Chat** open the site in a browser / Custom Tab (`/board`, `/chat` — live IRC chat is web-only; no native IRC client); Lab is in-app. |
+| Flashback Repository | `com.flashback.repository` | Baked `https://flashbackrepository.org`. **Native UI** (no CleverScript paint): library from `/index.json`, title + ownership keys shared with the web, ExoPlayer theater. Menu opens Setup / Legal / Motivation / Terms / Request via fetched `content/*.md` (`RelayMarkdownView`); Board is in-app; **Chat** is native IRC over the site chat-edge WebSocket (`/chat/ws`) with coalesced channel notifications; Lab is in-app. |
 Build from `relay-client-android/android`:
 
 ```bash
@@ -99,11 +99,15 @@ Build from `relay-client-android/android`:
 - Web checklist: **[/android-lab](/android-lab)** (`content/android-lab.md`).
 - Unit tests: `./gradlew :app:testFlashbackDebugUnitTest` in `relay-client-android/android`.
 
-## Live chat (simple APK path)
+## Live chat (native IRC)
 
-Web ships a full IRC-style client at **`/chat`** (sidebar, channel search, markdown) plus a lazy per-page embed. The Flashback APK does **not** embed an IRC stack.
+Web and the Flashback APK share the same Ergo + chat-edge stack (`/chat/api/*`, `WS /chat/ws`).
 
-**Recommended APK UX:** open `https://flashbackrepository.org/chat` (optional `?c=movie-<slug>`) in a **Custom Tab** or external browser — same pattern as Board. Deep-link from a title screen with that movie’s channel when you add a Chat action.
+**APK Chat screen:** realtime join/send/history for lobby and catalog channels. Menu → **Chat**.
+
+**Notifications:** every public channel is listed for individual opt-in (no join-all). Digests coalesce activity (default **10 minute** quiet window between alert sounds) so you know something is happening without a notice per PRIVMSG. Tap opens Chat on the most recent channel.
+
+**Battery default:** IRC WebSocket runs while the app is in the foreground. **Keep listening in background** is opt-in (foreground service). Each watched channel is an IRC JOIN — pick only what you care about.
 
 ## Client-hook path (deferred polish)
 
