@@ -875,9 +875,9 @@ datastore:
 
     # connection information for SQLite (currently only used for persistent history)
     sqlite:
-        enabled: false
-        # path to the SQLite database file
-        database-path: "ergo_history.db"
+        enabled: true
+        # path to the SQLite database file (absolute — survives Ergo cwd changes)
+        database-path: "/opt/relay/chat/ergo/ergo_history.db"
         # timeout when waiting for write lock
         busy-timeout: 5s
         # maximum concurrent connections
@@ -1064,7 +1064,8 @@ history:
     restrictions:
         # if this is set, messages older than this cannot be retrieved by anyone
         # (and will eventually be deleted from persistent storage, if that's enabled)
-        expire-time: 1w
+        # Align with JSONL retention (CHAT_RETENTION_DAYS=90)
+        expire-time: 90d
 
         # this restricts access to channel history (it can be overridden by channel
         # owners). options are: 'none' (no restrictions), 'registration-time'
@@ -1087,17 +1088,17 @@ history:
     # size limits above (`channel-length`, `client-length`, etc.); persistent
     # history has no limits other than those imposed by expire-time.
     persistent:
-        enabled: false
+        enabled: true
 
-        # store unregistered channel messages in the persistent database?
-        unregistered-channels: false
+        # Mesh channels (#flashback, #pt-*, #page-*, …) are mostly unregistered
+        unregistered-channels: true
 
         # for a registered channel, the channel owner can potentially customize
         # the history storage setting. as the server operator, your options are
         # 'disabled' (no persistent storage, regardless of per-channel setting),
         # 'opt-in', 'opt-out', and 'mandatory' (force persistent storage, ignoring
         # per-channel setting):
-        registered-channels: "opt-out"
+        registered-channels: "mandatory"
 
         # direct messages are only stored in the database for logged-in clients;
         # you can control how they are stored here (same options as above).
