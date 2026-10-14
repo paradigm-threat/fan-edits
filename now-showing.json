@@ -58,5 +58,11 @@
     "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy.mkv",
     "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy_web-1080p.mkv",
     "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy_mobile-720p.mkv"
+  },
+  {
+    "slug": "congo-1995-adult-supervision",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/congo-1995-adult-supervision/Congo_1995_-_Adult_Supervision_Edition.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/congo-1995-adult-supervision/Congo_1995_-_Adult_Supervision_Edition_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/congo-1995-adult-supervision/Congo_1995_-_Adult_Supervision_Edition_mobile-720p.mkv"
   }
 ]

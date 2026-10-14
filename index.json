@@ -9,7 +9,8 @@
     "sonic-3-2024-deschwartzed",
     "silent-hill-2006-nay-tomorrow",
     "ninja-scroll-1993-minor-damage",
-    "war-of-the-worlds-2005-family-therapy"
+    "war-of-the-worlds-2005-family-therapy",
+    "congo-1995-adult-supervision"
   ],
   "projects": [
     {
@@ -76,15 +77,18 @@
       "path": "FanMixes/Congo (1995) - Adult Supervision",
       "title": "Congo (1995) \u2014 Adult Supervision",
       "originalTitle": "Congo (1995)",
-      "status": "coming_soon",
+      "status": "showing",
       "media": "Congo (1995) - Adult Supervision Edition.mkv",
       "mediaWeb": "",
       "mediaMobile": "",
       "image": "FanMixes/Congo (1995) - Adult Supervision/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
-      "qualityWebEnabled": false,
-      "qualityMobileEnabled": false,
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/congo-1995-adult-supervision/Congo_1995_-_Adult_Supervision_Edition.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/congo-1995-adult-supervision/Congo_1995_-_Adult_Supervision_Edition_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/congo-1995-adult-supervision/Congo_1995_-_Adult_Supervision_Edition_mobile-720p.mkv",
+      "qualityWebEnabled": true,
+      "qualityMobileEnabled": true,
       "blurb": "A leaner *Congo* that strips Dr. Peter Elliot\u2019s childish / incel-adjacent berating of ex-CIA Karen Ross so the adventure can lead \u2014 and trims Travis/Captain Wanta screaming, some gore, plus a travel plot hole by moving the Bob Driscoll encounter forward.",
       "poster": "poster.jpg"
     },
@@ -552,8 +556,8 @@
       "path": "FanMixes/War of the Worlds (2005) - Family Therapy",
       "title": "War of the Worlds (2005) \u2014 Family Therapy Edition",
       "originalTitle": "War of the Worlds (2005)",
-      "status": "showing",
-      "media": "War of the Worlds (2005) - Family Therapy.mkv",
+      "status": "wip",
+      "media": "",
       "mediaWeb": "",
       "mediaMobile": "",
       "image": "FanMixes/War of the Worlds (2005) - Family Therapy/poster.jpg",
@@ -562,8 +566,8 @@
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy_mobile-720p.mkv",
-      "qualityWebEnabled": true,
-      "qualityMobileEnabled": true,
+      "qualityWebEnabled": false,
+      "qualityMobileEnabled": false,
       "blurb": "This FanMix eliminates nearly all the toxic family behavior featured in the movie, so that WotW (2005) becomes a movie about aliens and not allusions to Spielberg's trouble raising his own children.",
       "poster": "poster.jpg"
     },
