@@ -1,0 +1,8 @@
+[Unit]
+Description=Ensure Flashback chat Caddy routes survive park-tls rewrites
+After=network.target caddy.service
+
+[Service]
+Type=oneshot
+ExecStart=/opt/relay/chat/scripts/ensure-caddy-chat.sh
+Nice=10

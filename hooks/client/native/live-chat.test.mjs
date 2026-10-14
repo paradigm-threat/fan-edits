@@ -73,6 +73,30 @@ test('ChatCommon has markdown, nick storage, ws path', () => {
   assert.match(common, /\/chat\/api\/health/)
   assert.match(common, /channelFromPath/)
   assert.match(common, /movie-/)
+  assert.match(common, /function healthCheck/)
+  assert.match(common, /retries/)
+})
+
+test('ChatApp retries when API unavailable', () => {
+  assert.match(chatApp, /tryConnect/)
+  assert.match(chatApp, /Chat API unavailable — retrying/)
+})
+
+test('patch-caddy remote mode only proxies api and ws', () => {
+  const patch = read(root, 'ops/chat/scripts/patch-caddy.sh')
+  const remote = read(root, 'ops/chat/caddy/Caddyfile.flashback-remote')
+  assert.match(patch, /handle \/chat\/api\*/)
+  assert.match(patch, /handle \/chat\/ws/)
+  assert.doesNotMatch(patch, /handle \/chat\/\* \{/)
+  assert.match(remote, /handle \/chat\/api\*/)
+  assert.match(remote, /handle \/chat\/ws/)
+  assert.doesNotMatch(remote, /handle \/chat\/\* \{/)
+})
+
+test('caddy guard units and ensure script exist', () => {
+  assert.match(read(root, 'ops/chat/scripts/ensure-caddy-chat.sh'), /flashback-chat-sidecar/)
+  assert.match(read(root, 'ops/chat/systemd/flashback-chat-caddy-guard.path'), /Caddyfile\.parked/)
+  assert.match(read(root, 'ops/chat/install.sh'), /install_caddy_guard/)
 })
 
 test('validation allows ops/chat paths', () => {

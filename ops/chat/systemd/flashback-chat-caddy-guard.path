@@ -1,0 +1,10 @@
+[Unit]
+Description=Watch park-tls Caddyfile for Flashback chat route drift
+
+[Path]
+PathChanged=/opt/relay/state/park-tls/Caddyfile.parked
+PathModified=/opt/relay/state/park-tls/Caddyfile.parked
+Unit=flashback-chat-caddy-guard.service
+
+[Install]
+WantedBy=multi-user.target

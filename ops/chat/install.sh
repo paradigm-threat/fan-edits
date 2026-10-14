@@ -33,6 +33,7 @@ chown -R relay-chat:relay-chat "${CHAT_ROOT}"
 
 install -m 0755 "${ROOT}/scripts/backup.sh" "${CHAT_ROOT}/scripts/backup.sh"
 install -m 0755 "${ROOT}/scripts/patch-caddy.sh" "${CHAT_ROOT}/scripts/patch-caddy.sh"
+install -m 0755 "${ROOT}/scripts/ensure-caddy-chat.sh" "${CHAT_ROOT}/scripts/ensure-caddy-chat.sh"
 
 mkdir -p "${CHAT_ROOT}/caddy"
 if [[ "${EDGE_ONLY}" -eq 1 ]]; then
@@ -50,10 +51,18 @@ else
   fi
 fi
 
+install_caddy_guard() {
+  install -m 0644 "${ROOT}/systemd/flashback-chat-caddy-guard.service" /etc/systemd/system/flashback-chat-caddy-guard.service
+  install -m 0644 "${ROOT}/systemd/flashback-chat-caddy-guard.path" /etc/systemd/system/flashback-chat-caddy-guard.path
+  install -m 0644 "${ROOT}/systemd/flashback-chat-caddy-guard.timer" /etc/systemd/system/flashback-chat-caddy-guard.timer
+  systemctl daemon-reload
+  systemctl enable --now flashback-chat-caddy-guard.path flashback-chat-caddy-guard.timer
+}
 
 if [[ "${EDGE_ONLY}" -eq 1 ]]; then
-  echo "[install] edge-only: Caddy remote proxy + mirror dirs"
+  echo "[install] edge-only: Caddy remote proxy + mirror dirs + guard"
   CHAT_CADDY_MODE=remote "${CHAT_ROOT}/scripts/patch-caddy.sh"
+  install_caddy_guard
   echo "[install] edge-only done"
   exit 0
 fi
@@ -106,6 +115,7 @@ systemctl enable --now flashback-chat-edge.service
 systemctl enable --now flashback-chat-backup.timer
 
 CHAT_CADDY_MODE=local "${CHAT_ROOT}/scripts/patch-caddy.sh"
+install_caddy_guard
 
 echo "[install] health:"
 curl -fsS "http://127.0.0.1:8098/chat/api/health" || true

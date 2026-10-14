@@ -15,8 +15,8 @@ Environment=CHAT_LOG_ROOT=/opt/relay/chat/logs
 Environment=CHAT_INDEX=/opt/relay/chat/channels.json
 Environment=CHAT_LOGGER_NICK=FlashbackLog
 ExecStart=/usr/bin/node /opt/relay/chat/chat-edge/server.mjs
-Restart=on-failure
-RestartSec=3
+Restart=always
+RestartSec=2
 NoNewPrivileges=true
 ProtectSystem=strict
 ProtectHome=true

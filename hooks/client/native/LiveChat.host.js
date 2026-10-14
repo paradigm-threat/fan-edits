@@ -89,7 +89,13 @@
       C.healthCheck().then(function (ok) {
         if (!ok) {
           root.classList.add('fb-chat-unavailable');
-          placeholder.textContent = 'Chat unavailable right now. Try the full chat page later.';
+          placeholder.textContent = 'Chat unavailable — retrying…';
+          activated = false;
+          setTimeout(function () {
+            if (!root.isConnected) return;
+            root.classList.remove('fb-chat-unavailable');
+            activate();
+          }, 8000);
           return;
         }
 

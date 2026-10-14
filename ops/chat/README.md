@@ -42,3 +42,5 @@ sudo ./install.sh --edge-only
 ## Ops note
 
 Never `POST /load` an empty body to Caddy admin — it drops :443 listeners. Prefer `systemctl restart caddy` after ensuring `/tmp` exists (1777). On nodes where park-tls already defines `flashbackrepository.org`, use `patch-caddy.sh` only — do not also `import` `Caddyfile.flashback` (ambiguous site).
+
+Park plugin periodically rewrites `/opt/relay/state/park-tls/Caddyfile.parked` and can wipe chat handles. `flashback-chat-caddy-guard.path` + `.timer` re-run `ensure-caddy-chat.sh` when that happens (and every 2 minutes). Manual: `sudo CHAT_CADDY_MODE=local|remote /opt/relay/chat/scripts/patch-caddy.sh`.

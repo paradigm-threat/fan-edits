@@ -148,7 +148,7 @@
     );
   }
 
-  function healthCheck() {
+  function healthCheckOnce() {
     return fetchJson('/chat/api/health').then(
       function (j) {
         return !!(j && j.ok);
@@ -157,6 +157,23 @@
         return false;
       },
     );
+  }
+
+  /** Retry briefly — park/Caddy route drift can 404 for a few seconds after rewrite. */
+  function healthCheck(retries) {
+    var left = typeof retries === 'number' ? retries : 4;
+    function attempt() {
+      return healthCheckOnce().then(function (ok) {
+        if (ok || left <= 0) return ok;
+        left -= 1;
+        return new Promise(function (resolve) {
+          setTimeout(function () {
+            resolve(attempt());
+          }, 700);
+        });
+      });
+    }
+    return attempt();
   }
 
   function fetchHistory(channel, limit) {

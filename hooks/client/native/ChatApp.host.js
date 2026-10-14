@@ -229,11 +229,7 @@
       });
     }
 
-    C.healthCheck().then(function (ok) {
-      if (!ok) {
-        status.textContent = 'Chat API unavailable';
-        return;
-      }
+    function bootChat() {
       return C.ensureNick().then(function (nick) {
         nickInput.value = nick;
         state.sock = C.connectChat({
@@ -316,7 +312,23 @@
           C.setNickMode(modeSelect.value);
         });
       });
-    });
+    }
+
+    function tryConnect(attempt) {
+      var n = attempt || 0;
+      status.textContent = n ? 'Retrying chat…' : 'Connecting…';
+      C.healthCheck().then(function (ok) {
+        if (!ok) {
+          status.textContent = 'Chat API unavailable — retrying…';
+          setTimeout(function () {
+            tryConnect(n + 1);
+          }, Math.min(20000, 2500 + n * 2500));
+          return;
+        }
+        bootChat();
+      });
+    }
+    tryConnect(0);
 
     return root;
   }
