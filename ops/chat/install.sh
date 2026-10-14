@@ -59,10 +59,22 @@ install_caddy_guard() {
   systemctl enable --now flashback-chat-caddy-guard.path flashback-chat-caddy-guard.timer
 }
 
+install_irc_proxy() {
+  if ! command -v socat >/dev/null 2>&1; then
+    apt-get update -qq && apt-get install -y -qq socat || true
+  fi
+  install -m 0644 "${ROOT}/systemd/flashback-irc-proxy@.service" /etc/systemd/system/flashback-irc-proxy@.service
+  install -m 0755 "${ROOT}/scripts/open-irc-ports.sh" "${CHAT_ROOT}/scripts/open-irc-ports.sh"
+  systemctl daemon-reload
+  "${CHAT_ROOT}/scripts/open-irc-ports.sh" || true
+  systemctl enable --now flashback-irc-proxy@6667.service flashback-irc-proxy@6697.service
+}
+
 if [[ "${EDGE_ONLY}" -eq 1 ]]; then
-  echo "[install] edge-only: Caddy remote proxy + mirror dirs + guard"
+  echo "[install] edge-only: Caddy remote proxy + IRC proxy + guard"
   CHAT_CADDY_MODE=remote "${CHAT_ROOT}/scripts/patch-caddy.sh"
   install_caddy_guard
+  install_irc_proxy
   echo "[install] edge-only done"
   exit 0
 fi
@@ -116,8 +128,13 @@ systemctl enable --now flashback-chat-backup.timer
 
 CHAT_CADDY_MODE=local "${CHAT_ROOT}/scripts/patch-caddy.sh"
 install_caddy_guard
+install -m 0755 "${ROOT}/scripts/open-irc-ports.sh" "${CHAT_ROOT}/scripts/open-irc-ports.sh"
+"${CHAT_ROOT}/scripts/open-irc-ports.sh" || true
+# Primary hosts Ergo publicly — do not enable the edge TCP proxy here.
+systemctl disable --now flashback-irc-proxy@6667.service flashback-irc-proxy@6697.service 2>/dev/null || true
 
 echo "[install] health:"
 curl -fsS "http://127.0.0.1:8098/chat/api/health" || true
 echo
+ss -lntp | grep -E ':6667|:6697' || true
 echo "[install] primary complete"

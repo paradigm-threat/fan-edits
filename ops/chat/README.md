@@ -33,6 +33,15 @@ sudo ./install.sh --edge-only
 - `GET /chat/api/name?mode=theater|cut-room`
 - `WS /chat/ws` — JSON `{type:join|privmsg|nick|part|ping,…}`
 
+## Public IRC (standard ports)
+
+| Port | Mode | Where |
+| --- | --- | --- |
+| **6697** | TLS (Flashback park cert) | Ergo on iad1; ord1/hkg1 TCP-proxy via `flashback-irc-proxy@6697` |
+| **6667** | Plain | Same |
+
+Host for clients: `flashbackrepository.org` (any edge A record). Lobby: `#flashback`.
+
 ## Channels
 
 - `#flashback` lobby

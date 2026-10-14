@@ -112,6 +112,42 @@ Uninstall (optional): [macOS / Linux helpers](/scripts/vlc-protocol/install-maco
 
 ---
 
+## Live chat (IRC)
+
+Anyone can join the same Flashback lobby used by the [web chat](/chat) with a normal IRC client. No account is required.
+
+| | |
+| --- | --- |
+| **Host** | `flashbackrepository.org` |
+| **TLS (recommended)** | port **6697** |
+| **Plain** | port **6667** |
+| **Lobby channel** | `#flashback` |
+| **Server name** | `chat.flashbackrepository.org` |
+
+### Quick connect
+
+**irssi** (Linux / macOS / Windows via WSL):
+
+```bash
+irssi -c flashbackrepository.org -p 6697
+```
+
+Then in irssi: `/join #flashback`
+
+**WeeChat:**
+
+```bash
+weechat
+```
+
+Then: `/server add flashback flashbackrepository.org/6697 -ssl` → `/connect flashback` → `/join #flashback`
+
+**HexChat / other GUI clients:** add a network with server `flashbackrepository.org/6697` (SSL/TLS on), connect, join `#flashback`.
+
+Page-specific rooms use `#page-<path>` (e.g. `#page-setup`). Movie rooms use `#movie-<slug>`. Or just use the [web chat](/chat) if you prefer a browser.
+
+---
+
 ## Advanced (editors only)
 
 Clone the **project catalog** (Kdenlive projects, subtitles, READMEs — not the big movie files):

@@ -1,5 +1,5 @@
 [Unit]
-Description=Flashback Ergo IRC (localhost)
+Description=Flashback Ergo IRC (public 6667/6697 + local WS)
 After=network.target
 Wants=network.target
 

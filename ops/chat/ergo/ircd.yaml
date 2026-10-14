@@ -34,8 +34,14 @@ server:
 
     # addresses to listen on
     listeners:
-        # Flashback: localhost IRC + WS only (public via Caddy → chat-edge)
-        "127.0.0.1:6667":
+        # Standard IRC ports (all interfaces). chat-edge still uses 127.0.0.1:6667.
+        # ord1/hkg1 TCP-proxy these ports to iad1 so any flashback A record works.
+        ":6667":
+        ":6697":
+            tls:
+                cert: /opt/relay/state/park-tls/certs/flashbackrepository.org/fullchain.pem
+                key: /opt/relay/state/park-tls/certs/flashbackrepository.org/privkey.pem
+        # Local WebSocket only (not public)
         "127.0.0.1:8097":
             websocket: true
 

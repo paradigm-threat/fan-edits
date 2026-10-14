@@ -1,0 +1,15 @@
+[Unit]
+Description=Flashback IRC TCP proxy to iad1 (%i)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+# %i is the listen port (6667 or 6697). Forwards to Ergo on iad1.
+ExecStart=/usr/bin/socat TCP-LISTEN:%i,bind=0.0.0.0,fork,reuseaddr,keepalive TCP:iad1.relaygateway.net:%i
+Restart=always
+RestartSec=2
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

@@ -121,3 +121,13 @@ test('inject-park-hosts fixture still documents Board; chat added via gateway', 
   assert.match(embed, /fb-live-chat/)
   assert.match(embed, /fb-chat-app/)
 })
+
+test('setup.md documents public IRC ports', () => {
+  const setup = read(root, 'content/setup.md')
+  assert.match(setup, /Live chat \(IRC\)/)
+  assert.match(setup, /6697/)
+  assert.match(setup, /6667/)
+  assert.match(setup, /#flashback/)
+  assert.match(setup, /flashbackrepository\.org/)
+  assert.match(setup, /irssi/)
+})
