@@ -1,6 +1,9 @@
-# Imported on iad1 (chat primary). Merges with park-tls / on_demand site blocks.
+# Imported on iad1 (chat primary). Path-prefix only — exact /chat stays on Relay SSR.
 flashbackrepository.org, www.flashbackrepository.org {
-	handle /chat/* {
+	handle /chat/api* {
+		reverse_proxy 127.0.0.1:8098
+	}
+	handle /chat/ws {
 		reverse_proxy 127.0.0.1:8098
 	}
 }

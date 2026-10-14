@@ -1,6 +1,14 @@
-# Imported on ord1/hkg1 — proxy public /chat/* to iad1 chat-edge.
+# Imported on ord1/hkg1 — proxy API/WS to iad1; exact /chat stays local Relay SSR.
 flashbackrepository.org, www.flashbackrepository.org {
-	handle /chat/* {
+	handle /chat/api* {
+		reverse_proxy https://iad1.relaygateway.net {
+			header_up Host flashbackrepository.org
+			transport http {
+				tls_server_name flashbackrepository.org
+			}
+		}
+	}
+	handle /chat/ws {
 		reverse_proxy https://iad1.relaygateway.net {
 			header_up Host flashbackrepository.org
 			transport http {
