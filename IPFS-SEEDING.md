@@ -1,18 +1,18 @@
 # Seeding fan-edit video on IPFS (Flashback Repository)
 
-Flashback Repository ([flashbackrepository.org](https://flashbackrepository.org/)) is a **thin IPFS catalog** Relay repo: Git holds CleverScript, metadata, posters, and **text pointer stubs** under `.relay/assets/` for feature masters (usually `.mkv`). The movie bytes live on the **IPFS network**; this repo is the **catalog of seeded CIDs**, not a server-side media cache.
+Flashback Repository ([flashbackrepository.org](https://flashbackrepository.org/)) is a **thin IPFS catalog** Relay repo: Git holds CleverScript, metadata, **poster JPEGs as tip binaries**, and **text pointer stubs** under `.relay/assets/` for feature masters (usually `.mkv`). Movie bytes live on the **IPFS network**; this repo is the **catalog of seeded CIDs**, not a server-side media cache.
 
 **Roles (retired vs current):**
 
 | Surface | Role |
 |---------|------|
-| **Git / Relay tip** | Catalog only — stubs, `assets.manifest.json`, `index.json`. No movie binaries. |
+| **Git / Relay tip** | Catalog stubs + `assets.manifest.json` + `index.json` for masters; **`FanMixes/…/poster.jpg`** (and siblings) as **git binaries** served over HTTPS from tip only. No movie binaries in Git. |
 | **Workstation Kubo** | Pin/seed masters so APK and browsers can pull them **directly from the IPFS swarm**. |
-| **Relay fleet** | Does **not** cache or pin Flashback movie files. Fleet IPFS disk cache for multi‑GB video is **retired**. |
-| **Now showing** | Manually uploaded files on the host for the carousel — **not** IPFS-cache “hot titles.” |
-| **APK / some browsers** | Fetch catalog CIDs over IPFS (embedded Kubo / Bitswap), not via a Relay movie cache. |
+| **Relay fleet** | Does **not** pin, sync, or disk-cache Flashback IPFS bytes (`limits.fleet_pin_ipfs: false`, `max_ipfs_bytes: 0`). Wipe any leftover `{RELAY_IPFS_CACHE_ROOT}/fan-edits` tree; set `RELAY_IPFS_SKIP_PIN_REPOS=fan-edits`. |
+| **Now showing** | Manually uploaded files on the host (Bunny / carousel) — **not** IPFS-cache “hot titles.” Posters still come from **git tip**, not Bunny CDN. |
+| **APK / some browsers** | Fetch catalog master CIDs over IPFS (embedded Kubo / Bitswap), not via a Relay movie cache. |
 
-Small-binary IPFS caching (images, APKs elsewhere) is outside this repo; see relay-gateway `RELAY_IPFS.md`.
+Do **not** ingest posters with `relay-ipfs-ingest` — commit them as tip binaries (gateway `binary_policy` allowlists `poster.jpg` / `.jpeg` / `.png` / `.webp`).
 
 See also: [docs/RELAY_DESKTOP.md](docs/RELAY_DESKTOP.md), [docs/PARKED_THIN_VIDEO.md](docs/PARKED_THIN_VIDEO.md), and **`relay-gateway/docs/RELAY_IPFS.md`**.
 
@@ -166,15 +166,22 @@ Catalog **`publish_origin`** for this site is **`iad1.relaygateway.net`** ([docs
 
 **Bare hook overlays** (operators, rare): relay-gateway dev tooling applies hook changes with **`git commit-tree`** on a bare repo without rewriting your checkout branch — see **`relay-gateway/scripts/docker-ipfs-dev-prepare.sh`** and **`relay-gateway/docs/DOCKER_IPFS_DEV.md`**. Not required for day-to-day stub publishes.
 
-## Fleet: no movie cache / no fleet pin (retired)
+## Fleet: no IPFS cache / no fleet pin (retired)
 
-Flashback **does not** use Relay fleet nodes as IPFS seeders or disk caches for feature video.
+Flashback **does not** use Relay fleet nodes as IPFS seeders or disk caches (masters **or** posters).
 
-- Do **not** run `relay-ipfs-pin-catalog` against `fan-edits` for multi‑GB masters.
-- Do **not** expect `/opt/relay/ipfs-cache` to hold MKVs; that path is for small binaries elsewhere, not this catalog.
-- Catalog `limits.fleet_pin_ipfs` is **`false`**. Tip-push `spawn_pin_repo_tip` should skip this slug (`RELAY_IPFS_SKIP_PIN_REPOS=fan-edits` / `RELAY_IPFS_FLEET_PIN=0` on fleet).
+- Do **not** run `relay-ipfs-pin-catalog` against `fan-edits`.
+- Catalog `limits.fleet_pin_ipfs: false` + `max_ipfs_bytes: 0` — gateway skips `enqueue_asset_sync` / tip pin / Kubo enqueue for this slug.
+- Belt-and-suspenders: set **`RELAY_IPFS_SKIP_PIN_REPOS=fan-edits`** on fleet units.
+- **Wipe leftover cache** on each node (path-keyed tree `{RELAY_IPFS_CACHE_ROOT}/fan-edits/`, typically `/opt/relay/ipfs-cache/fan-edits`):
 
-**Your job as publisher:** pin masters on a workstation (or any durable peer), keep swarm **4001** reachable, publish stubs to `iad1`. Clients (Flashback APK, browsers that speak IPFS) pull CIDs from the network.
+```bash
+# on each fleet host
+sudo RELAY_IPFS_CACHE_ROOT=/opt/relay/ipfs-cache ./scripts/wipe-fan-edits-ipfs-cache.sh
+# or: sudo rm -rf /opt/relay/ipfs-cache/fan-edits
+```
+
+**Your job as publisher:** pin masters on a workstation (or any durable peer), keep swarm **4001** reachable, publish stubs + **git poster JPEGs** to `iad1`. Clients (Flashback APK, browsers that speak IPFS) pull master CIDs from the network; posters load from tip HTTPS.
 
 Workstation pin helper (this machine):
 
