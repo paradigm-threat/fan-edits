@@ -401,6 +401,59 @@
       layer.meta.innerHTML = html;
     }
 
+    /** Derive README URL from catalog poster path (works when SSR omits `readme`). */
+    function readmeUrlFromItem(it) {
+      const poster = it && it.poster ? String(it.poster) : '';
+      const cut = poster.replace(/\/poster\.[^/]+$/i, '/README.md');
+      if (!cut || cut === poster || cut.indexOf('/README.md') < 0) return '';
+      // Encode path segments so spaces / parens in FanMixes folders resolve.
+      try {
+        return cut
+          .split('/')
+          .map(function (seg) {
+            return seg ? encodeURIComponent(seg) : '';
+          })
+          .join('/');
+      } catch (_) {
+        return cut;
+      }
+    }
+
+    function parseReadmeBody(md) {
+      const raw = String(md == null ? '' : md);
+      if (!raw.trim()) return '';
+      const lines = raw.split(/\r?\n/);
+      let i = 0;
+      while (i < lines.length && !String(lines[i]).trim()) i++;
+      if (i < lines.length && String(lines[i]).trim().indexOf('# ') === 0) {
+        i++;
+        while (i < lines.length && !String(lines[i]).trim()) i++;
+        // Skip lead blurb paragraph (same as parseReadmeHero).
+        while (i < lines.length) {
+          const s = String(lines[i]).trim();
+          if (!s) {
+            i++;
+            break;
+          }
+          if (s.charAt(0) === '#' || s.indexOf('- ') === 0 || s.indexOf('* ') === 0) break;
+          i++;
+        }
+        while (i < lines.length && !String(lines[i]).trim()) i++;
+      }
+      return lines.slice(i).join('\n').trim();
+    }
+
+    function applyReadme(layer, text, token) {
+      if (!layer || layer._readmeToken !== token) return;
+      if (text && String(text).trim()) {
+        setMarkdown(layer.readme, text);
+        layer.readme.style.display = '';
+      } else {
+        layer.readme.innerHTML = '';
+        layer.readme.style.display = 'none';
+      }
+    }
+
     function fillLayer(layer, it) {
       layer.a.href = it.href || '#';
       layer.title.textContent = it.title || '';
@@ -412,14 +465,28 @@
         layer.blurb.innerHTML = '';
         layer.blurb.style.display = 'none';
       }
-      // README body (sections after the lead blurb) — scroll clipped to poster height.
+      // README body — prefer SSR `readme`; else fetch from poster directory (SSR often
+      // drops empty keys / fails multi-fetch on homepage).
+      const token = String((it && (it.href || it.title)) || '') + ':' + Date.now();
+      layer._readmeToken = token;
       const readmeText = it && it.readme ? String(it.readme) : '';
       if (readmeText.trim()) {
-        setMarkdown(layer.readme, readmeText);
-        layer.readme.style.display = '';
+        applyReadme(layer, readmeText, token);
       } else {
         layer.readme.innerHTML = '';
         layer.readme.style.display = 'none';
+        const url = readmeUrlFromItem(it);
+        if (url && global.fetch) {
+          global
+            .fetch(url, { credentials: 'same-origin' })
+            .then(function (r) {
+              return r.ok ? r.text() : '';
+            })
+            .then(function (md) {
+              applyReadme(layer, parseReadmeBody(md), token);
+            })
+            .catch(function () {});
+        }
       }
       // Reset scroll so a long previous title doesn't leave the pane mid-page.
       try {
