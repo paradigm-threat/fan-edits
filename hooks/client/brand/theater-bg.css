@@ -1,7 +1,10 @@
-/* Full-bleed theater covers — tip-served (StyleContext drops nested @media). */
+/* Full-bleed theater covers — tip-served (StyleContext drops nested @media).
+ * Themes: velvet (default, illustrated curtains) | classic (photo aisle).
+ * html[data-fb-theater] is set from localStorage by park-host / TheaterTheme. */
+
 .fb-backdrop {
   background-color: #0d0505;
-  background-image: url(/hooks/client/brand/jpg/theater-bg-desktop.jpg);
+  background-image: url(/hooks/client/brand/jpg/velvet/theater-bg-desktop.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -9,18 +12,71 @@
 
 @media (min-width: 1800px) {
   .fb-backdrop {
-    background-image: url(/hooks/client/brand/jpg/theater-bg-wide.jpg);
+    background-image: url(/hooks/client/brand/jpg/velvet/theater-bg-wide.jpg);
   }
 }
 
 @media (max-width: 1100px) {
   .fb-backdrop {
-    background-image: url(/hooks/client/brand/jpg/theater-bg-tablet.jpg);
+    background-image: url(/hooks/client/brand/jpg/velvet/theater-bg-tablet.jpg);
   }
 }
 
 @media (max-width: 640px) {
   .fb-backdrop {
-    background-image: url(/hooks/client/brand/jpg/theater-bg-mobile.jpg);
+    background-image: url(/hooks/client/brand/jpg/velvet/theater-bg-mobile.jpg);
   }
+}
+
+html[data-fb-theater='classic'] .fb-backdrop {
+  background-image: url(/hooks/client/brand/jpg/classic/theater-bg-desktop.jpg);
+}
+
+@media (min-width: 1800px) {
+  html[data-fb-theater='classic'] .fb-backdrop {
+    background-image: url(/hooks/client/brand/jpg/classic/theater-bg-wide.jpg);
+  }
+}
+
+@media (max-width: 1100px) {
+  html[data-fb-theater='classic'] .fb-backdrop {
+    background-image: url(/hooks/client/brand/jpg/classic/theater-bg-tablet.jpg);
+  }
+}
+
+@media (max-width: 640px) {
+  html[data-fb-theater='classic'] .fb-backdrop {
+    background-image: url(/hooks/client/brand/jpg/classic/theater-bg-mobile.jpg);
+  }
+}
+
+html[data-fb-theater='velvet'] .fb-backdrop {
+  background-image: url(/hooks/client/brand/jpg/velvet/theater-bg-desktop.jpg);
+}
+
+@media (min-width: 1800px) {
+  html[data-fb-theater='velvet'] .fb-backdrop {
+    background-image: url(/hooks/client/brand/jpg/velvet/theater-bg-wide.jpg);
+  }
+}
+
+@media (max-width: 1100px) {
+  html[data-fb-theater='velvet'] .fb-backdrop {
+    background-image: url(/hooks/client/brand/jpg/velvet/theater-bg-tablet.jpg);
+  }
+}
+
+@media (max-width: 640px) {
+  html[data-fb-theater='velvet'] .fb-backdrop {
+    background-image: url(/hooks/client/brand/jpg/velvet/theater-bg-mobile.jpg);
+  }
+}
+
+.fb-theme-toggle {
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  font: inherit;
+  color: inherit;
 }

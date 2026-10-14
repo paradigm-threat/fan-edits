@@ -12,7 +12,7 @@ Flashback Repository ([flashbackrepository.org](https://flashbackrepository.org/
 | **Now showing** | Manually uploaded files on the host (Bunny / carousel) — **not** IPFS-cache “hot titles.” Posters still come from **git tip**, not Bunny CDN. |
 | **APK / some browsers** | Fetch catalog master CIDs over IPFS (embedded Kubo / Bitswap), not via a Relay movie cache. |
 
-Do **not** ingest posters with `relay-ipfs-ingest` — commit them as tip binaries (gateway `binary_policy` allowlists `poster.jpg` / `.jpeg` / `.png` / `.webp`). Theatre atmosphere covers under `hooks/client/brand/jpg/theater-bg-*.jpg` are also tip binaries (not IPFS).
+Do **not** ingest posters with `relay-ipfs-ingest` — commit them as tip binaries (gateway `binary_policy` allowlists `poster.jpg` / `.jpeg` / `.png` / `.webp`). Theatre atmosphere covers under `hooks/client/brand/jpg/{velvet,classic}/theater-bg-*.jpg` are also tip binaries (not IPFS).
 
 See also: [docs/RELAY_DESKTOP.md](docs/RELAY_DESKTOP.md), [docs/PARKED_THIN_VIDEO.md](docs/PARKED_THIN_VIDEO.md), and **`relay-gateway/docs/RELAY_IPFS.md`**.
 

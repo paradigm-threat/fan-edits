@@ -2209,10 +2209,7 @@ export default function FlashbackApp() {
             '@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}',
             '@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}}',
             '@media (prefers-reduced-motion:reduce){.fb-screen-glow{animation:none!important}}',
-            /* StyleContext does not emit nested theme.yaml @media for backdrop — keep covers here */
-            '@media (min-width:1800px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-wide.jpg)!important}}',
-            '@media (max-width:1100px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-tablet.jpg)!important}}',
-            '@media (max-width:640px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-mobile.jpg)!important}}',
+            /* Backdrop covers live in theater-bg.css (velvet default + classic alt). */
             '@media (max-width:640px){.fb-movie-stage{flex-direction:column}.fb-movie-poster{width:min(280px,100%)}.fb-gate,.fb-affirmation-native{align-items:stretch;justify-content:flex-start;padding:0;overflow:auto}.fb-gate-panel,.fb-gate-card{max-width:none;width:100%;min-height:100%;border-radius:0;box-shadow:none;box-sizing:border-box;padding:max(20px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))}}',
           ].join('')}
         </style>
@@ -2282,6 +2279,13 @@ export default function FlashbackApp() {
             </a>
             <a className="fb-link" href="/legal">
               Legal
+            </a>
+            <a
+              className="fb-link fb-theme-toggle"
+              href="#theme"
+              data-fb-theater-theme-toggle="1"
+            >
+              Theme: Velvet
             </a>
           </nav>
         </header>

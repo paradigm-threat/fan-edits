@@ -7,9 +7,83 @@
 (function (global) {
   'use strict';
 
-  var CSS_ID = 'fb-park-native-css-v9';
+  var CSS_ID = 'fb-park-native-css-v10';
   var BRAND_LINKS_ID = 'fb-brand-head-links';
   var THEATER_BG_CSS = '/hooks/client/brand/theater-bg.css';
+  var THEATER_THEME_KEY = 'flashback.theaterTheme.v1';
+  var THEATER_THEMES = ['velvet', 'classic'];
+  var DEFAULT_THEATER_THEME = 'velvet';
+
+  function normalizeTheaterTheme(raw) {
+    var t = (raw || '').toString().trim().toLowerCase();
+    if (THEATER_THEMES.indexOf(t) >= 0) return t;
+    return DEFAULT_THEATER_THEME;
+  }
+
+  function readTheaterTheme() {
+    try {
+      if (!global.localStorage) return DEFAULT_THEATER_THEME;
+      return normalizeTheaterTheme(global.localStorage.getItem(THEATER_THEME_KEY));
+    } catch (_) {
+      return DEFAULT_THEATER_THEME;
+    }
+  }
+
+  function writeTheaterTheme(theme) {
+    var t = normalizeTheaterTheme(theme);
+    try {
+      if (global.localStorage) global.localStorage.setItem(THEATER_THEME_KEY, t);
+    } catch (_) {}
+    return t;
+  }
+
+  function applyTheaterTheme(theme) {
+    try {
+      if (!global.document || !global.document.documentElement) return;
+      var t = writeTheaterTheme(theme);
+      global.document.documentElement.setAttribute('data-fb-theater', t);
+      var nodes = global.document.querySelectorAll('[data-fb-theater-theme-toggle]');
+      for (var i = 0; i < nodes.length; i++) {
+        var el = nodes[i];
+        var label = t === 'classic' ? 'Classic' : 'Velvet';
+        el.textContent = 'Theme: ' + label;
+        el.setAttribute('aria-label', 'Switch theater theme (current: ' + label + ')');
+        el.setAttribute('title', 'Theater theme: ' + label + ' — click to switch');
+      }
+    } catch (_) {}
+  }
+
+  function cycleTheaterTheme() {
+    var cur = readTheaterTheme();
+    var idx = THEATER_THEMES.indexOf(cur);
+    var next = THEATER_THEMES[(idx + 1) % THEATER_THEMES.length];
+    applyTheaterTheme(next);
+    return next;
+  }
+
+  function wireTheaterThemeToggles() {
+    try {
+      if (!global.document) return;
+      applyTheaterTheme(readTheaterTheme());
+      var nodes = global.document.querySelectorAll('[data-fb-theater-theme-toggle]');
+      for (var i = 0; i < nodes.length; i++) {
+        var el = nodes[i];
+        if (el.getAttribute('data-fb-theater-wired') === '1') continue;
+        el.setAttribute('data-fb-theater-wired', '1');
+        el.addEventListener(
+          'click',
+          function (ev) {
+            try {
+              if (ev && typeof ev.preventDefault === 'function') ev.preventDefault();
+              if (ev && typeof ev.stopPropagation === 'function') ev.stopPropagation();
+            } catch (_) {}
+            cycleTheaterTheme();
+          },
+          false,
+        );
+      }
+    } catch (_) {}
+  }
 
   function ensureBrandHeadLinks() {
     try {
@@ -50,7 +124,9 @@
 
   function ensureParkNativeCss() {
     try {
+      applyTheaterTheme(readTheaterTheme());
       ensureBrandHeadLinks();
+      wireTheaterThemeToggles();
       if (!global.document) return;
       // Drop prior park CSS ids so layout revisions win after soft-hydrate.
       ;[
@@ -62,6 +138,7 @@
         'fb-park-native-css-v6',
         'fb-park-native-css-v7',
         'fb-park-native-css-v8',
+        'fb-park-native-css-v9',
       ].forEach(
         function (oldId) {
           var old = global.document.getElementById(oldId);
@@ -72,10 +149,6 @@
       var st = global.document.createElement('style');
       st.id = CSS_ID;
       st.textContent = [
-        /* Theater cover breakpoints (backup if stylesheet link races) */
-        '@media (min-width:1800px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-wide.jpg)!important}}',
-        '@media (max-width:1100px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-tablet.jpg)!important}}',
-        '@media (max-width:640px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-mobile.jpg)!important}}',
         /* Affirmation / ownership gate — fullscreen modal for welcome AND title */
         '.fb-gate,.fb-affirmation-native{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(6,4,5,.9);box-sizing:border-box}',
         '.fb-gate-panel,.fb-gate-card{max-width:480px;width:100%;padding:28px 26px 24px;background:linear-gradient(165deg,#3a1820 0%,#1a0c10 55%,#12080a 100%);border:1px solid #e8c872;box-shadow:0 24px 70px rgba(0,0,0,.6);border-radius:4px;color:#f5e6be}',
@@ -286,8 +359,11 @@
   }
 
   ensureParkNativeCss();
+  wireTheaterThemeToggles();
 
   global.__fbEnsureParkNativeCss = ensureParkNativeCss;
   global.__fbHostNeedsUpgrade = hostNeedsUpgrade;
   global.__fbScheduleParkNativeReupgrade = scheduleParkNativeReupgrade;
+  global.__fbApplyTheaterTheme = applyTheaterTheme;
+  global.__fbCycleTheaterTheme = cycleTheaterTheme;
 })(typeof globalThis !== 'undefined' ? globalThis : window);

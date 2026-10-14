@@ -10,16 +10,34 @@ Antique gold on near-black. **Header logo** = cinematic three-frame film strip (
 | `png/logo-primary-800.png` | Large logo still |
 | `png/icon-512.png` | App / PWA icon |
 | `png/icon-192.png` | PWA icon |
-| `jpg/theater-bg-mobile.jpg` | Full-bleed backdrop **1080×1920** (portrait phone) |
-| `jpg/theater-bg-tablet.jpg` | Full-bleed backdrop **1536×2048** (portrait tablet) |
-| `jpg/theater-bg-desktop.jpg` | Full-bleed backdrop **2560×1440** (landscape) |
-| `jpg/theater-bg-wide.jpg` | Full-bleed backdrop **3440×1440** (ultrawide) |
+| `jpg/velvet/theater-bg-*.jpg` | **Default** illustrated curtain covers (mobile / tablet / desktop / wide) |
+| `jpg/classic/theater-bg-*.jpg` | Alternate photo-aisle covers (same breakpoints) |
 | `svg/logo-primary.svg` | Legacy full wordmark (optional) |
 | `svg/logo-compact.svg` | Legacy header wordmark (optional) |
 | `svg/logo-mono.svg` | Legacy white mono |
 | `svg/icon-mark.svg` | Square app mark (flat Relay film) |
 | `svg/favicon.svg` | Small mark |
 | `../favicon.svg` | Site favicon (same art) |
+
+### Theater themes
+
+| Theme id | Look | Default? |
+|----------|------|----------|
+| `velvet` | Illustrated curtains + sconces + seats | yes |
+| `classic` | Photo theater aisle | no |
+
+Breakpoints (all themes):
+
+| File | Size |
+|------|------|
+| `theater-bg-mobile.jpg` | **1080×1920** |
+| `theater-bg-tablet.jpg` | **1536×2048** |
+| `theater-bg-desktop.jpg` | **2560×1440** |
+| `theater-bg-wide.jpg` | **3440×1440** |
+
+Web: `localStorage` key `flashback.theaterTheme.v1` + `html[data-fb-theater]`. Header **Theme:** control cycles themes. CSS: `theater-bg.css`.
+
+APK: `FlashbackTheaterPrefs` + Lab / drawer theme control; drawables `fb_theater_bg_velvet` / `fb_theater_bg_classic` per qualifier.
 
 Raster root favicons / OG image may also live as **thin IPFS** (stubs under `.relay/assets/` / local under `.relay/local-assets/`):
 
@@ -28,8 +46,6 @@ Raster root favicons / OG image may also live as **thin IPFS** (stubs under `.re
 - `/og-image.png`
 
 `site.webmanifest` points at tip `hooks/client/brand/png/icon-*.png`.
-
-Theatre wall/sconce **tile** PNGs were retired; atmosphere is the cover JPGs above (git tip binaries, not IPFS).
 
 ## Palette
 
