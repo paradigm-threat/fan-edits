@@ -52,5 +52,11 @@
     "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/ninja-scroll-1993-minor-damage/Ninja_Scroll_1993_-_Minor_Damage.mkv",
     "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/ninja-scroll-1993-minor-damage/Ninja_Scroll_1993_-_Minor_Damage_web-1080p.mkv",
     "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/ninja-scroll-1993-minor-damage/Ninja_Scroll_1993_-_Minor_Damage_mobile-720p.mkv"
+  },
+  {
+    "slug": "war-of-the-worlds-2005-family-therapy",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy_mobile-720p.mkv"
   }
 ]

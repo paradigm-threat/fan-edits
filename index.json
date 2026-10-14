@@ -8,7 +8,8 @@
     "sonic-2-2022-deschwartzed",
     "sonic-3-2024-deschwartzed",
     "silent-hill-2006-nay-tomorrow",
-    "ninja-scroll-1993-minor-damage"
+    "ninja-scroll-1993-minor-damage",
+    "war-of-the-worlds-2005-family-therapy"
   ],
   "projects": [
     {
@@ -551,15 +552,18 @@
       "path": "FanMixes/War of the Worlds (2005) - Family Therapy",
       "title": "War of the Worlds (2005) \u2014 Family Therapy Edition",
       "originalTitle": "War of the Worlds (2005)",
-      "status": "coming_soon",
+      "status": "showing",
       "media": "War of the Worlds (2005) - Family Therapy.mkv",
       "mediaWeb": "",
       "mediaMobile": "",
       "image": "FanMixes/War of the Worlds (2005) - Family Therapy/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
-      "qualityWebEnabled": false,
-      "qualityMobileEnabled": false,
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/war-of-the-worlds-2005-family-therapy/War_of_the_Worlds_2005_-_Family_Therapy_mobile-720p.mkv",
+      "qualityWebEnabled": true,
+      "qualityMobileEnabled": true,
       "blurb": "This FanMix eliminates nearly all the toxic family behavior featured in the movie, so that WotW (2005) becomes a movie about aliens and not allusions to Spielberg's trouble raising his own children.",
       "poster": "poster.jpg"
     },
