@@ -2290,7 +2290,7 @@ export default function FlashbackApp() {
           </nav>
         </header>
         <NowShowing variant="lcd" itemsJson={nowItemsJson} ariaLabel="Now showing titles" />
-        <main className="fb-main">
+        <main className={kind.kind === 'chat' ? 'fb-main fb-main-chat' : 'fb-main'}>
           {main}
           {kind.kind !== 'chat' ? (
             <LiveChat

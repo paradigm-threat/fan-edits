@@ -1,13 +1,27 @@
 /**
- * Shared Flashback chat helpers for LiveChat / ChatApp park hosts.
+ * Shared Relay mesh chat helpers for LiveChat / ChatApp park hosts.
+ * Published at relay-web-assets assets/chat/ChatCommon.host.js
+ *
+ * Repo prefixes (see docs/RELAY_CHAT.md): fb | ct | pt
  */
 (function (global) {
   'use strict';
 
   if (global.__fbChat) return;
 
-  var NICK_KEY = 'flashback.chat.nick.v1';
-  var MODE_KEY = 'flashback.chat.nickMode.v1';
+  var NICK_KEY = 'relay.chat.nick.v1';
+  var MODE_KEY = 'relay.chat.nickMode.v1';
+  // Migrate Flashback localStorage once
+  try {
+    if (!global.localStorage.getItem(NICK_KEY)) {
+      var legacy = global.localStorage.getItem('flashback.chat.nick.v1');
+      if (legacy) global.localStorage.setItem(NICK_KEY, legacy);
+    }
+    if (!global.localStorage.getItem(MODE_KEY)) {
+      var legacyM = global.localStorage.getItem('flashback.chat.nickMode.v1');
+      if (legacyM) global.localStorage.setItem(MODE_KEY, legacyM);
+    }
+  } catch (_) {}
 
   function el(tag, className, text) {
     var n = global.document.createElement(tag);
@@ -64,6 +78,22 @@
     return s;
   }
 
+  /** Known short prefixes → catalog repo slug */
+  var PREFIX_REPOS = {
+    fb: 'fan-edits',
+    ct: 'clevertree-site',
+    pt: 'paradigm-threat-files',
+  };
+
+  function normalizePrefix(raw) {
+    var p = String(raw || '')
+      .trim()
+      .toLowerCase()
+      .replace(/[^a-z0-9]/g, '')
+      .slice(0, 8);
+    return p;
+  }
+
   function normalizeChannel(raw) {
     var c = String(raw || '')
       .trim()
@@ -73,38 +103,112 @@
     return c || 'flashback';
   }
 
-  function channelFromPath(pathname) {
+  /** Ops log channel for a prefix: logs-fb, logs-ct, … */
+  function logsChannel(prefix) {
+    var p = normalizePrefix(prefix) || 'fb';
+    return 'logs-' + p;
+  }
+
+  /**
+   * Build a scoped channel.
+   * Flashback (fb) keeps legacy names: flashback, page-*, movie-*.
+   * Other prefixes: {prefix}, {prefix}-page-*, {prefix}-movie-*, {prefix}-doc-*.
+   */
+  function scopedChannel(prefix, kind, slug) {
+    var p = normalizePrefix(prefix) || 'fb';
+    var k = String(kind || 'lobby').toLowerCase();
+    var s = String(slug || '')
+      .toLowerCase()
+      .replace(/[^a-z0-9_\-]/g, '-')
+      .replace(/-+/g, '-')
+      .replace(/^-|-$/g, '')
+      .slice(0, 48);
+    if (p === 'fb') {
+      if (k === 'lobby' || k === 'chat') return 'flashback';
+      if (k === 'page') return 'page-' + (s || 'home');
+      if (k === 'movie') return 'movie-' + (s || 'unknown');
+      if (k === 'logs') return 'logs-fb';
+      return s ? 'fb-' + k + '-' + s : 'flashback';
+    }
+    if (k === 'lobby' || k === 'chat') return p;
+    if (k === 'logs') return 'logs-' + p;
+    if (k === 'page') return p + '-page-' + (s || 'home');
+    if (k === 'movie' || k === 'doc') return p + '-' + k + '-' + (s || 'unknown');
+    return p + '-' + k + (s ? '-' + s : '');
+  }
+
+  function channelFromPath(pathname, prefix) {
+    var pfx = normalizePrefix(prefix);
     var p = String(pathname || '/').split('?')[0];
-    if (!p || p === '/') return 'page-home';
+    if (!p || p === '/') {
+      return pfx && pfx !== 'fb' ? scopedChannel(pfx, 'page', 'home') : 'page-home';
+    }
     if (p.charAt(0) === '/') p = p.slice(1);
-    if (p.indexOf('movie/') === 0) p = p.slice(6);
-    // known static pages
+    if (p.indexOf('movie/') === 0) {
+      var ms = p.slice(6).replace(/[^a-z0-9_\-]/g, '-').slice(0, 48);
+      return scopedChannel(pfx || 'fb', 'movie', ms);
+    }
+    // known static pages (Flashback + shared names)
     var staticMap = {
-      board: 'page-board',
-      feedback: 'page-board',
-      bugs: 'page-board',
-      setup: 'page-setup',
-      playback: 'page-setup',
-      vlc: 'page-setup',
-      app: 'page-app',
-      android: 'page-app',
-      apk: 'page-app',
-      legal: 'page-legal',
-      terms: 'page-terms',
-      motivation: 'page-motivation',
-      why: 'page-motivation',
-      submit: 'page-submit',
-      contribute: 'page-submit',
-      request: 'page-request',
-      downloads: 'page-request',
-      email: 'page-request',
-      chat: 'page-chat',
-      'android-lab': 'page-android-lab',
+      board: 'board',
+      feedback: 'board',
+      bugs: 'board',
+      setup: 'setup',
+      playback: 'setup',
+      vlc: 'setup',
+      app: 'app',
+      android: 'app',
+      apk: 'app',
+      legal: 'legal',
+      terms: 'terms',
+      motivation: 'motivation',
+      why: 'motivation',
+      submit: 'submit',
+      contribute: 'submit',
+      request: 'request',
+      downloads: 'request',
+      email: 'request',
+      chat: 'chat',
+      'android-lab': 'android-lab',
+      resume: 'home',
+      search: 'search',
     };
-    if (staticMap[p]) return staticMap[p];
-    if (p.indexOf('/') >= 0) return 'page-home';
-    // movie slug
+    var base = p.split('/')[0];
+    if (base === 'chat') {
+      return scopedChannel(pfx || 'fb', 'lobby');
+    }
+    if (staticMap[base]) {
+      return scopedChannel(pfx || 'fb', 'page', staticMap[base]);
+    }
+    if (p.indexOf('/') >= 0) {
+      // article-like paths on paradigm → pt-doc-<slug>
+      var leaf = p.replace(/\.md$/, '').split('/').pop() || 'home';
+      if (pfx && pfx !== 'fb') return scopedChannel(pfx, 'doc', leaf);
+      return 'page-home';
+    }
+    if (pfx && pfx !== 'fb') {
+      return scopedChannel(pfx, 'page', p.replace(/[^a-z0-9_\-]/g, '-').slice(0, 48));
+    }
     return 'movie-' + p.replace(/[^a-z0-9_\-]/g, '-').slice(0, 48);
+  }
+
+  /** Resolve chat API origin: data-chat-origin → meta → same-origin. */
+  function chatOrigin() {
+    try {
+      var el = global.document && global.document.querySelector('[data-chat-origin]');
+      if (el) {
+        var o = String(el.getAttribute('data-chat-origin') || '').trim();
+        if (o) return o.replace(/\/$/, '');
+      }
+      var meta =
+        global.document &&
+        global.document.querySelector('meta[name="relay-chat-origin"]');
+      if (meta) {
+        var m = String(meta.getAttribute('content') || '').trim();
+        if (m) return m.replace(/\/$/, '');
+      }
+    } catch (_) {}
+    return '';
   }
 
   function getStoredNick() {
@@ -136,16 +240,17 @@
   }
 
   function apiBase() {
-    return '';
+    return chatOrigin();
   }
 
   function fetchJson(path) {
-    return global.fetch(apiBase() + path, { credentials: 'same-origin', cache: 'no-store' }).then(
-      function (r) {
-        if (!r.ok) throw new Error('HTTP ' + r.status);
-        return r.json();
-      },
-    );
+    var opts = { cache: 'no-store' };
+    // Cross-origin chat primary needs CORS + omit credentials unless same site.
+    opts.credentials = apiBase() ? 'omit' : 'same-origin';
+    return global.fetch(apiBase() + path, opts).then(function (r) {
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      return r.json();
+    });
   }
 
   function healthCheckOnce() {
@@ -212,6 +317,14 @@
   }
 
   function wsUrl() {
+    var origin = chatOrigin();
+    if (origin) {
+      try {
+        var u = new global.URL(origin);
+        var wsp = u.protocol === 'https:' ? 'wss:' : 'ws:';
+        return wsp + '//' + u.host + '/chat/ws';
+      } catch (_) {}
+    }
     var proto = global.location && global.location.protocol === 'https:' ? 'wss:' : 'ws:';
     var host = (global.location && global.location.host) || 'localhost';
     return proto + '//' + host + '/chat/ws';
@@ -304,8 +417,9 @@
       '.fb-chat-img-wrap{margin:6px 0}',
       '.fb-chat-img{max-width:min(320px,100%);max-height:200px;border:1px solid #3a2a1a;border-radius:2px}',
       '.fb-chat-unavailable{opacity:.85}',
-      '.fb-chat-app{display:flex;flex-direction:row;align-items:stretch;min-height:min(70vh,720px);border:1px solid #3a2a1a;background:#0d0505;color:#f5e6be;border-radius:4px;overflow:hidden}',
-      '.fb-chat-side{width:240px;max-width:42vw;flex-shrink:0;display:flex;flex-direction:column;border-right:1px solid #3a2a1a;background:rgba(18,8,10,.95)}',
+      '.fb-chat-app{display:flex;flex-direction:row;align-items:stretch;width:100%;max-width:none;min-height:min(78vh,900px);border:1px solid #3a2a1a;background:#0d0505;color:#f5e6be;border-radius:4px;overflow:hidden;box-sizing:border-box}',
+      '.fb-chat-app-host{display:block;width:100%;max-width:none}',
+      '.fb-chat-side{width:260px;max-width:42vw;flex-shrink:0;display:flex;flex-direction:column;border-right:1px solid #3a2a1a;background:rgba(18,8,10,.95)}',
       '.fb-chat-side-head{padding:12px;border-bottom:1px solid #3a2a1a}',
       '.fb-chat-side-title{margin:0 0 8px;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:#e8c872}',
       '.fb-chat-search{width:100%;box-sizing:border-box;padding:8px 10px;border:1px solid #5a4a2a;background:#12080a;color:#f5e6be;border-radius:3px;font:inherit}',
@@ -320,6 +434,8 @@
       '.fb-chat-names h3{margin:0 0 8px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#b8860b}',
       '.fb-chat-status{font-size:.78rem;color:#a69788}',
       '@media (max-width:800px){.fb-chat-app{flex-direction:column;min-height:80vh}.fb-chat-side{width:100%;max-width:none;max-height:180px;border-right:0;border-bottom:1px solid #3a2a1a}.fb-chat-names{display:none}}',
+      '.fb-main-chat{max-width:none!important;width:100%!important;padding-left:12px!important;padding-right:12px!important}',
+      '.fb-chat-page{width:100%;max-width:none}',
     ].join('');
     (global.document.head || global.document.documentElement).appendChild(st);
   }
@@ -357,7 +473,13 @@
     el: el,
     renderMd: renderMd,
     normalizeChannel: normalizeChannel,
+    normalizePrefix: normalizePrefix,
+    PREFIX_REPOS: PREFIX_REPOS,
+    logsChannel: logsChannel,
+    scopedChannel: scopedChannel,
     channelFromPath: channelFromPath,
+    chatOrigin: chatOrigin,
+    apiBase: apiBase,
     getStoredNick: getStoredNick,
     setStoredNick: setStoredNick,
     getNickMode: getNickMode,
@@ -371,4 +493,6 @@
     ensureChatCss: ensureChatCss,
     appendMessage: appendMessage,
   };
+  // Alias for non-Flashback call sites
+  global.__relayChat = global.__fbChat;
 })(typeof globalThis !== 'undefined' ? globalThis : window);
