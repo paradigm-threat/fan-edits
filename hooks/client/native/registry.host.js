@@ -10,6 +10,9 @@
     '/hooks/client/native/ExternalPlay.host.js',
     '/hooks/client/native/NowShowing.host.js',
     '/hooks/client/native/Board.host.js',
+    '/hooks/client/native/ChatCommon.host.js',
+    '/hooks/client/native/LiveChat.host.js',
+    '/hooks/client/native/ChatApp.host.js',
   ];
   for (var i = 0; i < scripts.length; i++) {
     var s = document.createElement('script');

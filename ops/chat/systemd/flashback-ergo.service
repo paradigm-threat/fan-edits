@@ -1,0 +1,22 @@
+[Unit]
+Description=Flashback Ergo IRC (localhost)
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=relay-chat
+Group=relay-chat
+WorkingDirectory=/opt/relay/chat/ergo
+ExecStart=/opt/relay/chat/ergo/bin/ergo run --conf /opt/relay/chat/ergo/ircd.yaml
+Restart=on-failure
+RestartSec=3
+LimitNOFILE=65535
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/relay/chat
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
