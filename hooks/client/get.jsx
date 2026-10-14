@@ -2205,7 +2205,16 @@ export default function FlashbackApp() {
     <StyleContext src="hooks/client/theme.yaml">
       <div className="fb-app">
         <style>
-          {'@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}}@media (prefers-reduced-motion:reduce){.fb-screen-glow{animation:none!important}}@media (max-width:640px){.fb-movie-stage{flex-direction:column}.fb-movie-poster{width:min(280px,100%)}.fb-gate,.fb-affirmation-native{align-items:stretch;justify-content:flex-start;padding:0;overflow:auto}.fb-gate-panel,.fb-gate-card{max-width:none;width:100%;min-height:100%;border-radius:0;box-shadow:none;box-sizing:border-box;padding:max(20px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))}}'}
+          {[
+            '@keyframes fb-glow-pulse{0%,100%{opacity:0.55}50%{opacity:0.95}}',
+            '@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}}',
+            '@media (prefers-reduced-motion:reduce){.fb-screen-glow{animation:none!important}}',
+            /* StyleContext does not emit nested theme.yaml @media for backdrop — keep covers here */
+            '@media (min-width:1800px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-wide.jpg)!important}}',
+            '@media (max-width:1100px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-tablet.jpg)!important}}',
+            '@media (max-width:640px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-mobile.jpg)!important}}',
+            '@media (max-width:640px){.fb-movie-stage{flex-direction:column}.fb-movie-poster{width:min(280px,100%)}.fb-gate,.fb-affirmation-native{align-items:stretch;justify-content:flex-start;padding:0;overflow:auto}.fb-gate-panel,.fb-gate-card{max-width:none;width:100%;min-height:100%;border-radius:0;box-shadow:none;box-sizing:border-box;padding:max(20px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))}}',
+          ].join('')}
         </style>
         <div className={playing === true ? 'fb-backdrop fb-backdrop-playing' : 'fb-backdrop'} aria-hidden="true">
           <div className="fb-wall-lights fb-wall-lights-left" />
@@ -2280,7 +2289,12 @@ export default function FlashbackApp() {
         <main className="fb-main">
           {main}
           {kind.kind !== 'chat' ? (
-            <LiveChat channel={pageChatChannel} path={route || '/'} mode="embed" />
+            <LiveChat
+              prefix="fb"
+              channel={pageChatChannel}
+              path={route || '/'}
+              mode="embed"
+            />
           ) : null}
         </main>
         <footer className="fb-footer">
