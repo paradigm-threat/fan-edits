@@ -46,5 +46,11 @@
     "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/silent-hill-2006-nay-tomorrow/Silent_Hill_2006_-_Nay_Tomorrow_Edition.mkv",
     "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/silent-hill-2006-nay-tomorrow/Silent_Hill_2006_-_Nay_Tomorrow_Edition_web-1080p.mkv",
     "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/silent-hill-2006-nay-tomorrow/Silent_Hill_2006_-_Nay_Tomorrow_Edition_mobile-720p.mkv"
+  },
+  {
+    "slug": "ninja-scroll-1993-minor-damage",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/ninja-scroll-1993-minor-damage/Ninja_Scroll_1993_-_Minor_Damage.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/ninja-scroll-1993-minor-damage/Ninja_Scroll_1993_-_Minor_Damage_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/ninja-scroll-1993-minor-damage/Ninja_Scroll_1993_-_Minor_Damage_mobile-720p.mkv"
   }
 ]

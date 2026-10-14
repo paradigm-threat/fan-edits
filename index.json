@@ -7,7 +7,8 @@
     "sonic-2020-deschwartzed",
     "sonic-2-2022-deschwartzed",
     "sonic-3-2024-deschwartzed",
-    "silent-hill-2006-nay-tomorrow"
+    "silent-hill-2006-nay-tomorrow",
+    "ninja-scroll-1993-minor-damage"
   ],
   "projects": [
     {
@@ -197,16 +198,20 @@
       "path": "FanMixes/Ninja Scroll (1993) - Minor Damage",
       "title": "Ninja Scroll (1993) \u2014 Minor Damage",
       "originalTitle": "Ninja Scroll (1993)",
-      "status": "coming_soon",
+      "status": "showing",
       "media": "Ninja Scroll (1993) - Minor Damage.mkv",
       "mediaWeb": "",
       "mediaMobile": "",
-      "image": "",
+      "image": "FanMixes/Ninja Scroll (1993) - Minor Damage/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
-      "qualityWebEnabled": false,
-      "qualityMobileEnabled": false,
-      "blurb": "A leaner *Ninja Scroll* with songs from the Ninja Gaiden OST (Xbox). Reduces how women are portrayed as plot devices, removes the rape scenes, and dials back the blood \u2014 while keeping the core friendships and betrayals intact."
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/ninja-scroll-1993-minor-damage/Ninja_Scroll_1993_-_Minor_Damage.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/ninja-scroll-1993-minor-damage/Ninja_Scroll_1993_-_Minor_Damage_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/ninja-scroll-1993-minor-damage/Ninja_Scroll_1993_-_Minor_Damage_mobile-720p.mkv",
+      "qualityWebEnabled": true,
+      "qualityMobileEnabled": true,
+      "blurb": "A leaner *Ninja Scroll* with songs from the Ninja Gaiden OST (Xbox). Reduces how women are portrayed as plot devices, removes the rape scenes, and dials back the blood \u2014 while keeping the core friendships and betrayals intact.",
+      "poster": "poster.jpg"
     },
     {
       "slug": "riddick-2013-unjinxed",
