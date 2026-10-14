@@ -38,3 +38,7 @@ sudo ./install.sh --edge-only
 - `#flashback` lobby
 - `#movie-<slug>`
 - `#page-<path>` (`page-home`, `page-setup`, …)
+
+## Ops note
+
+Never `POST /load` an empty body to Caddy admin — it drops :443 listeners. Prefer `systemctl restart caddy` after ensuring `/tmp` exists (1777). On nodes where park-tls already defines `flashbackrepository.org`, use `patch-caddy.sh` only — do not also `import` `Caddyfile.flashback` (ambiguous site).
