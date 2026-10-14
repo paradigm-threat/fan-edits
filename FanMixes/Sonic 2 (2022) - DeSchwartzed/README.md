@@ -2,28 +2,44 @@
 
 ![Sonic DeSchwartzed Edition Poster.png](Sonic%202%20(2022)%20-%20DeSchwartzed.png)
 
-The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during post-production. This project aims to restore the original vision of the live action Sonic Trilogy before the project was sabotaged.
+A watchable *Sonic the Hedgehog 2* cut: trim sitcom / post-production Sonic commentary, keep the Master Emerald plot, and leave Jim Carrey’s Robotnik — especially the mushroom-planet open — almost untouched. Slogan: **Mushroom planet. Robotnik Arrives.**
 
 ## Motivation
 
-All distracting or overly sappy dialogs were candidates for removal, while all plot points are retained. Much [predictive programming](https://joyoffaith.com/predictive-programming.html) (PP) has been removed where it doesn't tie directly to the plot.
+The live-action Sonic trilogy was filmed well enough on set. What wrecks the theatrical cuts is mostly **post-production**: audio re-recorded, new jokes invented, CGI mouths re-rendered — enough to turn a movie into a different, softer sitcom with pop references and awkward beats that kill pacing and seriousness. Ben Schwartz’s sardonic, adult-comedian Sonic is the main target here; the voice should read as a lonely child from another planet, not a Family Guy cameo with an invisible laugh track.
 
-I do blame Ben Schwartz for nearly all the jokes he came up with. I don't think they were just 'bad' or 'annoying'. The decisions Schwartz and others made in all 3 movies during post-production also ruined the *continuity*. In post, they should have cast a normal 'child voice' actor like they did with Tails who was voiced by Colleen O'Shaughnessey. Aside from distracting dialog, he portrayed the main character as a sarcastic adult rather than an orphaned child from another planet. I'll remind everyone that Sonic was a child in the first movie, and that none of his commentary should be 'Family guy' style pop references. It should be something a child says. Moreover, Sonic shouldn't behave as if someone is laughing at his jokes all day if he literally had zero friends on Earth. This isn't the only movie I blame someone for ruining in Post Production. In my edit of Final Fantasy the Spirits Within, I make that case as well.
+The saving grace of all three films is **Jim Carrey as Dr. Robotnik**. This edit keeps almost every Carrey scene. The goal was never a pure Carrey clip-show; it is a correct cut anyone can watch, with Robotnik left as the highlight.
 
-Sometimes PP is subtle, like where Rachel is constantly telling Maddie to divorce Tom, right from the first scene, and with absolutely no reason or context. If anyone can please point me to a single scene in all 3 movies where Tom legitimately did something to upset Rachel, and I'll re-add those scenes, but if otherwise they remain removed.
+### This film
 
-[Predictive Programming Explained](https://joyoffaith.com/predictive-programming.html)
+*Sonic 2* opens on the **mushroom planet** — exile that finally lets Carrey play classic Eggman free of the first film’s US-government employee shell. From there he escapes and pursues domination via the Master Emerald. Robotnik and his associates become the main act; that is what this cut preserves while stripping sitcom Sonic and non-essential PP.
 
-[Top 33 PP Movies](https://www.imdb.com/list/ls086291084/)
+Robotnik’s **“Later haters!”** lands in this film. This edit reads that line (with Sonic 3’s “Thanks for nothing”) as Carrey’s wink that he carried the trilogy — an **editor’s reading** of the dialogue, not a claim about documented production intent.
+
+Secondary trims include [predictive programming](https://joyoffaith.com/predictive-programming.html) beats that are not plot-required (e.g. Rachel divorce pushing). Point to a scene where Tom earned that hostility and those can come back.
 
 ## Changes
 
 - Much of Sonic’s sardonic commentary dialogue (voiced by Ben Schwartz) removed.
+- Jim Carrey / Robotnik scenes kept (near-total preserve; mushroom-planet open intact).
 - Some Knuckles / Tails dialog trimmed.
 - Nearly all dialogue and scenes with Wade and Rachel removed.
 - Many sappy family scenes removed.
 - Predictive-programming beats (e.g. Rachel pushing divorce) removed where not plot-required.
 - Credit vocal songs replaced with Sonic game music remixes (four OC ReMixes from the corresponding game).
+
+## Citations
+
+- [Polygon — Carrey carries Sonic 2; mushroom-planet open](https://www.polygon.com/23013568/sonic-the-hedgehog-2-review-jim-carrey/)
+- [LA Times — Carrey’s grand return (2020 baseline)](https://www.latimes.com/entertainment-arts/movies/story/2020-02-13/sonic-the-hedgehog-review-jim-carrey)
+- [Ars Technica — recommend mainly for Carrey](https://arstechnica.com/gaming/2020/02/sonic-the-hedgehog-film-review-you-can-slow-your-roll-sega-fans/)
+- [IndieWire — grating Schwartz; product-placement gags](https://www.indiewire.com/criticism/movies/sonic-the-hedgehog-movie-review-1202210884/)
+- [Washburn Review — charm and cringe; Olive Garden / Fortnite floss](https://washburnreview.org/958/features/sonic-the-hedgehog-brings-charm-and-cringe/)
+- [Variety — Schwartz as overfamiliar smart aleck](https://variety.com/2020/film/reviews/sonic-the-hedgehog-review-jim-carrey-1203500436/)
+- [RogerEbert.com 2020 — disposable pop-culture references](https://www.rogerebert.com/reviews/sonic-the-hedgehog-movie-review-2020)
+- Robotnik quotes (incl. “Later haters!”): [Paramount Robotnik miscellaneous](https://sonic.fandom.com/wiki/Doctor_Ivo_Robotnik_(Paramount)/Miscellaneous)
+
+[Predictive Programming Explained](https://joyoffaith.com/predictive-programming.html) · [Top 33 PP Movies](https://www.imdb.com/list/ls086291084/)
 
 ## Credits for Sonic 2 (2022)
 

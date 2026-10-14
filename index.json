@@ -70,21 +70,22 @@
       "blurb": "A single-block cut of PTA\u2019s *Boogie Nights* that skips the late-film collapse from the office whip-pan through On the Lookout and the donut-shop stick-up, then resumes on the film\u2019s own fade into the Rahad-planning scene."
     },
     {
-      "slug": "congo-1995-incel",
+      "slug": "congo-1995-adult-supervision",
       "category": "FanMixes",
-      "path": "FanMixes/Congo (1995) - Incel",
-      "title": "Congo (1995) \u2014 Incel",
+      "path": "FanMixes/Congo (1995) - Adult Supervision",
+      "title": "Congo (1995) \u2014 Adult Supervision",
       "originalTitle": "Congo (1995)",
       "status": "coming_soon",
-      "media": "Congo (1995) - Incel Edition.mkv",
+      "media": "Congo (1995) - Adult Supervision Edition.mkv",
       "mediaWeb": "",
       "mediaMobile": "",
-      "image": "",
+      "image": "FanMixes/Congo (1995) - Adult Supervision/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
-      "blurb": "A leaner *Congo* that trims Dr. Elliot\u2019s incel-ish dialogue, some Travis/Captain Wanta screaming, and a bit of gore \u2014 and fixes a travel plot hole by moving the Bob Driscoll encounter forward."
+      "blurb": "A leaner *Congo* that strips Dr. Peter Elliot\u2019s childish / incel-adjacent berating of ex-CIA Karen Ross so the adventure can lead \u2014 and trims Travis/Captain Wanta screaming, some gore, plus a travel plot hole by moving the Bob Driscoll encounter forward.",
+      "poster": "poster.jpg"
     },
     {
       "slug": "fear-and-loathing-in-las-vegas-1998-no-north-star",
@@ -121,7 +122,7 @@
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/final-fantasy-2001-the-phantom-menace/Final_Fantasy_2001_-_The_Phantom_Menace_mobile-720p.mkv",
       "qualityWebEnabled": true,
       "qualityMobileEnabled": true,
-      "blurb": "*Final Fantasy: The Spirits Within* \u2014 a minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy\u2013like title placement \u2014 with the rare Japanese track and remix soundtrack upgrades.",
+      "blurb": "*Final Fantasy: The Spirits Within* \u2014 a minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy\u2013like title placement \u2014 with the rare Japanese track and remix soundtrack upgrades. Slogan: **Spiritual Editio",
       "poster": "poster.jpg"
     },
     {
@@ -286,7 +287,7 @@
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/sonic-2020-deschwartzed/Sonic_2020_-_DeSchwartzed_Edition_mobile-720p.mkv",
       "qualityWebEnabled": true,
       "qualityMobileEnabled": true,
-      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during",
+      "blurb": "A watchable *Sonic the Hedgehog* (2020) cut: trim sitcom / post-production Sonic commentary, keep the plot, and leave Jim Carrey\u2019s Robotnik almost untouched \u2014 the film\u2019s real reason to watch. Slogan: **Carrey intact. Sitcom Sonic cut.**",
       "poster": "poster.jpg"
     },
     {
@@ -307,7 +308,7 @@
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/sonic-2-2022-deschwartzed/Sonic_2_2022_-_DeSchwartzed_Edition_mobile-720p.mkv",
       "qualityWebEnabled": true,
       "qualityMobileEnabled": true,
-      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during",
+      "blurb": "A watchable *Sonic the Hedgehog 2* cut: trim sitcom / post-production Sonic commentary, keep the Master Emerald plot, and leave Jim Carrey\u2019s Robotnik \u2014 especially the mushroom-planet open \u2014 almost untouched. Slogan: **Mushroom planet. Robotnik Arrives.**",
       "poster": "poster.jpg"
     },
     {
@@ -328,7 +329,7 @@
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/sonic-3-2024-deschwartzed/Sonic_3_2024_-_DeSchwartzed_Edition_mobile-720p.mkv",
       "qualityWebEnabled": true,
       "qualityMobileEnabled": true,
-      "blurb": "The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during",
+      "blurb": "A watchable *Sonic the Hedgehog 3* cut: trim sitcom / post-production cringe that ruins pacing, keep the Shadow plot, and leave Jim Carrey\u2019s Robotnik almost untouched \u2014 the reason this trilogy was worth anticipating. Slogan: **Seriously, this was all about Jim Carrey, not Sonic.*",
       "poster": "poster.jpg"
     },
     {
