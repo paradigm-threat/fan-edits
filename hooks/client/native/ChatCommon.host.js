@@ -435,8 +435,9 @@
       '.fb-chat-names{width:140px;flex-shrink:0;border-left:1px solid #3a2a1a;padding:10px;overflow:auto;font-size:.85rem;color:#a69788;background:rgba(0,0,0,.2);min-height:0}',
       '.fb-chat-names h3{margin:0 0 8px;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:#b8860b}',
       '.fb-chat-status{font-size:.78rem;color:#a69788}',
-      '.fb-chat-app.is-fullscreen{position:fixed;inset:0;z-index:80;width:100%;height:100%;max-width:none;min-height:100%;border-radius:0;border:0}',
+      '.fb-chat-app.is-fullscreen{position:fixed;inset:0;z-index:200;width:100%;height:100%;max-width:none;min-height:100%;border-radius:0;border:0}',
       'body.fb-chat-fs-open{overflow:hidden}',
+      'body.fb-chat-fs-open .fb-header,body.fb-chat-fs-open .fb-now-showing-host,body.fb-chat-fs-open .fb-footer{visibility:hidden}',
       '@media (max-width:800px){.fb-chat-app{flex-direction:column;height:min(70vh,720px);min-height:min(70vh,720px)}.fb-chat-side{width:100%;max-width:none;max-height:160px;border-right:0;border-bottom:1px solid #3a2a1a}.fb-chat-names{display:none}.fb-chat-app.is-fullscreen{height:100%;min-height:100%}}',
     ].join('');
     (global.document.head || global.document.documentElement).appendChild(st);
