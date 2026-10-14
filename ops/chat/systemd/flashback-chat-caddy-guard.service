@@ -4,5 +4,10 @@ After=network.target caddy.service
 
 [Service]
 Type=oneshot
+Environment=HOME=/root
+Environment=XDG_CONFIG_HOME=/root/.config
+# Park rewrites can truncate mid-write; give the file a moment to settle.
+ExecStartPre=/bin/sleep 1
 ExecStart=/opt/relay/chat/scripts/ensure-caddy-chat.sh
 Nice=10
+TimeoutStartSec=60
