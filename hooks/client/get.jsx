@@ -1175,8 +1175,8 @@ function chatChannelFromLocation(fallback) {
   try {
     const loc = typeof globalThis !== 'undefined' ? globalThis.location : null
     if (loc && loc.search) {
-      const q = String(loc.search)
-      // CleverScript-safe: avoid URLSearchParams / regex
+      const q = str(loc.search)
+      // CleverScript-safe: avoid URLSearchParams / regex / String()
       let c = ''
       const parts = q.charAt(0) === '?' ? q.slice(1).split('&') : q.split('&')
       for (let i = 0; i < parts.length; i++) {
@@ -1190,8 +1190,8 @@ function chatChannelFromLocation(fallback) {
         return stripLeadingHash(c)
       }
     }
-    if (loc && loc.hash && String(loc.hash).length > 1) {
-      return stripLeadingHash(String(loc.hash))
+    if (loc && loc.hash && str(loc.hash).length > 1) {
+      return stripLeadingHash(str(loc.hash))
     }
   } catch (eLoc) {}
   return fallback || 'flashback'
