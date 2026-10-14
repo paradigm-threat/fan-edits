@@ -98,6 +98,8 @@ function isAllowedPath(p) {
   if (startsWith(p, 'docs/') && (endsWith(p, '.md') || endsWith(p, '.MD'))) return true
   // Flashback APK sideload + in-app update manifest (git tip, not IPFS)
   if (startsWith(p, 'downloads/') && (endsWith(p, '.apk') || endsWith(p, '.json') || endsWith(p, '.md') || endsWith(p, '.MD'))) return true
+  // Title posters are git tip binaries (not thin-IPFS stubs)
+  if (isGitTipPosterPath(p)) return true
   if (endsWith(p, '.md') || endsWith(p, '.MD')) return true
   if (endsWith(p, '.reel')) return true
   if (endsWith(p, '.srt') || endsWith(p, '.SRT')) return true
@@ -105,4 +107,16 @@ function isAllowedPath(p) {
   if (contains(p, 'remove-') && (endsWith(p, '-ranges.json') || endsWith(p, '-ranges.JSON'))) return true
   if (endsWith(p, '.relay.shifted.srt')) return true
   return false
+}
+
+function isGitTipPosterPath(p) {
+  var lower = ('' + p).toLowerCase()
+  var slash = lower.lastIndexOf('/')
+  var file = slash >= 0 ? lower.slice(slash + 1) : lower
+  return (
+    file === 'poster.jpg' ||
+    file === 'poster.jpeg' ||
+    file === 'poster.png' ||
+    file === 'poster.webp'
+  )
 }
