@@ -2,7 +2,7 @@
 
 ![Sonic DeSchwartzed Edition Poster.png](Sonic%20(2020)%20-%20DeSchwartzed.png)
 
-A watchable *Sonic the Hedgehog* (2020) cut: trim sitcom / post-production Sonic commentary, keep the plot, and leave Jim Carrey’s Robotnik almost untouched — the film’s real reason to watch. Slogan: **Carrey intact. Sitcom Sonic cut.**
+A watchable *Sonic the Hedgehog* (2020) cut: trim sitcom / post-production Sonic commentary, keep the plot, and leave Jim Carrey’s Robotnik almost untouched — the film’s real reason to watch. Slogan: **Less Ben, No Predictive Programming, More Carrey!**
 
 ## Motivation
 
