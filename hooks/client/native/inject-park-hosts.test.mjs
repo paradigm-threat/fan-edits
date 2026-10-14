@@ -30,7 +30,9 @@ function injectParkNativeHosts(html) {
     '<script data-fb-park-native="1" src="/hooks/client/native/park-host-common.js"></script>' +
     '<script data-fb-park-native="1" src="/hooks/client/native/telemetry.js"></script>' +
     '<script data-fb-park-native="1" src="/hooks/client/native/Affirmation.host.js"></script>' +
-    '<script data-fb-park-native="1" src="/hooks/client/native/Board.host.js"></script>'
+    '<script data-fb-park-native="1" src="/hooks/client/native/Board.host.js"></script>' +
+    '<script data-fb-park-native="1" src="/hooks/client/native/ChatCommon.host.js"></script>' +
+    '<script data-fb-park-native="1" src="/hooks/client/native/LiveChat.host.js"></script>'
   bodyClose = html.lastIndexOf('</body>')
   var embedIdx = html.lastIndexOf('<script type="module"')
   var insertAt = -1
@@ -53,6 +55,8 @@ assert.ok(firstHost >= 0 && firstHost < bodyClose, 'hosts must be inside body')
 assert.ok(out.indexOf('park-host-common.js') >= 0, 'common boot script included')
 assert.ok(out.indexOf('telemetry.js') >= 0, 'theater telemetry script included')
 assert.ok(out.indexOf('Board.host.js') >= 0, 'board host script included')
+assert.ok(out.indexOf('ChatCommon.host.js') >= 0, 'chat common script included')
+assert.ok(out.indexOf('LiveChat.host.js') >= 0, 'live chat host script included')
 assert.ok(!out.includes('</html><script data-fb-park-native'), 'no hosts after html')
 
 console.log('inject-park-hosts.test.mjs OK')

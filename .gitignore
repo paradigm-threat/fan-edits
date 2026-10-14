@@ -2,4 +2,7 @@
 *.apk
 !downloads/
 !downloads/*.apk
+hooks/client/native/node_modules/
+hooks/client/native/test-results/
 ops/chat/chat-edge/node_modules/
+.relay/logs/

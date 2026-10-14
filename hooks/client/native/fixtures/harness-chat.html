@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>LiveChat lazy harness</title>
+  <style>
+    body { margin: 0; background: #0d0505; color: #f5e6be; font-family: Georgia, serif; }
+    .pad { height: 1200px; padding: 24px; }
+  </style>
+</head>
+<body>
+  <div class="pad">Scroll down for chat…</div>
+  <div id="chat-sentinel"
+       class="fb-live-chat-host"
+       data-relay-park-native="fb-live-chat"
+       data-channel="page-home"
+       data-path="/"
+       data-mode="embed"></div>
+  <div class="pad">Below chat</div>
+  <script src="/hooks/client/native/ChatCommon.host.js"></script>
+  <script src="/hooks/client/native/LiveChat.host.js"></script>
+</body>
+</html>
