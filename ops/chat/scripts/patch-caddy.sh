@@ -20,8 +20,12 @@ import sys
 
 path, mode, marker, out = sys.argv[1:5]
 text = open(path).read()
-# Apex only — www is usually a permanent redir site (no reverse_proxy).
-hosts = ("flashbackrepository.org",)
+# Apex park sites — www is usually a permanent redir (no reverse_proxy).
+hosts = (
+    "flashbackrepository.org",
+    "clevertree.net",
+    "paradigmthreat.net",
+)
 
 if mode == "remote":
     block = f"""\t{marker}
@@ -75,23 +79,52 @@ def patch_site(src: str, hostname: str) -> str:
     # Skip redir-only / non-proxy sites
     if "\treverse_proxy" not in body and " reverse_proxy" not in body:
         return src
-    if marker in body:
-        body2 = re.sub(
-            rf"\t{re.escape(marker)}\n(?:\thandle /chat/[^\n]*\n(?:\t\t[^\n]*\n)*\t}}\n)+",
-            block,
-            body,
-            count=1,
-        )
-        if body2 == body:
-            # Fallback: wipe from marker through next top-level reverse_proxy
-            body2 = re.sub(
-                rf"\t{re.escape(marker)}.*?(?=\treverse_proxy)",
-                block,
-                body,
-                count=1,
-                flags=re.S,
-            )
-        return src[:start] + body2 + src[end:]
+
+    def strip_chat_sidecar(b: str) -> str:
+        """Remove prior marker + following handle /chat blocks (brace-aware)."""
+        m = b.find(f"\t{marker}")
+        if m < 0:
+            return b
+        i = m + len(f"\t{marker}")
+        # consume trailing newline after marker
+        if i < len(b) and b[i] == "\n":
+            i += 1
+        while i < len(b):
+            # skip blank lines
+            if b.startswith("\n", i):
+                i += 1
+                continue
+            rest = b[i:]
+            if rest.startswith("\thandle /chat/") or rest.startswith("\thandle /chat"):
+                # walk this handle { ... }
+                j = rest.find("{")
+                if j < 0:
+                    break
+                depth = 0
+                k = j
+                while k < len(rest):
+                    if rest[k] == "{":
+                        depth += 1
+                    elif rest[k] == "}":
+                        depth -= 1
+                        if depth == 0:
+                            k += 1
+                            break
+                    k += 1
+                i += k
+                if i < len(b) and b[i] == "\n":
+                    i += 1
+                continue
+            break
+        return b[:m] + b[i:]
+
+    body = strip_chat_sidecar(body)
+    # Also drop a mistaken one-line reverse_proxy to chat-edge left by older patches
+    body = re.sub(
+        r"\n\treverse_proxy 127\.0\.0\.1:8098\n",
+        "\n",
+        body,
+    )
     rp = body.find("\treverse_proxy")
     if rp < 0:
         body2 = body + "\n" + block

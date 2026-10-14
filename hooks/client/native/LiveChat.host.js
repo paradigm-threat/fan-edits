@@ -51,19 +51,34 @@
     }
     C.ensureChatCss();
 
-    var channel = C.normalizeChannel(prop(props, 'channel', 'flashback'));
+    var prefix = C.normalizePrefix(prop(props, 'prefix', ''));
     var path = prop(props, 'path', '/');
+    var channelRaw = prop(props, 'channel', '');
+    var channel = channelRaw
+      ? C.normalizeChannel(channelRaw)
+      : C.channelFromPath(path, prefix || 'fb');
+    // Propagate origin onto root so ChatCommon.chatOrigin() sees it
+    var originAttr = prop(props, 'chat-origin', '') || prop(props, 'origin', '');
 
     var root = C.el('div', 'fb-live-chat');
     root.setAttribute('data-fb-live-chat', '1');
     root.setAttribute('data-channel', channel);
+    if (prefix) root.setAttribute('data-prefix', prefix);
+    if (originAttr) root.setAttribute('data-chat-origin', originAttr);
 
     var head = C.el('div', 'fb-live-chat-head');
     var title = C.el('h2', 'fb-live-chat-title', 'Live chat');
     var meta = C.el('div', 'fb-live-chat-meta');
     meta.textContent = '#' + channel;
     var openFull = C.el('a', 'fb-link');
-    openFull.href = '/chat?c=' + encodeURIComponent(channel);
+    var fullBase = C.chatOrigin() || '';
+    if (fullBase) {
+      openFull.href = fullBase + '/chat?c=' + encodeURIComponent(channel);
+      openFull.target = '_blank';
+      openFull.rel = 'noopener noreferrer';
+    } else {
+      openFull.href = '/chat?c=' + encodeURIComponent(channel);
+    }
     openFull.textContent = 'Open full chat';
     head.appendChild(title);
     head.appendChild(meta);
@@ -208,7 +223,17 @@
     if (!node || node.getAttribute('data-fb-live-chat-upgraded') === '1') return;
     waitChat().then(function () {
       if (!global.__fbChat) return;
-      var built = buildLiveChat(attrsToProps(node));
+      // Ensure data-chat-origin is visible before ChatCommon.chatOrigin() runs
+      var props = attrsToProps(node);
+      if (props['data-chat-origin'] || props['chat-origin']) {
+        try {
+          node.setAttribute(
+            'data-chat-origin',
+            props['data-chat-origin'] || props['chat-origin'],
+          );
+        } catch (_) {}
+      }
+      var built = buildLiveChat(props);
       node.setAttribute('data-fb-live-chat-upgraded', '1');
       if (node.replaceChildren) node.replaceChildren(built);
       else {

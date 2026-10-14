@@ -65,7 +65,8 @@ for host in hosts:
             "}\n\n"
         )
         continue
-    inject = chat if host == "flashbackrepository.org" else ""
+    # Mesh chat on every parked apex (Flashback Ergo; local or proxy).
+    inject = chat
     parts.append(
         host + " {\n"
         "\ttls " + str(chain) + " " + str(key) + "\n"

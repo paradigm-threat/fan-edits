@@ -1,0 +1,22 @@
+[Unit]
+Description=Flashback / Relay IRC ops agent (journal + emit → #logs)
+After=network.target flashback-ergo.service
+Wants=flashback-ergo.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+# Needs journalctl + bind emit; posts only to local IRC (iad1) or edge proxy :6667
+WorkingDirectory=/opt/relay/chat/irc-agent
+Environment=RELAY_IRC_HOST=127.0.0.1
+Environment=RELAY_IRC_PORT=6667
+Environment=RELAY_IRC_EMIT_PORT=8099
+Environment=CHAT_LOG_ROOT=/opt/relay/chat/logs
+Environment=NODE_ENV=production
+ExecStart=/usr/bin/node /opt/relay/chat/irc-agent/agent.mjs
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=multi-user.target

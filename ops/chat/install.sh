@@ -70,11 +70,50 @@ install_irc_proxy() {
   systemctl enable --now flashback-irc-proxy@6667.service flashback-irc-proxy@6697.service
 }
 
+install_irc_agent() {
+  mkdir -p "${CHAT_ROOT}/irc-agent"
+  rsync -a --delete \
+    --exclude '*.test.mjs' \
+    "${ROOT}/irc-agent/" "${CHAT_ROOT}/irc-agent/"
+  # Ensure irc-client is present (also vendored under irc-agent/)
+  [[ -f "${CHAT_ROOT}/irc-agent/irc-client.mjs" ]] || \
+    install -m 0644 "${ROOT}/chat-edge/irc-client.mjs" "${CHAT_ROOT}/irc-agent/irc-client.mjs"
+  install -m 0644 "${ROOT}/systemd/flashback-irc-agent.service" /etc/systemd/system/flashback-irc-agent.service
+  local fqdn nick
+  # Prefer Relay public hostname (Spot VMs often have useless prod-instance-* hostnames).
+  if [[ -f /opt/relay/relay.env ]]; then
+    # shellcheck disable=SC1091
+    set -a
+    # shellcheck disable=SC1091
+    source /opt/relay/relay.env 2>/dev/null || true
+    set +a
+  fi
+  fqdn="${RELAY_PUBLIC_HOSTNAME:-${RELAY_NODE_FQDN:-}}"
+  if [[ -z "${fqdn}" ]]; then
+    fqdn="$(hostname -f 2>/dev/null || hostname)"
+  fi
+  nick="$(printf '%s' "${fqdn}" | tr '[:upper:]' '[:lower:]')"
+  nick="${nick%%.relaygateway.net}"
+  nick="${nick%%.*}"
+  nick="$(printf '%s' "${nick}" | tr -cd 'a-z0-9_-' | cut -c1-16)"
+  [[ "${#nick}" -ge 2 ]] || nick="node"
+  mkdir -p /etc/systemd/system/flashback-irc-agent.service.d
+  cat >/etc/systemd/system/flashback-irc-agent.service.d/node.conf <<EOF
+[Service]
+Environment=RELAY_NODE_NICK=${nick}
+Environment=RELAY_NODE_FQDN=${fqdn}
+EOF
+  systemctl daemon-reload
+  systemctl enable --now flashback-irc-agent.service
+  systemctl restart flashback-irc-agent.service
+}
+
 if [[ "${EDGE_ONLY}" -eq 1 ]]; then
-  echo "[install] edge-only: Caddy remote proxy + IRC proxy + guard"
+  echo "[install] edge-only: Caddy remote proxy + IRC proxy + guard + irc-agent"
   CHAT_CADDY_MODE=remote "${CHAT_ROOT}/scripts/patch-caddy.sh"
   install_caddy_guard
   install_irc_proxy
+  install_irc_agent
   echo "[install] edge-only done"
   exit 0
 fi
@@ -132,6 +171,7 @@ install -m 0755 "${ROOT}/scripts/open-irc-ports.sh" "${CHAT_ROOT}/scripts/open-i
 "${CHAT_ROOT}/scripts/open-irc-ports.sh" || true
 # Primary hosts Ergo publicly — do not enable the edge TCP proxy here.
 systemctl disable --now flashback-irc-proxy@6667.service flashback-irc-proxy@6697.service 2>/dev/null || true
+install_irc_agent
 
 echo "[install] health:"
 curl -fsS "http://127.0.0.1:8098/chat/api/health" || true

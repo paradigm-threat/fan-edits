@@ -24,7 +24,9 @@ const INDEX_PATH = process.env.CHAT_INDEX || '/opt/relay/chat/channels.json';
 const LOGGER_NICK = process.env.CHAT_LOGGER_NICK || 'FlashbackLog';
 
 const SEED_CHANNELS = [
+  // Flashback (prefix fb) — legacy lobby/page names kept for IRC clients
   { name: 'flashback', topic: 'Flashback lobby' },
+  { name: 'fb', topic: 'Flashback lobby (short prefix)' },
   { name: 'page-home', topic: 'Home page' },
   { name: 'page-setup', topic: 'Setup' },
   { name: 'page-board', topic: 'Board' },
@@ -35,7 +37,28 @@ const SEED_CHANNELS = [
   { name: 'page-submit', topic: 'Submit' },
   { name: 'page-request', topic: 'Request' },
   { name: 'page-chat', topic: 'Chat' },
+  // CleverTree (ct)
+  { name: 'ct', topic: 'CleverTree lobby' },
+  { name: 'ct-page-home', topic: 'CleverTree home' },
+  // Paradigm Threat (pt)
+  { name: 'pt', topic: 'Paradigm Threat lobby' },
+  { name: 'pt-page-home', topic: 'Paradigm Threat home' },
+  // Ops bus (private intent — hidden from public channels API)
+  { name: 'logs', topic: 'Fleet journal / ops logs (node bots)' },
+  { name: 'logs-fb', topic: 'Ops logs: fan-edits / Flashback' },
+  { name: 'logs-ct', topic: 'Ops logs: clevertree-site' },
+  { name: 'logs-pt', topic: 'Ops logs: paradigm-threat-files' },
+  { name: 'relay', topic: 'Relay mesh ops chatter' },
+  { name: 'relay-stats', topic: 'Compact node heartbeats' },
 ];
+
+/** Channels not listed in public GET /chat/api/channels */
+const OPS_CHANNEL_KEYS = new Set(['logs', 'logs-fb', 'logs-ct', 'logs-pt', 'relay', 'relay-stats']);
+
+function isOpsChannelKey(key) {
+  const k = String(key || '');
+  return OPS_CHANNEL_KEYS.has(k) || k.startsWith('logs-') || k === 'relay' || k === 'relay-stats';
+}
 
 function ensureDirs() {
   fs.mkdirSync(LOG_ROOT, { recursive: true });
@@ -233,7 +256,9 @@ const server = http.createServer(async (req, res) => {
       .trim()
       .toLowerCase();
     const idx = loadIndex();
-    let list = idx.channels.slice();
+    let list = idx.channels
+      .slice()
+      .filter((c) => !isOpsChannelKey(channelToKey(c.name || c.key || '')));
     if (q) list = list.filter((c) => String(c.name).includes(q) || String(c.topic || '').toLowerCase().includes(q));
     return json(res, 200, { channels: list });
   }
