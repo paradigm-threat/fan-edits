@@ -1,0 +1,26 @@
+/* Full-bleed theater covers — tip-served (StyleContext drops nested @media). */
+.fb-backdrop {
+  background-color: #0d0505;
+  background-image: url(/hooks/client/brand/jpg/theater-bg-desktop.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+@media (min-width: 1800px) {
+  .fb-backdrop {
+    background-image: url(/hooks/client/brand/jpg/theater-bg-wide.jpg);
+  }
+}
+
+@media (max-width: 1100px) {
+  .fb-backdrop {
+    background-image: url(/hooks/client/brand/jpg/theater-bg-tablet.jpg);
+  }
+}
+
+@media (max-width: 640px) {
+  .fb-backdrop {
+    background-image: url(/hooks/client/brand/jpg/theater-bg-mobile.jpg);
+  }
+}

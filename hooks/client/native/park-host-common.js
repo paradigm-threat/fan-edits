@@ -7,8 +7,9 @@
 (function (global) {
   'use strict';
 
-  var CSS_ID = 'fb-park-native-css-v8';
+  var CSS_ID = 'fb-park-native-css-v9';
   var BRAND_LINKS_ID = 'fb-brand-head-links';
+  var THEATER_BG_CSS = '/hooks/client/brand/theater-bg.css';
 
   function ensureBrandHeadLinks() {
     try {
@@ -28,6 +29,12 @@
         }
         head.appendChild(el);
       }
+      // Responsive theater covers (theme.yaml @media is not emitted into relay-ssr-theme).
+      addLink({
+        rel: 'stylesheet',
+        href: THEATER_BG_CSS,
+        id: 'fb-theater-bg-css',
+      });
       addLink({ rel: 'icon', href: '/hooks/client/favicon.svg', type: 'image/svg+xml' });
       addLink({ rel: 'icon', href: '/favicon.ico', sizes: 'any' });
       addLink({ rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' });
@@ -54,6 +61,7 @@
         'fb-park-native-css-v5',
         'fb-park-native-css-v6',
         'fb-park-native-css-v7',
+        'fb-park-native-css-v8',
       ].forEach(
         function (oldId) {
           var old = global.document.getElementById(oldId);
@@ -64,6 +72,10 @@
       var st = global.document.createElement('style');
       st.id = CSS_ID;
       st.textContent = [
+        /* Theater cover breakpoints (backup if stylesheet link races) */
+        '@media (min-width:1800px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-wide.jpg)!important}}',
+        '@media (max-width:1100px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-tablet.jpg)!important}}',
+        '@media (max-width:640px){.fb-backdrop{background-image:url(/hooks/client/brand/jpg/theater-bg-mobile.jpg)!important}}',
         /* Affirmation / ownership gate — fullscreen modal for welcome AND title */
         '.fb-gate,.fb-affirmation-native{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(6,4,5,.9);box-sizing:border-box}',
         '.fb-gate-panel,.fb-gate-card{max-width:480px;width:100%;padding:28px 26px 24px;background:linear-gradient(165deg,#3a1820 0%,#1a0c10 55%,#12080a 100%);border:1px solid #e8c872;box-shadow:0 24px 70px rgba(0,0,0,.6);border-radius:4px;color:#f5e6be}',
