@@ -2,28 +2,46 @@
 
 ![Sonic DeSchwartzed Edition Poster.png](Sonic%202%20(2022)%20-%20DeSchwartzed.png)
 
-The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during post-production. This project aims to restore the original vision of the live action Sonic Trilogy before the project was sabotaged.
+A watchable *Sonic the Hedgehog 3* cut: trim sitcom / post-production cringe that ruins pacing, keep the Shadow plot, and leave Jim Carrey’s Robotnik almost untouched — the reason this trilogy was worth anticipating. Slogan: **Seriously, this was all about Jim Carrey, not Sonic.**
 
 ## Motivation
 
-All distracting or overly sappy dialogs were candidates for removal, while all plot points are retained. Much [predictive programming](https://joyoffaith.com/predictive-programming.html) (PP) has been removed where it doesn't tie directly to the plot.
+The live-action Sonic trilogy was filmed well enough on set. What wrecks the theatrical cuts is mostly **post-production**: audio re-recorded, new jokes invented, CGI mouths re-rendered — enough to turn a movie into a different, softer sitcom with pop references and awkward beats that kill pacing and seriousness. Ben Schwartz’s sardonic Sonic remains the main cut target.
 
-I do blame Ben Schwartz for nearly all the jokes he came up with. I don't think they were just 'bad' or 'annoying'. The decisions Schwartz and others made in all 3 movies during post-production also ruined the *continuity*. In post, they should have cast a normal 'child voice' actor like they did with Tails who was voiced by Colleen O'Shaughnessey. Aside from distracting dialog, he portrayed the main character as a sarcastic adult rather than an orphaned child from another planet. I'll remind everyone that Sonic was a child in the first movie, and that none of his commentary should be 'Family guy' style pop references. It should be something a child says. Moreover, Sonic shouldn't behave as if someone is laughing at his jokes all day if he literally had zero friends on Earth. This isn't the only movie I blame someone for ruining in Post Production. In my edit of Final Fantasy the Spirits Within, I make that case as well.
+The saving grace across all three films is **Jim Carrey as Dr. Robotnik**. This edit keeps almost every Carrey scene. The goal was never a pure Carrey clip-show; it is a correct cut anyone can watch, with him left as the highlight.
 
-Sometimes PP is subtle, like where Rachel is constantly telling Maddie to divorce Tom, right from the first scene, and with absolutely no reason or context. If anyone can please point me to a single scene in all 3 movies where Tom legitimately did something to upset Rachel, and I'll re-add those scenes, but if otherwise they remain removed.
+### This film
 
-[Predictive Programming Explained](https://joyoffaith.com/predictive-programming.html)
+*Sonic 3* was worth looking forward to and is enjoyable — when the cringe and sitcom digressions get out of the way. The rare Carrey trim here is a corridor dual-talk with Sonic (the “out of my way”-type beat near the mid/late film): one of the few moments they share continuous space instead of post-separated cuts. That scene reads as an admission that the first two films isolated CGI Sonic from humans — and adding one awkward walk-and-talk repairs nothing.
 
-[Top 33 PP Movies](https://www.imdb.com/list/ls086291084/)
+Robotnik’s **“Thanks for nothing.”** (kept in this cut) and Sonic 2’s **“Later haters!”** are read here as Carrey’s wink that he carried the trilogy — an **editor’s reading** of the dialogue, not proven production intent. Mainstream reviews of Sonic 3 still crown Carrey as the reason to show up (including the dual Ivo/Gerald work and the dance he pushed for).
+
+Secondary trims include [predictive programming](https://joyoffaith.com/predictive-programming.html) beats that are not plot-required.
 
 ## Changes
 
 - Much of Sonic’s sardonic commentary dialogue (voiced by Ben Schwartz) removed.
+- Jim Carrey / Robotnik preserved with one rare exception: the corridor dual-talk with Sonic (theatrical “repair” of CGI/human disconnect).
 - Some Knuckles / Tails dialog trimmed.
 - Nearly all dialogue and scenes with Wade and Rachel removed.
 - Many sappy family scenes removed.
-- Predictive-programming beats (e.g. Rachel pushing divorce) removed where not plot-required.
+- Predictive-programming beats removed where not plot-required.
 - Credit vocal songs replaced with remixes from Sonic 3 and Sonic & Knuckles game music.
+
+## Citations
+
+- [GamesRadar — Carrey steals Sonic 3](https://www.gamesradar.com/entertainment/family-movies/sonic-the-hedgehog-3-review/)
+- [IGN — double Carrey](https://www.ign.com/articles/sonic-the-hedgehog-3-review-jim-carrey-ben-schwartz-james-marsden-idris-elba)
+- [Polygon — Carrey insisted on the Sonic 3 laser dance](https://www.polygon.com/movies/499955/sonic-3-movie-laser-dance-robotnik-jim-carrey/)
+- [LA Times — Carrey’s grand return (2020 baseline)](https://www.latimes.com/entertainment-arts/movies/story/2020-02-13/sonic-the-hedgehog-review-jim-carrey)
+- [Ars Technica — recommend mainly for Carrey](https://arstechnica.com/gaming/2020/02/sonic-the-hedgehog-film-review-you-can-slow-your-roll-sega-fans/)
+- [IndieWire — grating Schwartz; product-placement gags](https://www.indiewire.com/criticism/movies/sonic-the-hedgehog-movie-review-1202210884/)
+- [Washburn Review — charm and cringe](https://washburnreview.org/958/features/sonic-the-hedgehog-brings-charm-and-cringe/)
+- [Variety — Schwartz as overfamiliar smart aleck](https://variety.com/2020/film/reviews/sonic-the-hedgehog-review-jim-carrey-1203500436/)
+- [RogerEbert.com 2020 — disposable pop-culture references](https://www.rogerebert.com/reviews/sonic-the-hedgehog-movie-review-2020)
+- “Thanks for nothing” / Robotnik quotes: [Paramount Robotnik miscellaneous](https://sonic.fandom.com/wiki/Doctor_Ivo_Robotnik_(Paramount)/Miscellaneous)
+
+[Predictive Programming Explained](https://joyoffaith.com/predictive-programming.html) · [Top 33 PP Movies](https://www.imdb.com/list/ls086291084/)
 
 ## Credits for Sonic 3 (2024)
 

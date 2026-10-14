@@ -41,7 +41,7 @@ The Flashback APK loads this site from `https://flashbackrepository.org`. It doe
 
 [Alien Resurrection (1997) - UnJossed](/FanMixes/Alien%20Resurrection%20(1997)%20-%20UnJossed "Alien Resurrection (1997) - UnJossed")
 
-[Congo (1995) - Incel](/FanMixes/Congo%20(1995)%20-%20Incel "Congo (1995) - Incel")
+[Congo (1995) - Adult Supervision](/FanMixes/Congo%20(1995)%20-%20Adult%20Supervision "Congo (1995) - Adult Supervision")
 
 [Final Fantasy (2001) - The Phantom Menace](/FanMixes/Final%20Fantasy%20(2001)%20-%20The%20Phantom%20Menace "Final Fantasy (2001) - The Phantom Menace")
 
