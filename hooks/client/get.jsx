@@ -1144,11 +1144,31 @@ function chatChannelForRoute(kind, route) {
   if (p.charAt(0) === '/') {
     p = p.slice(1)
   }
-  p = p.replace(/[^a-zA-Z0-9_\-]/g, '-').toLowerCase()
-  if (!p) {
+  // CleverScript-safe slugify (no regex literals)
+  let out = ''
+  const lower = p.toLowerCase()
+  for (let i = 0; i < lower.length; i++) {
+    const ch = lower.charAt(i)
+    const code = lower.charCodeAt(i)
+    const ok =
+      (code >= 48 && code <= 57) ||
+      (code >= 97 && code <= 122) ||
+      ch === '_' ||
+      ch === '-'
+    out = out + (ok ? ch : '-')
+  }
+  if (!out) {
     return 'page-home'
   }
-  return 'page-' + p
+  return 'page-' + out
+}
+
+function stripLeadingHash(s) {
+  let t = str(s)
+  while (t.length > 0 && t.charAt(0) === '#') {
+    t = t.slice(1)
+  }
+  return t
 }
 
 function chatChannelFromLocation(fallback) {
@@ -1156,7 +1176,7 @@ function chatChannelFromLocation(fallback) {
     const loc = typeof globalThis !== 'undefined' ? globalThis.location : null
     if (loc && loc.search) {
       const q = String(loc.search)
-      // CleverScript-safe: avoid URLSearchParams if unavailable
+      // CleverScript-safe: avoid URLSearchParams / regex
       let c = ''
       const parts = q.charAt(0) === '?' ? q.slice(1).split('&') : q.split('&')
       for (let i = 0; i < parts.length; i++) {
@@ -1167,11 +1187,11 @@ function chatChannelFromLocation(fallback) {
         }
       }
       if (c) {
-        return c.replace(/^#/, '')
+        return stripLeadingHash(c)
       }
     }
     if (loc && loc.hash && String(loc.hash).length > 1) {
-      return String(loc.hash).replace(/^#/, '')
+      return stripLeadingHash(String(loc.hash))
     }
   } catch (eLoc) {}
   return fallback || 'flashback'
