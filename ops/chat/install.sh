@@ -34,6 +34,23 @@ chown -R relay-chat:relay-chat "${CHAT_ROOT}"
 install -m 0755 "${ROOT}/scripts/backup.sh" "${CHAT_ROOT}/scripts/backup.sh"
 install -m 0755 "${ROOT}/scripts/patch-caddy.sh" "${CHAT_ROOT}/scripts/patch-caddy.sh"
 
+mkdir -p "${CHAT_ROOT}/caddy"
+if [[ "${EDGE_ONLY}" -eq 1 ]]; then
+  install -m 0644 "${ROOT}/caddy/Caddyfile.flashback-remote" "${CHAT_ROOT}/caddy/Caddyfile.flashback"
+else
+  install -m 0644 "${ROOT}/caddy/Caddyfile.flashback-local" "${CHAT_ROOT}/caddy/Caddyfile.flashback"
+fi
+# Prefer park-tls patch when flashback is already a parked site (avoids ambiguous Caddy site).
+# Only import the snippet when the park file has no flashbackrepository.org block.
+if grep -q 'flashbackrepository.org' /opt/relay/state/park-tls/Caddyfile.parked 2>/dev/null; then
+  :
+else
+  if ! grep -q 'Caddyfile.flashback' /etc/caddy/Caddyfile 2>/dev/null; then
+    printf '\n# Flashback live chat sidecar\nimport /opt/relay/chat/caddy/Caddyfile.flashback\n' >> /etc/caddy/Caddyfile
+  fi
+fi
+
+
 if [[ "${EDGE_ONLY}" -eq 1 ]]; then
   echo "[install] edge-only: Caddy remote proxy + mirror dirs"
   CHAT_CADDY_MODE=remote "${CHAT_ROOT}/scripts/patch-caddy.sh"
