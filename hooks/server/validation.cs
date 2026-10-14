@@ -95,6 +95,8 @@ function isAllowedPath(p) {
   if (startsWith(p, '.relay/assets/') && endsWith(p, '.ipfs')) return true
   if (startsWith(p, 'hooks/')) return true
   if (startsWith(p, 'scripts/')) return true
+  // Flashback chat sidecar install tree (Ergo/chat-edge configs — not chatlogs)
+  if (startsWith(p, 'ops/chat/')) return true
   if (startsWith(p, 'docs/') && (endsWith(p, '.md') || endsWith(p, '.MD'))) return true
   // Flashback APK sideload + in-app update manifest (git tip, not IPFS)
   if (startsWith(p, 'downloads/') && (endsWith(p, '.apk') || endsWith(p, '.json') || endsWith(p, '.md') || endsWith(p, '.MD'))) return true
