@@ -8,7 +8,7 @@ Cut that removes **Anna** as much as possible without breaking the story, and st
 | --- | --- |
 | **Original** | Van Helsing (2004) |
 | **Edit length** | about 1 hour 24 minutes (original ~2 hours 12 minutes) |
-| **About** | Tighter adventure cut; less Anna, less cringe |
+| **About** | Tighter adventure cut; less Anna — Everything is at Stake. |
 
 ## Why this cut
 

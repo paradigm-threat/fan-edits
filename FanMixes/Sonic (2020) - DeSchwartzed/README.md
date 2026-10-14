@@ -2,28 +2,42 @@
 
 ![Sonic DeSchwartzed Edition Poster.png](Sonic%20(2020)%20-%20DeSchwartzed.png)
 
-The Sonic Movie Trilogy (2020-2024) is quite unwatchable due to decisions by Ben Schwartz and other editors to add distracting, unamusing, [racist](https://www.reddit.com/r/rant/comments/1j5d6a8/the_sonic_the_hedgehog_2_movie_is_racist/), and otherwise agenda-driven dialog during post-production. This project aims to restore the original vision of the live action Sonic Trilogy before the project was sabotaged.
+A watchable *Sonic the Hedgehog* (2020) cut: trim sitcom / post-production Sonic commentary, keep the plot, and leave Jim Carrey’s Robotnik almost untouched — the film’s real reason to watch. Slogan: **Carrey intact. Sitcom Sonic cut.**
 
 ## Motivation
 
-All distracting or overly sappy dialogs were candidates for removal, while all plot points are retained. Much [predictive programming](https://joyoffaith.com/predictive-programming.html) (PP) has been removed where it doesn't tie directly to the plot.
+The live-action Sonic trilogy was filmed well enough on set. What wrecks the theatrical cuts is mostly **post-production**: audio re-recorded, new jokes invented, CGI mouths re-rendered — enough to turn a movie into a different, softer sitcom with pop references and awkward beats that kill pacing and seriousness. Ben Schwartz’s sardonic, adult-comedian Sonic is the main target here; the voice should read as a lonely child from another planet, not a Family Guy cameo with an invisible laugh track.
 
-I do blame Ben Schwartz for nearly all the jokes he came up with. I don't think they were just 'bad' or 'annoying'. The decisions Schwartz and others made in all 3 movies during post-production also ruined the *continuity*. In post, they should have cast a normal 'child voice' actor like they did with Tails who was voiced by Colleen O'Shaughnessey. Aside from distracting dialog, he portrayed the main character as a sarcastic adult rather than an orphaned child from another planet. I'll remind everyone that Sonic was a child in the first movie, and that none of his commentary should be 'Family guy' style pop references. It should be something a child says. Moreover, Sonic shouldn't behave as if someone is laughing at his jokes all day if he literally had zero friends on Earth. This isn't the only movie I blame someone for ruining in Post Production. In my edit of Final Fantasy the Spirits Within, I make that case as well.
+The saving grace of all three films is not the plot padding or the human sitcom — it is **Jim Carrey as Dr. Robotnik**. Critics across the mainstream press said as much when the first film landed. This edit keeps almost every Carrey scene. The goal was never a pure Carrey clip-show; it is a correct cut anyone can watch, with Robotnik left as the highlight.
 
-Sometimes PP is subtle, like in this movie where Rachel is constantly telling Maddie to divorce Tom, right from the first scene, and with absolutely no reason or context. If anyone can please point me to a single scene in all 3 movies where Tom legitimately did something to upset Rachel, and I'll re-add those scenes, but if otherwise they remain removed.
+### This film
 
-[Predictive Programming Explained](https://joyoffaith.com/predictive-programming.html)
+*Sonic* (2020) is a fight over Sonic’s power. Robotnik begins as US-government tech — the predictive-programming flavor of army incompetence and AI takeover — and **transitions**, by the finale, into true megalomaniac Eggman. That arc is a stroke of genius; this cut protects it while cutting the sitcom Sonic layer around it.
 
-[Top 33 PP Movies](https://www.imdb.com/list/ls086291084/)
+Secondary trims include [predictive programming](https://joyoffaith.com/predictive-programming.html) beats that are not plot-required (e.g. Rachel pushing divorce with no cause). Point to a scene where Tom earned that hostility and those can come back.
 
 ## Changes
 
 - Much of Sonic’s sardonic commentary dialogue (voiced by Ben Schwartz) removed.
-- Some Knuckles / Tails dialog trimmed.
+- Jim Carrey / Robotnik scenes kept (near-total preserve across the trilogy).
 - Nearly all dialogue and scenes with Wade and Rachel removed.
 - Many sappy family scenes removed.
 - Predictive-programming beats (e.g. Rachel pushing divorce) removed where not plot-required.
 - Credit vocal songs replaced with Sonic game music remixes (four OC ReMixes from the corresponding game).
+
+## Citations
+
+Mainstream reviews that agree Carrey carries the show — and that the sitcom / pop-ref Sonic layer is a problem:
+
+- [LA Times — Jim Carrey’s grand return as Robotnik](https://www.latimes.com/entertainment-arts/movies/story/2020-02-13/sonic-the-hedgehog-review-jim-carrey)
+- [Ars Technica — recommend mainly for Carrey](https://arstechnica.com/gaming/2020/02/sonic-the-hedgehog-film-review-you-can-slow-your-roll-sega-fans/)
+- [Business Insider — Carrey shines](https://www.businessinsider.com/sonic-the-hedgehog-movie-review-jim-carrey-shines-2020-2)
+- [IndieWire — grating Schwartz; product-placement gags](https://www.indiewire.com/criticism/movies/sonic-the-hedgehog-movie-review-1202210884/)
+- [Washburn Review — charm and cringe; Olive Garden / Fortnite floss](https://washburnreview.org/958/features/sonic-the-hedgehog-brings-charm-and-cringe/)
+- [Variety — Schwartz as overfamiliar smart aleck](https://variety.com/2020/film/reviews/sonic-the-hedgehog-review-jim-carrey-1203500436/)
+- [RogerEbert.com — disposable pop-culture references](https://www.rogerebert.com/reviews/sonic-the-hedgehog-movie-review-2020)
+
+[Predictive Programming Explained](https://joyoffaith.com/predictive-programming.html) · [Top 33 PP Movies](https://www.imdb.com/list/ls086291084/)
 
 ## Credits for Sonic 1 (2020)
 
@@ -34,7 +48,7 @@ by Diggi Dis
 by Rayza
 
 [Green Lane Avenue OC ReMix](https://ocremix.org/remix/OCR01624)
-bys AeroZ & Tepid
+by AeroZ & Tepid
 
 [Live at the Springyard OC ReMix](https://ocremix.org/remix/OCR01346)
 by Harmony

@@ -1,6 +1,6 @@
 # Final Fantasy (2001) — The Phantom Menace
 
-*Final Fantasy: The Spirits Within* — a minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy–like title placement — with the rare Japanese track and remix soundtrack upgrades.
+*Final Fantasy: The Spirits Within* — a minimalist re-cut that strips distracting acting and excess human-behavior beats, shortens gore, and restores a more Final Fantasy–like title placement — with the rare Japanese track and remix soundtrack upgrades. Slogan: **Spiritual Edition — without the cringe.**
 
 ## Why this cut
 
