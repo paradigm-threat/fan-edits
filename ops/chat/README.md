@@ -1,0 +1,40 @@
+# Flashback chat sidecar (Ergo + chat-edge)
+
+Off-repo live chat for [flashbackrepository.org](https://flashbackrepository.org). Data lives under `/opt/relay/chat/` on **iad1**; ord1/hkg1 reverse-proxy `/chat/*` to iad1.
+
+## Components
+
+| Piece | Role |
+|-------|------|
+| **Ergo** | IRCv3 on `127.0.0.1:6667` (+ optional WS `8097`) |
+| **chat-edge** | `GET /chat/api/{health,history,channels,name}` + JSON `WS /chat/ws` bridged to IRC |
+| **Logger** | Inside chat-edge — appends PRIVMSG to `/opt/relay/chat/logs/<channel>/<date>.jsonl` |
+| **Backup timer** | Daily tar + rsync mirrors to peers |
+
+## Install
+
+On **iad1** (from this directory or a rsync’d copy):
+
+```bash
+sudo ./install.sh
+```
+
+On **ord1** / **hkg1**:
+
+```bash
+sudo ./install.sh --edge-only
+```
+
+## Public paths (same-origin)
+
+- `GET /chat/api/health`
+- `GET /chat/api/history?channel=movie-slug&limit=50`
+- `GET /chat/api/channels?q=`
+- `GET /chat/api/name?mode=theater|cut-room`
+- `WS /chat/ws` — JSON `{type:join|privmsg|nick|part|ping,…}`
+
+## Channels
+
+- `#flashback` lobby
+- `#movie-<slug>`
+- `#page-<path>` (`page-home`, `page-setup`, …)

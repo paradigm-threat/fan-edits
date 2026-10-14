@@ -1,0 +1,27 @@
+[Unit]
+Description=Flashback chat-edge (REST + WS bridge)
+After=network.target flashback-ergo.service
+Wants=flashback-ergo.service
+
+[Service]
+Type=simple
+User=relay-chat
+Group=relay-chat
+WorkingDirectory=/opt/relay/chat/chat-edge
+Environment=CHAT_EDGE_PORT=8098
+Environment=CHAT_IRC_HOST=127.0.0.1
+Environment=CHAT_IRC_PORT=6667
+Environment=CHAT_LOG_ROOT=/opt/relay/chat/logs
+Environment=CHAT_INDEX=/opt/relay/chat/channels.json
+Environment=CHAT_LOGGER_NICK=FlashbackLog
+ExecStart=/usr/bin/node /opt/relay/chat/chat-edge/server.mjs
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/relay/chat
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

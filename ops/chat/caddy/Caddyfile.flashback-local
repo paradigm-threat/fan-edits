@@ -1,0 +1,6 @@
+# Imported on iad1 (chat primary). Merges with park-tls / on_demand site blocks.
+flashbackrepository.org, www.flashbackrepository.org {
+	handle /chat/* {
+		reverse_proxy 127.0.0.1:8098
+	}
+}

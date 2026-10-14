@@ -2,3 +2,4 @@
 *.apk
 !downloads/
 !downloads/*.apk
+ops/chat/chat-edge/node_modules/

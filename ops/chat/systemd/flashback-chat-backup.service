@@ -1,0 +1,9 @@
+[Unit]
+Description=Flashback chat backup (rsync peers)
+After=network.target
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/opt/relay/chat/scripts/backup.sh
+Nice=10

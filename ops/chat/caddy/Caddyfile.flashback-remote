@@ -1,0 +1,11 @@
+# Imported on ord1/hkg1 — proxy public /chat/* to iad1 chat-edge.
+flashbackrepository.org, www.flashbackrepository.org {
+	handle /chat/* {
+		reverse_proxy https://iad1.relaygateway.net {
+			header_up Host flashbackrepository.org
+			transport http {
+				tls_server_name flashbackrepository.org
+			}
+		}
+	}
+}

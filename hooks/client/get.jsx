@@ -17,6 +17,8 @@ import Affirmation, {
 import NowShowing from 'hooks/client/native/NowShowing.js'
 import ExternalPlay from 'hooks/client/native/ExternalPlay.js'
 import Board from 'hooks/client/native/Board.js'
+import LiveChat from 'hooks/client/native/LiveChat.js'
+import ChatApp from 'hooks/client/native/ChatApp.js'
 import AppDownloads from 'hooks/client/components/AppDownloads.jsx'
 // SSR-static tip (`hydrate: false`): no embed.js, so gallery CEs never upgrade.
 
@@ -1066,6 +1068,9 @@ function routeKind(route) {
   if (route === '/board' || route === '/feedback' || route === '/bugs') {
     return { kind: 'board' }
   }
+  if (route === '/chat') {
+    return { kind: 'chat' }
+  }
   let slug = route
   if (slug.charAt(0) === '/') {
     slug = slug.slice(1)
@@ -1087,6 +1092,89 @@ function navigate(path) {
       return
     }
   } catch (e) {}
+}
+
+/** IRC channel key for page embeds (`movie-<slug>` / `page-<name>`). */
+function chatChannelForRoute(kind, route) {
+  try {
+    if (kind && kind.kind === 'movie' && kind.slug) {
+      return 'movie-' + str(kind.slug)
+    }
+    if (kind && kind.kind === 'home') {
+      return 'page-home'
+    }
+    if (kind && kind.kind === 'board') {
+      return 'page-board'
+    }
+    if (kind && kind.kind === 'chat') {
+      return 'flashback'
+    }
+    if (kind && kind.kind === 'app') {
+      return 'page-app'
+    }
+    if (kind && kind.kind === 'request') {
+      return 'page-request'
+    }
+    if (kind && kind.kind === 'md' && kind.file) {
+      const f = str(kind.file)
+      if (f.indexOf('setup') >= 0) {
+        return 'page-setup'
+      }
+      if (f.indexOf('legal') >= 0) {
+        return 'page-legal'
+      }
+      if (f.indexOf('terms') >= 0) {
+        return 'page-terms'
+      }
+      if (f.indexOf('motivation') >= 0) {
+        return 'page-motivation'
+      }
+      if (f.indexOf('submit') >= 0) {
+        return 'page-submit'
+      }
+      if (f.indexOf('android-lab') >= 0) {
+        return 'page-android-lab'
+      }
+    }
+  } catch (eCh) {}
+  let p = str(route || '/')
+  if (p === '/' || p === '') {
+    return 'page-home'
+  }
+  if (p.charAt(0) === '/') {
+    p = p.slice(1)
+  }
+  p = p.replace(/[^a-zA-Z0-9_\-]/g, '-').toLowerCase()
+  if (!p) {
+    return 'page-home'
+  }
+  return 'page-' + p
+}
+
+function chatChannelFromLocation(fallback) {
+  try {
+    const loc = typeof globalThis !== 'undefined' ? globalThis.location : null
+    if (loc && loc.search) {
+      const q = String(loc.search)
+      // CleverScript-safe: avoid URLSearchParams if unavailable
+      let c = ''
+      const parts = q.charAt(0) === '?' ? q.slice(1).split('&') : q.split('&')
+      for (let i = 0; i < parts.length; i++) {
+        const kv = parts[i].split('=')
+        if (kv[0] === 'c' || kv[0] === 'channel') {
+          c = decodeURIComponent(kv.slice(1).join('=') || '')
+          break
+        }
+      }
+      if (c) {
+        return c.replace(/^#/, '')
+      }
+    }
+    if (loc && loc.hash && String(loc.hash).length > 1) {
+      return String(loc.hash).replace(/^#/, '')
+    }
+  } catch (eLoc) {}
+  return fallback || 'flashback'
 }
 
 function projectSlug(p) {
@@ -1651,8 +1739,25 @@ export default function FlashbackApp() {
     ])
   }
 
+  const pageChatChannel = chatChannelForRoute(kind, route)
+
   let main = null
-  if (kind.kind === 'board') {
+  if (kind.kind === 'chat') {
+    const chatCh = chatChannelFromLocation('flashback')
+    main = (
+      <div className="fb-doc fb-chat-page">
+        <a className="fb-back" href="/">
+          ← Library
+        </a>
+        <h1 className="fb-movie-title">Chat</h1>
+        <p className="fb-movie-blurb">
+          Live lobby and per-page channels. Pick a nick or use a theater seat name. Limited markdown
+          and image links welcome.
+        </p>
+        <ChatApp channel={chatCh} />
+      </div>
+    )
+  } else if (kind.kind === 'board') {
     const bq = boardQueryFromLocation()
     main = (
       <div className="fb-doc">
@@ -2143,13 +2248,21 @@ export default function FlashbackApp() {
             <a className="fb-link" href="/board">
               Board
             </a>
+            <a className="fb-link" href="/chat">
+              Chat
+            </a>
             <a className="fb-link" href="/legal">
               Legal
             </a>
           </nav>
         </header>
         <NowShowing variant="lcd" itemsJson={nowItemsJson} ariaLabel="Now showing titles" />
-        <main className="fb-main">{main}</main>
+        <main className="fb-main">
+          {main}
+          {kind.kind !== 'chat' ? (
+            <LiveChat channel={pageChatChannel} path={route || '/'} mode="embed" />
+          ) : null}
+        </main>
         <footer className="fb-footer">
           <span className="fb-footer-brand">
             <img
@@ -2184,6 +2297,10 @@ export default function FlashbackApp() {
             {' · '}
             <a className="fb-link" href="/board">
               {'Board / Report a problem'}
+            </a>
+            {' · '}
+            <a className="fb-link" href="/chat">
+              {'Chat'}
             </a>
             {' · '}
             <a className="fb-link" href="/legal">
