@@ -6,7 +6,8 @@
     "final-fantasy-2001-the-phantom-menace",
     "sonic-2020-deschwartzed",
     "sonic-2-2022-deschwartzed",
-    "sonic-3-2024-deschwartzed"
+    "sonic-3-2024-deschwartzed",
+    "silent-hill-2006-nay-tomorrow"
   ],
   "projects": [
     {
@@ -247,16 +248,20 @@
       "path": "FanMixes/Silent Hill (2006) - Nay Tomorrow",
       "title": "Silent Hill (2006) \u2014 Nay Tomorrow Edition",
       "originalTitle": "Silent Hill (2006)",
-      "status": "coming_soon",
+      "status": "showing",
       "media": "Silent Hill (2006) - Nay Tomorrow Edition.mkv",
       "mediaWeb": "",
       "mediaMobile": "",
-      "image": "",
+      "image": "FanMixes/Silent Hill (2006) - Nay Tomorrow/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
-      "qualityWebEnabled": false,
-      "qualityMobileEnabled": false,
-      "blurb": "A watchable *Silent Hill* cut \u2014 less gore and exposition, more room for the mystery, with Silent Hill 1 music woven in."
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/silent-hill-2006-nay-tomorrow/Silent_Hill_2006_-_Nay_Tomorrow_Edition.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/silent-hill-2006-nay-tomorrow/Silent_Hill_2006_-_Nay_Tomorrow_Edition_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/silent-hill-2006-nay-tomorrow/Silent_Hill_2006_-_Nay_Tomorrow_Edition_mobile-720p.mkv",
+      "qualityWebEnabled": true,
+      "qualityMobileEnabled": true,
+      "blurb": "A watchable *Silent Hill* cut \u2014 less gore and exposition, more room for the mystery, with Silent Hill 1 music woven in.",
+      "poster": "poster.jpg"
     },
     {
       "slug": "sonic-2020-deschwartzed",
@@ -540,16 +545,17 @@
       "path": "FanMixes/War of the Worlds (2005) - Family Therapy",
       "title": "War of the Worlds (2005) \u2014 Family Therapy Edition",
       "originalTitle": "War of the Worlds (2005)",
-      "status": "wip",
-      "media": "",
+      "status": "coming_soon",
+      "media": "War of the Worlds (2005) - Family Therapy.mkv",
       "mediaWeb": "",
       "mediaMobile": "",
-      "image": "",
+      "image": "FanMixes/War of the Worlds (2005) - Family Therapy/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
-      "blurb": "This FanMix eliminates nearly all the toxic family behavior featured in the movie, so that WotW (2005) becomes a movie about aliens and not allusions to Spielberg's trouble raising his own children."
+      "blurb": "This FanMix eliminates nearly all the toxic family behavior featured in the movie, so that WotW (2005) becomes a movie about aliens and not allusions to Spielberg's trouble raising his own children.",
+      "poster": "poster.jpg"
     },
     {
       "slug": "bambi-1942-kidfriendly-edition",
