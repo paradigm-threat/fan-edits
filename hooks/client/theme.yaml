@@ -257,34 +257,20 @@ themes:
         marginLeft: "auto"
         marginRight: "auto"
         boxSizing: "border-box"
-      # Full-bleed chat room (overrides .fb-main max-width)
+      # Chat page: stay in article column; clear space above site footer
       ".fb-main-chat":
-        maxWidth: "none"
-        width: "100%"
-        padding: "12px 12px 16px"
-        display: "flex"
-        flexDirection: "column"
-        flex: "1"
-        minHeight: "0"
+        paddingBottom: "28px"
       ".fb-chat-page":
-        display: "flex"
-        flexDirection: "column"
-        flex: "1"
-        minHeight: "0"
         width: "100%"
       ".fb-chat-page .fb-movie-blurb":
         marginBottom: "10px"
       ".fb-chat-page .fb-chat-app-host":
-        display: "flex"
-        flexDirection: "column"
-        flex: "1"
-        minHeight: "min(78vh, 900px)"
+        display: "block"
         width: "100%"
+        marginBottom: "12px"
       ".fb-chat-page .fb-chat-app":
-        flex: "1"
         width: "100%"
-        minHeight: "min(78vh, 900px)"
-        maxWidth: "none"
+        minHeight: "min(62vh, 640px)"
       ".fb-affirmation":
         padding: "20px 18px 8px"
         boxSizing: "border-box"

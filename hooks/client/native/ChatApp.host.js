@@ -84,7 +84,13 @@
     side.appendChild(list);
 
     var main = C.el('div', 'fb-chat-main');
-    var topic = C.el('div', 'fb-chat-topic', '#' + initial);
+    var topic = C.el('div', 'fb-chat-topic');
+    var topicLabel = C.el('span', 'fb-chat-topic-label', '#' + initial);
+    var fsBtn = C.el('button', 'fb-chat-btn fb-chat-fs-btn', 'Fullscreen');
+    fsBtn.type = 'button';
+    fsBtn.setAttribute('aria-label', 'Toggle fullscreen chat');
+    topic.appendChild(topicLabel);
+    topic.appendChild(fsBtn);
     var scroll = C.el('div', 'fb-chat-scroll');
     var composer = C.el('div', 'fb-chat-composer');
     var nickInput = C.el('input', 'fb-live-chat-nick');
@@ -138,8 +144,35 @@
     };
 
     function setTopicLine(extra) {
-      topic.textContent = '#' + state.channel + (extra ? ' — ' + extra : '');
+      topicLabel.textContent = '#' + state.channel + (extra ? ' — ' + extra : '');
     }
+
+    function setFullscreen(on) {
+      if (on) {
+        root.classList.add('is-fullscreen');
+        try {
+          global.document.body.classList.add('fb-chat-fs-open');
+        } catch (_) {}
+        fsBtn.textContent = 'Exit full';
+      } else {
+        root.classList.remove('is-fullscreen');
+        try {
+          global.document.body.classList.remove('fb-chat-fs-open');
+        } catch (_) {}
+        fsBtn.textContent = 'Fullscreen';
+      }
+    }
+    fsBtn.addEventListener('click', function () {
+      setFullscreen(!root.classList.contains('is-fullscreen'));
+    });
+    function onFsKey(e) {
+      if (e && e.key === 'Escape' && root.classList.contains('is-fullscreen')) {
+        setFullscreen(false);
+      }
+    }
+    try {
+      global.document.addEventListener('keydown', onFsKey);
+    } catch (_) {}
 
     function renderChannelList() {
       while (list.firstChild) list.removeChild(list.firstChild);
