@@ -3,6 +3,16 @@
   "path": "FanMixes/Silent Hill (2006) - Nay Tomorrow",
   "files": [
     {
+      "path": "Silent Hill (2006) - Nay Tomorrow.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 272235
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 226557
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 931

@@ -3,9 +3,19 @@
   "path": "FanMixes/Sonic 2 (2022) - DeSchwartzed",
   "files": [
     {
+      "path": "Sonic 2 (2022) - DeSchwartzed.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 274031
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 286778
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 3101
+      "bytes": 4332
     }
   ]
 }

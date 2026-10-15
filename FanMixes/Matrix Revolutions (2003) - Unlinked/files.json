@@ -3,6 +3,11 @@
   "path": "FanMixes/Matrix Revolutions (2003) - Unlinked",
   "files": [
     {
+      "path": "Matrix Revolutions (2003) - Unlinked.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 83216
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 501

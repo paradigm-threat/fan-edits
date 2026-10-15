@@ -3,9 +3,24 @@
   "path": "FanMixes/Final Fantasy (2001) - The Phantom Menace",
   "files": [
     {
+      "path": "Final Fantasy (2001) - The Phantom Menace.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 625992
+    },
+    {
+      "path": "Final Fantasy (2001) Restoration.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 250483
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 273189
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 1276
+      "bytes": 1330
     }
   ]
 }

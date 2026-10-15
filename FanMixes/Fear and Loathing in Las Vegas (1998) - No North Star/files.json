@@ -3,6 +3,11 @@
   "path": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star",
   "files": [
     {
+      "path": "Fear and Loathing in Las Vegas (1998) - No North Star.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 6007
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 700

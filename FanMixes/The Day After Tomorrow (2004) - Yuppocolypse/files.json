@@ -3,6 +3,11 @@
   "path": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse",
   "files": [
     {
+      "path": "The Day After Tomorrow (2004) - Yuppocolypse.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 242648
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 483

@@ -8,9 +8,19 @@
       "bytes": 149325
     },
     {
+      "path": "The Mummy Debuggedv2.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 149712
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 497900
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 1584
+      "bytes": 1628
     },
     {
       "path": "subs/The Mummy Debugged.english.srt",

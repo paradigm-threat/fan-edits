@@ -3,9 +3,19 @@
   "path": "FanMixes/Alien Resurrection (1997) - UnJossed",
   "files": [
     {
+      "path": "Alien Resurrection (1997) - UnJossed.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 80625
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 262269
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 668
+      "bytes": 5597
     }
   ]
 }

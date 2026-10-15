@@ -3,9 +3,19 @@
   "path": "FanMixes/Riddick (2013) - Unjinxed",
   "files": [
     {
+      "path": "Riddick (2013) - Unjinxed.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 102674
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 265595
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 1007
+      "bytes": 2847
     }
   ]
 }

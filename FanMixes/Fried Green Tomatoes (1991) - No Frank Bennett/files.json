@@ -3,6 +3,11 @@
   "path": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett",
   "files": [
     {
+      "path": "Fried Green Tomatoes (1991) - No Frank Bennett.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 19822
+    },
+    {
       "path": ".render_filter_complex.txt",
       "kind": "other",
       "bytes": 3421

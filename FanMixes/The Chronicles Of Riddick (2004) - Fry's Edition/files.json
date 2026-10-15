@@ -3,9 +3,24 @@
   "path": "FanMixes/The Chronicles Of Riddick (2004) - Fry's Edition",
   "files": [
     {
+      "path": "The Chronicles Of Riddick (2004) - Fry's Edition.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 186346
+    },
+    {
+      "path": "The Chronicles Of Riddick (2004) - Fry's Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 57542
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 267645
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 2075
+      "bytes": 3528
     }
   ]
 }

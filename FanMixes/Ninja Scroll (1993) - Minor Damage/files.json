@@ -3,6 +3,21 @@
   "path": "FanMixes/Ninja Scroll (1993) - Minor Damage",
   "files": [
     {
+      "path": "Ninja Scroll (1993) - Minor Damage.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 496192
+    },
+    {
+      "path": "Ninja Scroll (1993).kdenlive",
+      "kind": "kdenlive",
+      "bytes": 167609
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 270894
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 1086

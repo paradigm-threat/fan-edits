@@ -3,6 +3,11 @@
   "path": "FanMixes/Boogie Nights (1997) - No Lookout",
   "files": [
     {
+      "path": "Boogie Nights (1997) - No Lookout.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 5933
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 910

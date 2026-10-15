@@ -38,14 +38,19 @@
       "bytes": 3571708
     },
     {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 444320
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 2281
+      "bytes": 2296
     },
     {
       "path": "subs/Van Helsing - DeAnna'd.english.srt",
       "kind": "srt",
-      "bytes": 29758
+      "bytes": 29718
     },
     {
       "path": "Van Helsing - DeAnna'd.edit.kdenlive.srt",
@@ -65,7 +70,7 @@
     {
       "path": "subs/Van Helsing - DeAnna'd.english.vtt",
       "kind": "vtt",
-      "bytes": 27844
+      "bytes": 27808
     }
   ]
 }

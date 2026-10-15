@@ -3,6 +3,11 @@
   "path": "FanMixes/Terminator 3 (2003) - Brass Monkey",
   "files": [
     {
+      "path": "Terminator 3 (2003) - Brass Monkey.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 219009
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 1182

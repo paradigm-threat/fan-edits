@@ -1,0 +1,21 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "FanMixes/Congo (1995) - Adult Supervision",
+  "files": [
+    {
+      "path": "Congo (1995) - Adult Supervision.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 190240
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 301741
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 2229
+    }
+  ]
+}

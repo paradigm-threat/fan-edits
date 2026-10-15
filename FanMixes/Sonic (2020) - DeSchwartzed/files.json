@@ -3,9 +3,19 @@
   "path": "FanMixes/Sonic (2020) - DeSchwartzed",
   "files": [
     {
+      "path": "Sonic (2020) - DeSchwartzed.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 806357
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 269203
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 3126
+      "bytes": 4085
     }
   ]
 }

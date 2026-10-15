@@ -3,6 +3,11 @@
   "path": "FanMixes/The Mummy Returns (2001) - Debugged",
   "files": [
     {
+      "path": "The Mummy Returns Debugged.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 294282
+    },
+    {
       "path": "music/Evening of the Undead (Metal Version).mp3",
       "kind": "music",
       "bytes": 2094414
@@ -21,6 +26,11 @@
       "path": "music/Zombie Panic (Metal Version).mp3",
       "kind": "music",
       "bytes": 2350610
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 556418
     },
     {
       "path": "README.md",
