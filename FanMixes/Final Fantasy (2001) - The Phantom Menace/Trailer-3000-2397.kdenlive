@@ -2133,7 +2133,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "AppData/Local/Temp/1753996696524-{7e7d991a-f770-4791-9032-d1b792212f4b}.ass",
+        "file": "Final Fantasy (2001) - The Phantom Menace.kdenlive.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -2232,7 +2232,7 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">AppData/Local/Temp/1753996696524-{0eb8e5e7-df05-4664-847c-d3586926440c}.ass</property>
+   <property name="av.filename">Final Fantasy (2001) - The Phantom Menace.kdenlive.ass</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

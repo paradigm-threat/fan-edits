@@ -5,7 +5,7 @@
     {
       "path": "Sonic (2020) - DeSchwartzed.kdenlive",
       "kind": "kdenlive",
-      "bytes": 806357
+      "bytes": 773818
     },
     {
       "path": "CHANGES.md",
@@ -14,6 +14,11 @@
     },
     {
       "path": "Sonic (2020) - DeSchwartzed.ass",
+      "kind": "other",
+      "bytes": 41529
+    },
+    {
+      "path": "Sonic - DeSchwartzed 2020.kdenlive.ass",
       "kind": "other",
       "bytes": 41529
     },

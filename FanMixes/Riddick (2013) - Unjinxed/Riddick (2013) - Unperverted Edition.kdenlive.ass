@@ -1,0 +1,501 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 3840
+PlayResY: 1632
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,40,40,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:00.00,0:00:01.96,Default,,0,0,0,,<i>There are bad days,</i>
+Dialogue: 0,0:00:03.84,0:00:06.71,Default,,0,0,0,,<i>and then there are \Nlegendary bad days.</i>
+Dialogue: 0,0:00:08.80,0:00:11.55,Default,,0,0,0,,<i>Whole damn planet \Nwanted a piece of me.</i>
+Dialogue: 0,0:00:15.89,0:00:17.98,Default,,0,0,0,,<i>Can't stay in the open.</i>
+Dialogue: 0,0:00:19.85,0:00:21.61,Default,,0,0,0,,<i>Can't risk another attack.</i>
+Dialogue: 0,0:00:41.83,0:00:45.71,Default,,0,0,0,,<i>It's always the punch you don't \Nsee coming that puts you down.</i>
+Dialogue: 0,0:00:49.13,0:00:51.01,Default,,0,0,0,,<i>But why didn't I see it?</i>
+Dialogue: 0,0:00:51.43,0:00:53.55,Default,,0,0,0,,<i>But why didn't I see it?</i>
+Dialogue: 0,0:00:57.22,0:00:59.73,Default,,0,0,0,,<i>Of course they were \Ngonna try to kill me.</i>
+Dialogue: 0,0:00:59.81,0:01:02.40,Default,,0,0,0,,<i>Death is what they \Ndo for a living.</i>
+Dialogue: 0,0:01:07.82,0:01:10.15,Default,,0,0,0,,<i>So the question ain't \N"What happened?".</i>
+Dialogue: 0,0:01:10.90,0:01:12.49,Default,,0,0,0,,<i>The question is.</i>
+Dialogue: 0,0:01:14.87,0:01:16.58,Default,,0,0,0,,<i>"What happened to me?"</i>
+Dialogue: 0,0:01:34.89,0:01:36.89,Default,,0,0,0,,You are the Lord Marshal now.
+Dialogue: 0,0:01:38.31,0:01:40.52,Default,,0,0,0,,<i>How did they get so close?</i>
+Dialogue: 0,0:01:44.31,0:01:47.31,Default,,0,0,0,,<i>How did I let them \Nblindside me like that?</i>
+Dialogue: 0,0:01:47.98,0:01:50.69,Default,,0,0,0,,Threshold! \NTake us to the threshold!
+Dialogue: 0,0:01:51.69,0:01:53.53,Default,,0,0,0,,<i>Necromongers.</i>
+Dialogue: 0,0:01:54.36,0:01:56.99,Default,,0,0,0,,<i>Some wanted to put a \Ncrown on my head.</i>
+Dialogue: 0,0:01:59.16,0:02:02.04,Default,,0,0,0,,<i>Some wanted to put a \Nnoose around my neck.</i>
+Dialogue: 0,0:02:05.00,0:02:07.50,Default,,0,0,0,,<i>Okay, more nooses than crowns.</i>
+Dialogue: 0,0:02:10.84,0:02:12.72,Default,,0,0,0,,<i>I needed a way out.</i>
+Dialogue: 0,0:02:14.76,0:02:16.72,Default,,0,0,0,,<i>Some new place.</i>
+Dialogue: 0,0:02:18.60,0:02:21.72,Default,,0,0,0,,<i>Or maybe just an old one.</i>
+Dialogue: 0,0:02:26.98,0:02:29.98,Default,,0,0,0,,<i>But how do you find something \Nyou've never seen?</i>
+Dialogue: 0,0:02:32.31,0:02:35.40,Default,,0,0,0,,And I will never \Nforget those eyes.
+Dialogue: 0,0:02:42.41,0:02:46.04,Default,,0,0,0,,His eyes were just like yours.
+Dialogue: 0,0:02:50.75,0:02:53.63,Default,,0,0,0,,The planet was Furya.
+Dialogue: 0,0:02:54.46,0:02:56.67,Default,,0,0,0,,I know what it's called.
+Dialogue: 0,0:02:57.38,0:02:59.51,Default,,0,0,0,,You just don't \Nknow where it is.
+Dialogue: 0,0:02:59.97,0:03:02.47,Default,,0,0,0,,I need charts. I need maps.
+Dialogue: 0,0:03:02.55,0:03:04.30,Default,,0,0,0,,- Impossible. \N- I need a direction.
+Dialogue: 0,0:03:04.39,0:03:06.56,Default,,0,0,0,,Purged from all records, \Nas you well know.
+Dialogue: 0,0:03:06.60,0:03:08.31,Default,,0,0,0,,But you remember where.
+Dialogue: 0,0:03:12.10,0:03:13.48,Default,,0,0,0,,So many worlds...
+Dialogue: 0,0:03:15.52,0:03:18.11,Default,,0,0,0,,The only map left in existence
+Dialogue: 0,0:03:17.94,0:03:22.82,Default,,0,0,0,,is the one that's in \Nmy head, Riddick.
+Dialogue: 0,0:03:28.79,0:03:30.66,Default,,0,0,0,,So what do you want?
+Dialogue: 0,0:03:32.04,0:03:33.54,Default,,0,0,0,,The crown?
+Dialogue: 0,0:03:38.46,0:03:40.34,Default,,0,0,0,,Transcendence.
+Dialogue: 0,0:03:44.55,0:03:45.55,Default,,0,0,0,,Krone.
+Dialogue: 0,0:03:46.76,0:03:48.47,Default,,0,0,0,,Break off a ship.
+Dialogue: 0,0:03:49.97,0:03:51.85,Default,,0,0,0,,Riddick's going home.
+Dialogue: 0,0:03:54.06,0:03:55.69,Default,,0,0,0,,<i>Transcendence.</i>
+Dialogue: 0,0:03:56.81,0:04:02.11,Default,,0,0,0,,<i>I guess that was Necro speak for "Get the \Nfuck off our ship and make it forever."</i>
+Dialogue: 0,0:04:03.16,0:04:04.53,Default,,0,0,0,,<i>Fine by me.</i>
+Dialogue: 0,0:04:09.24,0:04:12.12,Default,,0,0,0,,<i>You can't blame him \Nfor dangling Furya.</i>
+Dialogue: 0,0:04:13.33,0:04:15.46,Default,,0,0,0,,<i>Home has a certain equity.</i>
+Dialogue: 0,0:04:18.63,0:04:22.47,Default,,0,0,0,,<i>But I do blame him \Nfor what came next.</i>
+Dialogue: 0,0:04:37.36,0:04:39.48,Default,,0,0,0,,It's along way to come.
+Dialogue: 0,0:04:40.32,0:04:41.69,Default,,0,0,0,,For this.
+Dialogue: 0,0:04:43.15,0:04:46.49,Default,,0,0,0,,<i>This guy with the \Nfucked-up face, Krone,</i>
+Dialogue: 0,0:04:47.16,0:04:49.91,Default,,0,0,0,,<i>he was supposed to \Nbe our ride home.</i>
+Dialogue: 0,0:04:51.95,0:04:56.96,Default,,0,0,0,,<i>But instead of Furya, we \Nwind up someplace called...</i>
+Dialogue: 0,0:04:58.08,0:04:59.80,Default,,0,0,0,,<i>Not Furya.</i>
+Dialogue: 0,0:05:08.85,0:05:12.06,Default,,0,0,0,,<i>Yet again, someone was \Ntrying to play me.</i>
+Dialogue: 0,0:05:14.52,0:05:16.02,Default,,0,0,0,,<i>So yet again,</i>
+Dialogue: 0,0:05:18.48,0:05:20.31,Default,,0,0,0,,<i>we play for blood.</i>
+Dialogue: 0,0:06:52.41,0:06:55.16,Default,,0,0,0,,You keep what you \Nkill, Riddick!
+Dialogue: 0,0:06:56.04,0:06:58.16,Default,,0,0,0,,You keep what you kill!
+Dialogue: 0,0:07:03.88,0:07:06.88,Default,,0,0,0,,<i>Somewhere along \Nthe way, I lost a step.</i>
+Dialogue: 0,0:07:07.51,0:07:09.34,Default,,0,0,0,,<i>I got sloppy.</i>
+Dialogue: 0,0:07:09.93,0:07:11.80,Default,,0,0,0,,<i>Dulled my own edge.</i>
+Dialogue: 0,0:07:13.76,0:07:16.89,Default,,0,0,0,,<i>Maybe I went and did the \Nworst crime of all...</i>
+Dialogue: 0,0:07:18.48,0:07:20.60,Default,,0,0,0,,<i>I got civilized.</i>
+Dialogue: 0,0:07:27.40,0:07:30.24,Default,,0,0,0,,<i>So now we zero the clock.</i>
+Dialogue: 0,0:07:32.11,0:07:35.49,Default,,0,0,0,,<i>Just me and this \Nno-name world.</i>
+Dialogue: 0,0:07:38.29,0:07:40.91,Default,,0,0,0,,<i>Gotta find that \Nanimal side again.</i>
+Dialogue: 0,0:09:16.97,0:09:22.18,Default,,0,0,0,,<i>Before long, I realized there was \Na whole other world over there,</i>
+Dialogue: 0,0:09:23.27,0:09:26.35,Default,,0,0,0,,<i>of water, grass and life.</i>
+Dialogue: 0,0:09:28.52,0:09:31.40,Default,,0,0,0,,<i>Just had one thing in my way.</i>
+Dialogue: 0,0:09:31.40,0:09:32.77,Default,,0,0,0,,<i>Don't know how many times.</i>
+Dialogue: 0,0:09:32.82,0:09:36.07,Default,,0,0,0,,<i>I've been crossed off the \Nlist and left for dead.</i>
+Dialogue: 0,0:09:37.03,0:09:40.16,Default,,0,0,0,,<i>Guess when it first happens \Nthe day you were born,</i>
+Dialogue: 0,0:09:40.74,0:09:42.87,Default,,0,0,0,,<i>you're gonna lose count.</i>
+Dialogue: 0,0:09:47.79,0:09:49.17,Default,,0,0,0,,<i>So this,</i>
+Dialogue: 0,0:09:50.42,0:09:52.42,Default,,0,0,0,,<i>this ain't nothing new.</i>
+Dialogue: 0,0:20:24.51,0:20:26.76,Default,,0,0,0,,Hey.
+Dialogue: 0,0:23:12.64,0:23:14.76,Default,,0,0,0,,Come on, show me some teeth.
+Dialogue: 0,0:24:28.38,0:24:30.13,Default,,0,0,0,,Escape artist, huh?
+Dialogue: 0,0:27:13.29,0:27:15.50,Default,,0,0,0,,What you got over there?
+Dialogue: 0,0:27:27.31,0:27:29.02,Default,,0,0,0,,Thought we shared everything.
+Dialogue: 0,0:27:52.71,0:27:53.92,Default,,0,0,0,,Drop it.
+Dialogue: 0,0:28:52.39,0:28:53.77,Default,,0,0,0,,Stay.
+Dialogue: 0,0:29:29.47,0:29:30.93,Default,,0,0,0,,Bounty hunters.
+Dialogue: 0,0:29:46.40,0:29:47.66,Default,,0,0,0,,Wait.
+Dialogue: 0,0:29:49.37,0:29:50.74,Default,,0,0,0,,Wait...
+Dialogue: 0,0:29:51.49,0:29:52.83,Default,,0,0,0,,Steady...
+Dialogue: 0,0:29:53.87,0:29:55.25,Default,,0,0,0,,Okay, now.
+Dialogue: 0,0:30:01.09,0:30:02.34,Default,,0,0,0,,Sounds good.
+Dialogue: 0,0:30:05.63,0:30:06.63,Default,,0,0,0,,Mmm...
+Dialogue: 0,0:30:11.76,0:30:12.77,Default,,0,0,0,,Mmm!
+Dialogue: 0,0:30:14.97,0:30:16.43,Default,,0,0,0,,All yours.
+Dialogue: 0,0:30:22.61,0:30:24.73,Default,,0,0,0,,It says "dog food" on it.
+Dialogue: 0,0:30:25.82,0:30:27.32,Default,,0,0,0,,If you could read.
+Dialogue: 0,0:30:32.99,0:30:33.99,Default,,0,0,0,,Come on.
+Dialogue: 0,0:30:40.29,0:30:42.55,Default,,0,0,0,,All right. Bring \Nme my reserve.
+Dialogue: 0,0:30:56.47,0:30:57.93,Default,,0,0,0,,Where's yours?
+Dialogue: 0,0:31:27.59,0:31:29.42,Default,,0,0,0,,Rain.
+Dialogue: 0,0:31:29.47,0:31:31.22,Default,,0,0,0,,It's a good thing.
+Dialogue: 0,0:31:32.26,0:31:36.18,Default,,0,0,0,,Just because you've never seen it \Nbefore doesn't mean it's a bad thing.
+Dialogue: 0,0:31:36.60,0:31:38.35,Default,,0,0,0,,Hey, easy.
+Dialogue: 0,0:31:53.12,0:31:55.62,Default,,0,0,0,,Looks like our \Ntime is up here.
+Dialogue: 0,0:33:54.53,0:33:55.90,Default,,0,0,0,,Nothing.
+Dialogue: 0,0:33:58.20,0:34:00.08,Default,,0,0,0,,Look again, Diaz.
+Dialogue: 0,0:34:03.70,0:34:06.75,Default,,0,0,0,,Somebody should teach this \NRiddick asshole how to count.
+Dialogue: 0,0:34:06.100,0:34:11.38,Default,,0,0,0,,"Leave one ship"? Like we've got \Na fucking spare laying around.
+Dialogue: 0,0:34:11.92,0:34:13.55,Default,,0,0,0,,Let's crank it up.
+Dialogue: 0,0:34:24.43,0:34:26.56,Default,,0,0,0,,Good morning, Cyclops.
+Dialogue: 0,0:35:00.39,0:35:04.31,Default,,0,0,0,,Shit. Here comes \Nthe neighborhood.
+Dialogue: 0,0:35:09.44,0:35:10.94,Default,,0,0,0,,Small world.
+Dialogue: 0,0:35:19.15,0:35:23.12,Default,,0,0,0,,Unidentified vessel, this is \NClan Vagos out of Ursa Five.
+Dialogue: 0,0:35:23.28,0:35:25.41,Default,,0,0,0,,Be advised that we are \Non the ground now
+Dialogue: 0,0:35:25.49,0:35:27.87,Default,,0,0,0,,and have responded to \Nan emergency signal.
+Dialogue: 0,0:35:27.100,0:35:31.50,Default,,0,0,0,,No distress found, \Nno need to land.
+Dialogue: 0,0:35:32.12,0:35:36.84,Default,,0,0,0,,I repeat, there is no reason for you \Nto land at this location at this time.
+Dialogue: 0,0:35:37.21,0:35:38.47,Default,,0,0,0,,<i>Is that clear?</i>
+Dialogue: 0,0:35:38.51,0:35:42.64,Default,,0,0,0,,<i>No reason for you to land at \Nthis location at this time.</i>
+Dialogue: 0,0:35:45.18,0:35:47.39,Default,,0,0,0,,What the fuck did I just say?
+Dialogue: 0,0:36:04.87,0:36:06.99,Default,,0,0,0,,It was a long haul. We \Ncould take on some water.
+Dialogue: 0,0:36:08.49,0:36:10.96,Default,,0,0,0,,Wouldn't mind a little \Ntrue-gravity time either.
+Dialogue: 0,0:36:11.37,0:36:14.71,Default,,0,0,0,,Like I was saying, \NI've got this.
+Dialogue: 0,0:36:21.22,0:36:24.72,Default,,0,0,0,,You knew who that was, right? \NOn the emergency beacon?
+Dialogue: 0,0:36:27.14,0:36:28.76,Default,,0,0,0,,Wouldn't be here if I didn't.
+Dialogue: 0,0:36:30.81,0:36:33.27,Default,,0,0,0,,The concept of back-up still \Nhas no appeal to you?
+Dialogue: 0,0:36:33.64,0:36:36.23,Default,,0,0,0,,My besties here can \Nball with anyone.
+Dialogue: 0,0:36:36.69,0:36:38.57,Default,,0,0,0,,No disrespect for \Nyour crew, of course,
+Dialogue: 0,0:36:38.61,0:36:42.61,Default,,0,0,0,,who look strong, too, in \Nthose matchy-matchy outfits.
+Dialogue: 0,0:36:43.74,0:36:46.07,Default,,0,0,0,,Shit. Didn't know there \Nwas a dress code.
+Dialogue: 0,0:36:46.62,0:36:47.70,Default,,0,0,0,,Yeah, right?
+Dialogue: 0,0:36:47.95,0:36:51.08,Default,,0,0,0,,Well, it's not my intention \Nto jump another man's claim.
+Dialogue: 0,0:36:51.62,0:36:53.25,Default,,0,0,0,,If you don't mind, maybe \Nwe'll just pull up a chair
+Dialogue: 0,0:36:53.29,0:36:55.04,Default,,0,0,0,,and spectate for a while.
+Dialogue: 0,0:36:56.63,0:36:58.09,Default,,0,0,0,,What if I do?
+Dialogue: 0,0:36:58.63,0:37:01.88,Default,,0,0,0,,Well, this is a co-op station, \Npal. It's open to all Mercs.
+Dialogue: 0,0:37:03.38,0:37:05.97,Default,,0,0,0,,- By the way, my name is... \N- "Too late."
+Dialogue: 0,0:37:06.14,0:37:09.14,Default,,0,0,0,,That's your name. "Too Late."
+Dialogue: 0,0:37:09.97,0:37:11.12,Default,,0,0,0,,And I don't need you stepping all \Nover my dick here, my friend.
+Dialogue: 0,0:37:11.12,0:37:11.59,Default,,0,0,0,,I'm just sharing my thoughts.
+Dialogue: 0,0:37:11.63,0:37:14.34,Default,,0,0,0,,Well, now that you have,
+Dialogue: 0,0:37:16.01,0:37:18.26,Default,,0,0,0,,can I politely invite you to
+Dialogue: 0,0:37:18.35,0:37:20.81,Default,,0,0,0,,step off my fucking porch?
+Dialogue: 0,0:37:23.48,0:37:25.44,Default,,0,0,0,,I'll start rotating down.
+Dialogue: 0,0:37:25.48,0:37:26.94,Default,,0,0,0,,You let me know, huh?
+Dialogue: 0,0:37:26.98,0:37:30.65,Default,,0,0,0,,As soon as I have his head in \Na box, I will let you know.
+Dialogue: 0,0:37:55.22,0:37:57.43,Default,,0,0,0,,Grid 29D. Stand by, stand by.
+Dialogue: 0,0:38:02.52,0:38:04.14,Default,,0,0,0,,<i>What you got, cuz?</i>
+Dialogue: 0,0:38:06.02,0:38:09.48,Default,,0,0,0,,Aha, some dingo-dongo thing.
+Dialogue: 0,0:38:13.07,0:38:15.57,Default,,0,0,0,,Yeah. I see it now.
+Dialogue: 0,0:38:16.03,0:38:17.16,Default,,0,0,0,,<i>You want me to pop it?</i>
+Dialogue: 0,0:38:17.20,0:38:19.78,Default,,0,0,0,,Knock it down. One \Nshot suppressed.
+Dialogue: 0,0:38:24.83,0:38:27.46,Default,,0,0,0,,Nice work, Diaz. Encouraging.
+Dialogue: 0,0:38:28.33,0:38:30.04,Default,,0,0,0,,Had something in my eye.
+Dialogue: 0,0:38:30.46,0:38:32.09,Default,,0,0,0,,<i>It's called a scope.</i>
+Dialogue: 0,0:38:32.21,0:38:33.84,Default,,0,0,0,,<i>Try next time.</i>
+Dialogue: 0,0:38:34.05,0:38:35.63,Default,,0,0,0,,<i>You got this, right?</i>
+Dialogue: 0,0:38:36.84,0:38:39.47,Default,,0,0,0,,Will you get off my \Nfreaking frequency!
+Dialogue: 0,0:39:03.24,0:39:04.74,Default,,0,0,0,,What the fuck is \Ngoing on here?
+Dialogue: 0,0:39:27.14,0:39:28.89,Default,,0,0,0,,<i>Thank fucking God!</i>
+Dialogue: 0,0:39:29.64,0:39:30.98,Default,,0,0,0,,Fuck off!
+Dialogue: 0,0:39:33.73,0:39:37.61,Default,,0,0,0,,Rubio, coming your way now. \NGotta swap out a bad sensor.
+Dialogue: 0,0:39:41.66,0:39:44.16,Default,,0,0,0,,What was here versus \Nwhat was found.
+Dialogue: 0,0:39:44.49,0:39:46.20,Default,,0,0,0,,How does it square?
+Dialogue: 0,0:39:46.24,0:39:48.12,Default,,0,0,0,,Pretty good. I mean, \Nthe morphine's gone,
+Dialogue: 0,0:39:48.16,0:39:50.87,Default,,0,0,0,,but that's always the \Nfirst thing to go.
+Dialogue: 0,0:39:51.62,0:39:53.75,Default,,0,0,0,,That was a bit weird, though.
+Dialogue: 0,0:39:54.59,0:39:57.80,Default,,0,0,0,,"A predator restraint with \N42-inch offset jaws."
+Dialogue: 0,0:39:58.17,0:40:00.34,Default,,0,0,0,,Six listed, zero found.
+Dialogue: 0,0:40:01.09,0:40:03.47,Default,,0,0,0,,That is an odd thing \Nto go for a walk.
+Dialogue: 0,0:40:03.80,0:40:06.56,Default,,0,0,0,,Yeah, but, Boss, you know how shit \Ngoes missing from these stations.
+Dialogue: 0,0:40:06.64,0:40:09.89,Default,,0,0,0,,One bad year and guys are \Nripping shit off for salvage.
+Dialogue: 0,0:40:18.19,0:40:19.70,Default,,0,0,0,,Hey, Santana?
+Dialogue: 0,0:40:20.45,0:40:22.95,Default,,0,0,0,,You did sweep the area \Nbefore I got here, right?
+Dialogue: 0,0:40:23.28,0:40:25.03,Default,,0,0,0,,Sweep for what?
+Dialogue: 0,0:40:25.28,0:40:27.54,Default,,0,0,0,,<i>I just want to make sure \Nno one has set any traps for us.</i>
+Dialogue: 0,0:40:27.58,0:40:28.83,Default,,0,0,0,,5Q.
+Dialogue: 0,0:40:31.79,0:40:33.42,Default,,0,0,0,,Understand what I'm saying?
+Dialogue: 0,0:40:33.58,0:40:35.79,Default,,0,0,0,,Traps? What kind of traps?
+Dialogue: 0,0:40:36.21,0:40:37.84,Default,,0,0,0,,<i>The kind with jaws.</i>
+Dialogue: 0,0:40:44.93,0:40:46.64,Default,,0,0,0,,Don't touch that \Nfucking thing!
+Dialogue: 0,0:40:53.06,0:40:54.06,Default,,0,0,0,,What?
+Dialogue: 0,0:40:58.28,0:40:59.36,Default,,0,0,0,,Up-armor.
+Dialogue: 0,0:41:10.20,0:41:11.29,Default,,0,0,0,,Shit!
+Dialogue: 0,0:41:11.58,0:41:13.08,Default,,0,0,0,,Ready. Ready.
+Dialogue: 0,0:41:16.17,0:41:19.13,Default,,0,0,0,,Stay put, \Nstay put, stay put, stay put!
+Dialogue: 0,0:41:22.67,0:41:23.93,Default,,0,0,0,,Oopah!
+Dialogue: 0,0:41:28.55,0:41:31.39,Default,,0,0,0,,<i>Who the hell was \Nthat screaming and why?</i>
+Dialogue: 0,0:41:33.10,0:41:36.48,Default,,0,0,0,,Nunez, break out \Nthe sweep gear.
+Dialogue: 0,0:41:37.44,0:41:40.90,Default,,0,0,0,,And figure out how many \Nof these big-ass traps
+Dialogue: 0,0:41:40.94,0:41:42.94,Default,,0,0,0,,we got out here, okay?
+Dialogue: 0,0:41:43.99,0:41:46.36,Default,,0,0,0,,I'm thinking maybe the \Nwhole upper left quad
+Dialogue: 0,0:41:46.49,0:41:48.87,Default,,0,0,0,,is some kind of \Nfucking mine field.
+Dialogue: 0,0:41:49.37,0:41:51.62,Default,,0,0,0,,You got to do that \Nnow, okay, Nunez?
+Dialogue: 0,0:41:53.62,0:41:55.25,Default,,0,0,0,,<i>Copy that, Nunez?</i>
+Dialogue: 0,0:41:59.92,0:42:01.51,Default,,0,0,0,,Nunez?
+Dialogue: 0,0:42:03.55,0:42:06.18,Default,,0,0,0,,This is bad. This is very bad.
+Dialogue: 0,0:42:08.30,0:42:09.64,Default,,0,0,0,,Nunez? Nunez?
+Dialogue: 0,0:42:09.68,0:42:11.18,Default,,0,0,0,,<i>Shut the fuck up, puto!</i>
+Dialogue: 0,0:42:11.22,0:42:13.85,Default,,0,0,0,,His radio just crapped out. \NSomeone get eyes on him.
+Dialogue: 0,0:42:14.18,0:42:17.27,Default,,0,0,0,,<i>Make sure he's right where he \Nshould be, 13-H. Go, go, go!</i>
+Dialogue: 0,0:42:24.53,0:42:25.65,Default,,0,0,0,,Right here.
+Dialogue: 0,0:42:25.74,0:42:27.86,Default,,0,0,0,,13-H. He's supposed to \Nbe right fucking...
+Dialogue: 0,0:42:38.33,0:42:40.46,Default,,0,0,0,,Don't mess with me now.
+Dialogue: 0,0:42:42.55,0:42:43.67,Default,,0,0,0,,Hey. Hey, what is it? \NWhat is it?
+Dialogue: 0,0:42:43.71,0:42:44.97,Default,,0,0,0,,- Get back! \N- It's me, it's me.
+Dialogue: 0,0:42:45.01,0:42:46.47,Default,,0,0,0,,He's got Falco!
+Dialogue: 0,0:42:55.27,0:42:57.52,Default,,0,0,0,,Jock up, but you're \Nstaying home.
+Dialogue: 0,0:42:58.39,0:43:00.98,Default,,0,0,0,,No one's going out \Nthere until I say so.
+Dialogue: 0,0:43:01.40,0:43:02.69,Default,,0,0,0,,<i>Man down, \Nhe's got Falco.</i>
+Dialogue: 0,0:43:02.69,0:43:03.94,Default,,0,0,0,,<i>Compromise, compromise.</i>
+Dialogue: 0,0:43:03.98,0:43:04.99,Default,,0,0,0,,<i>How the fuck \Ndid he do that?</i>
+Dialogue: 0,0:43:05.03,0:43:07.03,Default,,0,0,0,,<i>Never ever saw him, man. \NHe was right here and I never...</i>
+Dialogue: 0,0:43:07.07,0:43:08.16,Default,,0,0,0,,<i>What about the ship? \NIs he on it?</i>
+Dialogue: 0,0:43:08.20,0:43:10.20,Default,,0,0,0,,<i>He's not coming for the \Nships, he's coming for fucking us!</i>
+Dialogue: 0,0:43:10.28,0:43:11.91,Default,,0,0,0,,<i>Just fucking shoot! Shoot!</i>
+Dialogue: 0,0:43:20.21,0:43:21.96,Default,,0,0,0,,One night, three dead.
+Dialogue: 0,0:43:22.71,0:43:24.46,Default,,0,0,0,,Not sure I'm \Nloving this trend.
+Dialogue: 0,0:43:25.13,0:43:26.34,Default,,0,0,0,,Two dead, one missing.
+Dialogue: 0,0:43:26.38,0:43:27.88,Default,,0,0,0,,Exactly. Three dead.
+Dialogue: 0,0:43:27.92,0:43:30.55,Default,,0,0,0,,Well, look at it \Nthis way, boys.
+Dialogue: 0,0:43:32.93,0:43:34.81,Default,,0,0,0,,We might all fit \Non one ship now.
+Dialogue: 0,0:43:34.89,0:43:36.02,Default,,0,0,0,,Diaz!
+Dialogue: 0,0:43:40.64,0:43:42.52,Default,,0,0,0,,Get those other \Ntraps back there.
+Dialogue: 0,0:43:43.15,0:43:47.36,Default,,0,0,0,,Luna, say something \NBible-like over these bodies.
+Dialogue: 0,0:43:57.54,0:43:59.29,Default,,0,0,0,,Okay, maybe,
+Dialogue: 0,0:44:00.96,0:44:02.83,Default,,0,0,0,,we zero this out.
+Dialogue: 0,0:44:04.88,0:44:06.46,Default,,0,0,0,,What is your tag anyway?
+Dialogue: 0,0:44:06.96,0:44:08.92,Default,,0,0,0,,So now you wanna know my name.
+Dialogue: 0,0:44:11.68,0:44:13.43,Default,,0,0,0,,Well, I'm not sure \NI'm gonna say.
+Dialogue: 0,0:44:13.59,0:44:16.60,Default,,0,0,0,,Because everyone you know by \Nname, Santana, winds up dead.
+Dialogue: 0,0:44:19.81,0:44:21.31,Default,,0,0,0,,You gonna clean this shit up?
+Dialogue: 0,0:44:30.86,0:44:32.57,Default,,0,0,0,,- Excuse me. \N- Wow.
+Dialogue: 0,0:44:32.95,0:44:35.16,Default,,0,0,0,,Watch out for \Nsurprise attacks.
+Dialogue: 0,0:44:35.99,0:44:37.12,Default,,0,0,0,,Maybe...
+Dialogue: 0,0:44:37.83,0:44:41.79,Default,,0,0,0,,Maybe it's time to start \Nmerging assets, right?
+Dialogue: 0,0:44:44.38,0:44:46.34,Default,,0,0,0,,So this is you \Nasking for my help?
+Dialogue: 0,0:44:46.71,0:44:50.09,Default,,0,0,0,,This is me saying that I may \Nneed some of your gear.
+Dialogue: 0,0:44:51.84,0:44:55.64,Default,,0,0,0,,If some of your guys happen to \Ncome attached to that gear,
+Dialogue: 0,0:44:56.30,0:45:00.35,Default,,0,0,0,,I will understand that's \Nthe way it's gotta be.
+Dialogue: 0,0:45:01.81,0:45:03.69,Default,,0,0,0,,So you're asking for \Nmy gear's help?
+Dialogue: 0,0:45:04.48,0:45:05.94,Default,,0,0,0,,More like that.
+Dialogue: 0,0:45:06.98,0:45:08.23,Default,,0,0,0,,Moss...
+Dialogue: 0,0:45:15.32,0:45:17.83,Default,,0,0,0,,The gear's saying, \N"Nah." Bitch.
+Dialogue: 0,0:45:18.66,0:45:20.16,Default,,0,0,0,,There's your answer.
+Dialogue: 0,0:45:20.20,0:45:22.37,Default,,0,0,0,,What the fuck do \Nyou want, man?
+Dialogue: 0,0:45:22.50,0:45:25.83,Default,,0,0,0,,You know what? I'm gonna \Nfold you in, Santana.
+Dialogue: 0,0:45:26.17,0:45:30.17,Default,,0,0,0,,But I give orders to Dahl. And \NDelhi's gonna give orders to you.
+Dialogue: 0,0:45:30.42,0:45:33.30,Default,,0,0,0,,And that's the chain of command \Nfrom this point forward.
+Dialogue: 0,0:45:33.84,0:45:36.55,Default,,0,0,0,,Why am I not loving \Nthis plan so far?
+Dialogue: 0,0:45:37.72,0:45:40.35,Default,,0,0,0,,Oh, I know, I know. \NYou know why?
+Dialogue: 0,0:45:40.51,0:45:43.02,Default,,0,0,0,,Because it sucks \Nass and swallows!
+Dialogue: 0,0:45:43.52,0:45:46.10,Default,,0,0,0,,I'm not taking orders \Nfrom your pet whore
+Dialogue: 0,0:45:46.15,0:45:47.81,Default,,0,0,0,,who thinks I won't smack \Nher right back...
+Dialogue: 0,0:45:50.36,0:45:51.99,Default,,0,0,0,,I don't fuck guys.
+Dialogue: 0,0:45:53.03,0:45:55.53,Default,,0,0,0,,Occasionally I fuck 'em \Nup if they need it.
+Dialogue: 0,0:45:58.20,0:46:01.45,Default,,0,0,0,,Here's what's gonna happen, Santana. \NYou're gonna take a back seat.
+Dialogue: 0,0:46:01.70,0:46:03.58,Default,,0,0,0,,We'll track Riddick \Ndown, I promise.
+Dialogue: 0,0:46:04.08,0:46:05.71,Default,,0,0,0,,But I want him alive.
+Dialogue: 0,0:46:06.04,0:46:09.92,Default,,0,0,0,,You give me a day, and after \Nthat he's yours to kill.
+Dialogue: 0,0:46:10.55,0:46:12.30,Default,,0,0,0,,You're giving me the bounty?
+Dialogue: 0,0:46:12.38,0:46:16.47,Default,,0,0,0,,You pay my crew, fuel costs, the \Nrest is yours. That's the deal.
+Dialogue: 0,0:46:18.05,0:46:22.18,Default,,0,0,0,,What is Riddick for you? \NNot just some convict.
+Dialogue: 0,0:46:22.56,0:46:25.18,Default,,0,0,0,,What do you want? \NWhy are you here?
+Dialogue: 0,0:46:25.64,0:46:26.77,Default,,0,0,0,,Who are you?
+Dialogue: 0,0:46:28.15,0:46:29.40,Default,,0,0,0,,My name is Johns.
+Dialogue: 0,0:46:29.77,0:46:32.15,Default,,0,0,0,,Lock down those ships, \Nget those hogs on deck.
+Dialogue: 0,0:46:32.19,0:46:34.15,Default,,0,0,0,,I will ride with \NMoss and Lockspur.
+Dialogue: 0,0:46:34.19,0:46:38.45,Default,,0,0,0,,I want a non-lethal load-out, L.O.D.'s \Nand phosphor frags to start with.
+Dialogue: 0,0:46:38.49,0:46:42.45,Default,,0,0,0,,This is a man that hunts by night. \NWe'll take it to him by day.
+Dialogue: 0,0:46:43.74,0:46:47.12,Default,,0,0,0,,Diaz! Vargas! Show me the \Nspot of the last kill.
+Dialogue: 0,0:46:50.42,0:46:51.92,Default,,0,0,0,,Some kind of canine.
+Dialogue: 0,0:47:04.93,0:47:07.43,Default,,0,0,0,,Hey, Diaz, I got a dog here.
+Dialogue: 0,0:47:07.89,0:47:10.90,Default,,0,0,0,,Is it the same dingo-dongo \Nthing from last night?
+Dialogue: 0,0:47:11.27,0:47:12.86,Default,,0,0,0,,Nah, I'm pretty sure \Nwe killed that one.
+Dialogue: 0,0:47:20.45,0:47:21.95,Default,,0,0,0,,Could be the same one.
+Dialogue: 0,0:47:22.53,0:47:23.62,Default,,0,0,0,,The same.
+Dialogue: 0,0:47:23.66,0:47:26.41,Default,,0,0,0,,Dahl, get your sniper rifle \Nand barium rounds now.
+Dialogue: 0,0:47:38.17,0:47:39.68,Default,,0,0,0,,1,500 meters.
+Dialogue: 0,0:48:32.44,0:48:34.52,Default,,0,0,0,,Could be just the first hole it found.
+Dialogue: 0,0:48:35.06,0:48:38.28,Default,,0,0,0,,A stressed animal is gonna \Nrun to ground it knows.
+Dialogue: 0,0:48:39.74,0:48:42.61,Default,,0,0,0,,Besides, I'm getting \Nhuman pheromones.
+Dialogue: 0,0:50:05.95,0:50:07.32,Default,,0,0,0,,Riddick!
+Dialogue: 0,0:50:14.58,0:50:16.67,Default,,0,0,0,,Dial down, dial \Ndown, dial down!
+Dialogue: 0,0:50:24.59,0:50:25.84,Default,,0,0,0,,Santana's guy.
+Dialogue: 0,0:50:25.93,0:50:27.01,Default,,0,0,0,,Falco.
+Dialogue: 0,0:50:27.05,0:50:29.05,Default,,0,0,0,,Shit. Did we \Njust kill a hostage?
+Dialogue: 0,0:50:29.09,0:50:30.97,Default,,0,0,0,,I've been hunting \NRiddick for 10 years.
+Dialogue: 0,0:50:31.10,0:50:33.97,Default,,0,0,0,,The concept of a hostage \Nhas no appeal to him.
+Dialogue: 0,0:50:34.02,0:50:35.89,Default,,0,0,0,,Falco was already dead.
+Dialogue: 0,0:50:36.39,0:50:39.52,Default,,0,0,0,,This is just some fucking \Nsideshow to buy more time.
+Dialogue: 0,0:50:42.15,0:50:44.24,Default,,0,0,0,,Whoa! Fuck...
+Dialogue: 0,0:50:45.28,0:50:46.65,Default,,0,0,0,,Shit.
+Dialogue: 0,0:50:50.03,0:50:51.91,Default,,0,0,0,,Just dropped some \Nmud right there.
+Dialogue: 0,0:50:53.03,0:50:55.16,Default,,0,0,0,,So if Riddick isn't here...
+Dialogue: 0,0:51:03.30,0:51:05.55,Default,,0,0,0,,Remember, he could \Nbe anywhere.
+Dialogue: 0,0:51:56.22,0:51:58.60,Default,,0,0,0,,<i>This is Johns to \Nany-goddamn-body at the station.</i>
+Dialogue: 0,0:51:59.18,0:52:03.36,Default,,0,0,0,,<i>I want you to keep an eye on that \Nlocker. Keep an eye on the node.</i>
+Dialogue: 0,0:52:03.77,0:52:06.15,Default,,0,0,0,,<i>Riddick may have \Nmade an end run.</i>
+Dialogue: 0,0:52:06.73,0:52:10.61,Default,,0,0,0,,<i>My ETA is seven minutes. \NBut watch your back.</i>
+Dialogue: 0,0:52:51.82,0:52:53.66,Default,,0,0,0,,You need to see this.
+Dialogue: 0,0:53:02.29,0:53:03.42,Default,,0,0,0,,He wrote that?
+Dialogue: 0,0:53:04.50,0:53:07.88,Default,,0,0,0,,He took out our deep space \Ncommunications. All of it.
+Dialogue: 0,0:53:08.67,0:53:12.01,Default,,0,0,0,,And whose blood is that? \NThere... Here...
+Dialogue: 0,0:53:12.68,0:53:14.30,Default,,0,0,0,,Over there...
+Dialogue: 0,0:53:19.60,0:53:22.35,Default,,0,0,0,,I had to kick his ass again. \NSorry.
+Dialogue: 0,0:53:23.73,0:53:24.85,Default,,0,0,0,,Not really.
+Dialogue: 0,0:53:32.90,0:53:34.03,Default,,0,0,0,,Fuck it.
+Dialogue: 0,0:53:35.41,0:53:37.66,Default,,0,0,0,,Let's take a look at this.
+Dialogue: 0,0:53:49.67,0:53:50.88,Default,,0,0,0,,Six.
+Dialogue: 0,0:53:51.63,0:53:52.63,Default,,0,0,0,,Huh.
+Dialogue: 0,0:53:55.47,0:53:56.68,Default,,0,0,0,,Six.
+Dialogue: 0,0:53:58.80,0:54:02.31,Default,,0,0,0,,You are a shit storm trooper, \NSantana. I'll give you that.
+Dialogue: 0,0:54:02.64,0:54:04.77,Default,,0,0,0,,You beat the devil this time.
+Dialogue: 0,0:54:04.85,0:54:07.23,Default,,0,0,0,,Didn't actually \Nthink he was gonna do it.
+Dialogue: 0,0:54:07.77,0:54:09.52,Default,,0,0,0,,This is a sign.
+Dialogue: 0,0:54:10.65,0:54:14.36,Default,,0,0,0,,Ah, sweet.
+Dialogue: 0,0:54:14.65,0:54:16.53,Default,,0,0,0,,I believe this is a sign.
+Dialogue: 0,0:54:19.20,0:54:22.04,Default,,0,0,0,,It may be that the good Lord \Nwants us to take these nodes
+Dialogue: 0,0:54:22.29,0:54:25.54,Default,,0,0,0,,and flee this planet \Njust as soon as we can.
+Dialogue: 0,0:54:29.84,0:54:32.05,Default,,0,0,0,,That's my good luck charm.
+Dialogue: 0,0:54:35.38,0:54:37.22,Default,,0,0,0,,Wrong business, kid.
+Dialogue: 0,0:54:38.30,0:54:41.89,Default,,0,0,0,,You know, I was kind of \Nhoping the bomb would go off.
+Dialogue: 0,0:54:50.69,0:54:55.32,Default,,0,0,0,,So we sealed up his cave with some \Nphosphor frags here, so he can't go back.
+Dialogue: 0,0:54:55.36,0:54:58.36,Default,,0,0,0,,And just like an animal, he's \Ngonna head to known ground.
+Dialogue: 0,0:54:58.41,0:55:01.41,Default,,0,0,0,,But we're gonna find he's got \Nthree or four lairs out there.
+Dialogue: 0,0:55:01.49,0:55:04.37,Default,,0,0,0,,So we'll radius out \Nfrom this point, here.
+Dialogue: 0,0:55:04.91,0:55:08.79,Default,,0,0,0,,Now radio comms... I saw three \Nrepeaters listed in inventory.
+Dialogue: 0,0:55:08.83,0:55:11.71,Default,,0,0,0,,Find them. Set them up \Nat regular intervals.
+Dialogue: 0,0:55:12.21,0:55:14.67,Default,,0,0,0,,I never want to be out of \Ntouch like that again.
+Dialogue: 0,0:55:49.91,0:55:51.79,Default,,0,0,0,,Are you scared of me?
+Dialogue: 0,0:55:53.88,0:55:55.00,Default,,0,0,0,,Yeah.
+Dialogue: 0,0:55:59.05,0:56:01.01,Default,,0,0,0,,Are they scared of me?
+Dialogue: 0,0:56:02.64,0:56:04.89,Default,,0,0,0,,Yes, they're scared of you.
+Dialogue: 0,0:56:10.77,0:56:13.61,Default,,0,0,0,,Maybe you're all scared \Nof the wrong thing.
+Dialogue: 0,0:56:14.11,0:56:16.36,Default,,0,0,0,,Lockspur, I want you to lock \Ndown those hogs, all right?
+Dialogue: 0,0:56:16.44,0:56:19.65,Default,,0,0,0,,I don't want this guy any more \Nmobile than he already is.
+Dialogue: 0,0:56:19.70,0:56:22.41,Default,,0,0,0,,Now, Dahl, I spotted a \Nnice little nest for you.
+Dialogue: 0,0:56:22.45,0:56:24.41,Default,,0,0,0,,Right here and in \Nthese low hills.
+Dialogue: 0,0:56:31.08,0:56:32.21,Default,,0,0,0,,Moss?
+Dialogue: 0,0:56:35.67,0:56:37.30,Default,,0,0,0,,I just saw him.
+Dialogue: 0,0:56:38.80,0:56:40.42,Default,,0,0,0,,Say again?
+Dialogue: 0,0:56:41.26,0:56:42.89,Default,,0,0,0,,I just saw him.
+Dialogue: 0,0:56:53.60,0:56:55.23,Default,,0,0,0,,Dahl, I want you to \Nsit on this ship!
+Dialogue: 0,0:56:55.27,0:56:57.78,Default,,0,0,0,,Diaz, make sure your \Nship is locked down!
+Dialogue: 0,0:56:57.82,0:56:59.82,Default,,0,0,0,,The rest of you get on \Nthe fucking perimeter
+Dialogue: 0,0:56:59.90,0:57:01.90,Default,,0,0,0,,and keep your eyes \Non each other!
+Dialogue: 0,0:57:01.95,0:57:02.11,Default,,0,0,0,,Santana! He got the \Nfucking nodes!
+Dialogue: 0,0:57:02.11,0:57:03.57,Default,,0,0,0,,Look South.
+Dialogue: 0,0:57:24.84,0:57:26.67,Default,,0,0,0,,I don't believe it.
+Dialogue: 0,0:57:27.09,0:57:29.34,Default,,0,0,0,,The balls on this fucking guy.
+Dialogue: 0,0:57:31.72,0:57:34.10,Default,,0,0,0,,Dahl, keep an eye \Non things here.
+Dialogue: 0,0:57:36.43,0:57:37.52,Default,,0,0,0,,What should I do?
+Dialogue: 0,0:57:37.56,0:57:38.56,Default,,0,0,0,,Stay low.
+Dialogue: 0,0:57:41.40,0:57:43.15,Default,,0,0,0,,Come on. Come on.
+Dialogue: 0,0:58:04.88,0:58:06.51,Default,,0,0,0,,Both of you drop.
+Dialogue: 0,0:58:23.11,0:58:24.36,Default,,0,0,0,,I'm flattered.
+Dialogue: 0,0:58:24.90,0:58:25.98,Default,,0,0,0,,It's kind of strange \Nnot knowing
+Dialogue: 0,0:58:26.02,0:58:27.78,Default,,0,0,0,,what to put down in \Nthe family Bible.
+Dialogue: 0,0:58:28.24,0:58:31.36,Default,,0,0,0,,It's kind of strange three guys have \Nto die just so that you can hear...
+Dialogue: 0,0:58:31.41,0:58:34.28,Default,,0,0,0,,No, no, no. You don't get \Nto put that shit on me.
+Dialogue: 0,0:58:34.78,0:58:36.53,Default,,0,0,0,,Those kills are on you.
+Dialogue: 0,0:58:36.83,0:58:40.33,Default,,0,0,0,,I have a feeling that's not the \Nonly thing on me right now.
+Dialogue: 0,0:58:40.75,0:58:43.67,Default,,0,0,0,,Okay, got barium shells, \Nstab-shock, explosive tip.
+Dialogue: 0,0:58:43.71,0:58:45.96,Default,,0,0,0,,What do you want, \Nbarium or stab-shock?
+Dialogue: 0,0:58:46.42,0:58:48.01,Default,,0,0,0,,Horse tranq.
+Dialogue: 0,0:58:48.59,0:58:49.67,Default,,0,0,0,,Okay.
+Dialogue: 0,0:58:56.43,0:58:59.68,Default,,0,0,0,,I'll give you till that \Nrain hits that station.
+Dialogue: 0,0:59:01.77,0:59:03.39,Default,,0,0,0,,That's your clock.
+Dialogue: 0,0:59:20.58,0:59:22.54,Default,,0,0,0,,Dahl! Do it now! Now!
+Dialogue: 0,0:59:39.06,0:59:40.18,Default,,0,0,0,,Again!
+Dialogue: 0,0:59:46.36,0:59:47.86,Default,,0,0,0,,He's not going down.
+Dialogue: 0,0:59:49.78,0:59:51.15,Default,,0,0,0,,Do it again, Dahl!
+Dialogue: 0,0:59:56.86,0:59:58.23,Default,,0,0,0,,Time is up.
+Dialogue: 0,1:00:00.02,1:00:01.78,Default,,0,0,0,,He's all yours.
+Dialogue: 0,1:00:08.70,1:00:10.33,Default,,0,0,0,,Hold him down.
+Dialogue: 0,1:00:44.90,1:00:46.49,Default,,0,0,0,,More dingo-dongos maybe.
+Dialogue: 0,1:00:51.12,1:00:52.45,Default,,0,0,0,,Lucky.
+Dialogue: 0,1:00:55.79,1:00:57.100,Default,,0,0,0,,I know what's coming.
+Dialogue: 0,1:00:59.04,1:01:02.55,Default,,0,0,0,,Called to find you. \NThe serpents...
+Dialogue: 0,1:01:23.61,1:01:24.86,Default,,0,0,0,,spotlight!
+Dialogue: 0,1:01:51.97,1:01:53.30,Default,,0,0,0,,Like I said,
+Dialogue: 0,1:01:54.72,1:01:57.22,Default,,0,0,0,,it ain't me you \Ngotta worry about.
+Dialogue: 0,1:02:01.73,1:02:03.94,Default,,0,0,0,,What is it? What's out there?
+Dialogue: 0,1:02:04.40,1:02:05.65,Default,,0,0,0,,I don't know.
+Dialogue: 0,1:02:06.73,1:02:08.24,Default,,0,0,0,,Fucked up or \Nsomething out there.
+Dialogue: 0,1:02:08.86,1:02:12.24,Default,,0,0,0,,It ain't right. \NIt's coming our way.
+Dialogue: 0,1:02:21.33,1:02:24.59,Default,,0,0,0,,Whatever they are, they \Nain't so hard to kill.
+Dialogue: 0,1:03:04.54,1:03:06.96,Default,,0,0,0,,What the fuck?
+Dialogue: 0,1:03:27.98,1:03:29.19,Default,,0,0,0,,Fuck!
+Dialogue: 0,1:03:43.58,1:03:45.58,Default,,0,0,0,,No more holes, please.
+Dialogue: 0,1:04:07.36,1:04:10.44,Default,,0,0,0,,What the fuck is happening? \NHow fucked are we?
+Dialogue: 0,1:04:10.82,1:04:13.32,Default,,0,0,0,,Who knows how long \Nit will rain?
+Dialogue: 0,1:04:14.82,1:04:18.95,Default,,0,0,0,,Or just how many of them \Nare buried out there?
+Dialogue: 0,1:04:21.03,1:04:25.12,Default,,0,0,0,,He saw it. He saw it with those eyes \Nof his and he didn't tell us what.
+Dialogue: 0,1:04:35.09,1:04:38.22,Default,,0,0,0,,One ship for you, one for me.
+Dialogue: 0,1:04:39.09,1:04:42.18,Default,,0,0,0,,I need to know that these \Nnodes are retrievable.
+Dialogue: 0,1:04:43.85,1:04:46.35,Default,,0,0,0,,And I need to know \Nwe have a deal.
+Dialogue: 0,1:04:50.73,1:04:52.36,Default,,0,0,0,,We got a deal.
+Dialogue: 0,1:04:59.70,1:05:01.95,Default,,0,0,0,,The chains stay on.
+Dialogue: 0,1:05:15.17,1:05:17.13,Default,,0,0,0,,Why don't we sit this one out?
+Dialogue: 0,1:05:20.09,1:05:21.34,Default,,0,0,0,,Okay. Okay.
+Dialogue: 0,1:05:23.05,1:05:24.76,Default,,0,0,0,,Up, up, up...
+Dialogue: 0,1:05:28.02,1:05:29.48,Default,,0,0,0,,Good doggie.
+Dialogue: 0,1:05:54.30,1:05:55.30,Default,,0,0,0,,Oh!
+Dialogue: 0,1:05:56.34,1:05:58.55,Default,,0,0,0,,Holy shit.
+Dialogue: 0,1:06:51.18,1:06:54.06,Default,,0,0,0,,Where the hell did that... Jesus Christ!
+Dialogue: 0,1:06:55.27,1:06:56.48,Default,,0,0,0,,No, no, no!
+Dialogue: 0,1:06:59.19,1:07:01.95,Default,,0,0,0,,What the fuck is wrong with \Nyou, you crazy bastard?
+Dialogue: 0,1:07:01.99,1:07:03.24,Default,,0,0,0,,You could have killed me!
+Dialogue: 0,1:07:03.32,1:07:05.07,Default,,0,0,0,,Got it, didn't I?
+Dialogue: 0,1:07:13.21,1:07:14.83,Default,,0,0,0,,Vargas, get up.
+Dialogue: 0,1:07:15.63,1:07:17.75,Default,,0,0,0,,Vargas, get up. \NCome on, let's go.
+Dialogue: 0,1:07:18.09,1:07:19.71,Default,,0,0,0,,Vargas, come on, man. \NWalk it off.
+Dialogue: 0,1:07:19.80,1:07:21.42,Default,,0,0,0,,Let's go. It's \Njust a little one.
+Dialogue: 0,1:07:21.72,1:07:23.59,Default,,0,0,0,,Small ones are the worst.
+Dialogue: 0,1:07:25.22,1:07:27.39,Default,,0,0,0,,They save the most venom.
+Dialogue: 0,1:07:47.78,1:07:49.66,Default,,0,0,0,,I forgot to mention,
+Dialogue: 0,1:07:51.16,1:07:53.04,Default,,0,0,0,,there's no weapons for you.
+Dialogue: 0,1:07:59.80,1:08:01.80,Default,,0,0,0,,You think you can ride \None of these things?
+Dialogue: 0,1:08:02.34,1:08:04.43,Default,,0,0,0,,I'll ride it like I stole it.
+Dialogue: 0,1:09:26.63,1:09:29.51,Default,,0,0,0,,How bad you want \Nthose nodes, Johns?
+Dialogue: 0,1:09:34.24,1:09:37.57,Default,,0,0,0,,I don't suppose you took the \Ntime to do this for him, huh?
+Dialogue: 0,1:09:39.70,1:09:41.63,Default,,0,0,0,,This may come as a \Nshock to you, Johns,
+Dialogue: 0,1:09:41.63,1:09:42.41,Default,,0,0,0,,This may come as a \Nshock to you, Johns,
+Dialogue: 0,1:09:43.83,1:09:45.83,Default,,0,0,0,,but I didn't ghost your son.
+Dialogue: 0,1:09:47.92,1:09:50.50,Default,,0,0,0,,He seemed set on \Nkilling himself.
+Dialogue: 0,1:09:53.88,1:09:55.76,Default,,0,0,0,,What the fuck does that mean?
+Dialogue: 0,1:09:56.51,1:09:57.97,Default,,0,0,0,,Morphine.
+Dialogue: 0,1:09:59.51,1:10:01.14,Default,,0,0,0,,Your son liked his morphine.
+Dialogue: 0,1:10:02.43,1:10:04.39,Default,,0,0,0,,Liked it twice a day.
+Dialogue: 0,1:10:05.23,1:10:07.73,Default,,0,0,0,,Didn't know your \Nson was a junkie?
+Dialogue: 0,1:10:11.23,1:10:13.23,Default,,0,0,0,,Johns was like most Mercs.
+Dialogue: 0,1:10:13.94,1:10:17.28,Default,,0,0,0,,They look all \Nstand-up and do-right
+Dialogue: 0,1:10:17.95,1:10:20.82,Default,,0,0,0,,until you out them open and \Nyou find something missing.
+Dialogue: 0,1:10:21.78,1:10:23.66,Default,,0,0,0,,In his case, a spine.
+Dialogue: 0,1:10:25.54,1:10:29.00,Default,,0,0,0,,I don't have to listen to this \Nshit! That's not the man I knew.
+Dialogue: 0,1:10:29.12,1:10:31.50,Default,,0,0,0,,Then you didn't know your son.
+Dialogue: 0,1:10:36.59,1:10:38.68,Default,,0,0,0,,He wanted to kill a kid.
+Dialogue: 0,1:10:40.30,1:10:42.18,Default,,0,0,0,,To save his own skin.
+Dialogue: 0,1:10:42.72,1:10:44.85,Default,,0,0,0,,I had a problem with that.
+Dialogue: 0,1:10:46.14,1:10:48.14,Default,,0,0,0,,You expect me to believe
+Dialogue: 0,1:10:48.65,1:10:51.90,Default,,0,0,0,,my son was gonna kill a \Nchild to save his own life?
+Dialogue: 0,1:10:54.11,1:10:57.74,Default,,0,0,0,,Morphine makes the \Nbrain soft. Heart weak.
+Dialogue: 0,1:11:01.49,1:11:03.49,Default,,0,0,0,,I don't fucking buy it!
+Dialogue: 0,1:11:03.91,1:11:06.12,Default,,0,0,0,,I just can't believe that \Nmy son's the bad guy
+Dialogue: 0,1:11:06.16,1:11:09.29,Default,,0,0,0,,in this fucking demented \Nfairy tale of yours.
+Dialogue: 0,1:11:12.13,1:11:14.09,Default,,0,0,0,,No reason to lie now.
+Dialogue: 0,1:11:16.97,1:11:18.17,Default,,0,0,0,,Johns.
+Dialogue: 0,1:11:21.39,1:11:22.89,Default,,0,0,0,,Either one of us.
+Dialogue: 0,1:11:30.10,1:11:32.60,Default,,0,0,0,,Thanks for starting the killing \Nspree for me, Riddick.
+Dialogue: 0,1:11:32.65,1:11:34.52,Default,,0,0,0,,But I'll take it from here.
+Dialogue: 0,1:12:17.11,1:12:18.07,Default,,0,0,0,,We've got one hog.
+Dialogue: 0,1:12:18.19,1:12:22.32,Default,,0,0,0,,And I sure as shit am not \Nriding bitch with you again.
+Dialogue: 0,1:12:24.57,1:12:25.91,Default,,0,0,0,,One hog?
+Dialogue: 0,1:12:27.37,1:12:29.20,Default,,0,0,0,,You sure about that, Johns?
+Dialogue: 0,1:12:35.08,1:12:37.67,Default,,0,0,0,,He pulled the goddamn \Nturbine pin!
+Dialogue: 0,1:12:39.13,1:12:41.22,Default,,0,0,0,,You just figured that out?
+Dialogue: 0,1:12:41.76,1:12:41.78,Default,,0,0,0,,Diaz was gonna take the nodes \Nfor himself and ghost me.
+Dialogue: 0,1:12:52.66,1:12:53.91,Default,,0,0,0,,Reload!
+Dialogue: 0,1:13:00.21,1:13:01.92,Default,,0,0,0,,Watch your head.
+Dialogue: 0,1:13:12.27,1:13:13.39,Default,,0,0,0,,Go!
+Dialogue: 0,1:15:16.64,1:15:17.77,Default,,0,0,0,,I got inbound.
+Dialogue: 0,1:15:33.07,1:15:34.70,Default,,0,0,0,,Take this!
+Dialogue: 0,1:15:34.99,1:15:36.74,Default,,0,0,0,,Is it just you?
+Dialogue: 0,1:15:37.62,1:15:39.95,Default,,0,0,0,,Just slam this thing in. \NSee if it's still good.
+Dialogue: 0,1:15:43.33,1:15:44.33,Default,,0,0,0,,Boss...
+Dialogue: 0,1:15:44.42,1:15:48.00,Default,,0,0,0,,Just see if the fucking thing \Nworks! We need to get outta here.
+Dialogue: 0,1:18:48.70,1:18:52.21,Default,,0,0,0,,Extraction, 30 seconds or less. \NLet's go, let's go!
+Dialogue: 0,1:19:34.14,1:19:36.14,Default,,0,0,0,,<i>Lot of good \Nmen died here, Riddick.</i>
+Dialogue: 0,1:19:36.39,1:19:40.35,Default,,0,0,0,,Not sure how I'm supposed to \Noverlook that. Next time.
+Dialogue: 0,1:19:40.69,1:19:42.69,Default,,0,0,0,,Yeah. Things would \Nhave been different
+Dialogue: 0,1:19:42.82,1:19:45.19,Default,,0,0,0,,if they weren't trying \Nto put my head in a box.
+Dialogue: 0,1:19:47.86,1:19:49.95,Default,,0,0,0,,So where to now, Riddick?
+Dialogue: 0,1:19:50.57,1:19:54.00,Default,,0,0,0,,You know what? Fuck that. \NDon't tell me. I don't wanna know.
+Dialogue: 0,1:20:38.58,1:20:39.58,Default,,0,0,0,,Vaako.
+Dialogue: 0,1:20:42.58,1:20:45.05,Default,,0,0,0,,- You are still alive. \N- Tell me where.
+Dialogue: 0,1:20:47.17,1:20:48.66,Default,,0,0,0,,He's no longer among us.
+Dialogue: 0,1:20:48.66,1:20:48.92,Default,,0,0,0,,Even with you, strangely.
+Dialogue: 0,1:20:49.13,1:20:50.84,Default,,0,0,0,,I don't care about Furya.
+Dialogue: 0,1:20:50.88,1:20:53.51,Default,,0,0,0,,I don't care what the pact \Nwas between you and him.
+Dialogue: 0,1:20:53.55,1:20:55.89,Default,,0,0,0,,This faith cannot \Nhave a misbeliever
+Dialogue: 0,1:20:55.93,1:20:57.43,Default,,0,0,0,,or a kind heart leading it,
+Dialogue: 0,1:20:57.47,1:21:00.56,Default,,0,0,0,,and I have done what I have \Ndone to ensure...
+Dialogue: 0,1:21:10.49,1:21:12.11,Default,,0,0,0,,Too many words.
+Dialogue: 0,1:21:27.09,1:21:29.46,Default,,0,0,0,,Never lie to me, \NI'll never hurt you.
+Dialogue: 0,1:21:33.14,1:21:34.59,Default,,0,0,0,,One word answer.
+Dialogue: 0,1:21:36.97,1:21:38.47,Default,,0,0,0,,Is Vaako alive or dead?
+Dialogue: 0,1:21:43.98,1:21:44.98,Default,,0,0,0,,Both.
+Dialogue: 0,1:22:08.13,1:22:09.88,Default,,0,0,0,,<i>Transcendence.</i>

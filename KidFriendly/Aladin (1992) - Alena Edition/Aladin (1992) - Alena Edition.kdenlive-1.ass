@@ -1,0 +1,1087 @@
+[Script Info]
+Title: Restored
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,40,40,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:27.24,0:00:30.88,Default,,0,0,0,,<i>Oh, I come from a land \NFrom a faraway place</i>
+Dialogue: 0,0:00:30.88,0:00:34.08,Default,,0,0,0,,<i>Where the caravan camels roam</i>
+Dialogue: 0,0:00:34.08,0:00:37.84,Default,,0,0,0,,<i>Where it's flat and immense \NAnd the heat is intense</i>
+Dialogue: 0,0:00:37.84,0:00:41.28,Default,,0,0,0,,<i>It's barbaric, but hey, it's home</i>
+Dialogue: 0,0:00:41.28,0:00:44.72,Default,,0,0,0,,<i>When the wind's from the east \NAnd the sun's from the west</i>
+Dialogue: 0,0:00:44.72,0:00:47.80,Default,,0,0,0,,<i>And the sand in the glass is right</i>
+Dialogue: 0,0:00:47.80,0:00:52.16,Default,,0,0,0,,<i>Come on down, stop on by \NHop a carpet and fly</i>
+Dialogue: 0,0:00:52.16,0:00:56.24,Default,,0,0,0,,<i>To another Arabian night</i>
+Dialogue: 0,0:00:56.24,0:00:59.92,Default,,0,0,0,,<i>Arabian nights</i>
+Dialogue: 0,0:00:59.92,0:01:03.48,Default,,0,0,0,,<i>Like Arabian days</i>
+Dialogue: 0,0:01:03.48,0:01:07.20,Default,,0,0,0,,<i>More often than not \NAre hotter than hot</i>
+Dialogue: 0,0:01:07.20,0:01:10.76,Default,,0,0,0,,<i>In a lot of good ways</i>
+Dialogue: 0,0:01:10.76,0:01:14.12,Default,,0,0,0,,<i>Arabian nights</i>
+Dialogue: 0,0:01:14.12,0:01:17.80,Default,,0,0,0,,<i>'Neath Arabian moons</i>
+Dialogue: 0,0:01:17.80,0:01:21.76,Default,,0,0,0,,<i>A fool off his guard \NCould fall and fall hard</i>
+Dialogue: 0,0:01:21.76,0:01:26.56,Default,,0,0,0,,<i>Out there on the dunes</i>
+Dialogue: 0,0:01:28.68,0:01:33.36,Default,,0,0,0,,Ah, salaam and good evening \Nto you, worthy friend.
+Dialogue: 0,0:01:33.36,0:01:35.64,Default,,0,0,0,,Please, please, come closer.
+Dialogue: 0,0:01:36.28,0:01:38.04,Default,,0,0,0,,Too close. A little too close.
+Dialogue: 0,0:01:38.04,0:01:39.68,Default,,0,0,0,,There.
+Dialogue: 0,0:01:39.68,0:01:42.00,Default,,0,0,0,,Welcome to Agrabah,
+Dialogue: 0,0:01:42.00,0:01:46.12,Default,,0,0,0,,city of mystery, of enchantment,
+Dialogue: 0,0:01:46.12,0:01:48.16,Default,,0,0,0,,and the finest merchandise \Nthis side of the River Jordan,
+Dialogue: 0,0:01:48.16,0:01:50.12,Default,,0,0,0,,on sale today. Come on down.
+Dialogue: 0,0:01:50.12,0:01:51.80,Default,,0,0,0,,Look at this. Yes.
+Dialogue: 0,0:01:51.80,0:01:55.60,Default,,0,0,0,,Combination hookah and coffeemaker. \NAlso makes julienne fries.
+Dialogue: 0,0:01:55.80,0:01:57.88,Default,,0,0,0,,Will not break. Will not...
+Dialogue: 0,0:01:57.88,0:01:59.40,Default,,0,0,0,,It broke.
+Dialogue: 0,0:01:59.40,0:02:02.04,Default,,0,0,0,,Ohh! Look at this.
+Dialogue: 0,0:02:02.04,0:02:04.88,Default,,0,0,0,,I have never seen one \Nof these intact before.
+Dialogue: 0,0:02:04.88,0:02:06.80,Default,,0,0,0,,This is the famous \NDead Sea Tupperware.
+Dialogue: 0,0:02:06.80,0:02:10.40,Default,,0,0,0,,Listen. Ah, still good.
+Dialogue: 0,0:02:10.56,0:02:11.84,Default,,0,0,0,,Wait. Don't go.
+Dialogue: 0,0:02:11.84,0:02:15.68,Default,,0,0,0,,I can see that you're only interested \Nin the exceptionally rare.
+Dialogue: 0,0:02:15.68,0:02:20.08,Default,,0,0,0,,I think, then, you would be \Nmost rewarded to consider this.
+Dialogue: 0,0:02:21.04,0:02:23.52,Default,,0,0,0,,Do not be fooled by its \Ncommonplace appearance.
+Dialogue: 0,0:02:23.52,0:02:26.16,Default,,0,0,0,,Like so many things, it \Nis not what is outside,
+Dialogue: 0,0:02:26.16,0:02:28.88,Default,,0,0,0,,but what is inside that counts.
+Dialogue: 0,0:02:28.88,0:02:30.68,Default,,0,0,0,,This is no ordinary lamp.
+Dialogue: 0,0:02:30.68,0:02:33.48,Default,,0,0,0,,It once changed the course \Nof a young man's life.
+Dialogue: 0,0:02:33.48,0:02:37.60,Default,,0,0,0,,A young man who, like this lamp, \Nwas more than what he seemed.
+Dialogue: 0,0:02:37.60,0:02:39.40,Default,,0,0,0,,A diamond in the rough.
+Dialogue: 0,0:02:39.40,0:02:40.60,Default,,0,0,0,,Stop! Thief!
+Dialogue: 0,0:02:40.60,0:02:41.72,Default,,0,0,0,,Stop! Thief!
+Dialogue: 0,0:02:41.72,0:02:45.24,Default,,0,0,0,,I'll have your hands for \Na trophy, street rat.
+Dialogue: 0,0:02:45.56,0:02:47.76,Default,,0,0,0,,All this for a loaf of bread?
+Dialogue: 0,0:02:47.76,0:02:49.64,Default,,0,0,0,,Whoa!
+Dialogue: 0,0:02:58.76,0:03:02.12,Default,,0,0,0,,- There he is! \N- You won't get away so easy!
+Dialogue: 0,0:03:02.12,0:03:04.08,Default,,0,0,0,,You think that was easy?
+Dialogue: 0,0:03:05.60,0:03:08.20,Default,,0,0,0,,You two, over that way, \Nand you, follow me.
+Dialogue: 0,0:03:08.20,0:03:10.44,Default,,0,0,0,,- We'll find him. \N- Morning, ladies.
+Dialogue: 0,0:03:10.44,0:03:14.24,Default,,0,0,0,,Getting into trouble a little \Nearly today, aren't we, Aladdin?
+Dialogue: 0,0:03:14.24,0:03:17.48,Default,,0,0,0,,Trouble? No way. You're only \Nin trouble if you get caught.
+Dialogue: 0,0:03:17.48,0:03:19.16,Default,,0,0,0,,- Gotcha. \N- I'm in trouble.
+Dialogue: 0,0:03:19.16,0:03:20.56,Default,,0,0,0,,And this time...
+Dialogue: 0,0:03:22.36,0:03:24.20,Default,,0,0,0,,Perfect timing, Abu, as usual.
+Dialogue: 0,0:03:24.20,0:03:26.92,Default,,0,0,0,,- Abu. \N- Come on. Let's get outta here.
+Dialogue: 0,0:03:26.92,0:03:29.60,Default,,0,0,0,,<i>Gotta keep one jump \NAhead of the bread line</i>
+Dialogue: 0,0:03:29.60,0:03:31.44,Default,,0,0,0,,<i>One swing ahead of the sword</i>
+Dialogue: 0,0:03:31.44,0:03:33.88,Default,,0,0,0,,<i>I steal only what I can't afford</i>
+Dialogue: 0,0:03:33.88,0:03:35.24,Default,,0,0,0,,<i>That's everything</i>
+Dialogue: 0,0:03:35.24,0:03:37.16,Default,,0,0,0,,<i>One jump ahead of the lawmen</i>
+Dialogue: 0,0:03:37.16,0:03:39.04,Default,,0,0,0,,<i>That's all, and that's no joke</i>
+Dialogue: 0,0:03:39.04,0:03:42.28,Default,,0,0,0,,<i>These guys don't \Nappreciate I'm broke</i>
+Dialogue: 0,0:03:42.36,0:03:44.36,Default,,0,0,0,,<i>- Riffraff \NStreet rat</i>
+Dialogue: 0,0:03:44.36,0:03:46.24,Default,,0,0,0,,<i>Scoundrel \NTake that</i>
+Dialogue: 0,0:03:46.24,0:03:50.12,Default,,0,0,0,,<i>Just a little snack, guys</i>
+Dialogue: 0,0:03:50.12,0:03:53.96,Default,,0,0,0,,<i>Rip him open \NTake it back, guys</i>
+Dialogue: 0,0:03:53.96,0:03:55.72,Default,,0,0,0,,<i>I can take a hint \NGotta face the facts</i>
+Dialogue: 0,0:03:55.72,0:03:57.80,Default,,0,0,0,,<i>- You're my only friend, Abu \NWho?</i>
+Dialogue: 0,0:03:57.80,0:04:01.48,Default,,0,0,0,,<i>Oh, it's sad Aladdin's \Nhit the bottom</i>
+Dialogue: 0,0:04:01.48,0:04:05.16,Default,,0,0,0,,<i>He's become a one-man rise in crime</i>
+Dialogue: 0,0:04:05.16,0:04:08.88,Default,,0,0,0,,<i>I'd blame parents \NExcept he hasn't got 'em</i>
+Dialogue: 0,0:04:08.88,0:04:10.60,Default,,0,0,0,,<i>Gotta eat to live \NGotta steal to eat</i>
+Dialogue: 0,0:04:10.60,0:04:12.84,Default,,0,0,0,,<i>Tell you all about it \NWhen I got the time</i>
+Dialogue: 0,0:04:12.84,0:04:16.51,Default,,0,0,0,,<i>One jump ahead of the slowpokes \NOne skip ahead of my doom</i>
+Dialogue: 0,0:04:16.51,0:04:18.80,Default,,0,0,0,,<i>Next time gonna use a nom de plume</i>
+Dialogue: 0,0:04:18.80,0:04:20.36,Default,,0,0,0,,<i>There he is</i>
+Dialogue: 0,0:04:20.36,0:04:24.16,Default,,0,0,0,,<i>One jump ahead of the hit men \NOne hit ahead of the flock</i>
+Dialogue: 0,0:04:24.16,0:04:27.40,Default,,0,0,0,,<i>I think I'll take a stroll \NAround the block</i>
+Dialogue: 0,0:04:27.56,0:04:29.56,Default,,0,0,0,,<i>- Stop, thief \N- Vandal</i>
+Dialogue: 0,0:04:29.56,0:04:31.32,Default,,0,0,0,,<i>- Abu \N- Scandal</i>
+Dialogue: 0,0:04:31.32,0:04:35.44,Default,,0,0,0,,<i>Let's not be too hasty</i>
+Dialogue: 0,0:04:35.44,0:04:39.24,Default,,0,0,0,,<i>Still I think he's rather tasty</i>
+Dialogue: 0,0:04:39.24,0:04:41.12,Default,,0,0,0,,<i>Gotta eat to live \NGotta steal to eat</i>
+Dialogue: 0,0:04:41.12,0:04:42.56,Default,,0,0,0,,<i>Otherwise we'd get along</i>
+Dialogue: 0,0:04:42.56,0:04:44.52,Default,,0,0,0,,Wrong
+Dialogue: 0,0:04:45.08,0:04:46.76,Default,,0,0,0,,Get him!
+Dialogue: 0,0:04:52.72,0:04:54.92,Default,,0,0,0,,He's got a sword!
+Dialogue: 0,0:04:55.00,0:04:58.68,Default,,0,0,0,,You idiots. We've all got swords.
+Dialogue: 0,0:05:05.08,0:05:06.96,Default,,0,0,0,,<i>- One jump ahead of the hoof beats \N- Vandal!</i>
+Dialogue: 0,0:05:06.96,0:05:08.72,Default,,0,0,0,,<i>- One hop ahead of the hump \N- Street rat!</i>
+Dialogue: 0,0:05:08.72,0:05:10.60,Default,,0,0,0,,<i>- One trick ahead of disaster \N- Scoundrel!</i>
+Dialogue: 0,0:05:10.60,0:05:12.44,Default,,0,0,0,,<i>They're quick, but I'm much faster</i>
+Dialogue: 0,0:05:12.44,0:05:13.12,Default,,0,0,0,,<i>Here goes, better throw my hand in</i>
+Dialogue: 0,0:05:14.00,0:05:17.80,Default,,0,0,0,,<i>Wish me happy landin' \NAll I gotta do is jump</i>
+Dialogue: 0,0:05:23.72,0:05:26.12,Default,,0,0,0,,Yuck! Oy!
+Dialogue: 0,0:05:30.52,0:05:33.96,Default,,0,0,0,,And now, esteemed effendi, \Nwe feast. All right.
+Dialogue: 0,0:05:33.96,0:05:35.88,Default,,0,0,0,,Yum, yum!
+Dialogue: 0,0:05:43.88,0:05:45.56,Default,,0,0,0,,Uh-oh.
+Dialogue: 0,0:05:57.92,0:06:01.28,Default,,0,0,0,,Here. Go on. Take it.
+Dialogue: 0,0:06:15.56,0:06:18.76,Default,,0,0,0,,Ah, don't. Huh?
+Dialogue: 0,0:06:23.04,0:06:24.80,Default,,0,0,0,,I've never been so insulted.
+Dialogue: 0,0:06:24.80,0:06:28.76,Default,,0,0,0,,Oh, Prince Achmed. You're not \Nleaving so soon, are you?
+Dialogue: 0,0:06:28.76,0:06:31.04,Default,,0,0,0,,Good luck marrying her off.
+Dialogue: 0,0:06:31.04,0:06:33.84,Default,,0,0,0,,Oh! Jasmine.
+Dialogue: 0,0:06:34.56,0:06:38.64,Default,,0,0,0,,Jasmine!
+Dialogue: 0,0:06:39.00,0:06:40.92,Default,,0,0,0,,Jasmine!
+Dialogue: 0,0:06:40.92,0:06:43.32,Default,,0,0,0,,Confound it, Rajah.
+Dialogue: 0,0:06:45.72,0:06:48.88,Default,,0,0,0,,So, this is why Prince \NAchmed stormed out.
+Dialogue: 0,0:06:48.88,0:06:50.48,Default,,0,0,0,,Oh, Father.
+Dialogue: 0,0:06:50.48,0:06:53.20,Default,,0,0,0,,Rajah was just playing with \Nhim. Weren't you, Rajah?
+Dialogue: 0,0:06:53.20,0:06:55.36,Default,,0,0,0,,You were just playing \Nwith that overdressed,
+Dialogue: 0,0:06:55.36,0:06:58.04,Default,,0,0,0,,self-absorbed Prince \NAchmed, weren't you?
+Dialogue: 0,0:07:02.00,0:07:06.32,Default,,0,0,0,,Dearest, you've got to stop rejecting \Nevery suitor who comes to call.
+Dialogue: 0,0:07:06.32,0:07:09.84,Default,,0,0,0,,The law says you must \Nbe married to a prince
+Dialogue: 0,0:07:09.84,0:07:11.92,Default,,0,0,0,,by your next birthday.
+Dialogue: 0,0:07:11.92,0:07:13.40,Default,,0,0,0,,The law is wrong.
+Dialogue: 0,0:07:13.40,0:07:15.76,Default,,0,0,0,,You've only got three more days.
+Dialogue: 0,0:07:15.76,0:07:19.24,Default,,0,0,0,,Father, I hate being \Nforced into this.
+Dialogue: 0,0:07:19.24,0:07:22.64,Default,,0,0,0,,If I do marry, I want \Nit to be for love.
+Dialogue: 0,0:07:22.64,0:07:24.28,Default,,0,0,0,,Jasmine,
+Dialogue: 0,0:07:24.52,0:07:27.92,Default,,0,0,0,,it's not only this law.
+Dialogue: 0,0:07:29.20,0:07:33.52,Default,,0,0,0,,I'm not going to be around \Nforever, and, well, I...
+Dialogue: 0,0:07:34.04,0:07:37.92,Default,,0,0,0,,I just want to make sure \Nyou're taken care of.
+Dialogue: 0,0:07:37.92,0:07:39.36,Default,,0,0,0,,Provided for.
+Dialogue: 0,0:07:39.36,0:07:41.52,Default,,0,0,0,,Please try to understand.
+Dialogue: 0,0:07:41.52,0:07:46.00,Default,,0,0,0,,I've never done a thing on my own. \NI've never had any real friends.
+Dialogue: 0,0:07:47.12,0:07:49.08,Default,,0,0,0,,Except you, Rajah.
+Dialogue: 0,0:07:49.84,0:07:52.92,Default,,0,0,0,,I've never even been \Noutside the palace walls.
+Dialogue: 0,0:07:52.92,0:07:55.56,Default,,0,0,0,,But, Jasmine, you're a princess.
+Dialogue: 0,0:07:55.56,0:07:58.32,Default,,0,0,0,,Then maybe I don't want to \Nbe a princess any more.
+Dialogue: 0,0:07:58.32,0:08:01.16,Default,,0,0,0,,Oooh! I... I...
+Dialogue: 0,0:08:01.16,0:08:04.36,Default,,0,0,0,,Allah forbid you should \Nhave any daughters.
+Dialogue: 0,0:08:04.36,0:08:06.16,Default,,0,0,0,,Hmm?
+Dialogue: 0,0:08:16.76,0:08:19.76,Default,,0,0,0,,I don't know where \Nshe gets it from.
+Dialogue: 0,0:08:19.76,0:08:23.04,Default,,0,0,0,,Her mother wasn't nearly so picky.
+Dialogue: 0,0:08:23.04,0:08:26.24,Default,,0,0,0,,Oh! Ah, Jafar.
+Dialogue: 0,0:08:26.40,0:08:28.96,Default,,0,0,0,,My most trusted advisor.
+Dialogue: 0,0:08:28.96,0:08:31.72,Default,,0,0,0,,I am in desperate \Nneed of your wisdom.
+Dialogue: 0,0:08:31.72,0:08:34.64,Default,,0,0,0,,My life is but to \Nserve you, my lord.
+Dialogue: 0,0:08:34.64,0:08:38.79,Default,,0,0,0,,It's this suitor business. Jasmine \Nrefuses to choose a husband.
+Dialogue: 0,0:08:38.79,0:08:42.12,Default,,0,0,0,,- I'm at my wit's end. \N- Awk! Wit's end!
+Dialogue: 0,0:08:42.12,0:08:44.24,Default,,0,0,0,,Oh!
+Dialogue: 0,0:08:44.24,0:08:47.92,Default,,0,0,0,,Have a cracker, pretty Polly.
+Dialogue: 0,0:08:47.92,0:08:51.44,Default,,0,0,0,,Your Majesty certainly has \Na way with dumb animals.
+Dialogue: 0,0:08:52.92,0:08:56.92,Default,,0,0,0,,Now, then, perhaps I \Ncan divine a solution
+Dialogue: 0,0:08:56.92,0:08:58.88,Default,,0,0,0,,to this thorny problem.
+Dialogue: 0,0:08:58.88,0:09:00.64,Default,,0,0,0,,If anyone can help, it's you.
+Dialogue: 0,0:09:00.64,0:09:05.36,Default,,0,0,0,,But it would require the use \Nof the mystic blue diamond.
+Dialogue: 0,0:09:05.36,0:09:08.44,Default,,0,0,0,,Oh. Uh, my ring?
+Dialogue: 0,0:09:08.44,0:09:10.72,Default,,0,0,0,,But it's been in the \Nfamily for years.
+Dialogue: 0,0:09:10.72,0:09:14.00,Default,,0,0,0,,It is necessary to find \Nthe princess a suitor.
+Dialogue: 0,0:09:14.00,0:09:16.00,Default,,0,0,0,,Don't worry.
+Dialogue: 0,0:09:16.08,0:09:21.88,Default,,0,0,0,,Everything will be fine.
+Dialogue: 0,0:09:21.88,0:09:24.00,Default,,0,0,0,,The diamond.
+Dialogue: 0,0:09:24.00,0:09:26.32,Default,,0,0,0,,Here, Jafar.
+Dialogue: 0,0:09:26.32,0:09:29.84,Default,,0,0,0,,Whatever you need will be fine.
+Dialogue: 0,0:09:29.84,0:09:32.36,Default,,0,0,0,,You are most gracious, my liege.
+Dialogue: 0,0:09:32.52,0:09:36.08,Default,,0,0,0,,Now, run along and play \Nwith your little toys, hmm?
+Dialogue: 0,0:09:36.08,0:09:40.24,Default,,0,0,0,,Yes. That will be pretty good.
+Dialogue: 0,0:09:42.36,0:09:44.60,Default,,0,0,0,,I can't take it any more!
+Dialogue: 0,0:09:44.60,0:09:50.48,Default,,0,0,0,,If I gotta choke down on one more of \Nthose mouldy, disgusting crackers...
+Dialogue: 0,0:09:50.88,0:09:52.64,Default,,0,0,0,,Bam! Whack!
+Dialogue: 0,0:09:52.64,0:09:54.32,Default,,0,0,0,,Calm yourself, Iago.
+Dialogue: 0,0:09:54.32,0:09:55.76,Default,,0,0,0,,Then I'd grab him around \Nthe head. Whack!
+Dialogue: 0,0:09:55.76,0:09:59.96,Default,,0,0,0,,Soon I will be sultan, not \Nthat addlepated twit.
+Dialogue: 0,0:09:59.96,0:10:05.36,Default,,0,0,0,,And then I stuff the crackers \Ndown his throat. Ha, ha!
+Dialogue: 0,0:10:22.32,0:10:25.04,Default,,0,0,0,,Oh, I'm sorry, Rajah.
+Dialogue: 0,0:10:25.04,0:10:29.16,Default,,0,0,0,,But I can't stay here and \Nhave my life lived for me.
+Dialogue: 0,0:10:30.00,0:10:31.92,Default,,0,0,0,,I'll miss you.
+Dialogue: 0,0:10:40.44,0:10:42.76,Default,,0,0,0,,Good bye.
+Dialogue: 0,0:10:52.24,0:10:54.40,Default,,0,0,0,,Okay, Abu. Go.
+Dialogue: 0,0:10:56.08,0:10:59.28,Default,,0,0,0,,Try this. Your taste buds \Nwill dance and sing.
+Dialogue: 0,0:11:01.36,0:11:03.88,Default,,0,0,0,,Get your paws off that.
+Dialogue: 0,0:11:03.88,0:11:05.20,Default,,0,0,0,,Why, you...
+Dialogue: 0,0:11:05.20,0:11:09.16,Default,,0,0,0,,Get away from here, \Nyou cursed, filthy ape!
+Dialogue: 0,0:11:10.16,0:11:12.08,Default,,0,0,0,,Good bye.
+Dialogue: 0,0:11:12.32,0:11:14.88,Default,,0,0,0,,Nice going, Abu.
+Dialogue: 0,0:11:15.00,0:11:16.88,Default,,0,0,0,,Breakfast is served.
+Dialogue: 0,0:11:21.04,0:11:24.96,Default,,0,0,0,,Pretty lady, buy a pot. No \Nfiner pot in brass or silver.
+Dialogue: 0,0:11:24.96,0:11:27.40,Default,,0,0,0,,Sugar dates. Sugar dates and figs.
+Dialogue: 0,0:11:27.40,0:11:29.68,Default,,0,0,0,,Sugar dates and pistachios.
+Dialogue: 0,0:11:29.68,0:11:31.44,Default,,0,0,0,,Would the lady like a necklace?
+Dialogue: 0,0:11:31.44,0:11:33.68,Default,,0,0,0,,A pretty necklace \Nfor a pretty lady.
+Dialogue: 0,0:11:33.68,0:11:35.20,Default,,0,0,0,,Fresh fish!
+Dialogue: 0,0:11:35.20,0:11:36.56,Default,,0,0,0,,We catch 'em, you buy 'em!
+Dialogue: 0,0:11:36.56,0:11:38.64,Default,,0,0,0,,Oh, no. I don't think so.
+Dialogue: 0,0:11:39.12,0:11:40.36,Default,,0,0,0,,Oh!
+Dialogue: 0,0:11:40.36,0:11:42.64,Default,,0,0,0,,Excuse me.
+Dialogue: 0,0:11:45.84,0:11:49.92,Default,,0,0,0,,I'm really very sorry.
+Dialogue: 0,0:11:49.92,0:11:51.84,Default,,0,0,0,,Wow.
+Dialogue: 0,0:11:56.64,0:11:58.36,Default,,0,0,0,,Uh-oh.
+Dialogue: 0,0:11:58.48,0:12:00.44,Default,,0,0,0,,Hello? Hello?
+Dialogue: 0,0:12:00.44,0:12:00.88,Default,,0,0,0,,Hello? Hello?
+Dialogue: 0,0:12:05.24,0:12:08.80,Default,,0,0,0,,O wise Sultan, how may I serve you?
+Dialogue: 0,0:12:12.28,0:12:14.16,Default,,0,0,0,,Tragic, isn't it?
+Dialogue: 0,0:12:14.16,0:12:16.36,Default,,0,0,0,,But no harm done.
+Dialogue: 0,0:12:16.36,0:12:18.96,Default,,0,0,0,,Now, come along, sis. \NTime to go see the doctor.
+Dialogue: 0,0:12:18.96,0:12:21.24,Default,,0,0,0,,Oh, hello, Doctor. How are you?
+Dialogue: 0,0:12:21.24,0:12:24.84,Default,,0,0,0,,No, no, no. Not that one. \NCome on, Sultan.
+Dialogue: 0,0:12:28.28,0:12:29.92,Default,,0,0,0,,Huh? What?
+Dialogue: 0,0:12:29.92,0:12:32.60,Default,,0,0,0,,Come back here, you little thieves!
+Dialogue: 0,0:12:36.44,0:12:39.32,Default,,0,0,0,,With all due respect, \NYour Rottenness,
+Dialogue: 0,0:12:39.32,0:12:42.52,Default,,0,0,0,,couldn't we just wait \Nfor a real storm?
+Dialogue: 0,0:12:42.52,0:12:45.20,Default,,0,0,0,,Save your breath, Iago. Faster.
+Dialogue: 0,0:12:45.64,0:12:48.24,Default,,0,0,0,,Yes, O mighty evil one.
+Dialogue: 0,0:12:51.36,0:12:53.76,Default,,0,0,0,,Part, sands of time.
+Dialogue: 0,0:12:53.76,0:12:57.60,Default,,0,0,0,,Reveal to me the one who \Ncan enter the cave.
+Dialogue: 0,0:12:57.60,0:13:01.08,Default,,0,0,0,,Yes! Yes!
+Dialogue: 0,0:13:01.12,0:13:03.48,Default,,0,0,0,,There he is.
+Dialogue: 0,0:13:03.48,0:13:05.76,Default,,0,0,0,,My diamond in the rough.
+Dialogue: 0,0:13:05.76,0:13:09.52,Default,,0,0,0,,That's him? That's the clown \Nwe've been waitin' for?
+Dialogue: 0,0:13:10.00,0:13:15.80,Default,,0,0,0,,Let's have the guards extend him an \Ninvitation to the palace, shall we?
+Dialogue: 0,0:13:15.96,0:13:17.56,Default,,0,0,0,,Swell.
+Dialogue: 0,0:13:21.56,0:13:23.92,Default,,0,0,0,,Almost there.
+Dialogue: 0,0:13:30.72,0:13:33.88,Default,,0,0,0,,I want to thank you for \Nstopping that man.
+Dialogue: 0,0:13:34.00,0:13:36.12,Default,,0,0,0,,Uh, forget it.
+Dialogue: 0,0:13:37.16,0:13:40.24,Default,,0,0,0,,So, this is your first time \Nin the marketplace, huh?
+Dialogue: 0,0:13:42.40,0:13:44.20,Default,,0,0,0,,Is it that obvious?
+Dialogue: 0,0:13:44.40,0:13:47.16,Default,,0,0,0,,Well, you do kind of stand out.
+Dialogue: 0,0:13:48.44,0:13:52.44,Default,,0,0,0,,I mean, uh, you don't seem to know \Nhow dangerous Agrabah can be.
+Dialogue: 0,0:13:53.24,0:13:55.64,Default,,0,0,0,,Hmm. I'm a fast learner.
+Dialogue: 0,0:13:55.64,0:13:57.48,Default,,0,0,0,,Wow.
+Dialogue: 0,0:13:57.64,0:13:59.44,Default,,0,0,0,,Hey.
+Dialogue: 0,0:14:01.00,0:14:03.32,Default,,0,0,0,,Come on. This way.
+Dialogue: 0,0:14:03.92,0:14:06.08,Default,,0,0,0,,Whoa. Watch your head there.
+Dialogue: 0,0:14:06.08,0:14:07.56,Default,,0,0,0,,Be careful.
+Dialogue: 0,0:14:07.56,0:14:09.56,Default,,0,0,0,,Is this where you live?
+Dialogue: 0,0:14:09.56,0:14:12.92,Default,,0,0,0,,Yep. Just me and Abu. \NCome and go as we please.
+Dialogue: 0,0:14:12.92,0:14:14.68,Default,,0,0,0,,That sounds fabulous.
+Dialogue: 0,0:14:14.68,0:14:19.12,Default,,0,0,0,,Well, it's not much, but \Nit's got a great view.
+Dialogue: 0,0:14:19.76,0:14:22.44,Default,,0,0,0,,Wow. The palace looks \Npretty amazing, huh?
+Dialogue: 0,0:14:22.44,0:14:25.40,Default,,0,0,0,,Oh, it's wonderful.
+Dialogue: 0,0:14:25.40,0:14:27.68,Default,,0,0,0,,I wonder what it would \Nbe like to live there,
+Dialogue: 0,0:14:27.68,0:14:30.32,Default,,0,0,0,,and have servants and valets.
+Dialogue: 0,0:14:30.32,0:14:33.96,Default,,0,0,0,,Oh, sure. People who tell you \Nwhere to go and how to dress.
+Dialogue: 0,0:14:34.84,0:14:36.16,Default,,0,0,0,,It's better than here.
+Dialogue: 0,0:14:36.16,0:14:38.68,Default,,0,0,0,,You're always scraping for \Nfood and ducking the guards.
+Dialogue: 0,0:14:38.68,0:14:40.92,Default,,0,0,0,,You're not free to \Nmake your own choices.
+Dialogue: 0,0:14:40.92,0:14:43.28,Default,,0,0,0,,- Sometimes you feel so... \N- You're just...
+Dialogue: 0,0:14:43.28,0:14:45.32,Default,,0,0,0,,- Trapped. \N- Trapped.
+Dialogue: 0,0:14:48.80,0:14:52.48,Default,,0,0,0,,So, where are you from?
+Dialogue: 0,0:14:52.92,0:14:54.32,Default,,0,0,0,,What does it matter?
+Dialogue: 0,0:14:54.32,0:14:57.24,Default,,0,0,0,,I ran away and I am not going back.
+Dialogue: 0,0:14:57.72,0:15:01.24,Default,,0,0,0,,- Really? How come? \N- Why, you...
+Dialogue: 0,0:15:02.52,0:15:05.40,Default,,0,0,0,,My father's forcing \Nme to get married.
+Dialogue: 0,0:15:05.80,0:15:08.60,Default,,0,0,0,,That's... That's awful.
+Dialogue: 0,0:15:09.12,0:15:12.52,Default,,0,0,0,,Abu!
+Dialogue: 0,0:15:12.52,0:15:14.36,Default,,0,0,0,,What?
+Dialogue: 0,0:15:14.72,0:15:18.04,Default,,0,0,0,,Abu says, uh, that's not fair.
+Dialogue: 0,0:15:18.04,0:15:19.16,Default,,0,0,0,,What?
+Dialogue: 0,0:15:19.16,0:15:21.88,Default,,0,0,0,,- Oh, did he? \N- Yeah, of course.
+Dialogue: 0,0:15:21.88,0:15:25.84,Default,,0,0,0,,And does Abu have \Nanything else to say?
+Dialogue: 0,0:15:25.84,0:15:28.92,Default,,0,0,0,,Well, uh, he wishes there was \Nsomething he could do to help.
+Dialogue: 0,0:15:28.92,0:15:30.88,Default,,0,0,0,,Oh, boy.
+Dialogue: 0,0:15:31.16,0:15:32.64,Default,,0,0,0,,Hmm.
+Dialogue: 0,0:15:32.92,0:15:36.12,Default,,0,0,0,,Tell him that's very sweet.
+Dialogue: 0,0:15:38.04,0:15:39.64,Default,,0,0,0,,Here you are.
+Dialogue: 0,0:15:39.64,0:15:41.80,Default,,0,0,0,,- They're after me! \N- They're after you?
+Dialogue: 0,0:15:41.80,0:15:43.16,Default,,0,0,0,,My father must have sent them...
+Dialogue: 0,0:15:43.16,0:15:44.36,Default,,0,0,0,,- Do you trust me? \N- What?
+Dialogue: 0,0:15:44.36,0:15:46.92,Default,,0,0,0,,- Do you trust me? \N- Yes...
+Dialogue: 0,0:15:46.92,0:15:48.76,Default,,0,0,0,,Then jump!
+Dialogue: 0,0:15:53.56,0:15:58.24,Default,,0,0,0,,We just keep running into each \Nother, don't we, street rat?
+Dialogue: 0,0:15:58.76,0:16:01.16,Default,,0,0,0,,Run! Go! Get out of here!
+Dialogue: 0,0:16:01.16,0:16:03.36,Default,,0,0,0,,Get this thing off of me!
+Dialogue: 0,0:16:03.60,0:16:06.68,Default,,0,0,0,,- It's the dungeon for you, boy. \N- Get off of me.
+Dialogue: 0,0:16:06.68,0:16:07.80,Default,,0,0,0,,Let him go.
+Dialogue: 0,0:16:07.80,0:16:12.08,Default,,0,0,0,,Looky here, men. A street mouse.
+Dialogue: 0,0:16:12.08,0:16:16.24,Default,,0,0,0,,Unhand him, by order \Nof the princess.
+Dialogue: 0,0:16:17.24,0:16:18.84,Default,,0,0,0,,Princess Jasmine.
+Dialogue: 0,0:16:18.84,0:16:20.48,Default,,0,0,0,,- The princess? \N- Princess?
+Dialogue: 0,0:16:20.48,0:16:23.64,Default,,0,0,0,,What are you doing outside the \Npalace? And with this street rat.
+Dialogue: 0,0:16:23.64,0:16:27.60,Default,,0,0,0,,That's not your concern. Do as \NI command. Release him.
+Dialogue: 0,0:16:27.60,0:16:31.28,Default,,0,0,0,,I would, Princess, except \Nmy orders come from Jafar.
+Dialogue: 0,0:16:31.28,0:16:35.32,Default,,0,0,0,,- You'll have to take it up with him. \N- Believe me, I will.
+Dialogue: 0,0:16:41.24,0:16:42.80,Default,,0,0,0,,Jafar?
+Dialogue: 0,0:16:42.80,0:16:44.72,Default,,0,0,0,,Oh, Princess.
+Dialogue: 0,0:16:44.72,0:16:47.12,Default,,0,0,0,,Awk! Jafar, I'm stuck.
+Dialogue: 0,0:16:47.12,0:16:49.32,Default,,0,0,0,,How may I be of service to you?
+Dialogue: 0,0:16:49.32,0:16:52.72,Default,,0,0,0,,The guards just took a boy from \Nthe market, on your orders.
+Dialogue: 0,0:16:53.08,0:16:56.44,Default,,0,0,0,,Your father has charged me \Nwith keeping peace in Agrabah.
+Dialogue: 0,0:16:56.44,0:16:59.28,Default,,0,0,0,,- The boy was a criminal. \N- What was his crime?
+Dialogue: 0,0:16:59.28,0:17:00.56,Default,,0,0,0,,I can't breathe, Jafar.
+Dialogue: 0,0:17:00.56,0:17:04.07,Default,,0,0,0,,Why, kidnapping the \Nprincess, of course.
+Dialogue: 0,0:17:04.07,0:17:06.31,Default,,0,0,0,,If you could just... \NAah! That hurt!
+Dialogue: 0,0:17:06.31,0:17:08.88,Default,,0,0,0,,He didn't kidnap me. I ran away.
+Dialogue: 0,0:17:08.88,0:17:11.35,Default,,0,0,0,,Oh, dear.
+Dialogue: 0,0:17:12.11,0:17:16.07,Default,,0,0,0,,Oh, how frightfully upsetting. \NHad I but known...
+Dialogue: 0,0:17:16.35,0:17:17.52,Default,,0,0,0,,What do you mean?
+Dialogue: 0,0:17:17.52,0:17:21.07,Default,,0,0,0,,Sadly, the boy's sentence has \Nalready been carried out.
+Dialogue: 0,0:17:21.07,0:17:22.68,Default,,0,0,0,,What sentence?
+Dialogue: 0,0:17:22.68,0:17:24.24,Default,,0,0,0,,Death.
+Dialogue: 0,0:17:24.24,0:17:27.24,Default,,0,0,0,,- By beheading. \N- No.
+Dialogue: 0,0:17:29.60,0:17:33.32,Default,,0,0,0,,I am exceedingly sorry, Princess.
+Dialogue: 0,0:17:33.32,0:17:35.48,Default,,0,0,0,,How could you?
+Dialogue: 0,0:17:45.40,0:17:47.08,Default,,0,0,0,,So, how did it go?
+Dialogue: 0,0:17:47.08,0:17:51.04,Default,,0,0,0,,I think she took it rather well.
+Dialogue: 0,0:18:03.80,0:18:06.48,Default,,0,0,0,,It's all my fault, Rajah.
+Dialogue: 0,0:18:08.24,0:18:11.64,Default,,0,0,0,,I didn't even know his name.
+Dialogue: 0,0:18:29.24,0:18:33.16,Default,,0,0,0,,She was the princess. \NI can't believe it.
+Dialogue: 0,0:18:33.88,0:18:35.96,Default,,0,0,0,,I must have sounded \Nso stupid to her.
+Dialogue: 0,0:18:35.96,0:18:39.92,Default,,0,0,0,,Yoo-hoo! Aladdin! Hello!
+Dialogue: 0,0:18:40.52,0:18:42.60,Default,,0,0,0,,Abu. Down here.
+Dialogue: 0,0:18:44.60,0:18:46.20,Default,,0,0,0,,Come on, help me out of these.
+Dialogue: 0,0:18:53.12,0:18:56.92,Default,,0,0,0,,Hey, she was in trouble. \NAh, she was worth it.
+Dialogue: 0,0:18:56.92,0:18:58.32,Default,,0,0,0,,Yeah, yeah, yeah.
+Dialogue: 0,0:18:58.32,0:19:00.96,Default,,0,0,0,,Don't worry, Abu. \NI'll never see her again.
+Dialogue: 0,0:19:00.96,0:19:03.96,Default,,0,0,0,,I'm a street rat, remember? \NAnd there's a law.
+Dialogue: 0,0:19:04.28,0:19:06.36,Default,,0,0,0,,She's gotta marry a prince.
+Dialogue: 0,0:19:06.80,0:19:09.72,Default,,0,0,0,,- She deserves a prince. \N- Ta-da!
+Dialogue: 0,0:19:10.12,0:19:12.56,Default,,0,0,0,,I'm a fool.
+Dialogue: 0,0:19:12.56,0:19:16.44,Default,,0,0,0,,You're only a fool \Nif you give up, boy.
+Dialogue: 0,0:19:16.64,0:19:18.08,Default,,0,0,0,,Who are you?
+Dialogue: 0,0:19:18.08,0:19:20.84,Default,,0,0,0,,A lowly prisoner, like yourself.
+Dialogue: 0,0:19:20.84,0:19:24.28,Default,,0,0,0,,But together, perhaps \Nwe can be more.
+Dialogue: 0,0:19:24.40,0:19:25.72,Default,,0,0,0,,I'm listening.
+Dialogue: 0,0:19:25.72,0:19:29.92,Default,,0,0,0,,There is a cave, boy, \Na Cave of Wonders,
+Dialogue: 0,0:19:29.92,0:19:34.08,Default,,0,0,0,,filled with treasures \Nbeyond your wildest dreams.
+Dialogue: 0,0:19:34.08,0:19:35.32,Default,,0,0,0,,Ooh!
+Dialogue: 0,0:19:35.32,0:19:39.72,Default,,0,0,0,,Treasure enough to impress \Neven your princess, I'd wager.
+Dialogue: 0,0:19:39.72,0:19:42.36,Default,,0,0,0,,Jafar, can you hurry up? \NI'm dyin' in here.
+Dialogue: 0,0:19:42.36,0:19:44.88,Default,,0,0,0,,But the law says \Nonly a prince can...
+Dialogue: 0,0:19:44.88,0:19:47.60,Default,,0,0,0,,You've heard of the \Ngolden rule, haven't you?
+Dialogue: 0,0:19:47.60,0:19:50.16,Default,,0,0,0,,Whoever has the gold \Nmakes the rules.
+Dialogue: 0,0:19:51.36,0:19:54.36,Default,,0,0,0,,Why would you share all of this \Nwonderful treasure with me?
+Dialogue: 0,0:19:54.36,0:19:58.08,Default,,0,0,0,,I need a young pair of legs and a \Nstrong back to go in after it.
+Dialogue: 0,0:19:59.00,0:20:00.76,Default,,0,0,0,,Uh, one problem.
+Dialogue: 0,0:20:00.76,0:20:02.88,Default,,0,0,0,,It's out there. We're in here.
+Dialogue: 0,0:20:02.88,0:20:08.24,Default,,0,0,0,,Uh-uh. Things aren't \Nalways what they seem.
+Dialogue: 0,0:20:08.60,0:20:11.80,Default,,0,0,0,,So, do we have a deal?
+Dialogue: 0,0:20:12.68,0:20:14.76,Default,,0,0,0,,Oh, I don't know.
+Dialogue: 0,0:20:25.56,0:20:29.64,Default,,0,0,0,,Who disturbs my slumber?
+Dialogue: 0,0:20:30.52,0:20:33.08,Default,,0,0,0,,Uh, it is I, Aladdin.
+Dialogue: 0,0:20:35.00,0:20:37.52,Default,,0,0,0,,Proceed.
+Dialogue: 0,0:20:37.52,0:20:41.20,Default,,0,0,0,,Touch nothing but the lamp.
+Dialogue: 0,0:20:41.32,0:20:44.56,Default,,0,0,0,,Remember, boy, first \Nfetch me the lamp,
+Dialogue: 0,0:20:44.56,0:20:48.36,Default,,0,0,0,,and then you shall \Nhave your reward.
+Dialogue: 0,0:20:48.36,0:20:50.52,Default,,0,0,0,,Come on, Abu.
+Dialogue: 0,0:21:03.76,0:21:06.60,Default,,0,0,0,,Would you look at that!
+Dialogue: 0,0:21:08.80,0:21:12.84,Default,,0,0,0,,Just a handful of this stuff would \Nmake me richer than the sultan.
+Dialogue: 0,0:21:13.40,0:21:14.92,Default,,0,0,0,,Abu!
+Dialogue: 0,0:21:16.04,0:21:18.68,Default,,0,0,0,,Don't touch anything.
+Dialogue: 0,0:21:18.68,0:21:20.32,Default,,0,0,0,,We gotta find that lamp.
+Dialogue: 0,0:21:37.40,0:21:39.00,Default,,0,0,0,,Huh?
+Dialogue: 0,0:21:50.04,0:21:53.56,Default,,0,0,0,,- Aladdin! \N- Abu, will you knock it off?
+Dialogue: 0,0:22:15.80,0:22:18.48,Default,,0,0,0,,Abu, what are you, crazy?
+Dialogue: 0,0:22:20.72,0:22:23.40,Default,,0,0,0,,A magic carpet.
+Dialogue: 0,0:22:23.48,0:22:27.08,Default,,0,0,0,,Come on. Come on out. \NWe're not gonna hurt you.
+Dialogue: 0,0:22:35.80,0:22:39.08,Default,,0,0,0,,Hey, take it easy, Abu. \NHe's not gonna bite.
+Dialogue: 0,0:22:39.08,0:22:40.24,Default,,0,0,0,,Thanks.
+Dialogue: 0,0:22:47.64,0:22:50.24,Default,,0,0,0,,Wait a minute. Don't go.
+Dialogue: 0,0:22:50.24,0:22:52.56,Default,,0,0,0,,Maybe you can help us.
+Dialogue: 0,0:22:54.56,0:22:56.40,Default,,0,0,0,,Hey! Whoa!
+Dialogue: 0,0:22:56.76,0:22:59.00,Default,,0,0,0,,You see, we're trying \Nto find this lamp.
+Dialogue: 0,0:23:00.72,0:23:03.96,Default,,0,0,0,,I think he knows where it is.
+Dialogue: 0,0:23:18.40,0:23:20.24,Default,,0,0,0,,Wait here.
+Dialogue: 0,0:23:26.44,0:23:28.56,Default,,0,0,0,,Oh!
+Dialogue: 0,0:23:53.08,0:23:54.68,Default,,0,0,0,,This is it?
+Dialogue: 0,0:23:54.68,0:23:57.56,Default,,0,0,0,,This is what we came all \Nthe way down here to...
+Dialogue: 0,0:23:57.68,0:24:00.12,Default,,0,0,0,,Abu! No!
+Dialogue: 0,0:24:00.12,0:24:03.08,Default,,0,0,0,,- Infidels! \N- Uh-oh.
+Dialogue: 0,0:24:03.08,0:24:08.24,Default,,0,0,0,,You have touched the \Nforbidden treasure!
+Dialogue: 0,0:24:09.24,0:24:14.68,Default,,0,0,0,,Now you will never again \Nsee the light of day!
+Dialogue: 0,0:24:15.48,0:24:17.08,Default,,0,0,0,,Whoa!
+Dialogue: 0,0:24:39.96,0:24:43.24,Default,,0,0,0,,Help! Help! Help!
+Dialogue: 0,0:24:44.60,0:24:46.56,Default,,0,0,0,,Gotcha!
+Dialogue: 0,0:24:49.56,0:24:51.64,Default,,0,0,0,,Carpet, let's move.
+Dialogue: 0,0:25:06.08,0:25:07.64,Default,,0,0,0,,Abu!
+Dialogue: 0,0:25:07.64,0:25:10.36,Default,,0,0,0,,Abu, this is no time to panic.
+Dialogue: 0,0:25:11.16,0:25:12.68,Default,,0,0,0,,Start panicking.
+Dialogue: 0,0:25:12.72,0:25:15.00,Default,,0,0,0,,Whoa!
+Dialogue: 0,0:25:42.28,0:25:42.44,Default,,0,0,0,,- Help me out. \N- Throw me the lamp.
+Dialogue: 0,0:26:03.32,0:26:05.08,Default,,0,0,0,,It's mine.
+Dialogue: 0,0:26:05.08,0:26:07.32,Default,,0,0,0,,It's all mine.
+Dialogue: 0,0:26:07.52,0:26:10.04,Default,,0,0,0,,I... Where is it?
+Dialogue: 0,0:26:10.04,0:26:11.60,Default,,0,0,0,,No.
+Dialogue: 0,0:26:11.60,0:26:14.48,Default,,0,0,0,,No!
+Dialogue: 0,0:26:19.04,0:26:20.60,Default,,0,0,0,,Jasmine?
+Dialogue: 0,0:26:22.80,0:26:24.60,Default,,0,0,0,,Oh, dearest.
+Dialogue: 0,0:26:24.96,0:26:26.40,Default,,0,0,0,,What's wrong?
+Dialogue: 0,0:26:27.76,0:26:30.32,Default,,0,0,0,,Jafar has
+Dialogue: 0,0:26:30.32,0:26:32.84,Default,,0,0,0,,done something terrible.
+Dialogue: 0,0:26:32.84,0:26:35.52,Default,,0,0,0,,There, there, my dear.
+Dialogue: 0,0:26:35.52,0:26:37.64,Default,,0,0,0,,We'll set it right.
+Dialogue: 0,0:26:37.64,0:26:40.64,Default,,0,0,0,,Now, tell me everything.
+Dialogue: 0,0:26:42.84,0:26:44.44,Default,,0,0,0,,Oh.
+Dialogue: 0,0:26:44.52,0:26:47.00,Default,,0,0,0,,Aladdin. Wake up.
+Dialogue: 0,0:26:47.00,0:26:48.72,Default,,0,0,0,,Aladdin.
+Dialogue: 0,0:26:49.04,0:26:51.96,Default,,0,0,0,,Oh! My head.
+Dialogue: 0,0:26:54.52,0:26:55.88,Default,,0,0,0,,We're trapped.
+Dialogue: 0,0:26:55.88,0:26:59.00,Default,,0,0,0,,That two-faced son of a jackal!
+Dialogue: 0,0:27:00.16,0:27:04.40,Default,,0,0,0,,Whoever he was, he's long \Ngone with that lamp.
+Dialogue: 0,0:27:04.40,0:27:05.76,Default,,0,0,0,,Aha!
+Dialogue: 0,0:27:05.76,0:27:09.44,Default,,0,0,0,,Why, you hairy little thief.
+Dialogue: 0,0:27:09.72,0:27:12.92,Default,,0,0,0,,Looks like such a beat-up, \Nworthless piece of junk.
+Dialogue: 0,0:27:12.92,0:27:15.28,Default,,0,0,0,,Hey, I think there's \Nsomething written here,
+Dialogue: 0,0:27:15.28,0:27:18.48,Default,,0,0,0,,but it's hard to make out.
+Dialogue: 0,0:27:29.24,0:27:32.36,Default,,0,0,0,,Aah!
+Dialogue: 0,0:27:32.36,0:27:33.92,Default,,0,0,0,,Oy!
+Dialogue: 0,0:27:34.00,0:27:39.08,Default,,0,0,0,,10,000 years will give you \Nsuch a crick in the neck.
+Dialogue: 0,0:27:39.08,0:27:40.76,Default,,0,0,0,,Hang on a second.
+Dialogue: 0,0:27:40.76,0:27:43.16,Default,,0,0,0,,Whoa! Whoa!
+Dialogue: 0,0:27:43.16,0:27:45.56,Default,,0,0,0,,Does it feel good \Nto be outta there.
+Dialogue: 0,0:27:45.56,0:27:47.68,Default,,0,0,0,,I'm telling you, nice to be \Nback, ladies and gentlemen.
+Dialogue: 0,0:27:47.68,0:27:49.60,Default,,0,0,0,,Hi. Where you from? \NWhat's your name?
+Dialogue: 0,0:27:49.60,0:27:51.20,Default,,0,0,0,,Uh... Uh, Aladdin.
+Dialogue: 0,0:27:51.20,0:27:53.12,Default,,0,0,0,,Aladdin. Hello, Aladdin. \NNice to have you on the show.
+Dialogue: 0,0:27:54.00,0:27:56.16,Default,,0,0,0,,Can we call you Al? \NOr maybe just Din?
+Dialogue: 0,0:27:56.16,0:28:00.64,Default,,0,0,0,,How about Laddie? Sounds like, \N"Here, boy. C'mon, laddie."
+Dialogue: 0,0:28:01.08,0:28:03.40,Default,,0,0,0,,I must have hit my head \Nharder than I thought.
+Dialogue: 0,0:28:03.40,0:28:06.20,Default,,0,0,0,,Do you smoke? Mind if I do?
+Dialogue: 0,0:28:06.20,0:28:08.80,Default,,0,0,0,,Oh, sorry, Cheeta. Hope \NI didn't singe the fur.
+Dialogue: 0,0:28:08.80,0:28:11.36,Default,,0,0,0,,Yo, Rugman. Haven't seen \Nyou in a few millennia.
+Dialogue: 0,0:28:11.36,0:28:14.84,Default,,0,0,0,,Give me some tassel. Yeah. Yo, yo.
+Dialogue: 0,0:28:14.84,0:28:18.52,Default,,0,0,0,,Say, you're a lot smaller \Nthan my last master.
+Dialogue: 0,0:28:18.52,0:28:19.84,Default,,0,0,0,,Either that or I'm gettin' bigger.
+Dialogue: 0,0:28:19.84,0:28:21.96,Default,,0,0,0,,Look at me from the side. \NDo I look different to you?
+Dialogue: 0,0:28:21.96,0:28:24.84,Default,,0,0,0,,Wait a minute. I'm your master?
+Dialogue: 0,0:28:24.84,0:28:27.88,Default,,0,0,0,,That's right. He can be taught. \NWhat would you wish of me?
+Dialogue: 0,0:28:27.88,0:28:30.04,Default,,0,0,0,,The ever impressive,
+Dialogue: 0,0:28:30.04,0:28:33.20,Default,,0,0,0,,the long contained,
+Dialogue: 0,0:28:33.20,0:28:34.24,Default,,0,0,0,,the often imitated,
+Dialogue: 0,0:28:34.24,0:28:36.28,Default,,0,0,0,,but never duplicated...
+Dialogue: 0,0:28:36.28,0:28:38.36,Default,,0,0,0,,Duplicated, duplicated...
+Dialogue: 0,0:28:38.36,0:28:42.08,Default,,0,0,0,,Genie of the Lamp!
+Dialogue: 0,0:28:42.08,0:28:43.84,Default,,0,0,0,,Right here direct from the lamp,
+Dialogue: 0,0:28:43.84,0:28:46.40,Default,,0,0,0,,right here for your very \Nmuch wish fulfillment.
+Dialogue: 0,0:28:46.40,0:28:47.76,Default,,0,0,0,,Thank you.
+Dialogue: 0,0:28:47.76,0:28:50.88,Default,,0,0,0,,- Whoa. Wish fulfillment? \N- Three wishes, to be exact.
+Dialogue: 0,0:28:50.88,0:28:53.72,Default,,0,0,0,,And ixnay on the wishing \Nfor more wishes.
+Dialogue: 0,0:28:53.72,0:28:56.36,Default,,0,0,0,,That's it. Three. <i>Uno, dos, tres.</i>
+Dialogue: 0,0:28:56.36,0:28:58.68,Default,,0,0,0,,No substitutions, \Nexchanges or refunds.
+Dialogue: 0,0:28:58.68,0:29:00.16,Default,,0,0,0,,Now I know I'm dreaming.
+Dialogue: 0,0:29:00.16,0:29:03.72,Default,,0,0,0,,Master, I don't think you quite \Nrealise what you've got here.
+Dialogue: 0,0:29:03.72,0:29:09.20,Default,,0,0,0,,So why don't you just ruminate whilst \NI illuminate the possibilities.
+Dialogue: 0,0:29:09.92,0:29:12.60,Default,,0,0,0,,<i>Well, Ali Baba had them 40 thieves</i>
+Dialogue: 0,0:29:12.60,0:29:14.72,Default,,0,0,0,,<i>Scheherazade had a thousand tales</i>
+Dialogue: 0,0:29:14.72,0:29:17.08,Default,,0,0,0,,<i>But, master, you're in luck \N'Cause up your sleeves</i>
+Dialogue: 0,0:29:17.08,0:29:19.32,Default,,0,0,0,,<i>You got a brand of \Nmagic never fails</i>
+Dialogue: 0,0:29:19.32,0:29:21.80,Default,,0,0,0,,<i>You got some power \NIn your corner now</i>
+Dialogue: 0,0:29:21.80,0:29:24.04,Default,,0,0,0,,<i>Some heavy ammunition in your camp</i>
+Dialogue: 0,0:29:24.04,0:29:26.44,Default,,0,0,0,,<i>You got some punch, pizzazz \NYahoo and how</i>
+Dialogue: 0,0:29:26.44,0:29:29.52,Default,,0,0,0,,<i>See, all you gotta do \NIs rub that lamp and I'll say</i>
+Dialogue: 0,0:29:29.52,0:29:33.52,Default,,0,0,0,,<i>"Mr Aladdin, sir \NWhat will your pleasure be?"</i>
+Dialogue: 0,0:29:33.52,0:29:35.88,Default,,0,0,0,,<i>Let me take your order \NJot it down</i>
+Dialogue: 0,0:29:35.88,0:29:38.20,Default,,0,0,0,,<i>You ain't never had \Na friend like me</i>
+Dialogue: 0,0:29:38.96,0:29:42.92,Default,,0,0,0,,<i>Life is your restaurant \NAnd I'm your maitre d'</i>
+Dialogue: 0,0:29:42.92,0:29:45.28,Default,,0,0,0,,<i>Come on, whisper \Nwhat it is you want</i>
+Dialogue: 0,0:29:45.28,0:29:47.32,Default,,0,0,0,,<i>You ain't never had \Na friend like me</i>
+Dialogue: 0,0:29:47.32,0:29:49.96,Default,,0,0,0,,<i>Yes, sir \NWe pride ourselves on service</i>
+Dialogue: 0,0:29:49.96,0:29:52.48,Default,,0,0,0,,<i>You're the boss, the king, the shah</i>
+Dialogue: 0,0:29:52.48,0:29:54.84,Default,,0,0,0,,<i>Say what you wish \NIt's yours, true dish</i>
+Dialogue: 0,0:29:54.84,0:29:57.84,Default,,0,0,0,,<i>How 'bout a little more baklava?</i>
+Dialogue: 0,0:29:57.84,0:30:01.12,Default,,0,0,0,,<i>Have some of column A \NTry all of column B</i>
+Dialogue: 0,0:30:02.00,0:30:04.28,Default,,0,0,0,,<i>I'm in the mood to help you, dude</i>
+Dialogue: 0,0:30:04.28,0:30:06.12,Default,,0,0,0,,<i>You ain't never had \Na friend like me</i>
+Dialogue: 0,0:30:08.12,0:30:10.40,Default,,0,0,0,,<i>Oh, my</i>
+Dialogue: 0,0:30:10.40,0:30:12.72,Default,,0,0,0,,<i>No, no</i>
+Dialogue: 0,0:30:12.72,0:30:14.04,Default,,0,0,0,,<i>My, my</i>
+Dialogue: 0,0:30:15.36,0:30:17.76,Default,,0,0,0,,<i>Can your friends do this?</i>
+Dialogue: 0,0:30:17.76,0:30:20.12,Default,,0,0,0,,<i>Can your friends do that?</i>
+Dialogue: 0,0:30:20.12,0:30:22.48,Default,,0,0,0,,<i>Can your friends pull this</i>
+Dialogue: 0,0:30:22.48,0:30:24.92,Default,,0,0,0,,<i>Out their little hat?</i>
+Dialogue: 0,0:30:24.92,0:30:27.16,Default,,0,0,0,,<i>Can your friends go poof</i>
+Dialogue: 0,0:30:27.16,0:30:29.60,Default,,0,0,0,,<i>Hey, looky here \NHa-ha!</i>
+Dialogue: 0,0:30:29.60,0:30:32.72,Default,,0,0,0,,<i>Can your friends go \N"Abracadabra, let her rip"</i>
+Dialogue: 0,0:30:32.72,0:30:34.92,Default,,0,0,0,,<i>And then make the sucker disappear?</i>
+Dialogue: 0,0:30:34.92,0:30:37.40,Default,,0,0,0,,<i>So don't you sit there \NSlack-jawed, buggy-eyed</i>
+Dialogue: 0,0:30:37.40,0:30:39.44,Default,,0,0,0,,<i>I'm here to answer \NAll your midnight prayers</i>
+Dialogue: 0,0:30:39.44,0:30:42.12,Default,,0,0,0,,<i>You got me bona fide certified</i>
+Dialogue: 0,0:30:42.12,0:30:44.12,Default,,0,0,0,,<i>You got a genie \NFor your charge d'affaires</i>
+Dialogue: 0,0:30:44.12,0:30:46.36,Default,,0,0,0,,<i>I got a powerful \Nurge to help you out</i>
+Dialogue: 0,0:30:46.36,0:30:48.60,Default,,0,0,0,,<i>So what's your wish? \NI really wanna know</i>
+Dialogue: 0,0:30:48.60,0:30:50.84,Default,,0,0,0,,<i>You got a list \NThat's three miles long, no doubt</i>
+Dialogue: 0,0:30:50.84,0:30:53.76,Default,,0,0,0,,<i>All you gotta do is rub like so</i>
+Dialogue: 0,0:30:53.76,0:30:57.80,Default,,0,0,0,,<i>Mr Aladdin, sir \NHave a wish or two or three</i>
+Dialogue: 0,0:30:57.80,0:31:00.24,Default,,0,0,0,,<i>I'm on the job, you big nabob</i>
+Dialogue: 0,0:31:00.24,0:31:04.76,Default,,0,0,0,,<i>You ain't never had a friend \NNever had a friend</i>
+Dialogue: 0,0:31:04.76,0:31:08.88,Default,,0,0,0,,<i>You ain't never had a friend</i>
+Dialogue: 0,0:31:08.88,0:31:12.20,Default,,0,0,0,,<i>Like me</i>
+Dialogue: 0,0:31:12.20,0:31:13.84,Default,,0,0,0,,Ah-ha-ha!
+Dialogue: 0,0:31:14.32,0:31:16.60,Default,,0,0,0,,Wah-ha-ha!
+Dialogue: 0,0:31:16.60,0:31:19.32,Default,,0,0,0,,<i>You ain't never had \Na friend like me</i>
+Dialogue: 0,0:31:21.32,0:31:24.36,Default,,0,0,0,,Huh?
+Dialogue: 0,0:31:24.36,0:31:26.80,Default,,0,0,0,,So, what'll it be, master?
+Dialogue: 0,0:31:27.00,0:31:30.56,Default,,0,0,0,,You're gonna grant me any \Nthree wishes I want, right?
+Dialogue: 0,0:31:30.56,0:31:31.80,Default,,0,0,0,,Ah, almost.
+Dialogue: 0,0:31:31.80,0:31:34.84,Default,,0,0,0,,There are a few provisos, \Na couple of quid pro quos.
+Dialogue: 0,0:31:34.84,0:31:36.12,Default,,0,0,0,,Like?
+Dialogue: 0,0:31:36.12,0:31:39.12,Default,,0,0,0,,Ah, rule number one, \NI can't kill anybody.
+Dialogue: 0,0:31:39.12,0:31:40.48,Default,,0,0,0,,So don't ask.
+Dialogue: 0,0:31:40.48,0:31:41.76,Default,,0,0,0,,Rule number two.
+Dialogue: 0,0:31:41.76,0:31:45.72,Default,,0,0,0,,I can't make anybody fall \Nin love with anybody else.
+Dialogue: 0,0:31:45.80,0:31:47.80,Default,,0,0,0,,You little <i>ponem</i> there.
+Dialogue: 0,0:31:47.80,0:31:52.28,Default,,0,0,0,,Rule number three. I can't bring \Npeople back from the dead.
+Dialogue: 0,0:31:52.28,0:31:55.48,Default,,0,0,0,,It's not a pretty picture. \NI don't like doing it.
+Dialogue: 0,0:31:55.60,0:31:57.72,Default,,0,0,0,,Other than that, you got it.
+Dialogue: 0,0:31:57.72,0:31:59.56,Default,,0,0,0,,- Hmm. \N- Oh!
+Dialogue: 0,0:32:01.24,0:32:04.28,Default,,0,0,0,,Provisos? You mean limitations?
+Dialogue: 0,0:32:04.28,0:32:07.72,Default,,0,0,0,,On wishes? Some all-powerful genie.
+Dialogue: 0,0:32:07.80,0:32:10.08,Default,,0,0,0,,Can't even bring people \Nback from the dead.
+Dialogue: 0,0:32:10.08,0:32:13.44,Default,,0,0,0,,I don't know, Abu. He probably \Ncan't even get us out of this cave.
+Dialogue: 0,0:32:13.44,0:32:15.96,Default,,0,0,0,,Looks like we're gonna have \Nto find a way out of here.
+Dialogue: 0,0:32:15.96,0:32:17.76,Default,,0,0,0,,Excuse me?
+Dialogue: 0,0:32:17.76,0:32:20.52,Default,,0,0,0,,Are you lookin' at me? \NDid you rub my lamp?
+Dialogue: 0,0:32:20.52,0:32:23.48,Default,,0,0,0,,Did you wake me up? \NDid you bring me here?
+Dialogue: 0,0:32:23.48,0:32:25.48,Default,,0,0,0,,And all of sudden you're \Nwalking out on me?
+Dialogue: 0,0:32:25.48,0:32:28.28,Default,,0,0,0,,I don't think so, not right now.
+Dialogue: 0,0:32:28.28,0:32:30.68,Default,,0,0,0,,You're gettin' your \Nwishes, so sit down!
+Dialogue: 0,0:32:30.68,0:32:32.92,Default,,0,0,0,,In case of emergency,
+Dialogue: 0,0:32:32.92,0:32:35.40,Default,,0,0,0,,the exits are here, here, \Nhere, here, anywhere.
+Dialogue: 0,0:32:35.40,0:32:37.72,Default,,0,0,0,,Keep your hands and \Narms inside the carpet.
+Dialogue: 0,0:32:37.72,0:32:39.12,Default,,0,0,0,,We're...
+Dialogue: 0,0:32:40.60,0:32:43.40,Default,,0,0,0,,Outta here!
+Dialogue: 0,0:32:44.36,0:32:46.12,Default,,0,0,0,,Jafar, this is an outrage.
+Dialogue: 0,0:32:47.00,0:32:49.76,Default,,0,0,0,,If it weren't for all your \Nyears of loyal service...
+Dialogue: 0,0:32:49.76,0:32:54.04,Default,,0,0,0,,From now on, you are to discuss \Nsentencing of prisoners with me,
+Dialogue: 0,0:32:54.04,0:32:56.52,Default,,0,0,0,,before they are beheaded.
+Dialogue: 0,0:32:56.52,0:32:59.44,Default,,0,0,0,,I assure you, Your Highness, \Nit won't happen again.
+Dialogue: 0,0:32:59.44,0:33:00.88,Default,,0,0,0,,Jasmine...
+Dialogue: 0,0:33:00.88,0:33:05.52,Default,,0,0,0,,Jafar. Let's put this whole \Nmessy business behind us.
+Dialogue: 0,0:33:05.52,0:33:06.68,Default,,0,0,0,,Please.
+Dialogue: 0,0:33:06.68,0:33:11.12,Default,,0,0,0,,My most abject and humblest \Napologies to you as well, Princess.
+Dialogue: 0,0:33:11.12,0:33:14.16,Default,,0,0,0,,At least some good will come \Nof my being forced to marry.
+Dialogue: 0,0:33:14.16,0:33:18.12,Default,,0,0,0,,When I am queen, I will have \Nthe power to get rid of you.
+Dialogue: 0,0:33:19.72,0:33:21.12,Default,,0,0,0,,There, now. That's nice. \NAll settled, then.
+Dialogue: 0,0:33:22.00,0:33:26.44,Default,,0,0,0,,Now, Jasmine, getting back to \Nthis suitor business... Jasmine?
+Dialogue: 0,0:33:26.56,0:33:28.36,Default,,0,0,0,,Jasmine!
+Dialogue: 0,0:33:29.76,0:33:32.12,Default,,0,0,0,,If only I had gotten that lamp.
+Dialogue: 0,0:33:33.00,0:33:36.16,Default,,0,0,0,,"I will have the power \Nto get rid of you."
+Dialogue: 0,0:33:36.16,0:33:39.56,Default,,0,0,0,,To think we gotta keep kissing up
+Dialogue: 0,0:33:39.56,0:33:43.16,Default,,0,0,0,,to that chump and \Nhis chump daughter
+Dialogue: 0,0:33:43.16,0:33:45.64,Default,,0,0,0,,- for the rest of our lives... \N- No, Iago.
+Dialogue: 0,0:33:45.64,0:33:49.56,Default,,0,0,0,,Only until she finds \Na chump husband.
+Dialogue: 0,0:33:49.56,0:33:51.60,Default,,0,0,0,,Then she'll have us banished.
+Dialogue: 0,0:33:52.00,0:33:53.80,Default,,0,0,0,,Or beheaded.
+Dialogue: 0,0:33:53.80,0:33:55.72,Default,,0,0,0,,Eww!
+Dialogue: 0,0:33:56.68,0:33:58.60,Default,,0,0,0,,Oh. Wait a minute. Jafar.
+Dialogue: 0,0:33:58.60,0:34:01.40,Default,,0,0,0,,What if you were the chump husband?
+Dialogue: 0,0:34:01.40,0:34:02.64,Default,,0,0,0,,What?
+Dialogue: 0,0:34:02.64,0:34:05.88,Default,,0,0,0,,Okay, you marry the \Nprincess, all right?
+Dialogue: 0,0:34:05.88,0:34:09.28,Default,,0,0,0,,And, uh, then you \Nbecome the sultan.
+Dialogue: 0,0:34:09.28,0:34:10.76,Default,,0,0,0,,Oh.
+Dialogue: 0,0:34:11.08,0:34:13.56,Default,,0,0,0,,Marry the shrew.
+Dialogue: 0,0:34:13.56,0:34:15.36,Default,,0,0,0,,I become the sultan.
+Dialogue: 0,0:34:15.36,0:34:19.15,Default,,0,0,0,,- The idea has merit. \N- Yes, merit. Yes.
+Dialogue: 0,0:34:19.15,0:34:25.56,Default,,0,0,0,,And then we drop papa-in-law and \Nthe little woman off a cliff.
+Dialogue: 0,0:34:25.56,0:34:27.48,Default,,0,0,0,,Yaaah!
+Dialogue: 0,0:34:27.48,0:34:29.32,Default,,0,0,0,,Kersplat!
+Dialogue: 0,0:34:30.67,0:34:34.32,Default,,0,0,0,,I love the way your \Nfoul little mind works.
+Dialogue: 0,0:34:42.84,0:34:46.52,Default,,0,0,0,,Thank you for choosing Magic \NCarpet for all your travel needs.
+Dialogue: 0,0:34:46.52,0:34:50.04,Default,,0,0,0,,Don't stand until the rug \Nhas come to a complete stop.
+Dialogue: 0,0:34:50.04,0:34:53.12,Default,,0,0,0,,Thank you. Goodbye now. \NGood-bye. Thank you.
+Dialogue: 0,0:34:53.12,0:34:57.40,Default,,0,0,0,,Well, how about that, \NMr Doubting Mustafa?
+Dialogue: 0,0:34:57.40,0:35:02.04,Default,,0,0,0,,Oh, you sure showed me. \NNow, about my three wishes.
+Dialogue: 0,0:35:02.04,0:35:04.08,Default,,0,0,0,,Dost mine ears deceive me?
+Dialogue: 0,0:35:04.08,0:35:07.12,Default,,0,0,0,,Three? You are down by one, boy.
+Dialogue: 0,0:35:07.12,0:35:10.84,Default,,0,0,0,,Ah, no. I never actually \Nwished to get out of the cave.
+Dialogue: 0,0:35:10.84,0:35:13.00,Default,,0,0,0,,You did that on your own.
+Dialogue: 0,0:35:14.60,0:35:16.76,Default,,0,0,0,,Well, I feel sheepish.
+Dialogue: 0,0:35:16.76,0:35:19.92,Default,,0,0,0,,All right, you bad boy, \Nbut no more freebies.
+Dialogue: 0,0:35:19.92,0:35:23.00,Default,,0,0,0,,Fair deal. So, three wishes.
+Dialogue: 0,0:35:23.00,0:35:25.12,Default,,0,0,0,,I want them to be good.
+Dialogue: 0,0:35:25.12,0:35:26.84,Default,,0,0,0,,What would you wish for?
+Dialogue: 0,0:35:26.84,0:35:28.64,Default,,0,0,0,,Me?
+Dialogue: 0,0:35:28.92,0:35:31.00,Default,,0,0,0,,No one's ever asked me that before.
+Dialogue: 0,0:35:31.00,0:35:34.24,Default,,0,0,0,,Well, in my case... Ah, forget it.
+Dialogue: 0,0:35:34.24,0:35:35.80,Default,,0,0,0,,- What? \N- No, I can't. I...
+Dialogue: 0,0:35:35.80,0:35:38.20,Default,,0,0,0,,Come on. Tell me.
+Dialogue: 0,0:35:38.20,0:35:40.04,Default,,0,0,0,,Freedom.
+Dialogue: 0,0:35:40.04,0:35:41.12,Default,,0,0,0,,You're a prisoner?
+Dialogue: 0,0:35:41.12,0:35:43.48,Default,,0,0,0,,It's all part and parcel \Nof the whole genie gig.
+Dialogue: 0,0:35:43.48,0:35:47.08,Default,,0,0,0,,Phenomenal cosmic powers...
+Dialogue: 0,0:35:47.08,0:35:48.52,Default,,0,0,0,,Itty bitty living space.
+Dialogue: 0,0:35:48.52,0:35:50.68,Default,,0,0,0,,Genie, that's terrible.
+Dialogue: 0,0:35:50.68,0:35:53.72,Default,,0,0,0,,But, oh, to be free...
+Dialogue: 0,0:35:53.72,0:35:55.60,Default,,0,0,0,,Not have to go, "Poof. \NWhat do you need?
+Dialogue: 0,0:35:55.60,0:35:58.04,Default,,0,0,0,,"Poof. What do you need? \NPoof. What do you need?"
+Dialogue: 0,0:35:58.04,0:35:59.96,Default,,0,0,0,,To be my own master.
+Dialogue: 0,0:35:59.96,0:36:02.80,Default,,0,0,0,,Such a thing would be \Ngreater than all the magic
+Dialogue: 0,0:36:02.80,0:36:06.04,Default,,0,0,0,,and all the treasures \Nin all the world.
+Dialogue: 0,0:36:06.04,0:36:07.36,Default,,0,0,0,,But what am I talking about?
+Dialogue: 0,0:36:07.36,0:36:09.72,Default,,0,0,0,,Let's get real here. \NIt's not gonna happen.
+Dialogue: 0,0:36:09.72,0:36:12.12,Default,,0,0,0,,Genie, wake up and \Nsmell the hummus.
+Dialogue: 0,0:36:12.12,0:36:13.36,Default,,0,0,0,,Why not?
+Dialogue: 0,0:36:13.36,0:36:17.24,Default,,0,0,0,,The only way I get outta this \Nis if my master wishes me out.
+Dialogue: 0,0:36:17.24,0:36:19.68,Default,,0,0,0,,So you can guess how \Noften that's happened.
+Dialogue: 0,0:36:19.68,0:36:21.28,Default,,0,0,0,,I'll do it. I'll set you free.
+Dialogue: 0,0:36:21.28,0:36:25.44,Default,,0,0,0,,- Uh-huh, yeah, right. \N- No, really, I promise.
+Dialogue: 0,0:36:25.44,0:36:27.04,Default,,0,0,0,,After I make my first two wishes,
+Dialogue: 0,0:36:27.04,0:36:29.72,Default,,0,0,0,,I'll use my third \Nwish to set you free.
+Dialogue: 0,0:36:30.08,0:36:32.52,Default,,0,0,0,,Well, here's hopin'. All right.
+Dialogue: 0,0:36:32.52,0:36:34.64,Default,,0,0,0,,Let's make some magic.
+Dialogue: 0,0:36:34.64,0:36:37.72,Default,,0,0,0,,So how 'bout it? What \Nis it you want most?
+Dialogue: 0,0:36:37.96,0:36:41.32,Default,,0,0,0,,Well, there's this girl.
+Dialogue: 0,0:36:41.32,0:36:42.40,Default,,0,0,0,,Wrong.
+Dialogue: 0,0:36:42.40,0:36:45.12,Default,,0,0,0,,I can't make anybody \Nfall in love, remember?
+Dialogue: 0,0:36:45.12,0:36:49.40,Default,,0,0,0,,Oh, but, Genie, she's \Nsmart and fun and...
+Dialogue: 0,0:36:49.40,0:36:51.36,Default,,0,0,0,,- Pretty? \N- Beautiful.
+Dialogue: 0,0:36:51.36,0:36:54.52,Default,,0,0,0,,She's got these eyes that \Njust... And this hair. Wow.
+Dialogue: 0,0:36:54.52,0:36:57.04,Default,,0,0,0,,And her smile...
+Dialogue: 0,0:36:57.04,0:36:58.64,Default,,0,0,0,,<i>Ami.</i>
+Dialogue: 0,0:36:58.68,0:37:00.44,Default,,0,0,0,,<i>C'est l'amour.</i>
+Dialogue: 0,0:37:00.44,0:37:02.48,Default,,0,0,0,,But she's the princess.
+Dialogue: 0,0:37:02.48,0:37:04.84,Default,,0,0,0,,To even have a chance, \NI'd have to be...
+Dialogue: 0,0:37:04.84,0:37:07.68,Default,,0,0,0,,Hey, can you make me a prince?
+Dialogue: 0,0:37:07.68,0:37:09.04,Default,,0,0,0,,Let's see here.
+Dialogue: 0,0:37:09.04,0:37:11.76,Default,,0,0,0,,Chicken à la king? Nope.
+Dialogue: 0,0:37:11.76,0:37:14.88,Default,,0,0,0,,Alaskan king crab. Ow. \NI hate it when they do that.
+Dialogue: 0,0:37:14.88,0:37:17.32,Default,,0,0,0,,Caesar salad. Ah! <i>Et tu, Brute?</i> No.
+Dialogue: 0,0:37:17.32,0:37:20.56,Default,,0,0,0,,Aha. "To make a prince."
+Dialogue: 0,0:37:20.60,0:37:22.92,Default,,0,0,0,,Is that an official wish? \NSay the magic words.
+Dialogue: 0,0:37:22.92,0:37:25.72,Default,,0,0,0,,Genie, I wish for you \Nto make me a prince.
+Dialogue: 0,0:37:25.72,0:37:27.16,Default,,0,0,0,,All right!
+Dialogue: 0,0:37:27.16,0:37:28.44,Default,,0,0,0,,Yo, yo! Woof! Woof!
+Dialogue: 0,0:37:28.44,0:37:32.40,Default,,0,0,0,,First, that fez-and-vest combo \Nis much too third century.
+Dialogue: 0,0:37:32.40,0:37:34.36,Default,,0,0,0,,These patches. What are \Nwe trying to say, beggar?
+Dialogue: 0,0:37:34.36,0:37:36.96,Default,,0,0,0,,No. Let's work with me here.
+Dialogue: 0,0:37:37.00,0:37:39.80,Default,,0,0,0,,Ooh. I like it. <i>Muy macho.</i>
+Dialogue: 0,0:37:39.80,0:37:42.84,Default,,0,0,0,,Now, it still needs something. \NWhat does it say to me?
+Dialogue: 0,0:37:42.84,0:37:45.56,Default,,0,0,0,,It says mode of transportation.
+Dialogue: 0,0:37:45.56,0:37:48.40,Default,,0,0,0,,Excuse me, monkey boy. \N<i>Aquí.</i> Over here.
+Dialogue: 0,0:37:48.40,0:37:50.60,Default,,0,0,0,,- Uh-oh. \N- Here he comes.
+Dialogue: 0,0:37:50.60,0:37:53.44,Default,,0,0,0,,What better way to make your \Nentrance on the streets of Agrabah
+Dialogue: 0,0:37:53.44,0:37:56.96,Default,,0,0,0,,than riding your very \Nown, brand-new camel?
+Dialogue: 0,0:37:56.96,0:37:58.24,Default,,0,0,0,,Watch out. They spit.
+Dialogue: 0,0:37:58.24,0:38:00.68,Default,,0,0,0,,Mmm. Not enough.
+Dialogue: 0,0:38:01.40,0:38:05.24,Default,,0,0,0,,Still not enough. Let's see. \NWhat do you need?
+Dialogue: 0,0:38:06.08,0:38:07.28,Default,,0,0,0,,Yes!
+Dialogue: 0,0:38:07.28,0:38:10.20,Default,,0,0,0,,Esalalumbo shimin Dumbo.
+Dialogue: 0,0:38:10.28,0:38:11.80,Default,,0,0,0,,Whoa!
+Dialogue: 0,0:38:11.80,0:38:14.80,Default,,0,0,0,,Talk about your trunk space. \NCheck this action out.
+Dialogue: 0,0:38:21.84,0:38:23.52,Default,,0,0,0,,Abu, you look good.
+Dialogue: 0,0:38:23.52,0:38:25.72,Default,,0,0,0,,He's got the outfit. \NHe's got the elephant.
+Dialogue: 0,0:38:25.72,0:38:27.72,Default,,0,0,0,,But we're not through yet.
+Dialogue: 0,0:38:27.72,0:38:32.56,Default,,0,0,0,,Hang on to your turban, kid. \NWe're gonna make you a star.
+Dialogue: 0,0:38:40.08,0:38:43.48,Default,,0,0,0,,Sire, I've found a solution to \Nthe problem with your daughter.
+Dialogue: 0,0:38:43.48,0:38:46.52,Default,,0,0,0,,Awk. The problem \Nwith your daughter.
+Dialogue: 0,0:38:46.52,0:38:48.24,Default,,0,0,0,,Oh, really?
+Dialogue: 0,0:38:48.24,0:38:49.12,Default,,0,0,0,,Right here.
+Dialogue: 0,0:38:50.08,0:38:53.88,Default,,0,0,0,,"If the princess has not chosen a \Nhusband by the appointed time,
+Dialogue: 0,0:38:53.88,0:38:56.80,Default,,0,0,0,,"then the sultan shall \Nchoose for her."
+Dialogue: 0,0:38:56.80,0:39:00.00,Default,,0,0,0,,But Jasmine hated \Nall those suitors.
+Dialogue: 0,0:39:00.00,0:39:02.00,Default,,0,0,0,,How could I choose \Nsomeone she hates?
+Dialogue: 0,0:39:02.00,0:39:04.76,Default,,0,0,0,,Not to worry, my liege. \NThere is more.
+Dialogue: 0,0:39:05.60,0:39:08.56,Default,,0,0,0,,"If in the event a suitable \Nprince cannot be found..."
+Dialogue: 0,0:39:08.56,0:39:09.60,Default,,0,0,0,,Jerk.
+Dialogue: 0,0:39:09.60,0:39:13.40,Default,,0,0,0,,"A princess must then be wed to..."
+Dialogue: 0,0:39:14.04,0:39:16.52,Default,,0,0,0,,Hmm. Interesting.
+Dialogue: 0,0:39:16.52,0:39:18.20,Default,,0,0,0,,What? Who?
+Dialogue: 0,0:39:18.20,0:39:19.76,Default,,0,0,0,,The royal vizier.
+Dialogue: 0,0:39:19.76,0:39:23.44,Default,,0,0,0,,Why, that would be me.
+Dialogue: 0,0:39:24.52,0:39:28.24,Default,,0,0,0,,But I thought the law says that \Nonly a prince can marry a princess.
+Dialogue: 0,0:39:28.24,0:39:29.56,Default,,0,0,0,,I'm quite sure that...
+Dialogue: 0,0:39:29.56,0:39:33.52,Default,,0,0,0,,Desperate times call for \Ndesperate measures, my lord.
+Dialogue: 0,0:39:34.00,0:39:36.92,Default,,0,0,0,,Yes. Desperate measures.
+Dialogue: 0,0:39:37.04,0:39:40.92,Default,,0,0,0,,You will order the \Nprincess to marry me.
+Dialogue: 0,0:39:40.92,0:39:45.92,Default,,0,0,0,,I will order the princess to...
+Dialogue: 0,0:39:46.08,0:39:48.44,Default,,0,0,0,,But you're so old.
+Dialogue: 0,0:39:48.44,0:39:51.92,Default,,0,0,0,,The princess will marry me.
+Dialogue: 0,0:39:51.92,0:39:53.40,Default,,0,0,0,,The princess will marry...
+Dialogue: 0,0:39:53.40,0:39:56.08,Default,,0,0,0,,What? What is that?
+Dialogue: 0,0:39:56.08,0:39:57.80,Default,,0,0,0,,That music.
+Dialogue: 0,0:40:01.48,0:40:04.44,Default,,0,0,0,,Jafar, you must come and see this.
+Dialogue: 0,0:40:06.72,0:40:10.12,Default,,0,0,0,,<i>Make way for Prince Ali</i>
+Dialogue: 0,0:40:11.68,0:40:17.28,Default,,0,0,0,,<i>Say, "Hey, it's Prince Ali"</i>
+Dialogue: 0,0:40:17.28,0:40:19.36,Default,,0,0,0,,<i>Hey, clear the way \Nin the old bazaar</i>
+Dialogue: 0,0:40:19.36,0:40:21.92,Default,,0,0,0,,<i>Hey you, let us through \NIt's a bright new star</i>
+Dialogue: 0,0:40:21.92,0:40:25.84,Default,,0,0,0,,<i>Oh come, be the first on your block \NTo meet his eye</i>
+Dialogue: 0,0:40:26.88,0:40:29.44,Default,,0,0,0,,<i>Make way, here he comes \NRing bells, bang the drums</i>
+Dialogue: 0,0:40:29.44,0:40:31.40,Default,,0,0,0,,<i>You're gonna love this guy</i>
+Dialogue: 0,0:40:31.40,0:40:36.20,Default,,0,0,0,,<i>Prince Ali, fabulous he \NAli Ababwa</i>
+Dialogue: 0,0:40:36.20,0:40:40.60,Default,,0,0,0,,<i>Genuflect, show some respect \NDown on one knee</i>
+Dialogue: 0,0:40:40.92,0:40:43.44,Default,,0,0,0,,<i>Now, try your best to stay calm</i>
+Dialogue: 0,0:40:43.44,0:40:45.52,Default,,0,0,0,,<i>Brush up your Sunday salaam</i>
+Dialogue: 0,0:40:45.52,0:40:49.84,Default,,0,0,0,,<i>Then come and meet \NHis spectacular coterie</i>
+Dialogue: 0,0:40:49.84,0:40:54.40,Default,,0,0,0,,<i>Prince Ali, mighty is he \NAli Ababwa</i>
+Dialogue: 0,0:40:54.40,0:40:58.64,Default,,0,0,0,,<i>Strong as 10 regular men definitely</i>
+Dialogue: 0,0:40:59.16,0:41:01.40,Default,,0,0,0,,<i>He faced the galloping hordes</i>
+Dialogue: 0,0:41:01.40,0:41:03.64,Default,,0,0,0,,<i>A hundred bad guys with swords</i>
+Dialogue: 0,0:41:03.64,0:41:07.80,Default,,0,0,0,,<i>Who sent those goons to \Ntheir lords? Why, Prince Ali</i>
+Dialogue: 0,0:41:07.80,0:41:11.00,Default,,0,0,0,,<i>He's got 75 golden camels</i>
+Dialogue: 0,0:41:11.00,0:41:12.48,Default,,0,0,0,,Don't they look lovely, June?
+Dialogue: 0,0:41:12.48,0:41:15.24,Default,,0,0,0,,<i>Purple peacocks, he's got 53</i>
+Dialogue: 0,0:41:15.24,0:41:16.84,Default,,0,0,0,,Fabulous, Harry. \NI love the feathers.
+Dialogue: 0,0:41:16.84,0:41:21.28,Default,,0,0,0,,<i>When it comes to \Nexotic-type mammals</i>
+Dialogue: 0,0:41:21.28,0:41:23.16,Default,,0,0,0,,<i>Has he got a zoo \NI'm telling you</i>
+Dialogue: 0,0:41:23.16,0:41:25.40,Default,,0,0,0,,<i>It's a world-class menagerie</i>
+Dialogue: 0,0:41:25.40,0:41:29.72,Default,,0,0,0,,<i>Prince Ali, handsome is he \NAli Ababwa</i>
+Dialogue: 0,0:41:29.72,0:41:34.32,Default,,0,0,0,,<i>That physique, how can I speak \NWeak at the knee</i>
+Dialogue: 0,0:41:34.32,0:41:36.48,Default,,0,0,0,,<i>Well, get on out in that square</i>
+Dialogue: 0,0:41:36.48,0:41:38.64,Default,,0,0,0,,<i>Adjust your veil and prepare</i>
+Dialogue: 0,0:41:38.64,0:41:42.64,Default,,0,0,0,,<i>To gawk and grovel and stare \NAt Prince Ali</i>
+Dialogue: 0,0:41:42.64,0:41:46.64,Default,,0,0,0,,<i>- He's got 95 white Persian monkeys \N- He's got the monkeys</i>
+Dialogue: 0,0:41:46.64,0:41:50.20,Default,,0,0,0,,<i>- Let's see the monkeys \N- And to view them he charges no fee</i>
+Dialogue: 0,0:41:50.20,0:41:51.72,Default,,0,0,0,,<i>He's generous \NSo generous</i>
+Dialogue: 0,0:41:51.72,0:41:55.08,Default,,0,0,0,,<i>He's got slaves \NHe's got servants and flunkies</i>
+Dialogue: 0,0:41:55.08,0:41:57.68,Default,,0,0,0,,<i>Proud to work for him \NThey bow to his whim, love serving him</i>
+Dialogue: 0,0:41:57.68,0:42:01.56,Default,,0,0,0,,<i>They're just lousy \Nwith loyalty to Ali</i>
+Dialogue: 0,0:42:01.56,0:42:04.28,Default,,0,0,0,,<i>Prince Ali</i>
+Dialogue: 0,0:42:04.28,0:42:10.68,Default,,0,0,0,,<i>Prince Ali, Amorous he \NAli Ababwa</i>
+Dialogue: 0,0:42:10.68,0:42:14.92,Default,,0,0,0,,<i>Heard your princess \NWas a sight lovely to see</i>
+Dialogue: 0,0:42:14.92,0:42:16.92,Default,,0,0,0,,<i>And that, good people, is why</i>
+Dialogue: 0,0:42:16.92,0:42:19.00,Default,,0,0,0,,<i>He got dolled up and dropped by</i>
+Dialogue: 0,0:42:19.00,0:42:20.92,Default,,0,0,0,,<i>With 60 elephants, llamas galore</i>
+Dialogue: 0,0:42:20.92,0:42:23.12,Default,,0,0,0,,<i>With bears and lions \NA brass band and more</i>
+Dialogue: 0,0:42:23.12,0:42:24.80,Default,,0,0,0,,<i>With his 40 fakirs \NHis cooks, his bakers</i>
+Dialogue: 0,0:42:24.80,0:42:26.52,Default,,0,0,0,,<i>His birds that warble on key</i>
+Dialogue: 0,0:42:26.52,0:42:28.60,Default,,0,0,0,,<i>Make way</i>
+Dialogue: 0,0:42:28.60,0:42:35.04,Default,,0,0,0,,<i>For Prince Ali</i>
+Dialogue: 0,0:42:35.76,0:42:39.44,Default,,0,0,0,,Splendid. Absolutely marvellous.
+Dialogue: 0,0:42:40.60,0:42:42.56,Default,,0,0,0,,Your Majesty,
+Dialogue: 0,0:42:42.56,0:42:45.12,Default,,0,0,0,,I have journeyed from afar to \Nseek your daughter's hand.
+Dialogue: 0,0:42:45.12,0:42:46.88,Default,,0,0,0,,Prince Ali Ababwa.
+Dialogue: 0,0:42:46.88,0:42:49.92,Default,,0,0,0,,Of course. I'm \Ndelighted to meet you.
+Dialogue: 0,0:42:49.92,0:42:54.04,Default,,0,0,0,,This is my royal vizier, \NJafar. He's delighted, too.
+Dialogue: 0,0:42:54.04,0:42:55.72,Default,,0,0,0,,Ecstatic.
+Dialogue: 0,0:42:55.72,0:42:58.64,Default,,0,0,0,,- I'm afraid, Prince Abubu... \N- Ababwa.
+Dialogue: 0,0:42:58.64,0:42:59.84,Default,,0,0,0,,Whatever.
+Dialogue: 0,0:42:59.84,0:43:02.88,Default,,0,0,0,,You cannot just parade in here \Nuninvited and expect to...
+Dialogue: 0,0:43:02.88,0:43:06.28,Default,,0,0,0,,By Allah, this is quite \Na remarkable device.
+Dialogue: 0,0:43:06.28,0:43:07.80,Default,,0,0,0,,Ooh.
+Dialogue: 0,0:43:07.84,0:43:11.36,Default,,0,0,0,,I don't suppose I might...
+Dialogue: 0,0:43:11.36,0:43:14.44,Default,,0,0,0,,Why, certainly, \NYour Majesty. Allow me.
+Dialogue: 0,0:43:15.44,0:43:18.20,Default,,0,0,0,,Sire, I must advise against this.
+Dialogue: 0,0:43:18.20,0:43:21.08,Default,,0,0,0,,Oh, button up, Jafar. \NLearn to have a little fun.
+Dialogue: 0,0:43:21.08,0:43:23.12,Default,,0,0,0,,Ow, ow, ow.
+Dialogue: 0,0:43:23.96,0:43:25.24,Default,,0,0,0,,Ahh! Whoa!
+Dialogue: 0,0:43:25.24,0:43:27.36,Default,,0,0,0,,Look out, here I come.
+Dialogue: 0,0:43:29.68,0:43:33.76,Default,,0,0,0,,Just where did you \Nsay you were from?
+Dialogue: 0,0:43:33.76,0:43:38.44,Default,,0,0,0,,Oh, much farther than \Nyou've travelled, I'm sure.
+Dialogue: 0,0:43:38.44,0:43:41.08,Default,,0,0,0,,- Try me. \N- Look out, Polly.
+Dialogue: 0,0:43:43.08,0:43:44.28,Default,,0,0,0,,Hey, watch it.
+Dialogue: 0,0:43:44.28,0:43:46.56,Default,,0,0,0,,Watch it with the dumb rug.
+Dialogue: 0,0:43:46.56,0:43:48.52,Default,,0,0,0,,Aah!
+Dialogue: 0,0:43:48.56,0:43:50.16,Default,,0,0,0,,Whew!
+Dialogue: 0,0:43:56.04,0:43:57.92,Default,,0,0,0,,Out of the way. I'm \Ncoming in to land.
+Dialogue: 0,0:43:57.92,0:43:59.76,Default,,0,0,0,,Jafar, watch this.
+Dialogue: 0,0:43:59.76,0:44:02.60,Default,,0,0,0,,- Spectacular, Your Highness. \N- That was lovely.
+Dialogue: 0,0:44:03.00,0:44:06.76,Default,,0,0,0,,Yes, I do seem to \Nhave a knack for it.
+Dialogue: 0,0:44:06.76,0:44:09.12,Default,,0,0,0,,This is a very impressive youth.
+Dialogue: 0,0:44:09.12,0:44:11.36,Default,,0,0,0,,And a prince besides.
+Dialogue: 0,0:44:11.36,0:44:14.88,Default,,0,0,0,,If we're lucky, you won't have \Nto marry Jasmine after all.
+Dialogue: 0,0:44:14.88,0:44:17.56,Default,,0,0,0,,- I don't trust him, Sire. \N- Nonsense.
+Dialogue: 0,0:44:17.56,0:44:22.04,Default,,0,0,0,,One thing I pride myself on, Jafar, \NI'm an excellent judge of character.
+Dialogue: 0,0:44:22.04,0:44:25.08,Default,,0,0,0,,Oh, excellent judge. \NYeah, sure. Not!
+Dialogue: 0,0:44:26.04,0:44:28.16,Default,,0,0,0,,Jasmine will like this one.
+Dialogue: 0,0:44:28.16,0:44:30.32,Default,,0,0,0,,And I'm pretty sure I'll \Nlike Princess Jasmine.
+Dialogue: 0,0:44:30.32,0:44:34.44,Default,,0,0,0,,Your Highness, no. I must \Nintercede on Jasmine's behalf.
+Dialogue: 0,0:44:34.44,0:44:36.60,Default,,0,0,0,,This boy is no different \Nfrom the others.
+Dialogue: 0,0:44:36.60,0:44:39.28,Default,,0,0,0,,What makes him think he is \Nworthy of the princess?
+Dialogue: 0,0:44:39.28,0:44:42.48,Default,,0,0,0,,Your Majesty, I am \NPrince Ali Ababwa.
+Dialogue: 0,0:44:42.48,0:44:45.40,Default,,0,0,0,,Just let her meet me. \NI will win your daughter.
+Dialogue: 0,0:44:45.40,0:44:47.08,Default,,0,0,0,,How dare you.
+Dialogue: 0,0:44:47.08,0:44:50.76,Default,,0,0,0,,All of you. Standing \Naround deciding my future?
+Dialogue: 0,0:44:50.76,0:44:53.88,Default,,0,0,0,,I am not a prize to be won.
+Dialogue: 0,0:44:53.92,0:44:56.16,Default,,0,0,0,,Oh, dear.
+Dialogue: 0,0:44:56.68,0:45:01.12,Default,,0,0,0,,Don't worry, Prince Ali. Just \Ngive Jasmine time to cool down.
+Dialogue: 0,0:45:01.12,0:45:06.32,Default,,0,0,0,,I think it's time to say \Ngood-bye to Prince Abubu.
+Dialogue: 0,0:45:09.56,0:45:11.44,Default,,0,0,0,,What am I gonna do?
+Dialogue: 0,0:45:11.44,0:45:13.80,Default,,0,0,0,,Jasmine won't even \Nlet me talk to her.
+Dialogue: 0,0:45:13.80,0:45:17.72,Default,,0,0,0,,I should've known I couldn't pull \Noff this stupid prince wish.
+Dialogue: 0,0:45:20.52,0:45:22.68,Default,,0,0,0,,So move.
+Dialogue: 0,0:45:23.64,0:45:25.08,Default,,0,0,0,,Hey.
+Dialogue: 0,0:45:26.12,0:45:27.64,Default,,0,0,0,,That's a good move.
+Dialogue: 0,0:45:27.64,0:45:30.36,Default,,0,0,0,,I can't believe it. \NI'm losing to a rug.
+Dialogue: 0,0:45:30.84,0:45:32.00,Default,,0,0,0,,Genie, I need help.
+Dialogue: 0,0:45:32.00,0:45:34.68,Default,,0,0,0,,All right, Sparky, here's the deal.
+Dialogue: 0,0:45:34.68,0:45:37.96,Default,,0,0,0,,If you wanna court the little lady, \Nyou gotta be a straight shooter.
+Dialogue: 0,0:45:37.96,0:45:40.36,Default,,0,0,0,,- Do you got it? \N- What?
+Dialogue: 0,0:45:42.76,0:45:44.00,Default,,0,0,0,,No way.
+Dialogue: 0,0:45:44.00,0:45:48.28,Default,,0,0,0,,If Jasmine found out I was \Nreally some crummy street rat,
+Dialogue: 0,0:45:48.28,0:45:49.48,Default,,0,0,0,,she'd laugh at me.
+Dialogue: 0,0:45:49.48,0:45:52.32,Default,,0,0,0,,A woman appreciates a man \Nwho can make her laugh.
+Dialogue: 0,0:45:53.12,0:45:57.36,Default,,0,0,0,,Al, all joking aside, you \Nreally ought to be yourself.
+Dialogue: 0,0:45:57.36,0:45:59.56,Default,,0,0,0,,Hey, that's the last \Nthing I wanna be.
+Dialogue: 0,0:45:59.56,0:46:01.40,Default,,0,0,0,,Okay, I'm gonna go see her.
+Dialogue: 0,0:46:01.40,0:46:05.88,Default,,0,0,0,,I just... I gotta be \Nsmooth, cool, confident.
+Dialogue: 0,0:46:06.84,0:46:08.92,Default,,0,0,0,,How do I look?
+Dialogue: 0,0:46:09.52,0:46:12.44,Default,,0,0,0,,Like a prince.
+Dialogue: 0,0:46:24.12,0:46:26.60,Default,,0,0,0,,Princess Jasmine?
+Dialogue: 0,0:46:27.32,0:46:30.16,Default,,0,0,0,,- Who's there? \N- It's me, Prince Ali.
+Dialogue: 0,0:46:30.16,0:46:33.64,Default,,0,0,0,,Ahem. Uh, Prince Ali Ababwa.
+Dialogue: 0,0:46:33.64,0:46:35.24,Default,,0,0,0,,I do not want to see you.
+Dialogue: 0,0:46:35.24,0:46:37.52,Default,,0,0,0,,No, no, please, Princess. \NGive me a chance.
+Dialogue: 0,0:46:37.52,0:46:40.64,Default,,0,0,0,,- Just leave me alone. \N- Down, kitty.
+Dialogue: 0,0:46:40.68,0:46:43.16,Default,,0,0,0,,So, how's our little beau doing?
+Dialogue: 0,0:46:44.04,0:46:46.44,Default,,0,0,0,,Good kitty, take off.
+Dialogue: 0,0:46:46.44,0:46:47.60,Default,,0,0,0,,Down, kitty.
+Dialogue: 0,0:46:47.60,0:46:48.12,Default,,0,0,0,,Wait. Wait.
+Dialogue: 0,0:46:49.00,0:46:51.16,Default,,0,0,0,,Do I know you?
+Dialogue: 0,0:46:51.16,0:46:53.88,Default,,0,0,0,,Uh, no. No.
+Dialogue: 0,0:46:54.00,0:46:58.00,Default,,0,0,0,,You remind me of someone \NI met in the marketplace.
+Dialogue: 0,0:46:58.00,0:47:00.36,Default,,0,0,0,,The marketplace?
+Dialogue: 0,0:47:00.36,0:47:03.08,Default,,0,0,0,,I have servants who go to \Nthe marketplace for me.
+Dialogue: 0,0:47:03.64,0:47:07.16,Default,,0,0,0,,Why, I even have servants who go \Nto the marketplace for my servants,
+Dialogue: 0,0:47:07.16,0:47:09.16,Default,,0,0,0,,so it couldn't have \Nbeen me you met.
+Dialogue: 0,0:47:09.60,0:47:13.12,Default,,0,0,0,,No. I guess not.
+Dialogue: 0,0:47:13.12,0:47:15.80,Default,,0,0,0,,Enough about you, \NCasanova. Talk about her.
+Dialogue: 0,0:47:15.80,0:47:18.48,Default,,0,0,0,,She's smart, fun, \Nthe hair, the eyes.
+Dialogue: 0,0:47:18.48,0:47:20.00,Default,,0,0,0,,Anything. Pick a feature.
+Dialogue: 0,0:47:20.00,0:47:22.88,Default,,0,0,0,,Ahem. Uh, Princess \NJasmine? You're very...
+Dialogue: 0,0:47:22.88,0:47:24.60,Default,,0,0,0,,Wonderful, magnificent, glorious,
+Dialogue: 0,0:47:24.60,0:47:25.92,Default,,0,0,0,,- punctual. \N- Punctual.
+Dialogue: 0,0:47:25.92,0:47:27.16,Default,,0,0,0,,- Punctual? \N- Sorry.
+Dialogue: 0,0:47:27.16,0:47:29.56,Default,,0,0,0,,- Uh, beautiful. \N- Nice recovery.
+Dialogue: 0,0:47:29.56,0:47:30.64,Default,,0,0,0,,Hmm.
+Dialogue: 0,0:47:30.64,0:47:32.64,Default,,0,0,0,,I'm rich, too, you know.
+Dialogue: 0,0:47:32.92,0:47:35.88,Default,,0,0,0,,- Yeah. \N- The daughter of a sultan.
+Dialogue: 0,0:47:35.88,0:47:37.80,Default,,0,0,0,,I know.
+Dialogue: 0,0:47:37.80,0:47:41.08,Default,,0,0,0,,A fine prize for any \Nprince to marry.
+Dialogue: 0,0:47:41.60,0:47:43.88,Default,,0,0,0,,Uh, right. Right. A prince like me.
+Dialogue: 0,0:47:43.88,0:47:45.48,Default,,0,0,0,,Warning! Warning!
+Dialogue: 0,0:47:45.48,0:47:47.96,Default,,0,0,0,,Right. A prince like you.
+Dialogue: 0,0:47:48.16,0:47:51.72,Default,,0,0,0,,And every other stuffed shirt, \Nswaggering peacock I've met.
+Dialogue: 0,0:47:51.72,0:47:53.84,Default,,0,0,0,,Mayday! Mayday!
+Dialogue: 0,0:47:54.68,0:47:57.24,Default,,0,0,0,,Just go jump off a balcony!
+Dialogue: 0,0:47:57.24,0:47:59.40,Default,,0,0,0,,- What? \N- Stop her. Stop her!
+Dialogue: 0,0:47:59.40,0:48:01.20,Default,,0,0,0,,- Want me to sting her? \N- Buzz off.
+Dialogue: 0,0:48:01.20,0:48:04.92,Default,,0,0,0,,Okay, fine. But remember, \N"bee" yourself.
+Dialogue: 0,0:48:04.92,0:48:06.84,Default,,0,0,0,,- Yeah, right. \N- What?
+Dialogue: 0,0:48:06.84,0:48:09.72,Default,,0,0,0,,Uh... Uh, you're right.
+Dialogue: 0,0:48:10.40,0:48:14.12,Default,,0,0,0,,You aren't just some \Nprize to be won.
+Dialogue: 0,0:48:14.28,0:48:16.76,Default,,0,0,0,,You should be free to \Nmake your own choice.
+Dialogue: 0,0:48:17.00,0:48:18.24,Default,,0,0,0,,I'll go now.
+Dialogue: 0,0:48:18.24,0:48:20.60,Default,,0,0,0,,- No! \N- What? What?
+Dialogue: 0,0:48:20.60,0:48:22.04,Default,,0,0,0,,How...
+Dialogue: 0,0:48:22.04,0:48:23.72,Default,,0,0,0,,How are you doing that?
+Dialogue: 0,0:48:23.72,0:48:26.12,Default,,0,0,0,,- It's a magic carpet. \N- It's lovely.
+Dialogue: 0,0:48:27.68,0:48:28.12,Default,,0,0,0,,You, uh...
+Dialogue: 0,0:48:29.52,0:48:32.24,Default,,0,0,0,,You don't want to go \Nfor a ride, do you?
+Dialogue: 0,0:48:32.24,0:48:35.12,Default,,0,0,0,,We could get out of the \Npalace, see the world.
+Dialogue: 0,0:48:35.12,0:48:37.80,Default,,0,0,0,,- Is it safe? \N- Sure. Do you trust me?
+Dialogue: 0,0:48:39.08,0:48:41.72,Default,,0,0,0,,- What? \N- Do you trust me?
+Dialogue: 0,0:48:43.64,0:48:45.40,Default,,0,0,0,,Yes.
+Dialogue: 0,0:49:00.00,0:49:03.68,Default,,0,0,0,,<i>I can show you the world</i>
+Dialogue: 0,0:49:03.88,0:49:07.56,Default,,0,0,0,,<i>Shining, shimmering, splendid</i>
+Dialogue: 0,0:49:07.56,0:49:09.24,Default,,0,0,0,,<i>Tell me, Princess</i>
+Dialogue: 0,0:49:09.24,0:49:14.12,Default,,0,0,0,,<i>Now, when did you last \NLet your heart decide</i>
+Dialogue: 0,0:49:15.00,0:49:18.84,Default,,0,0,0,,<i>I can open your eyes</i>
+Dialogue: 0,0:49:18.84,0:49:22.44,Default,,0,0,0,,<i>Take you wonder by wonder</i>
+Dialogue: 0,0:49:22.44,0:49:25.24,Default,,0,0,0,,<i>Over, sideways and under</i>
+Dialogue: 0,0:49:25.24,0:49:28.68,Default,,0,0,0,,<i>On a magic carpet ride</i>
+Dialogue: 0,0:49:28.68,0:49:32.52,Default,,0,0,0,,<i>A whole new world</i>
+Dialogue: 0,0:49:32.52,0:49:36.12,Default,,0,0,0,,<i>A new fantastic point of view</i>
+Dialogue: 0,0:49:36.12,0:49:40.76,Default,,0,0,0,,<i>No one to tell us no \NOr where to go</i>
+Dialogue: 0,0:49:40.76,0:49:43.40,Default,,0,0,0,,<i>Or say we're only dreaming</i>
+Dialogue: 0,0:49:43.40,0:49:47.08,Default,,0,0,0,,<i>A whole new world</i>
+Dialogue: 0,0:49:47.08,0:49:50.12,Default,,0,0,0,,<i>A dazzling place \NI never knew</i>
+Dialogue: 0,0:49:51.00,0:49:55.40,Default,,0,0,0,,<i>But when I'm way up here \NIt's crystal clear</i>
+Dialogue: 0,0:49:55.40,0:49:59.48,Default,,0,0,0,,<i>That now I'm in \NA whole new world with you</i>
+Dialogue: 0,0:49:59.48,0:50:03.04,Default,,0,0,0,,<i>Now I'm in \NA whole new world with you</i>
+Dialogue: 0,0:50:03.04,0:50:06.80,Default,,0,0,0,,<i>Unbelievable sights</i>
+Dialogue: 0,0:50:06.80,0:50:10.28,Default,,0,0,0,,<i>Indescribable feeling</i>
+Dialogue: 0,0:50:10.28,0:50:13.24,Default,,0,0,0,,<i>Soaring, tumbling, freewheeling</i>
+Dialogue: 0,0:50:13.24,0:50:16.32,Default,,0,0,0,,<i>Through an endless diamond sky</i>
+Dialogue: 0,0:50:16.32,0:50:20.12,Default,,0,0,0,,<i>- A whole new world \N- Don't you dare close your eyes</i>
+Dialogue: 0,0:50:20.12,0:50:23.80,Default,,0,0,0,,<i>- A hundred thousand things to see \N- Hold your breath, it gets better</i>
+Dialogue: 0,0:50:23.80,0:50:27.96,Default,,0,0,0,,<i>I'm like a shooting star \NI've come so far</i>
+Dialogue: 0,0:50:27.96,0:50:31.28,Default,,0,0,0,,<i>I can't go back to \Nwhere I used to be</i>
+Dialogue: 0,0:50:31.28,0:50:34.44,Default,,0,0,0,,<i>- A whole new world \N- Every turn a surprise</i>
+Dialogue: 0,0:50:34.44,0:50:38.36,Default,,0,0,0,,<i>- With new horizons to pursue \N- Every moment red-letter</i>
+Dialogue: 0,0:50:38.36,0:50:42.76,Default,,0,0,0,,<i>I'll chase them anywhere \NThere's time to spare</i>
+Dialogue: 0,0:50:42.76,0:50:49.24,Default,,0,0,0,,<i>Let me share \NThis whole new world with you</i>
+Dialogue: 0,0:50:49.24,0:50:52.88,Default,,0,0,0,,<i>- A whole new world \N- A whole new world</i>
+Dialogue: 0,0:50:52.88,0:50:56.76,Default,,0,0,0,,<i>- That's where we'll be \N- That's where we'll be</i>
+Dialogue: 0,0:50:56.76,0:51:00.88,Default,,0,0,0,,<i>- A thrilling chase \N- A wondrous place</i>
+Dialogue: 0,0:51:00.88,0:51:04.92,Default,,0,0,0,,<i>For you and me</i>
+Dialogue: 0,0:51:18.20,0:51:21.60,Default,,0,0,0,,- It's all so magical. \N- Yeah.
+Dialogue: 0,0:51:23.48,0:51:25.88,Default,,0,0,0,,It's a shame Abu had to miss this.
+Dialogue: 0,0:51:25.88,0:51:28.04,Default,,0,0,0,,Nah. He hates fireworks.
+Dialogue: 0,0:51:28.04,0:51:29.88,Default,,0,0,0,,He doesn't like flying, either.
+Dialogue: 0,0:51:29.88,0:51:33.80,Default,,0,0,0,,Uh, that is, um... Oh, no.
+Dialogue: 0,0:51:33.80,0:51:35.96,Default,,0,0,0,,You are the boy from \Nthe market. I knew it.
+Dialogue: 0,0:51:35.96,0:51:38.28,Default,,0,0,0,,- Why did you lie to me? \N- Jasmine, I'm sorry.
+Dialogue: 0,0:51:38.28,0:51:40.00,Default,,0,0,0,,- Did you think I was stupid? \N- No.
+Dialogue: 0,0:51:40.00,0:51:41.92,Default,,0,0,0,,- That I wouldn't figure it out? \N- No.
+Dialogue: 0,0:51:41.92,0:51:45.96,Default,,0,0,0,,I mean, I hoped you wouldn't. \NNo, that's not what I meant.
+Dialogue: 0,0:51:45.96,0:51:47.96,Default,,0,0,0,,Who are you? Tell me the truth.
+Dialogue: 0,0:51:47.96,0:51:50.04,Default,,0,0,0,,The truth?
+Dialogue: 0,0:51:51.64,0:51:53.52,Default,,0,0,0,,The truth. Um...
+Dialogue: 0,0:51:54.52,0:51:56.24,Default,,0,0,0,,The truth is...
+Dialogue: 0,0:51:56.24,0:51:59.20,Default,,0,0,0,,I sometimes dress \Nas a commoner, um,
+Dialogue: 0,0:51:59.20,0:52:02.04,Default,,0,0,0,,to escape the pressures \Nof palace life.
+Dialogue: 0,0:52:03.64,0:52:05.96,Default,,0,0,0,,But I really am a prince.
+Dialogue: 0,0:52:06.80,0:52:09.08,Default,,0,0,0,,Why didn't you just tell me?
+Dialogue: 0,0:52:09.08,0:52:11.36,Default,,0,0,0,,Well, you know,
+Dialogue: 0,0:52:11.36,0:52:13.88,Default,,0,0,0,,royalty going out into \Nthe city in disguise,
+Dialogue: 0,0:52:13.88,0:52:16.32,Default,,0,0,0,,it sounds a little \Nstrange, don't you think?
+Dialogue: 0,0:52:16.32,0:52:17.96,Default,,0,0,0,,Hmm.
+Dialogue: 0,0:52:18.16,0:52:20.12,Default,,0,0,0,,Not that strange.
+Dialogue: 0,0:52:41.56,0:52:44.60,Default,,0,0,0,,Good night, my handsome prince.
+Dialogue: 0,0:52:44.60,0:52:46.44,Default,,0,0,0,,Sleep well, Princess.
+Dialogue: 0,0:53:12.44,0:53:14.24,Default,,0,0,0,,Jasmine.
+Dialogue: 0,0:53:14.24,0:53:18.08,Default,,0,0,0,,Oh, Father, I just had \Nthe most wonderful time.
+Dialogue: 0,0:53:18.08,0:53:21.72,Default,,0,0,0,,- I'm so happy. \N- You should be, Jasmine.
+Dialogue: 0,0:53:21.72,0:53:24.72,Default,,0,0,0,,I have chosen a husband for you.
+Dialogue: 0,0:53:24.72,0:53:27.52,Default,,0,0,0,,- What? \N- You will wed Jafar.
+Dialogue: 0,0:53:28.88,0:53:32.00,Default,,0,0,0,,You're speechless, I see. \NA fine quality in a wife.
+Dialogue: 0,0:53:32.00,0:53:34.20,Default,,0,0,0,,I will never marry you.
+Dialogue: 0,0:53:34.28,0:53:37.88,Default,,0,0,0,,- Father, I choose Prince Ali. \N- Prince Ali left.
+Dialogue: 0,0:53:37.88,0:53:40.00,Default,,0,0,0,,Better check your crystal \Nball again, Jafar.
+Dialogue: 0,0:53:40.00,0:53:41.72,Default,,0,0,0,,Prince Ali!
+Dialogue: 0,0:53:41.72,0:53:44.60,Default,,0,0,0,,How in the... Uh. Awk!
+Dialogue: 0,0:53:44.72,0:53:48.04,Default,,0,0,0,,Tell them the truth, Jafar. \NYou tried to have me killed.
+Dialogue: 0,0:53:48.04,0:53:51.08,Default,,0,0,0,,What? Ridiculous \Nnonsense, Your Highness.
+Dialogue: 0,0:53:51.08,0:53:53.20,Default,,0,0,0,,He is obviously lying.
+Dialogue: 0,0:53:53.20,0:53:55.60,Default,,0,0,0,,Obviously lying.
+Dialogue: 0,0:53:55.60,0:53:57.64,Default,,0,0,0,,Father, what's wrong with you?
+Dialogue: 0,0:53:57.64,0:53:59.68,Default,,0,0,0,,I know what's wrong.
+Dialogue: 0,0:54:01.16,0:54:02.36,Default,,0,0,0,,Oh, my!
+Dialogue: 0,0:54:02.36,0:54:04.96,Default,,0,0,0,,Your Highness, Jafar's been \Ncontrolling you with this.
+Dialogue: 0,0:54:04.96,0:54:07.96,Default,,0,0,0,,What? Jafar?
+Dialogue: 0,0:54:07.96,0:54:10.36,Default,,0,0,0,,You, you traitor!
+Dialogue: 0,0:54:10.36,0:54:12.48,Default,,0,0,0,,Your Majesty, all this \Ncan be explained.
+Dialogue: 0,0:54:12.48,0:54:14.52,Default,,0,0,0,,Guards! Guards!
+Dialogue: 0,0:54:14.52,0:54:16.64,Default,,0,0,0,,Well, that's it. \NWe're dead. Forget it.
+Dialogue: 0,0:54:16.64,0:54:18.52,Default,,0,0,0,,Just dig a grave for both \Nof us. We're dead.
+Dialogue: 0,0:54:18.52,0:54:21.52,Default,,0,0,0,,Arrest Jafar at once.
+Dialogue: 0,0:54:21.52,0:54:24.12,Default,,0,0,0,,This is not done yet, boy.
+Dialogue: 0,0:54:27.40,0:54:30.84,Default,,0,0,0,,Find him! Search everywhere!
+Dialogue: 0,0:54:30.84,0:54:33.32,Default,,0,0,0,,- Jasmine, are you all right? \N- Yes.
+Dialogue: 0,0:54:33.32,0:54:36.24,Default,,0,0,0,,Jafar, my most trusted counsellor,
+Dialogue: 0,0:54:36.24,0:54:37.76,Default,,0,0,0,,plotting against me all this time.
+Dialogue: 0,0:54:37.76,0:54:40.08,Default,,0,0,0,,This is horrible, just horrible.
+Dialogue: 0,0:54:40.08,0:54:42.28,Default,,0,0,0,,How will I ever...
+Dialogue: 0,0:54:42.28,0:54:43.96,Default,,0,0,0,,Huh?
+Dialogue: 0,0:54:44.44,0:54:46.04,Default,,0,0,0,,Can this be true?
+Dialogue: 0,0:54:46.04,0:54:49.60,Default,,0,0,0,,My daughter has finally \Nchosen a suitor?
+Dialogue: 0,0:54:49.60,0:54:53.04,Default,,0,0,0,,Ha, ha! Praise Allah!
+Dialogue: 0,0:54:53.84,0:54:56.36,Default,,0,0,0,,You brilliant boy, \NI could kiss you.
+Dialogue: 0,0:54:56.36,0:54:58.84,Default,,0,0,0,,I won't. I'll leave that to my...
+Dialogue: 0,0:54:59.00,0:55:01.40,Default,,0,0,0,,But you two will be wed at once.
+Dialogue: 0,0:55:01.40,0:55:04.52,Default,,0,0,0,,Yes, yes. And you'll be \Nhappy and prosperous,
+Dialogue: 0,0:55:04.52,0:55:07.76,Default,,0,0,0,,and then you, my boy, \Nwill become sultan.
+Dialogue: 0,0:55:07.76,0:55:08.96,Default,,0,0,0,,- Sultan? \N- Yes.
+Dialogue: 0,0:55:08.96,0:55:11.20,Default,,0,0,0,,A fine upstanding youth \Nsuch as yourself,
+Dialogue: 0,0:55:11.20,0:55:13.56,Default,,0,0,0,,a person of your unimpeachable \Nmoral character
+Dialogue: 0,0:55:13.56,0:55:17.08,Default,,0,0,0,,is exactly what this kingdom needs.
+Dialogue: 0,0:55:17.28,0:55:20.84,Default,,0,0,0,,We gotta get outta here. I gotta \Nstart packing. Only essentials.
+Dialogue: 0,0:55:20.84,0:55:21.88,Default,,0,0,0,,We gotta travel light.
+Dialogue: 0,0:55:21.88,0:55:25.08,Default,,0,0,0,,Bring the guns, the weapons, the \Nknives, and how about this picture?
+Dialogue: 0,0:55:25.08,0:55:27.80,Default,,0,0,0,,I think I'm making \Na weird face in it.
+Dialogue: 0,0:55:30.24,0:55:34.12,Default,,0,0,0,,Oh, boy. He's cracked. \NHe's gone nuts.
+Dialogue: 0,0:55:34.12,0:55:38.04,Default,,0,0,0,,Jafar! Jafar! Get a grip!
+Dialogue: 0,0:55:38.60,0:55:39.64,Default,,0,0,0,,Good grip.
+Dialogue: 0,0:55:39.64,0:55:43.48,Default,,0,0,0,,Prince Ali is nothing more than \Nthat ragged urchin, Aladdin.
+Dialogue: 0,0:55:43.48,0:55:46.56,Default,,0,0,0,,- He has the lamp, Iago. \N- Why, that miserable...
+Dialogue: 0,0:55:46.56,0:55:49.12,Default,,0,0,0,,But you are going to \Nrelieve him of it.
+Dialogue: 0,0:55:49.12,0:55:50.64,Default,,0,0,0,,Me?
+Dialogue: 0,0:55:53.92,0:55:55.92,Default,,0,0,0,,Sultan?
+Dialogue: 0,0:55:55.92,0:55:57.64,Default,,0,0,0,,They want me to be Sultan?
+Dialogue: 0,0:55:58.44,0:56:00.08,Default,,0,0,0,,Huzzah!
+Dialogue: 0,0:56:00.08,0:56:02.76,Default,,0,0,0,,<i>Hail the conquering hero</i>
+Dialogue: 0,0:56:10.04,0:56:12.92,Default,,0,0,0,,Aladdin, you've just won \Nthe heart of the princess.
+Dialogue: 0,0:56:12.92,0:56:15.36,Default,,0,0,0,,What are you gonna do next?
+Dialogue: 0,0:56:20.88,0:56:25.44,Default,,0,0,0,,Psst. Your line is, "I'm \Ngoing to free the genie."
+Dialogue: 0,0:56:25.56,0:56:26.68,Default,,0,0,0,,Any time.
+Dialogue: 0,0:56:26.68,0:56:30.00,Default,,0,0,0,,- Genie. I can't. \N- Sure you can.
+Dialogue: 0,0:56:30.00,0:56:33.36,Default,,0,0,0,,You just go, "Genie, \NI wish you free."
+Dialogue: 0,0:56:33.36,0:56:34.96,Default,,0,0,0,,I'm serious.
+Dialogue: 0,0:56:34.96,0:56:38.52,Default,,0,0,0,,Look, I'm sorry. I really am. \NBut they wanna make me sultan.
+Dialogue: 0,0:56:38.52,0:56:41.56,Default,,0,0,0,,No. They wanna make \NPrince Ali sultan.
+Dialogue: 0,0:56:41.56,0:56:44.08,Default,,0,0,0,,Without you, I'm just Aladdin.
+Dialogue: 0,0:56:44.08,0:56:46.40,Default,,0,0,0,,- Al, you won. \N- Because of you.
+Dialogue: 0,0:56:46.40,0:56:49.88,Default,,0,0,0,,The only reason anyone thinks I'm \Nworth anything is because of you.
+Dialogue: 0,0:56:49.88,0:56:52.04,Default,,0,0,0,,What if they find out I'm \Nnot really a prince?
+Dialogue: 0,0:56:52.04,0:56:55.56,Default,,0,0,0,,What if Jasmine finds out? \NI'd lose her.
+Dialogue: 0,0:56:55.56,0:56:58.92,Default,,0,0,0,,Genie, I can't keep \Nthis up on my own.
+Dialogue: 0,0:56:59.08,0:57:01.64,Default,,0,0,0,,I can't wish you free.
+Dialogue: 0,0:57:02.72,0:57:06.12,Default,,0,0,0,,Fine. I understand. After all, \Nyou've lied to everyone else.
+Dialogue: 0,0:57:06.12,0:57:08.60,Default,,0,0,0,,Hey, I was beginning \Nto feel left out.
+Dialogue: 0,0:57:08.60,0:57:11.76,Default,,0,0,0,,Now, if you'll excuse me, master.
+Dialogue: 0,0:57:15.32,0:57:17.08,Default,,0,0,0,,Genie, I'm really sorry.
+Dialogue: 0,0:57:18.16,0:57:22.28,Default,,0,0,0,,Well, fine. Then \Njust stay in there.
+Dialogue: 0,0:57:23.52,0:57:25.40,Default,,0,0,0,,What are you guys looking at?
+Dialogue: 0,0:57:28.64,0:57:30.72,Default,,0,0,0,,Look, I... I'm sorry.
+Dialogue: 0,0:57:30.72,0:57:32.88,Default,,0,0,0,,Abu, I'm sorry. I didn't...
+Dialogue: 0,0:57:32.88,0:57:35.20,Default,,0,0,0,,Wait. Come on.
+Dialogue: 0,0:57:40.32,0:57:42.36,Default,,0,0,0,,What am I doing?
+Dialogue: 0,0:57:42.96,0:57:45.40,Default,,0,0,0,,Genie's right.
+Dialogue: 0,0:57:46.56,0:57:48.72,Default,,0,0,0,,I gotta tell Jasmine the truth.
+Dialogue: 0,0:57:48.72,0:57:52.24,Default,,0,0,0,,Ali. Oh, Ali. Will you come here?
+Dialogue: 0,0:57:52.80,0:57:55.44,Default,,0,0,0,,Well, here goes.
+Dialogue: 0,0:57:55.48,0:57:57.84,Default,,0,0,0,,Jasmine? Where are you?
+Dialogue: 0,0:57:58.08,0:57:59.96,Default,,0,0,0,,Out in the menagerie. Hurry.
+Dialogue: 0,0:57:59.96,0:58:02.36,Default,,0,0,0,,I'm coming.
+Dialogue: 0,0:58:04.92,0:58:08.44,Default,,0,0,0,,You got a problem, Pinky?
+Dialogue: 0,0:58:08.44,0:58:09.56,Default,,0,0,0,,Jerk.
+Dialogue: 0,0:58:12.44,0:58:14.88,Default,,0,0,0,,Boy, Jafar's gonna \Nbe happy to see you.
+Dialogue: 0,0:58:14.88,0:58:16.48,Default,,0,0,0,,"Excellent work, Iago."
+Dialogue: 0,0:58:16.48,0:58:17.76,Default,,0,0,0,,Ah, go on.
+Dialogue: 0,0:58:17.76,0:58:21.52,Default,,0,0,0,,"No, really. On a scale of \None to 10, you are an 11."
+Dialogue: 0,0:58:21.52,0:58:23.84,Default,,0,0,0,,Oh, Jafar, you're too kind.
+Dialogue: 0,0:58:23.84,0:58:26.16,Default,,0,0,0,,I'm embarrassed. I'm blushing.
+Dialogue: 0,0:58:26.84,0:58:29.40,Default,,0,0,0,,People of Agrabah,
+Dialogue: 0,0:58:29.40,0:58:34.20,Default,,0,0,0,,my daughter has finally \Nchosen a suitor.
+Dialogue: 0,0:58:34.20,0:58:36.48,Default,,0,0,0,,Jasmine.
+Dialogue: 0,0:58:36.48,0:58:38.64,Default,,0,0,0,,Ali, where have you been?
+Dialogue: 0,0:58:38.64,0:58:40.60,Default,,0,0,0,,Jasmine, there's something \NI got to tell you.
+Dialogue: 0,0:58:40.60,0:58:43.60,Default,,0,0,0,,The whole kingdom's turned out \Nfor Father's announcement.
+Dialogue: 0,0:58:43.60,0:58:46.08,Default,,0,0,0,,No. But, Jasmine, \Nlisten to me, please.
+Dialogue: 0,0:58:46.08,0:58:47.64,Default,,0,0,0,,- You don't understand... \N- Good luck.
+Dialogue: 0,0:58:47.64,0:58:50.52,Default,,0,0,0,,Ali Ababwa!
+Dialogue: 0,0:58:50.52,0:58:52.32,Default,,0,0,0,,Oh, boy.
+Dialogue: 0,0:59:00.32,0:59:02.56,Default,,0,0,0,,Ahh!
+Dialogue: 0,0:59:07.44,0:59:09.60,Default,,0,0,0,,Get your blasted \Nbeak out of my face.
+Dialogue: 0,0:59:09.60,0:59:13.12,Default,,0,0,0,,- Oh, shut up, you moron. \N- Don't tell me to shut up.
+Dialogue: 0,0:59:13.12,0:59:14.32,Default,,0,0,0,,Allow me.
+Dialogue: 0,0:59:14.32,0:59:18.24,Default,,0,0,0,,Ten thousand years in a Cave of \NWonders ought to chill him out.
+Dialogue: 0,0:59:20.20,0:59:22.76,Default,,0,0,0,,Shut up!
+Dialogue: 0,0:59:27.96,0:59:29.92,Default,,0,0,0,,Jasmine...
+Dialogue: 0,0:59:30.36,0:59:33.20,Default,,0,0,0,,I'm sorry I lied to you \Nabout being a prince.
+Dialogue: 0,0:59:33.20,0:59:35.00,Default,,0,0,0,,I know why you did.
+Dialogue: 0,0:59:36.28,0:59:40.12,Default,,0,0,0,,Well, I guess this is good-bye?
+Dialogue: 0,0:59:41.00,0:59:44.32,Default,,0,0,0,,Oh, that stupid law. \NThis isn't fair.
+Dialogue: 0,0:59:44.60,0:59:46.52,Default,,0,0,0,,I love you.
+Dialogue: 0,0:59:46.84,0:59:51.04,Default,,0,0,0,,Al, no problem. You've \Nstill got one wish left.
+Dialogue: 0,0:59:51.04,0:59:53.12,Default,,0,0,0,,Just say the word and \Nyou're a prince again.
+Dialogue: 0,0:59:53.12,0:59:55.20,Default,,0,0,0,,But, Genie, what \Nabout your freedom?
+Dialogue: 0,0:59:55.20,0:59:58.28,Default,,0,0,0,,Hey, it's only an \Neternity of servitude.
+Dialogue: 0,0:59:58.28,1:00:00.20,Default,,0,0,0,,This is love.
+Dialogue: 0,1:00:00.20,1:00:04.48,Default,,0,0,0,,Al, you're not gonna find another \Ngirl like her in a million years.
+Dialogue: 0,1:00:04.48,1:00:07.04,Default,,0,0,0,,Believe me, I know. I've looked.
+Dialogue: 0,1:00:07.88,1:00:09.92,Default,,0,0,0,,Jasmine, I do love you,
+Dialogue: 0,1:00:09.92,1:00:13.60,Default,,0,0,0,,but I got to stop pretending \Nto be something I'm not.
+Dialogue: 0,1:00:13.64,1:00:15.80,Default,,0,0,0,,I understand.
+Dialogue: 0,1:00:18.00,1:00:19.84,Default,,0,0,0,,Genie, I wish for your freedom.
+Dialogue: 0,1:00:19.84,1:00:22.56,Default,,0,0,0,,One bona fide prince \Npedigree coming up.
+Dialogue: 0,1:00:22.56,1:00:26.08,Default,,0,0,0,,- What? \N- Genie, you're free.
+Dialogue: 0,1:00:45.72,1:00:48.36,Default,,0,0,0,,I'm free. I'm free.
+Dialogue: 0,1:00:48.36,1:00:50.64,Default,,0,0,0,,Quick. Quick. Wish for \Nsomething outrageous.
+Dialogue: 0,1:00:50.64,1:00:52.92,Default,,0,0,0,,Say, "I want the Nile." \NWish for the Nile. Try that.
+Dialogue: 0,1:00:52.92,1:00:55.68,Default,,0,0,0,,- Uh, I wish for the Nile. \N- No way!
+Dialogue: 0,1:00:57.20,1:00:59.68,Default,,0,0,0,,Oh, does that feel good! Oh!
+Dialogue: 0,1:00:59.68,1:01:02.12,Default,,0,0,0,,I'm free! I'm free at last!
+Dialogue: 0,1:01:03.00,1:01:06.56,Default,,0,0,0,,I'm hittin' the road. I'm off \Nto see the world. I'm...
+Dialogue: 0,1:01:14.24,1:01:16.24,Default,,0,0,0,,Genie, I'm...
+Dialogue: 0,1:01:16.24,1:01:18.72,Default,,0,0,0,,I'm gonna miss you.
+Dialogue: 0,1:01:18.72,1:01:21.28,Default,,0,0,0,,Me, too, Al.
+Dialogue: 0,1:01:22.24,1:01:24.64,Default,,0,0,0,,No matter what anybody says,
+Dialogue: 0,1:01:25.08,1:01:28.04,Default,,0,0,0,,you'll always be a prince to me.
+Dialogue: 0,1:01:28.80,1:01:29.88,Default,,0,0,0,,That's right.
+Dialogue: 0,1:01:29.88,1:01:33.40,Default,,0,0,0,,You've certainly proven your \Nworth as far as I'm concerned.
+Dialogue: 0,1:01:33.88,1:01:36.44,Default,,0,0,0,,It's that law that's the problem.
+Dialogue: 0,1:01:36.44,1:01:39.56,Default,,0,0,0,,- Father? \N- Well, am I sultan or am I sultan?
+Dialogue: 0,1:01:39.56,1:01:41.20,Default,,0,0,0,,From this day forth,
+Dialogue: 0,1:01:41.20,1:01:45.96,Default,,0,0,0,,the princess shall marry \Nwhomever she deems worthy.
+Dialogue: 0,1:01:45.96,1:01:48.80,Default,,0,0,0,,Him. I choose...
+Dialogue: 0,1:01:49.40,1:01:52.48,Default,,0,0,0,,I choose you, Aladdin.
+Dialogue: 0,1:01:53.60,1:01:55.88,Default,,0,0,0,,Call me Al.
+Dialogue: 0,1:01:56.40,1:01:59.76,Default,,0,0,0,,Oh, all of you, come over \Nhere. Big group hug.
+Dialogue: 0,1:01:59.76,1:02:01.48,Default,,0,0,0,,Group hug.
+Dialogue: 0,1:02:01.48,1:02:03.48,Default,,0,0,0,,Mind if I kiss the monkey?
+Dialogue: 0,1:02:03.72,1:02:04.96,Default,,0,0,0,,Ooh, hairball.
+Dialogue: 0,1:02:04.96,1:02:07.48,Default,,0,0,0,,Well, I can't do any more damage \Naround this Popsicle stand.
+Dialogue: 0,1:02:07.48,1:02:09.92,Default,,0,0,0,,I'm outta here!
+Dialogue: 0,1:02:09.92,1:02:12.32,Default,,0,0,0,,Bye-bye, you two crazy lovebirds!
+Dialogue: 0,1:02:12.32,1:02:14.96,Default,,0,0,0,,Hey, Rugman, ciao. I'm history.
+Dialogue: 0,1:02:14.96,1:02:16.60,Default,,0,0,0,,No, I'm mythology.
+Dialogue: 0,1:02:16.60,1:02:19.88,Default,,0,0,0,,I don't care what I am. I'm free!
+Dialogue: 0,1:02:22.40,1:02:24.92,Default,,0,0,0,,<i>A whole new world</i>
+Dialogue: 0,1:02:24.92,1:02:27.60,Default,,0,0,0,,<i>A whole new life</i>
+Dialogue: 0,1:02:27.60,1:02:33.28,Default,,0,0,0,,<i>For you and me</i>
+Dialogue: 0,1:02:33.28,1:02:37.28,Default,,0,0,0,,<i>A whole new world</i>
+Dialogue: 0,1:02:49.12,1:02:51.56,Default,,0,0,0,,Made you look.
+Dialogue: 0,1:07:13.40,1:07:15.72,Default,,0,0,0,,<i>You have been a fabulous audience.</i>
+Dialogue: 0,1:07:15.72,1:07:17.88,Default,,0,0,0,,<i>Tell you what, you're the best \Naudience in the whole world.</i>
+Dialogue: 0,1:07:17.88,1:07:20.48,Default,,0,0,0,,<i>Take care of yourselves. \NGood night, Alice!</i>
+Dialogue: 0,1:07:20.48,1:07:24.64,Default,,0,0,0,,<i>Good night, Agrabah!</i> Adiós, amigos!

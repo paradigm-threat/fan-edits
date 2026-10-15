@@ -625,12 +625,12 @@
   <property name="kdenlive:sequenceproperties.scrollPos">2368</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "AppData/Local/Temp/1750526084390-{6e59466b-2caf-4266-a681-d1ea31cafae9}.ass",
+        "file": "Aladin (1992) - Alena Edition.kdenlive-1.ass",
         "id": 0,
         "name": "Subtitles"
     },
     {
-        "file": "AppData/Local/Temp/1750526084390-1-{6e59466b-2caf-4266-a681-d1ea31cafae9}.ass",
+        "file": "Aladin (1992) - Alena Edition.kdenlive-1.ass",
         "id": 1,
         "name": "Subtitle 2"
     }

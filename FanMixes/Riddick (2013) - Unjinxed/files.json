@@ -5,7 +5,7 @@
     {
       "path": "Riddick (2013) - Unjinxed.kdenlive",
       "kind": "kdenlive",
-      "bytes": 102674
+      "bytes": 100282
     },
     {
       "path": "apply_riddick_reorder.py",
@@ -34,6 +34,11 @@
     },
     {
       "path": "Riddick (2013) - Unjinxed.kdenlive.ass",
+      "kind": "other",
+      "bytes": 41900
+    },
+    {
+      "path": "Riddick (2013) - Unperverted Edition.kdenlive.ass",
       "kind": "other",
       "bytes": 41900
     },

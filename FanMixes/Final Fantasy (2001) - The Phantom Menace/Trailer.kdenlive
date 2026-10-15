@@ -1530,7 +1530,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "AppData/Local/Temp/1753996696524-{7e7d991a-f770-4791-9032-d1b792212f4b}.ass",
+        "file": "Trailer.kdenlive.ass",
         "id": 0,
         "name": "Subtitles"
     }

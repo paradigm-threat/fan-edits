@@ -697,12 +697,12 @@
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "AppData/Local/Temp/1750469390780-{886fbfe5-9a68-4ca0-b6f6-3f9ef453e34d}.ass",
+        "file": "Alena Edition.kdenlive-1.ass",
         "id": 0,
         "name": "Subtitles"
     },
     {
-        "file": "AppData/Local/Temp/1750469390780-1-{886fbfe5-9a68-4ca0-b6f6-3f9ef453e34d}.ass",
+        "file": "Alena Edition.kdenlive-1.ass",
         "id": 1,
         "name": "Subtitle 2"
     }

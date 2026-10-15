@@ -5,10 +5,15 @@
     {
       "path": "Alien Resurrection (1997) - UnJossed.kdenlive",
       "kind": "kdenlive",
-      "bytes": 80625
+      "bytes": 79031
     },
     {
       "path": "Alien Resurrection (1997) - UnJossed.kdenlive.ass",
+      "kind": "other",
+      "bytes": 0
+    },
+    {
+      "path": "Alien Resurrection - DeJoss.kdenlive-1.ass",
       "kind": "other",
       "bytes": 0
     },

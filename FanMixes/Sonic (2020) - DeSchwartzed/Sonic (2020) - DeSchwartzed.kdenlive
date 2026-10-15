@@ -30687,7 +30687,7 @@ Sonic's on a roll</property>
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "AppData/Local/Temp/1755214161680-{58164c34-09e5-443a-8843-84b296ff141d}.ass",
+        "file": "Sonic - DeSchwartzed 2020.kdenlive.ass",
         "id": 0,
         "name": "Subtitles"
     }

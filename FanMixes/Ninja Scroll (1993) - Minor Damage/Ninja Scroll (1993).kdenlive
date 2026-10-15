@@ -1351,7 +1351,7 @@ https://viertel.livejournal.com</property>
   <property name="kdenlive:sequenceproperties.scrollPos">8066</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/Videos/FanEdits/KidFriendly/Ninja Scroll (1993)/Ninja Scroll (1993).kdenlive.ass",
+        "file": "Ninja Scroll (1993).kdenlive.ass",
         "id": 0,
         "name": "Subtitles"
     }

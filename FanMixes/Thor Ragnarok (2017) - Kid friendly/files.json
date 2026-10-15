@@ -5,7 +5,12 @@
     {
       "path": "Thor Ragnarok (2017) - Kid friendly.kdenlive",
       "kind": "kdenlive",
-      "bytes": 344400
+      "bytes": 344359
+    },
+    {
+      "path": "Thor Ragnarok (2017) - Kid friendly.kdenlive.ass",
+      "kind": "other",
+      "bytes": 140139
     },
     {
       "path": "README.md",

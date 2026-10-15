@@ -1,0 +1,367 @@
+[Script Info]
+Title: Restored
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: None
+PlayResX: 1920
+PlayResY: 1080
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,2,40,40,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:02:07.50,0:02:10.79,Default,,0,0,0,,<i>Thundershowers are \Nexpected in the Crocodile Falls area</i>
+Dialogue: 0,0:02:10.88,0:02:14.38,Default,,0,0,0,,<i>and some of the surrounding gullies, \Nso take out your...</i>
+Dialogue: 0,0:02:19.09,0:02:21.05,Default,,0,0,0,,COdyI
+Dialogue: 0,0:02:21.14,0:02:22.26,Default,,0,0,0,,Yeah, Mom?
+Dialogue: 0,0:02:22.35,0:02:25.72,Default,,0,0,0,,- What about your breakfast? \N- I've got some sandwiches in my pack.
+Dialogue: 0,0:02:26.10,0:02:29.23,Default,,0,0,0,,- Be home for supper. \N- No worries, Mom.
+Dialogue: 0,0:02:46.08,0:02:48.29,Default,,0,0,0,,I know, I'm coming.
+Dialogue: 0,0:02:48.37,0:02:51.54,Default,,0,0,0,,Hustle up, Nelson. \NFaloo's sounding the call!
+Dialogue: 0,0:02:58.97,0:03:01.59,Default,,0,0,0,,Come on, little Wombats, hurry!
+Dialogue: 0,0:03:16.44,0:03:17.86,Default,,0,0,0,,Who's caught this time?
+Dialogue: 0,0:03:17.94,0:03:19.07,Default,,0,0,0,,You don't know her, Cody.
+Dialogue: 0,0:03:19.15,0:03:21.70,Default,,0,0,0,,Her name is Marahute, \Nthe great golden eagle.
+Dialogue: 0,0:03:21.78,0:03:22.74,Default,,0,0,0,,Where is she?
+Dialogue: 0,0:03:22.82,0:03:25.87,Default,,0,0,0,,She's caught, high on a cliff \Nin a poacher's trap.
+Dialogue: 0,0:03:26.12,0:03:28.70,Default,,0,0,0,,- You're the only one who can reach her. \N- I'll get her loose.
+Dialogue: 0,0:03:28.79,0:03:31.79,Default,,0,0,0,,Righto. Hop on, no time to lose.
+Dialogue: 0,0:03:50.81,0:03:54.98,Default,,0,0,0,,She's up on top of that ridge. \NBe careful, little friend.
+Dialogue: 0,0:04:21.67,0:04:23.68,Default,,0,0,0,,Marahute!
+Dialogue: 0,0:04:35.35,0:04:38.15,Default,,0,0,0,,Calm down, calm down.
+Dialogue: 0,0:04:38.23,0:04:39.90,Default,,0,0,0,,I'm not gonna hurt you.
+Dialogue: 0,0:04:40.40,0:04:43.03,Default,,0,0,0,,That's a girl. Stay still.
+Dialogue: 0,0:04:44.57,0:04:46.53,Default,,0,0,0,,It's okay.
+Dialogue: 0,0:04:49.33,0:04:51.95,Default,,0,0,0,,No, wait! I'm here to help you.
+Dialogue: 0,0:04:53.04,0:04:54.71,Default,,0,0,0,,Easy! Easy!
+Dialogue: 0,0:05:02.13,0:05:03.67,Default,,0,0,0,,You're free!
+Dialogue: 0,0:06:02.86,0:06:04.61,Default,,0,0,0,,Higher!
+Dialogue: 0,0:08:10.90,0:08:12.45,Default,,0,0,0,,You're a mom!
+Dialogue: 0,0:08:16.32,0:08:19.87,Default,,0,0,0,,They're very warm. \NAre they gonna hatch soon?
+Dialogue: 0,0:08:35.68,0:08:37.09,Default,,0,0,0,,Where's the daddy eagle?
+Dialogue: 0,0:08:41.68,0:08:44.19,Default,,0,0,0,,My dad's gone, too.
+Dialogue: 0,0:10:00.47,0:10:03.64,Default,,0,0,0,,Help! Someone, help! \NMcLeach took a little boy.
+Dialogue: 0,0:10:03.72,0:10:05.14,Default,,0,0,0,,Send for help!
+Dialogue: 0,0:12:12.10,0:12:15.98,Default,,0,0,0,,Code red, code red! Attention \Nall Rescue Aid Society delegates.
+Dialogue: 0,0:12:16.06,0:12:19.36,Default,,0,0,0,,<i>All delegates report immediately \Nto the main assembly hall.</i>
+Dialogue: 0,0:12:19.44,0:12:21.19,Default,,0,0,0,,<i>This is an emergency meeting.</i>
+Dialogue: 0,0:12:21.28,0:12:24.53,Default,,0,0,0,,<i>I repeat, this is a code red \Nemergency meeting!</i>
+Dialogue: 0,0:12:27.03,0:12:28.37,Default,,0,0,0,,<i>Order!</i>
+Dialogue: 0,0:12:28.87,0:12:32.25,Default,,0,0,0,,<i>Yes, I know it's late, but I'm... \NReally? Pajamas?</i>
+Dialogue: 0,0:12:32.33,0:12:34.87,Default,,0,0,0,,<i>Hello, Frank, how are you? \NNice to see you!</i>
+Dialogue: 0,0:12:34.96,0:12:36.71,Default,,0,0,0,,<i>And Esmerelda, there you are!</i>
+Dialogue: 0,0:12:36.96,0:12:39.59,Default,,0,0,0,,<i>Quiet now, please, \Neveryone pay attention.</i>
+Dialogue: 0,0:12:39.67,0:12:42.42,Default,,0,0,0,,<i>There has been \Na kidnapping in Australia.</i>
+Dialogue: 0,0:12:43.30,0:12:45.34,Default,,0,0,0,,<i>A young boy needs our help.</i>
+Dialogue: 0,0:12:45.43,0:12:48.80,Default,,0,0,0,,<i>This is a mission \Nrequiring our very finest,</i>
+Dialogue: 0,0:12:48.89,0:12:53.18,Default,,0,0,0,,<i>and I know we are all thinking \Nof the same two mice.</i>
+Dialogue: 0,0:12:56.65,0:12:58.77,Default,,0,0,0,,<i>What's this? Gone?</i>
+Dialogue: 0,0:12:58.86,0:13:02.90,Default,,0,0,0,,<i>We must find Bernard \Nand Miss Bianca at once!</i>
+Dialogue: 0,0:13:15.21,0:13:17.17,Default,,0,0,0,,Pea soup.
+Dialogue: 0,0:13:27.68,0:13:29.35,Default,,0,0,0,,Pea soup!
+Dialogue: 0,0:13:44.53,0:13:48.91,Default,,0,0,0,,To my dear Bernard, \Nand our wonderful partnership.
+Dialogue: 0,0:13:49.28,0:13:52.66,Default,,0,0,0,,Yeah, wonderful.
+Dialogue: 0,0:13:55.50,0:14:00.33,Default,,0,0,0,,You've been very quiet this evening. \Nls there something on your mind?
+Dialogue: 0,0:14:00.67,0:14:03.00,Default,,0,0,0,,Well, actually...
+Dialogue: 0,0:14:03.21,0:14:07.01,Default,,0,0,0,,- I was wondering... \N- Yes, darling?
+Dialogue: 0,0:14:07.55,0:14:10.18,Default,,0,0,0,,I... Miss Bianca, would you...
+Dialogue: 0,0:14:11.80,0:14:12.97,Default,,0,0,0,,Would you...
+Dialogue: 0,0:14:13.35,0:14:15.43,Default,,0,0,0,,Would you excuse me for a minute?
+Dialogue: 0,0:14:33.74,0:14:37.08,Default,,0,0,0,,<i>Pardonnez-moi, Mademoiselle Bianca,</i> \NI <i>have important news.</i>
+Dialogue: 0,0:14:37.16,0:14:38.96,Default,,0,0,0,,Yes, Frangois? What is it?
+Dialogue: 0,0:14:39.42,0:14:41.67,Default,,0,0,0,,You and Bernard \Nhave been asked to accept
+Dialogue: 0,0:14:41.75,0:14:44.25,Default,,0,0,0,,a dangerous mission to Australia.
+Dialogue: 0,0:14:44.59,0:14:48.63,Default,,0,0,0,,The poor boy. This is dreadful.
+Dialogue: 0,0:14:48.92,0:14:51.51,Default,,0,0,0,,Now where is Bernard? \NI must tell him at once!
+Dialogue: 0,0:14:51.76,0:14:55.22,Default,,0,0,0,,Allow me, madame, \NI will tell him immediately.
+Dialogue: 0,0:15:13.41,0:15:14.78,Default,,0,0,0,,Miss Bianca, will you marry me?
+Dialogue: 0,0:15:14.87,0:15:18.00,Default,,0,0,0,,Quickly, Monsieur Bernard! \NI must speak with you.
+Dialogue: 0,0:15:18.08,0:15:21.75,Default,,0,0,0,,- Not now, Frangois, I'm busy! \N- No, monsieur, you don't...
+Dialogue: 0,0:15:25.50,0:15:29.38,Default,,0,0,0,,- Bernard, did you talk to Frangois? \N- Yes, but there's something I want...
+Dialogue: 0,0:15:29.47,0:15:32.97,Default,,0,0,0,,I know what you're going to say. \NFrangois told me about it.
+Dialogue: 0,0:15:33.18,0:15:34.22,Default,,0,0,0,,He did? How did he...
+Dialogue: 0,0:15:34.30,0:15:37.77,Default,,0,0,0,,it doesn't matter, \NI think it's a marvelous idea.
+Dialogue: 0,0:15:37.93,0:15:39.14,Default,,0,0,0,,You do?
+Dialogue: 0,0:15:39.56,0:15:41.31,Default,,0,0,0,,I mean, you really want to?
+Dialogue: 0,0:15:41.44,0:15:45.65,Default,,0,0,0,,I don't think it's a matter of wanting, \Nit's a matter of duty.
+Dialogue: 0,0:15:46.15,0:15:49.03,Default,,0,0,0,,Duty? I never thought of it...
+Dialogue: 0,0:15:49.11,0:15:52.86,Default,,0,0,0,,Well, all right. \NHow does next April sound to you?
+Dialogue: 0,0:15:52.95,0:15:56.70,Default,,0,0,0,,Heavens, no! \NWe must act immediately, tonight!
+Dialogue: 0,0:15:56.08,0:15:59.66,Default,,0,0,0,,Tonight? But wait!
+Dialogue: 0,0:16:00.16,0:16:04.75,Default,,0,0,0,,Bianca, this is so sudden. I mean, don't \Nyou at least need a gown or something?
+Dialogue: 0,0:16:04.92,0:16:08.84,Default,,0,0,0,,No, just a pair of khaki shorts \Nand some hiking boots!
+Dialogue: 0,0:16:09.09,0:16:10.26,Default,,0,0,0,,Hiking boots?
+Dialogue: 0,0:16:10.84,0:16:12.59,Default,,0,0,0,,There you are.
+Dialogue: 0,0:16:12.68,0:16:14.93,Default,,0,0,0,,Come along, come along.
+Dialogue: 0,0:16:18.51,0:16:22.14,Default,,0,0,0,,<i>Delegates, we have \Nan important announcement.</i>
+Dialogue: 0,0:16:22.27,0:16:27.15,Default,,0,0,0,,<i>Bernard and I have decided \Nto accept the mission to Australia.</i>
+Dialogue: 0,0:16:27.23,0:16:28.23,Default,,0,0,0,,Australia?
+Dialogue: 0,0:16:28.36,0:16:31.78,Default,,0,0,0,,Good show! \NNow, you must fly out immediately!
+Dialogue: 0,0:16:31.86,0:16:35.45,Default,,0,0,0,,It's a little nippy outside, \Nbut we won't let that stop us, will we?
+Dialogue: 0,0:16:49.75,0:16:51.80,Default,,0,0,0,,Miss Bianca, \NI'm not sure it's a good idea
+Dialogue: 0,0:16:51.88,0:16:53.88,Default,,0,0,0,,to fly this soon after eating!
+Dialogue: 0,0:16:53.97,0:16:56.39,Default,,0,0,0,,Darling, you'll be just fine!
+Dialogue: 0,0:16:56.55,0:16:59.68,Default,,0,0,0,,But aren't you supposed \Nto wait 45 minutes?
+Dialogue: 0,0:16:59.76,0:17:04.94,Default,,0,0,0,,Just knock on the door \Nand see if Orville is there!
+Dialogue: 0,0:17:08.86,0:17:10.86,Default,,0,0,0,,Nobody's home, let's go.
+Dialogue: 0,0:17:11.07,0:17:15.90,Default,,0,0,0,,This is no time to play in the snow.
+Dialogue: 0,0:17:16.57,0:17:19.66,Default,,0,0,0,,I wasn't playing in the snow. \NIt was an avalanche.
+Dialogue: 0,0:17:19.74,0:17:21.87,Default,,0,0,0,,Look, Bernard!
+Dialogue: 0,0:17:21.95,0:17:24.91,Default,,0,0,0,,"Under new management, see Wilbur."
+Dialogue: 0,0:17:29.17,0:17:32.17,Default,,0,0,0,,Come on, darling. Let's get a move out!
+Dialogue: 0,0:17:45.43,0:17:46.94,Default,,0,0,0,,<i>I'm the cat's pajamas</i>
+Dialogue: 0,0:17:47.02,0:17:49.23,Default,,0,0,0,,<i>Always run around \Nwith crazy little mamas</i>
+Dialogue: 0,0:17:50.86,0:17:52.94,Default,,0,0,0,,Mr. Wilbur!
+Dialogue: 0,0:17:53.03,0:17:54.74,Default,,0,0,0,,Get down there, son!
+Dialogue: 0,0:17:54.82,0:17:55.90,Default,,0,0,0,,Hello?
+Dialogue: 0,0:17:56.57,0:17:59.78,Default,,0,0,0,,Pick it, boy, pick it! Yeah!
+Dialogue: 0,0:18:02.66,0:18:05.12,Default,,0,0,0,,Here we go! Let's walk!
+Dialogue: 0,0:18:08.21,0:18:10.79,Default,,0,0,0,,Look out! Excuse me, sir.
+Dialogue: 0,0:18:10.88,0:18:14.46,Default,,0,0,0,,Do something! He can't hear us!
+Dialogue: 0,0:18:14.63,0:18:16.76,Default,,0,0,0,,Big time, big time!
+Dialogue: 0,0:18:17.84,0:18:20.39,Default,,0,0,0,,<i>The girls all look when I go by...</i>
+Dialogue: 0,0:18:21.14,0:18:22.60,Default,,0,0,0,,Who killed the music?
+Dialogue: 0,0:18:22.68,0:18:23.85,Default,,0,0,0,,That's better.
+Dialogue: 0,0:18:24.64,0:18:28.89,Default,,0,0,0,,Excuse us for interrupting. \NWe're from the Rescue Aid Society.
+Dialogue: 0,0:18:29.48,0:18:31.73,Default,,0,0,0,,I am Miss Bianca, and this is my...
+Dialogue: 0,0:18:31.81,0:18:34.23,Default,,0,0,0,,The Miss Bianca? I don't believe it.
+Dialogue: 0,0:18:34.32,0:18:38.74,Default,,0,0,0,,My brother, Orville, told me all about \Nyou. Boy. This is an honor to have...
+Dialogue: 0,0:18:38.99,0:18:42.16,Default,,0,0,0,,<i>May</i> I <i>just say, "Enchanté, sefiorita, "</i> \Nto <i>you? May</i> I?
+Dialogue: 0,0:18:44.83,0:18:47.08,Default,,0,0,0,,We need to charter a flight.
+Dialogue: 0,0:18:47.16,0:18:50.87,Default,,0,0,0,,You've come to the right place, \Nbuddy boy. Welcome to...
+Dialogue: 0,0:18:51.25,0:18:54.75,Default,,0,0,0,,"Albatross Air. \NA fair fare from here to there."
+Dialogue: 0,0:18:55.42,0:18:58.67,Default,,0,0,0,,Get it? A fair fare? \NIt's a play on... Never mind.
+Dialogue: 0,0:18:58.80,0:19:01.84,Default,,0,0,0,,I've got tons of exotic \Ndestinations, faraway places,
+Dialogue: 0,0:19:02.14,0:19:05.72,Default,,0,0,0,,custom designed for \Na romantic weekend getaway.
+Dialogue: 0,0:19:06.39,0:19:08.56,Default,,0,0,0,,The finest in-flight accommodations.
+Dialogue: 0,0:19:08.85,0:19:11.14,Default,,0,0,0,,Speaking of which, what can I get you?
+Dialogue: 0,0:19:11.52,0:19:14.94,Default,,0,0,0,,How about a nice mango Maui cooler? \NVery nice, very tasty.
+Dialogue: 0,0:19:15.02,0:19:16.19,Default,,0,0,0,,No, thank you.
+Dialogue: 0,0:19:17.61,0:19:20.20,Default,,0,0,0,,A coconut, guava nectar? \NIt's carbonated.
+Dialogue: 0,0:19:20.28,0:19:23.45,Default,,0,0,0,,I got little umbrellas for each one, \Nand a little coconut thing.
+Dialogue: 0,0:19:23.53,0:19:27.04,Default,,0,0,0,,- It's urgent that we leave immediately! \N- Nothing? Nothing at all?
+Dialogue: 0,0:19:27.70,0:19:30.58,Default,,0,0,0,,- How about a cream soda? \N- We need a flight to Australia.
+Dialogue: 0,0:19:30.75,0:19:32.96,Default,,0,0,0,,Australia? The land down under?
+Dialogue: 0,0:19:33.04,0:19:36.59,Default,,0,0,0,,That's a fabulous idea! \NSo when can I pencil you in?
+Dialogue: 0,0:19:36.80,0:19:39.72,Default,,0,0,0,,After spring thaw? \NMid-June would be very nice.
+Dialogue: 0,0:19:39.84,0:19:41.80,Default,,0,0,0,,We must leave tonight.
+Dialogue: 0,0:19:42.93,0:19:44.64,Default,,0,0,0,,Tonight?
+Dialogue: 0,0:19:46.35,0:19:48.10,Default,,0,0,0,,Come on, you're kidding me, right?
+Dialogue: 0,0:19:48.56,0:19:51.31,Default,,0,0,0,,Have you looked outside? \NIt's suicide out there.
+Dialogue: 0,0:19:51.39,0:19:54.15,Default,,0,0,0,,No. No.
+Dialogue: 0,0:19:54.23,0:19:57.27,Default,,0,0,0,,I'm afraid yourjolly little holiday \Nwill have to wait.
+Dialogue: 0,0:19:57.40,0:19:58.73,Default,,0,0,0,,What a bunch of jokers.
+Dialogue: 0,0:19:58.82,0:20:02.57,Default,,0,0,0,,But you don't understand, \Na boy needs our help. He's in trouble.
+Dialogue: 0,0:20:02.65,0:20:05.87,Default,,0,0,0,,Boy? You mean, a little kid kinda boy?
+Dialogue: 0,0:20:05.95,0:20:07.20,Default,,0,0,0,,He was kidnapped.
+Dialogue: 0,0:20:07.62,0:20:11.08,Default,,0,0,0,,Kidnapped? That's awful.
+Dialogue: 0,0:20:11.16,0:20:13.37,Default,,0,0,0,,Locking up a little kid.
+Dialogue: 0,0:20:13.67,0:20:15.00,Default,,0,0,0,,A kid should be free.
+Dialogue: 0,0:20:15.25,0:20:18.21,Default,,0,0,0,,Free to run wild through the house \Non Saturday mornings.
+Dialogue: 0,0:20:18.30,0:20:22.13,Default,,0,0,0,,Free to have cookies and milk, \Nand get those little white mustaches.
+Dialogue: 0,0:20:22.26,0:20:25.68,Default,,0,0,0,,Nobody's gonna take \Na kid's freedom away while I'm around.
+Dialogue: 0,0:20:25.97,0:20:28.22,Default,,0,0,0,,Does that mean you'll take us?
+Dialogue: 0,0:20:28.43,0:20:33.60,Default,,0,0,0,,Storm or no storm, \NAlbatross Airlines, at your service!
+Dialogue: 0,0:20:34.56,0:20:37.11,Default,,0,0,0,,Passengers are requested \Nto fasten their seat belts
+Dialogue: 0,0:20:37.19,0:20:38.61,Default,,0,0,0,,and secure all carry-ens.
+Dialogue: 0,0:20:38.73,0:20:43.07,Default,,0,0,0,,We'll be departing following our \Npre-flight maintenance. Thank you.
+Dialogue: 0,0:20:43.70,0:20:46.91,Default,,0,0,0,,Loosen up, get the blood flowing \Nup to the head.
+Dialogue: 0,0:20:46.99,0:20:49.28,Default,,0,0,0,,And a couple of these...
+Dialogue: 0,0:20:49.58,0:20:52.25,Default,,0,0,0,,Okay, one's enough, there we go.
+Dialogue: 0,0:20:55.00,0:20:57.21,Default,,0,0,0,,Yeah! That feels better. Baby.
+Dialogue: 0,0:20:57.50,0:20:59.67,Default,,0,0,0,,Tie your kangaroos down, sports fans!
+Dialogue: 0,0:20:59.80,0:21:02.34,Default,,0,0,0,,Here we come!
+Dialogue: 0,0:21:02.42,0:21:07.39,Default,,0,0,0,,Let's go for it! Hey! \NI didn't adjust for the winds.
+Dialogue: 0,0:21:07.47,0:21:10.39,Default,,0,0,0,,All right, we're gonna make it! \NGotta duck down lower.
+Dialogue: 0,0:21:10.47,0:21:14.02,Default,,0,0,0,,Go under the wind, go under it! \NHere we go!
+Dialogue: 0,0:21:15.14,0:21:16.98,Default,,0,0,0,,This is cold!
+Dialogue: 0,0:21:18.36,0:21:20.27,Default,,0,0,0,,Slippery! Ice!
+Dialogue: 0,0:21:20.36,0:21:21.73,Default,,0,0,0,,We got ice!
+Dialogue: 0,0:21:21.98,0:21:23.99,Default,,0,0,0,,Hang on now!
+Dialogue: 0,0:21:26.91,0:21:28.53,Default,,0,0,0,,Here we go!
+Dialogue: 0,0:21:29.66,0:21:35.08,Default,,0,0,0,,Cowabunga!
+Dialogue: 0,0:21:40.17,0:21:44.21,Default,,0,0,0,,Captain, is this \Na non-stop flight to Australia?
+Dialogue: 0,0:21:44.30,0:21:48.09,Default,,0,0,0,,Well, not exactly no. \NI could definitely say no.
+Dialogue: 0,0:21:48.18,0:21:51.01,Default,,0,0,0,,We're gonna have to make \Nconnections with a bigger bird.
+Dialogue: 0,0:21:51.18,0:21:54.31,Default,,0,0,0,,Non-stop? What do I look like, \NCharles Lindbergh?
+Dialogue: 0,0:21:59.40,0:22:03.44,Default,,0,0,0,,<i>Ladies and gentlemen, Flight 12 \Nis now approaching Sydney airport.</i>
+Dialogue: 0,0:22:03.53,0:22:06.57,Default,,0,0,0,,<i>Make sure your seat belts \Nare fastened and tables secured.</i>
+Dialogue: 0,0:22:06.65,0:22:08.86,Default,,0,0,0,,<i>Enjoy your stay in Australia.</i>
+Dialogue: 0,0:22:13.04,0:22:15.33,Default,,0,0,0,,- Are we there yet? \N- Yes.
+Dialogue: 0,0:22:15.41,0:22:17.50,Default,,0,0,0,,Perhaps we should wake up Wilbur.
+Dialogue: 0,0:22:17.83,0:22:20.00,Default,,0,0,0,,All right, I'll get him up.
+Dialogue: 0,0:22:20.54,0:22:22.21,Default,,0,0,0,,Wilbur.
+Dialogue: 0,0:22:24.05,0:22:25.17,Default,,0,0,0,,Wilbur!
+Dialogue: 0,0:22:25.92,0:22:27.47,Default,,0,0,0,,Just five more minutes, Ma.
+Dialogue: 0,0:22:27.55,0:22:30.09,Default,,0,0,0,,- Wilbur! \N- That's all I need, five more minutes.
+Dialogue: 0,0:22:30.51,0:22:33.35,Default,,0,0,0,,Wilbur, are you awake?
+Dialogue: 0,0:22:33.43,0:22:35.85,Default,,0,0,0,,- Get up, we're there! \N- I'm up, I'm up.
+Dialogue: 0,0:22:35.93,0:22:37.35,Default,,0,0,0,,Watch out!
+Dialogue: 0,0:22:38.77,0:22:41.23,Default,,0,0,0,,Must have been sleeping on a bolt.
+Dialogue: 0,0:22:43.23,0:22:45.03,Default,,0,0,0,,Oh, boy.
+Dialogue: 0,0:22:45.19,0:22:48.32,Default,,0,0,0,,Throw another shrimp on the barbie, \N'cause here I come!
+Dialogue: 0,0:22:48.40,0:22:52.49,Default,,0,0,0,,- Here we go again! \N- Cannonball!
+Dialogue: 0,0:22:57.29,0:23:00.33,Default,,0,0,0,,Gangway! Coming through. \NMice on board!
+Dialogue: 0,0:23:00.42,0:23:02.67,Default,,0,0,0,,Clear the way! \NMove over madam, there you go!
+Dialogue: 0,0:23:02.75,0:23:05.13,Default,,0,0,0,,Coming through, sir. Thank you.
+Dialogue: 0,0:23:09.01,0:23:11.09,Default,,0,0,0,,Next stop, Mugwomp Flats.
+Dialogue: 0,0:23:11.22,0:23:14.01,Default,,0,0,0,,Did we lose anyone back there?
+Dialogue: 0,0:23:14.10,0:23:17.85,Default,,0,0,0,,Miss Bianca, from now on, \Ncan't we just take the train?
+Dialogue: 0,0:23:27.78,0:23:31.91,Default,,0,0,0,,Well, Sparky, \Nyou've had this coming for a long time.
+Dialogue: 0,0:23:32.41,0:23:34.28,Default,,0,0,0,,And now, you're gonna get it.
+Dialogue: 0,0:23:44.54,0:23:45.84,Default,,0,0,0,,Wise fly.
+Dialogue: 0,0:23:47.59,0:23:48.80,Default,,0,0,0,,<i>Mugwomp tower,</i>
+Dialogue: 0,0:23:48.88,0:23:53.47,Default,,0,0,0,,<i>this is Albatross 1-3 \Nrequesting permission to land. Over?</i>
+Dialogue: 0,0:23:53.59,0:23:56.47,Default,,0,0,0,,Albatross? Let's see.
+Dialogue: 0,0:23:56.97,0:23:58.52,Default,,0,0,0,,Finch, wren, scrub-bird, lorikeet,
+Dialogue: 0,0:23:58.60,0:24:00.56,Default,,0,0,0,,freckled duck, galah, \NKookaburra, parrot,
+Dialogue: 0,0:24:00.64,0:24:03.65,Default,,0,0,0,,cockatoo, alba... It's a jumbo!
+Dialogue: 0,0:24:04.48,0:24:05.98,Default,,0,0,0,,Negative, you'll have to turn back.
+Dialogue: 0,0:24:06.06,0:24:09.32,Default,,0,0,0,,- Our runway isn't long enough for you. \N- Not long enough?
+Dialogue: 0,0:24:09.40,0:24:12.07,Default,,0,0,0,,<i>Look pal, \NI can land this thing on a dime!</i>
+Dialogue: 0,0:24:12.15,0:24:14.82,Default,,0,0,0,,<i>Wilbur, \Nif the runway isn't long enough...</i>
+Dialogue: 0,0:24:14.91,0:24:18.08,Default,,0,0,0,,<i>You can't let radar jockeys \Npush you around. Leave it to me.</i>
+Dialogue: 0,0:24:19.08,0:24:22.21,Default,,0,0,0,,I say again, mate, \Nour runway is too short.
+Dialogue: 0,0:24:22.29,0:24:25.83,Default,,0,0,0,,<i>And I say again, mate, I'm coming in!</i>
+Dialogue: 0,0:24:25.92,0:24:29.34,Default,,0,0,0,,Crazy Yank. Quick, Sparky, \Nwe gotta extend the runway.
+Dialogue: 0,0:24:34.26,0:24:35.76,Default,,0,0,0,,Here we go!
+Dialogue: 0,0:24:35.84,0:24:37.30,Default,,0,0,0,,We'll never make it!
+Dialogue: 0,0:24:41.39,0:24:42.85,Default,,0,0,0,,Hot!
+Dialogue: 0,0:24:43.35,0:24:45.27,Default,,0,0,0,,Passengers, please remain seated
+Dialogue: 0,0:24:45.35,0:24:48.02,Default,,0,0,0,,until the aircraft comes \Nto a full and complete stop.
+Dialogue: 0,0:24:48.11,0:24:49.77,Default,,0,0,0,,Thank you.
+Dialogue: 0,0:24:56.53,0:24:58.87,Default,,0,0,0,,Quick, Sparky, \Nwe need to make a drag line!
+Dialogue: 0,0:25:10.50,0:25:13.92,Default,,0,0,0,,Don't try and tell me \Nthe runway's too short.
+Dialogue: 0,0:25:14.13,0:25:16.26,Default,,0,0,0,,Hold this for me, will you, pal?
+Dialogue: 0,0:25:20.39,0:25:22.22,Default,,0,0,0,,Bloke ought to have his wings clipped.
+Dialogue: 0,0:25:22.31,0:25:25.14,Default,,0,0,0,,Captain thanks you \Nfor flying Albatross Airlines...
+Dialogue: 0,0:25:25.44,0:25:26.69,Default,,0,0,0,,Crazy Yanks.
+Dialogue: 0,0:25:26.77,0:25:29.94,Default,,0,0,0,,They think they can do any fool thing \Nwithout regard for...
+Dialogue: 0,0:25:40.74,0:25:42.62,Default,,0,0,0,,Welcome to Australia, ma'am.
+Dialogue: 0,0:25:42.70,0:25:45.91,Default,,0,0,0,,Name's Jake. If there's any way \NI can make your stay pleasant,
+Dialogue: 0,0:25:46.92,0:25:48.25,Default,,0,0,0,,don't hesitate to ask.
+Dialogue: 0,0:25:48.33,0:25:51.59,Default,,0,0,0,,- How kind. \N- Allow me to get that bag for you.
+Dialogue: 0,0:25:52.67,0:25:55.92,Default,,0,0,0,,I've got a lot of luggage here.
+Dialogue: 0,0:25:56.05,0:25:57.84,Default,,0,0,0,,Let me give you a hand with those.
+Dialogue: 0,0:25:57.93,0:26:00.14,Default,,0,0,0,,Part of the friendly service \Nat Albatross...
+Dialogue: 0,0:26:01.35,0:26:02.56,Default,,0,0,0,,Big time hurt!
+Dialogue: 0,0:26:02.64,0:26:04.02,Default,,0,0,0,,Back! It's out!
+Dialogue: 0,0:26:04.10,0:26:07.10,Default,,0,0,0,,- Are you all right? \N- Don't worry, I'll handle this.
+Dialogue: 0,0:26:07.19,0:26:10.52,Default,,0,0,0,,Sparky, watch the tower. \NWe gotta get this bird to the hospital.
+Dialogue: 0,0:26:10.61,0:26:14.11,Default,,0,0,0,,Can't go down, can't go up. \NTake the bags!
+Dialogue: 0,0:26:14.28,0:26:16.49,Default,,0,0,0,,Now we just gotta \Nfigure out how to get there.
+Dialogue: 0,0:26:16.57,0:26:21.28,Default,,0,0,0,,So are you and your husband here \Non a little outback excursion?
+Dialogue: 0,0:26:21.37,0:26:23.37,Default,,0,0,0,,No, we're not married.
+Dialogue: 0,0:26:25.54,0:26:28.79,Default,,0,0,0,,In fact, we're here \Non a top secret mission.
+Dialogue: 0,0:26:28.87,0:26:30.50,Default,,0,0,0,,Very hush-hush.
+Dialogue: 0,0:26:31.21,0:26:33.25,Default,,0,0,0,,Gonna rescue that kid \NMcLeach nabbed?
+Dialogue: 0,0:26:33.34,0:26:35.96,Default,,0,0,0,,Why, that's right! How did you know?
+Dialogue: 0,0:26:36.05,0:26:39.55,Default,,0,0,0,,You'll find it's tough \Nto keep secrets in the outback, miss.
+Dialogue: 0,0:26:39.84,0:26:42.35,Default,,0,0,0,,So which way you taking?
+Dialogue: 0,0:26:42.47,0:26:45.93,Default,,0,0,0,,Suicide Trail through Nightmare \NCanyon, or shortcut at Satan's Ridge?
+Dialogue: 0,0:26:46.02,0:26:48.23,Default,,0,0,0,,-"Suicide Trail"? \N- Good choice.
+Dialogue: 0,0:26:48.48,0:26:50.81,Default,,0,0,0,,More snakes, less quicksand.
+Dialogue: 0,0:26:50.90,0:26:55.03,Default,,0,0,0,,Then once you cross Bloodworm Creek, \Nyou're scat-free, that is until...
+Dialogue: 0,0:26:55.44,0:26:56.74,Default,,0,0,0,,Dead Dingo Pass.
+Dialogue: 0,0:26:56.82,0:27:01.24,Default,,0,0,0,,Wait a minute, I don't see \Nany of that stuff on the map.
+Dialogue: 0,0:27:01.32,0:27:03.28,Default,,0,0,0,,A map's no good in the outback!
+Dialogue: 0,0:27:03.57,0:27:08.16,Default,,0,0,0,,What you really need is someone \Nwho knows the territory.
+Dialogue: 0,0:27:08.25,0:27:10.83,Default,,0,0,0,,Mr. Jake, will you guide us?
+Dialogue: 0,0:27:10.92,0:27:12.83,Default,,0,0,0,,At your service!
+Dialogue: 0,0:27:12.92,0:27:16.50,Default,,0,0,0,,Better take my arm, miss. \NIt's gonna be a treacherous hike.
+Dialogue: 0,0:27:16.59,0:27:20.68,Default,,0,0,0,,I remember the time it was just me \Nand 400 of these big, giant...
+Dialogue: 0,0:27:20.76,0:27:23.76,Default,,0,0,0,,Doesn't even know how to fold a map.
+Dialogue: 0,0:27:29.43,0:27:32.40,Default,,0,0,0,,This is how we get around \Nin the outback, Miss B.
+Dialogue: 0,0:27:33.10,0:27:35.73,Default,,0,0,0,,The only way to travel, Berno.
+Dialogue: 0,0:27:35.82,0:27:39.36,Default,,0,0,0,,Yeah, it's just a little bumpy back here.
+Dialogue: 0,0:27:45.91,0:27:49.45,Default,,0,0,0,,Cinch up your seat belts, mates. \NWe're coming in for a landing.
+Dialogue: 0,0:27:53.04,0:27:55.63,Default,,0,0,0,,Hold it, not yet!
+Dialogue: 0,0:28:10.43,0:28:11.60,Default,,0,0,0,,Maybe I should go...
+Dialogue: 0,0:28:13.44,0:28:15.11,Default,,0,0,0,,Maybe I should go look for him.
+Dialogue: 0,0:28:15.27,0:28:18.65,Default,,0,0,0,,Don't you worry about Jake. \NHe can handle himself.
+Dialogue: 0,0:28:19.15,0:28:20.44,Default,,0,0,0,,Yeah, I noticed.
+Dialogue: 0,0:28:20.74,0:28:23.20,Default,,0,0,0,,I am just sure he'll be back in no time.
+Dialogue: 0,0:28:31.62,0:28:35.83,Default,,0,0,0,,You know, \Nnow that we're alone, there's...
+Dialogue: 0,0:28:35.96,0:28:39.42,Default,,0,0,0,,There's something that \NI've been wanting to ask you.
+Dialogue: 0,0:28:39.50,0:28:41.46,Default,,0,0,0,,Yes? What is it?
+Dialogue: 0,0:28:41.55,0:28:44.63,Default,,0,0,0,,Well, it's like this.
+Dialogue: 0,0:28:44.97,0:28:49.56,Default,,0,0,0,,Miss Bianca, I would be most honored
+Dialogue: 0,0:28:50.52,0:28:52.06,Default,,0,0,0,,if...
+Dialogue: 0,0:28:52.18,0:28:54.06,Default,,0,0,0,,Look out!
+Dialogue: 0,0:28:58.40,0:29:01.19,Default,,0,0,0,,No mice for you, Twister, not today!
+Dialogue: 0,0:29:01.32,0:29:02.32,Default,,0,0,0,,There!
+Dialogue: 0,0:29:03.74,0:29:05.11,Default,,0,0,0,,Miss Bianca!
+Dialogue: 0,0:29:05.20,0:29:07.74,Default,,0,0,0,,I've been looking all over for you.
+Dialogue: 0,0:29:07.82,0:29:09.45,Default,,0,0,0,,Now look.
+Dialogue: 0,0:29:09.83,0:29:13.29,Default,,0,0,0,,We got a long way to go, \Nand you're gonna take us there.
+Dialogue: 0,0:29:13.41,0:29:16.04,Default,,0,0,0,,You're not gonna give us \Nany trouble about it.
+Dialogue: 0,0:29:16.79,0:29:18.75,Default,,0,0,0,,Right?
+Dialogue: 0,0:29:19.21,0:29:21.21,Default,,0,0,0,,Jake's been gone...
+Dialogue: 0,0:29:20.84,0:29:24.22,Default,,0,0,0,,They're harmless once you look them \Nin the eye, let them know who's boss.
+Dialogue: 0,0:29:22.55,0:29:24.72,Default,,0,0,0,,Been gone a long time.
+Dialogue: 0,0:29:24.30,0:29:27.09,Default,,0,0,0,,Ain't that right, mate? Now get.
+Dialogue: 0,0:29:27.18,0:29:31.93,Default,,0,0,0,,It's all right, Bernard. \NJake has everything under control.
+Dialogue: 0,0:29:32.02,0:29:34.56,Default,,0,0,0,,Yeah, I noticed.
+Dialogue: 0,0:29:36.19,0:29:40.69,Default,,0,0,0,,You know, Miss Bianca, truth be told, \NI used to be quite a dingo wrestler.
+Dialogue: 0,0:29:41.11,0:29:44.03,Default,,0,0,0,,There was this one time, \Nit was just me and 300
+Dialogue: 0,0:29:44.15,0:29:46.65,Default,,0,0,0,,of these ferocious, \Nmouse-eating dingoes.
+Dialogue: 0,0:29:46.74,0:29:49.03,Default,,0,0,0,,Had me surrounded...
+Dialogue: 0,0:29:59.75,0:30:01.63,Default,,0,0,0,,Show him who's boss, Berno!
+Dialogue: 0,0:30:29.53,0:30:31.53,Default,,0,0,0,,Okay, you guys, she fell for it.
+Dialogue: 0,0:30:32.91,0:30:34.62,Default,,0,0,0,,Looks like the coast is clear.
+Dialogue: 0,0:30:35.45,0:30:37.71,Default,,0,0,0,,Girls? Girls, I'm here!
+Dialogue: 0,0:30:39.54,0:30:41.92,Default,,0,0,0,,Where are you, you little chickees, you?
+Dialogue: 0,0:30:42.25,0:30:43.59,Default,,0,0,0,,Wilbur?
+Dialogue: 0,0:30:43.88,0:30:45.26,Default,,0,0,0,,Wilbur!
+Dialogue: 0,0:30:47.72,0:30:49.84,Default,,0,0,0,,Don't ever do that to me again!
+Dialogue: 0,0:30:50.80,0:30:53.43,Default,,0,0,0,,Boy, I lost a lot of feathers on that one.
+Dialogue: 0,0:30:53.51,0:30:55.60,Default,,0,0,0,,Wilbur, am I glad to see you!
+Dialogue: 0,0:30:55.77,0:30:58.27,Default,,0,0,0,,- Help me with these eggs, will you? \N- Sure.
+Dialogue: 0,0:30:58.60,0:31:01.60,Default,,0,0,0,,Wait a minute, what the heck \Nare you doing up here?
+Dialogue: 0,0:31:01.77,0:31:05.19,Default,,0,0,0,,The kidnapper took the boy and Jake. \NMiss Bianca.
+Dialogue: 0,0:31:05.28,0:31:06.86,Default,,0,0,0,,Miss Bianca's in trouble?
+Dialogue: 0,0:31:08.70,0:31:13.03,Default,,0,0,0,,That's terrible! We gotta do something! \NBernard, I'm disappointed in you.
+Dialogue: 0,0:31:13.12,0:31:15.03,Default,,0,0,0,,Hiding under a nest \Nwhile Bianca needs help.
+Dialogue: 0,0:31:15.41,0:31:17.87,Default,,0,0,0,,- I gotta talk to you, mister. \N- Wilbur.
+Dialogue: 0,0:31:17.95,0:31:22.42,Default,,0,0,0,,You should start searching the desert \Nfor her, and I'll scan the coastline!
+Dialogue: 0,0:31:22.50,0:31:25.00,Default,,0,0,0,,That's what I'll do. \NAsk the chicks on the beach.
+Dialogue: 0,0:31:25.09,0:31:26.13,Default,,0,0,0,,What?
+Dialogue: 0,0:31:26.21,0:31:29.26,Default,,0,0,0,,Listen! There's some chicks \Nhere that need help.
+Dialogue: 0,0:31:29.34,0:31:31.09,Default,,0,0,0,,Really?
+Dialogue: 0,0:31:34.10,0:31:36.72,Default,,0,0,0,,No. Wait a minute. Hold it.
+Dialogue: 0,0:31:36.93,0:31:40.14,Default,,0,0,0,,I know what you're thinking, \Nand you're wrong. Don't even, no.
+Dialogue: 0,0:31:40.98,0:31:43.69,Default,,0,0,0,,Don't look at me! You're getting "no." \NUnderstand?
+Dialogue: 0,0:31:43.77,0:31:45.90,Default,,0,0,0,,I will not ever sit on those eggs!
+Dialogue: 0,0:31:47.07,0:31:48.48,Default,,0,0,0,,Nuts!
+Dialogue: 0,0:31:50.36,0:31:53.36,Default,,0,0,0,,Gotta learn to be more assertive. \NNo is no is no.
+Dialogue: 0,0:31:54.49,0:31:55.66,Default,,0,0,0,,Hey, quit moving in there!
+Dialogue: 0,0:31:55.66,0:31:55.70,Default,,0,0,0,,Hey, quit moving in there!
+Dialogue: 0,0:32:11.63,0:32:13.01,Default,,0,0,0,,Oh, my gosh!
+Dialogue: 0,0:32:49.50,0:32:50.76,Default,,0,0,0,,Excuse me.
+Dialogue: 0,0:32:53.59,0:32:56.76,Default,,0,0,0,,Look, I've got a long way to go, \Nyou're going to take me there,
+Dialogue: 0,0:32:56.84,0:32:59.51,Default,,0,0,0,,and you're not going \Nto give me any trouble, right?
+Dialogue: 0,0:33:03.18,0:33:04.35,Default,,0,0,0,,Good.
+Dialogue: 0,0:33:06.48,0:33:07.86,Default,,0,0,0,,NOW, get!
+Dialogue: 0,0:33:27.00,0:33:29.21,Default,,0,0,0,,Help! Help!
+Dialogue: 0,0:34:00.70,0:34:01.08,Default,,0,0,0,,It's okay.
+Dialogue: 0,0:34:02.54,0:34:04.20,Default,,0,0,0,,Come on.
+Dialogue: 0,0:34:06.41,0:34:07.87,Default,,0,0,0,,Thanks, little mate.
+Dialogue: 0,0:34:11.67,0:34:17.55,Default,,0,0,0,,Bernard, you are magnificent. \NYou are absolutely the hero of the day.
+Dialogue: 0,0:34:17.84,0:34:21.05,Default,,0,0,0,,Miss Bianca, \Nbefore anything else happens,
+Dialogue: 0,0:34:23.18,0:34:25.89,Default,,0,0,0,,-will you marry me? \N- Bernard.
+Dialogue: 0,0:34:25.98,0:34:28.48,Default,,0,0,0,,Of course, I will!
+Dialogue: 0,0:34:29.98,0:34:31.40,Default,,0,0,0,,Well done, mate.
+Dialogue: 0,0:34:31.77,0:34:35.57,Default,,0,0,0,,Come on, Marahute, let's all go home.
+Dialogue: 0,0:34:57.84,0:34:58.93,Default,,0,0,0,,Help!
+Dialogue: 0,0:34:59.01,0:35:00.59,Default,,0,0,0,,Anybody!
+Dialogue: 0,0:35:00.93,0:35:02.55,Default,,0,0,0,,Bernard!
+Dialogue: 0,0:35:02.93,0:35:04.89,Default,,0,0,0,,Bianca!
+Dialogue: 0,0:35:04.97,0:35:07.27,Default,,0,0,0,,Where are you?
+Dialogue: 0,0:35:07.68,0:35:10.90,Default,,0,0,0,,Okay, that's it, I'm out of here. \NThis is ridiculous.
+Dialogue: 0,0:35:10.98,0:35:13.31,Default,,0,0,0,,You can't leave me here alone.
+Dialogue: 0,0:35:13.44,0:35:15.53,Default,,0,0,0,,I'm gone! I am gone.
+Dialogue: 0,0:35:17.82,0:35:21.32,Default,,0,0,0,,No, stay in those eggs! \NThat's a direct order!
+Dialogue: 0,0:35:24.28,0:35:28.00,Default,,0,0,0,,Hey, you're kind of a cute little feller.

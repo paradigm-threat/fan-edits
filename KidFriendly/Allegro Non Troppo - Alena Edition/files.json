@@ -5,7 +5,12 @@
     {
       "path": "Allegro Non Troppo - Alena Edition.kdenlive",
       "kind": "kdenlive",
-      "bytes": 35285
+      "bytes": 34527
+    },
+    {
+      "path": "Allegro Non Troppo - Alena Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 565
     }
   ]
 }
