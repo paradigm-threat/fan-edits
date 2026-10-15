@@ -1,7 +1,7 @@
 {
   "schema": "relay.assets-manifest.v1",
-  "mediaRoot": "bafybeiew76v7zwggj2gvmk7y6jeu55e3rhgt3ajxadhrjtxol6g6hwt5xa",
-  "mediaRootBuiltAt": "2026-10-10T16:00:57Z",
+  "mediaRoot": "bafybeibbrw3hzksho5c455i42x3y5xul5mksav7mfox6mwgssl7yvtyvv4",
+  "mediaRootBuiltAt": "2026-10-15T20:26:48Z",
   "assets": [
     {
       "id": "FanMixes_2012 (2009) - Salvation_2012 (2009) - Salvation.mkv",
@@ -130,6 +130,14 @@
       "contentType": "video/x-matroska",
       "sha256": "fa2512f72cbf810e09db3dfc7e10de35c4eb899512032475051f584635d4bd5b",
       "bytes": 1646318524
+    },
+    {
+      "id": "FanMixes_The Chronicles Of Riddick (2004) - Fry's Edition_The Chronicles Of Riddick (2004) - Fry's Edition.mkv",
+      "path": "FanMixes/The Chronicles Of Riddick (2004) - Fry's Edition/The Chronicles Of Riddick (2004) - Fry's Edition.mkv",
+      "ipfs": "bafybeia5qolxnugcuaqn4cmsz7mew4cqytcyu3gtgohsly4bntdtlos6j4",
+      "contentType": "video/x-matroska",
+      "sha256": "7a17a7b1813d022cefd703741210401e90389a48773a857660eb98832863a9a2",
+      "bytes": 6436973190
     },
     {
       "id": "FanMixes_The Mummy (1999) - Debugged_The Mummy Debugged.mkv",
