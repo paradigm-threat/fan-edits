@@ -105,6 +105,14 @@ themes:
       ".fb-brand:focus":
         color: "var(gold)"
         textDecoration: "none"
+      # Keyboard focus ring (UA default is hard to see on dark theater UI)
+      "a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, .fb-btn:focus-visible, .fb-slideshow-nav:focus-visible, .fb-chat-chan:focus-visible, .fb-theme-toggle:focus-visible":
+        outline: "2px solid var(gold)"
+        outlineOffset: "3px"
+      ".fb-gate-error":
+        margin: "0 0 10px"
+        fontSize: "0.9rem"
+        color: "var(warn)"
       ".fb-brand-logo":
         display: "block"
         height: "52px"

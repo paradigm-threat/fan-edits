@@ -78,6 +78,7 @@
     search.setAttribute('aria-label', 'Search channels');
     sideHead.appendChild(search);
     var status = C.el('div', 'fb-chat-status', 'Connecting…');
+    status.setAttribute('aria-live', 'polite');
     sideHead.appendChild(status);
     side.appendChild(sideHead);
     var list = C.el('ul', 'fb-chat-chan-list');
@@ -114,6 +115,7 @@
     input.type = 'text';
     input.maxLength = 400;
     input.placeholder = 'Message (or /me /join /part)';
+    input.setAttribute('aria-label', 'Message');
     var sendBtn = C.el('button', 'fb-live-chat-send', 'Send');
     sendBtn.type = 'button';
     var regenBtn = C.el('button', 'fb-chat-btn', 'New nick');
@@ -147,18 +149,47 @@
       topicLabel.textContent = '#' + state.channel + (extra ? ' — ' + extra : '');
     }
 
+    function setChromeInert(on) {
+      try {
+        var nodes = global.document.querySelectorAll(
+          '.fb-header, .fb-now-showing-host, .fb-footer, .fb-marquee, .fb-backdrop',
+        );
+        for (var i = 0; i < nodes.length; i++) {
+          if (root.contains(nodes[i])) continue;
+          if (on) nodes[i].setAttribute('inert', '');
+          else nodes[i].removeAttribute('inert');
+        }
+        // Also inert siblings of the chat host inside main (page chrome around ChatApp).
+        var host = root.closest('.fb-chat-app-host') || root.parentElement;
+        var mainEl = global.document.querySelector('.fb-main');
+        if (mainEl) {
+          var kids = mainEl.children;
+          for (var j = 0; j < kids.length; j++) {
+            if (host && (kids[j] === host || kids[j].contains(root))) continue;
+            if (on) kids[j].setAttribute('inert', '');
+            else kids[j].removeAttribute('inert');
+          }
+        }
+      } catch (_) {}
+    }
+
     function setFullscreen(on) {
       if (on) {
         root.classList.add('is-fullscreen');
         try {
           global.document.body.classList.add('fb-chat-fs-open');
         } catch (_) {}
+        setChromeInert(true);
         fsBtn.textContent = 'Exit full';
+        try {
+          fsBtn.focus();
+        } catch (_) {}
       } else {
         root.classList.remove('is-fullscreen');
         try {
           global.document.body.classList.remove('fb-chat-fs-open');
         } catch (_) {}
+        setChromeInert(false);
         fsBtn.textContent = 'Fullscreen';
       }
     }

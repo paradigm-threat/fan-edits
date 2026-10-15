@@ -2046,7 +2046,7 @@ export default function FlashbackApp() {
       )
     }
     let playDisabled = true
-    if (inPageMkvOk === true) {
+    if (inPageMkvOk === true && movieAck === true && ack === true) {
       playDisabled = false
     }
     let playTitle = 'In-browser Play needs Matroska + HEVC support (not available yet)'
@@ -2102,6 +2102,7 @@ export default function FlashbackApp() {
                 alt=""
                 className="fb-movie-poster"
                 data-fb-pop-image="1"
+                aria-label={'View poster for ' + displayTitle}
                 width={280}
                 height={420}
                 decoding="async"

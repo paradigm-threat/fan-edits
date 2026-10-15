@@ -89,6 +89,7 @@
       imgEl.src = src;
       imgEl.alt = alt || '';
     }
+    ov.setAttribute('aria-label', alt || 'Poster');
     ov._fbReturnFocus = returnFocus || null;
     try {
       ov._fbPrevOverflow = doc.body ? doc.body.style.overflow : '';
@@ -116,7 +117,16 @@
     if (!img.getAttribute('role')) img.setAttribute('role', 'button');
     if (!img.hasAttribute('tabindex')) img.setAttribute('tabindex', '0');
     if (!img.getAttribute('aria-label')) {
-      img.setAttribute('aria-label', 'View poster fullscreen');
+      var titleHint =
+        img.getAttribute('data-fb-pop-label') ||
+        img.getAttribute('data-title') ||
+        '';
+      img.setAttribute(
+        'aria-label',
+        titleHint
+          ? 'View poster for ' + titleHint
+          : 'View poster fullscreen',
+      );
     }
     function open(e) {
       if (e) {
@@ -125,7 +135,9 @@
       }
       var src = img.currentSrc || img.src || img.getAttribute('src') || '';
       if (!src) return;
-      openOverlay(src, img.getAttribute('alt') || '', img);
+      var label =
+        img.getAttribute('aria-label') || img.getAttribute('alt') || 'Poster';
+      openOverlay(src, label, img);
     }
     img.addEventListener('click', open);
     img.addEventListener('keydown', function (e) {

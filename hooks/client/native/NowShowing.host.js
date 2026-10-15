@@ -290,7 +290,7 @@
     const sub = doc.createElement('p');
     sub.className = 'fb-now-showing-sub';
     sub.textContent =
-      'Ready to play or download on the server right now (Bunny CDN) — not the full library. Other titles: open the ipfs:// link (see Setup), use the Flashback App, or request Drive links.';
+      'Ready to play or download on this host now (Bunny CDN). Other titles need IPFS, the Flashback App, or a Drive request — see Setup.';
     titleBlock.appendChild(h2);
     titleBlock.appendChild(sub);
     const counter = doc.createElement('p');
@@ -300,13 +300,21 @@
 
     const frame = doc.createElement('div');
     frame.className = 'fb-slideshow-frame';
-    frame.setAttribute('aria-live', 'polite');
+
+    const live = doc.createElement('p');
+    live.className = 'fb-slideshow-live';
+    live.setAttribute('aria-live', 'polite');
+    live.setAttribute('aria-atomic', 'true');
+    // Visually hide; counter in the head stays visible.
+    live.style.cssText =
+      'position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0';
 
     const stage = doc.createElement('div');
     stage.className = 'fb-slideshow-stage';
 
     function makeLayer(cls) {
-      const a = doc.createElement('a');
+      // Article (not <a>) so markdown links in blurb/README are valid.
+      const a = doc.createElement('article');
       a.className = 'fb-slideshow-media ' + cls;
       a.setAttribute('aria-hidden', cls.indexOf('is-active') >= 0 ? 'false' : 'true');
       const img = doc.createElement('img');
@@ -320,6 +328,9 @@
       kicker.textContent = 'Feature presentation';
       const title = doc.createElement('h3');
       title.className = 'fb-slideshow-title';
+      const titleLink = doc.createElement('a');
+      titleLink.className = 'fb-slideshow-title-link';
+      title.appendChild(titleLink);
       const scroll = doc.createElement('div');
       scroll.className = 'fb-slideshow-scroll';
       const blurb = doc.createElement('div');
@@ -340,6 +351,7 @@
         a: a,
         img: img,
         title: title,
+        titleLink: titleLink,
         blurb: blurb,
         readme: readme,
         meta: meta,
@@ -455,8 +467,9 @@
     }
 
     function fillLayer(layer, it) {
-      layer.a.href = it.href || '#';
-      layer.title.textContent = it.title || '';
+      const href = it.href || '#';
+      layer.titleLink.href = href;
+      layer.titleLink.textContent = it.title || '';
       const blurbText = it && it.blurb ? String(it.blurb) : '';
       if (blurbText) {
         setMarkdown(layer.blurb, blurbText);
@@ -526,14 +539,23 @@
       } catch (_) {}
     }
 
+    function announce() {
+      const it = list[idx];
+      const label = it && it.title ? String(it.title) : '';
+      counter.textContent = idx + 1 + ' / ' + list.length;
+      live.textContent = label
+        ? 'Slide ' + (idx + 1) + ' of ' + list.length + ': ' + label
+        : 'Slide ' + (idx + 1) + ' of ' + list.length;
+    }
+
     function paintInstant() {
       const it = list[idx];
-      counter.textContent = idx + 1 + ' / ' + list.length;
       fillLayer(front, it);
       front.a.classList.add('is-active');
       front.a.setAttribute('aria-hidden', 'false');
       back.a.classList.remove('is-active');
       back.a.setAttribute('aria-hidden', 'true');
+      announce();
       prefetch((idx + 1) % list.length);
       prefetch((idx - 1 + list.length) % list.length);
     }
@@ -560,7 +582,6 @@
       incomingEl.setAttribute('aria-hidden', 'false');
       outgoingEl.classList.remove('is-active');
       outgoingEl.setAttribute('aria-hidden', 'true');
-      counter.textContent = nextIdx + 1 + ' / ' + list.length;
 
       const finish = function () {
         // Swap roles only — do not toggle is-active again (that caused a 2nd fade-in).
@@ -569,6 +590,7 @@
         back = tmp;
         idx = nextIdx;
         busy = false;
+        announce();
         prefetch((idx + 1) % list.length);
         armAuto();
       };
@@ -623,15 +645,34 @@
       go(1);
     });
 
-    // Pause autoplay while hovering / focused.
-    root.addEventListener('mouseenter', function () {
+    function pauseAuto() {
       if (autoTimer) {
         global.clearTimeout(autoTimer);
         autoTimer = null;
       }
-    });
+    }
+
+    // Pause autoplay while hovering / keyboard-focused inside the region.
+    root.addEventListener('mouseenter', pauseAuto);
     root.addEventListener('mouseleave', function () {
       armAuto();
+    });
+    root.addEventListener('focusin', pauseAuto);
+    root.addEventListener('focusout', function (ev) {
+      try {
+        if (ev && ev.relatedTarget && root.contains(ev.relatedTarget)) return;
+      } catch (_) {}
+      armAuto();
+    });
+    root.addEventListener('keydown', function (ev) {
+      if (!ev) return;
+      if (ev.key === 'ArrowLeft') {
+        ev.preventDefault();
+        go(-1);
+      } else if (ev.key === 'ArrowRight') {
+        ev.preventDefault();
+        go(1);
+      }
     });
 
     root.appendChild(head);
@@ -639,6 +680,7 @@
     row.className = 'fb-slideshow-row';
     row.appendChild(prev);
     row.appendChild(frame);
+    frame.appendChild(live);
     row.appendChild(next);
     root.appendChild(row);
     paintInstant();
@@ -676,6 +718,13 @@
     if (existing) {
       const haveSig = existing.getAttribute('data-fb-items-sig') || '';
       const haveVariant = existing.getAttribute('data-fb-variant') || '';
+      // Pre-readme carousel shells match sig but omit .fb-slideshow-readme — force rebuild.
+      if (
+        wantVariant === 'carousel' &&
+        !existing.querySelector('.fb-slideshow-readme')
+      ) {
+        return true;
+      }
       // Same content already built — skip (prevents animation restart / ghosting).
       if (haveSig === wantSig && haveVariant === wantVariant) return false;
     }
