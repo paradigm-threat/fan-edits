@@ -150,6 +150,20 @@ themes:
       ".fb-link:hover":
         color: "var(cream)"
         textDecoration: "underline"
+      ".fb-lobby-music":
+        background: "transparent"
+        border: "none"
+        padding: "0"
+        margin: "0"
+        font: "inherit"
+        cursor: "pointer"
+        color: "var(gold)"
+        letterSpacing: "0.02em"
+      ".fb-lobby-music:hover":
+        color: "var(cream)"
+        textDecoration: "underline"
+      ".fb-lobby-music.fb-lobby-on":
+        color: "var(cream)"
       ".fb-marquee":
         position: "relative"
         zIndex: "2"

@@ -693,11 +693,25 @@
       applyAvailability();
     }
 
+    function notifyLobbyTheater(on) {
+      try {
+        if (global.FlashbackLobbyAudio && global.FlashbackLobbyAudio.setTheater) {
+          global.FlashbackLobbyAudio.setTheater(!!on);
+        }
+        if (typeof global.CustomEvent === 'function') {
+          global.dispatchEvent(
+            new global.CustomEvent('fb-lobby-theater', { detail: { theater: !!on } }),
+          );
+        }
+      } catch (_) {}
+    }
+
     openHttpsBtn.addEventListener('click', function () {
       clearFailTimer();
       leftPage = false;
       if (!requireStreamAction('Confirm ownership first, then open the stream link.')) return;
       setFeedback(smartTv ? 'Opening stream on this TV…' : 'Opening stream link…');
+      notifyLobbyTheater(true);
       if (!navigateExternal(streamUrl)) {
         setFeedback('Could not open the stream link. Try Copy link.');
       }
@@ -731,6 +745,7 @@
         }
         setFeedback('Opening VLC…');
       }
+      notifyLobbyTheater(true);
       if (!navigateExternal(launch)) {
         setFeedback(
           android
@@ -814,6 +829,13 @@
           if (global.document && global.document.visibilityState === 'hidden') {
             leftPage = true;
             clearFailTimer();
+          } else if (
+            global.document &&
+            global.document.visibilityState === 'visible' &&
+            leftPage
+          ) {
+            // Returned from VLC / external player — resume lobby.
+            notifyLobbyTheater(false);
           }
         } catch (_) {}
       });

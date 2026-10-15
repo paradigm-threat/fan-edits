@@ -2314,6 +2314,14 @@ export default function FlashbackApp() {
             >
               Theme: Velvet
             </a>
+            <button
+              type="button"
+              className="fb-link fb-lobby-music"
+              data-fb-lobby-music="1"
+              aria-pressed="false"
+            >
+              Lobby music
+            </button>
           </nav>
         </header>
         <NowShowing variant="lcd" itemsJson={nowItemsJson} ariaLabel="Now showing titles" />
