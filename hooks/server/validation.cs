@@ -104,6 +104,9 @@ function isAllowedPath(p) {
   if (isGitTipPosterPath(p)) return true
   if (endsWith(p, '.md') || endsWith(p, '.MD')) return true
   if (endsWith(p, '.reel')) return true
+  // Edit projects + project-files manifests (not feature media)
+  if (endsWith(p, '.kdenlive') || endsWith(p, '.KDENLIVE')) return true
+  if (endsWith(p, 'files.json') || endsWith(p, 'stats.json')) return true
   if (endsWith(p, '.srt') || endsWith(p, '.SRT')) return true
   if (endsWith(p, '.ass') || endsWith(p, '.ASS')) return true
   if (contains(p, 'remove-') && (endsWith(p, '-ranges.json') || endsWith(p, '-ranges.JSON'))) return true
