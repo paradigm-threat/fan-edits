@@ -1,0 +1,70 @@
+{
+  "_comment": "Bunny CDN objects ready for Now Showing. Do NOT merge into now-showing.json until poster.jpg exists in tip FanMixes/<title>/ and README is updated. streamHttps* filled by upload script.",
+  "readyForNowShowing": [],
+  "uploadedAwaitingPosterAndReadme": [
+    {
+      "slug": "2012-2009-salvation",
+      "title": "2012 (2009) - Open The Gates",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/2012-2009-salvation/2012_2009_-_Salvation.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/2012-2009-salvation/2012_2009_-_Salvation_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/2012-2009-salvation/2012_2009_-_Salvation_mobile-720p.mkv",
+      "blockedReason": "poster.jpg + Open The Gates README on tip; not promoted to now-showing.json yet"
+    },
+    {
+      "slug": "alien-resurrection-1997-unjossed",
+      "title": "Alien Resurrection (1997) - UnJossed Edition",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/alien-resurrection-1997-unjossed/Alien_Resurrection_1997_-_UnJossed_Edition.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/alien-resurrection-1997-unjossed/Alien_Resurrection_1997_-_UnJossed_Edition_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/alien-resurrection-1997-unjossed/Alien_Resurrection_1997_-_UnJossed_Edition_mobile-720p.mkv",
+      "blockedReason": "missing tip poster.jpg \u2014 not in now-showing.json yet"
+    },
+    {
+      "slug": "fear-and-loathing-1998-no-north-star",
+      "title": "Fear and Loathing in Las Vegas (1998) - No North Star",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/fear-and-loathing-1998-no-north-star/Fear_and_Loathing_in_Las_Vegas_1998_-_No_North_Star.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/fear-and-loathing-1998-no-north-star/Fear_and_Loathing_in_Las_Vegas_1998_-_No_North_Star_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/fear-and-loathing-1998-no-north-star/Fear_and_Loathing_in_Las_Vegas_1998_-_No_North_Star_mobile-720p.mkv",
+      "blockedReason": "missing tip poster.jpg \u2014 not in now-showing.json yet"
+    },
+    {
+      "slug": "star-trek-first-contact-1996-no-ahab",
+      "title": "Star Trek First Contact (1996) - No Ahab",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/star-trek-first-contact-1996-no-ahab/Star_Trek_First_Contact_1996_-_No_Ahab.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/star-trek-first-contact-1996-no-ahab/Star_Trek_First_Contact_1996_-_No_Ahab_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/star-trek-first-contact-1996-no-ahab/Star_Trek_First_Contact_1996_-_No_Ahab_mobile-720p.mkv",
+      "blockedReason": "missing tip poster.jpg \u2014 not in now-showing.json yet"
+    },
+    {
+      "slug": "boogie-nights-1997-no-lookout",
+      "title": "Boogie Nights (1997) - No Lookout",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/boogie-nights-1997-no-lookout/Boogie_Nights_1997_-_No_Lookout.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/boogie-nights-1997-no-lookout/Boogie_Nights_1997_-_No_Lookout_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/boogie-nights-1997-no-lookout/Boogie_Nights_1997_-_No_Lookout_mobile-720p.mkv",
+      "blockedReason": "missing tip poster.jpg \u2014 not in now-showing.json yet"
+    },
+    {
+      "slug": "contact-1997-no-alphas",
+      "title": "Contact (1997) - No Alphas",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/contact-1997-no-alphas/Contact_1997_-_No_Alphas.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/contact-1997-no-alphas/Contact_1997_-_No_Alphas_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/contact-1997-no-alphas/Contact_1997_-_No_Alphas_mobile-720p.mkv",
+      "blockedReason": "missing tip poster.jpg \u2014 not in now-showing.json yet"
+    },
+    {
+      "slug": "fried-green-tomatoes-1991-no-frank-bennett",
+      "title": "Fried Green Tomatoes (1991) - No Frank Bennett",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/fried-green-tomatoes-1991-no-frank-bennett/Fried_Green_Tomatoes_1991_-_No_Frank_Bennett.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/fried-green-tomatoes-1991-no-frank-bennett/Fried_Green_Tomatoes_1991_-_No_Frank_Bennett_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/fried-green-tomatoes-1991-no-frank-bennett/Fried_Green_Tomatoes_1991_-_No_Frank_Bennett_mobile-720p.mkv",
+      "blockedReason": "missing tip poster.jpg \u2014 not in now-showing.json yet"
+    },
+    {
+      "slug": "riddick-2013-unjinxed",
+      "title": "Riddick (2013) - Unjinxed Edition",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/riddick-2013-unjinxed/Riddick_2013_-_Unjinxed_Edition.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/riddick-2013-unjinxed/Riddick_2013_-_Unjinxed_Edition_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/riddick-2013-unjinxed/Riddick_2013_-_Unjinxed_Edition_mobile-720p.mkv",
+      "blockedReason": "missing tip poster.jpg \u2014 not in now-showing.json yet"
+    }
+  ]
+}
