@@ -1,7 +1,8 @@
 /**
  * Lobby OST — background playlist while browsing; fades when theater is active.
  * Web: off until user taps Lobby music (autoplay gesture unlock); choice in localStorage.
- * Playlist: /hooks/client/lobby/lobby.playlist.json + LobbyPlaylist.js
+ * Cross-tab: Web Locks (`flashback-lobby-audio`) — only one tab is the audio leader;
+ * followers silence locally and show "on (other tab)". Playlist: lobby.playlist.json.
  */
 ;(function (global) {
   'use strict'
@@ -11,6 +12,8 @@
   global.__fbLobbyAudioBooted = true
 
   var PLAYLIST_URL = '/hooks/client/lobby/lobby.playlist.json'
+  var LOCK_NAME = 'flashback-lobby-audio'
+  var BC_NAME = 'flashback-lobby-audio'
   var playlist = null
   var audio = null
   var queue = []
@@ -23,9 +26,128 @@
   var btn = null
   var unlockArmed = false
   var playBlocked = false
+  /** Exclusive Web Lock holder — only this tab may actually play audio. */
+  var isAudioLeader = !!(global.navigator && !global.navigator.locks)
+  var lockHoldResolve = null
+  var lockClaimed = false
+  var otherTabPlaying = false
+  var bc = null
 
   function LP() {
     return global.FlashbackLobbyPlaylist
+  }
+
+  function hasLocks() {
+    return !!(global.navigator && global.navigator.locks && typeof global.navigator.locks.request === 'function')
+  }
+
+  function pauseLocalAudio() {
+    clearFade()
+    if (!audio) return
+    try {
+      audio.pause()
+    } catch (e) {}
+    try {
+      audio.volume = 0
+    } catch (e2) {}
+  }
+
+  function broadcast(msg) {
+    try {
+      if (bc) bc.postMessage(msg)
+    } catch (e) {}
+  }
+
+  function releaseLeadership() {
+    if (lockHoldResolve) {
+      var r = lockHoldResolve
+      lockHoldResolve = null
+      try {
+        r()
+      } catch (e) {}
+    }
+  }
+
+  /**
+   * Claim exclusive lock so only one tab plays. Waiters become leader when the
+   * previous holder closes / releases. No SharedWorker — HTMLAudio needs the page.
+   */
+  function claimLeadership() {
+    if (!hasLocks()) {
+      isAudioLeader = true
+      return
+    }
+    if (lockClaimed) return
+    lockClaimed = true
+    global.navigator.locks
+      .request(LOCK_NAME, function () {
+        isAudioLeader = true
+        otherTabPlaying = false
+        broadcast({ type: 'leader', playing: true })
+        applyDecision()
+        var lib = LP()
+        if (lib) updateButton(lib.readWebEnabled())
+        // Hold until pagehide / explicit release — then another tab may take over.
+        return new Promise(function (resolve) {
+          lockHoldResolve = resolve
+        })
+      })
+      .then(function () {
+        isAudioLeader = false
+        lockClaimed = false
+        lockHoldResolve = null
+        pauseLocalAudio()
+        broadcast({ type: 'leader', playing: false })
+        var lib = LP()
+        if (lib) updateButton(lib.readWebEnabled())
+        // Re-queue if this tab is still open (e.g. brief steal) and music still enabled.
+        if (lib && lib.readWebEnabled() && !(global.document && global.document.hidden)) {
+          global.setTimeout(claimLeadership, 50)
+        }
+      })
+      .catch(function () {
+        isAudioLeader = false
+        lockClaimed = false
+        lockHoldResolve = null
+      })
+  }
+
+  function wireCrossTab() {
+    try {
+      if (typeof global.BroadcastChannel === 'function') {
+        bc = new global.BroadcastChannel(BC_NAME)
+        bc.onmessage = function (ev) {
+          var d = (ev && ev.data) || {}
+          if (d.type === 'leader') {
+            if (!isAudioLeader) {
+              otherTabPlaying = !!d.playing
+              pauseLocalAudio()
+              var lib = LP()
+              if (lib) updateButton(lib.readWebEnabled())
+            }
+          } else if (d.type === 'enabled') {
+            // Another tab toggled localStorage preference — re-evaluate.
+            applyDecision()
+            var lib2 = LP()
+            if (lib2) updateButton(lib2.readWebEnabled())
+          }
+        }
+      }
+    } catch (e) {}
+    try {
+      global.addEventListener('storage', function (ev) {
+        var lib = LP()
+        if (!lib || !ev || ev.key !== lib.LS_KEY) return
+        playBlocked = false
+        applyDecision()
+        updateButton(lib.readWebEnabled())
+      })
+    } catch (e2) {}
+    try {
+      global.addEventListener('pagehide', function () {
+        releaseLeadership()
+      })
+    } catch (e3) {}
   }
 
   function ensureAudio() {
@@ -108,6 +230,7 @@
   }
 
   function playIndex(i, fadeIn) {
+    if (!isAudioLeader) return
     if (!queue.length) return
     queueIdx = ((i % queue.length) + queue.length) % queue.length
     var url = queue[queueIdx]
@@ -134,6 +257,7 @@
     if (p && typeof p.then === 'function') {
       p.then(function () {
         playBlocked = false
+        broadcast({ type: 'leader', playing: true })
         if (fadeIn) fadeTo(targetVol, (playlist && playlist.fadeInMs) || 1200)
       }).catch(function () {
         playBlocked = true
@@ -156,7 +280,13 @@
       })
       targetVol = dec.volume
       updateButton(enabled)
-      if (dec.action === 'fadeOut') {
+      // Follower tabs never start audio — leader holds Web Lock.
+      if (!isAudioLeader) {
+        pauseLocalAudio()
+        if (enabled) otherTabPlaying = true
+        return
+      }
+      if (dec.action === 'fadeOut' || !enabled) {
         fadeTo(0, dec.ms || dec.fadeOutMs)
         return
       }
@@ -194,11 +324,17 @@
     for (var i = 0; i < nodes.length; i++) {
       var el = nodes[i]
       el.setAttribute('aria-pressed', enabled ? 'true' : 'false')
-      el.textContent = enabled
-        ? playBlocked
-          ? 'Lobby music: on (tap)'
-          : 'Lobby music: on'
-        : 'Lobby music'
+      var label = 'Lobby music'
+      if (enabled) {
+        if (!isAudioLeader || otherTabPlaying) {
+          label = 'Lobby music: on (other tab)'
+        } else if (playBlocked) {
+          label = 'Lobby music: on (tap)'
+        } else {
+          label = 'Lobby music: on'
+        }
+      }
+      el.textContent = label
       if (enabled) el.classList.add('fb-lobby-on')
       else el.classList.remove('fb-lobby-on')
     }
@@ -210,6 +346,12 @@
     if (!lib) return
     lib.writeWebEnabled(!!on)
     playBlocked = false
+    broadcast({ type: 'enabled', on: !!on })
+    if (on) claimLeadership()
+    else {
+      pauseLocalAudio()
+      releaseLeadership()
+    }
     applyDecision()
   }
 
@@ -265,7 +407,12 @@
         if (!lib) return
         // Enabled + not audibly playing → this click is the unlock / resume
         // gesture (document pointerdown may already have cleared playBlocked).
+        // Follower tabs (other tab holds Web Lock) toggle off instead of retrying.
         if (lib.readWebEnabled()) {
+          if (!isAudioLeader) {
+            setEnabled(false)
+            return
+          }
           var a = audio
           if (playBlocked || !a || a.paused) {
             retryPlayFromGesture()
@@ -295,6 +442,7 @@
   }
 
   function boot() {
+    wireCrossTab()
     syncUi()
     loadPlaylist()
     onNavigate()
@@ -305,6 +453,7 @@
         playBlocked = true
         armGestureUnlock()
         updateButton(true)
+        claimLeadership()
       }
     } catch (e) {}
     global.addEventListener('fb-lobby-theater', function (ev) {
@@ -336,6 +485,9 @@
     isEnabled: function () {
       var lib = LP()
       return !!(lib && lib.readWebEnabled())
+    },
+    isAudioLeader: function () {
+      return !!isAudioLeader
     },
   }
 })(typeof globalThis !== 'undefined' ? globalThis : this)
