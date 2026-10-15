@@ -5,7 +5,12 @@
     {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 668
+      "bytes": 5597
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 262269
     }
   ]
 }
