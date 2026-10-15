@@ -8,6 +8,16 @@
       "bytes": 2198825
     },
     {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 21818
+    },
+    {
+      "path": "Sonic 3 (2024) - DeSchwartzed.kdenlive.ass",
+      "kind": "other",
+      "bytes": 63780
+    },
+    {
       "path": "poster.jpg",
       "kind": "poster",
       "bytes": 260594
@@ -16,6 +26,11 @@
       "path": "README.md",
       "kind": "readme",
       "bytes": 4804
+    },
+    {
+      "path": "Sonic 3 (2024) - DeSchwartzed.srt",
+      "kind": "srt",
+      "bytes": 52159
     }
   ]
 }

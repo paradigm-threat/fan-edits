@@ -1,0 +1,16 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "KidFriendly/Aladin (1992) - Alena Edition",
+  "files": [
+    {
+      "path": "Aladin (1992) - Alena Edition.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 44560
+    },
+    {
+      "path": "Aladin (1992) - Alena Edition.srt",
+      "kind": "srt",
+      "bytes": 78223
+    }
+  ]
+}

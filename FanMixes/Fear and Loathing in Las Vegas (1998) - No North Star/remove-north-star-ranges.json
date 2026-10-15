@@ -1,0 +1,17 @@
+{
+  "description": "Remove the North Star Coffee Lounge waitress/knife sequence. Bounds snapped to detected shot transitions (threshold 0.30) nearest the owner times 1:41:44–1:47:02. Out-point is the cut from Duke's knife close-up onto the diner neon; in-point is the cut from the sobbing waitress onto the Red Shark driving scene. Hard picture cut on those frames; 0.5 s audio fade-out/fade-in at the join (no overlapping acrossfade, so A/V stay in sync).",
+  "xfade": {
+    "transition": "cut",
+    "duration": 0,
+    "audio_fade": 0.5
+  },
+  "ranges": [
+    {
+      "start": 6104.098,
+      "end": 6423.208,
+      "join_fade": true,
+      "transition": "cut",
+      "note": "North Star Coffee Lounge: neon establish through Gonzo terrorizing the waitress with a knife; resume at 'It was all over now' / convertible. Picture hard-cut; kdenlive volume fade 0.5 s."
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "KidFriendly/Sound of Music",
+  "files": [
+    {
+      "path": "Sound of Music - Alena Edition.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 505647
+    },
+    {
+      "path": "Sound of Music - Alena Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 75458
+    },
+    {
+      "path": "Sound of Music - Alena Edition.srt",
+      "kind": "srt",
+      "bytes": 63087
+    }
+  ]
+}

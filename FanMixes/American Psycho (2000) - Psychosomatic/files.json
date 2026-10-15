@@ -6,6 +6,26 @@
       "path": "American Psycho (2000) - Psychosomatic.kdenlive",
       "kind": "kdenlive",
       "bytes": 235373
+    },
+    {
+      "path": "American Psycho (2000) - Psychosomatic.kdenlive.ass",
+      "kind": "other",
+      "bytes": 113973
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 6068
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 883
+    },
+    {
+      "path": "American Psycho (2000) - Psychosomatic.srt",
+      "kind": "srt",
+      "bytes": 90145
     }
   ]
 }

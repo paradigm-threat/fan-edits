@@ -1,0 +1,66 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "KidFriendly/Willy Wonka & the Chocolate Factory (1971) [1080p]",
+  "files": [
+    {
+      "path": "Willy Wonka - dialog-split.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 213254
+    },
+    {
+      "path": "Willy Wonka - dialog-split.snap.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 205944
+    },
+    {
+      "path": "Willy Wonka - KidFriendly remove tunnel.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 7563
+    },
+    {
+      "path": "Willy Wonka - dialog-split.kdenlive.ass",
+      "kind": "other",
+      "bytes": 145509
+    },
+    {
+      "path": "Willy Wonka - dialog-split.segments.json",
+      "kind": "other",
+      "bytes": 109230
+    },
+    {
+      "path": "Willy Wonka - dialog-split.snap.kdenlive.ass",
+      "kind": "other",
+      "bytes": 145509
+    },
+    {
+      "path": "Willy Wonka - dialog-split.snap.segments.json",
+      "kind": "other",
+      "bytes": 204255
+    },
+    {
+      "path": "Willy Wonka - KidFriendly remove tunnel.debug.json",
+      "kind": "other",
+      "bytes": 32392
+    },
+    {
+      "path": "Willy Wonka - KidFriendly remove tunnel.kdenlive.ass",
+      "kind": "other",
+      "bytes": 142283
+    },
+    {
+      "path": "fan-edits-wonka-backup/Willy.Wonka.&.the.Chocolate.Factory.1971.1080p.BrRip.720p.x264.YIFY.srt",
+      "kind": "srt",
+      "bytes": 126289
+    },
+    {
+      "path": "Willy Wonka - KidFriendly Edition.srt",
+      "kind": "srt",
+      "bytes": 116436
+    },
+    {
+      "path": "Willy Wonka - KidFriendly remove tunnel.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 116436
+    }
+  ]
+}

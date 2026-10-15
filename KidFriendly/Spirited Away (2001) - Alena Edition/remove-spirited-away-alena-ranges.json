@@ -1,0 +1,47 @@
+{
+  "description": "Alena Edition removals for Spirited Away (2001). Source seconds on the NoobSubs 720p rip. No-Face gold / frog-eat / havoc / calm-down is one window that lands on him spitting the frog back out.",
+  "ranges": [
+    {
+      "start": 498,
+      "end": 902,
+      "join_fade": true,
+      "note": "Parents gorging at food stalls through pig transformation, until Haku finds Chihiro"
+    },
+    {
+      "start": 1024,
+      "end": 1088,
+      "join_fade": false,
+      "note": "Spirit bridge crossing — faceless ghosts, hold breath"
+    },
+    {
+      "start": 2087,
+      "end": 2304,
+      "join_fade": true,
+      "note": "Yubaba giant-head witch office intimidation through death threats"
+    },
+    {
+      "start": 3478,
+      "end": 3955,
+      "join_fade": true,
+      "note": "Stink Spirit arrival, slug/toxin purge, grotesque bath"
+    },
+    {
+      "start": 4092.2,
+      "end": 5716.08,
+      "join_fade": true,
+      "note": "No-Face offers gold (01:08:39), eats the frog, morning gold-feast/havoc, Haku injury intercut, rampage, lonely 'I want Sen' / dumpling calm-down. Resume on the silent vomit (01:35:16) so the frog coming back out stays."
+    },
+    {
+      "start": 6138,
+      "end": 6176,
+      "join_fade": false,
+      "note": "Turn parents into bacon or ham"
+    },
+    {
+      "start": 7005,
+      "end": 7026,
+      "join_fade": false,
+      "note": "Pig barn grotesque close-ups before parent test"
+    }
+  ]
+}

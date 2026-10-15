@@ -1,0 +1,50 @@
+{
+  "description": "Kid-friendly (approx age 3): manual scene list from YIFY-aligned English SRT; pad 6s, merge 45s. Regenerate via build_remove_ranges.py.",
+  "ranges": [
+    {
+      "start": 142.15,
+      "end": 193.35,
+      "join_fade": false
+    },
+    {
+      "start": 545.99,
+      "end": 661.0,
+      "join_fade": false
+    },
+    {
+      "start": 779.0,
+      "end": 1133.5,
+      "join_fade": false
+    },
+    {
+      "start": 1183.53,
+      "end": 1404.5,
+      "join_fade": false
+    },
+    {
+      "start": 1795.34,
+      "end": 1822.94,
+      "join_fade": false
+    },
+    {
+      "start": 2220.35,
+      "end": 2366.5,
+      "join_fade": false
+    },
+    {
+      "start": 2431.85,
+      "end": 2601.0,
+      "join_fade": false
+    },
+    {
+      "start": 3306.77,
+      "end": 3336.0,
+      "join_fade": false
+    },
+    {
+      "start": 3682.85,
+      "end": 4018.0,
+      "join_fade": false
+    }
+  ]
+}

@@ -6,6 +6,16 @@
       "path": "Thor Ragnarok (2017) - Kid friendly.kdenlive",
       "kind": "kdenlive",
       "bytes": 344198
+    },
+    {
+      "path": "Thor Ragnarok (2017) - Kid friendly.kdenlive.ass",
+      "kind": "other",
+      "bytes": 140139
+    },
+    {
+      "path": "Thor Ragnarok (2017) - Kid friendly.srt",
+      "kind": "srt",
+      "bytes": 110354
     }
   ]
 }

@@ -1,0 +1,14 @@
+{
+  "video": "/media/ari/HD/FanEditRender/Boogie Nights (1997)/Boogie Nights 1997 1080p BluRay x264 AAC - Ozlem.mkv",
+  "start": 7288.0,
+  "end": 7340.0,
+  "threshold": 0.12,
+  "cuts": [
+    7292.285,
+    7294.37,
+    7297.957,
+    7305.214,
+    7328.154
+  ],
+  "cut_count": 5
+}

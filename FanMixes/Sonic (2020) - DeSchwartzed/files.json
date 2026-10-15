@@ -8,6 +8,16 @@
       "bytes": 806357
     },
     {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 17364
+    },
+    {
+      "path": "Sonic (2020) - DeSchwartzed.ass",
+      "kind": "other",
+      "bytes": 41529
+    },
+    {
       "path": "poster.jpg",
       "kind": "poster",
       "bytes": 269203
@@ -16,6 +26,11 @@
       "path": "README.md",
       "kind": "readme",
       "bytes": 4085
+    },
+    {
+      "path": "Sonic (2020) - DeSchwartzed.srt",
+      "kind": "srt",
+      "bytes": 34181
     }
   ]
 }

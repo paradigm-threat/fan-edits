@@ -6,6 +6,11 @@
       "path": "Thor Ragnarok (2017) - Kid friendly.kdenlive",
       "kind": "kdenlive",
       "bytes": 344400
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 675
     }
   ]
 }

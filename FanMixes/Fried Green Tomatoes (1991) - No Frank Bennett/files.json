@@ -13,9 +13,49 @@
       "bytes": 3421
     },
     {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 16234
+    },
+    {
+      "path": "Fried Green Tomatoes (1991) - No Frank Bennett.kdenlive.ass",
+      "kind": "other",
+      "bytes": 116823
+    },
+    {
+      "path": "generate-no-frank.sh",
+      "kind": "other",
+      "bytes": 623
+    },
+    {
+      "path": "remove-frank-bennett-ranges.json",
+      "kind": "other",
+      "bytes": 959
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 8142
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 7834
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 756
+    },
+    {
+      "path": "Fried Green Tomatoes (1991) - No Frank Bennett.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 93842
+    },
+    {
+      "path": "Fried-Green-Tomatoes.en.srt",
+      "kind": "srt",
+      "bytes": 118274
     }
   ]
 }

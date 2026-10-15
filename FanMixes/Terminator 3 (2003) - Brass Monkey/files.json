@@ -8,9 +8,24 @@
       "bytes": 219009
     },
     {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 8668
+    },
+    {
+      "path": "Terminator 3 (2003) - Brass Monkey.kdenlive.ass",
+      "kind": "other",
+      "bytes": 45954
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 1182
+    },
+    {
+      "path": "Terminator 3 (2003) - Brass Monkey.srt",
+      "kind": "srt",
+      "bytes": 37839
     }
   ]
 }

@@ -1,0 +1,4622 @@
+1
+00:00:13,340 --> 00:00:19,720
+<font face="Palatino Linotype" size="96">{\an8}<i>Good luck, Chihiro</i> 
+<i>Hope we meet again</i></font>
+
+2
+00:00:16,100 --> 00:00:19,100
+<font face="Vesta" size="78">Chihiro? Chihiro!</font>
+
+3
+00:00:19,100 --> 00:00:20,560
+<font face="Vesta" size="78">We're almost there.</font>
+
+4
+00:00:23,520 --> 00:00:25,600
+<font face="Vesta" size="78">This really is the middle of nowhere.</font>
+
+5
+00:00:25,600 --> 00:00:28,570
+<font face="Vesta" size="78">I'll have to shop in the next town.</font>
+
+6
+00:00:28,570 --> 00:00:30,610
+<font face="Vesta" size="78">We'll just have to make do.</font>
+
+7
+00:00:33,030 --> 00:00:35,160
+<font face="Vesta" size="78">Look, there's the elementary school.</font>
+
+8
+00:00:35,160 --> 00:00:36,950
+<font face="Vesta" size="78">That's your new school, Chihiro.</font>
+
+9
+00:00:37,830 --> 00:00:40,080
+<font face="Vesta" size="78">Why, it looks very nice.</font>
+
+10
+00:00:47,790 --> 00:00:49,920
+<font face="Vesta" size="78">I liked my old school.</font>
+
+11
+00:00:54,130 --> 00:00:57,220
+<font face="Vesta" size="78">Mom, my flowers got bent.</font>
+
+12
+00:00:57,220 --> 00:00:59,810
+<font face="Vesta" size="78">No wonder, the way you squeeze them.</font>
+
+13
+00:00:59,810 --> 00:01:02,770
+<font face="Vesta" size="78">A little water and they'll perk right up.</font>
+
+14
+00:01:03,810 --> 00:01:07,520
+<font face="Vesta" size="78">My first bouquet, and it's farewell flowers.</font>
+
+15
+00:01:07,520 --> 00:01:10,960
+<font face="Vesta" size="78">What about the rose you got for your birthday?</font>
+
+16
+00:01:10,960 --> 00:01:14,280
+<font face="Vesta" size="78">One rose? One rose isn't a bouquet.</font>
+
+17
+00:01:14,280 --> 00:01:16,030
+<font face="Vesta" size="78">You dropped the card.</font>
+
+18
+00:01:16,030 --> 00:01:20,410
+<font face="Vesta" size="78">Now pull yourself together. This is a busy day for us.</font>
+
+19
+00:01:39,510 --> 00:01:45,390
+<font face="Palatino Linotype" size="96">{\an8}<font size="100"><font color="#fbf3e8"><font face="AR CENA">SPIRITED AWAY</font></font></font></font>
+
+20
+00:01:57,200 --> 00:02:01,160
+<font face="Vesta" size="78">Wait a minute. Did I take a wrong turn?</font>
+
+21
+00:02:01,620 --> 00:02:03,200
+<font face="Vesta" size="78">I don't get it.</font>
+
+22
+00:02:03,200 --> 00:02:05,330
+<font face="Vesta" size="78">That must be it up there.</font>
+
+23
+00:02:06,160 --> 00:02:08,210
+<font face="Vesta" size="78">The blue one on the end.</font>
+
+24
+00:02:08,620 --> 00:02:09,960
+<font face="Vesta" size="78">That's it.</font>
+
+25
+00:02:10,540 --> 00:02:13,300
+<font face="Vesta" size="78">I guess I turned off too soon.</font>
+
+26
+00:02:13,300 --> 00:02:15,340
+<font face="Vesta" size="78">Maybe if we go straight?</font>
+
+27
+00:02:15,340 --> 00:02:17,970
+<font face="Vesta" size="78">Oh, please. That's how we always get lost.</font>
+
+28
+00:02:17,970 --> 00:02:19,990
+<font face="Vesta" size="78">Let's just see what's up here.</font>
+
+29
+00:02:20,390 --> 00:02:22,200
+<font face="Vesta" size="78">What are those things?</font>
+
+30
+00:02:22,200 --> 00:02:24,010
+<font face="Vesta" size="78">Houses for the guardian spirits.</font>
+
+31
+00:02:30,900 --> 00:02:32,610
+<font face="Vesta" size="78">Dad, are you sure?</font>
+
+32
+00:02:32,610 --> 00:02:35,190
+<font face="Vesta" size="78">Don't worry, we've got 4-wheel drive.</font>
+
+33
+00:02:35,730 --> 00:02:37,150
+<font face="Vesta" size="78">Sit down, Chihiro.</font>
+
+34
+00:02:57,340 --> 00:02:59,630
+<font face="Vesta" size="78">What are you doing? Slow down!</font>
+
+35
+00:03:01,110 --> 00:03:02,470
+<font face="Vesta" size="78">There's a tunnel.</font>
+
+36
+00:03:17,030 --> 00:03:18,780
+<font face="Vesta" size="78">What's this building?</font>
+
+37
+00:03:18,780 --> 00:03:20,610
+<font face="Vesta" size="78">It looks like a gate.</font>
+
+38
+00:03:21,530 --> 00:03:24,580
+<font face="Vesta" size="78">Honey, I think we should go back.</font>
+
+39
+00:03:25,240 --> 00:03:26,620
+<font face="Vesta" size="78">Chihiro!</font>
+
+40
+00:03:28,200 --> 00:03:29,120
+<font face="Vesta" size="78">Honestly...</font>
+
+41
+00:03:29,540 --> 00:03:32,080
+<font face="Vesta" size="78">Look at this, it's just plaster.</font>
+
+42
+00:03:32,080 --> 00:03:34,080
+<font face="Vesta" size="78">This thing's pretty new.</font>
+
+43
+00:03:44,220 --> 00:03:45,600
+<font face="Vesta" size="78">The air's blowing in.</font>
+
+44
+00:03:46,220 --> 00:03:47,310
+<font face="Vesta" size="78">What is it?</font>
+
+45
+00:03:47,310 --> 00:03:49,600
+<font face="Vesta" size="78">Let's see what's on the other side.</font>
+
+46
+00:03:50,230 --> 00:03:52,350
+<font face="Vesta" size="78">It's creepy, Dad. Can't we go back?</font>
+
+47
+00:03:52,810 --> 00:03:56,940
+<font face="Vesta" size="78">Don't be such a chicken. C'mon, let's take a look.</font>
+
+48
+00:03:56,940 --> 00:03:59,090
+<font face="Vesta" size="78">The movers will be there soon.</font>
+
+49
+00:03:59,090 --> 00:04:03,410
+<font face="Vesta" size="78">So? They've got the keys. They'll handle everything.</font>
+
+50
+00:04:03,410 --> 00:04:04,570
+<font face="Vesta" size="78">I know, but...</font>
+
+51
+00:04:04,570 --> 00:04:06,530
+<font face="Vesta" size="78">No! I won't go.</font>
+
+52
+00:04:08,540 --> 00:04:10,700
+<font face="Vesta" size="78">Dad, let's go.</font>
+
+53
+00:04:10,700 --> 00:04:12,140
+<font face="Vesta" size="78">Come on, it'll be fun.</font>
+
+54
+00:04:12,140 --> 00:04:14,000
+<font face="Vesta" size="78">I'm staying here!</font>
+
+55
+00:04:22,260 --> 00:04:24,950
+<font face="Vesta" size="78">Chihiro, you wait in the car.</font>
+
+56
+00:04:26,680 --> 00:04:28,600
+<font face="Vesta" size="78">Mom...</font>
+
+57
+00:04:30,520 --> 00:04:31,890
+<font face="Vesta" size="78">Wait up!</font>
+
+58
+00:04:37,440 --> 00:04:39,190
+<font face="Vesta" size="78">Watch your step.</font>
+
+59
+00:04:39,190 --> 00:04:42,530
+<font face="Vesta" size="78">Chihiro, don't cling. You'll make me trip.</font>
+
+60
+00:05:14,560 --> 00:05:15,700
+<font face="Vesta" size="78">What is this?</font>
+
+61
+00:05:15,700 --> 00:05:17,860
+<font face="Vesta" size="78">Wait, hear that?</font>
+
+62
+00:05:26,660 --> 00:05:27,780
+<font face="Vesta" size="78">A train.</font>
+
+63
+00:05:27,780 --> 00:05:29,700
+<font face="Vesta" size="78">Maybe we're near a station.</font>
+
+64
+00:05:29,700 --> 00:05:31,540
+<font face="Vesta" size="78">Let's find out. It must be close.</font>
+
+65
+00:06:08,360 --> 00:06:10,620
+<font face="Vesta" size="78">Houses, way out here?</font>
+
+66
+00:06:10,620 --> 00:06:12,240
+<font face="Vesta" size="78">I knew it.</font>
+
+67
+00:06:12,620 --> 00:06:15,410
+<font face="Vesta" size="78">It's an abandoned theme park.</font>
+
+68
+00:06:17,210 --> 00:06:20,750
+<font face="Vesta" size="78">They built lots of them back in the nineties.</font>
+
+69
+00:06:20,750 --> 00:06:23,590
+<font face="Vesta" size="78">But they went bust when the economy tanked.</font>
+
+70
+00:06:23,590 --> 00:06:26,050
+<font face="Vesta" size="78">This must be one of them.</font>
+
+71
+00:06:26,050 --> 00:06:28,130
+<font face="Vesta" size="78">Wait, where are we going?</font>
+
+72
+00:06:28,130 --> 00:06:30,760
+<font face="Vesta" size="78">Let's go back, Dad.</font>
+
+73
+00:06:33,720 --> 00:06:35,390
+<font face="Vesta" size="78">Please!</font>
+
+74
+00:06:44,980 --> 00:06:48,150
+<font face="Vesta" size="78">Mom, that building's moaning.</font>
+
+75
+00:06:48,150 --> 00:06:49,240
+<font face="Vesta" size="78">It's just the wind.</font>
+
+76
+00:06:49,740 --> 00:06:54,240
+<font face="Vesta" size="78">What a lovely spot. We should've brought the sandwiches.</font>
+
+77
+00:06:57,250 --> 00:06:59,270
+<font face="Vesta" size="78">This would've been a river.</font>
+
+78
+00:07:04,590 --> 00:07:06,260
+<font face="Vesta" size="78">Do you smell something?</font>
+
+79
+00:07:07,010 --> 00:07:09,120
+<font face="Vesta" size="78">Something smells good.</font>
+
+80
+00:07:09,120 --> 00:07:10,300
+<font face="Vesta" size="78">You're right.</font>
+
+81
+00:07:10,300 --> 00:07:13,430
+<font face="Vesta" size="78">Maybe they're open for business after all.</font>
+
+82
+00:07:13,430 --> 00:07:14,950
+<font face="Vesta" size="78">Hurry up, Chihiro.</font>
+
+83
+00:07:14,950 --> 00:07:17,180
+<font face="Vesta" size="78">Wait for me!</font>
+
+84
+00:07:50,170 --> 00:07:51,630
+<font face="Vesta" size="78">This way.</font>
+
+85
+00:07:55,800 --> 00:07:59,350
+<font face="Vesta" size="78">Can you believe it? Nothing but restaurants.</font>
+
+86
+00:07:59,350 --> 00:08:01,520
+<font face="Vesta" size="78">There's nobody here.</font>
+
+87
+00:08:04,150 --> 00:08:05,630
+<font face="Vesta" size="78">Over there.</font>
+
+88
+00:08:09,650 --> 00:08:11,820
+<font face="Vesta" size="78">Come on!</font>
+
+89
+00:08:22,920 --> 00:08:24,540
+<font face="Vesta" size="78">Come take a look.</font>
+
+90
+00:08:27,020 --> 00:08:29,420
+<font face="Vesta" size="78">This is amazing.</font>
+
+91
+00:08:29,420 --> 00:08:32,470
+<font face="Vesta" size="78">Hello, is anybody here?</font>
+
+92
+00:08:32,470 --> 00:08:34,890
+<font face="Vesta" size="78">Come on, Chihiro. It looks delicious.</font>
+
+93
+00:08:35,260 --> 00:08:36,320
+<font face="Vesta" size="78">You got customers!</font>
+
+94
+00:08:41,350 --> 00:08:44,940
+<font face="Vesta" size="78">Don't worry. We'll pay when they show up.</font>
+
+95
+00:08:44,940 --> 00:08:47,610
+<font face="Vesta" size="78">You're right. Let's see now...</font>
+
+96
+00:08:47,610 --> 00:08:49,730
+<font face="Vesta" size="78">What kind of bird is this?</font>
+
+97
+00:08:51,440 --> 00:08:54,360
+<font face="Vesta" size="78">It's delicious! Chihiro, try some.</font>
+
+98
+00:08:54,860 --> 00:08:56,070
+<font face="Vesta" size="78">I don't want any.</font>
+
+99
+00:08:56,070 --> 00:08:59,280
+<font face="Vesta" size="78">Can't we go? They'll be mad at us.</font>
+
+100
+00:08:59,280 --> 00:09:02,580
+<font face="Vesta" size="78">Don't worry, your father's here.</font>
+
+101
+00:09:02,580 --> 00:09:04,710
+<font face="Vesta" size="78">I've got credit cards and cash.</font>
+
+102
+00:09:08,710 --> 00:09:11,380
+<font face="Vesta" size="78">Have some, Chihiro. It's very tender.</font>
+
+103
+00:09:13,130 --> 00:09:13,760
+<font face="Vesta" size="78">Mustard.</font>
+
+104
+00:09:14,140 --> 00:09:15,090
+<font face="Vesta" size="78">Thanks.</font>
+
+105
+00:09:25,810 --> 00:09:28,480
+<font face="Vesta" size="78">Mom! Dad!</font>
+
+106
+00:10:37,800 --> 00:10:39,380
+<font face="Vesta" size="78">What a weird building.</font>
+
+107
+00:11:09,330 --> 00:11:10,920
+<font face="Vesta" size="78">A train!</font>
+
+108
+00:11:21,510 --> 00:11:23,390
+<font face="Vesta" size="78">You can't be here. Go now!</font>
+
+109
+00:11:24,430 --> 00:11:27,390
+<font face="Vesta" size="78">It's almost sundown. Go before it gets dark!</font>
+
+110
+00:11:30,060 --> 00:11:32,310
+<font face="Vesta" size="78">They're lighting the lamps. Come on!</font>
+
+111
+00:11:32,310 --> 00:11:34,900
+<font face="Vesta" size="78">I'll hold them off. Get across the river!</font>
+
+112
+00:11:49,120 --> 00:11:51,440
+<font face="Vesta" size="78">What's his problem?</font>
+
+113
+00:11:59,720 --> 00:12:00,970
+<font face="Vesta" size="78">Dad?</font>
+
+114
+00:12:01,970 --> 00:12:03,760
+<font face="Vesta" size="78">Dad, let's go home.</font>
+
+115
+00:12:03,760 --> 00:12:05,470
+<font face="Vesta" size="78">Let's go, Dad!</font>
+
+116
+00:12:32,250 --> 00:12:33,750
+<font face="Vesta" size="78">Dad!</font>
+
+117
+00:12:34,250 --> 00:12:35,290
+<font face="Vesta" size="78">Mom!</font>
+
+118
+00:12:44,760 --> 00:12:46,760
+<font face="Vesta" size="78">Mommy!</font>
+
+119
+00:13:08,620 --> 00:13:09,830
+<font face="Vesta" size="78">Water!</font>
+
+120
+00:13:23,220 --> 00:13:24,630
+<font face="Vesta" size="78">No...</font>
+
+121
+00:13:24,630 --> 00:13:26,380
+<font face="Vesta" size="78">It's just a dream.</font>
+
+122
+00:13:28,890 --> 00:13:31,260
+<font face="Vesta" size="78">Wake up, wake up. Wake up!</font>
+
+123
+00:13:32,470 --> 00:13:34,270
+<font face="Vesta" size="78">Please wake up.</font>
+
+124
+00:13:39,560 --> 00:13:42,030
+<font face="Vesta" size="78">It's just a dream, a stupid dream.</font>
+
+125
+00:13:42,570 --> 00:13:45,110
+<font face="Vesta" size="78">Go away, disappear.</font>
+
+126
+00:13:45,490 --> 00:13:46,910
+<font face="Vesta" size="78">Disappear.</font>
+
+127
+00:13:54,910 --> 00:13:56,410
+<font face="Vesta" size="78">I'm fading away!</font>
+
+128
+00:13:59,330 --> 00:14:01,670
+<font face="Vesta" size="78">This has to be a dream.</font>
+
+129
+00:14:54,470 --> 00:14:56,770
+<font face="Vesta" size="78">Don't be afraid. I'm a friend.</font>
+
+130
+00:14:57,180 --> 00:14:58,940
+<font face="Vesta" size="78">No, no, no!</font>
+
+131
+00:14:59,350 --> 00:15:01,270
+<font face="Vesta" size="78">Open your mouth. Eat this.</font>
+
+132
+00:15:01,270 --> 00:15:04,150
+<font face="Vesta" size="78">Unless you eat something from this world, you'll disappear.</font>
+
+133
+00:15:04,150 --> 00:15:05,440
+<font face="Vesta" size="78">No!</font>
+
+134
+00:15:09,530 --> 00:15:12,740
+<font face="Vesta" size="78">Don't worry. You won't turn into a pig.</font>
+
+135
+00:15:12,740 --> 00:15:14,620
+<font face="Vesta" size="78">Chew it and swallow.</font>
+
+136
+00:15:24,790 --> 00:15:26,800
+<font face="Vesta" size="78">Good, now you'll be fine.</font>
+
+137
+00:15:26,800 --> 00:15:28,470
+<font face="Vesta" size="78">See for yourself.</font>
+
+138
+00:15:36,680 --> 00:15:38,060
+<font face="Vesta" size="78">I can touch you.</font>
+
+139
+00:15:38,060 --> 00:15:40,330
+<font face="Vesta" size="78">Of course. Now come.</font>
+
+140
+00:15:40,330 --> 00:15:44,770
+<font face="Vesta" size="78">Where's Mom and Dad? Did they really turn into pigs?</font>
+
+141
+00:15:44,770 --> 00:15:47,230
+<font face="Vesta" size="78">You can't see them now, but you will.</font>
+
+142
+00:15:50,490 --> 00:15:51,530
+<font face="Vesta" size="78">Quiet!</font>
+
+143
+00:16:09,670 --> 00:16:12,880
+<font face="Vesta" size="78">It's looking for you. There's no time, let's run.</font>
+
+144
+00:16:14,090 --> 00:16:16,930
+<font face="Vesta" size="78">I can't stand up. What should I do?</font>
+
+145
+00:16:16,930 --> 00:16:17,990
+<font face="Vesta" size="78">My legs don't work.</font>
+
+146
+00:16:18,540 --> 00:16:20,730
+<font face="Vesta" size="78">Relax and take a deep breath.</font>
+
+147
+00:16:24,350 --> 00:16:28,860
+<font face="Vesta" size="78">In the name of the wind and water within, unbind her.</font>
+
+148
+00:16:28,860 --> 00:16:29,860
+<font face="Vesta" size="78">Stand up!</font>
+
+149
+00:17:12,190 --> 00:17:15,110
+<font face="Vesta" size="78">Don't breathe while we're on the bridge.</font>
+
+150
+00:17:16,410 --> 00:17:21,490
+<font face="Vesta" size="78">One tiny breath will break my spell. We don't want anyone to see you.</font>
+
+151
+00:17:26,880 --> 00:17:28,330
+<font face="Vesta" size="78">I'm scared.</font>
+
+152
+00:17:28,330 --> 00:17:29,860
+<font face="Vesta" size="78">Be calm.</font>
+
+153
+00:17:29,860 --> 00:17:33,170
+<font face="Vesta" size="78">Welcome, your presence honors us.</font>
+
+154
+00:17:33,170 --> 00:17:35,720
+<font face="Vesta" size="78">Greetings, welcome.</font>
+
+155
+00:17:35,720 --> 00:17:36,980
+<font face="Vesta" size="78">I've finished my rounds.</font>
+
+156
+00:17:36,980 --> 00:17:38,890
+<font face="Vesta" size="78">Welcome back, sir.</font>
+
+157
+00:17:40,100 --> 00:17:41,850
+<font face="Vesta" size="78">Take a deep breath.</font>
+
+158
+00:17:43,020 --> 00:17:44,100
+<font face="Vesta" size="78">Hold it.</font>
+
+159
+00:18:01,120 --> 00:18:04,790
+<font face="Vesta" size="78">Welcome back. We've been waiting for you.</font>
+
+160
+00:18:06,040 --> 00:18:07,870
+<font face="Vesta" size="78">Just a little further.</font>
+
+161
+00:18:08,790 --> 00:18:10,380
+<font face="Vesta" size="78">Master Haku!</font>
+
+162
+00:18:11,130 --> 00:18:12,750
+<font face="Vesta" size="78">Where have you...</font>
+
+163
+00:18:14,210 --> 00:18:15,970
+<font face="Vesta" size="78">A human?</font>
+
+164
+00:18:16,880 --> 00:18:18,090
+<font face="Vesta" size="78">Run!</font>
+
+165
+00:18:34,650 --> 00:18:37,070
+<font face="Vesta" size="78">Master Haku, Master Haku!</font>
+
+166
+00:18:37,070 --> 00:18:39,820
+<font face="Vesta" size="78">I smell something. A human intruder!</font>
+
+167
+00:18:39,820 --> 00:18:42,200
+<font face="Vesta" size="78">I smell humans! The stench of humans!</font>
+
+168
+00:18:42,200 --> 00:18:43,160
+<font face="Vesta" size="78">They know you're here.</font>
+
+169
+00:18:43,160 --> 00:18:44,990
+<font face="Vesta" size="78">Sorry, I messed up.</font>
+
+170
+00:18:44,990 --> 00:18:47,500
+<font face="Vesta" size="78">No, Chihiro, you did very well.</font>
+
+171
+00:18:47,500 --> 00:18:50,080
+<font face="Vesta" size="78">Now listen. I'll tell you what to do.</font>
+
+172
+00:18:50,080 --> 00:18:51,670
+<font face="Vesta" size="78">If you stay here, they'll find you.</font>
+
+173
+00:18:52,340 --> 00:18:55,760
+<font face="Vesta" size="78">I'll distract them while you get away.</font>
+
+174
+00:18:55,760 --> 00:18:58,170
+<font face="Vesta" size="78">No, don't go! Stay with me, please.</font>
+
+175
+00:18:58,840 --> 00:19:01,970
+<font face="Vesta" size="78">You have no choice, if you want to survive here...</font>
+
+176
+00:19:01,970 --> 00:19:03,680
+<font face="Vesta" size="78">and save your parents, too.</font>
+
+177
+00:19:04,720 --> 00:19:07,520
+<font face="Vesta" size="78">So I wasn't dreaming. They did turn into pigs.</font>
+
+178
+00:19:07,520 --> 00:19:08,940
+<font face="Vesta" size="78">Listen carefully.</font>
+
+179
+00:19:09,850 --> 00:19:13,440
+<font face="Vesta" size="78"><i>After I'm gone,</i> <i>go through the back gate.</i></font>
+
+180
+00:19:13,440 --> 00:19:16,480
+<font face="Vesta" size="78"><i>Take the stairs</i> <i>all the way down.</i></font>
+
+181
+00:19:16,480 --> 00:19:18,700
+<font face="Vesta" size="78"><i>You'll find</i> <i>the boiler room where...</i></font>
+
+182
+00:19:18,700 --> 00:19:20,360
+<font face="Vesta" size="78"><i>they stoke the fires.</i></font>
+
+183
+00:19:20,360 --> 00:19:23,660
+<font face="Vesta" size="78"><i>Look for Kamaji.</i></font>
+
+184
+00:19:24,280 --> 00:19:25,160
+<font face="Vesta" size="78">Kamaji?</font>
+
+185
+00:19:26,370 --> 00:19:28,750
+<font face="Vesta" size="78">Ask him for work.</font>
+
+186
+00:19:28,750 --> 00:19:30,390
+<font face="Vesta" size="78">If he refuses, keep asking.</font>
+
+187
+00:19:31,000 --> 00:19:34,420
+<font face="Vesta" size="78">If you don't work, Yubaba will turn you into an animal.</font>
+
+188
+00:19:34,880 --> 00:19:36,210
+<font face="Vesta" size="78">Yubaba?</font>
+
+189
+00:19:36,210 --> 00:19:39,260
+<font face="Vesta" size="78">She's the sorceress who rules our world.</font>
+
+190
+00:19:39,260 --> 00:19:42,590
+<font face="Vesta" size="78">She'll try to trick you into leaving...</font>
+
+191
+00:19:42,590 --> 00:19:44,510
+<font face="Vesta" size="78">but keep asking for work.</font>
+
+192
+00:19:44,510 --> 00:19:49,140
+<font face="Vesta" size="78">The work's hard, but it will protect you. Then even Yubaba can't harm you.</font>
+
+193
+00:19:50,520 --> 00:19:53,480
+<font face="Vesta" size="78">Master Haku, Master Haku!</font>
+
+194
+00:19:53,480 --> 00:19:54,730
+<font face="Vesta" size="78">I have to go.</font>
+
+195
+00:19:54,730 --> 00:19:57,420
+<font face="Vesta" size="78">Remember I'm your friend, Chihiro.</font>
+
+196
+00:19:57,420 --> 00:19:58,940
+<font face="Vesta" size="78">How did you know my name?</font>
+
+197
+00:19:59,400 --> 00:20:01,740
+<font face="Vesta" size="78">You told me long ago.</font>
+
+198
+00:20:01,740 --> 00:20:03,700
+<font face="Vesta" size="78">My name is Haku.</font>
+
+199
+00:20:06,580 --> 00:20:08,410
+<font face="Vesta" size="78">Here I am!</font>
+
+200
+00:20:10,330 --> 00:20:12,690
+<font face="Vesta" size="78">Master Haku, Yubaba's waiting.</font>
+
+201
+00:20:12,690 --> 00:20:15,750
+<font face="Vesta" size="78">I know, I've been searching too.</font>
+
+202
+00:24:23,920 --> 00:24:25,790
+<font face="Vesta" size="78">Um...</font>
+
+203
+00:24:26,670 --> 00:24:28,000
+<font face="Vesta" size="78">Excuse me.</font>
+
+204
+00:24:34,840 --> 00:24:36,180
+<font face="Vesta" size="78">Um...</font>
+
+205
+00:24:42,890 --> 00:24:45,230
+<font face="Vesta" size="78">Are you Kamaji?</font>
+
+206
+00:24:53,030 --> 00:24:56,700
+<font face="Vesta" size="78">Haku sent me. Please let me work here.</font>
+
+207
+00:25:01,120 --> 00:25:04,540
+<font face="Vesta" size="78">What, all at once?</font>
+
+208
+00:25:05,210 --> 00:25:07,460
+<font face="Vesta" size="78">Get to work, you little runts!</font>
+
+209
+00:25:09,050 --> 00:25:14,050
+<font face="Vesta" size="78">I am Kamaji, slave to the boilers that heat the baths.</font>
+
+210
+00:25:14,050 --> 00:25:16,220
+<font face="Vesta" size="78">Step on it, boys!</font>
+
+211
+00:25:17,390 --> 00:25:19,450
+<font face="Vesta" size="78">Please let me work here.</font>
+
+212
+00:25:19,450 --> 00:25:23,980
+<font face="Vesta" size="78">I've got all the help I need. There's soot everywhere.</font>
+
+213
+00:25:23,980 --> 00:25:26,900
+<font face="Vesta" size="78">I'll never run out of help.</font>
+
+214
+00:25:41,330 --> 00:25:43,330
+<font face="Vesta" size="78">Oh, I'm sorry.</font>
+
+215
+00:25:47,000 --> 00:25:49,090
+<font face="Vesta" size="78">Wait a second.</font>
+
+216
+00:26:00,930 --> 00:26:02,430
+<font face="Vesta" size="78">Out of the way.</font>
+
+217
+00:26:55,480 --> 00:26:57,740
+<font face="Vesta" size="78">Wait, what do I do with this?</font>
+
+218
+00:27:04,450 --> 00:27:06,120
+<font face="Vesta" size="78">Do I leave it here?</font>
+
+219
+00:27:06,500 --> 00:27:08,620
+<font face="Vesta" size="78">Finish what you start.</font>
+
+220
+00:28:08,270 --> 00:28:12,230
+<font face="Vesta" size="78">Get to work, runts! Wanna turn back into soot?</font>
+
+221
+00:28:12,230 --> 00:28:16,040
+<font face="Vesta" size="78">And you, better watch it. You can't just take someone's work.</font>
+
+222
+00:28:16,040 --> 00:28:19,550
+<font face="Vesta" size="78">If they don't work, their spell will be broken.</font>
+
+223
+00:28:19,550 --> 00:28:22,820
+<font face="Vesta" size="78">There's no work for you here. Try somewhere else.</font>
+
+224
+00:28:31,830 --> 00:28:34,460
+<font face="Vesta" size="78">You sootballs got a problem?</font>
+
+225
+00:28:34,460 --> 00:28:36,020
+<font face="Vesta" size="78">Get to work!</font>
+
+226
+00:28:37,000 --> 00:28:38,920
+<font face="Vesta" size="78">Chow time!</font>
+
+227
+00:28:38,920 --> 00:28:41,340
+<font face="Vesta" size="78">What, you guys at it again?</font>
+
+228
+00:28:43,260 --> 00:28:46,180
+<font face="Vesta" size="78">Give it a rest. Where's your bowl?</font>
+
+229
+00:28:47,140 --> 00:28:49,390
+<font face="Vesta" size="78">I keep telling you to leave it out.</font>
+
+230
+00:28:49,390 --> 00:28:51,930
+<font face="Vesta" size="78">Food's here. Break time!</font>
+
+231
+00:29:07,530 --> 00:29:09,790
+<font face="Vesta" size="78">The human! You're gonna catch it.</font>
+
+232
+00:29:09,790 --> 00:29:12,000
+<font face="Vesta" size="78">They're having a fit about it upstairs.</font>
+
+233
+00:29:13,210 --> 00:29:15,120
+<font face="Vesta" size="78">She's my granddaughter.</font>
+
+234
+00:29:15,120 --> 00:29:16,580
+<font face="Vesta" size="78">Your granddaughter!</font>
+
+235
+00:29:17,460 --> 00:29:21,300
+<font face="Vesta" size="78">She says she wants work, but I don't need any help.</font>
+
+236
+00:29:21,300 --> 00:29:24,970
+<font face="Vesta" size="78">Could you take her to Yubaba for me?</font>
+
+237
+00:29:24,970 --> 00:29:26,740
+<font face="Vesta" size="78">This girl can handle herself.</font>
+
+238
+00:29:26,740 --> 00:29:29,430
+<font face="Vesta" size="78">Not a chance. Yubaba would kill me.</font>
+
+239
+00:29:29,430 --> 00:29:34,230
+<font face="Vesta" size="78">Not even for this? Charcoal-roasted newt, finest quality.</font>
+
+240
+00:29:36,350 --> 00:29:40,440
+<font face="Vesta" size="78">If you want work, you have to sign a contract with Yubaba.</font>
+
+241
+00:29:40,440 --> 00:29:42,650
+<font face="Vesta" size="78">Might as well try your luck.</font>
+
+242
+00:29:43,820 --> 00:29:46,660
+<font face="Vesta" size="78">Fine! You there, follow me.</font>
+
+243
+00:29:52,950 --> 00:29:55,620
+<font face="Vesta" size="78">What about "Yes, ma'am" or "Thank you"?</font>
+
+244
+00:29:55,620 --> 00:29:57,120
+<font face="Vesta" size="78">Yes, ma'am.</font>
+
+245
+00:29:57,120 --> 00:29:58,630
+<font face="Vesta" size="78">What a klutz. Move it!</font>
+
+246
+00:29:58,630 --> 00:29:59,590
+<font face="Vesta" size="78">Yes, ma'am.</font>
+
+247
+00:30:02,210 --> 00:30:05,380
+<font face="Vesta" size="78">Leave the shoes. And the socks!</font>
+
+248
+00:30:05,380 --> 00:30:06,550
+<font face="Vesta" size="78">Yes'm.</font>
+
+249
+00:30:11,930 --> 00:30:15,980
+<font face="Vesta" size="78">Aren't you going to thank Kamaji? He's looking out for you.</font>
+
+250
+00:30:18,190 --> 00:30:20,150
+<font face="Vesta" size="78">Thank you very much.</font>
+
+251
+00:30:21,610 --> 00:30:22,980
+<font face="Vesta" size="78">Good luck.</font>
+
+252
+00:30:32,540 --> 00:30:35,540
+<font face="Vesta" size="78">Yubaba lives on the top floor in the back.</font>
+
+253
+00:30:50,050 --> 00:30:52,580
+<font face="Vesta" size="78">Move it, will you?</font>
+
+254
+00:30:56,680 --> 00:30:58,270
+<font face="Vesta" size="78">You'll lose your nose.</font>
+
+255
+00:31:23,090 --> 00:31:24,700
+<font face="Vesta" size="78">One more elevator after this.</font>
+
+256
+00:31:24,700 --> 00:31:25,800
+<font face="Vesta" size="78">Yes'm.</font>
+
+257
+00:31:30,220 --> 00:31:31,430
+<font face="Vesta" size="78">We're here.</font>
+
+258
+00:31:34,760 --> 00:31:36,140
+<font face="Vesta" size="78">Welcome, sir!</font>
+
+259
+00:31:42,100 --> 00:31:46,530
+<font face="Vesta" size="78">This elevator stops here. Please use another one.</font>
+
+260
+00:32:09,260 --> 00:32:10,280
+<font face="Vesta" size="78">He's following us.</font>
+
+261
+00:32:10,280 --> 00:32:11,680
+<font face="Vesta" size="78">Quit gawking.</font>
+
+262
+00:32:26,980 --> 00:32:29,360
+<font face="Vesta" size="78">Here we are.</font>
+
+263
+00:32:34,030 --> 00:32:36,620
+<font face="Vesta" size="78">Your room is on the right.</font>
+
+264
+00:32:39,330 --> 00:32:40,280
+<font face="Vesta" size="78">Lin?</font>
+
+265
+00:32:40,280 --> 00:32:41,620
+<font face="Vesta" size="78">Yes sir!</font>
+
+266
+00:32:43,170 --> 00:32:44,960
+<font face="Vesta" size="78">Something smells.</font>
+
+267
+00:32:45,540 --> 00:32:47,920
+<font face="Vesta" size="78">It's human. You reek of human.</font>
+
+268
+00:32:47,920 --> 00:32:49,510
+<font face="Vesta" size="78">Is that so?</font>
+
+269
+00:32:49,510 --> 00:32:52,720
+<font face="Vesta" size="78">I smell it, I do. Smells mighty tasty, too.</font>
+
+270
+00:32:53,300 --> 00:32:55,720
+<font face="Vesta" size="78">You're hiding something.</font>
+
+271
+00:32:56,350 --> 00:32:58,350
+<font face="Vesta" size="78">Tell me the truth.</font>
+
+272
+00:32:58,350 --> 00:32:59,600
+<font face="Vesta" size="78">Maybe it's this.</font>
+
+273
+00:33:00,060 --> 00:33:02,330
+<font face="Vesta" size="78">Roasted newt? Give it here!</font>
+
+274
+00:33:02,330 --> 00:33:05,980
+<font face="Vesta" size="78">Not a chance. The girls asked me to get it.</font>
+
+275
+00:33:05,980 --> 00:33:08,980
+<font face="Vesta" size="78">I'm begging you. I'll settle for a leg.</font>
+
+276
+00:33:10,030 --> 00:33:12,990
+<font face="Vesta" size="78">Pull the lever to go up, sir.</font>
+
+277
+00:34:58,340 --> 00:35:00,340
+<font face="Vesta" size="78">Can't you even knock?</font>
+
+278
+00:35:01,140 --> 00:35:04,100
+<font face="Vesta" size="78">What a plain little girl.</font>
+
+279
+00:35:14,210 --> 00:35:16,360
+<font face="Vesta" size="78">Now, come.</font>
+
+280
+00:35:19,780 --> 00:35:21,740
+<font face="Vesta" size="78">I said, come!</font>
+
+281
+00:35:36,300 --> 00:35:38,470
+<font face="Vesta" size="78">Ow...</font>
+
+282
+00:35:48,810 --> 00:35:51,690
+<font face="Vesta" size="78">What a racket. Could you be quiet?</font>
+
+283
+00:36:10,710 --> 00:36:11,830
+<font face="Vesta" size="78">Please...</font>
+
+284
+00:36:12,210 --> 00:36:14,330
+<font face="Vesta" size="78">Let me work here.</font>
+
+285
+00:36:22,800 --> 00:36:26,010
+<font face="Vesta" size="78">Stop your babbling.</font>
+
+286
+00:36:26,010 --> 00:36:29,560
+<font face="Vesta" size="78">Why do I need a weakling like you?</font>
+
+287
+00:36:29,560 --> 00:36:33,810
+<font face="Vesta" size="78">Besides, this is no place for humans.</font>
+
+288
+00:36:35,020 --> 00:36:37,440
+<font face="Vesta" size="78">Millions of spirits come here...</font>
+
+289
+00:36:37,440 --> 00:36:41,280
+<font face="Vesta" size="78">to purge themselves of toil and care.</font>
+
+290
+00:36:42,200 --> 00:36:45,530
+<font face="Vesta" size="78">Your parents, my goodness! They certainly had some nerve.</font>
+
+291
+00:36:45,530 --> 00:36:49,180
+<font face="Vesta" size="78">Gobbling our guests' food like a couple of pigs.</font>
+
+292
+00:36:49,180 --> 00:36:51,370
+<font face="Vesta" size="78">Just deserts, I'd say.</font>
+
+293
+00:36:51,910 --> 00:36:57,210
+<font face="Vesta" size="78">And as for you, you'll never see your world again either.</font>
+
+294
+00:37:00,920 --> 00:37:04,090
+<font face="Vesta" size="78">You'd make a lovely piglet.</font>
+
+295
+00:37:04,090 --> 00:37:06,970
+<font face="Vesta" size="78">Or perhaps a lump of coal?</font>
+
+296
+00:37:14,770 --> 00:37:16,480
+<font face="Vesta" size="78">Trembling, aren't you?</font>
+
+297
+00:37:16,480 --> 00:37:20,230
+<font face="Vesta" size="78">Still, I'm impressed you made it this far.</font>
+
+298
+00:37:20,230 --> 00:37:23,780
+<font face="Vesta" size="78">Someone must've helped you.</font>
+
+299
+00:37:23,780 --> 00:37:25,990
+<font face="Vesta" size="78">I must thank your friend.</font>
+
+300
+00:37:25,990 --> 00:37:30,620
+<font face="Vesta" size="78">Just who was it, my dear? You can tell me.</font>
+
+301
+00:37:33,620 --> 00:37:35,140
+<font face="Vesta" size="78">Please let me work here!</font>
+
+302
+00:37:35,140 --> 00:37:36,810
+<font face="Vesta" size="78">Not that again!</font>
+
+303
+00:37:36,810 --> 00:37:38,710
+<font face="Vesta" size="78">I want to work here!</font>
+
+304
+00:37:38,710 --> 00:37:43,530
+<font face="Vesta" size="78">Shut your mouth!</font>
+
+305
+00:37:47,260 --> 00:37:51,180
+<font face="Vesta" size="78">Why on earth should I hire you?</font>
+
+306
+00:37:51,180 --> 00:37:55,640
+<font face="Vesta" size="78">Anyone can see you're a lazy, spoiled, stupid crybaby.</font>
+
+307
+00:37:55,640 --> 00:38:00,770
+<font face="Vesta" size="78">What job would I possibly have for someone like you?</font>
+
+308
+00:38:00,770 --> 00:38:06,630
+<font face="Vesta" size="78">You're wasting your time. I've got all the bums I need.</font>
+
+309
+00:38:07,570 --> 00:38:11,950
+<font face="Vesta" size="78">Or maybe I'll give you the nastiest job I've got...</font>
+
+310
+00:38:11,950 --> 00:38:14,120
+<font face="Vesta" size="78">and work you night and day...</font>
+
+311
+00:38:14,120 --> 00:38:19,040
+<font face="Vesta" size="78">until you breathe your very last breath!</font>
+
+312
+00:38:31,450 --> 00:38:34,850
+<font face="Vesta" size="78">Now, now. What's wrong, my dear?</font>
+
+313
+00:38:35,680 --> 00:38:38,350
+<font face="Vesta" size="78">I'm coming. That's a good baby.</font>
+
+314
+00:38:38,810 --> 00:38:41,650
+<font face="Vesta" size="78">Are you still here? Get out, right now.</font>
+
+315
+00:38:41,650 --> 00:38:43,690
+<font face="Vesta" size="78">I want to work here!</font>
+
+316
+00:38:43,690 --> 00:38:47,240
+<font face="Vesta" size="78">Keep your voice down.</font>
+
+317
+00:38:47,240 --> 00:38:50,910
+<font face="Vesta" size="78">I'll be right there, just be patient.</font>
+
+318
+00:38:51,830 --> 00:38:54,700
+<font face="Vesta" size="78">That's a good baby. There, there.</font>
+
+319
+00:38:54,700 --> 00:38:56,770
+<font face="Vesta" size="78">Please give me a job!</font>
+
+320
+00:38:56,770 --> 00:39:00,040
+<font face="Vesta" size="78">All right, just pipe down.</font>
+
+321
+00:39:00,040 --> 00:39:04,590
+<font face="Vesta" size="78">There, there, good baby.</font>
+
+322
+00:39:24,690 --> 00:39:26,440
+<font face="Vesta" size="78">That's your contract.</font>
+
+323
+00:39:27,280 --> 00:39:29,450
+<font face="Vesta" size="78">Sign on the bottom line.</font>
+
+324
+00:39:30,070 --> 00:39:31,570
+<font face="Vesta" size="78">I'll put you to work.</font>
+
+325
+00:39:32,240 --> 00:39:35,290
+<font face="Vesta" size="78">But one peep out of you about anything...</font>
+
+326
+00:39:35,290 --> 00:39:37,750
+<font face="Vesta" size="78">and I'll turn you into a piglet.</font>
+
+327
+00:39:38,540 --> 00:39:40,620
+<font face="Vesta" size="78">Should I sign here?</font>
+
+328
+00:39:40,620 --> 00:39:44,130
+<font face="Vesta" size="78">Where else? Quit dilly-dallying.</font>
+
+329
+00:39:48,760 --> 00:39:50,930
+<font face="Vesta" size="78">Unbelievable.</font>
+
+330
+00:39:51,430 --> 00:39:54,260
+<font face="Vesta" size="78">What a ridiculous oath I took.</font>
+
+331
+00:39:55,680 --> 00:39:59,270
+<font face="Vesta" size="78">I'm bound to give work to whoever asks.</font>
+
+332
+00:40:01,600 --> 00:40:02,380
+<font face="Vesta" size="78">Finished?</font>
+
+333
+00:40:02,380 --> 00:40:03,400
+<font face="Vesta" size="78">Yes.</font>
+
+334
+00:40:08,280 --> 00:40:09,980
+<font face="Vesta" size="78">Chihiro, that's your name?</font>
+
+335
+00:40:09,980 --> 00:40:10,780
+<font face="Vesta" size="78">Yes.</font>
+
+336
+00:40:10,780 --> 00:40:13,450
+<font face="Vesta" size="78">Quite a fancy name.</font>
+
+337
+00:40:22,920 --> 00:40:25,670
+<font face="Vesta" size="78">From now on, your name is Sen.</font>
+
+338
+00:40:26,130 --> 00:40:28,090
+<font face="Vesta" size="78">Understand? Sen.</font>
+
+339
+00:40:28,090 --> 00:40:30,970
+<font face="Vesta" size="78">Answer me, Sen!</font>
+
+340
+00:40:30,970 --> 00:40:32,430
+<font face="Vesta" size="78">I understand.</font>
+
+341
+00:40:32,430 --> 00:40:33,640
+<font face="Vesta" size="78">Yes ma'am?</font>
+
+342
+00:40:36,810 --> 00:40:40,220
+<font face="Vesta" size="78">See to her, she's starting work today.</font>
+
+343
+00:40:40,220 --> 00:40:41,060
+<font face="Vesta" size="78">Very well.</font>
+
+344
+00:40:41,810 --> 00:40:42,940
+<font face="Vesta" size="78">What is your name?</font>
+
+345
+00:40:43,980 --> 00:40:46,980
+<font face="Vesta" size="78">Chi... I mean, Sen.</font>
+
+346
+00:40:46,980 --> 00:40:49,150
+<font face="Vesta" size="78">Then follow me, Sen.</font>
+
+347
+00:40:57,660 --> 00:40:59,330
+<font face="Vesta" size="78">Haku, I...</font>
+
+348
+00:40:59,330 --> 00:41:01,120
+<font face="Vesta" size="78">No idle chatter.</font>
+
+349
+00:41:01,120 --> 00:41:03,460
+<font face="Vesta" size="78">Call me Master Haku.</font>
+
+350
+00:41:19,140 --> 00:41:22,480
+<font face="Vesta" size="78">I'm afraid even Yubaba can't give an order like that.</font>
+
+351
+00:41:22,480 --> 00:41:24,140
+<font face="Vesta" size="78">Humans aren't allowed here.</font>
+
+352
+00:41:24,640 --> 00:41:26,310
+<font face="Vesta" size="78">She signed the contract.</font>
+
+353
+00:41:26,310 --> 00:41:27,140
+<font face="Vesta" size="78">What!</font>
+
+354
+00:41:27,140 --> 00:41:28,820
+<font face="Vesta" size="78">I'll work hard.</font>
+
+355
+00:41:28,820 --> 00:41:31,020
+<font face="Vesta" size="78">Don't send her to us.</font>
+
+356
+00:41:31,020 --> 00:41:32,280
+<font face="Vesta" size="78">She stinks to high heaven.</font>
+
+357
+00:41:33,030 --> 00:41:35,990
+<font face="Vesta" size="78">She won't stink after three days of our food.</font>
+
+358
+00:41:35,990 --> 00:41:40,200
+<font face="Vesta" size="78">If she doesn't measure up, do with her as you will.</font>
+
+359
+00:41:42,040 --> 00:41:44,270
+<font face="Vesta" size="78">Now go back to work. Where's Lin?</font>
+
+360
+00:41:44,270 --> 00:41:47,080
+<font face="Vesta" size="78">What, you're dumping her on me?</font>
+
+361
+00:41:47,080 --> 00:41:48,710
+<font face="Vesta" size="78">You wanted an assistant.</font>
+
+362
+00:41:48,710 --> 00:41:51,630
+<font face="Vesta" size="78">That's right! Lin's just perfect.</font>
+
+363
+00:41:52,050 --> 00:41:53,260
+<font face="Vesta" size="78">Go, Sen.</font>
+
+364
+00:41:53,260 --> 00:41:54,260
+<font face="Vesta" size="78">Yes sir.</font>
+
+365
+00:41:54,860 --> 00:41:58,390
+<font face="Vesta" size="78">What a pain. You're gonna pay for this.</font>
+
+366
+00:41:58,850 --> 00:42:00,510
+<font face="Vesta" size="78">Off you go.</font>
+
+367
+00:42:02,890 --> 00:42:04,180
+<font face="Vesta" size="78">Come on.</font>
+
+368
+00:42:13,030 --> 00:42:14,530
+<font face="Vesta" size="78">You pulled it off!</font>
+
+369
+00:42:15,150 --> 00:42:17,280
+<font face="Vesta" size="78">You're so thick, I was worried.</font>
+
+370
+00:42:17,700 --> 00:42:21,370
+<font face="Vesta" size="78">Keep your wits about you. If you need anything, ask me.</font>
+
+371
+00:42:23,250 --> 00:42:24,790
+<font face="Vesta" size="78">What's wrong?</font>
+
+372
+00:42:25,750 --> 00:42:27,790
+<font face="Vesta" size="78">My legs are shaking.</font>
+
+373
+00:42:32,250 --> 00:42:34,380
+<font face="Vesta" size="78">This is where we live.</font>
+
+374
+00:42:35,380 --> 00:42:37,760
+<font face="Vesta" size="78">Eat, sleep and you'll be fine.</font>
+
+375
+00:42:40,760 --> 00:42:42,930
+<font face="Vesta" size="78">Your apron. Keep it clean.</font>
+
+376
+00:42:42,930 --> 00:42:44,020
+<font face="Vesta" size="78">Trousers.</font>
+
+377
+00:42:44,720 --> 00:42:46,890
+<font face="Vesta" size="78">You're so puny.</font>
+
+378
+00:42:47,560 --> 00:42:49,060
+<font face="Vesta" size="78">Too big.</font>
+
+379
+00:42:51,110 --> 00:42:52,820
+<font face="Vesta" size="78">Lin, are there...</font>
+
+380
+00:42:52,820 --> 00:42:53,940
+<font face="Vesta" size="78">What?</font>
+
+381
+00:42:53,940 --> 00:42:56,010
+<font face="Vesta" size="78">Are there two Hakus here?</font>
+
+382
+00:42:56,010 --> 00:42:59,700
+<font face="Vesta" size="78">Two of that one? I sure hope not.</font>
+
+383
+00:43:00,280 --> 00:43:01,410
+<font face="Vesta" size="78">Still too big.</font>
+
+384
+00:43:01,410 --> 00:43:04,160
+<font face="Vesta" size="78">He's Yubaba's apprentice. Be careful around him.</font>
+
+385
+00:43:07,580 --> 00:43:09,750
+<font face="Vesta" size="78">Now where was that...</font>
+
+386
+00:43:10,270 --> 00:43:12,630
+<font face="Vesta" size="78">All right, here we go.</font>
+
+387
+00:43:13,960 --> 00:43:18,090
+<font face="Vesta" size="78">Hey, are you okay? Don't fall apart on me.</font>
+
+388
+00:43:18,970 --> 00:43:21,430
+<font face="Vesta" size="78">What's all the noise, Lin?</font>
+
+389
+00:43:21,430 --> 00:43:23,850
+<font face="Vesta" size="78">New girl. Says she feels faint.</font>
+
+390
+00:44:55,860 --> 00:45:00,110
+<font face="Vesta" size="78">Meet me at the bridge. I'll take you to your mother and father.</font>
+
+391
+00:45:44,450 --> 00:45:45,490
+<font face="Vesta" size="78">My shoes are gone.</font>
+
+392
+00:45:59,790 --> 00:46:01,420
+<font face="Vesta" size="78">Thank you.</font>
+
+393
+00:47:09,860 --> 00:47:11,320
+<font face="Vesta" size="78">Follow me.</font>
+
+394
+00:47:54,370 --> 00:47:56,950
+<font face="Vesta" size="78">Dad, Mom, it's me!</font>
+
+395
+00:47:57,500 --> 00:47:58,790
+<font face="Vesta" size="78">It's Sen.</font>
+
+396
+00:47:59,500 --> 00:48:01,880
+<font face="Vesta" size="78">Mom! Dad!</font>
+
+397
+00:48:05,000 --> 00:48:07,090
+<font face="Vesta" size="78">Are they sick? Are they hurt?</font>
+
+398
+00:48:07,090 --> 00:48:09,800
+<font face="Vesta" size="78">They're just sleeping. Their stomachs are full.</font>
+
+399
+00:48:10,550 --> 00:48:13,470
+<font face="Vesta" size="78">They don't remember they were ever human.</font>
+
+400
+00:48:19,100 --> 00:48:21,640
+<font face="Vesta" size="78">Listen to me! I promise I'll save you.</font>
+
+401
+00:48:21,640 --> 00:48:24,810
+<font face="Vesta" size="78">Don't get too fat or they'll eat you.</font>
+
+402
+00:48:33,110 --> 00:48:34,700
+<font face="Vesta" size="78">Hide these.</font>
+
+403
+00:48:37,620 --> 00:48:38,950
+<font face="Vesta" size="78">I thought they were gone.</font>
+
+404
+00:48:39,450 --> 00:48:41,290
+<font face="Vesta" size="78">For when you go home.</font>
+
+405
+00:48:47,420 --> 00:48:49,760
+<font face="Vesta" size="78">This was a farewell card.</font>
+
+406
+00:48:50,170 --> 00:48:52,680
+<font face="Palatino Linotype" size="96">{\an8}<i>Good luck, Chihiro</i> 
+<i>Hope we meet again</i></font>
+
+407
+00:48:51,170 --> 00:48:52,680
+<font face="Vesta" size="78">Chihiro?</font>
+
+408
+00:48:53,090 --> 00:48:56,180
+<font face="Vesta" size="78">Chihiro... That's my name!</font>
+
+409
+00:48:57,220 --> 00:48:59,680
+<font face="Vesta" size="78">Yubaba controls us by stealing our names.</font>
+
+410
+00:49:00,430 --> 00:49:04,810
+<font face="Vesta" size="78">You're Sen here. Keep your real name a secret.</font>
+
+411
+00:49:04,810 --> 00:49:07,940
+<font face="Vesta" size="78">She almost got my name. I was turning into Sen.</font>
+
+412
+00:49:08,820 --> 00:49:12,030
+<font face="Vesta" size="78">Without your real name, you'll never find your way home.</font>
+
+413
+00:49:12,990 --> 00:49:15,660
+<font face="Vesta" size="78">I no longer remember mine.</font>
+
+414
+00:49:15,660 --> 00:49:17,660
+<font face="Vesta" size="78">Your real name?</font>
+
+415
+00:49:17,660 --> 00:49:21,000
+<font face="Vesta" size="78">But it's strange, I remember yours.</font>
+
+416
+00:49:23,460 --> 00:49:26,330
+<font face="Vesta" size="78">Better eat, you must be hungry.</font>
+
+417
+00:49:26,330 --> 00:49:28,000
+<font face="Vesta" size="78">I don't want to.</font>
+
+418
+00:49:28,000 --> 00:49:32,090
+<font face="Vesta" size="78">I put a spell on them to give you back your strength.</font>
+
+419
+00:50:08,540 --> 00:50:11,170
+<font face="Vesta" size="78">You've had a rough time. Better eat more.</font>
+
+420
+00:50:26,060 --> 00:50:27,480
+<font face="Vesta" size="78">You know the way back.</font>
+
+421
+00:50:27,480 --> 00:50:30,150
+<font face="Vesta" size="78">Thanks Haku. I promise to work hard.</font>
+
+422
+00:52:05,120 --> 00:52:07,700
+<font face="Vesta" size="78">Where were you? I was worried.</font>
+
+423
+00:52:07,700 --> 00:52:08,910
+<font face="Vesta" size="78">Sorry.</font>
+
+424
+00:52:18,210 --> 00:52:20,050
+<font face="Vesta" size="78">Out of the way.</font>
+
+425
+00:52:32,900 --> 00:52:35,150
+<font face="Vesta" size="78">Come on, give it some elbow grease.</font>
+
+426
+00:52:35,650 --> 00:52:38,530
+<font face="Vesta" size="78">Starting today, you two are on the big tub.</font>
+
+427
+00:52:38,530 --> 00:52:40,650
+<font face="Vesta" size="78">What? That's Frog work!</font>
+
+428
+00:52:40,650 --> 00:52:43,740
+<font face="Vesta" size="78">Orders from the top. And no shirking, either.</font>
+
+429
+00:53:03,840 --> 00:53:05,760
+<font face="Vesta" size="78">Aren't you getting wet?</font>
+
+430
+00:53:09,740 --> 00:53:11,600
+<font face="Vesta" size="78">Sen, come on!</font>
+
+431
+00:53:11,600 --> 00:53:13,060
+<font face="Vesta" size="78">Coming!</font>
+
+432
+00:53:13,060 --> 00:53:14,770
+<font face="Vesta" size="78">I'll leave this open.</font>
+
+433
+00:53:42,720 --> 00:53:43,900
+<font face="Vesta" size="78">On the big tub, Lin?</font>
+
+434
+00:53:43,900 --> 00:53:44,680
+<font face="Vesta" size="78">Stuff it.</font>
+
+435
+00:53:48,300 --> 00:53:51,470
+<font face="Vesta" size="78">Just look at this. Hasn't been scrubbed in ages.</font>
+
+436
+00:54:05,990 --> 00:54:09,330
+<font face="Vesta" size="78">The big tub is reserved for our filthiest guests.</font>
+
+437
+00:54:09,330 --> 00:54:11,290
+<font face="Vesta" size="78">It's caked with sludge.</font>
+
+438
+00:54:11,290 --> 00:54:13,960
+<font face="Vesta" size="78">Lin! Sen! First customers are coming.</font>
+
+439
+00:54:13,960 --> 00:54:15,670
+<font face="Vesta" size="78">All right already!</font>
+
+440
+00:54:15,670 --> 00:54:18,000
+<font face="Vesta" size="78">Man, this is pure harassment.</font>
+
+441
+00:54:18,000 --> 00:54:21,250
+<font face="Vesta" size="78">Go get a tag from the foreman.</font>
+
+442
+00:54:21,250 --> 00:54:22,340
+<font face="Vesta" size="78">A tag?</font>
+
+443
+00:54:25,130 --> 00:54:27,260
+<font face="Vesta" size="78">For an herbal bath.</font>
+
+444
+00:54:27,260 --> 00:54:28,510
+<font face="Vesta" size="78">Right.</font>
+
+445
+00:54:29,640 --> 00:54:31,330
+<font face="Vesta" size="78">Lin, what's a foreman?</font>
+
+446
+00:54:35,520 --> 00:54:38,310
+<font face="Vesta" size="78">Something's coming. I wonder...</font>
+
+447
+00:54:47,320 --> 00:54:51,160
+<font face="Vesta" size="78">Is some good-for-nothing using the rain to sneak in?</font>
+
+448
+00:55:15,430 --> 00:55:18,190
+<font face="Vesta" size="78">Absolutely not, it's too valuable to waste.</font>
+
+449
+00:55:18,190 --> 00:55:19,850
+<font face="Vesta" size="78">Good morning!</font>
+
+450
+00:55:20,310 --> 00:55:22,270
+<font face="Vesta" size="78">Feeling refreshed?</font>
+
+451
+00:55:22,690 --> 00:55:23,980
+<font face="Vesta" size="78">For Kasuga.</font>
+
+452
+00:55:23,980 --> 00:55:26,150
+<font face="Vesta" size="78">One deluxe sulfur bath.</font>
+
+453
+00:55:26,530 --> 00:55:28,990
+<font face="Vesta" size="78">No point standing there. Back to work.</font>
+
+454
+00:55:29,360 --> 00:55:31,030
+<font face="Vesta" size="78">Scrub it with your hands.</font>
+
+455
+00:55:31,030 --> 00:55:33,030
+<font face="Vesta" size="78">Good morning!</font>
+
+456
+00:55:33,030 --> 00:55:33,970
+<font face="Vesta" size="78">Your bare hands.</font>
+
+457
+00:55:33,970 --> 00:55:37,500
+<font face="Vesta" size="78">But she said it has to be an herbal bath.</font>
+
+458
+00:55:37,500 --> 00:55:39,250
+<font face="Vesta" size="78">You just don't get it.</font>
+
+459
+00:55:39,250 --> 00:55:41,540
+<font face="Vesta" size="78">Mugwort, right?</font>
+
+460
+00:55:41,540 --> 00:55:43,500
+<font face="Vesta" size="78">Relax and enjoy.</font>
+
+461
+00:55:52,550 --> 00:55:55,220
+<font face="Vesta" size="78">Foreman. Yes ma'am!</font>
+
+462
+00:55:57,310 --> 00:55:58,480
+<font face="Vesta" size="78">Thank you!</font>
+
+463
+00:55:58,480 --> 00:55:59,810
+<font face="Vesta" size="78">But that's not...</font>
+
+464
+00:55:59,810 --> 00:56:01,400
+<font face="Vesta" size="78">Hey you, wait!</font>
+
+465
+00:56:01,400 --> 00:56:02,400
+<font face="Vesta" size="78"><i>What's the trouble?</i></font>
+
+466
+00:56:02,400 --> 00:56:03,810
+<font face="Vesta" size="78">Oh, nothing at all.</font>
+
+467
+00:56:04,190 --> 00:56:05,900
+<font face="Vesta" size="78">We have an intruder.</font>
+
+468
+00:56:05,900 --> 00:56:06,820
+<font face="Vesta" size="78"><i>A human?</i></font>
+
+469
+00:56:06,820 --> 00:56:10,030
+<font face="Vesta" size="78">You figure it out. Haku's gone today.</font>
+
+470
+00:56:10,030 --> 00:56:12,530
+<font face="Vesta" size="78">Wow, you got a really good one.</font>
+
+471
+00:56:12,530 --> 00:56:15,080
+<font face="Vesta" size="78">This goes straight to Kamaji.</font>
+
+472
+00:56:16,660 --> 00:56:18,500
+<font face="Vesta" size="78">Water should be right up.</font>
+
+473
+00:56:24,540 --> 00:56:27,460
+<font face="Vesta" size="78">Yank this for hot water. Go ahead, try it.</font>
+
+474
+00:56:36,140 --> 00:56:38,640
+<font face="Vesta" size="78">You're really are a klutz.</font>
+
+475
+00:56:38,640 --> 00:56:40,850
+<font face="Vesta" size="78">Look at that color.</font>
+
+476
+00:56:40,850 --> 00:56:43,150
+<font face="Vesta" size="78">This one has dried worm salts.</font>
+
+477
+00:56:43,730 --> 00:56:46,650
+<font face="Vesta" size="78">With water this murky, who's gonna see the sludge?</font>
+
+478
+00:56:48,780 --> 00:56:51,610
+<font face="Vesta" size="78">Yank it again when it's full. It'll stop.</font>
+
+479
+00:56:52,070 --> 00:56:55,530
+<font face="Vesta" size="78">You can let go now. I'll go get our breakfast.</font>
+
+480
+00:56:55,530 --> 00:56:56,780
+<font face="Vesta" size="78">Okay.</font>
+
+481
+00:57:19,100 --> 00:57:21,230
+<font face="Vesta" size="78">Ouch!</font>
+
+482
+00:57:25,270 --> 00:57:27,940
+<font face="Vesta" size="78">Um... The bath's not ready yet.</font>
+
+483
+00:57:33,490 --> 00:57:34,950
+<font face="Vesta" size="78">So many...</font>
+
+484
+00:57:37,660 --> 00:57:39,580
+<font face="Vesta" size="78">They're for me?</font>
+
+485
+00:57:42,560 --> 00:57:45,210
+<font face="Vesta" size="78">But I don't need them.</font>
+
+486
+00:57:47,960 --> 00:57:49,710
+<font face="Vesta" size="78">No, you gave me one already.</font>
+
+487
+00:58:04,640 --> 00:58:05,730
+<font face="Vesta" size="78">Madam!</font>
+
+488
+00:58:05,730 --> 00:58:07,220
+<font face="Vesta" size="78">It's a Stink Spirit.</font>
+
+489
+00:58:07,220 --> 00:58:09,400
+<font face="Vesta" size="78">Yes, and a large one, too.</font>
+
+490
+00:58:09,400 --> 00:58:11,130
+<font face="Vesta" size="78">It's headed straight for the bridge!</font>
+
+491
+00:58:11,130 --> 00:58:13,650
+<font face="Vesta" size="78">Please turn back.</font>
+
+492
+00:58:14,360 --> 00:58:17,910
+<font face="Vesta" size="78">Please go! The baths are closed for the night.</font>
+
+493
+00:58:17,910 --> 00:58:20,530
+<font face="Vesta" size="78">Please withdraw, please!</font>
+
+494
+00:58:20,530 --> 00:58:23,370
+<font face="Vesta" size="78">Stinky!</font>
+
+495
+00:58:23,370 --> 00:58:27,370
+<font face="Vesta" size="78">That's odd. Stink Spirits feel different.</font>
+
+496
+00:58:27,370 --> 00:58:29,920
+<font face="Vesta" size="78">Well, now that it's here, better go greet it!</font>
+
+497
+00:58:30,630 --> 00:58:34,170
+<font face="Vesta" size="78">All we can do is get rid of it fast.</font>
+
+498
+00:58:34,760 --> 00:58:36,720
+<font face="Vesta" size="78">Everyone, please return to your rooms!</font>
+
+499
+00:58:36,720 --> 00:58:38,430
+<font face="Vesta" size="78">Please hurry. Terribly sorry!</font>
+
+500
+00:58:40,390 --> 00:58:42,640
+<font face="Vesta" size="78">Lin and Sen, Yubaba wants you.</font>
+
+501
+00:58:42,640 --> 00:58:43,680
+<font face="Vesta" size="78">Yes sir!</font>
+
+502
+00:58:43,680 --> 00:58:46,390
+<font face="Vesta" size="78">Pay attention, this is your debut.</font>
+
+503
+00:58:46,390 --> 00:58:49,190
+<font face="Vesta" size="78">Show the customer to the big tub.</font>
+
+504
+00:58:50,190 --> 00:58:52,440
+<font face="Vesta" size="78">Remember, one peep out of you and you're coal.</font>
+
+505
+00:58:52,440 --> 00:58:53,180
+<font face="Vesta" size="78">Got it?</font>
+
+506
+00:58:53,780 --> 00:58:54,840
+<font face="Vesta" size="78">It has arrived.</font>
+
+507
+00:59:05,660 --> 00:59:07,750
+<font face="Vesta" size="78">No, that's not polite!</font>
+
+508
+00:59:15,800 --> 00:59:19,260
+<font face="Vesta" size="78">Welgum to our bazz.</font>
+
+509
+00:59:22,640 --> 00:59:24,770
+<font face="Vesta" size="78">Oh... Money...!</font>
+
+510
+00:59:24,770 --> 00:59:27,430
+<font face="Vesta" size="78">Hurry Sen, take it!</font>
+
+511
+00:59:27,430 --> 00:59:28,690
+<font face="Vesta" size="78">Yez ma'am.</font>
+
+512
+00:59:36,990 --> 00:59:41,700
+<font face="Vesta" size="78">Wud are you wading for? Show him to da bazz!</font>
+
+513
+00:59:41,700 --> 00:59:43,450
+<font face="Vesta" size="78">Diz way...</font>
+
+514
+01:00:01,970 --> 01:00:03,640
+<font face="Vesta" size="78">Sen!</font>
+
+515
+01:00:07,930 --> 01:00:10,440
+<font face="Vesta" size="78">Horrible!</font>
+
+516
+01:00:11,520 --> 01:00:12,460
+<font face="Vesta" size="78">Breakfast!</font>
+
+517
+01:00:12,460 --> 01:00:14,690
+<font face="Vesta" size="78">Open the windows, all of 'em!</font>
+
+518
+01:00:57,900 --> 01:01:00,570
+<font face="Vesta" size="78">What? Just a minute.</font>
+
+519
+01:01:06,200 --> 01:01:07,380
+<font face="Vesta" size="78">That's really filthy.</font>
+
+520
+01:01:07,380 --> 01:01:09,080
+<font face="Vesta" size="78">It's not funny.</font>
+
+521
+01:01:09,080 --> 01:01:10,660
+<font face="Vesta" size="78">What will she do?</font>
+
+522
+01:01:15,060 --> 01:01:17,800
+<font face="Vesta" size="78">Ah, she's going to refill the tub.</font>
+
+523
+01:01:17,800 --> 01:01:21,720
+<font face="Vesta" size="78">Oh dear, she's soiling the walls with her dirty hands!</font>
+
+524
+01:01:33,890 --> 01:01:35,900
+<font face="Vesta" size="78">Did you give Sen new tags?</font>
+
+525
+01:01:35,900 --> 01:01:38,520
+<font face="Vesta" size="78">Never, what a waste!</font>
+
+526
+01:02:19,790 --> 01:02:22,440
+<font face="Vesta" size="78">All that precious herbal essence!</font>
+
+527
+01:02:48,510 --> 01:02:50,890
+<font face="Vesta" size="78">Sen! Sen, where are you?</font>
+
+528
+01:02:50,890 --> 01:02:51,880
+<font face="Vesta" size="78">Lin!</font>
+
+529
+01:02:51,880 --> 01:02:53,270
+<font face="Vesta" size="78">Are you okay?</font>
+
+530
+01:02:53,270 --> 01:02:55,930
+<font face="Vesta" size="78">I asked Kamaji to help us out.</font>
+
+531
+01:02:56,480 --> 01:02:58,560
+<font face="Vesta" size="78">He's sending his best herbal essence.</font>
+
+532
+01:02:58,980 --> 01:03:02,320
+<font face="Vesta" size="78">Thanks. There's a thorn or something stuck in him.</font>
+
+533
+01:03:02,320 --> 01:03:03,440
+<font face="Vesta" size="78">A thorn?</font>
+
+534
+01:03:03,440 --> 01:03:05,320
+<font face="Vesta" size="78">I can't pull it out.</font>
+
+535
+01:03:05,320 --> 01:03:07,910
+<font face="Vesta" size="78">A thorn? Hmm...</font>
+
+536
+01:03:09,360 --> 01:03:11,160
+<font face="Vesta" size="78">Get everyone downstairs!</font>
+
+537
+01:03:11,160 --> 01:03:11,950
+<font face="Vesta" size="78">Hurry!</font>
+
+538
+01:03:15,540 --> 01:03:17,210
+<font face="Vesta" size="78">Sen and Lin!</font>
+
+539
+01:03:17,210 --> 01:03:19,580
+<font face="Vesta" size="78">Our guest is no Stink Spirit.</font>
+
+540
+01:03:21,710 --> 01:03:23,230
+<font face="Vesta" size="78">Use this rope.</font>
+
+541
+01:03:23,230 --> 01:03:24,460
+<font face="Vesta" size="78">Yes ma'am!</font>
+
+542
+01:03:33,220 --> 01:03:34,720
+<font face="Vesta" size="78">Tie it good and tight!</font>
+
+543
+01:03:36,310 --> 01:03:40,270
+<font face="Vesta" size="78">Hurry up! Girls, lend a hand!</font>
+
+544
+01:03:40,270 --> 01:03:41,940
+<font face="Vesta" size="78">It's tied!</font>
+
+545
+01:03:43,150 --> 01:03:46,650
+<font face="Vesta" size="78">Everyone ready? All together now!</font>
+
+546
+01:03:46,650 --> 01:03:49,450
+<font face="Vesta" size="78">Heave!</font>
+
+547
+01:03:50,070 --> 01:03:52,200
+<font face="Vesta" size="78">And heave!</font>
+
+548
+01:03:52,200 --> 01:03:54,430
+<font face="Vesta" size="78">Heave!</font>
+
+549
+01:03:54,430 --> 01:03:56,700
+<font face="Vesta" size="78">Heave!</font>
+
+550
+01:04:04,550 --> 01:04:05,460
+<font face="Vesta" size="78">A bicycle?</font>
+
+551
+01:04:06,090 --> 01:04:09,720
+<font face="Vesta" size="78">I knew it. Now, heave!</font>
+
+552
+01:04:09,720 --> 01:04:12,220
+<font face="Vesta" size="78">Heave!</font>
+
+553
+01:04:43,790 --> 01:04:46,420
+<font face="Vesta" size="78">Sen, are you all right?</font>
+
+554
+01:04:56,600 --> 01:04:59,390
+<font face="Vesta" size="78">Well done.</font>
+
+555
+01:05:28,690 --> 01:05:31,130
+<font face="Vesta" size="78">Gold! It's gold!</font>
+
+556
+01:05:31,130 --> 01:05:33,700
+<font face="Vesta" size="78">Hands off! That's company property.</font>
+
+557
+01:05:33,700 --> 01:05:37,300
+<font face="Vesta" size="78">Quiet! Our guest is still with us.</font>
+
+558
+01:05:43,190 --> 01:05:46,310
+<font face="Vesta" size="78">Sen, you're in the way. Get down from there.</font>
+
+559
+01:05:46,310 --> 01:05:48,820
+<font face="Vesta" size="78">Open the main gates! He's leaving!</font>
+
+560
+01:06:15,550 --> 01:06:19,680
+<font face="Vesta" size="78">Sen, you're a wonder! You made us a fortune.</font>
+
+561
+01:06:20,390 --> 01:06:23,100
+<font face="Vesta" size="78">That was the guardian of a great river.</font>
+
+562
+01:06:23,100 --> 01:06:24,770
+<font face="Vesta" size="78">Everyone, learn from Sen!</font>
+
+563
+01:06:25,350 --> 01:06:27,350
+<font face="Vesta" size="78">Sake on the house tonight.</font>
+
+564
+01:06:27,850 --> 01:06:30,520
+<font face="Vesta" size="78">Now hand over all that gold you picked up.</font>
+
+565
+01:06:44,160 --> 01:06:46,160
+<font face="Vesta" size="78">Want some? I swiped them.</font>
+
+566
+01:06:46,670 --> 01:06:48,210
+<font face="Vesta" size="78">Thanks.</font>
+
+567
+01:06:48,210 --> 01:06:50,380
+<font face="Vesta" size="78">What a day.</font>
+
+568
+01:06:52,880 --> 01:06:54,420
+<font face="Vesta" size="78">Haku missed the whole thing.</font>
+
+569
+01:06:54,420 --> 01:06:56,300
+<font face="Vesta" size="78">Not Haku again!</font>
+
+570
+01:06:57,220 --> 01:06:59,590
+<font face="Vesta" size="78">Sometimes he just disappears.</font>
+
+571
+01:07:00,050 --> 01:07:03,930
+<font face="Vesta" size="78">They say Yubaba makes him do bad stuff.</font>
+
+572
+01:07:03,930 --> 01:07:04,890
+<font face="Vesta" size="78">Really?</font>
+
+573
+01:07:04,890 --> 01:07:06,390
+<font face="Vesta" size="78">Lights out, Lin.</font>
+
+574
+01:07:06,390 --> 01:07:07,440
+<font face="Vesta" size="78">Okay.</font>
+
+575
+01:07:32,630 --> 01:07:35,460
+<font face="Vesta" size="78">There's a town. And the water's like an ocean.</font>
+
+576
+01:07:35,460 --> 01:07:38,470
+<font face="Vesta" size="78">What did you expect after all that rain?</font>
+
+577
+01:07:40,300 --> 01:07:44,310
+<font face="Vesta" size="78">I'm gonna get there someday. I'll get out of here for sure.</font>
+
+578
+01:08:08,790 --> 01:08:10,120
+<font face="Vesta" size="78">What's wrong?</font>
+
+579
+01:08:39,690 --> 01:08:41,200
+<font face="Vesta" size="78">Gold!</font>
+
+580
+01:08:44,030 --> 01:08:47,160
+<font face="Vesta" size="78">Who are you? You're no customer.</font>
+
+581
+01:08:47,160 --> 01:08:48,910
+<font face="Vesta" size="78">You're not allowed in there.</font>
+
+582
+01:08:55,340 --> 01:08:58,710
+<font face="Vesta" size="78">Hey, it's gold! For me?</font>
+
+583
+01:09:04,010 --> 01:09:06,350
+<font face="Vesta" size="78">You can make gold?</font>
+
+584
+01:09:11,890 --> 01:09:12,850
+<font face="Vesta" size="78">Gimme!</font>
+
+585
+01:09:21,070 --> 01:09:22,780
+<font face="Vesta" size="78">Who's down here?</font>
+
+586
+01:09:23,820 --> 01:09:26,200
+<font face="Vesta" size="78">It's way past lights out.</font>
+
+587
+01:09:29,740 --> 01:09:33,020
+<font face="Vesta" size="78">Hey boss, I'm hungry.</font>
+
+588
+01:09:33,020 --> 01:09:34,370
+<font face="Vesta" size="78">Starved, in fact.</font>
+
+589
+01:09:34,370 --> 01:09:35,380
+<font face="Vesta" size="78">That voice...</font>
+
+590
+01:09:35,380 --> 01:09:37,290
+<font face="Vesta" size="78">There, I'll pay you now.</font>
+
+591
+01:09:38,040 --> 01:09:40,800
+<font face="Vesta" size="78">I'm a customer. I want a bath.</font>
+
+592
+01:09:40,800 --> 01:09:42,420
+<font face="Vesta" size="78">Wake everyone up!</font>
+
+593
+01:09:47,930 --> 01:09:51,390
+<font face="Vesta" size="78">Mom and Dad, the river guardian gave me this medicine.</font>
+
+594
+01:09:51,390 --> 01:09:54,270
+<font face="Vesta" size="78">If you take it, you'll be people again.</font>
+
+595
+01:09:58,400 --> 01:10:00,400
+<font face="Vesta" size="78">Dad, Mom, where are you?</font>
+
+596
+01:10:00,780 --> 01:10:02,030
+<font face="Vesta" size="78">Daddy!</font>
+
+597
+01:10:13,120 --> 01:10:14,290
+<font face="Vesta" size="78">What an awful dream.</font>
+
+598
+01:10:15,920 --> 01:10:17,080
+<font face="Vesta" size="78">Lin?</font>
+
+599
+01:10:21,250 --> 01:10:22,800
+<font face="Vesta" size="78">Where is everybody?</font>
+
+600
+01:10:29,300 --> 01:10:32,100
+<font face="Vesta" size="78">Wow, it really did turn into an ocean!</font>
+
+601
+01:10:37,350 --> 01:10:40,360
+<font face="Vesta" size="78">I can see where Mom and Dad are from here.</font>
+
+602
+01:10:44,070 --> 01:10:46,150
+<font face="Vesta" size="78">Kamaji lit the fires already.</font>
+
+603
+01:10:46,150 --> 01:10:48,070
+<font face="Vesta" size="78">Did I sleep that long?</font>
+
+604
+01:10:51,740 --> 01:10:54,730
+<font face="Vesta" size="78">The customer's waiting. Can't you work faster?</font>
+
+605
+01:10:54,730 --> 01:10:58,850
+<font face="Vesta" size="78">Serve everything you've got, even leftovers!</font>
+
+606
+01:11:00,840 --> 01:11:01,880
+<font face="Vesta" size="78">Sen!</font>
+
+607
+01:11:01,880 --> 01:11:03,090
+<font face="Vesta" size="78">Lin?</font>
+
+608
+01:11:03,090 --> 01:11:06,090
+<font face="Vesta" size="78">I was just coming to wake you up, look!</font>
+
+609
+01:11:06,090 --> 01:11:08,680
+<font face="Vesta" size="78">Gold! He gave me real gold.</font>
+
+610
+01:11:08,680 --> 01:11:10,850
+<font face="Vesta" size="78">We've got a real high roller.</font>
+
+611
+01:11:10,850 --> 01:11:13,220
+<font face="Vesta" size="78">Please, sir, try this!</font>
+
+612
+01:11:17,350 --> 01:11:19,980
+<font face="Vesta" size="78">Throw us some gold!</font>
+
+613
+01:11:21,980 --> 01:11:25,320
+<font face="Vesta" size="78">I'm starving, bring it all!</font>
+
+614
+01:11:29,990 --> 01:11:31,530
+<font face="Vesta" size="78">Who's this guest?</font>
+
+615
+01:11:31,530 --> 01:11:34,910
+<font face="Vesta" size="78">Come on, Yubaba's still asleep. Now's your chance.</font>
+
+616
+01:11:35,370 --> 01:11:37,250
+<font face="Vesta" size="78">I'm going to see Kamaji.</font>
+
+617
+01:11:37,870 --> 01:11:40,130
+<font face="Vesta" size="78">I wouldn't go there now.</font>
+
+618
+01:11:40,130 --> 01:11:42,500
+<font face="Vesta" size="78">He's angry because they woke him up.</font>
+
+619
+01:11:42,500 --> 01:11:44,340
+<font face="Vesta" size="78">Lin, let's go back for more.</font>
+
+620
+01:12:09,530 --> 01:12:12,870
+<font face="Vesta" size="78">What if I can't recognize my parents?</font>
+
+621
+01:12:13,700 --> 01:12:16,450
+<font face="Vesta" size="78">I hope Dad hasn't gotten too fat.</font>
+
+622
+01:12:44,730 --> 01:12:46,230
+<font face="Vesta" size="78">That's the dragon I saw.</font>
+
+623
+01:12:46,730 --> 01:12:48,230
+<font face="Vesta" size="78">It's coming this way.</font>
+
+624
+01:12:50,760 --> 01:12:52,280
+<font face="Vesta" size="78">Those aren't birds!</font>
+
+625
+01:13:03,670 --> 01:13:06,770
+<font face="Vesta" size="78">Haku, don't give up. Over here!</font>
+
+626
+01:13:08,380 --> 01:13:09,460
+<font face="Vesta" size="78">Haku!</font>
+
+627
+01:13:28,860 --> 01:13:30,030
+<font face="Vesta" size="78">It's just paper.</font>
+
+628
+01:13:58,300 --> 01:14:00,470
+<font face="Vesta" size="78">Haku? It is you, isn't it?</font>
+
+629
+01:14:06,650 --> 01:14:10,070
+<font face="Vesta" size="78">Are you hurt? Those paper birds are gone.</font>
+
+630
+01:14:10,070 --> 01:14:11,360
+<font face="Vesta" size="78">You're safe now.</font>
+
+631
+01:14:24,540 --> 01:14:26,290
+<font face="Vesta" size="78">He's going to Yubaba.</font>
+
+632
+01:14:26,880 --> 01:14:29,340
+<font face="Vesta" size="78">What should I do? He'll die!</font>
+
+633
+01:14:36,820 --> 01:14:41,890
+<font face="Vesta" size="78">Now the richest man in the whole wide world...</font>
+
+634
+01:14:41,890 --> 01:14:45,940
+<font face="Vesta" size="78">has come to grace us with his presence.</font>
+
+635
+01:14:46,980 --> 01:14:49,020
+<font face="Vesta" size="78">Greetings!</font>
+
+636
+01:14:49,020 --> 01:14:52,650
+<font face="Vesta" size="78">Now let us appeal to his generosity.</font>
+
+637
+01:14:52,650 --> 01:14:54,690
+<font face="Vesta" size="78">Please, sir! Over here.</font>
+
+638
+01:14:58,160 --> 01:14:59,450
+<font face="Vesta" size="78">I hope I get some.</font>
+
+639
+01:14:59,450 --> 01:15:01,450
+<font face="Vesta" size="78">They say gold springs from his palms.</font>
+
+640
+01:15:02,330 --> 01:15:05,370
+<font face="Vesta" size="78">Toss some this way, sir!</font>
+
+641
+01:15:09,380 --> 01:15:10,880
+<font face="Vesta" size="78">What are you doing?</font>
+
+642
+01:15:10,880 --> 01:15:11,960
+<font face="Vesta" size="78">Going upstairs.</font>
+
+643
+01:15:11,960 --> 01:15:14,010
+<font face="Vesta" size="78">No you don't. What's this?</font>
+
+644
+01:15:14,710 --> 01:15:15,970
+<font face="Vesta" size="78">Blood!</font>
+
+645
+01:15:19,890 --> 01:15:22,140
+<font face="Vesta" size="78">Out of the way, we have a guest.</font>
+
+646
+01:15:23,720 --> 01:15:25,700
+<font face="Vesta" size="78">Thank you for your help.</font>
+
+647
+01:15:25,700 --> 01:15:28,310
+<font face="Vesta" size="78">Get out of the way!</font>
+
+648
+01:15:50,250 --> 01:15:51,920
+<font face="Vesta" size="78">I don't need it.</font>
+
+649
+01:15:54,840 --> 01:15:57,170
+<font face="Vesta" size="78">I'm busy, please excuse me.</font>
+
+650
+01:16:08,810 --> 01:16:11,690
+<font face="Vesta" size="78">Quiet! Quiet down.</font>
+
+651
+01:16:12,360 --> 01:16:14,020
+<font face="Vesta" size="78">Back, get back!</font>
+
+652
+01:16:14,440 --> 01:16:16,550
+<font face="Vesta" size="78">Please excuse her manners.</font>
+
+653
+01:16:16,550 --> 01:16:20,240
+<font face="Vesta" size="78">The girl is new and a human.</font>
+
+654
+01:16:22,780 --> 01:16:25,620
+<font face="Vesta" size="78">What's so funny? Wipe off that smile.</font>
+
+655
+01:16:25,620 --> 01:16:26,950
+<font face="Vesta" size="78">Why, I would never...</font>
+
+656
+01:16:31,870 --> 01:16:34,250
+<font face="Vesta" size="78">He ate them!</font>
+
+657
+01:18:01,170 --> 01:18:02,420
+<font face="Vesta" size="78">Yubaba!</font>
+
+658
+01:19:15,040 --> 01:19:17,920
+<font face="Vesta" size="78">We're in a fine mess now.</font>
+
+659
+01:19:18,540 --> 01:19:20,790
+<font face="Vesta" size="78">He's a No Face.</font>
+
+660
+01:19:20,790 --> 01:19:23,050
+<font face="Vesta" size="78">That's right, a No Face!</font>
+
+661
+01:19:23,050 --> 01:19:25,940
+<font face="Vesta" size="78">Your greed attracted quite a guest.</font>
+
+662
+01:19:26,470 --> 01:19:29,720
+<font face="Vesta" size="78">Don't do anything stupid until I get down there.</font>
+
+663
+01:19:30,300 --> 01:19:32,810
+<font face="Vesta" size="78">Just look at this carpet.</font>
+
+664
+01:19:32,810 --> 01:19:35,180
+<font face="Vesta" size="78">Get Haku out of here.</font>
+
+665
+01:19:35,180 --> 01:19:37,060
+<font face="Vesta" size="78">He's useless to me now.</font>
+
+666
+01:19:59,540 --> 01:20:02,630
+<font face="Vesta" size="78">Bo, sleeping outside your crib again?</font>
+
+667
+01:20:06,550 --> 01:20:10,840
+<font face="Vesta" size="78">Oh I'm sorry, you were sleeping like such a good baby.</font>
+
+668
+01:20:10,840 --> 01:20:13,760
+<font face="Vesta" size="78">Baba still has work to do.</font>
+
+669
+01:20:16,680 --> 01:20:19,480
+<font face="Vesta" size="78">Go back to sleep now, that's a good baby.</font>
+
+670
+01:20:47,510 --> 01:20:49,420
+<font face="Vesta" size="78">Ouch, let me go!</font>
+
+671
+01:20:49,880 --> 01:20:51,840
+<font face="Vesta" size="78">Oh, thanks for helping me.</font>
+
+672
+01:20:51,840 --> 01:20:55,260
+<font face="Vesta" size="78">But I'm in a hurry, please let me go.</font>
+
+673
+01:20:55,260 --> 01:20:57,600
+<font face="Vesta" size="78">You came to make me sick.</font>
+
+674
+01:20:58,140 --> 01:21:00,730
+<font face="Vesta" size="78">The outside has bad germs.</font>
+
+675
+01:21:01,600 --> 01:21:05,730
+<font face="Vesta" size="78">I'm a human. Maybe you never saw one before.</font>
+
+676
+01:21:05,730 --> 01:21:08,150
+<font face="Vesta" size="78">You'll get sick out there.</font>
+
+677
+01:21:08,150 --> 01:21:10,220
+<font face="Vesta" size="78">Stay here and play with me.</font>
+
+678
+01:21:10,220 --> 01:21:12,070
+<font face="Vesta" size="78">Are you sick?</font>
+
+679
+01:21:12,070 --> 01:21:15,030
+<font face="Vesta" size="78">I'm in here 'cause I'll get sick outside.</font>
+
+680
+01:21:15,030 --> 01:21:17,620
+<font face="Vesta" size="78">Staying inside will make you sick!</font>
+
+681
+01:21:17,620 --> 01:21:21,500
+<font face="Vesta" size="78">You see, someone I really care about is badly hurt.</font>
+
+682
+01:21:21,500 --> 01:21:23,250
+<font face="Vesta" size="78">I've got to go right now.</font>
+
+683
+01:21:23,250 --> 01:21:24,830
+<font face="Vesta" size="78">Please let me go.</font>
+
+684
+01:21:24,830 --> 01:21:30,130
+<font face="Vesta" size="78">If you go, I'll start crying. Then Baba will come and kill you.</font>
+
+685
+01:21:30,130 --> 01:21:31,970
+<font face="Vesta" size="78">I'll break your little arm.</font>
+
+686
+01:21:31,970 --> 01:21:33,260
+<font face="Vesta" size="78">You're hurting me!</font>
+
+687
+01:21:33,260 --> 01:21:35,740
+<font face="Vesta" size="78">Please, I'll come play with you later.</font>
+
+688
+01:21:35,740 --> 01:21:37,510
+<font face="Vesta" size="78">No, I wanna play now!</font>
+
+689
+01:21:41,520 --> 01:21:43,690
+<font face="Vesta" size="78">Blood! See? It's blood!</font>
+
+690
+01:21:55,280 --> 01:21:57,050
+<font face="Vesta" size="78">Haku!</font>
+
+691
+01:21:57,050 --> 01:21:59,330
+<font face="Vesta" size="78">Go away!</font>
+
+692
+01:21:59,330 --> 01:22:00,620
+<font face="Vesta" size="78">It's you, isn't it?</font>
+
+693
+01:22:00,620 --> 01:22:01,950
+<font face="Vesta" size="78">Hang on!</font>
+
+694
+01:22:02,410 --> 01:22:03,500
+<font face="Vesta" size="78">Be quiet!</font>
+
+695
+01:22:03,500 --> 01:22:04,620
+<font face="Vesta" size="78">Haku!</font>
+
+696
+01:22:10,420 --> 01:22:11,380
+<font face="Vesta" size="78">Go away!</font>
+
+697
+01:22:14,050 --> 01:22:15,380
+<font face="Vesta" size="78">No!</font>
+
+698
+01:22:30,480 --> 01:22:34,220
+<font face="Vesta" size="78">I'm not afraid of blood. I'll cry if you don't play.</font>
+
+699
+01:22:34,220 --> 01:22:36,240
+<font face="Vesta" size="78">Please be a good boy and wait.</font>
+
+700
+01:22:36,860 --> 01:22:39,660
+<font face="Vesta" size="78">If you don't play with me I'll cry...</font>
+
+701
+01:22:41,470 --> 01:22:43,160
+<font face="Vesta" size="78">Please, wait!</font>
+
+702
+01:22:43,160 --> 01:22:46,460
+<font face="Vesta" size="78">What a racket. Simmer down.</font>
+
+703
+01:22:47,750 --> 01:22:50,170
+<font face="Vesta" size="78">You're a little butterball, aren't you?</font>
+
+704
+01:22:58,010 --> 01:23:00,350
+<font face="Vesta" size="78">I <i>am</i> a bit transparent here.</font>
+
+705
+01:23:00,350 --> 01:23:01,180
+<font face="Vesta" size="78">Baba...</font>
+
+706
+01:23:01,850 --> 01:23:05,770
+<font face="Vesta" size="78">Oh dear, can't you even tell me from your own mother?</font>
+
+707
+01:23:14,110 --> 01:23:16,990
+<font face="Vesta" size="78">There, that gives you a little more freedom.</font>
+
+708
+01:23:16,990 --> 01:23:20,280
+<font face="Vesta" size="78">Let's see now. What shall we turn you into?</font>
+
+709
+01:23:38,300 --> 01:23:41,140
+<font face="Vesta" size="78">This is our little secret. If you tell anyone...</font>
+
+710
+01:23:41,140 --> 01:23:43,180
+<font face="Vesta" size="78">I'll do the same to you.</font>
+
+711
+01:23:44,720 --> 01:23:45,910
+<font face="Vesta" size="78">Who are you?</font>
+
+712
+01:23:45,910 --> 01:23:48,560
+<font face="Vesta" size="78">Yubaba's older twin sister.</font>
+
+713
+01:23:48,560 --> 01:23:52,480
+<font face="Vesta" size="78">Thanks to you I've had a nice tour of the place.</font>
+
+714
+01:23:52,480 --> 01:23:54,690
+<font face="Vesta" size="78">Now hand over the dragon.</font>
+
+715
+01:23:54,690 --> 01:23:57,400
+<font face="Vesta" size="78">What are you going to do? He needs help.</font>
+
+716
+01:23:57,400 --> 01:24:00,700
+<font face="Vesta" size="78">That dragon's a thief. He works for my sister.</font>
+
+717
+01:24:00,700 --> 01:24:03,680
+<font face="Vesta" size="78">He stole a valuable seal from my house.</font>
+
+718
+01:24:03,680 --> 01:24:06,580
+<font face="Vesta" size="78">Haku would never do that. He's too kind.</font>
+
+719
+01:24:07,080 --> 01:24:10,750
+<font face="Vesta" size="78">All dragons are kind. Kind and stupid...</font>
+
+720
+01:24:10,750 --> 01:24:15,340
+<font face="Vesta" size="78">and eager to learn my sister's magical ways.</font>
+
+721
+01:24:15,760 --> 01:24:19,590
+<font face="Vesta" size="78">This boy will do anything that greedy woman wants.</font>
+
+722
+01:24:19,590 --> 01:24:21,800
+<font face="Vesta" size="78">Now step aside.</font>
+
+723
+01:24:21,800 --> 01:24:24,430
+<font face="Vesta" size="78">It's too late for him anyway.</font>
+
+724
+01:24:24,430 --> 01:24:27,680
+<font face="Vesta" size="78">The thing he stole had a protection spell.</font>
+
+725
+01:24:27,680 --> 01:24:29,810
+<font face="Vesta" size="78">Now the thief will die.</font>
+
+726
+01:24:30,600 --> 01:24:32,270
+<font face="Vesta" size="78">No, don't!</font>
+
+727
+01:24:39,780 --> 01:24:41,910
+<font face="Vesta" size="78">What are you up to now?</font>
+
+728
+01:24:41,910 --> 01:24:44,550
+<font face="Vesta" size="78">All right, that's enough. Back to your room.</font>
+
+729
+01:24:52,250 --> 01:24:54,290
+<font face="Vesta" size="78">Oh dear, that was careless...</font>
+
+730
+01:24:54,840 --> 01:24:56,170
+<font face="Vesta" size="78">Haku, no!</font>
+
+731
+01:25:17,570 --> 01:25:18,780
+<font face="Vesta" size="78">Haku!</font>
+
+732
+01:25:46,760 --> 01:25:48,510
+<font face="Vesta" size="78">What is this?</font>
+
+733
+01:25:48,510 --> 01:25:49,970
+<font face="Vesta" size="78">Hold on there!</font>
+
+734
+01:25:52,940 --> 01:25:54,230
+<font face="Vesta" size="78">Haku!</font>
+
+735
+01:25:57,690 --> 01:25:59,280
+<font face="Vesta" size="78">Does it hurt?</font>
+
+736
+01:26:02,800 --> 01:26:05,030
+<font face="Vesta" size="78">This is serious.</font>
+
+737
+01:26:07,120 --> 01:26:08,410
+<font face="Vesta" size="78">Haku, don't give up.</font>
+
+738
+01:26:08,410 --> 01:26:10,200
+<font face="Vesta" size="78">What can we do? He'll die!</font>
+
+739
+01:26:10,700 --> 01:26:13,540
+<font face="Vesta" size="78">Something inside him is eating him up.</font>
+
+740
+01:26:13,540 --> 01:26:14,750
+<font face="Vesta" size="78">Inside him?</font>
+
+741
+01:26:14,750 --> 01:26:18,380
+<font face="Vesta" size="78">It's a strong spell. There's nothing I can do.</font>
+
+742
+01:26:18,380 --> 01:26:21,800
+<font face="Vesta" size="78">Haku, the river guardian gave me this.</font>
+
+743
+01:26:21,800 --> 01:26:23,970
+<font face="Vesta" size="78">Eat it, maybe it will help.</font>
+
+744
+01:26:26,220 --> 01:26:28,720
+<font face="Vesta" size="78">Haku, open your mouth.</font>
+
+745
+01:26:28,720 --> 01:26:31,310
+<font face="Vesta" size="78">Please Haku, eat it.</font>
+
+746
+01:26:33,060 --> 01:26:35,140
+<font face="Vesta" size="78">See, it's safe.</font>
+
+747
+01:26:35,140 --> 01:26:37,480
+<font face="Vesta" size="78">Is it some kind of medicine?</font>
+
+748
+01:26:37,480 --> 01:26:40,520
+<font face="Vesta" size="78">Open your mouth. You can do it.</font>
+
+749
+01:26:44,320 --> 01:26:46,200
+<font face="Vesta" size="78">That's it.</font>
+
+750
+01:26:46,200 --> 01:26:47,620
+<font face="Vesta" size="78">Swallow it.</font>
+
+751
+01:27:05,860 --> 01:27:07,380
+<font face="Vesta" size="78">He spit something out. That's it!</font>
+
+752
+01:27:20,110 --> 01:27:21,290
+<font face="Vesta" size="78">The seal!</font>
+
+753
+01:27:21,290 --> 01:27:23,320
+<font face="Vesta" size="78">It's getting away. There! Over there!</font>
+
+754
+01:27:43,020 --> 01:27:45,710
+<font face="Vesta" size="78">Sen, we have to purge the spell.</font>
+
+755
+01:27:49,890 --> 01:27:50,930
+<font face="Vesta" size="78">Begone!</font>
+
+756
+01:27:50,930 --> 01:27:54,060
+<font face="Vesta" size="78">Haku took this from Yubaba's sister.</font>
+
+757
+01:27:54,060 --> 01:27:56,730
+<font face="Vesta" size="78">From Zeniba? That's a witch's seal.</font>
+
+758
+01:27:57,140 --> 01:27:59,270
+<font face="Vesta" size="78">Precious loot, I'd say.</font>
+
+759
+01:28:02,770 --> 01:28:03,900
+<font face="Vesta" size="78">I knew it was Haku.</font>
+
+760
+01:28:03,900 --> 01:28:05,670
+<font face="Vesta" size="78">Kamaji, it's Haku!</font>
+
+761
+01:28:07,700 --> 01:28:08,820
+<font face="Vesta" size="78">Haku!</font>
+
+762
+01:28:08,820 --> 01:28:10,320
+<font face="Vesta" size="78">Haku, Haku!</font>
+
+763
+01:28:12,660 --> 01:28:14,740
+<font face="Vesta" size="78">Kamaji, he's not breathing.</font>
+
+764
+01:28:14,740 --> 01:28:18,330
+<font face="Vesta" size="78">He is, but he's still very ill from the spell.</font>
+
+765
+01:28:27,590 --> 01:28:30,590
+<font face="Vesta" size="78">That should calm him some.</font>
+
+766
+01:28:33,010 --> 01:28:38,020
+<font face="Vesta" size="78">Haku turned up one day, just like you.</font>
+
+767
+01:28:38,020 --> 01:28:41,150
+<font face="Vesta" size="78">He said he wanted to learn magic.</font>
+
+768
+01:28:41,150 --> 01:28:43,270
+<font face="Vesta" size="78">I tried to warn him.</font>
+
+769
+01:28:43,270 --> 01:28:46,940
+<font face="Vesta" size="78">Becoming a sorcerer's apprentice is dangerous business.</font>
+
+770
+01:28:47,440 --> 01:28:50,110
+<font face="Vesta" size="78">But he wouldn't listen. He kept saying...</font>
+
+771
+01:28:50,110 --> 01:28:51,860
+<font face="Vesta" size="78">that he'd lost his home.</font>
+
+772
+01:28:51,860 --> 01:28:55,410
+<font face="Vesta" size="78">So he signed up to be Yubaba's apprentice.</font>
+
+773
+01:28:55,870 --> 01:28:59,120
+<font face="Vesta" size="78">He got paler and paler as time went by...</font>
+
+774
+01:28:59,120 --> 01:29:02,040
+<font face="Vesta" size="78">and got a sharp gleam in his eye.</font>
+
+775
+01:29:04,080 --> 01:29:08,070
+<font face="Vesta" size="78">Kamaji, I'm going to give this back to Zeniba.</font>
+
+776
+01:29:08,070 --> 01:29:12,050
+<font face="Vesta" size="78">Give it back, apologize, and ask her to help Haku.</font>
+
+777
+01:29:12,050 --> 01:29:13,970
+<font face="Vesta" size="78">Tell me how to get there.</font>
+
+778
+01:29:14,390 --> 01:29:16,720
+<font face="Vesta" size="78">To Zeniba's house?</font>
+
+779
+01:29:17,140 --> 01:29:19,180
+<font face="Vesta" size="78">That's one scary sorceress.</font>
+
+780
+01:29:19,180 --> 01:29:20,230
+<font face="Vesta" size="78">Please.</font>
+
+781
+01:29:20,230 --> 01:29:24,230
+<font face="Vesta" size="78">Haku helped me. Now I want to help him.</font>
+
+782
+01:29:25,940 --> 01:29:29,230
+<font face="Vesta" size="78">Well, getting there is one thing.</font>
+
+783
+01:29:29,230 --> 01:29:31,490
+<font face="Vesta" size="78">Getting back's the problem.</font>
+
+784
+01:29:31,490 --> 01:29:33,240
+<font face="Vesta" size="78">Wait a minute.</font>
+
+785
+01:29:35,660 --> 01:29:38,990
+<font face="Vesta" size="78">Let's see now, they're here somewhere...</font>
+
+786
+01:29:39,660 --> 01:29:42,750
+<font face="Vesta" size="78">Everyone, I need my shoes and clothes.</font>
+
+787
+01:29:51,090 --> 01:29:54,090
+<font face="Vesta" size="78">Sen! I've been hunting for you everywhere!</font>
+
+788
+01:29:56,640 --> 01:29:57,890
+<font face="Vesta" size="78">Lin...</font>
+
+789
+01:29:57,890 --> 01:30:00,560
+<font face="Vesta" size="78">Haku? What happened here?</font>
+
+790
+01:30:01,270 --> 01:30:02,270
+<font face="Vesta" size="78">Who are those guys?</font>
+
+791
+01:30:03,350 --> 01:30:04,940
+<font face="Vesta" size="78">My new friends.</font>
+
+792
+01:30:04,940 --> 01:30:05,900
+<font face="Vesta" size="78">Right?</font>
+
+793
+01:30:05,900 --> 01:30:09,270
+<font face="Vesta" size="78">Yubaba's looking for you. She's hopping mad.</font>
+
+794
+01:30:09,270 --> 01:30:12,900
+<font face="Vesta" size="78">That big tipper turned out to be a No Face.</font>
+
+795
+01:30:13,360 --> 01:30:15,780
+<font face="Vesta" size="78">Yubaba says you let him in.</font>
+
+796
+01:30:19,200 --> 01:30:20,430
+<font face="Vesta" size="78">She might be right.</font>
+
+797
+01:30:20,430 --> 01:30:22,790
+<font face="Vesta" size="78">What, are you serious?</font>
+
+798
+01:30:22,790 --> 01:30:24,540
+<font face="Vesta" size="78">I thought he was a customer.</font>
+
+799
+01:30:24,540 --> 01:30:27,710
+<font face="Vesta" size="78">He's already swallowed three of our people!</font>
+
+800
+01:30:28,130 --> 01:30:31,130
+<font face="Vesta" size="78">Found them. Here they are, Sen.</font>
+
+801
+01:30:31,400 --> 01:30:33,300
+<font face="Vesta" size="78">We're busy, gramps.</font>
+
+802
+01:30:33,300 --> 01:30:34,880
+<font face="Vesta" size="78">You can use these.</font>
+
+803
+01:30:36,300 --> 01:30:39,220
+<font face="Vesta" size="78">Train tickets? Where'd you get those?</font>
+
+804
+01:30:39,220 --> 01:30:41,810
+<font face="Vesta" size="78">Leftovers from 40 years ago.</font>
+
+805
+01:30:41,810 --> 01:30:45,810
+<font face="Vesta" size="78">You get off at the sixth stop, called Swamp Bottom.</font>
+
+806
+01:30:45,810 --> 01:30:47,020
+<font face="Vesta" size="78">Swamp Bottom?</font>
+
+807
+01:30:47,020 --> 01:30:49,060
+<font face="Vesta" size="78">That's right, the sixth stop.</font>
+
+808
+01:30:49,060 --> 01:30:50,040
+<font face="Vesta" size="78">Six.</font>
+
+809
+01:30:50,440 --> 01:30:54,150
+<font face="Vesta" size="78">Make sure you get it right. There used to be a return train...</font>
+
+810
+01:30:54,150 --> 01:30:56,160
+<font face="Vesta" size="78">but these days it's one way only.</font>
+
+811
+01:30:56,160 --> 01:30:57,800
+<font face="Vesta" size="78">Still want to go?</font>
+
+812
+01:30:57,800 --> 01:31:01,160
+<font face="Vesta" size="78">Yes, I'll walk back along the tracks.</font>
+
+813
+01:31:02,870 --> 01:31:04,750
+<font face="Vesta" size="78">What about Yubaba?</font>
+
+814
+01:31:04,750 --> 01:31:06,000
+<font face="Vesta" size="78">I'll talk to her now.</font>
+
+815
+01:31:06,830 --> 01:31:10,630
+<font face="Vesta" size="78">Haku, I promise I'll be back. Please don't die.</font>
+
+816
+01:31:11,250 --> 01:31:12,920
+<font face="Vesta" size="78">What's going on here?</font>
+
+817
+01:31:13,510 --> 01:31:15,970
+<font face="Vesta" size="78">Don't you understand? It's love.</font>
+
+818
+01:31:23,850 --> 01:31:26,350
+<font face="Vesta" size="78">It just keeps getting bigger!</font>
+
+819
+01:31:26,350 --> 01:31:28,100
+<font face="Vesta" size="78">Don't let it eat me!</font>
+
+820
+01:31:28,100 --> 01:31:28,980
+<font face="Vesta" size="78">Here she comes.</font>
+
+821
+01:31:36,530 --> 01:31:38,110
+<font face="Vesta" size="78">Thank goodness, Sen!</font>
+
+822
+01:31:38,110 --> 01:31:40,320
+<font face="Vesta" size="78">Yubaba can't control him.</font>
+
+823
+01:31:43,540 --> 01:31:47,370
+<font face="Vesta" size="78">There's no need to get upset. Sen will be here soon.</font>
+
+824
+01:31:47,790 --> 01:31:50,630
+<font face="Vesta" size="78">Where's Sen? I want Sen!</font>
+
+825
+01:31:50,630 --> 01:31:52,250
+<font face="Vesta" size="78">Now hurry!</font>
+
+826
+01:31:57,590 --> 01:31:59,640
+<font face="Vesta" size="78">Yubaba, it's Sen.</font>
+
+827
+01:31:59,640 --> 01:32:01,140
+<font face="Vesta" size="78">Where were you?</font>
+
+828
+01:32:01,140 --> 01:32:05,560
+<font face="Vesta" size="78">Sen is here, honored guest. She'll be right with you.</font>
+
+829
+01:32:06,600 --> 01:32:09,900
+<font face="Vesta" size="78">What took you so long? This is a total disaster!</font>
+
+830
+01:32:09,900 --> 01:32:12,730
+<font face="Vesta" size="78">Win him over and take all his gold.</font>
+
+831
+01:32:16,610 --> 01:32:18,950
+<font face="Vesta" size="78">What's this filthy rat?</font>
+
+832
+01:32:20,780 --> 01:32:23,410
+<font face="Vesta" size="78">Don't you recognize him?</font>
+
+833
+01:32:23,410 --> 01:32:26,370
+<font face="Vesta" size="78">Of course not. How disgusting.</font>
+
+834
+01:32:26,370 --> 01:32:27,750
+<font face="Vesta" size="78">Now in you go.</font>
+
+835
+01:32:29,250 --> 01:32:31,500
+<font face="Vesta" size="78">Have a nice time.</font>
+
+836
+01:32:32,420 --> 01:32:34,920
+<font face="Vesta" size="78">Will she be all right?</font>
+
+837
+01:32:34,920 --> 01:32:36,760
+<font face="Vesta" size="78">Want to take her place?</font>
+
+838
+01:32:57,280 --> 01:33:00,450
+<font face="Vesta" size="78">Try this, it's yummy.</font>
+
+839
+01:33:02,320 --> 01:33:06,830
+<font face="Vesta" size="78">Want some gold? I've decided it's just for you.</font>
+
+840
+01:33:10,830 --> 01:33:12,710
+<font face="Vesta" size="78">Come over here.</font>
+
+841
+01:33:12,710 --> 01:33:16,670
+<font face="Vesta" size="78">What do you want? You can tell me.</font>
+
+842
+01:33:16,670 --> 01:33:18,710
+<font face="Vesta" size="78">Where did you come from?</font>
+
+843
+01:33:18,710 --> 01:33:21,090
+<font face="Vesta" size="78">There's someplace I have to go right away.</font>
+
+844
+01:33:23,470 --> 01:33:26,140
+<font face="Vesta" size="78">You should go home.</font>
+
+845
+01:33:26,140 --> 01:33:29,100
+<font face="Vesta" size="78">You can't give me what I want.</font>
+
+846
+01:33:30,980 --> 01:33:33,980
+<font face="Vesta" size="78">Where's your home? You must have a mom and dad.</font>
+
+847
+01:33:34,810 --> 01:33:38,110
+<font face="Vesta" size="78">No... No...</font>
+
+848
+01:33:39,070 --> 01:33:42,970
+<font face="Vesta" size="78">I'm lonely... So lonely...</font>
+
+849
+01:33:43,660 --> 01:33:45,160
+<font face="Vesta" size="78">Are you lost?</font>
+
+850
+01:33:45,530 --> 01:33:49,080
+<font face="Vesta" size="78">Sen... I want Sen.</font>
+
+851
+01:33:49,700 --> 01:33:50,830
+<font face="Vesta" size="78">Take the gold.</font>
+
+852
+01:33:51,370 --> 01:33:52,660
+<font face="Vesta" size="78">Would you eat me?</font>
+
+853
+01:33:52,660 --> 01:33:53,580
+<font face="Vesta" size="78">Take it.</font>
+
+854
+01:33:53,580 --> 01:33:54,460
+<font face="Vesta" size="78">Take it!</font>
+
+855
+01:34:03,720 --> 01:34:06,430
+<font face="Vesta" size="78">Before you eat me, eat this first.</font>
+
+856
+01:34:07,220 --> 01:34:11,060
+<font face="Vesta" size="78">I was saving it for my parents, but you can have it.</font>
+
+857
+01:34:31,870 --> 01:34:33,290
+<font face="Vesta" size="78">Sen!</font>
+
+858
+01:34:35,750 --> 01:34:39,650
+<font face="Vesta" size="78">You little wench! What did you feed me?</font>
+
+859
+01:34:54,770 --> 01:34:56,100
+<font face="Vesta" size="78">Watch out!</font>
+
+860
+01:34:57,270 --> 01:34:59,110
+<font face="Vesta" size="78">Not in my house!</font>
+
+861
+01:35:12,540 --> 01:35:13,950
+<font face="Vesta" size="78">I'm over here!</font>
+
+862
+01:35:14,750 --> 01:35:16,080
+<font face="Vesta" size="78">Here!</font>
+
+863
+01:36:00,830 --> 01:36:02,500
+<font face="Vesta" size="78">You'll pay for this!</font>
+
+864
+01:36:19,980 --> 01:36:22,020
+<font face="Vesta" size="78">Sen, down here!</font>
+
+865
+01:36:38,370 --> 01:36:40,750
+<font face="Vesta" size="78">Over here!</font>
+
+866
+01:36:40,750 --> 01:36:42,420
+<font face="Vesta" size="78">We don't need him.</font>
+
+867
+01:36:46,420 --> 01:36:49,900
+<font face="Vesta" size="78">He needs to get out of there. It's bad for him.</font>
+
+868
+01:36:49,900 --> 01:36:52,340
+<font face="Vesta" size="78">But where do we take him?</font>
+
+869
+01:36:52,340 --> 01:36:53,430
+<font face="Vesta" size="78">I don't know.</font>
+
+870
+01:36:53,430 --> 01:36:54,850
+<font face="Vesta" size="78">Don't know?</font>
+
+871
+01:36:55,310 --> 01:36:57,930
+<font face="Vesta" size="78">Great, now he's following us.</font>
+
+872
+01:37:15,450 --> 01:37:16,580
+<font face="Vesta" size="78">From here you walk.</font>
+
+873
+01:37:16,580 --> 01:37:17,660
+<font face="Vesta" size="78">Okay.</font>
+
+874
+01:37:17,660 --> 01:37:19,540
+<font face="Vesta" size="78">You'll find the station.</font>
+
+875
+01:37:19,540 --> 01:37:20,960
+<font face="Vesta" size="78">Thanks.</font>
+
+876
+01:37:21,580 --> 01:37:23,420
+<font face="Vesta" size="78">Be sure to come back!</font>
+
+877
+01:37:23,420 --> 01:37:24,420
+<font face="Vesta" size="78">I will.</font>
+
+878
+01:37:28,590 --> 01:37:32,220
+<font face="Vesta" size="78">Sen! I said you were a klutz.</font>
+
+879
+01:37:32,220 --> 01:37:33,780
+<font face="Vesta" size="78">I take it back!</font>
+
+880
+01:37:41,940 --> 01:37:46,110
+<font face="Vesta" size="78">No Face, hurt her and you'll get it from me!</font>
+
+881
+01:37:49,400 --> 01:37:50,740
+<font face="Vesta" size="78">There it is.</font>
+
+882
+01:38:02,290 --> 01:38:04,670
+<font face="Vesta" size="78">The train's coming, let's hurry.</font>
+
+883
+01:38:28,150 --> 01:38:30,400
+<font face="Vesta" size="78">To Swamp Bottom, please.</font>
+
+884
+01:38:36,990 --> 01:38:38,660
+<font face="Vesta" size="78">You want to come too?</font>
+
+885
+01:38:40,160 --> 01:38:42,160
+<font face="Vesta" size="78">One more, please.</font>
+
+886
+01:39:22,700 --> 01:39:24,040
+<font face="Vesta" size="78">Sit down.</font>
+
+887
+01:39:24,660 --> 01:39:26,330
+<font face="Vesta" size="78">Behave yourself, okay?</font>
+
+888
+01:41:28,500 --> 01:41:29,950
+<font face="Vesta" size="78">Kamaji.</font>
+
+889
+01:41:32,190 --> 01:41:35,040
+<font face="Vesta" size="78">Oh, Haku. You're awake.</font>
+
+890
+01:41:35,040 --> 01:41:36,590
+<font face="Vesta" size="78">Kamaji, where's Sen?</font>
+
+891
+01:41:37,000 --> 01:41:39,840
+<font face="Vesta" size="78">What happened? Please tell me.</font>
+
+892
+01:41:39,840 --> 01:41:42,720
+<font face="Vesta" size="78">Don't you remember anything?</font>
+
+893
+01:41:43,300 --> 01:41:45,600
+<font face="Vesta" size="78">Just fragments.</font>
+
+894
+01:41:45,600 --> 01:41:48,970
+<font face="Vesta" size="78">Chihiro kept calling my name in the darkness.</font>
+
+895
+01:41:48,970 --> 01:41:52,980
+<font face="Vesta" size="78">I followed her voice and woke up here.</font>
+
+896
+01:41:53,350 --> 01:41:58,230
+<font face="Vesta" size="78">Chihiro? So her name is Chihiro.</font>
+
+897
+01:41:59,480 --> 01:42:02,360
+<font face="Vesta" size="78">Wonderful... It's the power of love.</font>
+
+898
+01:42:06,030 --> 01:42:09,240
+<font face="Vesta" size="78">This gold will hardly cover the damage.</font>
+
+899
+01:42:09,240 --> 01:42:12,160
+<font face="Vesta" size="78">That fool, Sen! She just cost me a fortune.</font>
+
+900
+01:42:12,660 --> 01:42:16,440
+<font face="Vesta" size="78">But we were saved, thanks to her.</font>
+
+901
+01:42:16,440 --> 01:42:17,750
+<font face="Vesta" size="78">Silence!</font>
+
+902
+01:42:17,750 --> 01:42:20,300
+<font face="Vesta" size="78">She started the whole thing.</font>
+
+903
+01:42:20,300 --> 01:42:22,720
+<font face="Vesta" size="78">Now she's run away.</font>
+
+904
+01:42:22,720 --> 01:42:25,360
+<font face="Vesta" size="78">Abandoned her own parents!</font>
+
+905
+01:42:26,050 --> 01:42:30,220
+<font face="Vesta" size="78">They must be fat enough. Turn them into bacon or ham.</font>
+
+906
+01:42:30,220 --> 01:42:31,850
+<font face="Vesta" size="78">No, wait.</font>
+
+907
+01:42:33,020 --> 01:42:34,270
+<font face="Vesta" size="78">Master Haku!</font>
+
+908
+01:42:34,270 --> 01:42:36,520
+<font face="Vesta" size="78">What, you're still alive?</font>
+
+909
+01:42:38,900 --> 01:42:42,280
+<font face="Vesta" size="78">You still don't see it? She's played a trick on you.</font>
+
+910
+01:42:42,740 --> 01:42:45,700
+<font face="Vesta" size="78">You've gotten pretty fresh.</font>
+
+911
+01:42:45,700 --> 01:42:48,160
+<font face="Vesta" size="78">Since when do you talk that way?</font>
+
+912
+01:43:39,790 --> 01:43:41,750
+<font face="Vesta" size="78">Bo?</font>
+
+913
+01:43:47,760 --> 01:43:49,510
+<font face="Vesta" size="78">Bo!</font>
+
+914
+01:43:49,510 --> 01:43:50,490
+<font face="Vesta" size="78">Pebbles!</font>
+
+915
+01:43:50,490 --> 01:43:53,430
+<font face="Vesta" size="78">Bo!</font>
+
+916
+01:43:53,930 --> 01:43:58,100
+<font face="Vesta" size="78">Where are you, Bo?</font>
+
+917
+01:43:58,100 --> 01:44:00,730
+<font face="Vesta" size="78">Please come out.</font>
+
+918
+01:44:01,440 --> 01:44:02,730
+<font face="Vesta" size="78">Bo!</font>
+
+919
+01:44:05,990 --> 01:44:08,280
+<font face="Vesta" size="78">Bo?</font>
+
+920
+01:44:13,120 --> 01:44:17,430
+<font face="Vesta" size="78">Why, you little...</font>
+
+921
+01:44:18,920 --> 01:44:22,040
+<font face="Vesta" size="78">Out with it!</font>
+
+922
+01:44:23,520 --> 01:44:27,530
+<font face="Vesta" size="78">Where did you hide my Bo?</font>
+
+923
+01:44:28,130 --> 01:44:30,050
+<font face="Vesta" size="78">He's with Zeniba.</font>
+
+924
+01:44:30,050 --> 01:44:32,010
+<font face="Vesta" size="78">Zeniba?</font>
+
+925
+01:44:53,030 --> 01:44:56,830
+<font face="Vesta" size="78">Now I understand. That evil witch.</font>
+
+926
+01:44:56,830 --> 01:44:59,540
+<font face="Vesta" size="78">She thinks she's beaten me.</font>
+
+927
+01:45:01,210 --> 01:45:03,460
+<font face="Vesta" size="78">So, what's your plan?</font>
+
+928
+01:45:03,960 --> 01:45:06,170
+<font face="Vesta" size="78">I'll bring him back.</font>
+
+929
+01:45:06,170 --> 01:45:10,450
+<font face="Vesta" size="78">But you must send Sen and her parents back to their world.</font>
+
+930
+01:45:10,450 --> 01:45:13,220
+<font face="Vesta" size="78">And what about you?</font>
+
+931
+01:45:13,220 --> 01:45:16,970
+<font face="Vesta" size="78">Maybe I'll send them back and then tear you to pieces.</font>
+
+932
+01:46:03,940 --> 01:46:05,560
+<font face="Vesta" size="78">I think this is right.</font>
+
+933
+01:46:06,730 --> 01:46:08,020
+<font face="Vesta" size="78">Come on.</font>
+
+934
+01:46:34,840 --> 01:46:36,510
+<font face="Vesta" size="78">You can ride on my shoulder.</font>
+
+935
+01:47:55,030 --> 01:47:56,590
+<font face="Vesta" size="78">Come in.</font>
+
+936
+01:48:01,760 --> 01:48:03,560
+<font face="Vesta" size="78">Thank you.</font>
+
+937
+01:48:05,520 --> 01:48:07,940
+<font face="Vesta" size="78">Well, hurry up then.</font>
+
+938
+01:48:08,440 --> 01:48:09,730
+<font face="Vesta" size="78">Come on.</font>
+
+939
+01:48:13,020 --> 01:48:14,980
+<font face="Vesta" size="78">So you all made it.</font>
+
+940
+01:48:14,980 --> 01:48:15,760
+<font face="Vesta" size="78">I...</font>
+
+941
+01:48:15,760 --> 01:48:17,530
+<font face="Vesta" size="78">Have a seat.</font>
+
+942
+01:48:17,530 --> 01:48:19,780
+<font face="Vesta" size="78">I'll make some tea.</font>
+
+943
+01:48:25,620 --> 01:48:29,870
+<font face="Vesta" size="78">Zeniba, Haku stole this. I came to give it back.</font>
+
+944
+01:48:33,130 --> 01:48:35,880
+<font face="Vesta" size="78">Do you know what this is?</font>
+
+945
+01:48:35,880 --> 01:48:38,930
+<font face="Vesta" size="78">No, but I know it's very precious.</font>
+
+946
+01:48:38,930 --> 01:48:42,550
+<font face="Vesta" size="78">I'm here to apologize for him. He's sorry.</font>
+
+947
+01:48:43,430 --> 01:48:46,600
+<font face="Vesta" size="78">You held this and nothing happened to you?</font>
+
+948
+01:48:46,600 --> 01:48:47,640
+<font face="Vesta" size="78">What?</font>
+
+949
+01:48:47,640 --> 01:48:50,440
+<font face="Vesta" size="78">Wait, the protection spell is gone.</font>
+
+950
+01:48:51,560 --> 01:48:54,860
+<font face="Vesta" size="78">I'm sorry. There was this strange bug.</font>
+
+951
+01:48:54,860 --> 01:48:56,690
+<font face="Vesta" size="78">I squashed it.</font>
+
+952
+01:48:57,240 --> 01:48:59,360
+<font face="Vesta" size="78">Squashed it!</font>
+
+953
+01:49:01,410 --> 01:49:04,870
+<font face="Vesta" size="78">My sister snuck that bug into the dragon...</font>
+
+954
+01:49:04,870 --> 01:49:07,660
+<font face="Vesta" size="78">so she could control him.</font>
+
+955
+01:49:07,660 --> 01:49:10,290
+<font face="Vesta" size="78">And you squashed it!</font>
+
+956
+01:49:13,080 --> 01:49:14,790
+<font face="Vesta" size="78">Now then, sit down.</font>
+
+957
+01:49:14,790 --> 01:49:17,800
+<font face="Vesta" size="78">You must be No Face. You sit, too.</font>
+
+958
+01:49:18,760 --> 01:49:22,550
+<font face="Vesta" size="78">Please turn them back into themselves.</font>
+
+959
+01:49:22,550 --> 01:49:25,760
+<font face="Vesta" size="78">Why my dear, the spell's long broken.</font>
+
+960
+01:49:25,760 --> 01:49:28,140
+<font face="Vesta" size="78">They can change back any time.</font>
+
+961
+01:49:35,440 --> 01:49:39,400
+<font face="Vesta" size="78">Yubaba and I are two halves of a whole, but we don't get along.</font>
+
+962
+01:49:39,400 --> 01:49:42,110
+<font face="Vesta" size="78">You know what bad taste she has.</font>
+
+963
+01:49:42,110 --> 01:49:45,160
+<font face="Vesta" size="78">Sorceress twins are just a recipe for trouble.</font>
+
+964
+01:49:49,200 --> 01:49:53,790
+<font face="Vesta" size="78">I'd like to help you dear, but there's nothing I can do.</font>
+
+965
+01:49:53,790 --> 01:49:55,810
+<font face="Vesta" size="78">It's one of our rules here.</font>
+
+966
+01:49:56,290 --> 01:49:59,420
+<font face="Vesta" size="78">You'll have to save your parents and your dragon boyfriend...</font>
+
+967
+01:49:59,420 --> 01:50:01,170
+<font face="Vesta" size="78">all by yourself.</font>
+
+968
+01:50:01,170 --> 01:50:04,090
+<font face="Vesta" size="78">But can't you even give me a hint?</font>
+
+969
+01:50:04,470 --> 01:50:08,100
+<font face="Vesta" size="78">I feel like Haku and I met a long time ago.</font>
+
+970
+01:50:08,100 --> 01:50:10,390
+<font face="Vesta" size="78">In that case it's easy.</font>
+
+971
+01:50:10,390 --> 01:50:13,060
+<font face="Vesta" size="78">Everything that happens stays inside you...</font>
+
+972
+01:50:13,060 --> 01:50:15,310
+<font face="Vesta" size="78">even if you can't remember it.</font>
+
+973
+01:50:16,650 --> 01:50:19,980
+<font face="Vesta" size="78">It's already late. Why don't you stay the night?</font>
+
+974
+01:50:20,400 --> 01:50:23,200
+<font face="Vesta" size="78">You boys give me a hand.</font>
+
+975
+01:50:29,330 --> 01:50:31,330
+<font face="Vesta" size="78">Come on, keep at it.</font>
+
+976
+01:50:34,330 --> 01:50:37,000
+<font face="Vesta" size="78">See? You have a talent for this.</font>
+
+977
+01:50:37,000 --> 01:50:38,630
+<font face="Vesta" size="78">You're a big help.</font>
+
+978
+01:50:39,420 --> 01:50:42,670
+<font face="Vesta" size="78">It's not the same when you use magic.</font>
+
+979
+01:50:44,010 --> 01:50:48,550
+<font face="Vesta" size="78">Pull it through there. Now do it again.</font>
+
+980
+01:50:48,550 --> 01:50:51,180
+<font face="Vesta" size="78">Zeniba, I'm going back after all.</font>
+
+981
+01:50:51,850 --> 01:50:55,520
+<font face="Vesta" size="78">Haku could die while I'm sitting here.</font>
+
+982
+01:50:55,520 --> 01:50:59,020
+<font face="Vesta" size="78">And they might eat my mom and dad!</font>
+
+983
+01:51:01,190 --> 01:51:04,070
+<font face="Vesta" size="78">Wait just a little longer.</font>
+
+984
+01:51:04,070 --> 01:51:05,610
+<font face="Vesta" size="78">There we are.</font>
+
+985
+01:51:06,450 --> 01:51:08,410
+<font face="Vesta" size="78">Use it to tie back your hair.</font>
+
+986
+01:51:13,750 --> 01:51:14,710
+<font face="Vesta" size="78">It's pretty.</font>
+
+987
+01:51:14,710 --> 01:51:19,880
+<font face="Vesta" size="78">It'll protect you. I made it from the thread we spun.</font>
+
+988
+01:51:19,880 --> 01:51:21,170
+<font face="Vesta" size="78">Thank you.</font>
+
+989
+01:51:30,720 --> 01:51:34,640
+<font face="Vesta" size="78">What good timing. We've got another guest, let him in.</font>
+
+990
+01:51:34,640 --> 01:51:35,770
+<font face="Vesta" size="78">Sure.</font>
+
+991
+01:51:49,070 --> 01:51:50,200
+<font face="Vesta" size="78">Haku!</font>
+
+992
+01:51:51,410 --> 01:51:52,580
+<font face="Vesta" size="78">Haku...</font>
+
+993
+01:51:53,410 --> 01:51:55,330
+<font face="Vesta" size="78">I'm so glad to see you.</font>
+
+994
+01:51:55,330 --> 01:51:58,080
+<font face="Vesta" size="78">Are you okay? Do you feel all right?</font>
+
+995
+01:51:58,080 --> 01:51:59,080
+<font face="Vesta" size="78">Thank goodness.</font>
+
+996
+01:52:00,920 --> 01:52:03,170
+<font face="Vesta" size="78">Good timing, I'd say.</font>
+
+997
+01:52:03,840 --> 01:52:06,300
+<font face="Vesta" size="78">Zeniba, Haku's alive.</font>
+
+998
+01:52:06,840 --> 01:52:11,100
+<font face="Vesta" size="78">Haku, I no longer blame you for what you did.</font>
+
+999
+01:52:11,100 --> 01:52:14,770
+<font face="Vesta" size="78">But be sure to protect this girl.</font>
+
+1000
+01:52:14,770 --> 01:52:17,890
+<font face="Vesta" size="78">Okay boys, time you went home.</font>
+
+1001
+01:52:17,890 --> 01:52:19,940
+<font face="Vesta" size="78">Come see me again soon.</font>
+
+1002
+01:52:20,690 --> 01:52:25,030
+<font face="Vesta" size="78">You stay with me and be my helper.</font>
+
+1003
+01:52:27,530 --> 01:52:28,490
+<font face="Vesta" size="78">Zeniba!</font>
+
+1004
+01:52:29,110 --> 01:52:31,410
+<font face="Vesta" size="78">Thank you, I'm going now.</font>
+
+1005
+01:52:31,410 --> 01:52:34,620
+<font face="Vesta" size="78">Don't worry, I'm sure you'll manage just fine.</font>
+
+1006
+01:52:34,620 --> 01:52:37,960
+<font face="Vesta" size="78">My real name is Chihiro.</font>
+
+1007
+01:52:37,960 --> 01:52:40,580
+<font face="Vesta" size="78">Chihiro? What a nice name.</font>
+
+1008
+01:52:40,580 --> 01:52:42,590
+<font face="Vesta" size="78">Take good care of it.</font>
+
+1009
+01:52:42,590 --> 01:52:43,380
+<font face="Vesta" size="78">I will!</font>
+
+1010
+01:52:43,380 --> 01:52:45,170
+<font face="Vesta" size="78">Now off you go.</font>
+
+1011
+01:52:46,880 --> 01:52:49,970
+<font face="Vesta" size="78">Thank you, Zeniba. Goodbye!</font>
+
+1012
+01:53:39,020 --> 01:53:40,850
+<font face="Vesta" size="78">Haku, listen.</font>
+
+1013
+01:53:40,850 --> 01:53:44,480
+<font face="Vesta" size="78">I don't remember this, but my mom told me about it.</font>
+
+1014
+01:53:44,860 --> 01:53:48,480
+<font face="Vesta" size="78">Once when I was little, I fell in a river.</font>
+
+1015
+01:53:48,940 --> 01:53:52,570
+<font face="Vesta" size="78">Now it's all built over. It flows underground.</font>
+
+1016
+01:53:52,950 --> 01:53:55,070
+<font face="Vesta" size="78">But I just remembered.</font>
+
+1017
+01:53:56,200 --> 01:53:57,870
+<font face="Vesta" size="78">The river was called...</font>
+
+1018
+01:53:58,540 --> 01:54:01,560
+<font face="Vesta" size="78">it was called the Kohaku River.</font>
+
+1019
+01:54:02,040 --> 01:54:05,040
+<font face="Vesta" size="78">Your real name is Kohaku.</font>
+
+1020
+01:54:26,460 --> 01:54:28,230
+<font face="Vesta" size="78">Chihiro, thank you!</font>
+
+1021
+01:54:28,230 --> 01:54:31,460
+<font face="Vesta" size="78">My name is Nigihayami Kohaku Nushi.</font>
+
+1022
+01:54:31,900 --> 01:54:33,100
+<font face="Vesta" size="78">Nigihayami?</font>
+
+1023
+01:54:33,100 --> 01:54:35,280
+<font face="Vesta" size="78">Nigihayami Kohaku Nushi.</font>
+
+1024
+01:54:35,280 --> 01:54:38,330
+<font face="Vesta" size="78">What a name! Sounds like a guardian spirit.</font>
+
+1025
+01:54:38,330 --> 01:54:42,870
+<font face="Vesta" size="78">I remember how you fell into me as a child.</font>
+
+1026
+01:54:42,870 --> 01:54:44,790
+<font face="Vesta" size="78">You were chasing your shoe.</font>
+
+1027
+01:54:44,790 --> 01:54:49,130
+<font face="Vesta" size="78">Yes, and you carried me to shallow water.</font>
+
+1028
+01:54:50,000 --> 01:54:51,230
+<font face="Vesta" size="78">I'm so happy...</font>
+
+1029
+01:55:24,040 --> 01:55:25,460
+<font face="Vesta" size="78">They're back!</font>
+
+1030
+01:55:38,800 --> 01:55:41,430
+<font face="Vesta" size="78">You brought Bo back with you?</font>
+
+1031
+01:55:44,120 --> 01:55:45,350
+<font face="Vesta" size="78">Baba!</font>
+
+1032
+01:55:45,350 --> 01:55:49,770
+<font face="Vesta" size="78">Bo! You're not hurt? What a terrible time you had.</font>
+
+1033
+01:55:51,020 --> 01:55:54,150
+<font face="Vesta" size="78">Bo, when did you learn to stand on your own?</font>
+
+1034
+01:55:54,740 --> 01:55:56,900
+<font face="Vesta" size="78">Yubaba, remember your promise.</font>
+
+1035
+01:55:56,900 --> 01:55:59,910
+<font face="Vesta" size="78">Send Chihiro and her parents back to their world.</font>
+
+1036
+01:56:00,320 --> 01:56:02,870
+<font face="Vesta" size="78">Sorry, but it's not that simple.</font>
+
+1037
+01:56:02,870 --> 01:56:06,000
+<font face="Vesta" size="78">This world has rules, you know.</font>
+
+1038
+01:56:06,620 --> 01:56:07,920
+<font face="Vesta" size="78">Silence!</font>
+
+1039
+01:56:07,920 --> 01:56:10,830
+<font face="Vesta" size="78">Just do it, Baba. Don't be so mean.</font>
+
+1040
+01:56:10,830 --> 01:56:13,420
+<font face="Vesta" size="78">Baby had such a good time.</font>
+
+1041
+01:56:13,920 --> 01:56:16,800
+<font face="Vesta" size="78">But I'm just following the rule.</font>
+
+1042
+01:56:16,800 --> 01:56:19,430
+<font face="Vesta" size="78">Otherwise I can't break the spell.</font>
+
+1043
+01:56:19,430 --> 01:56:22,850
+<font face="Vesta" size="78">If you make Sen cry, I won't like you anymore.</font>
+
+1044
+01:56:22,850 --> 01:56:24,310
+<font face="Vesta" size="78">But...</font>
+
+1045
+01:56:24,310 --> 01:56:25,680
+<font face="Vesta" size="78">Granny!</font>
+
+1046
+01:56:25,680 --> 01:56:27,390
+<font face="Vesta" size="78">Granny?</font>
+
+1047
+01:56:27,390 --> 01:56:29,020
+<font face="Vesta" size="78">I'll do as you ask.</font>
+
+1048
+01:56:40,860 --> 01:56:43,120
+<font face="Vesta" size="78">Haku told me about the rule.</font>
+
+1049
+01:56:43,120 --> 01:56:45,120
+<font face="Vesta" size="78">Well, you've got guts.</font>
+
+1050
+01:56:45,120 --> 01:56:48,540
+<font face="Vesta" size="78">I brought your contract. Follow me.</font>
+
+1051
+01:56:48,540 --> 01:56:50,580
+<font face="Vesta" size="78">This won't take a minute, Bo.</font>
+
+1052
+01:56:51,580 --> 01:56:53,090
+<font face="Vesta" size="78">Don't worry.</font>
+
+1053
+01:56:57,550 --> 01:57:01,390
+<font face="Vesta" size="78">See if you can pick out your parents for me.</font>
+
+1054
+01:57:10,730 --> 01:57:12,270
+<font face="Vesta" size="78">You get one guess.</font>
+
+1055
+01:57:12,270 --> 01:57:14,940
+<font face="Vesta" size="78">Pick them out and you all go free.</font>
+
+1056
+01:57:26,790 --> 01:57:30,430
+<font face="Vesta" size="78">Granny, I can't do it. Dad and Mom aren't here.</font>
+
+1057
+01:57:30,430 --> 01:57:34,210
+<font face="Vesta" size="78">Not here? Is that your answer?</font>
+
+1058
+01:57:35,750 --> 01:57:36,800
+<font face="Vesta" size="78">Yes.</font>
+
+1059
+01:57:39,590 --> 01:57:42,860
+<font face="Vesta" size="78">You're right!</font>
+
+1060
+01:57:42,860 --> 01:57:45,510
+<font face="Vesta" size="78">Attagirl! Good for you.</font>
+
+1061
+01:57:49,480 --> 01:57:50,770
+<font face="Vesta" size="78">Thank you everyone.</font>
+
+1062
+01:57:50,770 --> 01:57:54,020
+<font face="Vesta" size="78">All right! You win, just get out of here.</font>
+
+1063
+01:57:54,520 --> 01:57:56,440
+<font face="Vesta" size="78">Thanks for everything.</font>
+
+1064
+01:57:56,980 --> 01:57:58,480
+<font face="Vesta" size="78">Goodbye.</font>
+
+1065
+01:57:58,940 --> 01:58:00,110
+<font face="Vesta" size="78">Thank you.</font>
+
+1066
+01:58:00,110 --> 01:58:01,780
+<font face="Vesta" size="78">See you soon.</font>
+
+1067
+01:58:01,780 --> 01:58:02,440
+<font face="Vesta" size="78">Haku!</font>
+
+1068
+01:58:02,440 --> 01:58:03,530
+<font face="Vesta" size="78">Let's go.</font>
+
+1069
+01:58:04,200 --> 01:58:05,530
+<font face="Vesta" size="78">Where's Mom and Dad?</font>
+
+1070
+01:58:05,530 --> 01:58:06,830
+<font face="Vesta" size="78">They went on ahead.</font>
+
+1071
+01:58:14,370 --> 01:58:15,630
+<font face="Vesta" size="78">The water's gone.</font>
+
+1072
+01:58:15,630 --> 01:58:17,380
+<font face="Vesta" size="78">I can't go any further.</font>
+
+1073
+01:58:17,800 --> 01:58:20,300
+<font face="Vesta" size="78">Go back the way you came.</font>
+
+1074
+01:58:20,300 --> 01:58:23,360
+<font face="Vesta" size="78">But don't look back until you're out of the tunnel.</font>
+
+1075
+01:58:23,360 --> 01:58:25,640
+<font face="Vesta" size="78">But what about you?</font>
+
+1076
+01:58:26,050 --> 01:58:28,970
+<font face="Vesta" size="78">I'll tell Yubaba I'm quitting my apprenticeship.</font>
+
+1077
+01:58:28,970 --> 01:58:31,520
+<font face="Vesta" size="78">I'm fine now. I have my name back.</font>
+
+1078
+01:58:32,060 --> 01:58:33,980
+<font face="Vesta" size="78">Now I can go home too.</font>
+
+1079
+01:58:33,980 --> 01:58:35,480
+<font face="Vesta" size="78">Will we meet again somewhere?</font>
+
+1080
+01:58:35,480 --> 01:58:36,500
+<font face="Vesta" size="78">I'm sure of it.</font>
+
+1081
+01:58:36,500 --> 01:58:37,110
+<font face="Vesta" size="78">Promise?</font>
+
+1082
+01:58:37,110 --> 01:58:38,070
+<font face="Vesta" size="78">Promise.</font>
+
+1083
+01:58:38,070 --> 01:58:40,360
+<font face="Vesta" size="78">Now go, and don't look back.</font>
+
+1084
+01:59:03,420 --> 01:59:05,340
+<font face="Vesta" size="78">Chihiro!</font>
+
+1085
+01:59:05,340 --> 01:59:08,010
+<font face="Vesta" size="78">Where have you been? Hurry up.</font>
+
+1086
+01:59:11,520 --> 01:59:13,480
+<font face="Vesta" size="78">Mom! Dad!</font>
+
+1087
+01:59:13,480 --> 01:59:15,350
+<font face="Vesta" size="78">Don't go running off like that.</font>
+
+1088
+01:59:15,350 --> 01:59:16,350
+<font face="Vesta" size="78">Let's go.</font>
+
+1089
+01:59:17,020 --> 01:59:19,360
+<font face="Vesta" size="78">Mom, are you really okay?</font>
+
+1090
+01:59:19,360 --> 01:59:23,610
+<font face="Vesta" size="78">Hurry, the moving van will be there.</font>
+
+1091
+01:59:33,040 --> 01:59:35,250
+<font face="Vesta" size="78">Hurry up, Chihiro.</font>
+
+1092
+01:59:43,960 --> 01:59:45,840
+<font face="Vesta" size="78">Watch your step.</font>
+
+1093
+01:59:45,840 --> 01:59:49,180
+<font face="Vesta" size="78">Chihiro, don't cling. You'll make me trip.</font>
+
+1094
+02:00:01,400 --> 02:00:02,860
+<font face="Vesta" size="78">The end of the tunnel.</font>
+
+1095
+02:00:03,230 --> 02:00:04,820
+<font face="Vesta" size="78">Hey!</font>
+
+1096
+02:00:04,820 --> 02:00:06,170
+<font face="Vesta" size="78">What is it?</font>
+
+1097
+02:00:06,780 --> 02:00:08,910
+<font face="Vesta" size="78">Will you look at that.</font>
+
+1098
+02:00:09,990 --> 02:00:12,160
+<font face="Vesta" size="78">It's all dusty inside, too.</font>
+
+1099
+02:00:12,580 --> 02:00:13,660
+<font face="Vesta" size="78">Is this somebody's joke?</font>
+
+1100
+02:00:13,660 --> 02:00:14,620
+<font face="Vesta" size="78">I wonder...</font>
+
+1101
+02:00:14,620 --> 02:00:17,040
+<font face="Vesta" size="78">I told you not to stop here.</font>
+
+1102
+02:00:22,750 --> 02:00:25,260
+<font face="Vesta" size="78">That's it, you're fine.</font>
+
+1103
+02:00:26,510 --> 02:00:28,880
+<font face="Vesta" size="78">We're off, Chihiro.</font>
+
+1104
+02:00:28,880 --> 02:00:31,600
+<font face="Vesta" size="78">Chihiro! Hurry up!</font>
+
+1105
+02:00:58,520 --> 02:01:04,480
+<font face="Vesta" size="78">{\an7}yondeiru mune no dokoka okude</font>
+
+1106
+02:00:58,520 --> 02:01:04,480
+<font face="Vesta" size="78">{\an1}Somewhere, a voice calls in the depths of my heart.</font>
+
+1107
+02:01:04,260 --> 02:01:10,280
+<font face="Vesta" size="78">{\an7}itsumo kokoro odoru yume wo mitai</font>
+
+1108
+02:01:04,260 --> 02:01:10,280
+<font face="Vesta" size="78">{\an1}May I always be dreaming the dreams that move my heart.</font>
+
+1109
+02:01:10,300 --> 02:01:16,180
+<font face="Vesta" size="78">{\an7}kanashimi wa kazoekirenai kedo</font>
+
+1110
+02:01:10,300 --> 02:01:16,180
+<font face="Vesta" size="78">{\an1}Through the uncountable tears of despair,</font>
+
+1111
+02:01:16,020 --> 02:01:22,200
+<font face="Vesta" size="78">{\an7}sono mukou de kitto anata ni aeru</font>
+
+1112
+02:01:16,020 --> 02:01:22,200
+<font face="Vesta" size="78">{\an1}I know that you will be on the other side.</font>
+
+1113
+02:01:22,580 --> 02:01:28,900
+<font face="Vesta" size="78">{\an7}kurikaesu ayamachi no sonotabi hito wa</font>
+
+1114
+02:01:22,580 --> 02:01:28,900
+<font face="Vesta" size="78">{\an1}Every time we fall down and see the sky,</font>
+
+1115
+02:01:28,540 --> 02:01:33,660
+<font face="Vesta" size="78">{\an7}tada aoi sora no aosa wo shiru</font>
+
+1116
+02:01:28,540 --> 02:01:33,660
+<font face="Vesta" size="78">{\an1}we will open our eyes to its blue, as if for the first time.</font>
+
+1117
+02:01:33,440 --> 02:01:39,540
+<font face="Vesta" size="78">{\an7}hateshinaku michi wa tsuzuite mieru keredo</font>
+
+1118
+02:01:33,440 --> 02:01:39,540
+<font face="Vesta" size="78">{\an1}Even though the road is long, lonely, and has no end in sight,</font>
+
+1119
+02:01:39,340 --> 02:01:45,120
+<font face="Vesta" size="78">{\an7}kono ryoute wa hikari wo dakeru</font>
+
+1120
+02:01:39,340 --> 02:01:45,120
+<font face="Vesta" size="78">{\an1}I will embrace the light with these arms.</font>
+
+1121
+02:01:47,060 --> 02:01:52,940
+<font face="Vesta" size="78">{\an7}sayonara no toki no shizukana mune</font>
+
+1122
+02:01:47,060 --> 02:01:52,940
+<font face="Vesta" size="78">{\an1}My heart seems like it stops as I bid farewell,</font>
+
+1123
+02:01:52,880 --> 02:01:58,660
+<font face="Vesta" size="78">{\an7}zero ni naru karada ga mimi wo sumaseru</font>
+
+1124
+02:01:52,880 --> 02:01:58,660
+<font face="Vesta" size="78">{\an1}and my empty soul begins to accept reality.</font>
+
+1125
+02:01:58,700 --> 02:02:04,820
+<font face="Vesta" size="78">{\an7}ikiteiru fushigi sinde iku fusigi</font>
+
+1126
+02:01:58,700 --> 02:02:04,820
+<font face="Vesta" size="78">{\an1}The joys of living, the joys of death,</font>
+
+1127
+02:02:04,700 --> 02:02:10,960
+<font face="Vesta" size="78">{\an7}hana mo kaze mo machi mo minna onaji</font>
+
+1128
+02:02:04,700 --> 02:02:10,960
+<font face="Vesta" size="78">{\an1}cause us all to dance – the wind, town, and flowers.</font>
+
+1129
+02:02:36,680 --> 02:02:42,600
+<font face="Vesta" size="78">{\an7}yondeiru mune no dokoka oku de</font>
+
+1130
+02:02:36,680 --> 02:02:42,600
+<font face="Vesta" size="78">{\an1}Somewhere, a voice calls, in the depths of my heart.</font>
+
+1131
+02:02:42,320 --> 02:02:48,200
+<font face="Vesta" size="78">{\an7}itsumo nando demo yume wo egakou</font>
+
+1132
+02:02:42,320 --> 02:02:48,200
+<font face="Vesta" size="78">{\an1}Continue to dream your dreams, and never let them part.</font>
+
+1133
+02:02:48,060 --> 02:02:53,780
+<font face="Vesta" size="78">{\an7}kanashimi no kazu wo iitsukusu yori</font>
+
+1134
+02:02:48,060 --> 02:02:53,780
+<font face="Vesta" size="78">{\an1}Why think of the pains in your life, or your sadness.</font>
+
+1135
+02:02:53,640 --> 02:02:59,920
+<font face="Vesta" size="78">{\an7}onaji kuchibiru de sotto utaou</font>
+
+1136
+02:02:53,640 --> 02:02:59,920
+<font face="Vesta" size="78">{\an1}Instead, listen to the gentle song from that voice.</font>
+
+1137
+02:03:00,240 --> 02:03:06,480
+<font face="Vesta" size="78">{\an7}tojiteiku omoide no sono naka ni itsumo</font>
+
+1138
+02:03:00,240 --> 02:03:06,480
+<font face="Vesta" size="78">{\an1}We will never forget that passing voice,</font>
+
+1139
+02:03:06,160 --> 02:03:11,180
+<font face="Vesta" size="78">{\an7}wasure takunai sasayaki wo kiku</font>
+
+1140
+02:03:06,160 --> 02:03:11,180
+<font face="Vesta" size="78">{\an1}in the memories that guide you through life.</font>
+
+1141
+02:03:11,040 --> 02:03:16,880
+<font face="Vesta" size="78">{\an7}konagona ni kudakareta kagami no ue nimo</font>
+
+1142
+02:03:11,040 --> 02:03:16,880
+<font face="Vesta" size="78">{\an1}When the mirror breaks, shattering on the ground,</font>
+
+1143
+02:03:16,580 --> 02:03:22,640
+<font face="Vesta" size="78">{\an7}atarashii keshiki ga utsusareru</font>
+
+1144
+02:03:16,580 --> 02:03:22,640
+<font face="Vesta" size="78">{\an1}glimpses of a new life are reflected all around.</font>
+
+1145
+02:03:24,620 --> 02:03:30,500
+<font face="Vesta" size="78">{\an7}hajimari no asa shizuka na mado</font>
+
+1146
+02:03:24,620 --> 02:03:30,500
+<font face="Vesta" size="78">{\an1}Window of Beginnings, please let in the light of a new dawn,</font>
+
+1147
+02:03:30,340 --> 02:03:36,460
+<font face="Vesta" size="78">{\an7}zero ni naru karada mitasarete yuke</font>
+
+1148
+02:03:30,340 --> 02:03:36,460
+<font face="Vesta" size="78">{\an1}and let my silent and empty soul be filled and reborn.</font>
+
+1149
+02:03:36,160 --> 02:03:41,840
+<font face="Vesta" size="78">{\an7}umi no kanata niwa mou sagasanai</font>
+
+1150
+02:03:36,160 --> 02:03:41,840
+<font face="Vesta" size="78">{\an1}No need to search the land, nor sail across the sea.</font>
+
+1151
+02:03:41,640 --> 02:03:47,240
+<font face="Vesta" size="78">{\an7}kagayaku mono wa itsumo koko ni</font>
+
+1152
+02:03:41,640 --> 02:03:47,240
+<font face="Vesta" size="78">{\an1}'Cause it's here shining inside me. It's right here deep inside me.</font>
+
+1153
+02:03:46,900 --> 02:03:54,780
+<font face="Vesta" size="78">{\an7}watashi no naka ni mitsukerareta kara</font>
+
+1154
+02:03:46,900 --> 02:03:54,780
+<font face="Vesta" size="78">{\an1}Thanks to you I've found the light, and it's always with me.</font>
+
+1155
+02:04:25,500 --> 02:04:30,000
+<font face="Vesta" size="78"><font size="100"><font color="#f7ecdd"><font face="AR CENA">THE END</font></font></font></font>
+

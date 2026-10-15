@@ -3,9 +3,29 @@
   "path": "FanMixes/Mission to Mars (2000) - Enhanced Citations",
   "files": [
     {
+      "path": "build_enhanced.py",
+      "kind": "other",
+      "bytes": 14031
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 645
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 1341
+    },
+    {
+      "path": "subs/Mission to Mars.english.srt",
+      "kind": "srt",
+      "bytes": 87070
+    },
+    {
+      "path": "subs/Mission to Mars.enhanced.srt",
+      "kind": "srt",
+      "bytes": 89103
     }
   ]
 }

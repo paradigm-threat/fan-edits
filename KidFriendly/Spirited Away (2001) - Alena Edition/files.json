@@ -3,9 +3,49 @@
   "path": "KidFriendly/Spirited Away (2001) - Alena Edition",
   "files": [
     {
+      "path": "Spirited Away (2001) - Alena Edition.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 11670
+    },
+    {
+      "path": "generate-spirited-away-alena.sh",
+      "kind": "other",
+      "bytes": 580
+    },
+    {
+      "path": "remove-spirited-away-alena-ranges.json",
+      "kind": "other",
+      "bytes": 1505
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 7391
+    },
+    {
+      "path": "Spirited Away (2001) - Alena Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 80102
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 1481
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 901
+    },
+    {
+      "path": "Spirited Away (2001) - Alena Edition.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 69054
+    },
+    {
+      "path": "Spirited Away (2001) - Alena Edition.srt",
+      "kind": "srt",
+      "bytes": 114063
     }
   ]
 }

@@ -3,6 +3,11 @@
   "path": "FanMixes/War of the Worlds (2005) - Family Therapy",
   "files": [
     {
+      "path": "ost/War of the Worlds - Family Therapy Edition.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 204101
+    },
+    {
       "path": "War of the Worlds (2005) - Family Therapy.kdenlive",
       "kind": "kdenlive",
       "bytes": 204918
@@ -13,6 +18,16 @@
       "bytes": 204101
     },
     {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 14186
+    },
+    {
+      "path": "War of the Worlds (2005) - Family Therapy.kdenlive.ass",
+      "kind": "other",
+      "bytes": 57892
+    },
+    {
       "path": "poster.jpg",
       "kind": "poster",
       "bytes": 246840
@@ -21,6 +36,11 @@
       "path": "README.md",
       "kind": "readme",
       "bytes": 1245
+    },
+    {
+      "path": "War of the Worlds (2005) - Family Therapy.srt",
+      "kind": "srt",
+      "bytes": 47703
     }
   ]
 }

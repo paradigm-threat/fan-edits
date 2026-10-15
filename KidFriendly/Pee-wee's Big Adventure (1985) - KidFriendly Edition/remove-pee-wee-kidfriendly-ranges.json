@@ -1,0 +1,41 @@
+{
+  "description": "KidFriendly (~3): Francis breakfast/pool/basement out; Francis premiere kept; Large Marge+Simone+train out (wipe to Alamo); Andy+Lloyd rodeo out; biker threats; WB nightmare (fade to black); Burn in Hell 10s only. Clown closeups manual QC. Pad 5s, merge 45s.",
+  "ranges": [
+    {
+      "start": 618.05,
+      "end": 716.59,
+      "join_fade": false
+    },
+    [
+      1314.1,
+      1877.97
+    ],
+    {
+      "start": 2489.75,
+      "end": 3158.35,
+      "join_fade": false,
+      "transition": "wipeleft"
+    },
+    {
+      "start": 3550.437,
+      "end": 3699.321,
+      "join_fade": false
+    },
+    {
+      "start": 3762.12,
+      "end": 3852.77,
+      "join_fade": false
+    },
+    {
+      "start": 4004.54,
+      "end": 4117.64,
+      "join_fade": false,
+      "transition": "fade_black"
+    },
+    {
+      "start": 4579.0,
+      "end": 4589.0,
+      "join_fade": false
+    }
+  ]
+}

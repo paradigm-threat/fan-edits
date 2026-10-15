@@ -13,6 +13,41 @@
       "bytes": 149712
     },
     {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 7754
+    },
+    {
+      "path": "generate-mummy-debugged.sh",
+      "kind": "other",
+      "bytes": 594
+    },
+    {
+      "path": "INVESTIGATION.md",
+      "kind": "other",
+      "bytes": 3393
+    },
+    {
+      "path": "remove-mummy-debugged-ranges.json",
+      "kind": "other",
+      "bytes": 1788
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 7155
+    },
+    {
+      "path": "The Mummy Debuggedv2.kdenlive.ass",
+      "kind": "other",
+      "bytes": 82258
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 2145
+    },
+    {
       "path": "poster.jpg",
       "kind": "poster",
       "bytes": 497900
@@ -41,6 +76,11 @@
       "path": "subs/The Mummy Debugged.srt",
       "kind": "srt",
       "bytes": 80466
+    },
+    {
+      "path": "The Mummy Debugged.kdenlive.srt",
+      "kind": "srt",
+      "bytes": 65448
     },
     {
       "path": "stats.json",

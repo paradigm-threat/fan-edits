@@ -8,9 +8,54 @@
       "bytes": 888689
     },
     {
+      "path": "build_remove_ranges.py",
+      "kind": "other",
+      "bytes": 4159
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 13816
+    },
+    {
+      "path": "filter_theatrical_srt.py",
+      "kind": "other",
+      "bytes": 1773
+    },
+    {
+      "path": "remove-serenity-unjossed-ranges.json",
+      "kind": "other",
+      "bytes": 1179
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 6737
+    },
+    {
+      "path": "Serenity (2005) - Unjossed.kdenlive.ass",
+      "kind": "other",
+      "bytes": 190137
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 1410
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 1002
+    },
+    {
+      "path": "Serenity (2005) - Unjossed.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 169103
+    },
+    {
+      "path": "Serenity (2005) - Unjossed.srt",
+      "kind": "srt",
+      "bytes": 191071
     }
   ]
 }

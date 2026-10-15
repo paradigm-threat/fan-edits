@@ -11,6 +11,26 @@
       "path": "Tron Legacy (2010) - DaftPunk'd.kdenlive",
       "kind": "kdenlive",
       "bytes": 449977
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 5031
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 703
+    },
+    {
+      "path": "legacy.kdenlive.srt",
+      "kind": "srt",
+      "bytes": 68166
+    },
+    {
+      "path": "Tron Legacy (2010) - DaftPunk'd.kdenlive.srt",
+      "kind": "srt",
+      "bytes": 68166
     }
   ]
 }

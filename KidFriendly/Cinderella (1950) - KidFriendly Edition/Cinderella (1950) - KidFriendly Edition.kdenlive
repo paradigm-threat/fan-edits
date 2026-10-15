@@ -1,0 +1,149 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="//NobiServ/Public/Videos/FanEdits/KidFriendly/Cinderella (1950) - KidFriendly Edition" version="7.33.0">
+ <profile colorspace="709" description="2960x2160 24000/1001fps" frame_rate_num="24000" frame_rate_den="1001" height="2160" progressive="1" sample_aspect_num="1" sample_aspect_den="1" width="2960" />
+ <producer id="producer0" in="00:00:00.000" out="00:49:34.894">
+  <property name="length">2147483647</property>
+  <property name="eof">continue</property>
+  <property name="resource">black</property>
+  <property name="aspect_ratio">1</property>
+  <property name="mlt_service">color</property>
+  <property name="kdenlive:playlistid">black_track</property>
+  <property name="mlt_image_format">rgba</property>
+  <property name="set.test_audio">0</property>
+ </producer>
+ <playlist id="playlist0" />
+ <playlist id="playlist1" />
+ <tractor id="tractor0" in="00:00:00.000">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="video" producer="playlist0" />
+  <track hide="video" producer="playlist1" />
+ </tractor>
+ <chain id="chain0" out="01:14:24.630">
+  <property name="eof">pause</property>
+  <property name="resource">/Anime/Cinderella (1950) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/Cinderella.1950.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv</property>
+  <property name="mlt_service">avformat-novalidate</property>
+  <property name="seekable">1</property>
+  <property name="audio_index">0</property>
+  <property name="video_index">0</property>
+  <property name="vstream">0</property>
+  <property name="astream">0</property>
+  <property name="kdenlive:id">5</property>
+  <property name="kdenlive:clip_type">0</property>
+  <property name="kdenlive:folderid">-1</property>
+ </chain>
+ <playlist id="playlist2">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:00.000" out="00:02:21.975" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:03:17.197" out="00:09:05.462" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:11:04.747" out="00:12:57.318" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:18:53.924" out="00:19:41.389" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:23:30.659" out="00:29:54.418" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:30:23.488" out="00:36:58.842" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:39:31.661" out="00:40:31.638" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:43:24.102" out="00:55:06.386" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:55:44.299" out="01:01:21.678" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="01:06:58.765" out="01:14:24.630" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+ </playlist>
+ <playlist id="playlist3">
+  <property name="kdenlive:audio_track">1</property>
+  <entry in="00:00:00.000" out="00:02:21.975" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:03:17.197" out="00:09:05.462" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:11:04.747" out="00:12:57.318" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:18:53.924" out="00:19:41.389" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:23:30.659" out="00:29:54.418" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:30:23.488" out="00:36:58.842" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:39:31.661" out="00:40:31.638" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:43:24.102" out="00:55:06.386" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="00:55:44.299" out="01:01:21.678" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+  <entry in="01:06:58.765" out="01:14:24.630" producer="chain0">
+   <property name="kdenlive:id">5</property>
+  </entry>
+ </playlist>
+ <tractor id="tractor1" in="00:00:00.000" out="00:49:34.894">
+  <property name="kdenlive:audio_track">1</property>
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="video" producer="playlist2" />
+ </tractor>
+ <tractor id="tractor2" in="00:00:00.000" out="00:49:34.894">
+  <property name="kdenlive:trackheight">84</property>
+  <property name="kdenlive:timeline_active">1</property>
+  <track hide="audio" producer="playlist3" />
+ </tractor>
+ <tractor id="tractor3" in="00:00:00.000" out="00:49:34.894">
+  <property name="kdenlive:duration">00:49:34.894</property>
+  <property name="kdenlive:clipname">Sequence 1</property>
+  <property name="kdenlive:uuid">{d8c82002-3eb9-4211-ab48-9595a883b279}</property>
+  <property name="kdenlive:sequenceproperties.subtitlesList">[
+    {
+        "file": "Cinderella (1950) - KidFriendly Edition.kdenlive.ass",
+        "id": 0,
+        "name": "Subtitles"
+    }
+]</property>
+  <track producer="producer0" />
+  <track producer="tractor1" />
+  <track producer="tractor2" />
+  <transition id="transition2">
+   <property name="a_track">0</property>
+   <property name="b_track">1</property>
+   <property name="mlt_service">mix</property>
+   <property name="kdenlive_id">mix</property>
+   <property name="always_active">1</property>
+   <property name="accepts_blanks">1</property>
+   <property name="sum">1</property>
+  </transition>
+  <transition id="transition3">
+   <property name="a_track">0</property>
+   <property name="b_track">2</property>
+   <property name="compositing">0</property>
+   <property name="mlt_service">qtblend</property>
+   <property name="kdenlive_id">qtblend</property>
+   <property name="always_active">1</property>
+  </transition>
+ </tractor>
+ <playlist id="main_bin">
+  <property name="kdenlive:docproperties.uuid">{d8c82002-3eb9-4211-ab48-9595a883b279}</property>
+  <property name="kdenlive:docproperties.kdenliveversion">25.04.2</property>
+ </playlist>
+</mlt>

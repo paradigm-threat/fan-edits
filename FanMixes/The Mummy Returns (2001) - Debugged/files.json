@@ -28,6 +28,31 @@
       "bytes": 2350610
     },
     {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 12118
+    },
+    {
+      "path": "generate-mummy-returns-debugged.sh",
+      "kind": "other",
+      "bytes": 618
+    },
+    {
+      "path": "remove-mummy-returns-debugged-ranges.json",
+      "kind": "other",
+      "bytes": 870
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 6583
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 2122
+    },
+    {
       "path": "poster.jpg",
       "kind": "poster",
       "bytes": 556418
@@ -38,9 +63,39 @@
       "bytes": 1637
     },
     {
+      "path": "seams.srt",
+      "kind": "srt",
+      "bytes": 4253
+    },
+    {
       "path": "subs/The Mummy Returns Debugged.english.srt",
       "kind": "srt",
       "bytes": 60924
+    },
+    {
+      "path": "The Mummy Returns (2001) - Debugged.srt",
+      "kind": "srt",
+      "bytes": 80524
+    },
+    {
+      "path": "The Mummy Returns Debugged.english.srt",
+      "kind": "srt",
+      "bytes": 60675
+    },
+    {
+      "path": "The Mummy Returns Debugged.enhanced.srt",
+      "kind": "srt",
+      "bytes": 61723
+    },
+    {
+      "path": "The Mummy Returns Debugged.kdenlive.srt",
+      "kind": "srt",
+      "bytes": 60924
+    },
+    {
+      "path": "The Mummy Returns Debugged.srt",
+      "kind": "srt",
+      "bytes": 73441
     },
     {
       "path": "stats.json",

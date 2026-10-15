@@ -8,6 +8,16 @@
       "bytes": 145468
     },
     {
+      "path": "2012 (2009) - Salvation.kdenlive.ass",
+      "kind": "other",
+      "bytes": 117258
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 16143
+    },
+    {
       "path": "poster.jpg",
       "kind": "poster",
       "bytes": 313848
@@ -16,6 +26,11 @@
       "path": "README.md",
       "kind": "readme",
       "bytes": 5816
+    },
+    {
+      "path": "2012 (2009) - Salvation.srt",
+      "kind": "srt",
+      "bytes": 98628
     }
   ]
 }

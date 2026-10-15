@@ -8,9 +8,69 @@
       "bytes": 5933
     },
     {
+      "path": "Boogie Nights (1997) - No Lookout.kdenlive.ass",
+      "kind": "other",
+      "bytes": 169975
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 3140
+    },
+    {
+      "path": "cut-black-end.scenes.json",
+      "kind": "other",
+      "bytes": 459
+    },
+    {
+      "path": "cut-end-fine.scenes.json",
+      "kind": "other",
+      "bytes": 279
+    },
+    {
+      "path": "cut-end.scenes.json",
+      "kind": "other",
+      "bytes": 377
+    },
+    {
+      "path": "cut-start.scenes.json",
+      "kind": "other",
+      "bytes": 599
+    },
+    {
+      "path": "generate-lookout.sh",
+      "kind": "other",
+      "bytes": 572
+    },
+    {
+      "path": "remove-lookout-ranges.json",
+      "kind": "other",
+      "bytes": 805
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 13344
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 2104
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 910
+    },
+    {
+      "path": "Boogie Nights (1997) - No Lookout.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 141473
+    },
+    {
+      "path": "Boogie Nights (1997) - No Lookout.srt",
+      "kind": "srt",
+      "bytes": 168752
     },
     {
       "path": "subs/Boogie Nights (1997) - No Lookout.english.srt",

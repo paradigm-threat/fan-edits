@@ -3,9 +3,54 @@
   "path": "KidFriendly/Pee-wee's Big Adventure (1985) - KidFriendly Edition",
   "files": [
     {
+      "path": "Pee-wee's Big Adventure (1985) - KidFriendly Edition.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 7614
+    },
+    {
+      "path": "build_remove_ranges.py",
+      "kind": "other",
+      "bytes": 3165
+    },
+    {
+      "path": "generate-pee-wee.sh",
+      "kind": "other",
+      "bytes": 668
+    },
+    {
+      "path": "Pee-wee's Big Adventure (1985) - KidFriendly Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 33890
+    },
+    {
+      "path": "remove-pee-wee-kidfriendly-ranges.json",
+      "kind": "other",
+      "bytes": 950
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 10996
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 3721
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 1380
+    },
+    {
+      "path": "Pee-wee's Big Adventure (1985) - KidFriendly Edition.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 28391
+    },
+    {
+      "path": "Pee-wee's Big Adventure (1985) - KidFriendly Edition.srt",
+      "kind": "srt",
+      "bytes": 28391
     }
   ]
 }

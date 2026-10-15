@@ -3,9 +3,34 @@
   "path": "FanMixes/The Big Lebowski (1998) - Enhanced Citations",
   "files": [
     {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 777
+    },
+    {
+      "path": "INVESTIGATION.md",
+      "kind": "other",
+      "bytes": 1246
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 612
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 1306
+    },
+    {
+      "path": "subs/The Big Lebowski.english.srt",
+      "kind": "srt",
+      "bytes": 125702
+    },
+    {
+      "path": "subs/The Big Lebowski.enhanced.srt",
+      "kind": "srt",
+      "bytes": 134880
     }
   ]
 }

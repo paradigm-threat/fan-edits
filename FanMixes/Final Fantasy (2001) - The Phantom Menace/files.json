@@ -13,6 +13,41 @@
       "bytes": 250483
     },
     {
+      "path": "Trailer-3000-2397.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 178103
+    },
+    {
+      "path": "Trailer-3000.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 177287
+    },
+    {
+      "path": "Trailer.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 178791
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 14236
+    },
+    {
+      "path": "Final Fantasy (2001) - The Phantom Menace.kdenlive.ass",
+      "kind": "other",
+      "bytes": 55691
+    },
+    {
+      "path": "Final Fantasy (2001) Restoration.kdenlive.ass",
+      "kind": "other",
+      "bytes": 82478
+    },
+    {
+      "path": "Trailer.kdenlive.ass",
+      "kind": "other",
+      "bytes": 2530
+    },
+    {
       "path": "poster.jpg",
       "kind": "poster",
       "bytes": 273189
@@ -21,6 +56,11 @@
       "path": "README.md",
       "kind": "readme",
       "bytes": 1330
+    },
+    {
+      "path": "Final Fantasy (2001) - The Phantom Menace.srt",
+      "kind": "srt",
+      "bytes": 46631
     }
   ]
 }

@@ -1,0 +1,16 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "KidFriendly/Willy Wonka - KidFriendly Edition",
+  "files": [
+    {
+      "path": "_extracted_subs.srt",
+      "kind": "srt",
+      "bytes": 116437
+    },
+    {
+      "path": "Willy Wonka - KidFriendly Edition.en.srt",
+      "kind": "srt",
+      "bytes": 116427
+    }
+  ]
+}

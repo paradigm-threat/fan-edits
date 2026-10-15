@@ -1,0 +1,1781 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 3840
+PlayResY: 1632
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,48,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,1,2,40,40,40,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+
+Dialogue: 0,0:00:03.88,0:00:07.92,Default,,0,0,0,,﻿1
+Dialogue: 0,0:00:08.01,0:00:12.92,Default,,0,0,0,,<i>And so I'm going to provide you\Nwith an exciting commentary on it,</i>
+Dialogue: 0,0:00:20.27,0:00:21.93,Default,,0,0,0,,<i>Well, here we begin.</i>
+Dialogue: 0,0:00:22.02,0:00:25.77,Default,,0,0,0,,<i>And we begin with doing something\Nfunky with the company logo</i>
+Dialogue: 0,0:00:25.86,0:00:28.35,Default,,0,0,0,,<i>which is, of course,\Neverybody's favorite thing to do.</i>
+Dialogue: 0,0:00:28.45,0:00:29.81,Default,,0,0,0,,<i>They did it in Waterworld and</i>
+Dialogue: 0,0:00:29.91,0:00:31.65,Default,,0,0,0,,my personal favorite,\NEdward Scissorhands.
+Dialogue: 0,0:00:31.74,0:00:33.78,Default,,0,0,0,,<i>They did it to\Nthe 20th Century Fox logo.</i>
+Dialogue: 0,0:00:33.87,0:00:35.11,Default,,0,0,0,,WOMAN: We were so many.
+Dialogue: 0,0:00:42.79,0:00:46.83,Default,,0,0,0,,<i>I will interrupt it though to admire\Nsome of the architecture coming up.</i>
+Dialogue: 0,0:00:48.05,0:00:51.67,Default,,0,0,0,,<i>The mission statement of the film\Nwas to take what had been a TV series...</i>
+Dialogue: 0,0:00:51.76,0:00:53.42,Default,,0,0,0,,<i>that very few people saw...</i>
+Dialogue: 0,0:00:53.51,0:00:55.34,Default,,0,0,0,,<i>This is the architecture\NI was talking about.</i>
+Dialogue: 0,0:00:55.43,0:00:59.09,Default,,0,0,0,,<i>We looked at some structures in Germany\Nand Holland that were very contemporary</i>
+Dialogue: 0,0:00:59.18,0:01:03.30,Default,,0,0,0,,<i>and tried to make a utopia that actually\Nlooked utopian instead of just tall.</i>
+Dialogue: 0,0:01:03.40,0:01:05.10,Default,,0,0,0,,<i>I was excited by that.</i>
+Dialogue: 0,0:01:07.69,0:01:10.65,Default,,0,0,0,,<i>In building this story,\NI had a very difficult task...</i>
+Dialogue: 0,0:01:10.74,0:01:14.45,Default,,0,0,0,,<i>because I had a TV show\Nthat I had already done</i>
+Dialogue: 0,0:01:14.74,0:01:17.78,Default,,0,0,0,,<i>that I didn't want to\Nhave to repeat or contradict.</i>
+Dialogue: 0,0:01:17.87,0:01:19.78,Default,,0,0,0,,<i>So I had a lot of\Nexplaining to do.</i>
+Dialogue: 0,0:01:19.87,0:01:22.08,Default,,0,0,0,,<i>Nine characters\Nwho already knew each other...</i>
+Dialogue: 0,0:01:22.17,0:01:24.91,Default,,0,0,0,,<i>an established world\Nwith a lot of different Ia yers</i>
+Dialogue: 0,0:01:25.00,0:01:28.08,Default,,0,0,0,,<i>and a lot of different\Nconflicts and a lot of history.</i>
+Dialogue: 0,0:01:28.17,0:01:31.71,Default,,0,0,0,,<i>But if you sit people down and\Nexplain things like that for 20 minutes</i>
+Dialogue: 0,0:01:31.80,0:01:33.34,Default,,0,0,0,,<i>and on the 21st minute they\Ngo away, or possibly on the 14th.</i>
+Dialogue: 0,0:01:33.34,0:01:35.84,Default,,0,0,0,,<i>but, in fact, to establish\Na sense of safety in space.</i>
+Dialogue: 0,0:01:38.39,0:01:41.51,Default,,0,0,0,,<i>Talk a little bit about this\Nscene. First of all, this location</i>
+Dialogue: 0,0:01:41.60,0:01:44.84,Default,,0,0,0,,<i>happens to be where\Nthe blue-hand man</i>
+Dialogue: 0,0:01:44.94,0:01:47.52,Default,,0,0,0,,<i>chased Simon and River\Nin "Ariel."</i>
+Dialogue: 0,0:01:47.61,0:01:50.22,Default,,0,0,0,,<i>They added some walls\Nand obviously some machines.</i>
+Dialogue: 0,0:01:50.32,0:01:53.31,Default,,0,0,0,,<i>But they were very excited about\Nthe location. They took me to it</i>
+Dialogue: 0,0:01:53.41,0:01:56.77,Default,,0,0,0,,<i>and I said, "Yes, it is lovely. It's\Njust like one of the central planets.</i>
+Dialogue: 0,0:01:56.83,0:01:58.69,Default,,0,0,0,,<i>"In fact, it's so much like\None of the central planet</i>
+Dialogue: 0,0:01:58.79,0:02:01.49,Default,,0,0,0,,<i>"that we used it\Nin Episode 8 of the show."</i>
+Dialogue: 0,0:02:01.54,0:02:04.70,Default,,0,0,0,,<i>So I made sure that\Nthey hid any resemblance.</i>
+Dialogue: 0,0:02:04.79,0:02:05.95,Default,,0,0,0,,It's Simon.
+Dialogue: 0,0:02:06.00,0:02:07.62,Default,,0,0,0,,(MOANING)
+Dialogue: 0,0:02:07.67,0:02:10.13,Default,,0,0,0,,Please, it's Simon.
+Dialogue: 0,0:02:15.43,0:02:17.59,Default,,0,0,0,,<i>A big favorite of mine, from</i>
+Dialogue: 0,0:02:17.68,0:02:20.92,Default,,0,0,0,,<i>the Christopher Guest movies,\NWaiting for Guffman, Best in</i> Show.
+Dialogue: 0,0:02:21.02,0:02:22.13,Default,,0,0,0,,Simon.
+Dialogue: 0,0:02:23.94,0:02:25.55,Default,,0,0,0,,They know you've come.
+Dialogue: 0,0:02:26.23,0:02:28.35,Default,,0,0,0,,(MACHINES BEEPING)
+Dialogue: 0,0:02:31.32,0:02:32.73,Default,,0,0,0,,<i>That means they're in trouble.</i>
+Dialogue: 0,0:02:32.82,0:02:35.19,Default,,0,0,0,,<i>This hallway is actually\Nright outside that room.</i>
+Dialogue: 0,0:02:35.28,0:02:39.74,Default,,0,0,0,,<i>One of the walls we had to\Nbuild in order to do the next stunt.</i>
+Dialogue: 0,0:02:39.87,0:02:43.45,Default,,0,0,0,,<i>Unfortunately, they built it\Nwrong. It was six inches too long.</i>
+Dialogue: 0,0:02:43.58,0:02:46.82,Default,,0,0,0,,<i>So the thing on the right\Nthat her foot is on was added</i>
+Dialogue: 0,0:02:46.92,0:02:50.28,Default,,0,0,0,,<i>and the paint was still drying\Nwhen she put her foot on it.</i>
+Dialogue: 0,0:02:50.38,0:02:54.17,Default,,0,0,0,,<i>Because we had</i>\Na <i>little mismeasurement.</i>
+Dialogue: 0,0:02:56.84,0:03:01.01,Default,,0,0,0,,<i>Now this set, this shot here,\Nthat's every inch of the set.</i>
+Dialogue: 0,0:03:01.10,0:03:02.51,Default,,0,0,0,,<i>That's CGI.</i>
+Dialogue: 0,0:03:04.52,0:03:08.48,Default,,0,0,0,,<i>Interesting thing, you know, we\Ndidn't have that much money for sets</i>
+Dialogue: 0,0:03:08.56,0:03:11.06,Default,,0,0,0,,<i>and so we built them up\Nthrough CGI</i>
+Dialogue: 0,0:03:11.15,0:03:13.27,Default,,0,0,0,,<i>but we did have</i> a <i>little\Nbit more money than...</i>
+Dialogue: 0,0:03:13.36,0:03:15.48,Default,,0,0,0,,<i>This, what happened was...</i>
+Dialogue: 0,0:03:15.57,0:03:19.06,Default,,0,0,0,,<i>they built it on</i> a <i>four-foot platform\Nand I never really found out why.</i>
+Dialogue: 0,0:03:19.16,0:03:21.44,Default,,0,0,0,,<i>They showed me a little\Nfoam-core model of it</i>
+Dialogue: 0,0:03:21.53,0:03:24.28,Default,,0,0,0,,<i>and said, "See, it's on\Nthis four-foot platform."</i>
+Dialogue: 0,0:03:24.37,0:03:26.11,Default,,0,0,0,,<i>Isaid, "Well, we don't\Nneed the platform.</i>
+Dialogue: 0,0:03:26.21,0:03:29.07,Default,,0,0,0,,<i>"Let's just build it all the\Nway straight to the ground</i>
+Dialogue: 0,0:03:29.17,0:03:31.78,Default,,0,0,0,,<i>"so we can enjoy</i> a <i>little\Nmore set to work with."</i>
+Dialogue: 0,0:03:31.88,0:03:34.04,Default,,0,0,0,,<i>And they said,\N"No, we've already built it."</i>
+Dialogue: 0,0:03:34.13,0:03:38.34,Default,,0,0,0,,<i>And I said, "Next time, can we\Nbuild the little foam-core model</i>
+Dialogue: 0,0:03:38.51,0:03:40.97,Default,,0,0,0,,<i>"before we build\Nthe actual set?"</i>
+Dialogue: 0,0:03:42.26,0:03:44.38,Default,,0,0,0,,<i>Little odd thing\Nto do actually.</i>
+Dialogue: 0,0:03:45.60,0:03:46.81,Default,,0,0,0,,Excuse me.
+Dialogue: 0,0:03:46.89,0:03:50.10,Default,,0,0,0,,<i>WHEDON: So, I've taken us\Nnow finally into the</i>
+Dialogue: 0,0:03:50.19,0:03:53.40,Default,,0,0,0,,<i>last part of the cold open,\Nthe introduction of the villain.</i>
+Dialogue: 0,0:03:53.48,0:03:55.44,Default,,0,0,0,,<i>One of the first images\Nthat occurred to me</i>
+Dialogue: 0,0:03:55.53,0:03:58.56,Default,,0,0,0,,<i>was the idea of him\Ncoming through the holograph</i>
+Dialogue: 0,0:03:58.66,0:04:02.74,Default,,0,0,0,,<i>and we matched it up digitally, so\Nthat his eyes come right through hers.</i>
+Dialogue: 0,0:04:02.78,0:04:06.03,Default,,0,0,0,,<i>His connection to her\Nis something that</i>
+Dialogue: 0,0:04:06.54,0:04:08.78,Default,,0,0,0,,<i>is very important to me,\Nthematically.</i>
+Dialogue: 0,0:04:08.87,0:04:12.04,Default,,0,0,0,,<i>Also, although we don't stress it\Nas much as I did in the first draft</i>
+Dialogue: 0,0:04:12.13,0:04:15.04,Default,,0,0,0,,<i>where everybody talked forever</i>
+Dialogue: 0,0:04:15.17,0:04:18.33,Default,,0,0,0,,<i>I sort of trimmed some of\Nthat, but I was always interested</i>
+Dialogue: 0,0:04:18.43,0:04:22.42,Default,,0,0,0,,<i>in their connection\Nbecause he is so intuitive</i>
+Dialogue: 0,0:04:22.72,0:04:25.21,Default,,0,0,0,,<i>as to be\Nalmost psychic himself.</i>
+Dialogue: 0,0:04:25.51,0:04:27.18,Default,,0,0,0,,<i>He has a lot\Nin common with River.</i>
+Dialogue: 0,0:04:27.27,0:04:30.48,Default,,0,0,0,,<i>He's a perfect product\Nof the Alliance</i>
+Dialogue: 0,0:04:30.56,0:04:32.97,Default,,0,0,0,,<i>or rather what's wrong\Nwith the Alliance.</i>
+Dialogue: 0,0:04:34.07,0:04:35.48,Default,,0,0,0,,It's not quite\Nso simple.
+Dialogue: 0,0:04:35.52,0:04:36.89,Default,,0,0,0,,I'm well aware of that.
+Dialogue: 0,0:04:37.57,0:04:40.31,Default,,0,0,0,,<i>WHEDON: This is the character\Nthat I added for the movie.</i>
+Dialogue: 0,0:04:40.40,0:04:43.44,Default,,0,0,0,,<i>Obviously, the nine regulars\Nfrom the show were all in it</i>
+Dialogue: 0,0:04:43.49,0:04:45.28,Default,,0,0,0,,<i>and they were all going\Nto be on the same side.</i>
+Dialogue: 0,0:04:45.33,0:04:50.62,Default,,0,0,0,,<i>And so the studio insisted that I\Nneeded a villain who would really register.</i>
+Dialogue: 0,0:04:50.67,0:04:53.83,Default,,0,0,0,,<i>And what I decided I needed\Nwas a fellow who was</i>
+Dialogue: 0,0:04:53.92,0:04:56.21,Default,,0,0,0,,<i>so kind and so decent</i>
+Dialogue: 0,0:04:56.30,0:05:00.79,Default,,0,0,0,,<i>and so caring that you actually\Nwould start to root for him</i>
+Dialogue: 0,0:05:00.84,0:05:04.00,Default,,0,0,0,,<i>right before he was\Ngoing to massacre everybody.</i>
+Dialogue: 0,0:05:04.10,0:05:06.18,Default,,0,0,0,,Because the situation\Nis even less simple...
+Dialogue: 0,0:05:06.26,0:05:08.80,Default,,0,0,0,,<i>Somebody who believed so\Nstrongly in what he was doing</i>
+Dialogue: 0,0:05:08.85,0:05:12.56,Default,,0,0,0,,<i>that he would do anything. The\Nexact opposite, of course, of the hero.</i>
+Dialogue: 0,0:05:12.65,0:05:16.44,Default,,0,0,0,,<i>And in casting\NChiwetel Ejiofor</i>
+Dialogue: 0,0:05:16.52,0:05:18.31,Default,,0,0,0,,<i>we found,\Nyou know the perfect person</i>
+Dialogue: 0,0:05:18.36,0:05:21.35,Default,,0,0,0,,<i>because he brings\Nsuch depth and soulfulness</i>
+Dialogue: 0,0:05:21.45,0:05:24.44,Default,,0,0,0,,<i>and regret to\Neverything he does.</i>
+Dialogue: 0,0:05:24.99,0:05:28.95,Default,,0,0,0,,<i>You understand this is not</i> a\N<i>moustache twirler. This is a guy...</i>
+Dialogue: 0,0:05:29.04,0:05:31.82,Default,,0,0,0,,<i>with an agenda that he considers\Nperfectly legitimate, although</i>
+Dialogue: 0,0:05:31.87,0:05:34.71,Default,,0,0,0,,<i>it does include</i>\Na <i>certain amount of genocide.</i>
+Dialogue: 0,0:05:34.79,0:05:37.63,Default,,0,0,0,,<i>And he's, in fact,\Nnot entirely well.</i>
+Dialogue: 0,0:05:37.71,0:05:40.55,Default,,0,0,0,,<i>He is nevertheless\Nreasonable, understanding</i>
+Dialogue: 0,0:05:40.59,0:05:43.13,Default,,0,0,0,,<i>and in his own way\Nvery honorable.</i>
+Dialogue: 0,0:05:43.63,0:05:46.75,Default,,0,0,0,,<i>Which to me, it makes for a\Nmuch more interesting villain.</i>
+Dialogue: 0,0:05:49.52,0:05:54.23,Default,,0,0,0,,<i>As I said, Michael Hitchcock, from\Nthe Guffman movie and many others.</i>
+Dialogue: 0,0:05:54.31,0:05:59.60,Default,,0,0,0,,<i>I tend to cast comedians,\Nwhere I can, in dramatic roles</i>
+Dialogue: 0,0:05:59.69,0:06:02.94,Default,,0,0,0,,<i>because, obviously,\Ncomedy is the hard one.</i>
+Dialogue: 0,0:06:03.03,0:06:06.40,Default,,0,0,0,,<i>And if somebody can do that, it's\Ncommon that they can do the other.</i>
+Dialogue: 0,0:06:06.45,0:06:09.74,Default,,0,0,0,,<i>He gave a great read and I loved\Nworking this scene out with him</i>
+Dialogue: 0,0:06:09.83,0:06:11.74,Default,,0,0,0,,<i>because the difference between</i>
+Dialogue: 0,0:06:11.83,0:06:14.57,Default,,0,0,0,,<i>what he was in the scene\Nwith Simon and what he is now</i>
+Dialogue: 0,0:06:14.67,0:06:18.38,Default,,0,0,0,,<i>is very nicely done by him.\NSome very subtle tics.</i>
+Dialogue: 0,0:06:18.92,0:06:20.96,Default,,0,0,0,,<i>He was a dream to work with</i>
+Dialogue: 0,0:06:21.05,0:06:23.79,Default,,0,0,0,,<i>and very fun and really\Nembodies this fellow.</i>
+Dialogue: 0,0:06:23.88,0:06:26.17,Default,,0,0,0,,...throw themselves\Non their swords.
+Dialogue: 0,0:06:26.26,0:06:28.84,Default,,0,0,0,,Well, unfortunately,\NI forgot to bring a sword.
+Dialogue: 0,0:06:31.06,0:06:32.47,Default,,0,0,0,,<i>WHEDON: The sword moment.</i>
+Dialogue: 0,0:06:32.56,0:06:35.89,Default,,0,0,0,,<i>When I was trying to\Nfigure out this villain,</i>
+Dialogue: 0,0:06:35.94,0:06:38.02,Default,,0,0,0,,<i>the sword moment\Nis what did it for me.</i>
+Dialogue: 0,0:06:38.11,0:06:40.89,Default,,0,0,0,,<i>The idea...\NI literally had him say</i>
+Dialogue: 0,0:06:40.94,0:06:42.56,Default,,0,0,0,,<i>they would throw themselves\Non their swords</i>
+Dialogue: 0,0:06:42.61,0:06:44.94,Default,,0,0,0,,<i>before I realized he was\Ngonna pull that sword out.</i>
+Dialogue: 0,0:06:44.99,0:06:47.78,Default,,0,0,0,,<i>Once he did, I said, "Okay,\Nnow I understand this guy."</i>
+Dialogue: 0,0:06:47.87,0:06:50.45,Default,,0,0,0,,<i>He needs to do it personally.\NHe needs to do it up close.</i>
+Dialogue: 0,0:06:50.54,0:06:53.03,Default,,0,0,0,,<i>He needs to do it\Nin a gentlemanly fashion.</i>
+Dialogue: 0,0:06:53.37,0:06:57.21,Default,,0,0,0,,<i>That is what separates him\Nfrom other people.</i>
+Dialogue: 0,0:06:57.29,0:06:59.33,Default,,0,0,0,,<i>He has such</i>\Na <i>strong code of honor</i>
+Dialogue: 0,0:06:59.42,0:07:02.46,Default,,0,0,0,,<i>that he would literally make\Nthis guy fall on his sword.</i>
+Dialogue: 0,0:07:04.01,0:07:07.62,Default,,0,0,0,,<i>Then, and this is both the sweetest\Nand creepiest thing he could possibly do</i>
+Dialogue: 0,0:07:07.72,0:07:10.88,Default,,0,0,0,,<i>he'll try to comfort him\Nas he kills him.</i>
+Dialogue: 0,0:07:10.97,0:07:13.46,Default,,0,0,0,,<i>Once I had that moment\Nfigured out in this prologue</i>
+Dialogue: 0,0:07:13.52,0:07:16.26,Default,,0,0,0,,<i>I had no more trouble\Nwriting this character.</i>
+Dialogue: 0,0:07:16.31,0:07:19.68,Default,,0,0,0,,<i>That kind of belief\Nis just so scary.</i>
+Dialogue: 0,0:07:22.57,0:07:23.93,Default,,0,0,0,,All of them...
+Dialogue: 0,0:07:24.40,0:07:27.14,Default,,0,0,0,,<i>WHEDON: This hall was\Ndesigned to have a kind of</i>
+Dialogue: 0,0:07:28.16,0:07:30.44,Default,,0,0,0,,<i>Kafkaesque feel to it,\Nyou know.</i>
+Dialogue: 0,0:07:30.49,0:07:34.61,Default,,0,0,0,,<i>Endless bits of information\Nstored in all those things.</i>
+Dialogue: 0,0:07:34.66,0:07:37.50,Default,,0,0,0,,<i>And this one shot is the one that\Nreally... Because we used a wider lens</i>
+Dialogue: 0,0:07:37.58,0:07:40.67,Default,,0,0,0,,<i>it made it seem longer than it\Nwas. Really gave you that feeling.</i>
+Dialogue: 0,0:07:42.63,0:07:45.46,Default,,0,0,0,,<i>This whole set was kind of\Ndifficult to design...</i>
+Dialogue: 0,0:07:45.51,0:07:47.87,Default,,0,0,0,,<i>because we had to work\Naround the fact that we couldn't</i>
+Dialogue: 0,0:07:47.97,0:07:49.88,Default,,0,0,0,,<i>show this holograph\Nthat often.</i>
+Dialogue: 0,0:07:49.97,0:07:53.93,Default,,0,0,0,,<i>In fact, you'll see this set\Nagain rebuilt as the ship</i>
+Dialogue: 0,0:07:54.01,0:07:57.10,Default,,0,0,0,,<i>where the hologram\Nof Dr. Caron appears.</i>
+Dialogue: 0,0:08:00.40,0:08:03.56,Default,,0,0,0,,<i>This title treatment, by the way,\Nwas added at the last minute.</i>
+Dialogue: 0,0:08:03.65,0:08:05.81,Default,,0,0,0,,<i>Originally it was\Njust going to fade up.</i>
+Dialogue: 0,0:08:07.40,0:08:10.40,Default,,0,0,0,,<i>And I had always imagined that he\Nwould speak and there would</i> be <i>silence</i>
+Dialogue: 0,0:08:10.49,0:08:12.53,Default,,0,0,0,,<i>and then it would\Nfade up and...</i>
+Dialogue: 0,0:08:12.62,0:08:14.45,Default,,0,0,0,,<i>But then we had</i>\Na <i>title company do something</i>
+Dialogue: 0,0:08:14.54,0:08:18.100,Default,,0,0,0,,<i>that we thought was</i> a <i>little more\Ndramatic and blended in well to this.</i>
+Dialogue: 0,0:08:19.04,0:08:22.83,Default,,0,0,0,,<i>One of the hardest things,\Nnot just this shot, but...</i>
+Dialogue: 0,0:08:22.88,0:08:26.46,Default,,0,0,0,,<i>We're listening now to the\NSerenity theme, by David Newman.</i>
+Dialogue: 0,0:08:26.55,0:08:29.54,Default,,0,0,0,,<i>And I had very specific\Ninstructions about what I wanted</i>
+Dialogue: 0,0:08:29.59,0:08:32.34,Default,,0,0,0,,<i>which I don't think really\Nhelped, because of course I didn't</i>
+Dialogue: 0,0:08:32.39,0:08:35.05,Default,,0,0,0,,<i>have the music,\NI just had the instructions.</i>
+Dialogue: 0,0:08:35.10,0:08:37.93,Default,,0,0,0,,<i>He went through</i> a <i>lot of\Nconcepts for themes, but</i>
+Dialogue: 0,0:08:38.02,0:08:42.76,Default,,0,0,0,,<i>he did an amazing job of finding\Nsomething very mournful and very homemade.</i>
+Dialogue: 0,0:08:42.86,0:08:44.69,Default,,0,0,0,,<i>That was really my intent.</i>
+Dialogue: 0,0:08:44.77,0:08:47.89,Default,,0,0,0,,<i>That spoke of Serenity.\NAll the music before</i>
+Dialogue: 0,0:08:47.99,0:08:52.11,Default,,0,0,0,,<i>was supposed to be kind of</i> a\N<i>little electronic and a little distancing.</i>
+Dialogue: 0,0:08:52.20,0:08:53.36,Default,,0,0,0,,<i>And this was the first time...</i>
+Dialogue: 0,0:08:53.45,0:08:55.99,Default,,0,0,0,,<i>When you hear that solo cello,\Nand then the other cellos come in</i>
+Dialogue: 0,0:08:56.08,0:08:58.36,Default,,0,0,0,,<i>this is when you know\Nyou're home.</i>
+Dialogue: 0,0:08:58.41,0:09:01.91,Default,,0,0,0,,<i>And that homemade feel has a lot to do\Nwith my vision of the future in this movie</i>
+Dialogue: 0,0:09:02.00,0:09:05.29,Default,,0,0,0,,<i>which is that, you know, everybody\Nhas what they can carry and nothing more.</i>
+Dialogue: 0,0:09:05.38,0:09:06.54,Default,,0,0,0,,<i>They are pioneers.</i>
+Dialogue: 0,0:09:06.63,0:09:10.97,Default,,0,0,0,,<i>But, he did it, David, that is,\Nwithout getting into any kind of, sort of</i>
+Dialogue: 0,0:09:11.05,0:09:14.42,Default,,0,0,0,,<i>hokey version of Americana,\Nwhich I love very much.</i>
+Dialogue: 0,0:09:15.39,0:09:16.80,Default,,0,0,0,,Define "interesting."
+Dialogue: 0,0:09:16.89,0:09:18.47,Default,,0,0,0,,"Oh, God, we're\Nall gonna die?"
+Dialogue: 0,0:09:25.61,0:09:28.60,Default,,0,0,0,,<i>the keen eye will notice,\Nand not everybody did</i>
+Dialogue: 0,0:09:29.03,0:09:33.86,Default,,0,0,0,,<i>that we don't actually have a single cut\Nin the movie for four and a half minutes.</i>
+Dialogue: 0,0:09:34.28,0:09:37.57,Default,,0,0,0,,<i>This was, as I said before,\Nto give you a sense of</i>
+Dialogue: 0,0:09:37.62,0:09:41.99,Default,,0,0,0,,<i>safety in the space. I think\Nwhen you see people on a screen</i>
+Dialogue: 0,0:09:42.08,0:09:45.79,Default,,0,0,0,,<i>doing things that they are\Nobviously, actually doing</i>
+Dialogue: 0,0:09:45.84,0:09:48.79,Default,,0,0,0,,<i>and you're not cutting in between\Nthem and choosing performances</i>
+Dialogue: 0,0:09:48.84,0:09:52.96,Default,,0,0,0,,<i>and disorienting the viewer at all,\Nbut just sort of letting things unfold</i>
+Dialogue: 0,0:09:53.30,0:09:56.97,Default,,0,0,0,,<i>it has a kind of\Nveracity to it</i>
+Dialogue: 0,0:09:57.05,0:09:58.51,Default,,0,0,0,,<i>that I think\Nyou don't even notice.</i>
+Dialogue: 0,0:09:58.60,0:10:01.47,Default,,0,0,0,,<i>Obviously I'm not trying\Nto do a shot that says,</i>
+Dialogue: 0,0:10:01.56,0:10:03.43,Default,,0,0,0,,<i>"Look what we can do\Nwith a Steadicam."</i>
+Dialogue: 0,0:10:03.52,0:10:06.73,Default,,0,0,0,,<i>Although I have to give huge props\Nto Mark Moore, ourA Camera operator</i>
+Dialogue: 0,0:10:06.82,0:10:11.18,Default,,0,0,0,,<i>who worked the Steadicam,\Nbecause in a total of 45 takes</i>
+Dialogue: 0,0:10:11.28,0:10:14.49,Default,,0,0,0,,<i>he slipped once and it was\Ngoing backwards up some stairs.</i>
+Dialogue: 0,0:10:14.57,0:10:17.44,Default,,0,0,0,,<i>And that was the only\Ncamera problem we ever had.</i>
+Dialogue: 0,0:10:19.33,0:10:22.19,Default,,0,0,0,,You told me those entry couplings\Nwould hold for another week!
+Dialogue: 0,0:10:25.88,0:10:28.37,Default,,0,0,0,,<i>second of all, to show\Nthe layout of the ship</i>
+Dialogue: 0,0:10:28.46,0:10:30.100,Default,,0,0,0,,<i>because the ship is obviously\Nthe 10th character</i>
+Dialogue: 0,0:10:31.09,0:10:34.67,Default,,0,0,0,,<i>and to give people</i> a <i>real\Nsense of where they are</i>
+Dialogue: 0,0:10:34.76,0:10:37.63,Default,,0,0,0,,<i>by going through the\Nentire ship, room by room</i>
+Dialogue: 0,0:10:37.72,0:10:39.88,Default,,0,0,0,,<i>and, of course,\Nmeeting every character.</i>
+Dialogue: 0,0:10:39.97,0:10:42.93,Default,,0,0,0,,<i>Now, as I said, this was a\Nvery difficult screenplay to write.</i>
+Dialogue: 0,0:10:43.02,0:10:46.56,Default,,0,0,0,,<i>And part of that was because,\Nyou know, all of these characters</i>
+Dialogue: 0,0:10:46.65,0:10:50.68,Default,,0,0,0,,<i>and there are nine from the TV\Nseries alone, that I had brought with me</i>
+Dialogue: 0,0:10:50.77,0:10:52.48,Default,,0,0,0,,<i>already know each other.</i>
+Dialogue: 0,0:10:52.99,0:10:55.02,Default,,0,0,0,,<i>Structurally,\Nthat's a nightmare.</i>
+Dialogue: 0,0:10:55.11,0:10:57.45,Default,,0,0,0,,That's writing Snow White\Nand the Seven Dwarfs
+Dialogue: 0,0:10:57.53,0:11:00.52,Default,,0,0,0,,<i>and saying, "Snow White\Nis in trouble from the queen."</i>
+Dialogue: 0,0:11:00.58,0:11:03.11,Default,,0,0,0,,<i>Cut to a year later,\Nshe's living with dwarves.</i>
+Dialogue: 0,0:11:03.20,0:11:05.62,Default,,0,0,0,,<i>When you introduce people\Nwho already know each other</i>
+Dialogue: 0,0:11:05.71,0:11:08.87,Default,,0,0,0,,<i>it's much more\Ndifficult to hide that.</i>
+Dialogue: 0,0:11:08.96,0:11:11.42,Default,,0,0,0,,This boat is my home.\NYou all are guests on it.
+Dialogue: 0,0:11:15.17,0:11:18.92,Default,,0,0,0,,<i>that's where we hid the cut. There\Nwas a dissolve, between the two sets.</i>
+Dialogue: 0,0:11:19.01,0:11:22.55,Default,,0,0,0,,<i>Because although I did build,\Nas I had on the show, the sets...</i>
+Dialogue: 0,0:11:22.64,0:11:25.10,Default,,0,0,0,,<i>Well, I didn't build them myself.\NWe hired people to do that.</i>
+Dialogue: 0,0:11:25.18,0:11:28.39,Default,,0,0,0,,<i>I did build them contiguously,\Nso that they were all one</i>
+Dialogue: 0,0:11:28.48,0:11:30.27,Default,,0,0,0,,<i>and we could go\Nanywhere we wanted.</i>
+Dialogue: 0,0:11:30.36,0:11:32.39,Default,,0,0,0,,<i>We couldn 't obviously build\Nthem on top of each other.</i>
+Dialogue: 0,0:11:32.44,0:11:35.18,Default,,0,0,0,,<i>So there were two sets\Nside-by-side on the same stage.</i>
+Dialogue: 0,0:11:35.24,0:11:37.69,Default,,0,0,0,,<i>And we built that one\Nhallway in both of them.</i>
+Dialogue: 0,0:11:37.74,0:11:41.15,Default,,0,0,0,,<i>And when we whipped over\Nto Simon, we snuck in a cut</i>
+Dialogue: 0,0:11:41.49,0:11:45.49,Default,,0,0,0,,<i>that, so far, nobody's noticed and I\Nprobably shouldn't have told you about.</i>
+Dialogue: 0,0:11:46.100,0:11:49.83,Default,,0,0,0,,Honestly, Doctor, I think we\Nmay really crash this time anyway.
+Dialogue: 0,0:11:49.92,0:11:50.91,Default,,0,0,0,,(cucmwe)
+Dialogue: 0,0:11:51.00,0:11:52.74,Default,,0,0,0,,Do you understand\Nwhat I have gone through
+Dialogue: 0,0:11:52.84,0:11:54.37,Default,,0,0,0,,to keep River away\Nfrom the Alliance?
+Dialogue: 0,0:11:54.46,0:11:56.63,Default,,0,0,0,,I do, and it's a fact\Nwe here have been“.
+Dialogue: 0,0:11:56.72,0:11:58.75,Default,,0,0,0,,<i>WHEDON: The infirmary,\Nthe blue room.</i>
+Dialogue: 0,0:11:58.84,0:12:02.43,Default,,0,0,0,,<i>A big part of the show. It didn't\Nget much use here in the movie</i>
+Dialogue: 0,0:12:02.47,0:12:04.71,Default,,0,0,0,,<i>but it does\Ngive things a nice feel.</i>
+Dialogue: 0,0:12:04.77,0:12:06.80,Default,,0,0,0,,<i>You understand\NSimon's space is very cold.</i>
+Dialogue: 0,0:12:06.89,0:12:11.43,Default,,0,0,0,,<i>Simon, I always kept\Nin blues and purples</i>
+Dialogue: 0,0:12:11.52,0:12:14.31,Default,,0,0,0,,<i>in a very Alliance\Ncolor scheme.</i>
+Dialogue: 0,0:12:14.40,0:12:17.31,Default,,0,0,0,,<i>Because unlike Mal, with\Nwhom he's always conflicting</i>
+Dialogue: 0,0:12:17.40,0:12:21.02,Default,,0,0,0,,<i>he does sort of represent the Alliance,\Neven though he's on the run from it.</i>
+Dialogue: 0,0:12:21.12,0:12:25.24,Default,,0,0,0,,<i>He represents, you know,</i> a <i>kind\Nof perfectly handsome, brilliant</i>
+Dialogue: 0,0:12:25.33,0:12:29.45,Default,,0,0,0,,<i>well-meaning person, the thing that\Nthe Alliance is supposed to be about.</i>
+Dialogue: 0,0:12:29.50,0:12:32.66,Default,,0,0,0,,<i>And Mal represents everything\Nthey're not about.</i>
+Dialogue: 0,0:12:32.75,0:12:37.25,Default,,0,0,0,,<i>He's brown, he's earthy, he's homemade.\NAnd he's kind of a schmo a lot of the time.</i>
+Dialogue: 0,0:12:43.05,0:12:47.80,Default,,0,0,0,,<i>When I wrote the script, because I knew\NI was gonna do this oner, this long shot</i>
+Dialogue: 0,0:12:47.89,0:12:51.35,Default,,0,0,0,,<i>and because I knew the\Nset so well from the series...</i>
+Dialogue: 0,0:12:51.44,0:12:53.90,Default,,0,0,0,,<i>I knew they would have to\Npull out this wall</i>
+Dialogue: 0,0:12:53.98,0:12:57.44,Default,,0,0,0,,<i>so that Mark could\Nstep on a crane arm</i>
+Dialogue: 0,0:12:57.49,0:13:02.07,Default,,0,0,0,,<i>with his Steadicam and that we\Ncould be doing this beyond the catwalk.</i>
+Dialogue: 0,0:13:02.66,0:13:05.15,Default,,0,0,0,,<i>It's very convenient\Nto know your set that well.</i>
+Dialogue: 0,0:13:05.24,0:13:08.49,Default,,0,0,0,,<i>So that it was literally in the\Nscript that we would pull this wall</i>
+Dialogue: 0,0:13:08.58,0:13:10.99,Default,,0,0,0,,<i>so that we could\Nget to this final image</i>
+Dialogue: 0,0:13:11.08,0:13:14.42,Default,,0,0,0,,<i>over which I always\Nintended to put my name.</i>
+Dialogue: 0,0:13:15.50,0:13:17.04,Default,,0,0,0,,(ENGINE REVVING)
+Dialogue: 0,0:13:18.97,0:13:20.58,Default,,0,0,0,,<i>Now we're coming to a scene</i>
+Dialogue: 0,0:13:20.67,0:13:22.21,Default,,0,0,0,,<i>that has\Nthe distinction of being</i>
+Dialogue: 0,0:13:22.30,0:13:25.34,Default,,0,0,0,,<i>our one big reshoot scene\Nand it's this one right here.</i>
+Dialogue: 0,0:13:25.39,0:13:28.00,Default,,0,0,0,,<i>These crates were in\Nthe back of the cargo bay.</i>
+Dialogue: 0,0:13:28.10,0:13:30.64,Default,,0,0,0,,<i>I remembered that when I\Nrealized I needed this scene.</i>
+Dialogue: 0,0:13:30.73,0:13:35.06,Default,,0,0,0,,So we decamped to a <i>set they</i>\Nwere building for 40 Year Old Virgin
+Dialogue: 0,0:13:35.15,0:13:37.23,Default,,0,0,0,,<i>where Jack Green was lighting</i>
+Dialogue: 0,0:13:37.65,0:13:41.14,Default,,0,0,0,,<i>his next movie and shot\Nthis scene. And it's designed</i>
+Dialogue: 0,0:13:41.20,0:13:44.06,Default,,0,0,0,,<i>for River to sort of\Npass the movie off to</i> Mal.
+Dialogue: 0,0:13:44.16,0:13:46.24,Default,,0,0,0,,<i>Because what I found from\Naudiences who hadn't seen the show</i>
+Dialogue: 0,0:13:46.33,0:13:48.44,Default,,0,0,0,,<i>was they didn't know they were\Nsupposed to be watching Mal</i>
+Dialogue: 0,0:13:48.54,0:13:51.24,Default,,0,0,0,,<i>even though he was at the\Ncenter of the Steadicam shot.</i>
+Dialogue: 0,0:13:51.33,0:13:53.54,Default,,0,0,0,,<i>So, I took a moment\Nfor her to say,</i>
+Dialogue: 0,0:13:53.62,0:13:55.54,Default,,0,0,0,,<i>"You're important\Nand I've got my eye on you."</i>
+Dialogue: 0,0:13:55.63,0:13:58.96,Default,,0,0,0,,<i>So the audience would as well. You see\Nthe crates in the background of the set.</i>
+Dialogue: 0,0:13:59.05,0:14:01.66,Default,,0,0,0,,<i>We just piled them up again\Nto do that reshoot.</i>
+Dialogue: 0,0:14:01.76,0:14:04.22,Default,,0,0,0,,<i>That's something I asked for\Nwhen I'd seen the cut of the movie</i>
+Dialogue: 0,0:14:04.30,0:14:06.54,Default,,0,0,0,,<i>and said, "There's a\Nmoment that's missing."</i>
+Dialogue: 0,0:14:06.64,0:14:10.10,Default,,0,0,0,,<i>And we were able\Nto get that very quickly.</i>
+Dialogue: 0,0:14:10.39,0:14:12.30,Default,,0,0,0,,This could look to be\Na sunny day for us.
+Dialogue: 0,0:14:12.39,0:14:14.35,Default,,0,0,0,,SIMON: River, stay\Nbehind the others.
+Dialogue: 0,0:14:14.39,0:14:18.01,Default,,0,0,0,,<i>WHEDON: Obviously,\Nthis is their new Mule.</i>
+Dialogue: 0,0:14:18.07,0:14:20.85,Default,,0,0,0,,<i>In the series\Nwe had a little ATV.</i>
+Dialogue: 0,0:14:20.94,0:14:25.31,Default,,0,0,0,,<i>It was very delightful and\Nuseful, but this is a movie.</i>
+Dialogue: 0,0:14:25.41,0:14:27.44,Default,,0,0,0,,<i>And ifl wasn't\Ngonna have a hovercraft</i>
+Dialogue: 0,0:14:27.53,0:14:30.03,Default,,0,0,0,,<i>well, then I was going to\Ntake my football and go home</i>
+Dialogue: 0,0:14:30.12,0:14:32.24,Default,,0,0,0,,<i>because you got to\Nhave a hovercraft.</i>
+Dialogue: 0,0:14:37.75,0:14:41.16,Default,,0,0,0,,<i>The hovercraft itself has kind\Nof</i> a <i>tortured history as well.</i>
+Dialogue: 0,0:14:41.26,0:14:44.25,Default,,0,0,0,,<i>But before I get into it, I just\Nwant to give huge props</i> to...
+Dialogue: 0,0:14:44.34,0:14:46.80,Default,,0,0,0,,<i>Jewel Staite,\Nfor the moment of</i>
+Dialogue: 0,0:14:48.55,0:14:51.89,Default,,0,0,0,,<i>absolute devotion\Nand sweetness followed by</i>
+Dialogue: 0,0:14:51.93,0:14:55.64,Default,,0,0,0,,<i>in what is approximately\Ntwo frames, sadness.</i>
+Dialogue: 0,0:14:56.10,0:15:00.85,Default,,0,0,0,,<i>Tells you exactly what you need to\Nknow about her relationship with Simon.</i>
+Dialogue: 0,0:15:00.94,0:15:04.65,Default,,0,0,0,,<i>So the problem with the Mule.\NIt was always too big for me.</i>
+Dialogue: 0,0:15:04.74,0:15:06.90,Default,,0,0,0,,<i>And I kept having them make it\Nsmaller and smaller.</i>
+Dialogue: 0,0:15:06.95,0:15:09.91,Default,,0,0,0,,<i>I was like, "Will I get\Nthe sensation of floating</i>
+Dialogue: 0,0:15:09.95,0:15:12.44,Default,,0,0,0,,<i>"and of danger if they're not\Nin something small enough?"</i>
+Dialogue: 0,0:15:12.54,0:15:16.70,Default,,0,0,0,,<i>And when they finally showed me the\Nfinished design, it had five seats in it.</i>
+Dialogue: 0,0:15:16.79,0:15:19.66,Default,,0,0,0,,<i>And there is actually a scene\Nin the script where</i>
+Dialogue: 0,0:15:19.75,0:15:22.49,Default,,0,0,0,,<i>Mal says, "Well, you know,\Nthe Mule won't run with five."</i>
+Dialogue: 0,0:15:22.59,0:15:25.63,Default,,0,0,0,,<i>That's why he kills a guy\Nand leaves him to die</i>
+Dialogue: 0,0:15:25.72,0:15:27.96,Default,,0,0,0,,<i>and then shoots him\Nso the Reavers don't eat him.</i>
+Dialogue: 0,0:15:28.05,0:15:30.46,Default,,0,0,0,,<i>He actually says the line,\N"Mule won 't run with five,"</i>
+Dialogue: 0,0:15:30.51,0:15:32.13,Default,,0,0,0,,<i>and they gave me</i>\Na <i>five-seater.</i>
+Dialogue: 0,0:15:32.22,0:15:35.39,Default,,0,0,0,,<i>So we had to do</i>\Na <i>little redesign there.</i>
+Dialogue: 0,0:15:35.52,0:15:38.10,Default,,0,0,0,,<i>But I kept feeling\Nlike the thing was so big,</i>
+Dialogue: 0,0:15:38.15,0:15:40.56,Default,,0,0,0,,<i>I couldn 't get in</i>\Na <i>shot with my actors.</i>
+Dialogue: 0,0:15:40.65,0:15:42.98,Default,,0,0,0,,<i>And since I shot the\Nwhole thing with my actors,</i>
+Dialogue: 0,0:15:43.07,0:15:44.90,Default,,0,0,0,,<i>that was</i>\Na <i>big priority for me.</i>
+Dialogue: 0,0:15:45.24,0:15:48.77,Default,,0,0,0,,You all wanna be looking very\Nintently at your own belly buttons.
+Dialogue: 0,0:15:48.91,0:15:51.77,Default,,0,0,0,,I see a head start to rise,\Nviolence is going to ensue.
+Dialogue: 0,0:15:51.87,0:15:54.86,Default,,0,0,0,,<i>WHEDON: I do like the design\Nof this station though.</i>
+Dialogue: 0,0:15:54.95,0:15:58.37,Default,,0,0,0,,<i>It's a nice old-fashioned\Nfeel, but without being, again</i>
+Dialogue: 0,0:15:58.46,0:16:00.45,Default,,0,0,0,,<i>too Western and hokey.</i>
+Dialogue: 0,0:16:00.96,0:16:02.29,Default,,0,0,0,,She's locked up.
+Dialogue: 0,0:16:04.63,0:16:07.59,Default,,0,0,0,,<i>WHEDON:\Ninevitably, River's feet.</i>
+Dialogue: 0,0:16:07.67,0:16:10.04,Default,,0,0,0,,<i>Anybody who's seen the TV show\Nknows that River's feet</i>
+Dialogue: 0,0:16:10.14,0:16:13.92,Default,,0,0,0,,<i>are probably the 11th character\Nin the movie, after Serenity.</i>
+Dialogue: 0,0:16:15.52,0:16:19.13,Default,,0,0,0,,<i>The idea that she was useful in the heist\Nbecause she could hear people 's thoughts</i>
+Dialogue: 0,0:16:19.19,0:16:21.39,Default,,0,0,0,,<i>and spot trouble was\Nsomething I'd had early on.</i>
+Dialogue: 0,0:16:21.48,0:16:23.94,Default,,0,0,0,,<i>This woke me up in the\Nmiddle of the night. This shot.</i>
+Dialogue: 0,0:16:24.02,0:16:25.73,Default,,0,0,0,,<i>I thought,\N"l need to do this."</i>
+Dialogue: 0,0:16:25.82,0:16:27.65,Default,,0,0,0,,<i>We called it\Nthe roller-coaster shot</i>
+Dialogue: 0,0:16:28.20,0:16:32.15,Default,,0,0,0,,<i>where we went down from her\Nto the ground where they were.</i>
+Dialogue: 0,0:16:32.20,0:16:34.19,Default,,0,0,0,,<i>I thought we were gonna\Nhave to do it on a track...</i>
+Dialogue: 0,0:16:34.28,0:16:37.90,Default,,0,0,0,,<i>because a Steadicam usually\Ncan't go from high to low</i>
+Dialogue: 0,0:16:37.100,0:16:41.91,Default,,0,0,0,,<i>but Mark Moore was able\Nto do it with his Steadicam.</i>
+Dialogue: 0,0:16:42.00,0:16:46.04,Default,,0,0,0,,<i>And it could be</i> a <i>little\Nsmoother, but I still think it has</i>
+Dialogue: 0,0:16:46.09,0:16:49.92,Default,,0,0,0,,a <i>great elegance to it and it\Nreally puts you in River's mindset.</i>
+Dialogue: 0,0:16:50.01,0:16:52.34,Default,,0,0,0,,<i>I was really happy\Nwhen that shot worked out.</i>
+Dialogue: 0,0:16:52.43,0:16:54.42,Default,,0,0,0,,Someone who gets\Nother people killed.
+Dialogue: 0,0:16:57.93,0:17:02.10,Default,,0,0,0,,<i>the young man who runs out and\Nasks for them to take him with them</i>
+Dialogue: 0,0:17:02.19,0:17:04.90,Default,,0,0,0,,<i>and gets shot\Nfor his troubles.</i>
+Dialogue: 0,0:17:11.11,0:17:14.57,Default,,0,0,0,,At last. We can retire and\Ngive up this life of crime.
+Dialogue: 0,0:17:14.66,0:17:16.99,Default,,0,0,0,,<i>WHEDON: This gag\Npretty much speaks for itself.</i>
+Dialogue: 0,0:17:17.08,0:17:19.94,Default,,0,0,0,,<i>And I love Jack Green\Nlighting there, too</i>
+Dialogue: 0,0:17:20.04,0:17:23.78,Default,,0,0,0,,<i>because that lever is just visible\Nenough to show you that there's a lever.</i>
+Dialogue: 0,0:17:23.88,0:17:24.99,Default,,0,0,0,,<i>He's not overdoing it.</i>
+Dialogue: 0,0:17:25.09,0:17:28.80,Default,,0,0,0,,<i>Listen to the fine, mellifluous\Ntones of that fellow's voice.</i>
+Dialogue: 0,0:17:28.88,0:17:32.62,Default,,0,0,0,,War's long done. We're\Nall just folk now. Listen up!
+Dialogue: 0,0:17:32.72,0:17:35.68,Default,,0,0,0,,<i>WHEDON: That's truly</i> a\N<i>great actor. An incredible voice.</i>
+Dialogue: 0,0:17:36.06,0:17:39.47,Default,,0,0,0,,<i>The POV of where\Nhe's looking down...</i>
+Dialogue: 0,0:17:39.56,0:17:43.05,Default,,0,0,0,,<i>is in fact another set on\Nthe other side of the stage.</i>
+Dialogue: 0,0:17:45.69,0:17:48.35,Default,,0,0,0,,<i>Because we had to\Nsplit them up</i>
+Dialogue: 0,0:17:48.44,0:17:51.98,Default,,0,0,0,,<i>'cause we couldn 't dig a pit and\Nput one on top of the other again.</i>
+Dialogue: 0,0:17:52.78,0:17:56.44,Default,,0,0,0,,<i>That fellow there, Chuck,\Nhe actually starred in my</i>
+Dialogue: 0,0:17:56.53,0:17:59.20,Default,,0,0,0,,<i>brother Zach's senior\Nthesis film at Wesleyan.</i>
+Dialogue: 0,0:17:59.29,0:18:04.20,Default,,0,0,0,,<i>And the casting people brought\Nhim in not even knowing that he</i> had...
+Dialogue: 0,0:18:04.29,0:18:06.53,Default,,0,0,0,,<i>That I had seen him in that.</i>
+Dialogue: 0,0:18:06.63,0:18:09.12,Default,,0,0,0,,<i>He brings a great\Nquality to that role.</i>
+Dialogue: 0,0:18:10.26,0:18:11.67,Default,,0,0,0,,What's going on?
+Dialogue: 0,0:18:11.76,0:18:14.62,Default,,0,0,0,,<i>WHEDON: This arm\Nwe did just with</i>
+Dialogue: 0,0:18:14.72,0:18:18.30,Default,,0,0,0,,<i>Jack holding the camera and</i>
+Dialogue: 0,0:18:18.39,0:18:21.63,Default,,0,0,0,,<i>just a regular dolly because\Nwe didn't have an arm that day</i>
+Dialogue: 0,0:18:21.73,0:18:23.97,Default,,0,0,0,,<i>and he did a greatjob\Nof hiding that fact.</i>
+Dialogue: 0,0:18:24.06,0:18:28.81,Default,,0,0,0,,<i>As we hide the fact that there are\Nonly three walls in this particular set.</i>
+Dialogue: 0,0:18:29.73,0:18:31.22,Default,,0,0,0,,JAYNEI Mal!
+Dialogue: 0,0:18:31.32,0:18:33.78,Default,,0,0,0,,Every heist, he's got\Nto start yelling my name.
+Dialogue: 0,0:18:36.95,0:18:40.82,Default,,0,0,0,,<i>This one. You can actually see\Noff the set and on to the studio.</i>
+Dialogue: 0,0:18:40.87,0:18:43.36,Default,,0,0,0,,<i>That's something we probably,\Nagain, shouldn 't mention</i>
+Dialogue: 0,0:18:43.46,0:18:44.66,Default,,0,0,0,,<i>but I think it's kind of cool.</i>
+Dialogue: 0,0:18:44.75,0:18:46.54,Default,,0,0,0,,You get them down here\Nand you seal it.
+Dialogue: 0,0:18:49.96,0:18:51.67,Default,,0,0,0,,<i>as he's talking to this guy.</i>
+Dialogue: 0,0:18:51.76,0:18:56.05,Default,,0,0,0,,<i>Sometimes the footage matches\Njust perfectly and sometimes</i>
+Dialogue: 0,0:18:56.97,0:18:58.71,Default,,0,0,0,,<i>it does the other thing.</i>
+Dialogue: 0,0:18:59.60,0:19:01.26,Default,,0,0,0,,(ENGINE REVVING)
+Dialogue: 0,0:19:03.14,0:19:04.63,Default,,0,0,0,,Take me with you!
+Dialogue: 0,0:19:04.73,0:19:06.31,Default,,0,0,0,,Get back in the vault\Nwith the others.
+Dialogue: 0,0:19:06.39,0:19:07.73,Default,,0,0,0,,I can't stay here!\NPlease!
+Dialogue: 0,0:19:07.81,0:19:09.40,Default,,0,0,0,,It's too many.\NMove ahead.
+Dialogue: 0,0:19:14.07,0:19:17.56,Default,,0,0,0,,<i>It comes from movies\Nlike Ulzana's</i> Raid.
+Dialogue: 0,0:19:18.45,0:19:22.07,Default,,0,0,0,,<i>It comes from the idea\Nthat sometimes</i>
+Dialogue: 0,0:19:22.16,0:19:24.90,Default,,0,0,0,,<i>the closest thing to mercy\Nis killing someone.</i>
+Dialogue: 0,0:19:24.100,0:19:28.71,Default,,0,0,0,,<i>And it comes from the idea\Nthat Mal is in a bad place.</i>
+Dialogue: 0,0:19:28.75,0:19:32.54,Default,,0,0,0,,<i>You know, he was in many ways\Nthe hero of the TV show</i>
+Dialogue: 0,0:19:32.63,0:19:36.09,Default,,0,0,0,,<i>and we needed to put him in\Na place where he had an arc.</i>
+Dialogue: 0,0:19:36.17,0:19:40.21,Default,,0,0,0,,<i>Where he didn't go from hero to hero,\Nbecause I wasn't making Air Force One.</i>
+Dialogue: 0,0:19:44.64,0:19:46.55,Default,,0,0,0,,<i>So having him kill somebody</i>
+Dialogue: 0,0:19:46.60,0:19:50.77,Default,,0,0,0,,<i>was a very important way to\Nsay he's not paying attention</i>
+Dialogue: 0,0:19:50.86,0:19:53.06,Default,,0,0,0,,<i>his priorities\Nare out of whack.</i>
+Dialogue: 0,0:19:53.15,0:19:56.27,Default,,0,0,0,,<i>That last line, by the way,\N"Faster would be better"</i>
+Dialogue: 0,0:19:56.36,0:19:59.40,Default,,0,0,0,,<i>this is one of the reasons why I\Nlove working with Nathan so much.</i>
+Dialogue: 0,0:19:59.49,0:20:02.61,Default,,0,0,0,,<i>I went up to him and said,\N"Say something Mal would say."</i>
+Dialogue: 0,0:20:02.70,0:20:05.74,Default,,0,0,0,,<i>I just felt that we needed a\Nline</i> there <i>and I was in a hurry</i>
+Dialogue: 0,0:20:05.83,0:20:09.62,Default,,0,0,0,,<i>and I hadn't written one and so he\Njust improvved "Faster would be better"</i>
+Dialogue: 0,0:20:09.71,0:20:13.37,Default,,0,0,0,,<i>which was such a good Mal line that I was\Nlike, "Why did I slave away at that script</i>
+Dialogue: 0,0:20:13.42,0:20:16.46,Default,,0,0,0,,<i>"for so many months?\NWhy don't you just say stuff?"</i>
+Dialogue: 0,0:20:16.55,0:20:20.01,Default,,0,0,0,,<i>He's extraordinary that wa y. He\Ncan really become the character.</i>
+Dialogue: 0,0:20:20.09,0:20:21.33,Default,,0,0,0,,WASH: Heat her up.\NWe got Reavers.
+Dialogue: 0,0:20:21.43,0:20:22.42,Default,,0,0,0,,(GASPS)
+Dialogue: 0,0:20:27.48,0:20:29.14,Default,,0,0,0,,Keep moving, honey.
+Dialogue: 0,0:20:29.23,0:20:30.81,Default,,0,0,0,,We're coming to you.
+Dialogue: 0,0:20:31.19,0:20:34.18,Default,,0,0,0,,<i>WHEDON: In the filming,\Nit was handled extremely well.</i>
+Dialogue: 0,0:20:34.28,0:20:37.61,Default,,0,0,0,,<i>Dan Sudick,\Nour special effects guy</i>
+Dialogue: 0,0:20:37.69,0:20:40.61,Default,,0,0,0,,<i>built several rigs\Nthat could turn and move.</i>
+Dialogue: 0,0:20:40.70,0:20:42.81,Default,,0,0,0,,<i>One built from the side,\None built from the front</i>
+Dialogue: 0,0:20:42.91,0:20:47.03,Default,,0,0,0,,<i>so that we could get a lot of\Nclose-ups of our actors moving against</i>
+Dialogue: 0,0:20:47.12,0:20:51.83,Default,,0,0,0,,<i>an actual background\Nthat we shot in California.</i>
+Dialogue: 0,0:20:52.13,0:20:54.49,Default,,0,0,0,,<i>It was on Temp/in Highway,\NI remember now.</i>
+Dialogue: 0,0:20:55.00,0:20:58.71,Default,,0,0,0,,<i>So a lot of that ground\Nunderneath Jayne had to be added.</i>
+Dialogue: 0,0:20:59.09,0:21:01.88,Default,,0,0,0,,<i>That shot there, that push-in,\Nthat's a Jack Green special.</i>
+Dialogue: 0,0:21:01.97,0:21:04.01,Default,,0,0,0,,<i>He set it up and said,\N"Do you like this?"</i>
+Dialogue: 0,0:21:04.10,0:21:06.46,Default,,0,0,0,,<i>And I just said, "I'm gonna\Npretend that I did that."</i>
+Dialogue: 0,0:21:06.56,0:21:08.01,Default,,0,0,0,,<i>There's a few of these\Nin the movie</i>
+Dialogue: 0,0:21:08.10,0:21:10.09,Default,,0,0,0,,<i>where Jack just came up\Nwith the beauty frame</i>
+Dialogue: 0,0:21:10.19,0:21:11.55,Default,,0,0,0,,<i>and then I get\Nto take credit for it.</i>
+Dialogue: 0,0:21:11.65,0:21:14.06,Default,,0,0,0,,<i>Unless, of course, I say something\Nstupid during a DVD commentary</i>
+Dialogue: 0,0:21:14.15,0:21:15.81,Default,,0,0,0,,<i>but what are the odds of that?</i>
+Dialogue: 0,0:21:16.69,0:21:18.52,Default,,0,0,0,,(GRUNTING)
+Dialogue: 0,0:21:20.15,0:21:23.57,Default,,0,0,0,,<i>Anyhow, I've seen a lot of,\Nyou know, chases.</i>
+Dialogue: 0,0:21:23.66,0:21:25.69,Default,,0,0,0,,<i>I think of the pod race\Nin Episode One</i>
+Dialogue: 0,0:21:25.79,0:21:27.99,Default,,0,0,0,,<i>where everything's digitalized\Nand everything's...</i>
+Dialogue: 0,0:21:28.04,0:21:31.95,Default,,0,0,0,,<i>It's not so much that it's digital,\Nalthough when you have hair like Zoe's</i>
+Dialogue: 0,0:21:32.04,0:21:35.58,Default,,0,0,0,,<i>and River's it really shows up\Nwhen you have a fake background</i>
+Dialogue: 0,0:21:35.67,0:21:38.38,Default,,0,0,0,,<i>but that it was so airless.</i>
+Dialogue: 0,0:21:38.46,0:21:41.33,Default,,0,0,0,,<i>I really wanted the sense\Nthat these guys were there</i>
+Dialogue: 0,0:21:41.42,0:21:43.59,Default,,0,0,0,,<i>that the stuff\Nwas going by them.</i>
+Dialogue: 0,0:21:43.68,0:21:48.84,Default,,0,0,0,,<i>And what limited me was that, with\Nthe exception of that particular shot</i>
+Dialogue: 0,0:21:48.93,0:21:52.14,Default,,0,0,0,,<i>and a couple of others, we\Nreally couldn't do any shots</i>
+Dialogue: 0,0:21:52.35,0:21:54.97,Default,,0,0,0,,<i>where things were swerving\Nor going in different directions</i>
+Dialogue: 0,0:21:55.02,0:21:58.86,Default,,0,0,0,,<i>'cause we were limited by\Nthat. I think this was definitely</i>
+Dialogue: 0,0:21:58.90,0:22:02.06,Default,,0,0,0,,<i>one of those sequences where\NI had a bit of</i> a <i>learning curve.</i>
+Dialogue: 0,0:22:02.15,0:22:05.32,Default,,0,0,0,,<i>Unfortunately, I had that learning\Ncurve after I had already shot it.</i>
+Dialogue: 0,0:22:05.41,0:22:09.70,Default,,0,0,0,,<i>But what I do love about it is\Nthe fact that they are really there.</i>
+Dialogue: 0,0:22:09.79,0:22:14.08,Default,,0,0,0,,<i>Yes, they made one of them on a\NLazy Susan just for that one gag.</i>
+Dialogue: 0,0:22:15.79,0:22:17.58,Default,,0,0,0,,<i>The fact that\Nthey're all really there,</i>
+Dialogue: 0,0:22:17.67,0:22:19.08,Default,,0,0,0,,<i>really interacting\Nwith the background</i>
+Dialogue: 0,0:22:19.17,0:22:22.33,Default,,0,0,0,,<i>makes things just a\Nlittle bit more believable.</i>
+Dialogue: 0,0:22:23.72,0:22:25.21,Default,,0,0,0,,<i>That shot there</i>
+Dialogue: 0,0:22:25.26,0:22:28.50,Default,,0,0,0,,<i>from overhead,\Nwe added at the last minute</i>
+Dialogue: 0,0:22:28.56,0:22:32.02,Default,,0,0,0,,<i>to really sell\Nthe connection between</i>
+Dialogue: 0,0:22:32.89,0:22:35.56,Default,,0,0,0,,<i>the outside of the ship\Nand the inside of the ship</i>
+Dialogue: 0,0:22:35.60,0:22:39.02,Default,,0,0,0,,<i>so that you really felt like\Nthe two were together.</i>
+Dialogue: 0,0:22:39.69,0:22:41.43,Default,,0,0,0,,(GRUNTING)
+Dialogue: 0,0:22:41.53,0:22:43.14,Default,,0,0,0,,(GROANING)
+Dialogue: 0,0:22:43.24,0:22:45.02,Default,,0,0,0,,River?
+Dialogue: 0,0:22:45.07,0:22:46.40,Default,,0,0,0,,I swallowed a bug.
+Dialogue: 0,0:22:51.12,0:22:53.41,Default,,0,0,0,,<i>and everybody's\Nhappy all the time.</i>
+Dialogue: 0,0:22:53.46,0:22:55.29,Default,,0,0,0,,(INDIGNANTLY) ls he okay?
+Dialogue: 0,0:23:01.13,0:23:03.09,Default,,0,0,0,,<i>taking a moment\Nof comedy and then</i>
+Dialogue: 0,0:23:03.13,0:23:06.75,Default,,0,0,0,,<i>throwing something horrible\Nin the middle of it, or vice versa</i>
+Dialogue: 0,0:23:07.05,0:23:10.42,Default,,0,0,0,,<i>just to keep things\Nfrom ever getting dull.</i>
+Dialogue: 0,0:23:10.64,0:23:11.92,Default,,0,0,0,,Hello?
+Dialogue: 0,0:23:13.10,0:23:15.93,Default,,0,0,0,,<i>WHEDON: I put the widest lens\Non Wash that I could there</i>
+Dialogue: 0,0:23:15.98,0:23:20.47,Default,,0,0,0,,<i>to really make him feel all tiny and\Nalone 'cause I thought he was so cute.</i>
+Dialogue: 0,0:23:21.40,0:23:23.27,Default,,0,0,0,,Set course for Beaumonde.
+Dialogue: 0,0:23:23.36,0:23:24.82,Default,,0,0,0,,<i>WHED ON:\NEstablishing their marriage</i>
+Dialogue: 0,0:23:24.90,0:23:26.61,Default,,0,0,0,,<i>was one of\Nthe hardest things because</i>
+Dialogue: 0,0:23:26.70,0:23:30.19,Default,,0,0,0,,<i>we just didn't have time for\Nanybody to be in their bunks, snogging</i>
+Dialogue: 0,0:23:30.28,0:23:31.82,Default,,0,0,0,,<i>or doing anything like that.</i>
+Dialogue: 0,0:23:31.91,0:23:35.28,Default,,0,0,0,,<i>So the fact that he and Zoe\Nhad very few scenes together</i>
+Dialogue: 0,0:23:35.33,0:23:38.79,Default,,0,0,0,,<i>but yet we still had to establish\Nthe fact that they were married</i>
+Dialogue: 0,0:23:39.04,0:23:40.95,Default,,0,0,0,,<i>that was a bit of a problem.</i>
+Dialogue: 0,0:23:41.05,0:23:42.79,Default,,0,0,0,,<i>And in some early versions</i>
+Dialogue: 0,0:23:42.84,0:23:45.96,Default,,0,0,0,,<i>some people had trouble even\Nunderstanding that they were.</i>
+Dialogue: 0,0:23:46.26,0:23:49.38,Default,,0,0,0,,<i>But we put in some footage of\Nthe two of them that helped with that.</i>
+Dialogue: 0,0:23:49.47,0:23:51.51,Default,,0,0,0,,Just as soon as River\Ngets her share of the bounty.
+Dialogue: 0,0:23:51.60,0:23:53.21,Default,,0,0,0,,Let's not do\Nanything hasty...
+Dialogue: 0,0:23:53.31,0:23:54.42,Default,,0,0,0,,No, shiny!
+Dialogue: 0,0:23:55.02,0:23:59.35,Default,,0,0,0,,<i>WHEDON: Again, in order to\Ntake from the series</i>
+Dialogue: 0,0:23:59.44,0:24:03.56,Default,,0,0,0,,<i>where everybody had more\Nor less become, if not buddies</i>
+Dialogue: 0,0:24:03.65,0:24:05.36,Default,,0,0,0,,<i>kind of on the same page</i>
+Dialogue: 0,0:24:05.44,0:24:09.69,Default,,0,0,0,,<i>and take us to a movie where we\Ndon't deny that that had happened</i>
+Dialogue: 0,0:24:10.28,0:24:13.15,Default,,0,0,0,,<i>gave the idea that Mal has...</i>
+Dialogue: 0,0:24:14.16,0:24:18.37,Default,,0,0,0,,<i>Things have gotten bad enough, partially\Nbecause Simon and River are on board</i>
+Dialogue: 0,0:24:18.46,0:24:22.58,Default,,0,0,0,,<i>that Mal has lost his compass.\NHe's lost Inara, he's lost Book</i>
+Dialogue: 0,0:24:22.67,0:24:25.00,Default,,0,0,0,,<i>both of whom were on the ship\Nwith him in the series</i>
+Dialogue: 0,0:24:25.09,0:24:28.71,Default,,0,0,0,,<i>and now Simon and River\Nhave decided to leave as well</i>
+Dialogue: 0,0:24:28.80,0:24:32.67,Default,,0,0,0,,<i>because Mal is, bit by bit,\Nsort of pulling himself apart.</i>
+Dialogue: 0,0:24:33.31,0:24:34.92,Default,,0,0,0,,Man has to cut loose.
+Dialogue: 0,0:24:35.02,0:24:39.35,Default,,0,0,0,,<i>WHEDON: This has been\Ndescribed as a darker version of Mal</i>
+Dialogue: 0,0:24:39.39,0:24:40.93,Default,,0,0,0,,<i>than what was there before.</i>
+Dialogue: 0,0:24:41.02,0:24:45.61,Default,,0,0,0,,<i>But it really is just sort of, you\Nknow, the way he would react</i>
+Dialogue: 0,0:24:45.69,0:24:48.86,Default,,0,0,0,,<i>to those circumstances and I needed\Nto take him to a place where he says</i>
+Dialogue: 0,0:24:48.95,0:24:52.86,Default,,0,0,0,,<i>you know, "I don't</i> care <i>about\Nyou," even though previously he had</i>
+Dialogue: 0,0:24:52.95,0:24:54.99,Default,,0,0,0,,<i>indicated that he cared\Nabout them because...</i>
+Dialogue: 0,0:24:55.08,0:24:58.74,Default,,0,0,0,,<i>And the way to do that was to make\Nthings worse for him and his reaction to</i>
+Dialogue: 0,0:24:58.83,0:25:01.29,Default,,0,0,0,,<i>things getting worse\Nis to be cornered.</i>
+Dialogue: 0,0:25:01.83,0:25:04.45,Default,,0,0,0,,I should've dumped the\Ngirl? Or you? Or Jayne?
+Dialogue: 0,0:25:04.55,0:25:07.13,Default,,0,0,0,,<i>WHEDON: When we did\Nthat reshoot of him and River...</i>
+Dialogue: 0,0:25:07.21,0:25:10.00,Default,,0,0,0,,<i>I received an e-mail\Nfrom Mary Parent,</i>
+Dialogue: 0,0:25:10.05,0:25:12.54,Default,,0,0,0,,<i>the invaluable executive\Non the film.</i>
+Dialogue: 0,0:25:12.60,0:25:16.05,Default,,0,0,0,,<i>And you'll notice this close-up\Nhere where he explains what's wrong.</i>
+Dialogue: 0,0:25:16.14,0:25:19.13,Default,,0,0,0,,<i>She said, "You're gonna need\Nsomething in the foredeck hall</i>
+Dialogue: 0,0:25:19.23,0:25:24.47,Default,,0,0,0,,<i>"where he explains more clearly\Nwhat is wrong and what he needs."</i>
+Dialogue: 0,0:25:24.57,0:25:28.73,Default,,0,0,0,,<i>And that close-up was shot right\Nafter we did the scene of him and River.</i>
+Dialogue: 0,0:25:28.78,0:25:32.24,Default,,0,0,0,,<i>Not actually in that hall\Nbut in front of a black curtain.</i>
+Dialogue: 0,0:25:32.28,0:25:34.49,Default,,0,0,0,,<i>And I told Jack,\N"l've gotten this memo.</i>
+Dialogue: 0,0:25:34.58,0:25:38.94,Default,,0,0,0,,<i>"We need to do this new piece of\Ndialog and during this piece of dialog</i>
+Dialogue: 0,0:25:39.04,0:25:41.90,Default,,0,0,0,,<i>"they're gonna leave atmosphere,\Nso you need to give me fire</i>
+Dialogue: 0,0:25:41.96,0:25:45.45,Default,,0,0,0,,<i>"and you need to take me\Ninto space." And he did it.</i>
+Dialogue: 0,0:25:52.51,0:25:54.80,Default,,0,0,0,,<i>This is a moment that had\Ncome out that we got to re-add</i>
+Dialogue: 0,0:25:54.89,0:25:57.47,Default,,0,0,0,,<i>to show a little intimacy\Nbetween them.</i>
+Dialogue: 0,0:25:57.56,0:26:01.97,Default,,0,0,0,,<i>Anyway, Jack lit the entire\Nthing inside of 25 minutes</i>
+Dialogue: 0,0:26:02.44,0:26:05.30,Default,,0,0,0,,<i>with those instructions\Nbecause he's that fast.</i>
+Dialogue: 0,0:26:05.40,0:26:10.36,Default,,0,0,0,,<i>And while he lit it, I wrote\Nit and Nathan memorized it.</i>
+Dialogue: 0,0:26:11.57,0:26:14.48,Default,,0,0,0,,<i>And it's a tough piece of\Ndialog to put in your mouth.</i>
+Dialogue: 0,0:26:14.57,0:26:18.11,Default,,0,0,0,,<i>And it's one of the great things about\Nworking with both Jack and Nathan</i>
+Dialogue: 0,0:26:18.16,0:26:20.37,Default,,0,0,0,,<i>is that everybody can do\Neverything really quickly</i>
+Dialogue: 0,0:26:20.45,0:26:22.69,Default,,0,0,0,,<i>and it did, in fact,\Nmake the movie better</i>
+Dialogue: 0,0:26:22.79,0:26:25.28,Default,,0,0,0,,<i>which is one of the great things\Nabout working with Mary Parent.</i>
+Dialogue: 0,0:26:25.38,0:26:29.41,Default,,0,0,0,,<i>So when everybody's firing on all cylinders\Nand you get things really clicking</i>
+Dialogue: 0,0:26:29.51,0:26:31.42,Default,,0,0,0,,<i>it's a great feeling.</i>
+Dialogue: 0,0:26:32.47,0:26:34.17,Default,,0,0,0,,Eating people alive?
+Dialogue: 0,0:26:39.47,0:26:42.81,Default,,0,0,0,,<i>His "I'II kill him\Nin a fair fight" monologue is</i>
+Dialogue: 0,0:26:42.89,0:26:45.56,Default,,0,0,0,,<i>to me, very delightful.\NIt's very him.</i>
+Dialogue: 0,0:26:45.65,0:26:48.51,Default,,0,0,0,,<i>This was a scene that I\Nwas afraid might get cut.</i>
+Dialogue: 0,0:26:48.61,0:26:52.19,Default,,0,0,0,,<i>But I couldn 't bear to,\Nso we arranged things.</i>
+Dialogue: 0,0:26:52.28,0:26:56.15,Default,,0,0,0,,<i>We cut it down somewhat and we arranged\Nthings so that it flowed well in the movie</i>
+Dialogue: 0,0:26:56.20,0:27:00.24,Default,,0,0,0,,<i>because it just gives you so\Nmuch of who Jayne and Kaylee are.</i>
+Dialogue: 0,0:27:00.33,0:27:01.91,Default,,0,0,0,,Like to get\Naddlepated ourselves,
+Dialogue: 0,0:27:01.100,0:27:03.70,Default,,0,0,0,,we stay on this\Nboat much longer.
+Dialogue: 0,0:27:07.13,0:27:09.87,Default,,0,0,0,,<i>ifl can ever do that\NI'm always happy.</i>
+Dialogue: 0,0:27:09.96,0:27:13.30,Default,,0,0,0,,<i>And then, of course, the\Ndissolve between her and Mal.</i>
+Dialogue: 0,0:27:14.59,0:27:18.18,Default,,0,0,0,,<i>Basically, you know, it just\Nshowed again, she's watching him</i>
+Dialogue: 0,0:27:18.26,0:27:21.25,Default,,0,0,0,,<i>in a very, sort of,\Ndidactic fashion.</i>
+Dialogue: 0,0:27:21.35,0:27:23.88,Default,,0,0,0,,<i>And what's he watching?\NWell, of course, Inara.</i>
+Dialogue: 0,0:27:23.98,0:27:28.10,Default,,0,0,0,,<i>The idea of the movie postcard\Nseemed like</i> a <i>perfectly natural</i>
+Dialogue: 0,0:27:28.19,0:27:32.85,Default,,0,0,0,,<i>and realistic thing, and a good\Nway to use a flashback structure.</i>
+Dialogue: 0,0:27:36.70,0:27:41.03,Default,,0,0,0,,<i>In this movie, one of the things that I\Nhad trouble with at the very beginning</i>
+Dialogue: 0,0:27:41.08,0:27:45.12,Default,,0,0,0,,<i>was the idea that Mal is\Nkind of</i> a <i>Western fellow and</i>
+Dialogue: 0,0:27:46.37,0:27:50.87,Default,,0,0,0,,<i>River's living in kind of a noir.\NAnd how do I reconcile those?</i>
+Dialogue: 0,0:27:50.92,0:27:53.88,Default,,0,0,0,,<i>You know, I spoke to my\Nprofessor, Jeanine Basinger, about it.</i>
+Dialogue: 0,0:27:53.96,0:27:56.71,Default,,0,0,0,,<i>She said, "Well, first of all, go\Nto the noir Westerns, you know...</i>
+Dialogue: 0,0:27:56.80,0:27:59.92,Default,,0,0,0,,"Pursued, The Furies,\NJohnny Guitar.
+Dialogue: 0,0:28:00.01,0:28:04.68,Default,,0,0,0,,<i>"There's a lot of movies that combine both\Ngenres and you shouldn 't forget that."</i>
+Dialogue: 0,0:28:05.48,0:28:09.14,Default,,0,0,0,,<i>And the woman\Nwho was left behind</i>
+Dialogue: 0,0:28:09.23,0:28:12.56,Default,,0,0,0,,<i>because the hero was too\Nout of touch with his feelings</i>
+Dialogue: 0,0:28:12.65,0:28:15.14,Default,,0,0,0,,<i>well, of course,\Nthat belongs in both genres.</i>
+Dialogue: 0,0:28:15.23,0:28:19.69,Default,,0,0,0,,<i>So the idea of\Nthe lnara postcard and lnara</i>
+Dialogue: 0,0:28:20.16,0:28:22.24,Default,,0,0,0,,<i>being out of his life now</i>
+Dialogue: 0,0:28:22.49,0:28:26.20,Default,,0,0,0,,<i>does work perfectly and kind of\Nhelps connect those two genres.</i>
+Dialogue: 0,0:28:26.62,0:28:28.16,Default,,0,0,0,,Don't pay anybody\Nin advance.
+Dialogue: 0,0:28:31.88,0:28:34.49,Default,,0,0,0,,<i>but that's sort of\Nthe whole point.</i>
+Dialogue: 0,0:28:34.59,0:28:37.63,Default,,0,0,0,,<i>I would pause to say that,\Nthat delivery</i>
+Dialogue: 0,0:28:37.72,0:28:42.55,Default,,0,0,0,,<i>of the Capissen line from\NJewel is also among my favorites.</i>
+Dialogue: 0,0:28:48.73,0:28:50.93,Default,,0,0,0,,River, do you want\Nto stay with them?
+Dialogue: 0,0:28:55.28,0:28:57.69,Default,,0,0,0,,<i>and keep them wondering.</i>
+Dialogue: 0,0:28:57.78,0:29:01.90,Default,,0,0,0,,<i>The trick with River, we know\Nthat there's a lot going on in her</i>
+Dialogue: 0,0:29:01.99,0:29:06.11,Default,,0,0,0,,<i>and we're not sure what. When\Nshe says this, we don't know.</i>
+Dialogue: 0,0:29:06.20,0:29:09.91,Default,,0,0,0,,<i>Is she predicting\Nthat somebody bad is coming</i>
+Dialogue: 0,0:29:09.100,0:29:12.33,Default,,0,0,0,,<i>or is there something\Nwrong with her?</i>
+Dialogue: 0,0:29:12.63,0:29:14.96,Default,,0,0,0,,<i>She's always a little bit off.</i>
+Dialogue: 0,0:29:18.30,0:29:21.84,Default,,0,0,0,,<i>The idea that all the screens\Nare watching everybody</i>
+Dialogue: 0,0:29:21.93,0:29:23.96,Default,,0,0,0,,<i>was very useful.</i>
+Dialogue: 0,0:29:24.64,0:29:27.38,Default,,0,0,0,,<i>It came from my first meeting\Nwith the production designer.</i>
+Dialogue: 0,0:29:27.47,0:29:32.14,Default,,0,0,0,,<i>He had created the great big\Nall-encompassing Alliance screen</i>
+Dialogue: 0,0:29:32.19,0:29:33.48,Default,,0,0,0,,<i>where I had thought of more\Nsort of a cheesy little TV.</i>
+Dialogue: 0,0:29:33.48,0:29:35.89,Default,,0,0,0,,<i>Now one of the things\NI thought to myself</i>
+Dialogue: 0,0:29:35.98,0:29:39.60,Default,,0,0,0,,when <i>I</i> realized <i>I</i> needed a scene\Nbetween Mal and his employers
+Dialogue: 0,0:29:39.69,0:29:42.40,Default,,0,0,0,,<i>was that I wanted\Nto do something that was</i>
+Dialogue: 0,0:29:42.49,0:29:45.28,Default,,0,0,0,,a <i>little bit larger than\Nwhat I'd been used to.</i>
+Dialogue: 0,0:29:45.37,0:29:48.70,Default,,0,0,0,,<i>And I fixated on the idea\Nof finding identical twins.</i>
+Dialogue: 0,0:29:48.79,0:29:52.25,Default,,0,0,0,,<i>And I just like the idea\Nof identical twins.</i>
+Dialogue: 0,0:29:52.29,0:29:56.16,Default,,0,0,0,,<i>I think it makes things just a little bit\Nodd without saying anything about it.</i>
+Dialogue: 0,0:29:56.25,0:29:59.04,Default,,0,0,0,,<i>And so we found\NYan and Raphael Feldman.</i>
+Dialogue: 0,0:30:00.80,0:30:02.09,Default,,0,0,0,,Endeavors.
+Dialogue: 0,0:30:04.84,0:30:07.80,Default,,0,0,0,,<i>WHEDON: And they're two of\Nthe most delightful fellows.</i>
+Dialogue: 0,0:30:08.01,0:30:10.60,Default,,0,0,0,,<i>And I always feel I did them\Na bit of a disservice because</i>
+Dialogue: 0,0:30:10.68,0:30:14.22,Default,,0,0,0,,<i>ultimately this scene didn't turn out\Nto be as important as I thought it was.</i>
+Dialogue: 0,0:30:14.31,0:30:17.77,Default,,0,0,0,,<i>I wanted to explain that Mal\Nwas at the bottom of the food chain</i>
+Dialogue: 0,0:30:17.82,0:30:21.28,Default,,0,0,0,,<i>for those who didn't know it,\Nand had these boys to do it.</i>
+Dialogue: 0,0:30:21.32,0:30:26.28,Default,,0,0,0,,<i>But ultimately, there was a lot of stuff\Nthat became, dare I say, a DVD extra</i>
+Dialogue: 0,0:30:27.45,0:30:30.78,Default,,0,0,0,,<i>because it wasn't really\Nadvancing the plot.</i>
+Dialogue: 0,0:30:30.87,0:30:34.53,Default,,0,0,0,,<i>And I kind of knew it when I was\Nfilming it, but I found them so diverting.</i>
+Dialogue: 0,0:30:34.62,0:30:38.16,Default,,0,0,0,,<i>Yan and Raphael are hilarious.\NAnd don't even get them started doing</i>
+Dialogue: 0,0:30:38.25,0:30:41.54,Default,,0,0,0,,<i>their dueling Walkens 'cause they will\Nliterally do all of The Dead Zone for you.</i>
+Dialogue: 0,0:30:41.63,0:30:43.29,Default,,0,0,0,,<i>It's just scary.</i>
+Dialogue: 0,0:30:43.38,0:30:46.75,Default,,0,0,0,,<i>But at the end of the day,</i>\Na <i>lot of their stuff got cut out</i>
+Dialogue: 0,0:30:46.85,0:30:49.71,Default,,0,0,0,,<i>because it was time\Nto get to the point</i>
+Dialogue: 0,0:30:49.81,0:30:52.59,Default,,0,0,0,,<i>and that's what\Nwe're about to do here.</i>
+Dialogue: 0,0:30:52.98,0:30:54.81,Default,,0,0,0,,(PEOPLE CHATTERING)
+Dialogue: 0,0:31:00.19,0:31:03.81,Default,,0,0,0,,<i>We'll talk more about what\Nhad to be cut out in a little bit.</i>
+Dialogue: 0,0:31:03.90,0:31:08.44,Default,,0,0,0,,<i>Another thing that, from the start,\Nwas on my mind was the idea that</i>
+Dialogue: 0,0:31:08.95,0:31:11.41,Default,,0,0,0,,<i>in addition to just\Nwatching people</i>
+Dialogue: 0,0:31:11.49,0:31:14.28,Default,,0,0,0,,<i>they are actually sending\Nsignals through the TV.</i>
+Dialogue: 0,0:31:14.37,0:31:18.96,Default,,0,0,0,,<i>Not since the blipverts on</i> Max <i>Headroom\Nhas the TV been quite so insidious.</i>
+Dialogue: 0,0:31:20.17,0:31:24.54,Default,,0,0,0,,<i>And the trigger that they need\Nto put on her lies in there.</i>
+Dialogue: 0,0:31:24.63,0:31:26.71,Default,,0,0,0,,<i>This effect,\Nthis lighting effect,</i>
+Dialogue: 0,0:31:26.80,0:31:28.67,Default,,0,0,0,,<i>we did take all the light\Nout of the room</i>
+Dialogue: 0,0:31:28.72,0:31:30.51,Default,,0,0,0,,<i>and put it on her face\Nfrom the TV</i>
+Dialogue: 0,0:31:30.60,0:31:33.96,Default,,0,0,0,,<i>but this particular effect, as\Nyou'll see, it continues here</i>
+Dialogue: 0,0:31:35.68,0:31:38.39,Default,,0,0,0,,<i>was done in the DI.</i>
+Dialogue: 0,0:31:38.48,0:31:41.22,Default,,0,0,0,,<i>The color-timer, Walter,\Nput it in the dream sequences</i>
+Dialogue: 0,0:31:41.32,0:31:42.85,Default,,0,0,0,,<i>and Jack and I\Nliked it so much...</i>
+Dialogue: 0,0:31:42.94,0:31:47.98,Default,,0,0,0,,<i>I said, "I think this will really\Nadd to her sense of alienation."</i>
+Dialogue: 0,0:31:48.03,0:31:49.77,Default,,0,0,0,,<i>And it's gorgeous.</i>
+Dialogue: 0,0:31:49.87,0:31:52.36,Default,,0,0,0,,<i>So, as you can see,\Nwe've gone back to normal.</i>
+Dialogue: 0,0:31:52.45,0:31:55.91,Default,,0,0,0,,<i>Just there, when that man\Nhit her, I have to tell you that</i>
+Dialogue: 0,0:31:55.100,0:31:58.20,Default,,0,0,0,,<i>that was actually\Na digital effect.</i>
+Dialogue: 0,0:31:58.67,0:32:01.88,Default,,0,0,0,,<i>She was doing so well,\Nbut the camera picked up</i>
+Dialogue: 0,0:32:01.92,0:32:05.13,Default,,0,0,0,,a <i>missed swing\Nfrom one of the stuntmen.</i>
+Dialogue: 0,0:32:05.59,0:32:08.96,Default,,0,0,0,,<i>So we digitally lowered his\Narms so we could stay in the shot</i>
+Dialogue: 0,0:32:09.05,0:32:12.39,Default,,0,0,0,,<i>to show that Summer\Nwas doing everything.</i>
+Dialogue: 0,0:32:12.47,0:32:15.13,Default,,0,0,0,,<i>Obviously, this is one of the\Nbiggest things in the movie for me</i>
+Dialogue: 0,0:32:15.22,0:32:19.18,Default,,0,0,0,,<i>was the fact that she does\N95% of her stunts herself.</i>
+Dialogue: 0,0:32:19.27,0:32:23.39,Default,,0,0,0,,<i>And we could have long, long takes\Nof her fighting people that were her.</i>
+Dialogue: 0,0:32:23.48,0:32:26.47,Default,,0,0,0,,<i>She is a dancer\Nand was therefore...</i>
+Dialogue: 0,0:32:26.57,0:32:30.48,Default,,0,0,0,,<i>We were able to train her in ways\Nthat, you know, other action heroes</i>
+Dialogue: 0,0:32:30.57,0:32:33.19,Default,,0,0,0,,<i>simply cannot do.</i>
+Dialogue: 0,0:32:34.99,0:32:36.73,Default,,0,0,0,,<i>Including this kick coming up</i>
+Dialogue: 0,0:32:36.83,0:32:39.74,Default,,0,0,0,,<i>which Chad Stahelski,\Nthe stunt coordinator said</i>
+Dialogue: 0,0:32:39.83,0:32:42.62,Default,,0,0,0,,<i>"She can kick a guy,\Nfrom behind, around a pole.</i>
+Dialogue: 0,0:32:42.71,0:32:45.92,Default,,0,0,0,,<i>"Can we build a pole?" I\Nwas like, "Yes, I think we can."</i>
+Dialogue: 0,0:32:46.71,0:32:48.83,Default,,0,0,0,,<i>Because I loved that so much.</i>
+Dialogue: 0,0:32:48.92,0:32:52.59,Default,,0,0,0,,<i>The fight itself I divided into\Nthree sections. The first being</i>
+Dialogue: 0,0:32:52.68,0:32:54.42,Default,,0,0,0,,<i>the one that's\Nkind of in her mind</i>
+Dialogue: 0,0:32:54.47,0:32:56.71,Default,,0,0,0,,<i>so you get the idea\Nof how disassociated she is.</i>
+Dialogue: 0,0:32:56.77,0:33:01.85,Default,,0,0,0,,<i>The second, where it's all just happening\Nand then, after Mal and Jayne notice</i>
+Dialogue: 0,0:33:01.94,0:33:03.97,Default,,0,0,0,,<i>the third brings in music</i>
+Dialogue: 0,0:33:04.07,0:33:06.56,Default,,0,0,0,,<i>and heightens the tension\Nas much as possible.</i>
+Dialogue: 0,0:33:06.61,0:33:08.27,Default,,0,0,0,,<i>And then we go from</i>
+Dialogue: 0,0:33:08.36,0:33:11.94,Default,,0,0,0,,<i>long takes of what she can do\Nto heavily inter-cut fighting</i>
+Dialogue: 0,0:33:11.99,0:33:15.61,Default,,0,0,0,,<i>to show Mal trying\Nto get his gun chit and her</i>
+Dialogue: 0,0:33:15.70,0:33:18.94,Default,,0,0,0,,<i>and back and forth\Nbuilding to the climax.</i>
+Dialogue: 0,0:33:19.04,0:33:23.03,Default,,0,0,0,,<i>And in comes Simon. That's again\None of the most Western moments.</i>
+Dialogue: 0,0:33:23.67,0:33:25.95,Default,,0,0,0,,<i>And that bit</i>
+Dialogue: 0,0:33:26.50,0:33:29.04,Default,,0,0,0,,<i>from the time it starts\Ngetting heavily edited</i>
+Dialogue: 0,0:33:29.13,0:33:32.30,Default,,0,0,0,,<i>has not changed\Nsince the very first cut.</i>
+Dialogue: 0,0:33:32.38,0:33:34.72,Default,,0,0,0,,<i>The editor, Lisa\NLassek, just nailed</i>
+Dialogue: 0,0:33:34.80,0:33:38.14,Default,,0,0,0,,<i>as she so often does, exactly\Nthe rhythm that I needed</i>
+Dialogue: 0,0:33:38.18,0:33:40.72,Default,,0,0,0,,<i>and it's a beautiful piece.</i>
+Dialogue: 0,0:33:46.77,0:33:50.48,Default,,0,0,0,,<i>Never as beautiful as actually\Nseeing the stars do their own work</i>
+Dialogue: 0,0:33:50.53,0:33:52.69,Default,,0,0,0,,<i>which Nathan also does.</i>
+Dialogue: 0,0:33:52.78,0:33:56.15,Default,,0,0,0,,<i>In fact, pretty much all my\Nactors did all their own work.</i>
+Dialogue: 0,0:33:56.70,0:34:01.16,Default,,0,0,0,,<i>Stunt people were mostly working\Nas Reavers or Alliance people.</i>
+Dialogue: 0,0:34:02.66,0:34:05.03,Default,,0,0,0,,<i>And our actors' stunt doubles</i>
+Dialogue: 0,0:34:05.13,0:34:07.74,Default,,0,0,0,,<i>got to spend a lot of time\Nin craft services.</i>
+Dialogue: 0,0:34:08.34,0:34:11.46,Default,,0,0,0,,<i>This was pan'\Nof a longer sequence.</i>
+Dialogue: 0,0:34:11.55,0:34:14.54,Default,,0,0,0,,<i>I put this in at the last\Nminute, the word "volunteer."</i>
+Dialogue: 0,0:34:14.64,0:34:18.22,Default,,0,0,0,,<i>I thought that was important because\NJayne mentions that Mal volunteered</i>
+Dialogue: 0,0:34:18.31,0:34:22.39,Default,,0,0,0,,<i>for the Independents later, and I\Nthought it would be nice to see it.</i>
+Dialogue: 0,0:34:22.48,0:34:25.01,Default,,0,0,0,,<i>It also tells The Operative\Na little something about him.</i>
+Dialogue: 0,0:34:25.10,0:34:26.34,Default,,0,0,0,,<i>But if you watch\Nthe DVD extras</i>
+Dialogue: 0,0:34:26.40,0:34:29.68,Default,,0,0,0,,<i>you'll see that we did in fact shoot\Nan entire scene of The Operative</i>
+Dialogue: 0,0:34:29.78,0:34:31.73,Default,,0,0,0,,<i>that we took out.</i>
+Dialogue: 0,0:34:32.15,0:34:34.61,Default,,0,0,0,,<i>It was pointed out to me\Nby a friend, Carolyn Lassek</i>
+Dialogue: 0,0:34:34.70,0:34:36.86,Default,,0,0,0,,<i>who said that</i>
+Dialogue: 0,0:34:36.95,0:34:40.28,Default,,0,0,0,,<i>you know, having him standing\Nthere, in a brightly Iit ship</i>
+Dialogue: 0,0:34:40.37,0:34:42.95,Default,,0,0,0,,<i>sort of droning on about\Nthe kind of person Mal was</i>
+Dialogue: 0,0:34:43.04,0:34:45.66,Default,,0,0,0,,<i>makes him a little\Nless frightening.</i>
+Dialogue: 0,0:34:45.96,0:34:47.67,Default,,0,0,0,,<i>One of the things we found</i>
+Dialogue: 0,0:34:47.75,0:34:51.49,Default,,0,0,0,,<i>and I don't know how happy\NChiwetel is about this, was that</i>
+Dialogue: 0,0:34:51.59,0:34:54.63,Default,,0,0,0,,<i>the less The Operative\Nmade his presence known,</i>
+Dialogue: 0,0:34:54.72,0:34:56.88,Default,,0,0,0,,<i>the more\Nhis presence was felt.</i>
+Dialogue: 0,0:34:56.93,0:34:59.04,Default,,0,0,0,,<i>So we ended up\Ncutting some stuff.</i>
+Dialogue: 0,0:34:59.14,0:35:02.55,Default,,0,0,0,,<i>This also is a factor of the fact\Nthat I love to hear myself write.</i>
+Dialogue: 0,0:35:02.64,0:35:04.47,Default,,0,0,0,,<i>And everybody talks too much.</i>
+Dialogue: 0,0:35:04.89,0:35:06.22,Default,,0,0,0,,...in case something\Nhappened.
+Dialogue: 0,0:35:06.31,0:35:07.77,Default,,0,0,0,,Not sure I get it.
+Dialogue: 0,0:35:09.02,0:35:11.11,Default,,0,0,0,,<i>WHEDON: That shot there\NI like very much.</i>
+Dialogue: 0,0:35:11.19,0:35:15.65,Default,,0,0,0,,<i>I had Jack take the light off of Simon\Nwhen he's surrounded by everybody</i>
+Dialogue: 0,0:35:15.74,0:35:20.07,Default,,0,0,0,,<i>so we see this sort of dark\Nfigure and our family around him</i>
+Dialogue: 0,0:35:20.12,0:35:21.65,Default,,0,0,0,,<i>because he's the one that's\Nbrought them into danger</i>
+Dialogue: 0,0:35:21.74,0:35:24.49,Default,,0,0,0,,<i>and he's not\Nconnected to them.</i>
+Dialogue: 0,0:35:24.58,0:35:25.74,Default,,0,0,0,,They never said what...
+Dialogue: 0,0:35:25.79,0:35:26.82,Default,,0,0,0,,And you never did ask.
+Dialogue: 0,0:35:26.92,0:35:29.62,Default,,0,0,0,,<i>WHEDON: And that of course\Nwas an invaluable Jayne joke</i>
+Dialogue: 0,0:35:29.71,0:35:32.58,Default,,0,0,0,,<i>which I just talked over, but\Nthere's going to be</i> a <i>few of those</i>
+Dialogue: 0,0:35:32.67,0:35:34.63,Default,,0,0,0,,<i>so you needn't fret.</i>
+Dialogue: 0,0:35:34.72,0:35:36.46,Default,,0,0,0,,MAL: ...at the wrong word.\NYou never said a thing.
+Dialogue: 0,0:35:36.55,0:35:37.96,Default,,0,0,0,,I brought her\Nout here...
+Dialogue: 0,0:35:40.97,0:35:44.09,Default,,0,0,0,,<i>Zoe puts her hand to her gun\Njust in case there's trouble.</i>
+Dialogue: 0,0:35:44.43,0:35:47.60,Default,,0,0,0,,<i>Wash looks nobly concerned.</i>
+Dialogue: 0,0:35:48.40,0:35:51.51,Default,,0,0,0,,<i>And this was the moment,\Nthe eye-opening moment</i>
+Dialogue: 0,0:35:51.61,0:35:52.77,Default,,0,0,0,,<i>not eye-opening\Nfor the audience,</i>
+Dialogue: 0,0:35:52.82,0:35:54.15,Default,,0,0,0,,<i>it was an actual\Neye-opening moment</i>
+Dialogue: 0,0:35:54.24,0:35:55.57,Default,,0,0,0,,<i>where you saw eyes open.</i>
+Dialogue: 0,0:35:55.65,0:35:57.02,Default,,0,0,0,,I thought she was\Ngetting better.
+Dialogue: 0,0:35:57.11,0:35:59.20,Default,,0,0,0,,<i>WHEDON: Where we could\Nintroduce, really, the concept</i>
+Dialogue: 0,0:35:59.28,0:36:03.82,Default,,0,0,0,,<i>that they might have made a\Nterrible mistake bringing her onboard.</i>
+Dialogue: 0,0:36:03.91,0:36:08.25,Default,,0,0,0,,<i>And that this might not be Snow\NWhite, it might in fact be Alien.</i>
+Dialogue: 0,0:36:08.33,0:36:10.04,Default,,0,0,0,,<i>And she might be the problem.</i>
+Dialogue: 0,0:36:10.13,0:36:12.21,Default,,0,0,0,,<i>It also was</i> a
+Dialogue: 0,0:36:12.30,0:36:14.96,Default,,0,0,0,,<i>structural problem that I didn't\Nnotice the first time around</i>
+Dialogue: 0,0:36:15.05,0:36:17.34,Default,,0,0,0,,<i>which was that I had Mal\Nbring her back on the ship</i>
+Dialogue: 0,0:36:17.43,0:36:20.38,Default,,0,0,0,,<i>because it just never occurred to\Nme that he would do anything else.</i>
+Dialogue: 0,0:36:20.47,0:36:22.01,Default,,0,0,0,,<i>And then, of course,\NI was like</i>
+Dialogue: 0,0:36:22.10,0:36:24.55,Default,,0,0,0,,<i>"Well, you know, you could\Nhave just left her and then...</i>
+Dialogue: 0,0:36:24.64,0:36:26.72,Default,,0,0,0,,<i>"Well, you wouldn't\Nhave a movie, but still,</i>
+Dialogue: 0,0:36:26.81,0:36:28.17,Default,,0,0,0,,<i>"why wouldn 't he?" So</i>
+Dialogue: 0,0:36:28.27,0:36:31.26,Default,,0,0,0,,<i>I put that question\Ninto Jayne's mouth</i>
+Dialogue: 0,0:36:31.31,0:36:34.10,Default,,0,0,0,,<i>because Jayne is often the person\Nwho asks the reasonable thing</i>
+Dialogue: 0,0:36:34.15,0:36:37.31,Default,,0,0,0,,<i>that nobody else wants to talk\Nabout, however uncouth he may be.</i>
+Dialogue: 0,0:36:37.36,0:36:40.32,Default,,0,0,0,,<i>And I realized that\Nin the same</i> way...
+Dialogue: 0,0:36:40.41,0:36:43.49,Default,,0,0,0,,<i>I love to do little things like\Nthat. In the same way that</i>
+Dialogue: 0,0:36:44.03,0:36:46.99,Default,,0,0,0,,<i>I had never considered\Nnot bringing her back on board</i>
+Dialogue: 0,0:36:47.08,0:36:50.70,Default,,0,0,0,,<i>Mal had never considered not bringing\Nher back on board, because she was River.</i>
+Dialogue: 0,0:36:50.79,0:36:53.03,Default,,0,0,0,,<i>And although he's never\Ngoing to admit it, she's family.</i>
+Dialogue: 0,0:36:53.13,0:36:55.41,Default,,0,0,0,,<i>She's helpless,\Nand he's going to do that.</i>
+Dialogue: 0,0:36:55.51,0:36:59.37,Default,,0,0,0,,<i>And so what was a weakness\Nbecame quite a strength</i>
+Dialogue: 0,0:36:59.88,0:37:03.42,Default,,0,0,0,,<i>I think, in the movie, because\Nthematically, that's Mal's whole thing.</i>
+Dialogue: 0,0:37:03.85,0:37:06.68,Default,,0,0,0,,<i>He can't admit that\Nhe cares about people.</i>
+Dialogue: 0,0:37:06.72,0:37:10.64,Default,,0,0,0,,<i>And then obviously by the end\Nof the movie, he not only takes</i>
+Dialogue: 0,0:37:10.69,0:37:14.22,Default,,0,0,0,,<i>self-sacrificing\Nand decisive action, but</i>
+Dialogue: 0,0:37:14.32,0:37:16.43,Default,,0,0,0,,<i>he even goes on\Nabout love for a while.</i>
+Dialogue: 0,0:37:16.53,0:37:18.61,Default,,0,0,0,,<i>And that's, well, his arc.</i>
+Dialogue: 0,0:37:18.69,0:37:20.40,Default,,0,0,0,,Oh, this is good.
+Dialogue: 0,0:37:22.07,0:37:25.86,Default,,0,0,0,,<i>WHEDON: Mr. Universe\Nis something new to the movie.</i>
+Dialogue: 0,0:37:26.45,0:37:28.19,Default,,0,0,0,,<i>Was designed, basically</i>
+Dialogue: 0,0:37:28.25,0:37:31.78,Default,,0,0,0,,<i>not just as the prince\Nof exposition, but</i>
+Dialogue: 0,0:37:31.87,0:37:34.54,Default,,0,0,0,,<i>as a way to find</i>
+Dialogue: 0,0:37:34.59,0:37:37.29,Default,,0,0,0,,<i>the right place for the climax\Nof the movie to take place.</i>
+Dialogue: 0,0:37:37.38,0:37:41.37,Default,,0,0,0,,<i>So we had that giant shot\Nof the ion cloud</i>
+Dialogue: 0,0:37:41.47,0:37:43.83,Default,,0,0,0,,<i>and then his little\Nsatellite moon inside of it.</i>
+Dialogue: 0,0:37:43.93,0:37:47.97,Default,,0,0,0,,<i>We did that because\Nwe were setting up a location</i>
+Dialogue: 0,0:37:48.35,0:37:50.97,Default,,0,0,0,,<i>that we would have the\Nfinal battle take place in.</i>
+Dialogue: 0,0:37:51.06,0:37:53.05,Default,,0,0,0,,<i>And so you wanted to be\Nfamiliar with it</i>
+Dialogue: 0,0:37:53.15,0:37:56.81,Default,,0,0,0,,<i>to an extent so that\Nit didn't come out of nowhere</i>
+Dialogue: 0,0:37:56.90,0:38:00.64,Default,,0,0,0,,<i>and you didn't feel like the\Nclimax had no resonance.</i>
+Dialogue: 0,0:38:00.74,0:38:05.20,Default,,0,0,0,,<i>So we put the sort of beating\Nheart of, if not the rebellion</i>
+Dialogue: 0,0:38:05.24,0:38:08.48,Default,,0,0,0,,<i>of everything that's\Nsubversive, on that moon</i>
+Dialogue: 0,0:38:08.58,0:38:10.16,Default,,0,0,0,,<i>in the character\Nof Mr. Universe,</i>
+Dialogue: 0,0:38:10.25,0:38:12.91,Default,,0,0,0,,<i>who understands\Nthat everything is</i>
+Dialogue: 0,0:38:12.96,0:38:16.49,Default,,0,0,0,,<i>you know, being televised,\Neverything is being manipulated.</i>
+Dialogue: 0,0:38:16.59,0:38:19.54,Default,,0,0,0,,<i>And unlike Mal and the others,\Nhe isn't running away from it</i>
+Dialogue: 0,0:38:19.59,0:38:21.92,Default,,0,0,0,,<i>but immersing himself in it.</i>
+Dialogue: 0,0:38:21.97,0:38:25.43,Default,,0,0,0,,<i>And designing his little room\Nwith all of the screens.</i>
+Dialogue: 0,0:38:25.47,0:38:28.09,Default,,0,0,0,,<i>If we could have had 100\Nmore I would have taken them.</i>
+Dialogue: 0,0:38:28.18,0:38:30.92,Default,,0,0,0,,<i>But it still\Nhas a great feel to it.</i>
+Dialogue: 0,0:38:31.02,0:38:34.01,Default,,0,0,0,,<i>And David Krumholtz\Nis another actor</i>
+Dialogue: 0,0:38:34.10,0:38:38.44,Default,,0,0,0,,<i>who's largely known for comedy, or\Nwas until he became a great big TV star.</i>
+Dialogue: 0,0:38:38.48,0:38:42.40,Default,,0,0,0,,<i>But he read for the role\Nand I... It's a difficult role.</i>
+Dialogue: 0,0:38:42.49,0:38:43.77,Default,,0,0,0,,<i>The first people\Nwho read for it</i>
+Dialogue: 0,0:38:43.86,0:38:47.11,Default,,0,0,0,,<i>made me think that I had\Nin fact written it very badly.</i>
+Dialogue: 0,0:38:47.32,0:38:48.74,Default,,0,0,0,,<i>And then</i>
+Dialogue: 0,0:38:48.83,0:38:52.61,Default,,0,0,0,,<i>David read, and I was like, "What\Nmore can I do with this character?"</i>
+Dialogue: 0,0:38:52.70,0:38:55.29,Default,,0,0,0,,<i>I realized I wasn't even listening\Nto the audition halfway through</i>
+Dialogue: 0,0:38:55.37,0:38:58.08,Default,,0,0,0,,<i>I was trying to think of more\Nthings I could do with the character</i>
+Dialogue: 0,0:38:58.13,0:39:00.29,Default,,0,0,0,,<i>because, in my mind,\Nit was cast.</i>
+Dialogue: 0,0:39:00.38,0:39:04.42,Default,,0,0,0,,<i>He is extremely charming,\Nyet intelligent-seeming.</i>
+Dialogue: 0,0:39:04.88,0:39:09.25,Default,,0,0,0,,<i>He is a character but in all\Nthe best senses of the word</i>
+Dialogue: 0,0:39:09.30,0:39:10.97,Default,,0,0,0,,<i>and a consummate professional.</i>
+Dialogue: 0,0:39:11.06,0:39:14.39,Default,,0,0,0,,<i>Although the biggest props probably\Nhave to go to Nectar Rose behind him</i>
+Dialogue: 0,0:39:14.48,0:39:18.06,Default,,0,0,0,,<i>who managed to hold that pose\Nfor two days of shooting.</i>
+Dialogue: 0,0:39:18.15,0:39:21.56,Default,,0,0,0,,They have gone to enormous\Ntrouble to find your little friend.
+Dialogue: 0,0:39:21.65,0:39:23.61,Default,,0,0,0,,And found her, they have.
+Dialogue: 0,0:39:25.32,0:39:27.81,Default,,0,0,0,,Do you all know what\Nit is you're carrying?
+Dialogue: 0,0:39:33.45,0:39:35.36,Default,,0,0,0,,<i>WHEDON: This is one of\Nmy very favorite scenes.</i>
+Dialogue: 0,0:39:35.46,0:39:37.82,Default,,0,0,0,,<i>I believe\Nthe first things we shot</i>
+Dialogue: 0,0:39:38.46,0:39:41.29,Default,,0,0,0,,<i>when we came back\Nonboard Serenity</i>
+Dialogue: 0,0:39:41.34,0:39:46.13,Default,,0,0,0,,<i>we're in this storage locker, which is in\Nfact, physically right outside the kitchen.</i>
+Dialogue: 0,0:39:46.18,0:39:49.29,Default,,0,0,0,,<i>I did connect them\Nin a shot at one point but</i>
+Dialogue: 0,0:39:49.34,0:39:54.01,Default,,0,0,0,,<i>the movie running as it did,</i> a <i>little bit\Nlong at first, I had to cut that connection</i>
+Dialogue: 0,0:39:54.10,0:39:56.34,Default,,0,0,0,,<i>and just have\NMal step outside.</i>
+Dialogue: 0,0:39:56.43,0:39:58.55,Default,,0,0,0,,<i>But this is one of\Nthose things.</i>
+Dialogue: 0,0:39:58.65,0:40:00.35,Default,,0,0,0,,<i>Summer was very nervous\Nabout this scene.</i>
+Dialogue: 0,0:40:00.40,0:40:02.89,Default,,0,0,0,,<i>Obviously, it's one of\Nher biggest scenes.</i>
+Dialogue: 0,0:40:02.98,0:40:04.69,Default,,0,0,0,,I never know\Nwhat I'm saying.
+Dialogue: 0,0:40:09.20,0:40:13.03,Default,,0,0,0,,<i>where you can see that she has to go\Nto even more places than she does here.</i>
+Dialogue: 0,0:40:13.08,0:40:16.61,Default,,0,0,0,,<i>But she and Sean both\Ndid such an extraordinary job</i>
+Dialogue: 0,0:40:16.71,0:40:20.45,Default,,0,0,0,,<i>just in a couple of takes.\NAnd it was</i>
+Dialogue: 0,0:40:21.17,0:40:23.38,Default,,0,0,0,,<i>classic of both of them.\NShe was, you know</i>
+Dialogue: 0,0:40:23.50,0:40:25.46,Default,,0,0,0,,<i>nervous as anything and then</i>
+Dialogue: 0,0:40:25.55,0:40:27.38,Default,,0,0,0,,<i>you know, "I don't\Nthink I can do this"</i>
+Dialogue: 0,0:40:27.47,0:40:31.21,Default,,0,0,0,,<i>and then of course half the crew\Nis standing at the monitor crying.</i>
+Dialogue: 0,0:40:31.34,0:40:35.30,Default,,0,0,0,,<i>Sean never says a word.\NHe just goes in, and</i>
+Dialogue: 0,0:40:35.68,0:40:37.89,Default,,0,0,0,,<i>absolutely gives it to you.</i>
+Dialogue: 0,0:40:37.98,0:40:39.22,Default,,0,0,0,,<i>And</i>
+Dialogue: 0,0:40:40.40,0:40:44.39,Default,,0,0,0,,<i>he has, I think, one of the\Nhardest jobs on the ship.</i>
+Dialogue: 0,0:40:46.03,0:40:49.69,Default,,0,0,0,,<i>He has to be the guy who\Ndoesn't get to play the big emotion.</i>
+Dialogue: 0,0:40:49.74,0:40:52.73,Default,,0,0,0,,<i>He's standing there\Nand just giving strength.</i>
+Dialogue: 0,0:40:52.87,0:40:56.58,Default,,0,0,0,,<i>Yet you feel everything\Nhe is going through.</i>
+Dialogue: 0,0:40:57.37,0:41:00.66,Default,,0,0,0,,<i>And how much he's doing,\Nand how much he cares.</i>
+Dialogue: 0,0:41:01.38,0:41:02.58,Default,,0,0,0,,<i>And it's...</i>
+Dialogue: 0,0:41:03.34,0:41:04.87,Default,,0,0,0,,<i>It's very impressive.</i>
+Dialogue: 0,0:41:06.09,0:41:07.67,Default,,0,0,0,,Put a bullet to me.
+Dialogue: 0,0:41:09.05,0:41:11.54,Default,,0,0,0,,Bullet in the\Nbrainpan, squish.
+Dialogue: 0,0:41:11.59,0:41:13.21,Default,,0,0,0,,(sossnue)
+Dialogue: 0,0:41:13.26,0:41:16.00,Default,,0,0,0,,Don't say that.\NNot ever.
+Dialogue: 0,0:41:18.73,0:41:20.39,Default,,0,0,0,,We'll get through this.
+Dialogue: 0,0:41:21.90,0:41:24.89,Default,,0,0,0,,<i>WHEDON: This was also\Nlit by Jack Green</i>
+Dialogue: 0,0:41:24.94,0:41:27.73,Default,,0,0,0,,<i>with, you know, one light above\Nthem, one light below them.</i>
+Dialogue: 0,0:41:27.78,0:41:30.94,Default,,0,0,0,,<i>I mean, just as\Nminimally as possible.</i>
+Dialogue: 0,0:41:31.70,0:41:34.41,Default,,0,0,0,,<i>And to see it on stage\Nyou would never have known</i>
+Dialogue: 0,0:41:35.33,0:41:38.66,Default,,0,0,0,,<i>how beautiful it was going to\Nbe. Well, Jack knew, but I didn't.</i>
+Dialogue: 0,0:41:39.50,0:41:42.86,Default,,0,0,0,,<i>Or by then I did 'cause I'd seen\Ndailies but I didn't know how.</i>
+Dialogue: 0,0:41:43.46,0:41:46.79,Default,,0,0,0,,<i>That shot of Inara with The\NOperative, where she's standing</i>
+Dialogue: 0,0:41:47.25,0:41:49.84,Default,,0,0,0,,<i>that was in my mind\Nfrom the very start as well.</i>
+Dialogue: 0,0:41:49.92,0:41:53.04,Default,,0,0,0,,<i>That was in my mind\Nbecause I wanted something...</i>
+Dialogue: 0,0:41:53.14,0:41:56.80,Default,,0,0,0,,<i>I think of it as kind of a trailer\Nmoment. I wanted something that was</i>
+Dialogue: 0,0:41:57.06,0:42:00.72,Default,,0,0,0,,<i>very, very different\Nfrom what I was seeing</i>
+Dialogue: 0,0:42:00.81,0:42:02.89,Default,,0,0,0,,<i>which was, you know,</i>\Na <i>lot of, sort of</i>
+Dialogue: 0,0:42:02.98,0:42:06.52,Default,,0,0,0,,<i>"everything is monochromatic"\NMatrix movies</i>
+Dialogue: 0,0:42:06.61,0:42:08.97,Default,,0,0,0,,<i>and obviously Star Wars.</i>
+Dialogue: 0,0:42:09.07,0:42:12.23,Default,,0,0,0,,<i>You know,\Nthere's lots of deep reds</i>
+Dialogue: 0,0:42:12.32,0:42:15.11,Default,,0,0,0,,<i>and heavy coloring and stuff\Nand I didn't want to go there.</i>
+Dialogue: 0,0:42:15.16,0:42:18.37,Default,,0,0,0,,<i>But I did want something that\Nwould make</i> a <i>kind of bold statement</i>
+Dialogue: 0,0:42:18.45,0:42:20.24,Default,,0,0,0,,<i>of many, many worlds.</i>
+Dialogue: 0,0:42:20.33,0:42:23.91,Default,,0,0,0,,<i>And, you know, that this\Nisn 't just</i> a <i>simple, you know</i>
+Dialogue: 0,0:42:24.54,0:42:27.91,Default,,0,0,0,,<i>"everything is slightly green"\Nkind of world.</i>
+Dialogue: 0,0:42:28.00,0:42:30.59,Default,,0,0,0,,<i>And I love that vista.</i>
+Dialogue: 0,0:42:31.26,0:42:34.17,Default,,0,0,0,,<i>And where she's standing,\Nby the way, is on stage.</i>
+Dialogue: 0,0:42:34.51,0:42:36.00,Default,,0,0,0,,<i>We couldn't actually afford...</i>
+Dialogue: 0,0:42:36.09,0:42:38.88,Default,,0,0,0,,<i>We looked at some locations, but\Nwe couldn't find any pretty mountains</i>
+Dialogue: 0,0:42:38.97,0:42:42.22,Default,,0,0,0,,<i>and that is a translight\Nof pretty mountains.</i>
+Dialogue: 0,0:42:42.31,0:42:44.64,Default,,0,0,0,,<i>But I think that\Nthey did a very nice job</i>
+Dialogue: 0,0:42:44.69,0:42:48.30,Default,,0,0,0,,<i>of making it look like\Nan actual place out of doors.</i>
+Dialogue: 0,0:42:48.36,0:42:50.64,Default,,0,0,0,,<i>Again, another secret that I\Nprobably shouldn't have told you</i>
+Dialogue: 0,0:42:50.69,0:42:54.03,Default,,0,0,0,,<i>that'II ruin your enjoyment of the\Nmovie. I might as well tell you now</i>
+Dialogue: 0,0:42:54.11,0:42:58.20,Default,,0,0,0,,<i>everybody in the cast was drunken\Nand mean and they hated each other.</i>
+Dialogue: 0,0:42:58.83,0:43:01.03,Default,,0,0,0,,<i>There, now\NI've completely spoiled it.</i>
+Dialogue: 0,0:43:01.49,0:43:03.61,Default,,0,0,0,,Which is trouble\Nyou've not known.
+Dialogue: 0,0:43:05.83,0:43:08.54,Default,,0,0,0,,<i>WHEDON: That's my\Nfavorite shot, right there.</i>
+Dialogue: 0,0:43:08.59,0:43:10.12,Default,,0,0,0,,<i>That is a Jack Green special.</i>
+Dialogue: 0,0:43:10.21,0:43:13.45,Default,,0,0,0,,<i>That's when you remember,\N"Oh, yeah. This guy lit Unforgiven.</i>
+Dialogue: 0,0:43:13.55,0:43:17.01,Default,,0,0,0,,<i>"He lit</i> Bird." <i>You can't say\Nenough about Jack Green.</i>
+Dialogue: 0,0:43:18.18,0:43:22.76,Default,,0,0,0,,<i>He is probably the most\Nunderrated director of photography</i>
+Dialogue: 0,0:43:22.85,0:43:24.81,Default,,0,0,0,,<i>because he doesn't\Nmake his presence known.</i>
+Dialogue: 0,0:43:24.89,0:43:28.31,Default,,0,0,0,,<i>Besides the fact that he's a\Ndream to work with and very fast</i>
+Dialogue: 0,0:43:28.69,0:43:31.18,Default,,0,0,0,,<i>which for a movie like this</i>
+Dialogue: 0,0:43:31.23,0:43:33.02,Default,,0,0,0,,<i>on a limited budget\Nwith a limited schedule</i>
+Dialogue: 0,0:43:33.07,0:43:35.86,Default,,0,0,0,,<i>is more important\Nthan you can possibly imagine</i>
+Dialogue: 0,0:43:36.57,0:43:39.28,Default,,0,0,0,,<i>he makes such,\Nsuch beautiful frames.</i>
+Dialogue: 0,0:43:39.37,0:43:41.98,Default,,0,0,0,,<i>These two actors\Nhave never looked cooler.</i>
+Dialogue: 0,0:43:42.45,0:43:45.99,Default,,0,0,0,,<i>And again, this is done\Nwith a minimum of lighting.</i>
+Dialogue: 0,0:43:46.08,0:43:48.24,Default,,0,0,0,,<i>Jack's not afraid\Nof his blacks.</i>
+Dialogue: 0,0:43:48.29,0:43:52.66,Default,,0,0,0,,<i>He's not afraid of negative space\Nand dark colors and shadows.</i>
+Dialogue: 0,0:43:52.76,0:43:55.21,Default,,0,0,0,,<i>And I love that\Nbecause neither am I.</i>
+Dialogue: 0,0:43:55.59,0:43:57.83,Default,,0,0,0,,<i>It brings your eye\Nto what's important</i>
+Dialogue: 0,0:43:57.93,0:44:00.67,Default,,0,0,0,,<i>and it gives the skin\Nsuch incredible texture.</i>
+Dialogue: 0,0:44:01.10,0:44:04.51,Default,,0,0,0,,<i>So I think this scene,\Nabove all</i>
+Dialogue: 0,0:44:04.60,0:44:07.06,Default,,0,0,0,,<i>embodies his contribution.</i>
+Dialogue: 0,0:44:07.10,0:44:11.94,Default,,0,0,0,,<i>But I honestly could spend the rest\Nof the commentary talking about it</i>
+Dialogue: 0,0:44:12.02,0:44:14.77,Default,,0,0,0,,<i>because he is so invaluable.</i>
+Dialogue: 0,0:44:17.95,0:44:20.74,Default,,0,0,0,,It's of interest to me how much\Nyou seem to know about that world.
+Dialogue: 0,0:44:20.78,0:44:22.95,Default,,0,0,0,,I wasn't born\Na Shepherd, Mal.
+Dialogue: 0,0:44:23.03,0:44:25.28,Default,,0,0,0,,Have to tell me\Nabout that sometime.
+Dialogue: 0,0:44:30.54,0:44:33.96,Default,,0,0,0,,<i>and I thought it would be an\Ninteresting thing just for him to say</i>
+Dialogue: 0,0:44:34.05,0:44:36.46,Default,,0,0,0,,<i>"No, I'm not\Ngoing to do that."</i>
+Dialogue: 0,0:44:36.88,0:44:41.63,Default,,0,0,0,,<i>Because why should he give us\Nexposition when he doesn't feel like it?</i>
+Dialogue: 0,0:44:42.43,0:44:44.30,Default,,0,0,0,,<i>This was the first time\Nwhere we used that effect</i>
+Dialogue: 0,0:44:44.39,0:44:46.55,Default,,0,0,0,,<i>that we used in the fight\Nfor the dream.</i>
+Dialogue: 0,0:44:46.81,0:44:48.09,Default,,0,0,0,,No.\NIt's going to be fine.
+Dialogue: 0,0:44:48.14,0:44:52.31,Default,,0,0,0,,<i>WHEDON: And it really gave\Nthe sequence a lovely feeling.</i>
+Dialogue: 0,0:44:52.44,0:44:54.30,Default,,0,0,0,,<i>I'd shoot a whole movie\Nthat way ifl could.</i>
+Dialogue: 0,0:44:54.44,0:44:55.98,Default,,0,0,0,,MAN: Cut them down.
+Dialogue: 0,0:44:56.82,0:44:59.56,Default,,0,0,0,,<i>WHEDON: That double wake-up\NI added in editing.</i>
+Dialogue: 0,0:45:00.07,0:45:03.06,Default,,0,0,0,,<i>I wanted something\Nto indicate the idea that</i>
+Dialogue: 0,0:45:03.16,0:45:05.32,Default,,0,0,0,,<i>there's still something\Nwrong with her mind.</i>
+Dialogue: 0,0:45:05.41,0:45:10.28,Default,,0,0,0,,<i>And we saw we had two different and\Nreally good takes of River waking up.</i>
+Dialogue: 0,0:45:10.33,0:45:12.66,Default,,0,0,0,,<i>And so I conceived the idea</i>
+Dialogue: 0,0:45:12.79,0:45:15.33,Default,,0,0,0,,<i>which is obviously\Nnot a particularly new one</i>
+Dialogue: 0,0:45:15.42,0:45:17.33,Default,,0,0,0,,<i>but, Ithink in that case,\Nworks really well</i>
+Dialogue: 0,0:45:17.42,0:45:21.34,Default,,0,0,0,,<i>of having her wake up and then\Ndiscovering in fact she has not woken up.</i>
+Dialogue: 0,0:45:21.47,0:45:23.46,Default,,0,0,0,,Cold. It's autumn here.
+Dialogue: 0,0:45:23.51,0:45:24.75,Default,,0,0,0,,Still at the\NTraining House?
+Dialogue: 0,0:45:29.68,0:45:32.68,Default,,0,0,0,,<i>for only putting Mal\Nshirtless in one scene</i>
+Dialogue: 0,0:45:32.81,0:45:36.68,Default,,0,0,0,,<i>and then shooting him only from\Nthe clavicle up for the entire scene.</i>
+Dialogue: 0,0:45:36.86,0:45:39.69,Default,,0,0,0,,<i>That's unforgivable\Nand I just...</i>
+Dialogue: 0,0:45:39.78,0:45:41.69,Default,,0,0,0,,<i>I got to say, I don't\Nknow what I was thinking.</i>
+Dialogue: 0,0:45:42.61,0:45:44.65,Default,,0,0,0,,<i>Was I really\Neven thinking at all?</i>
+Dialogue: 0,0:45:44.82,0:45:46.36,Default,,0,0,0,,...of a problem\Nhere with the locals.
+Dialogue: 0,0:45:46.45,0:45:48.36,Default,,0,0,0,,And, I thought maybe...\NYou could use a gun hand?
+Dialogue: 0,0:45:48.49,0:45:51.36,Default,,0,0,0,,<i>WHEDON: This was\Nan interesting thing to do.</i>
+Dialogue: 0,0:45:51.46,0:45:54.37,Default,,0,0,0,,<i>We shot Inara's side\Nin her room</i>
+Dialogue: 0,0:45:54.42,0:45:56.75,Default,,0,0,0,,<i>which we will see later,\Nin the Training House.</i>
+Dialogue: 0,0:45:56.84,0:45:59.55,Default,,0,0,0,,<i>And we did it live.\NThat is to say, Nathan</i>
+Dialogue: 0,0:45:59.63,0:46:01.92,Default,,0,0,0,,<i>was in the room,\Nspeaking with her</i>
+Dialogue: 0,0:46:02.01,0:46:05.05,Default,,0,0,0,,<i>and she was staring into the\Ncamera, as though it were a screen.</i>
+Dialogue: 0,0:46:05.14,0:46:07.30,Default,,0,0,0,,<i>And that worked out great</i>
+Dialogue: 0,0:46:07.39,0:46:10.72,Default,,0,0,0,,<i>because the energy they got\Noff each other was terrific.</i>
+Dialogue: 0,0:46:12.06,0:46:13.39,Default,,0,0,0,,I even miss my shuttle,\Noccasionally.
+Dialogue: 0,0:46:13.48,0:46:17.52,Default,,0,0,0,,<i>WHEDON: And one of\Nmy favorite things is that</i>
+Dialogue: 0,0:46:17.73,0:46:20.47,Default,,0,0,0,,<i>his line about\Nthe trunk of her stuff</i>
+Dialogue: 0,0:46:20.57,0:46:22.56,Default,,0,0,0,,<i>well, that came from the\Nfact that I needed a reason</i>
+Dialogue: 0,0:46:22.66,0:46:26.15,Default,,0,0,0,,<i>for her, A, to be able to change her\Nclothes, and, B, to have a bow and arrow.</i>
+Dialogue: 0,0:46:26.24,0:46:29.11,Default,,0,0,0,,<i>Now ironically you will not see\Na bow and arrow in this movie</i>
+Dialogue: 0,0:46:29.20,0:46:33.57,Default,,0,0,0,,<i>unless you look very carefully\Nbecause audiences didn't react well to it.</i>
+Dialogue: 0,0:46:33.67,0:46:36.33,Default,,0,0,0,,<i>And so we replaced it\Nwith a CGI bolt-thrower.</i>
+Dialogue: 0,0:46:36.42,0:46:41.08,Default,,0,0,0,,<i>But the bow and arrow was in\Nfact something I needed to have.</i>
+Dialogue: 0,0:46:41.13,0:46:44.34,Default,,0,0,0,,<i>I needed an excuse for it so I\Nsaid, "You left something in a trunk."</i>
+Dialogue: 0,0:46:44.43,0:46:47.42,Default,,0,0,0,,<i>Well, Ithought that was about the\Nclunkiest writing I had ever done.</i>
+Dialogue: 0,0:46:47.51,0:46:49.88,Default,,0,0,0,,<i>And then Nathan and Morena\Nboth separately</i>
+Dialogue: 0,0:46:49.93,0:46:52.42,Default,,0,0,0,,<i>came up to me and Nathan said,\N"You know that part where I say</i>
+Dialogue: 0,0:46:52.52,0:46:54.93,Default,,0,0,0,,<i>"'I didn't look in the trunk?'\NYou know I looked in that trunk."</i>
+Dialogue: 0,0:46:55.02,0:46:56.68,Default,,0,0,0,,<i>And Morena came\Nup to me and said</i>
+Dialogue: 0,0:46:56.77,0:46:59.86,Default,,0,0,0,,<i>"That trunk I left, you know I left\Nall my best smelling stuff in there.</i>
+Dialogue: 0,0:46:59.94,0:47:01.40,Default,,0,0,0,,<i>"I did it on purpose."</i>
+Dialogue: 0,0:47:01.44,0:47:04.65,Default,,0,0,0,,<i>And I realized they'd taken\Nmy clunky little thing</i>
+Dialogue: 0,0:47:04.74,0:47:07.61,Default,,0,0,0,,<i>and incorporated it\Nin a perfect fashion.</i>
+Dialogue: 0,0:47:07.74,0:47:11.57,Default,,0,0,0,,<i>And all of a sudden, it's one of\Nmy favorite moments between them.</i>
+Dialogue: 0,0:47:11.62,0:47:12.86,Default,,0,0,0,,<i>The sweetness.</i>
+Dialogue: 0,0:47:13.75,0:47:16.74,Default,,0,0,0,,<i>This again, this line here</i>
+Dialogue: 0,0:47:17.13,0:47:21.04,Default,,0,0,0,,<i>where he makes the joke about,\N"Well, we didn't fight. It must be a trap"</i>
+Dialogue: 0,0:47:21.30,0:47:23.04,Default,,0,0,0,,<i>came from the fact that\NI'd written the scene</i>
+Dialogue: 0,0:47:23.13,0:47:26.22,Default,,0,0,0,,<i>and it was very sweet\Nand very romantic</i>
+Dialogue: 0,0:47:26.30,0:47:29.97,Default,,0,0,0,,<i>but it seemed a little out of character\Nfor the two of them once I'd written it.</i>
+Dialogue: 0,0:47:30.05,0:47:33.97,Default,,0,0,0,,<i>And this happens to me a lot. I did\Nthe math afterwards and you know</i>
+Dialogue: 0,0:47:34.06,0:47:36.77,Default,,0,0,0,,<i>as a script doctor, you're asked\Nto do this with other people's work</i>
+Dialogue: 0,0:47:36.81,0:47:38.77,Default,,0,0,0,,<i>but it's kind of fun\Nto do it with your own.</i>
+Dialogue: 0,0:47:38.81,0:47:41.90,Default,,0,0,0,,<i>When you say, "Wait a\Nminute. How does A get to B?</i>
+Dialogue: 0,0:47:41.98,0:47:44.94,Default,,0,0,0,,<i>"Why didn't they snark at\Neach other, like they usually do?</i>
+Dialogue: 0,0:47:44.99,0:47:47.15,Default,,0,0,0,,<i>"Oh! Because it's a trap.</i>
+Dialogue: 0,0:47:47.24,0:47:49.45,Default,,0,0,0,,<i>"And that's how she's\Ngoing to let him know it."</i>
+Dialogue: 0,0:47:50.32,0:47:54.28,Default,,0,0,0,,<i>So that's the best part\Nof this. It's discovering</i>
+Dialogue: 0,0:47:54.100,0:47:58.86,Default,,0,0,0,,<i>amongst, you know,\Nwhat you've already built</i>
+Dialogue: 0,0:47:58.96,0:48:01.100,Default,,0,0,0,,<i>that there are connections,\Nand moments to be had.</i>
+Dialogue: 0,0:48:02.42,0:48:06.63,Default,,0,0,0,,<i>Sometimes from your mistakes\Nand sometimes from just the fact</i>
+Dialogue: 0,0:48:06.68,0:48:09.88,Default,,0,0,0,,<i>that you're building in a\Nworld that has so much texture</i>
+Dialogue: 0,0:48:09.97,0:48:11.93,Default,,0,0,0,,<i>and so much history,\Nthat you know</i>
+Dialogue: 0,0:48:12.31,0:48:15.14,Default,,0,0,0,,<i>more about these characters</i>
+Dialogue: 0,0:48:15.18,0:48:17.93,Default,,0,0,0,,<i>than you're even going to\Nshow, and you can use that.</i>
+Dialogue: 0,0:48:18.02,0:48:19.94,Default,,0,0,0,,<i>The question is how much do you\Nshow and how much do you leave?</i>
+Dialogue: 0,0:48:19.94,0:48:20.43,Default,,0,0,0,,<i>Which inevitably means that you\Nget tagged every now and then.</i>
+Dialogue: 0,0:48:20.48,0:48:25.44,Default,,0,0,0,,<i>So, Nathan, he could fake pain\Nor he could just use that pain.</i>
+Dialogue: 0,0:48:26.82,0:48:30.78,Default,,0,0,0,,The Alliance isn't some evil\Nempire. This is not the grand arena.
+Dialogue: 0,0:48:30.82,0:48:34.32,Default,,0,0,0,,<i>WHEDON: This was a moment\Nthat I worried about.</i>
+Dialogue: 0,0:48:34.87,0:48:36.58,Default,,0,0,0,,<i>The preciseness of her timing</i>
+Dialogue: 0,0:48:36.66,0:48:39.41,Default,,0,0,0,,<i>the fact that he set himself\Nexactly where he needed to be.</i>
+Dialogue: 0,0:48:39.50,0:48:41.49,Default,,0,0,0,,<i>To me, a little cheesy.</i>
+Dialogue: 0,0:48:41.59,0:48:44.75,Default,,0,0,0,,<i>But it's a nice hero moment for\NInara, whichl did think we needed</i>
+Dialogue: 0,0:48:44.84,0:48:48.42,Default,,0,0,0,,<i>'cause I didn't want anybody to think\Nthat she was just a damsel in distress.</i>
+Dialogue: 0,0:48:48.51,0:48:52.50,Default,,0,0,0,,<i>And like The Operative and River\Nshe is a product of the Alliance.</i>
+Dialogue: 0,0:48:52.60,0:48:56.97,Default,,0,0,0,,<i>She is so, by nature of her job,\Nintuitive, that she too knows exactly</i>
+Dialogue: 0,0:48:57.02,0:49:00.18,Default,,0,0,0,,<i>not only that things are\Ngonna go wrong, but when.</i>
+Dialogue: 0,0:49:00.27,0:49:03.26,Default,,0,0,0,,<i>And I do like that about her,\Nso that helps justify...</i>
+Dialogue: 0,0:49:03.36,0:49:07.82,Default,,0,0,0,,<i>This is the nav. sat. thing that I\Nthink again gives you an excuse</i>
+Dialogue: 0,0:49:08.28,0:49:13.19,Default,,0,0,0,,<i>for the heroes to get away in what should\Nbe a simple operation for the bad guys.</i>
+Dialogue: 0,0:49:14.20,0:49:17.78,Default,,0,0,0,,<i>You give an audience just\Nenough logic to get them through</i>
+Dialogue: 0,0:49:17.87,0:49:19.41,Default,,0,0,0,,<i>and I think\Nthey're grateful for it.</i>
+Dialogue: 0,0:49:19.50,0:49:22.29,Default,,0,0,0,,<i>They don't wanna hear, "We\Ncan give the aliens a virus."</i>
+Dialogue: 0,0:49:22.38,0:49:26.29,Default,,0,0,0,,<i>They wanna hear how, even if\Nit's just</i> a <i>little bit of gobbledegook</i>
+Dialogue: 0,0:49:26.38,0:49:29.87,Default,,0,0,0,,<i>scientifically speaking.\NJust enough to believe it.</i>
+Dialogue: 0,0:49:31.80,0:49:33.88,Default,,0,0,0,,INARA: We've every\Nreason to be afraid.
+Dialogue: 0,0:49:34.68,0:49:37.30,Default,,0,0,0,,<i>WHEDON: One of the things\Nabout that sequence, too</i>
+Dialogue: 0,0:49:37.39,0:49:39.63,Default,,0,0,0,,<i>it's heavily trimmed.\NThere was a thing</i>
+Dialogue: 0,0:49:39.73,0:49:42.93,Default,,0,0,0,,<i>and I have Drew Goddard to\Nthank for this, my fellow writer</i>
+Dialogue: 0,0:49:43.02,0:49:46.68,Default,,0,0,0,,a <i>thing where Mal fooled some\NAlliance soldiers into thinking</i>
+Dialogue: 0,0:49:46.73,0:49:48.69,Default,,0,0,0,,a <i>dead grenade\Nwas a live one</i>
+Dialogue: 0,0:49:48.74,0:49:51.32,Default,,0,0,0,,<i>so he could get into the\Nshuttle without killing anybody.</i>
+Dialogue: 0,0:49:51.40,0:49:55.40,Default,,0,0,0,,<i>And it's also a DVD extra but it kind\Nof made the Alliance look a little bit</i>
+Dialogue: 0,0:49:55.49,0:49:58.99,Default,,0,0,0,,<i>stupid and pathetic\Nand easy to trick.</i>
+Dialogue: 0,0:49:59.33,0:50:02.99,Default,,0,0,0,,<i>So it went out as well. We just have\Nthem shooting down the mountain.</i>
+Dialogue: 0,0:50:03.08,0:50:05.41,Default,,0,0,0,,<i>Then there was the joke\Nabout Mal falling over.</i>
+Dialogue: 0,0:50:05.50,0:50:07.62,Default,,0,0,0,,<i>There were a couple of\NMal jokes that I cut there.</i>
+Dialogue: 0,0:50:07.71,0:50:12.30,Default,,0,0,0,,<i>And the reason for that is, Stacy Snider,\Nthe head of Universal said very simply</i>
+Dialogue: 0,0:50:12.38,0:50:14.47,Default,,0,0,0,,<i>"Look, people who haven't\Nseen this character before</i>
+Dialogue: 0,0:50:14.55,0:50:17.84,Default,,0,0,0,,<i>"he just got the tar kicked\Nout of him by The Operative.</i>
+Dialogue: 0,0:50:17.93,0:50:22.52,Default,,0,0,0,,<i>"And then you make literally four jokes in\Na row at his expense, including this one.</i>
+Dialogue: 0,0:50:22.60,0:50:25.89,Default,,0,0,0,,<i>"You have to trim that because\Nyou're gonna lose your audience.</i>
+Dialogue: 0,0:50:25.94,0:50:28.15,Default,,0,0,0,,<i>"They're not gonna buy\Nthat he's any kind of hero</i>
+Dialogue: 0,0:50:28.23,0:50:30.07,Default,,0,0,0,,<i>"if you just keep\Nbeating him down like that."</i>
+Dialogue: 0,0:50:30.11,0:50:33.94,Default,,0,0,0,,<i>Of course, making fun of Mal is both\Nmy and Nathan's favorite thing to do.</i>
+Dialogue: 0,0:50:34.03,0:50:38.27,Default,,0,0,0,,<i>So I realized that I had\Noverdone it a little bit.</i>
+Dialogue: 0,0:50:38.41,0:50:41.53,Default,,0,0,0,,<i>But I was sorry to see some good\Njokes go. But that's not the point.</i>
+Dialogue: 0,0:50:41.62,0:50:44.08,Default,,0,0,0,,<i>The point is to keep\Nthe audience with him.</i>
+Dialogue: 0,0:50:44.12,0:50:45.53,Default,,0,0,0,,No, that's right.
+Dialogue: 0,0:50:51.80,0:50:54.71,Default,,0,0,0,,<i>It also contains the,\N"What is Miranda?"</i>
+Dialogue: 0,0:50:54.80,0:50:58.39,Default,,0,0,0,,<i>My absolute least\Nfavorite thing in movies</i>
+Dialogue: 0,0:50:58.47,0:51:00.13,Default,,0,0,0,,<i>mystery movies was</i>
+Dialogue: 0,0:51:00.64,0:51:03.13,Default,,0,0,0,,<i>the name ofa woman that\Nturns out to be a ship.</i>
+Dialogue: 0,0:51:03.23,0:51:04.84,Default,,0,0,0,,<i>"It's not a woman,\Nit's a ship."</i>
+Dialogue: 0,0:51:04.94,0:51:08.85,Default,,0,0,0,,<i>And in a way I seem to have\Ncommitted that very thing with Miranda</i>
+Dialogue: 0,0:51:08.94,0:51:12.06,Default,,0,0,0,,<i>but Miranda seemed like the\Nperfect name for the planet.</i>
+Dialogue: 0,0:51:12.15,0:51:15.11,Default,,0,0,0,,<i>And so I made sure that nobody\Njust assumed it was a woman</i>
+Dialogue: 0,0:51:15.16,0:51:17.99,Default,,0,0,0,,<i>but that they all just\Nwondered what it might be.</i>
+Dialogue: 0,0:51:18.12,0:51:20.57,Default,,0,0,0,,<i>Because, obviously, Miranda</i>
+Dialogue: 0,0:51:20.66,0:51:23.82,Default,,0,0,0,,<i>I'm talking about The Tempest\Nand her famous line</i>
+Dialogue: 0,0:51:23.91,0:51:26.45,Default,,0,0,0,,<i>"O brave new world\Nthat has such people in it"</i>
+Dialogue: 0,0:51:26.50,0:51:28.83,Default,,0,0,0,,You came to the Training\NHouse looking for a fight.
+Dialogue: 0,0:51:28.92,0:51:30.78,Default,,0,0,0,,I came looking\Nfor you.
+Dialogue: 0,0:51:32.17,0:51:34.25,Default,,0,0,0,,I just want to know\Nwho I'm dealing with.
+Dialogue: 0,0:51:34.34,0:51:35.75,Default,,0,0,0,,I've seen too many\Nversions of you...
+Dialogue: 0,0:51:35.84,0:51:40.01,Default,,0,0,0,,<i>WHEDON: This scene also\Nwas heavily trimmed because</i>
+Dialogue: 0,0:51:40.14,0:51:44.35,Default,,0,0,0,,<i>there was a great deal of talking\Nthat people didn't need to do.</i>
+Dialogue: 0,0:51:44.43,0:51:48.35,Default,,0,0,0,,<i>But that one line from Mal was\Nvery important to me because</i>
+Dialogue: 0,0:51:48.81,0:51:52.31,Default,,0,0,0,,<i>what he's basically saying is,\N"If I actually become</i>
+Dialogue: 0,0:51:52.36,0:51:54.60,Default,,0,0,0,,<i>"somebody who cares\Nabout things</i>
+Dialogue: 0,0:51:55.36,0:51:58.45,Default,,0,0,0,,<i>"I might become</i> a <i>bigger\Nmonster than I am right now."</i>
+Dialogue: 0,0:51:58.53,0:52:01.69,Default,,0,0,0,,<i>And that's a piece of\Ninformation that I find vital</i>
+Dialogue: 0,0:52:01.78,0:52:04.53,Default,,0,0,0,,<i>because when\Nhe does care about things</i>
+Dialogue: 0,0:52:04.62,0:52:06.74,Default,,0,0,0,,<i>he asks the crew\Nto lay their lives on the line</i>
+Dialogue: 0,0:52:06.83,0:52:09.45,Default,,0,0,0,,<i>and if you've seen the movie,\Nyou know that some of them do.</i>
+Dialogue: 0,0:52:09.54,0:52:11.20,Default,,0,0,0,,I'm not trying\Nto tear you down.
+Dialogue: 0,0:52:14.38,0:52:19.00,Default,,0,0,0,,<i>the person who believes, like The\NOperative, is capable of terrible things.</i>
+Dialogue: 0,0:52:19.05,0:52:23.05,Default,,0,0,0,,<i>A leader is by nature\Nsomething of a monster</i>
+Dialogue: 0,0:52:23.10,0:52:25.97,Default,,0,0,0,,<i>and Mal has failed\Nto be a leader to this crew.</i>
+Dialogue: 0,0:52:26.06,0:52:30.18,Default,,0,0,0,,<i>Partially because that's one of the\Nthings he's tried to put behind himself</i>
+Dialogue: 0,0:52:30.23,0:52:32.52,Default,,0,0,0,,<i>that kind of\Ndeadly conviction.</i>
+Dialogue: 0,0:52:32.57,0:52:35.40,Default,,0,0,0,,<i>So when he says, "You'll see\Nsomething new, " and we do</i>
+Dialogue: 0,0:52:35.49,0:52:39.90,Default,,0,0,0,,<i>we're all cheering for him.\NThis is what we wanted.</i>
+Dialogue: 0,0:52:40.03,0:52:42.74,Default,,0,0,0,,<i>But at the same time,\Nbe careful what you want</i>
+Dialogue: 0,0:52:42.87,0:52:47.58,Default,,0,0,0,,<i>because it's never that simple, and\Nif there's anything I've tried to convey</i>
+Dialogue: 0,0:52:47.75,0:52:49.74,Default,,0,0,0,,<i>it's that nothing is simple.</i>
+Dialogue: 0,0:52:49.83,0:52:52.92,Default,,0,0,0,,<i>One of the things\Nthat I did with this movie</i>
+Dialogue: 0,0:52:53.17,0:52:56.63,Default,,0,0,0,,<i>always was try and hide\Nthe intent of everything I did.</i>
+Dialogue: 0,0:52:56.72,0:52:59.75,Default,,0,0,0,,<i>That is to say, I didn't want\Nthe Evil Empire with Darth Vader.</i>
+Dialogue: 0,0:52:59.88,0:53:03.47,Default,,0,0,0,,<i>The Alliance is largely</i>\Na <i>benevolent force.</i>
+Dialogue: 0,0:53:03.55,0:53:06.39,Default,,0,0,0,,<i>It's just out of its depth\Nin these tiny planets</i>
+Dialogue: 0,0:53:06.43,0:53:11.10,Default,,0,0,0,,<i>with their own cultures that it doesn't\Nknow how to control and shouldn't be trying.</i>
+Dialogue: 0,0:53:11.44,0:53:15.68,Default,,0,0,0,,<i>And The Operative\Ndoes actually work for good.</i>
+Dialogue: 0,0:53:15.78,0:53:19.73,Default,,0,0,0,,<i>He hasn't gone over to the dark\Nside and he doesn't wear all black.</i>
+Dialogue: 0,0:53:19.78,0:53:24.15,Default,,0,0,0,,<i>At least not at the beginning.\NAnd so, it's the same in the music</i>
+Dialogue: 0,0:53:24.24,0:53:27.58,Default,,0,0,0,,<i>trying to hide,\Nnot make it sound bombastic</i>
+Dialogue: 0,0:53:27.62,0:53:30.78,Default,,0,0,0,,<i>and manipulative, but at the\Nsame time hitting everything.</i>
+Dialogue: 0,0:53:30.87,0:53:32.86,Default,,0,0,0,,<i>Trying to hide\Nthe cinematography</i>
+Dialogue: 0,0:53:32.96,0:53:36.45,Default,,0,0,0,,<i>making it</i> look <i>beautiful\Nwithout making it</i> look <i>lit.</i>
+Dialogue: 0,0:53:37.26,0:53:41.54,Default,,0,0,0,,<i>Making everything bigger than life\Nwhile pretending that it's actual size.</i>
+Dialogue: 0,0:53:41.63,0:53:44.30,Default,,0,0,0,,<i>And only really towards\Nthe end of the movie</i>
+Dialogue: 0,0:53:44.39,0:53:47.55,Default,,0,0,0,,<i>admitting that\Nwe're actually in a movie.</i>
+Dialogue: 0,0:53:48.18,0:53:51.64,Default,,0,0,0,,<i>This is the mandate that I\Nworked with and it's a very</i>
+Dialogue: 0,0:53:51.73,0:53:55.89,Default,,0,0,0,,<i>very fine line to walk and\Nmade everybody's job really hard.</i>
+Dialogue: 0,0:53:55.98,0:54:00.44,Default,,0,0,0,,<i>I don't think anybody really liked me\Nby the end of this, and that includes me.</i>
+Dialogue: 0,0:54:01.11,0:54:04.90,Default,,0,0,0,,<i>I don't think I'll be working with\Nmyself again. We didn't get along.</i>
+Dialogue: 0,0:54:04.99,0:54:07.90,Default,,0,0,0,,We're going for\Na nice shuttle ride.
+Dialogue: 0,0:54:11.71,0:54:12.70,Default,,0,0,0,,(GUN FIRES)
+Dialogue: 0,0:54:24.97,0:54:29.51,Default,,0,0,0,,<i>Everybody really looked their best\Nfor this movie. It was a lovely thing.</i>
+Dialogue: 0,0:54:30.43,0:54:33.97,Default,,0,0,0,,<i>And, of course, that low\Nangle of Adam Baldwin...</i>
+Dialogue: 0,0:54:34.02,0:54:36.81,Default,,0,0,0,,<i>Well, any chance I have to put\Nthe camera as low as possible</i>
+Dialogue: 0,0:54:36.86,0:54:40.14,Default,,0,0,0,,<i>and slap on a 14 lens\Non Adam, I'll do it</i>
+Dialogue: 0,0:54:40.19,0:54:44.53,Default,,0,0,0,,<i>because he looks fabulous\Nlike that. It's so Jayne.</i>
+Dialogue: 0,0:54:46.37,0:54:48.86,Default,,0,0,0,,<i>Lenses are</i>\Na <i>big thing with me.</i>
+Dialogue: 0,0:54:51.83,0:54:54.12,Default,,0,0,0,,<i>My particular favorite\Nis the...</i>
+Dialogue: 0,0:54:54.21,0:54:58.33,Default,,0,0,0,,<i>In television, it's always been a 17,\Nwhich gives you a real sense of spacing.</i>
+Dialogue: 0,0:54:58.38,0:55:01.46,Default,,0,0,0,,<i>I think it's what Kubrick\Nused in Eyes Wide</i> Shut.
+Dialogue: 0,0:55:01.55,0:55:04.01,Default,,0,0,0,,<i>I have to pause to say\Nthat this shot here</i>
+Dialogue: 0,0:55:04.05,0:55:07.54,Default,,0,0,0,,<i>I actually envisioned\Njust being right below her.</i>
+Dialogue: 0,0:55:07.59,0:55:11.09,Default,,0,0,0,,<i>It's Jack Green who\Ntilted the camera like that.</i>
+Dialogue: 0,0:55:11.68,0:55:14.77,Default,,0,0,0,,<i>And once again, Jack,\Nmaking my movie</i>
+Dialogue: 0,0:55:14.85,0:55:17.34,Default,,0,0,0,,<i>cooler than I was\Ngoing to make it.</i>
+Dialogue: 0,0:55:17.90,0:55:22.14,Default,,0,0,0,,<i>And there's actually</i> a <i>publicity\Nphoto and you can see me</i>
+Dialogue: 0,0:55:22.24,0:55:24.90,Default,,0,0,0,,<i>under Summer with my arms out\Ngoing, "Here's the frame"</i>
+Dialogue: 0,0:55:24.99,0:55:28.90,Default,,0,0,0,,<i>and behind me, Jack is standing\Nwith his arms out tilted slightly</i>
+Dialogue: 0,0:55:28.95,0:55:32.49,Default,,0,0,0,,<i>clearly getting it while I\Ndon't. It's my favorite picture</i>
+Dialogue: 0,0:55:32.58,0:55:34.82,Default,,0,0,0,,<i>'cause it makes me\Nlook like a dope.</i>
+Dialogue: 0,0:55:35.46,0:55:38.07,Default,,0,0,0,,<i>But Jack being\Ninvaluable there.</i>
+Dialogue: 0,0:55:40.84,0:55:43.67,Default,,0,0,0,,<i>So, to pick up\Nmy little lens talk.</i>
+Dialogue: 0,0:55:43.76,0:55:45.87,Default,,0,0,0,,<i>A17</i>
+Dialogue: 0,0:55:46.05,0:55:49.96,Default,,0,0,0,,<i>great on TV, but when you're doing\Na lot of handheld like we were doing</i>
+Dialogue: 0,0:55:50.05,0:55:52.67,Default,,0,0,0,,<i>not so great\Non the big wide screen.</i>
+Dialogue: 0,0:55:52.76,0:55:55.10,Default,,0,0,0,,<i>So I had to back off\Nto about 20.</i>
+Dialogue: 0,0:55:55.43,0:55:56.69,Default,,0,0,0,,<i>The thing about wide lens,\Nis that it shows you more.</i>
+Dialogue: 0,0:55:56.69,0:55:59.56,Default,,0,0,0,,<i>from Haven, which was\Nher first day of shooting.</i>
+Dialogue: 0,0:55:59.61,0:56:03.77,Default,,0,0,0,,<i>And we didn't\Nhave anything set.</i>
+Dialogue: 0,0:56:03.86,0:56:05.98,Default,,0,0,0,,<i>She came in, in an outfit\NI literally had not seen</i>
+Dialogue: 0,0:56:06.07,0:56:08.69,Default,,0,0,0,,<i>'cause pre-production\Nwent so fast.</i>
+Dialogue: 0,0:56:08.78,0:56:13.12,Default,,0,0,0,,<i>And the outfit didn't work and so\NMorena and I were literally in the trailer</i>
+Dialogue: 0,0:56:13.20,0:56:16.07,Default,,0,0,0,,<i>as we were a couple\Nof times, taking things.</i>
+Dialogue: 0,0:56:16.12,0:56:20.21,Default,,0,0,0,,<i>"Here, let's use this as a shawl\Nand then have it come down</i>
+Dialogue: 0,0:56:20.29,0:56:21.66,Default,,0,0,0,,<i>"in a kind of\Napron statement."</i>
+Dialogue: 0,0:56:21.75,0:56:23.91,Default,,0,0,0,,<i>And she's like,\N"Oh, lets put an obi over it."</i>
+Dialogue: 0,0:56:23.96,0:56:27.33,Default,,0,0,0,,<i>And we were working it\Ntogether to try and create</i>
+Dialogue: 0,0:56:27.43,0:56:30.96,Default,,0,0,0,,<i>something that was more or less practical\Nbut still had a little Inara flair.</i>
+Dialogue: 0,0:56:31.01,0:56:32.75,Default,,0,0,0,,<i>We should not, obviously,\Nhave been doing this</i>
+Dialogue: 0,0:56:32.81,0:56:34.97,Default,,0,0,0,,<i>on a major motion picture\Nat the last minute</i>
+Dialogue: 0,0:56:35.10,0:56:37.89,Default,,0,0,0,,<i>but sometimes\Nyou just get caught unawares.</i>
+Dialogue: 0,0:56:39.90,0:56:43.64,Default,,0,0,0,,<i>You can see there that we\Nbrought the front of the ship</i>
+Dialogue: 0,0:56:43.73,0:56:46.10,Default,,0,0,0,,<i>over to the location\Nfor Haven.</i>
+Dialogue: 0,0:56:46.15,0:56:49.24,Default,,0,0,0,,<i>Obviously that's all\Nwe brought because</i>
+Dialogue: 0,0:56:49.32,0:56:51.56,Default,,0,0,0,,<i>that's all we could afford\Nand ultimately I thought that</i>
+Dialogue: 0,0:56:51.66,0:56:55.20,Default,,0,0,0,,<i>was all that we needed.\NYou get the idea.</i>
+Dialogue: 0,0:56:56.25,0:56:59.45,Default,,0,0,0,,<i>I like this. I love that\Nshot. That's one where</i>
+Dialogue: 0,0:56:59.50,0:57:01.58,Default,,0,0,0,,<i>again Mr. Green pushed\Nthe camera to the right</i>
+Dialogue: 0,0:57:01.67,0:57:04.38,Default,,0,0,0,,<i>so that you got those beautiful\Ncrosses on either side of her.</i>
+Dialogue: 0,0:57:04.46,0:57:06.29,Default,,0,0,0,,<i>But the idea of\Nthe burning swing...</i>
+Dialogue: 0,0:57:06.34,0:57:10.83,Default,,0,0,0,,<i>They had put the swing there,\Nthe production people,</i>
+Dialogue: 0,0:57:11.30,0:57:12.34,Default,,0,0,0,,<i>and I was very excited.</i>
+Dialogue: 0,0:57:12.43,0:57:16.14,Default,,0,0,0,,<i>I think Jain Sekuler, the\Nscript coordinator, pointed it out.</i>
+Dialogue: 0,0:57:16.18,0:57:19.68,Default,,0,0,0,,<i>And I was like, "We\Nhave to light that on fire."</i>
+Dialogue: 0,0:57:19.73,0:57:21.56,Default,,0,0,0,,<i>'Cause I loves me some fire.</i>
+Dialogue: 0,0:57:21.65,0:57:23.31,Default,,0,0,0,,That crossed my mind.
+Dialogue: 0,0:57:24.11,0:57:25.89,Default,,0,0,0,,(coueunue)
+Dialogue: 0,0:57:27.90,0:57:30.86,Default,,0,0,0,,<i>WHEDON: I think Ron's\Npretty exceptional in this scene.</i>
+Dialogue: 0,0:57:30.91,0:57:32.74,Default,,0,0,0,,<i>I think they both are.</i>
+Dialogue: 0,0:57:33.66,0:57:38.62,Default,,0,0,0,,<i>But Ron's is the tougher job\Nbecause the death scene where you</i>
+Dialogue: 0,0:57:38.70,0:57:43.37,Default,,0,0,0,,<i>have to make the important\Npronouncement to the hero</i>
+Dialogue: 0,0:57:43.54,0:57:48.25,Default,,0,0,0,,<i>is unbelievably difficult not\Nto turn into</i> a <i>horrible cliché.</i>
+Dialogue: 0,0:57:48.59,0:57:52.17,Default,,0,0,0,,<i>And Ron, I wrote it specifically\Nso that he would never</i>
+Dialogue: 0,0:57:52.89,0:57:56.00,Default,,0,0,0,,<i>until he was actually,\Nphysically dying, he would never</i>
+Dialogue: 0,0:57:56.05,0:57:58.76,Default,,0,0,0,,<i>sort of lose his Book\Nwry sense of humor.</i>
+Dialogue: 0,0:57:58.85,0:58:03.39,Default,,0,0,0,,<i>And Ron played it with a lot\Nof veracity without milking it.</i>
+Dialogue: 0,0:58:03.48,0:58:07.19,Default,,0,0,0,,<i>And, you know, he gave us\Nan extraordinary amount.</i>
+Dialogue: 0,0:58:07.23,0:58:12.10,Default,,0,0,0,,<i>Obviously, the character is only\Nin the movie for these two scenes</i>
+Dialogue: 0,0:58:12.20,0:58:17.07,Default,,0,0,0,,<i>but he has such resonance.\NAnd Ron has such</i> a <i>presence that</i>
+Dialogue: 0,0:58:17.20,0:58:21.24,Default,,0,0,0,,<i>he gives you what you need which\Nis the sense that this is the one guy</i>
+Dialogue: 0,0:58:21.29,0:58:23.25,Default,,0,0,0,,<i>that Mal truly trusts.</i>
+Dialogue: 0,0:58:23.42,0:58:27.08,Default,,0,0,0,,<i>And his death\Nreally does something to Mal.</i>
+Dialogue: 0,0:58:27.13,0:58:30.09,Default,,0,0,0,,<i>What I like...\NAnd this is another example</i>
+Dialogue: 0,0:58:30.13,0:58:32.92,Default,,0,0,0,,<i>by the way,\Nof one of those things where</i>
+Dialogue: 0,0:58:33.05,0:58:35.88,Default,,0,0,0,,<i>if you can only use one shot,\Nthen why use more.</i>
+Dialogue: 0,0:58:35.93,0:58:38.80,Default,,0,0,0,,<i>From here till the end of\Nthe scene, it's just the one.</i>
+Dialogue: 0,0:58:38.93,0:58:43.27,Default,,0,0,0,,<i>But what I like about Mal is\Nthat his reaction to this is not</i>
+Dialogue: 0,0:58:43.31,0:58:48.23,Default,,0,0,0,,<i>"Well, they've killed my friend\Nand so now I will enact vengeance"</i>
+Dialogue: 0,0:58:48.27,0:58:52.11,Default,,0,0,0,,<i>or "I will find justice, "\Nor "l will become a bat"</i>
+Dialogue: 0,0:58:52.28,0:58:55.65,Default,,0,0,0,,<i>or anything like that. It's\Nmore, "Let's run away more.</i>
+Dialogue: 0,0:58:55.78,0:58:57.27,Default,,0,0,0,,<i>"Let's run away the most."</i>
+Dialogue: 0,0:58:57.62,0:59:01.74,Default,,0,0,0,,<i>And it's part of what makes\NMal's journey interesting</i>
+Dialogue: 0,0:59:01.79,0:59:06.28,Default,,0,0,0,,<i>to me is that he's always\Ngonna look for the out.</i>
+Dialogue: 0,0:59:06.42,0:59:10.00,Default,,0,0,0,,<i>When he can,\Nhe's not going to stand up</i>
+Dialogue: 0,0:59:10.30,0:59:14.63,Default,,0,0,0,,<i>until something absolutely\Nleaves him no choice.</i>
+Dialogue: 0,0:59:14.76,0:59:18.42,Default,,0,0,0,,<i>And that's what makes his\Ncharacter fascinating to me.</i>
+Dialogue: 0,0:59:18.47,0:59:23.47,Default,,0,0,0,,<i>It was a lot of fun to have all of\Nthose monitors come on around him.</i>
+Dialogue: 0,0:59:23.52,0:59:25.98,Default,,0,0,0,,<i>The idea that he's\Njust surrounded by this guy</i>
+Dialogue: 0,0:59:26.02,0:59:28.98,Default,,0,0,0,,<i>quite literally in frames,\Nvery deliberate.</i>
+Dialogue: 0,0:59:29.77,0:59:31.48,Default,,0,0,0,,Leave no ground to go to.
+Dialogue: 0,0:59:32.61,0:59:34.52,Default,,0,0,0,,You should have\Ntaken my offer.
+Dialogue: 0,0:59:34.78,0:59:37.49,Default,,0,0,0,,Or did you think none\Nof this was your fault?
+Dialogue: 0,0:59:37.66,0:59:39.32,Default,,0,0,0,,I don't murder children.
+Dialogue: 0,0:59:39.83,0:59:40.99,Default,,0,0,0,,I do.
+Dialogue: 0,0:59:41.66,0:59:42.82,Default,,0,0,0,,If I have to.
+Dialogue: 0,0:59:46.67,0:59:51.71,Default,,0,0,0,,<i>on his set being fed\Nto Mal through video.</i>
+Dialogue: 0,0:59:51.80,0:59:55.21,Default,,0,0,0,,<i>Because I knew I wasn't going\Nto shoot the exchange anywhere</i>
+Dialogue: 0,0:59:55.30,0:59:58.26,Default,,0,0,0,,<i>but from the bridge\Nfrom Mal's point of view, so</i>
+Dialogue: 0,0:59:58.34,1:00:02.84,Default,,0,0,0,,<i>we were able to do it with Chiwetel\Nand Nathan actually interacting, which</i>
+Dialogue: 0,1:00:03.56,1:00:06.18,Default,,0,0,0,,<i>is more important</i>
+Dialogue: 0,1:00:06.85,1:00:09.06,Default,,0,0,0,,<i>than you would\Never be able to tell.</i>
+Dialogue: 0,1:00:09.73,1:00:14.32,Default,,0,0,0,,<i>Until you can and then it's really\Nembarrassing if you don't do it.</i>
+Dialogue: 0,1:00:14.36,1:00:15.57,Default,,0,0,0,,What I do is evil.
+Dialogue: 0,1:00:15.70,1:00:18.19,Default,,0,0,0,,I have no illusions about\Nit, but it must be done.
+Dialogue: 0,1:00:18.32,1:00:19.56,Default,,0,0,0,,Keep talking.
+Dialogue: 0,1:00:19.70,1:00:22.69,Default,,0,0,0,,<i>WHEDON: That one I just think\Nis as pretty as anything.</i>
+Dialogue: 0,1:00:22.83,1:00:25.36,Default,,0,0,0,,<i>But ifl go on about\Nhow pretty things are</i>
+Dialogue: 0,1:00:25.50,1:00:28.83,Default,,0,0,0,,<i>particularly either the lighting\Nor my actors, this commentary</i>
+Dialogue: 0,1:00:28.88,1:00:31.24,Default,,0,0,0,,<i>really actually\Nwill run four hours.</i>
+Dialogue: 0,1:00:31.34,1:00:33.37,Default,,0,0,0,,<i>So I'll try to shut up\Nabout that.</i>
+Dialogue: 0,1:00:33.76,1:00:36.25,Default,,0,0,0,,<i>The villain says\Nthe magic word</i>
+Dialogue: 0,1:00:36.34,1:00:39.17,Default,,0,0,0,,<i>and gives the hero\Nthe thing they need.</i>
+Dialogue: 0,1:00:40.05,1:00:43.09,Default,,0,0,0,,<i>Again not to defeat them,\Njust to outwit them.</i>
+Dialogue: 0,1:00:43.18,1:00:47.01,Default,,0,0,0,,<i>Here's another lens example.\NWe're following Mal with</i>
+Dialogue: 0,1:00:47.43,1:00:49.72,Default,,0,0,0,,<i>I think maybe a 24 or a 20.</i>
+Dialogue: 0,1:00:50.40,1:00:52.23,Default,,0,0,0,,<i>When we first\Ntry the shot out,</i>
+Dialogue: 0,1:00:52.32,1:00:54.35,Default,,0,0,0,,<i>they'll put the lens\Non a finder</i>
+Dialogue: 0,1:00:54.40,1:00:57.69,Default,,0,0,0,,<i>so that I can watch it without a\Ncamera and just walk behind him.</i>
+Dialogue: 0,1:00:57.74,1:01:00.70,Default,,0,0,0,,<i>And the tunnel was the\Nlongest tunnel I'd ever seen</i>
+Dialogue: 0,1:01:00.74,1:01:03.82,Default,,0,0,0,,<i>and Mal looked cooler than\Nanything because they'd put on a 14</i>
+Dialogue: 0,1:01:03.91,1:01:06.24,Default,,0,0,0,,<i>which is the widest lens\Npossible, by mistake.</i>
+Dialogue: 0,1:01:06.33,1:01:08.29,Default,,0,0,0,,<i>So I was like, "This shot\Nis going to be perfect."</i>
+Dialogue: 0,1:01:08.37,1:01:09.70,Default,,0,0,0,,<i>And then he got out\Nof the tunnel</i>
+Dialogue: 0,1:01:09.75,1:01:13.24,Default,,0,0,0,,<i>and everybody looked like they\Nwere about four miles away from him.</i>
+Dialogue: 0,1:01:13.29,1:01:17.13,Default,,0,0,0,,<i>And then I realized that we'd made a\Nlittle error and we had the wrong lens.</i>
+Dialogue: 0,1:01:17.47,1:01:19.05,Default,,0,0,0,,<i>Again all of this...</i>
+Dialogue: 0,1:01:19.30,1:01:20.59,Default,,0,0,0,,Sir.
+Dialogue: 0,1:01:21.09,1:01:24.43,Default,,0,0,0,,<i>...up to that moment\Nis a oner and that's</i>
+Dialogue: 0,1:01:24.89,1:01:29.26,Default,,0,0,0,,<i>you know, in this case to increase\Nthe urgency of Mal's purpose</i>
+Dialogue: 0,1:01:29.31,1:01:31.72,Default,,0,0,0,,<i>and the coherence of his plan.</i>
+Dialogue: 0,1:01:31.77,1:01:35.98,Default,,0,0,0,,<i>And end with the idea of red\Npaint in the low angle saying</i>
+Dialogue: 0,1:01:36.07,1:01:40.61,Default,,0,0,0,,<i>to those who haven't figured it out, he's\Ntalking about pretending to be a Reaver.</i>
+Dialogue: 0,1:01:41.78,1:01:42.90,Default,,0,0,0,,This is how it is.
+Dialogue: 0,1:01:48.12,1:01:50.83,Default,,0,0,0,,<i>But it tells the story.</i>
+Dialogue: 0,1:01:51.62,1:01:53.36,Default,,0,0,0,,<i>This was another...</i>
+Dialogue: 0,1:01:53.92,1:01:56.08,Default,,0,0,0,,<i>And the third\Nof our unarmed men.</i>
+Dialogue: 0,1:01:56.13,1:01:59.21,Default,,0,0,0,,<i>But this is the guy who killed\NBook and all his friends at Haven and</i>
+Dialogue: 0,1:01:59.30,1:02:02.88,Default,,0,0,0,,<i>he doesn't really think that\Nthere's another way to handle that.</i>
+Dialogue: 0,1:02:03.30,1:02:05.63,Default,,0,0,0,,So I hear a word out of any\Nof you that ain't helping me out
+Dialogue: 0,1:02:05.68,1:02:06.92,Default,,0,0,0,,or taking your leave...
+Dialogue: 0,1:02:11.81,1:02:13.10,Default,,0,0,0,,<i>It's not noble.</i>
+Dialogue: 0,1:02:14.15,1:02:17.81,Default,,0,0,0,,<i>It's just probably\Nthe smartest thing to do</i>
+Dialogue: 0,1:02:17.86,1:02:20.65,Default,,0,0,0,,<i>and by virtue of that,\Nthe most dangerous.</i>
+Dialogue: 0,1:02:20.74,1:02:25.03,Default,,0,0,0,,<i>These non-flammable skeletons,\Nthe actual flames</i>
+Dialogue: 0,1:02:25.12,1:02:26.48,Default,,0,0,0,,<i>the actual people,</i>
+Dialogue: 0,1:02:26.53,1:02:29.53,Default,,0,0,0,,<i>getting them all together and\Nthen pulling out to this shot...</i>
+Dialogue: 0,1:02:30.16,1:02:33.83,Default,,0,0,0,,<i>Much more difficult\Nthan it would seem.</i>
+Dialogue: 0,1:02:35.08,1:02:38.29,Default,,0,0,0,,<i>And then Zoic, the effects\Ncompany, had to show us the guy</i>
+Dialogue: 0,1:02:38.34,1:02:41.58,Default,,0,0,0,,<i>on the cannon because that\Nbecomes important later and then</i>
+Dialogue: 0,1:02:41.67,1:02:45.13,Default,,0,0,0,,<i>they added the pan\Nand following the ship</i>
+Dialogue: 0,1:02:45.18,1:02:48.67,Default,,0,0,0,,<i>because the shot itself wasn't\Nworking that well, so they reworked it</i>
+Dialogue: 0,1:02:48.72,1:02:52.34,Default,,0,0,0,,<i>at their own expense to\Nmake it</i> a <i>little more interesting.</i>
+Dialogue: 0,1:02:52.43,1:02:53.68,Default,,0,0,0,,<i>They'll do that a lot.</i>
+Dialogue: 0,1:03:05.07,1:03:09.03,Default,,0,0,0,,<i>Now this obviously was a cut\Nscene between Mal and Inara.</i>
+Dialogue: 0,1:03:09.12,1:03:13.58,Default,,0,0,0,,<i>But what Nathan did there\Nin that moment alone</i>
+Dialogue: 0,1:03:15.21,1:03:18.70,Default,,0,0,0,,<i>and what Jack did with\Nlighting there really spoke to me.</i>
+Dialogue: 0,1:03:18.75,1:03:21.24,Default,,0,0,0,,<i>The idea of\Nthe simple moment</i>
+Dialogue: 0,1:03:21.34,1:03:24.58,Default,,0,0,0,,<i>when the man who's making\Nall the horrible decisions</i>
+Dialogue: 0,1:03:26.09,1:03:28.33,Default,,0,0,0,,<i>has to take a moment alone\Nto live with them.</i>
+Dialogue: 0,1:03:28.39,1:03:30.09,Default,,0,0,0,,<i>That was really\Nthe essence of the thing.</i>
+Dialogue: 0,1:03:30.18,1:03:32.30,Default,,0,0,0,,<i>I missed the scene\Nbetween him and Inara but</i>
+Dialogue: 0,1:03:32.39,1:03:36.01,Default,,0,0,0,,<i>in terms of the momentum\Nthere was just no way to save it.</i>
+Dialogue: 0,1:03:36.06,1:03:38.22,Default,,0,0,0,,<i>Except in the D VD.</i>
+Dialogue: 0,1:03:42.44,1:03:44.90,Default,,0,0,0,,<i>I would like to point out,\Nthis shot here</i>
+Dialogue: 0,1:03:44.95,1:03:47.86,Default,,0,0,0,,<i>of the ship being pulled apart\Nby two other ships</i>
+Dialogue: 0,1:03:47.91,1:03:51.90,Default,,0,0,0,,<i>and the sound of the\Nhorrible screaming on the...</i>
+Dialogue: 0,1:03:52.41,1:03:56.07,Default,,0,0,0,,<i>"WW screaming all the time"\Nbroadcast were both</i>
+Dialogue: 0,1:03:56.16,1:03:58.75,Default,,0,0,0,,<i>the ideas of\Nmy assistant Michael Boretz</i>
+Dialogue: 0,1:03:58.84,1:04:01.95,Default,,0,0,0,,<i>who, during editing, said,\N"Wouldn't it be scarier</i> if... <i>"</i>
+Dialogue: 0,1:04:02.05,1:04:06.04,Default,,0,0,0,,<i>And I think they were both great\Nideas. They really added to the tension.</i>
+Dialogue: 0,1:04:07.09,1:04:11.21,Default,,0,0,0,,<i>We shot Summer here and she\Nlooked so good in that blue, blue light</i>
+Dialogue: 0,1:04:11.26,1:04:14.47,Default,,0,0,0,,<i>that we actually reshot all of these\Nguys. It was one of the few times</i>
+Dialogue: 0,1:04:14.56,1:04:16.30,Default,,0,0,0,,<i>during shooting that\Nwe shot something twice.</i>
+Dialogue: 0,1:04:16.39,1:04:18.64,Default,,0,0,0,,<i>But since they were all\Njust standing there...</i>
+Dialogue: 0,1:04:18.73,1:04:22.56,Default,,0,0,0,,<i>We had shot them so brightly, they didn't\Nmatch her and we liked the light on her</i>
+Dialogue: 0,1:04:22.61,1:04:25.77,Default,,0,0,0,,<i>so that we went back and\Nshot them in greater darkness.</i>
+Dialogue: 0,1:04:25.82,1:04:28.11,Default,,0,0,0,,<i>And so when\Nthe light hits them</i>
+Dialogue: 0,1:04:28.20,1:04:30.66,Default,,0,0,0,,<i>and with the shadows going... And\Nthe shadows are going, by the way</i>
+Dialogue: 0,1:04:30.74,1:04:33.36,Default,,0,0,0,,<i>because somebody is moving\Nwhat is called a cucoloris.</i>
+Dialogue: 0,1:04:33.45,1:04:35.24,Default,,0,0,0,,<i>Please don't ask me\Nwhy it's called a cucoloris,</i>
+Dialogue: 0,1:04:35.29,1:04:37.45,Default,,0,0,0,,<i>but it's basically cut outs</i>
+Dialogue: 0,1:04:37.50,1:04:42.24,Default,,0,0,0,,<i>moved in front of the light to create\Nthe idea of motion and shadow.</i>
+Dialogue: 0,1:04:42.67,1:04:44.54,Default,,0,0,0,,<i>To put that on them.</i>
+Dialogue: 0,1:04:53.60,1:04:56.72,Default,,0,0,0,,<i>This was another set\Nthat had exactly three walls</i>
+Dialogue: 0,1:04:56.81,1:05:00.72,Default,,0,0,0,,<i>and getting the crane in here,\Nactually quite difficult.</i>
+Dialogue: 0,1:05:00.81,1:05:03.47,Default,,0,0,0,,<i>But we managed to make\Nthe most of it even though</i>
+Dialogue: 0,1:05:03.57,1:05:06.31,Default,,0,0,0,,<i>we had to cut the biggest\Nscene that took place in it.</i>
+Dialogue: 0,1:05:06.36,1:05:08.23,Default,,0,0,0,,<i>You still get</i>\Na <i>feeling for it and</i>
+Dialogue: 0,1:05:08.32,1:05:11.44,Default,,0,0,0,,<i>I really do like the design\Nof that, his ship, a great deal.</i>
+Dialogue: 0,1:05:11.49,1:05:12.65,Default,,0,0,0,,We colored it.
+Dialogue: 0,1:05:13.16,1:05:14.32,Default,,0,0,0,,Wait.
+Dialogue: 0,1:05:15.08,1:05:16.94,Default,,0,0,0,,<i>WHEDON: And this was\Nsomething that Jack did</i>
+Dialogue: 0,1:05:16.100,1:05:20.49,Default,,0,0,0,,<i>after the fact\Nin the digital intermediate</i>
+Dialogue: 0,1:05:20.58,1:05:23.24,Default,,0,0,0,,<i>which is where we\Ncolor-time the movie,</i>
+Dialogue: 0,1:05:23.34,1:05:26.17,Default,,0,0,0,,<i>where we adjust the color\Nof every single shot.</i>
+Dialogue: 0,1:05:27.47,1:05:31.17,Default,,0,0,0,,<i>He made it very cold and what\Nwas red, became very purple</i>
+Dialogue: 0,1:05:31.26,1:05:35.25,Default,,0,0,0,,<i>and it sort of took the life out of it\Nand that felt very right for the Alliance.</i>
+Dialogue: 0,1:05:35.35,1:05:37.26,Default,,0,0,0,,If anything's wrong the\Nscanner's not reading it.
+Dialogue: 0,1:05:37.35,1:05:40.51,Default,,0,0,0,,<i>WHEDON: What we did here\Nwith the light was just blast it.</i>
+Dialogue: 0,1:05:40.60,1:05:44.35,Default,,0,0,0,,<i>Obviously we're in front of the ship\Nwhich means here we are on stage.</i>
+Dialogue: 0,1:05:44.44,1:05:46.65,Default,,0,0,0,,Well, something sure\Nthe hell ain't right.
+Dialogue: 0,1:05:52.32,1:05:54.31,Default,,0,0,0,,<i>And then once they</i>
+Dialogue: 0,1:05:54.37,1:05:58.83,Default,,0,0,0,,<i>actually start walking through\Nthe city, we are actually on location.</i>
+Dialogue: 0,1:05:59.20,1:06:02.37,Default,,0,0,0,,<i>We're at the\NDiamond Ranch High School.</i>
+Dialogue: 0,1:06:02.42,1:06:03.70,Default,,0,0,0,,<i>I can 't remember exactly\Nwhat it's called.</i>
+Dialogue: 0,1:06:03.75,1:06:06.08,Default,,0,0,0,,<i>I think they shot\Nthe movie Orange County</i>
+Dialogue: 0,1:06:06.17,1:06:09.16,Default,,0,0,0,,<i>there, but we gussied it up\Nto make it look all futurey.</i>
+Dialogue: 0,1:06:09.22,1:06:13.17,Default,,0,0,0,,<i>Which meant taking, you know,\Nwhatever few set pieces we had</i>
+Dialogue: 0,1:06:13.22,1:06:16.55,Default,,0,0,0,,<i>and moving them to wherever\Nwe were shooting, all the time.</i>
+Dialogue: 0,1:06:22.23,1:06:24.22,Default,,0,0,0,,<i>The idea here was twofold.</i>
+Dialogue: 0,1:06:24.27,1:06:29.73,Default,,0,0,0,,<i>One to overexpose slightly and we\Ncould push that. We pushed it digitally</i>
+Dialogue: 0,1:06:29.78,1:06:32.74,Default,,0,0,0,,<i>as well once\Nwe got into the intermediate.</i>
+Dialogue: 0,1:06:33.91,1:06:35.90,Default,,0,0,0,,<i>I'll pause a second to talk\Nabout that shot of River.</i>
+Dialogue: 0,1:06:35.99,1:06:39.70,Default,,0,0,0,,<i>The way her dress blows out\Nlike a jellyfish around her.</i>
+Dialogue: 0,1:06:39.74,1:06:43.11,Default,,0,0,0,,<i>It's one of those found\Nmoments that money can't buy.</i>
+Dialogue: 0,1:06:43.21,1:06:46.49,Default,,0,0,0,,<i>And in fact the lack of money\Ncaused, because the reason I shot her</i>
+Dialogue: 0,1:06:46.59,1:06:49.17,Default,,0,0,0,,<i>from above like that was because\Nwe didn't have enough money</i>
+Dialogue: 0,1:06:49.26,1:06:51.59,Default,,0,0,0,,<i>for the green screen\Nbehind her.</i>
+Dialogue: 0,1:06:51.88,1:06:55.92,Default,,0,0,0,,<i>And then you get that and, you know,\Nall of a sudden you're made happy.</i>
+Dialogue: 0,1:06:57.10,1:07:00.93,Default,,0,0,0,,<i>So we're basically working\Nwith two visual ideas on Miranda.</i>
+Dialogue: 0,1:07:01.02,1:07:04.39,Default,,0,0,0,,<i>The first was to blow everything\Nout and make it terribly bright.</i>
+Dialogue: 0,1:07:04.44,1:07:06.52,Default,,0,0,0,,<i>And that was a progression\Nfrom planet to planet.</i>
+Dialogue: 0,1:07:06.61,1:07:09.94,Default,,0,0,0,,<i>The first planet, Lilac, where we\Nhave an exterior during the Mule chase.</i>
+Dialogue: 0,1:07:09.98,1:07:13.10,Default,,0,0,0,,<i>It's very hot and deserty.\NThe second planet, Haven</i>
+Dialogue: 0,1:07:13.20,1:07:15.15,Default,,0,0,0,,<i>during Book's death,\Nwe made it even hotter.</i>
+Dialogue: 0,1:07:15.24,1:07:17.48,Default,,0,0,0,,<i>We wanted it to be\Nsort of uncomfortable,</i>
+Dialogue: 0,1:07:17.57,1:07:19.66,Default,,0,0,0,,<i>and for Miranda\Nwe blew it out completely.</i>
+Dialogue: 0,1:07:19.74,1:07:20.70,Default,,0,0,0,,<i>We overexposed it.</i>
+Dialogue: 0,1:07:20.79,1:07:22.74,Default,,0,0,0,,<i>We pushed it in the digital\Ntiming and that was to</i>
+Dialogue: 0,1:07:22.79,1:07:26.53,Default,,0,0,0,,<i>give the idea that Miranda\Nrepresents this sort of insane optimism</i>
+Dialogue: 0,1:07:26.62,1:07:28.96,Default,,0,0,0,,<i>of the Alliance,\Nthat there</i> is...
+Dialogue: 0,1:07:29.05,1:07:30.50,Default,,0,0,0,,<i>It's too bright.\NIt's too perfect.</i>
+Dialogue: 0,1:07:30.59,1:07:31.75,Default,,0,0,0,,<i>There are no shadows\Nto hide in,</i>
+Dialogue: 0,1:07:31.80,1:07:33.91,Default,,0,0,0,,<i>there's nowhere for people\Nto be themselves.</i>
+Dialogue: 0,1:07:33.97,1:07:35.30,Default,,0,0,0,,<i>There's no texture to it.</i>
+Dialogue: 0,1:07:35.38,1:07:38.05,Default,,0,0,0,,<i>The other thing we did\Nwas affect the shutter speed.</i>
+Dialogue: 0,1:07:38.14,1:07:41.97,Default,,0,0,0,,<i>Normally a camera will run at a\N180 shutter speed. We ran it at a 120</i>
+Dialogue: 0,1:07:42.06,1:07:44.85,Default,,0,0,0,,<i>to make things</i> a <i>little\Ncrisper and more crystalline.</i>
+Dialogue: 0,1:07:44.93,1:07:47.80,Default,,0,0,0,,<i>It's an effect you will have\Nseen in</i> Saving <i>Private Ryan or</i>
+Dialogue: 0,1:07:47.86,1:07:50.19,Default,,0,0,0,,<i>Gladiator or any war movie\Nmade recently.</i>
+Dialogue: 0,1:07:50.27,1:07:52.69,Default,,0,0,0,,<i>They'll do it\Nat a 45 shutter speed</i>
+Dialogue: 0,1:07:52.78,1:07:55.49,Default,,0,0,0,,<i>and all of a sudden every piece\Nof dirt that's blown out of the air</i>
+Dialogue: 0,1:07:55.53,1:07:59.36,Default,,0,0,0,,<i>is very visible to the eye. It's\Nkind of hard to watch after a while.</i>
+Dialogue: 0,1:07:59.45,1:08:02.91,Default,,0,0,0,,<i>We didn't take it that far.\NWe took it to 120, so it's just</i>
+Dialogue: 0,1:08:02.99,1:08:05.95,Default,,0,0,0,,a <i>little bit too much.\NThings are too sharp.</i>
+Dialogue: 0,1:08:05.100,1:08:08.86,Default,,0,0,0,,<i>And they're too bright. And then\Nwhen we come around River like this</i>
+Dialogue: 0,1:08:08.96,1:08:13.45,Default,,0,0,0,,<i>we can really feel the motion around her and\Nbehind her</i> a <i>little bit more than we would.</i>
+Dialogue: 0,1:08:13.51,1:08:15.34,Default,,0,0,0,,<i>It makes us</i>\Na <i>little uncomfortable.</i>
+Dialogue: 0,1:08:15.38,1:08:17.17,Default,,0,0,0,,<i>Her performance is beautiful</i>
+Dialogue: 0,1:08:17.26,1:08:21.17,Default,,0,0,0,,<i>and the moment of Jayne agreeing\Nwith her that's coming up is powerful to me</i>
+Dialogue: 0,1:08:21.26,1:08:24.18,Default,,0,0,0,,<i>because once Jayne agrees with\NRiver you know something's up.</i>
+Dialogue: 0,1:08:24.27,1:08:27.10,Default,,0,0,0,,<i>But mostly,\Nvisually we're just trying to</i>
+Dialogue: 0,1:08:27.19,1:08:32.10,Default,,0,0,0,,<i>set the viewer off without calling\Nattention to ourselves too much.</i>
+Dialogue: 0,1:08:32.40,1:08:33.98,Default,,0,0,0,,Everybody's dead.
+Dialogue: 0,1:08:35.44,1:08:37.78,Default,,0,0,0,,This whole world is\Ndead for no reason!
+Dialogue: 0,1:08:40.32,1:08:42.03,Default,,0,0,0,,Let's get to\Nthe beacon.
+Dialogue: 0,1:08:47.96,1:08:49.57,Default,,0,0,0,,<i>WHEDON: That's supposed to be\Na ship that crashed.</i>
+Dialogue: 0,1:08:49.67,1:08:54.96,Default,,0,0,0,,<i>It occurs to me that some burn marks from\Nwhere it... A trail would've been good.</i>
+Dialogue: 0,1:08:55.92,1:08:59.34,Default,,0,0,0,,<i>Unfortunately, it occurred\Nto me about 14 months after</i>
+Dialogue: 0,1:08:59.39,1:09:00.88,Default,,0,0,0,,<i>we filmed it so</i>
+Dialogue: 0,1:09:00.97,1:09:03.05,Default,,0,0,0,,<i>I suppose that should've\Nbeen in pre-production.</i>
+Dialogue: 0,1:09:03.14,1:09:05.88,Default,,0,0,0,,<i>This shot actually is one\Nthat I'm extremely proud of.</i>
+Dialogue: 0,1:09:05.98,1:09:08.39,Default,,0,0,0,,<i>Because this set</i>
+Dialogue: 0,1:09:08.48,1:09:13.69,Default,,0,0,0,,<i>as I mentioned, is a redress of\Nthe holographic set from earlier.</i>
+Dialogue: 0,1:09:13.73,1:09:17.44,Default,,0,0,0,,<i>And it's a big white room.</i>
+Dialogue: 0,1:09:19.40,1:09:21.07,Default,,0,0,0,,<i>Just a big round space.</i>
+Dialogue: 0,1:09:21.11,1:09:24.57,Default,,0,0,0,,<i>And to make it feel creepy\Nand to keep the camera alive</i>
+Dialogue: 0,1:09:24.66,1:09:26.57,Default,,0,0,0,,<i>we have it following different\Npeople and going around</i>
+Dialogue: 0,1:09:26.66,1:09:31.08,Default,,0,0,0,,<i>and taking us from the\Nvery beginning to this</i>
+Dialogue: 0,1:09:31.17,1:09:34.91,Default,,0,0,0,,<i>and I think you get</i> a <i>sense of\Nsomething sort of labyrinthine.</i>
+Dialogue: 0,1:09:35.00,1:09:38.21,Default,,0,0,0,,<i>And kind of,\Nsort of unknowable.</i>
+Dialogue: 0,1:09:38.26,1:09:44.47,Default,,0,0,0,,<i>Even though where we were was actually\Nquite a sort of open and bland space.</i>
+Dialogue: 0,1:09:44.56,1:09:49.05,Default,,0,0,0,,<i>It's well dressed but we had to keep\Nit open because we had to do this.</i>
+Dialogue: 0,1:09:49.10,1:09:51.18,Default,,0,0,0,,<i>This is camera move.</i>
+Dialogue: 0,1:09:52.77,1:09:55.60,Default,,0,0,0,,<i>We had motion control\Nand a memory head.</i>
+Dialogue: 0,1:09:55.69,1:09:59.02,Default,,0,0,0,,<i>Motion control means\Nyou can do a camera move</i>
+Dialogue: 0,1:09:59.11,1:10:01.27,Default,,0,0,0,,<i>and then do\Nthe exact same move.</i>
+Dialogue: 0,1:10:01.36,1:10:04.23,Default,,0,0,0,,<i>I believe it was pioneered\Non The Fly by David Cronenberg</i>
+Dialogue: 0,1:10:04.28,1:10:09.37,Default,,0,0,0,,<i>for a shot of the monkey\Ndisappearing in the machine.</i>
+Dialogue: 0,1:10:09.45,1:10:12.57,Default,,0,0,0,,<i>And we used it,\Nand interestingly enough</i>
+Dialogue: 0,1:10:12.62,1:10:16.24,Default,,0,0,0,,<i>you know, we shot this\Noriginally with a different actress.</i>
+Dialogue: 0,1:10:16.30,1:10:20.51,Default,,0,0,0,,<i>A really good actress but who\Nwas unfortunately wrong for the part.</i>
+Dialogue: 0,1:10:20.59,1:10:25.46,Default,,0,0,0,,<i>And so I asked them if they were\Ngoing to keep the motion-control</i> data.
+Dialogue: 0,1:10:25.80,1:10:27.64,Default,,0,0,0,,<i>And they said,\N"We will have it on a disk</i>
+Dialogue: 0,1:10:27.72,1:10:30.72,Default,,0,0,0,,<i>"until your DVD comes out,\Njust in case."</i>
+Dialogue: 0,1:10:30.81,1:10:32.80,Default,,0,0,0,,<i>So we shot it\Nwith another actress</i>
+Dialogue: 0,1:10:32.85,1:10:37.52,Default,,0,0,0,,<i>and through no fault of hers it\Njust didn't have the right feeling.</i>
+Dialogue: 0,1:10:37.61,1:10:42.52,Default,,0,0,0,,<i>I felt like what I need is somebody\Nthat you just believe and love,</i>
+Dialogue: 0,1:10:42.61,1:10:45.57,Default,,0,0,0,,<i>because what she has to say is really\Nthe most important thing in the movie.</i>
+Dialogue: 0,1:10:45.66,1:10:49.32,Default,,0,0,0,,<i>And you need to be rooting for her,\Neven though she's done something terrible</i>
+Dialogue: 0,1:10:49.41,1:10:52.65,Default,,0,0,0,,<i>the moment you see her.\NAnd again, Sarah Paulson</i>
+Dialogue: 0,1:10:52.75,1:10:54.49,Default,,0,0,0,,I'm a fan of\Nfrom Down with Love,
+Dialogue: 0,1:10:54.54,1:10:57.03,Default,,0,0,0,,<i>which I think is</i>\Na <i>terribly underrated movie.</i>
+Dialogue: 0,1:10:57.13,1:11:00.79,Default,,0,0,0,,<i>And as I said with Michael\NHitchcock, I will go to comedy</i>
+Dialogue: 0,1:11:00.84,1:11:04.75,Default,,0,0,0,,<i>to find my dramatic actors. Now\Nobviously she has a great dramatic résumé</i>
+Dialogue: 0,1:11:04.84,1:11:07.68,Default,,0,0,0,,<i>but she wasn't that well known\Nand I don't think people were</i>
+Dialogue: 0,1:11:07.76,1:11:10.35,Default,,0,0,0,,<i>sure about her\Nand then she came on</i>
+Dialogue: 0,1:11:10.43,1:11:14.60,Default,,0,0,0,,<i>and doing it on green screen\Nmeans doing it, you know, in a room</i>
+Dialogue: 0,1:11:14.69,1:11:16.52,Default,,0,0,0,,<i>surrounded by\Ngreen curtains alone</i>
+Dialogue: 0,1:11:16.60,1:11:19.14,Default,,0,0,0,,<i>and she gave\Nan extraordinary performance</i>
+Dialogue: 0,1:11:19.19,1:11:22.52,Default,,0,0,0,,<i>and really embodied\Nwhat I needed.</i>
+Dialogue: 0,1:11:22.61,1:11:26.60,Default,,0,0,0,,<i>But that performance didn't exist\Nwhen all these people were reacting to it.</i>
+Dialogue: 0,1:11:26.70,1:11:29.78,Default,,0,0,0,,<i>And I always regretted\Nthat she couldn't be there</i>
+Dialogue: 0,1:11:29.87,1:11:32.45,Default,,0,0,0,,<i>but because of the timing\Nwe had to do it after we shot</i>
+Dialogue: 0,1:11:32.54,1:11:35.15,Default,,0,0,0,,<i>this scene of everybody\Ndealing with it.</i>
+Dialogue: 0,1:11:35.96,1:11:37.20,Default,,0,0,0,,(sossnue)
+Dialogue: 0,1:11:46.43,1:11:47.42,Default,,0,0,0,,(RETCHING)
+Dialogue: 0,1:11:51.18,1:11:52.64,Default,,0,0,0,,River.
+Dialogue: 0,1:11:52.73,1:11:53.84,Default,,0,0,0,,I'm all right.
+Dialogue: 0,1:11:53.89,1:11:57.64,Default,,0,0,0,,<i>WHEDON: We shot this\Nand as we were...</i>
+Dialogue: 0,1:11:58.02,1:12:02.06,Default,,0,0,0,,<i>Summer's side here, and\NI have to give</i> a <i>little shout</i>
+Dialogue: 0,1:12:03.57,1:12:08.03,Default,,0,0,0,,<i>to that musical resolve\Nfrom David Newman.</i>
+Dialogue: 0,1:12:09.45,1:12:12.16,Default,,0,0,0,,<i>You know, he's been playing\Nthat theme for so long</i>
+Dialogue: 0,1:12:12.24,1:12:14.86,Default,,0,0,0,,<i>and then he resolves it\Non a different note</i>
+Dialogue: 0,1:12:14.91,1:12:17.65,Default,,0,0,0,,<i>which says\Nshe really is saner.</i>
+Dialogue: 0,1:12:17.75,1:12:19.62,Default,,0,0,0,,<i>It's a beautiful\Nlittle piece of work</i>
+Dialogue: 0,1:12:19.71,1:12:22.58,Default,,0,0,0,,<i>and there's so much I could\Nsay about what David Newman did</i>
+Dialogue: 0,1:12:22.63,1:12:26.92,Default,,0,0,0,,<i>for this movie but that to me is one\Nwhere I just grin every time I hear it.</i>
+Dialogue: 0,1:12:27.01,1:12:29.63,Default,,0,0,0,,There's a whole universe of\Nfolk who are gonna know it, too.
+Dialogue: 0,1:12:29.72,1:12:31.38,Default,,0,0,0,,They're gonna see it.
+Dialogue: 0,1:12:31.43,1:12:33.42,Default,,0,0,0,,Somebody has to speak\Nfor these people.
+Dialogue: 0,1:12:33.52,1:12:37.22,Default,,0,0,0,,<i>WHEDON: And obviously\Nit takes us</i> to...
+Dialogue: 0,1:12:37.39,1:12:39.18,Default,,0,0,0,,<i>Well, I'm not going\Nto mince words here.</i>
+Dialogue: 0,1:12:39.27,1:12:41.76,Default,,0,0,0,,<i>The Saint Crispian's\NDay speech.</i>
+Dialogue: 0,1:12:41.86,1:12:45.02,Default,,0,0,0,,<i>E verybody's got one,\Npossibly too many people</i>
+Dialogue: 0,1:12:45.11,1:12:47.27,Default,,0,0,0,,<i>have them but</i>
+Dialogue: 0,1:12:47.32,1:12:52.11,Default,,0,0,0,,<i>to me, I really wanted to take Mal\Nto that place, and as you can see</i>
+Dialogue: 0,1:12:52.20,1:12:56.95,Default,,0,0,0,,<i>I was not afraid to light things\Nalmost avant-gardely manipulative way.</i>
+Dialogue: 0,1:12:57.46,1:13:00.57,Default,,0,0,0,,A year from now, 10, they'll\Nswing back to the belief
+Dialogue: 0,1:13:00.63,1:13:02.04,Default,,0,0,0,,that they can\Nmake...
+Dialogue: 0,1:13:04.80,1:13:08.16,Default,,0,0,0,,<i>Now that makes sense to an extent\Nbecause they're parked on Miranda</i>
+Dialogue: 0,1:13:08.26,1:13:12.72,Default,,0,0,0,,<i>where the light is much too hard\Nbut I also wanted to say notjust</i>
+Dialogue: 0,1:13:12.81,1:13:16.01,Default,,0,0,0,,<i>Mal has found a purpose\Nbut we have found a movie.</i>
+Dialogue: 0,1:13:16.10,1:13:17.47,Default,,0,0,0,,<i>This is a movie.</i>
+Dialogue: 0,1:13:18.02,1:13:21.39,Default,,0,0,0,,<i>He is going to step into the light\Nand he's going to say something cool.</i>
+Dialogue: 0,1:13:21.48,1:13:24.27,Default,,0,0,0,,<i>And they are all going\Nto get behind him.</i>
+Dialogue: 0,1:13:24.32,1:13:27.73,Default,,0,0,0,,<i>And I had thought about writing a\Nwhole scene where one by one they say</i>
+Dialogue: 0,1:13:27.82,1:13:31.15,Default,,0,0,0,,<i>Hllm in.</i> II\N<i>I realized if Jayne's in</i>
+Dialogue: 0,1:13:31.74,1:13:34.65,Default,,0,0,0,,<i>the most amoral character\Nin the movie</i>
+Dialogue: 0,1:13:34.74,1:13:37.45,Default,,0,0,0,,<i>then everybody is\Nand you don't need to say it.</i>
+Dialogue: 0,1:13:37.50,1:13:39.74,Default,,0,0,0,,<i>And that's, you know...\NAnd the fact that he</i>
+Dialogue: 0,1:13:39.83,1:13:42.62,Default,,0,0,0,,<i>gives Simon a drink says,\Nthe people who, you know</i>
+Dialogue: 0,1:13:42.67,1:13:46.46,Default,,0,0,0,,<i>would have the least to do with\Neach other are all united here.</i>
+Dialogue: 0,1:13:47.01,1:13:48.29,Default,,0,0,0,,We still got\Nthe Reavers
+Dialogue: 0,1:13:48.34,1:13:50.50,Default,,0,0,0,,and probably the Alliance,\Nbetween us and him.
+Dialogue: 0,1:13:51.30,1:13:54.51,Default,,0,0,0,,<i>WHEDON: Had to add</i> a <i>little\NADR here about reminding people</i>
+Dialogue: 0,1:13:54.60,1:13:58.84,Default,,0,0,0,,<i>that their ship doesn't have guns because\Npeople just expect ships to have guns.</i>
+Dialogue: 0,1:13:59.60,1:14:00.72,Default,,0,0,0,,No.
+Dialogue: 0,1:14:02.69,1:14:04.68,Default,,0,0,0,,They're not gonna\Nsee this coming.
+Dialogue: 0,1:14:04.86,1:14:07.39,Default,,0,0,0,,<i>WHEDON: And the\Ndramatic cut to the engines.</i>
+Dialogue: 0,1:14:07.48,1:14:10.15,Default,,0,0,0,,<i>I really again felt like</i>
+Dialogue: 0,1:14:10.19,1:14:13.15,Default,,0,0,0,,<i>their situation\Nrequired something of</i>
+Dialogue: 0,1:14:13.20,1:14:16.32,Default,,0,0,0,,<i>an extraordinary plan</i>
+Dialogue: 0,1:14:16.37,1:14:18.40,Default,,0,0,0,,<i>and one of the most\Ngratifying things in watching this</i>
+Dialogue: 0,1:14:18.49,1:14:20.20,Default,,0,0,0,,<i>in previews was when people</i>
+Dialogue: 0,1:14:20.29,1:14:24.28,Default,,0,0,0,,<i>figured out what the plan was and you can\Nhear some people figure it out right away</i>
+Dialogue: 0,1:14:24.38,1:14:27.71,Default,,0,0,0,,<i>some people just before it happens,\Nsome people when it happens.</i>
+Dialogue: 0,1:14:27.75,1:14:32.29,Default,,0,0,0,,<i>But it's always gratifying\Nwhen people get excited about...</i>
+Dialogue: 0,1:14:32.38,1:14:36.88,Default,,0,0,0,,<i>The one thing that might save\Nthem is the fact that everybody</i>
+Dialogue: 0,1:14:36.93,1:14:40.55,Default,,0,0,0,,<i>is dangerous.\NI'm of course referring</i>
+Dialogue: 0,1:14:40.60,1:14:43.31,Default,,0,0,0,,<i>to the Reavers\Nattacking the Alliance.</i>
+Dialogue: 0,1:14:48.40,1:14:52.27,Default,,0,0,0,,<i>Originally, I didn't show The\NOperative killing Mr. Universe.</i>
+Dialogue: 0,1:14:52.36,1:14:55.32,Default,,0,0,0,,<i>In conversations with\NChiwetel during rehearsals</i>
+Dialogue: 0,1:14:55.41,1:14:57.15,Default,,0,0,0,,<i>he asked me if I could.</i>
+Dialogue: 0,1:14:57.24,1:14:59.86,Default,,0,0,0,,<i>He said,\N"Mal is getting to this guy.</i>
+Dialogue: 0,1:14:59.91,1:15:02.87,Default,,0,0,0,,<i>"And I'd like to show that.\NI 'd like to show him</i>
+Dialogue: 0,1:15:02.91,1:15:06.62,Default,,0,0,0,,<i>"do something that's a little less\Nreasonable than he's used to."</i>
+Dialogue: 0,1:15:06.71,1:15:09.100,Default,,0,0,0,,<i>And I agreed.\NI thought that was</i>
+Dialogue: 0,1:15:10.71,1:15:15.33,Default,,0,0,0,,<i>a good idea, and in various incarnations\Nit came and went but ultimately</i>
+Dialogue: 0,1:15:15.43,1:15:17.79,Default,,0,0,0,,<i>I thought it was\Nthe right thing to do.</i>
+Dialogue: 0,1:15:22.18,1:15:25.18,Default,,0,0,0,,<i>That's the best thing about\Nthe rehearsal process</i>
+Dialogue: 0,1:15:25.27,1:15:27.51,Default,,0,0,0,,<i>and I would say this\Nbecause I had never</i>
+Dialogue: 0,1:15:27.61,1:15:31.10,Default,,0,0,0,,<i>had one in television.\NNot one like this.</i>
+Dialogue: 0,1:15:31.19,1:15:34.61,Default,,0,0,0,,<i>We had weeks</i> of... <i>Well,\Ntwo weeks, but that's still plural.</i>
+Dialogue: 0,1:15:34.70,1:15:36.23,Default,,0,0,0,,<i>Weeks of rehearsal</i>
+Dialogue: 0,1:15:36.70,1:15:38.94,Default,,0,0,0,,<i>to really sort of figure out\Nwhat the characters felt</i>
+Dialogue: 0,1:15:39.03,1:15:40.57,Default,,0,0,0,,<i>and what they were doing</i>
+Dialogue: 0,1:15:40.62,1:15:43.95,Default,,0,0,0,,<i>and everybody brought such\Ninsight to their character that</i>
+Dialogue: 0,1:15:44.04,1:15:48.45,Default,,0,0,0,,<i>the movie is much better\Nand much more textured for it.</i>
+Dialogue: 0,1:15:50.09,1:15:51.12,Default,,0,0,0,,Now!
+Dialogue: 0,1:15:51.92,1:15:53.50,Default,,0,0,0,,<i>WHEDON:\NThis was very specific.</i>
+Dialogue: 0,1:15:53.59,1:15:55.96,Default,,0,0,0,,<i>I was like,\N"l want something that</i>
+Dialogue: 0,1:15:56.09,1:15:59.43,Default,,0,0,0,,<i>"has big old blades. " Something\Nthat looks... That unfurls.</i>
+Dialogue: 0,1:15:59.47,1:16:02.13,Default,,0,0,0,,<i>It looks like\Nit's going to attack them</i>
+Dialogue: 0,1:16:02.18,1:16:03.76,Default,,0,0,0,,<i>and attack them physically.</i>
+Dialogue: 0,1:16:03.81,1:16:08.39,Default,,0,0,0,,<i>The more we could physicalize the\NReavers' ships and make them kind of</i>
+Dialogue: 0,1:16:08.48,1:16:12.35,Default,,0,0,0,,<i>so low tech,\Nthey're almost like swords</i>
+Dialogue: 0,1:16:12.44,1:16:14.15,Default,,0,0,0,,<i>the more fun we'll have.</i>
+Dialogue: 0,1:16:17.82,1:16:20.74,Default,,0,0,0,,<i>This is the point at which a\Nlot of people began to realize</i>
+Dialogue: 0,1:16:20.83,1:16:23.28,Default,,0,0,0,,<i>the deadly yet antiseptic</i>
+Dialogue: 0,1:16:23.83,1:16:27.74,Default,,0,0,0,,<i>Alliance is about to get a\Ntaste of its own medicine.</i>
+Dialogue: 0,1:16:27.83,1:16:31.25,Default,,0,0,0,,<i>Which to me\Nis not only thematic</i>
+Dialogue: 0,1:16:31.34,1:16:34.17,Default,,0,0,0,,<i>but gratifying\Nin terms of films.</i>
+Dialogue: 0,1:16:35.88,1:16:39.80,Default,,0,0,0,,<i>This is</i> where <i>the ion cloud came\Nfrom, of course, because I needed to have</i>
+Dialogue: 0,1:16:39.85,1:16:44.01,Default,,0,0,0,,<i>the Indians ride over the hill\Nand surprise the cavalry.</i>
+Dialogue: 0,1:16:44.60,1:16:47.84,Default,,0,0,0,,<i>And since you can't do that\Nin space, I had an ion cloud</i>
+Dialogue: 0,1:16:47.94,1:16:52.60,Default,,0,0,0,,<i>which takes us back to sort of Wrath of\NKhan-style space but I'm not ashamed.</i>
+Dialogue: 0,1:16:54.07,1:16:57.19,Default,,0,0,0,,<i>I don't know what an\Nion cloud is. I don't care.</i>
+Dialogue: 0,1:16:57.28,1:16:59.74,Default,,0,0,0,,<i>For this moment,\NI would give up many things</i>
+Dialogue: 0,1:16:59.82,1:17:01.98,Default,,0,0,0,,<i>including logic\Nor knowledge of any science</i>
+Dialogue: 0,1:17:02.07,1:17:05.03,Default,,0,0,0,,<i>which actually I gave up\Nat about age 15.</i>
+Dialogue: 0,1:17:14.76,1:17:18.54,Default,,0,0,0,,<i>Well, this sequence, you know,\NI think nearly killed a lot of us.</i>
+Dialogue: 0,1:17:18.63,1:17:22.72,Default,,0,0,0,,<i>And I don't actually mean the\Nactors. I really mean in post-production</i>
+Dialogue: 0,1:17:22.80,1:17:26.22,Default,,0,0,0,,<i>trying to figure out from what\Nwe had where everybody was</i>
+Dialogue: 0,1:17:26.31,1:17:28.14,Default,,0,0,0,,<i>and what they were doing.</i>
+Dialogue: 0,1:17:28.23,1:17:32.31,Default,,0,0,0,,<i>It was very difficult, but it\Nreally does belong to Wash.</i>
+Dialogue: 0,1:17:32.40,1:17:36.48,Default,,0,0,0,,<i>And whenever I would shoot\NWash... The harpoon gag was one</i>
+Dialogue: 0,1:17:36.57,1:17:39.06,Default,,0,0,0,,<i>that was very difficult\Nto realize but which I felt</i>
+Dialogue: 0,1:17:39.15,1:17:41.40,Default,,0,0,0,,<i>embodied how\Nthe Reavers fight.</i>
+Dialogue: 0,1:17:41.45,1:17:43.23,Default,,0,0,0,,Chicken's come\Nhome to roost.
+Dialogue: 0,1:17:46.66,1:17:50.15,Default,,0,0,0,,<i>when</i> we <i>originally conceived the\Nsequence,</i> there <i>was gonna</i> be <i>sun</i>
+Dialogue: 0,1:17:50.25,1:17:51.41,Default,,0,0,0,,<i>on one side of them.</i>
+Dialogue: 0,1:17:51.50,1:17:54.79,Default,,0,0,0,,<i>Then the sun was gone, but I\Nstill had that blinding yellow light</i>
+Dialogue: 0,1:17:54.88,1:17:57.49,Default,,0,0,0,,<i>so we blew it out momentarily</i>
+Dialogue: 0,1:17:57.59,1:18:01.08,Default,,0,0,0,,<i>and added the sound of\Nthat explosion to justify it.</i>
+Dialogue: 0,1:18:01.97,1:18:05.09,Default,,0,0,0,,<i>Things like that, you\Nknow, thinking on your feet</i>
+Dialogue: 0,1:18:05.18,1:18:08.76,Default,,0,0,0,,<i>even at the last minute, that's\Nwhat makes this so much fun</i>
+Dialogue: 0,1:18:08.81,1:18:10.47,Default,,0,0,0,,<i>and by fun I mean exhausting.</i>
+Dialogue: 0,1:18:11.31,1:18:13.47,Default,,0,0,0,,Yes! Yes! No! No! No!
+Dialogue: 0,1:18:18.82,1:18:22.61,Default,,0,0,0,,<i>I had a couple of other lines but I\Njust thought that would be charming</i>
+Dialogue: 0,1:18:22.70,1:18:26.69,Default,,0,0,0,,<i>and of course, between the\Ntwo of them, it inevitably was.</i>
+Dialogue: 0,1:18:28.74,1:18:32.86,Default,,0,0,0,,<i>Star</i> Trek <i>moment, everybody\Nfall down. Nothing's really shaking.</i>
+Dialogue: 0,1:18:34.21,1:18:36.83,Default,,0,0,0,,<i>We did our best\Nto hide that fact</i>
+Dialogue: 0,1:18:37.30,1:18:41.79,Default,,0,0,0,,<i>by changing the lights\Nand shaking things up.</i>
+Dialogue: 0,1:18:42.63,1:18:45.25,Default,,0,0,0,,<i>I do love his escape pod very\Nmuch. If you watch carefully</i>
+Dialogue: 0,1:18:45.30,1:18:50.55,Default,,0,0,0,,<i>you can actually see the lighting tubes\Nthat Jack and the gaffer are swinging</i>
+Dialogue: 0,1:18:50.64,1:18:54.48,Default,,0,0,0,,<i>next to his head because that's\Nbasically how they lit the entire thing.</i>
+Dialogue: 0,1:18:54.56,1:18:58.18,Default,,0,0,0,,<i>They took some fluorescent tubes and\Nthey just waved them around near him</i>
+Dialogue: 0,1:18:58.27,1:19:02.11,Default,,0,0,0,,<i>as he sat in that chair and\Nthen we turned it upside down.</i>
+Dialogue: 0,1:19:02.70,1:19:06.73,Default,,0,0,0,,<i>Every now and then, you go to the\Ncheese, and I loves</i> me <i>some</i> cheese.
+Dialogue: 0,1:19:06.82,1:19:08.53,Default,,0,0,0,,We're not alone.
+Dialogue: 0,1:19:13.29,1:19:17.33,Default,,0,0,0,,<i>Now here's a sequence that\Nowes a lot to the effects house</i>
+Dialogue: 0,1:19:17.42,1:19:22.08,Default,,0,0,0,,<i>because when they showed me\Nthe pre-vis, they had done the tailspin</i>
+Dialogue: 0,1:19:23.47,1:19:24.18,Default,,0,0,0,,<i>which they go into,\Nin a moment.</i>
+Dialogue: 0,1:19:24.18,1:19:25.17,Default,,0,0,0,,<i>It was very exciting for us to\Ncome in and see the miniature set</i>
+Dialogue: 0,1:19:25.22,1:19:29.63,Default,,0,0,0,,<i>and the miniature ship that's... I\Nlike to see it kicking it old school.</i>
+Dialogue: 0,1:19:32.43,1:19:34.47,Default,,0,0,0,,Iam a leaf on the wind.
+Dialogue: 0,1:19:36.35,1:19:37.56,Default,,0,0,0,,Watch how...
+Dialogue: 0,1:19:37.65,1:19:40.02,Default,,0,0,0,,<i>WHEDON: Everybody always\Nlaughs during this sequence.</i>
+Dialogue: 0,1:19:40.07,1:19:42.81,Default,,0,0,0,,<i>You know, it's funny and\Nit's cute and it's kind of sexy.</i>
+Dialogue: 0,1:19:42.90,1:19:44.48,Default,,0,0,0,,Baby, come on.\NYou gotta go.
+Dialogue: 0,1:19:49.20,1:19:51.69,Default,,0,0,0,,<i>Obviously, we were\Ntogether on this decision</i>
+Dialogue: 0,1:19:51.74,1:19:53.95,Default,,0,0,0,,<i>of what to do with his\Ncharacter, i.e., kill it.</i>
+Dialogue: 0,1:19:54.04,1:19:58.45,Default,,0,0,0,,<i>But he would always make jokes like,\N"My script only goes up to page 105.</i>
+Dialogue: 0,1:19:58.54,1:20:01.58,Default,,0,0,0,,<i>"It's weird, I don't have\Nany pages for after that."</i>
+Dialogue: 0,1:20:01.67,1:20:04.96,Default,,0,0,0,,<i>And then I would say, "That's\Nthe end, it just ends there.</i>
+Dialogue: 0,1:20:05.05,1:20:09.29,Default,,0,0,0,,<i>"You guys land it. It's a happy\Nending." He's like, "Good, okay, fine."</i>
+Dialogue: 0,1:20:14.89,1:20:19.26,Default,,0,0,0,,<i>He was a lot more good-humored about it\Nthan many people who were his fans were</i>
+Dialogue: 0,1:20:19.36,1:20:23.98,Default,,0,0,0,,<i>and it's a very upsetting\Nthing. It was not in my first draft.</i>
+Dialogue: 0,1:20:24.07,1:20:26.44,Default,,0,0,0,,<i>It's a terrible thing\Nto do to a guy.</i>
+Dialogue: 0,1:20:26.53,1:20:30.61,Default,,0,0,0,,<i>I did it for a very specific reason\Nand that was to make you think that</i>
+Dialogue: 0,1:20:30.70,1:20:35.19,Default,,0,0,0,,<i>this could be</i> a Wild <i>Bunch, this\Ncould be, you know, "we all go down</i>
+Dialogue: 0,1:20:35.83,1:20:38.12,Default,,0,0,0,,<i>"trying to work this,\None by one"</i>
+Dialogue: 0,1:20:38.17,1:20:43.38,Default,,0,0,0,,<i>so that every time somebody\Nelse got shot, like Simon or whatever</i>
+Dialogue: 0,1:20:43.46,1:20:46.12,Default,,0,0,0,,<i>you really would believe\Nthey were going down.</i>
+Dialogue: 0,1:20:46.22,1:20:48.38,Default,,0,0,0,,<i>And Wash's death\Naccomplishes that.</i>
+Dialogue: 0,1:20:48.47,1:20:50.71,Default,,0,0,0,,<i>Without it, you just don't\Nhave the same kind of stakes</i>
+Dialogue: 0,1:20:50.80,1:20:53.47,Default,,0,0,0,,<i>and you don't have\Nthis arc for Zoe.</i>
+Dialogue: 0,1:20:56.35,1:21:01.06,Default,,0,0,0,,<i>So, it's something that, obviously,\Nsome people disagreed very strongly with</i>
+Dialogue: 0,1:21:01.15,1:21:03.98,Default,,0,0,0,,<i>but I think, narratively,\Nwas terribly important.</i>
+Dialogue: 0,1:21:04.02,1:21:06.69,Default,,0,0,0,,Wait, Wash!\NWhere's Wash?
+Dialogue: 0,1:21:11.24,1:21:14.61,Default,,0,0,0,,<i>The black room was\Ndesigned for the siege</i>
+Dialogue: 0,1:21:14.70,1:21:17.24,Default,,0,0,0,,<i>and designed\Nvery specifically.</i>
+Dialogue: 0,1:21:17.33,1:21:19.74,Default,,0,0,0,,<i>And you'll see\Nor you have seen,</i>
+Dialogue: 0,1:21:19.83,1:21:21.20,Default,,0,0,0,,<i>since I was talking\Nover the shot</i>
+Dialogue: 0,1:21:21.29,1:21:24.66,Default,,0,0,0,,<i>where they come in and we go all around\Nthe room and down the hall and back.</i>
+Dialogue: 0,1:21:24.76,1:21:27.71,Default,,0,0,0,,<i>And that was like with\Nthe introduction of the ship</i>
+Dialogue: 0,1:21:27.80,1:21:31.92,Default,,0,0,0,,<i>like with the long shot,\NCGI shot to Mr. Universe</i>
+Dialogue: 0,1:21:32.76,1:21:35.85,Default,,0,0,0,,a <i>way of saying, "This is\Nour space. Get to know it</i>
+Dialogue: 0,1:21:35.93,1:21:38.26,Default,,0,0,0,,<i>"because we're gonna live here\Nand it matters."</i>
+Dialogue: 0,1:21:38.35,1:21:41.26,Default,,0,0,0,,<i>And to give it</i> a <i>kind of an epic\Nsense. It's not a huge space.</i>
+Dialogue: 0,1:21:41.35,1:21:46.06,Default,,0,0,0,,<i>It's not suppose to be, but it is, sort\Nof, big enough for the big epic battle</i>
+Dialogue: 0,1:21:46.15,1:21:51.15,Default,,0,0,0,,<i>yet small enough for the claustrophobic\Nscariness of what is ultimately</i>
+Dialogue: 0,1:21:51.20,1:21:55.19,Default,,0,0,0,,a <i>zombie fight. And I like\Nthe design of it a great deal.</i>
+Dialogue: 0,1:21:55.24,1:21:57.28,Default,,0,0,0,,<i>The blast doors,\Nobviously, are key</i>
+Dialogue: 0,1:21:57.37,1:22:00.99,Default,,0,0,0,,<i>because they will lead to\Nthe infamous reveal of River</i>
+Dialogue: 0,1:22:01.08,1:22:04.70,Default,,0,0,0,,<i>which is one of those shots\Nthat I write the movie for.</i>
+Dialogue: 0,1:22:07.76,1:22:10.50,Default,,0,0,0,,You hold. Hold\Ntill I get back.
+Dialogue: 0,1:22:11.34,1:22:16.21,Default,,0,0,0,,<i>WHEDON: This again is an\Nopportunity to do things in one</i>
+Dialogue: 0,1:22:16.26,1:22:20.22,Default,,0,0,0,,<i>not because it's fancy,\Njust because everything works.</i>
+Dialogue: 0,1:22:20.27,1:22:21.68,Default,,0,0,0,,<i>She passes off to these guys.</i>
+Dialogue: 0,1:22:21.73,1:22:26.06,Default,,0,0,0,,<i>They look more pathetic than\Nthey ever have and they pass off to</i>
+Dialogue: 0,1:22:26.86,1:22:30.48,Default,,0,0,0,,<i>what is probably the\Nfunniest moment in the</i> show.
+Dialogue: 0,1:22:31.45,1:22:33.11,Default,,0,0,0,,<i>I love the idea that Jayne's thought\Nthat he might be the only one to survive</i>
+Dialogue: 0,1:22:33.11,1:22:33.82,Default,,0,0,0,,<i>"Okay, instead of tossing it, you\Nshould admire it and fiddle with it,"</i>
+Dialogue: 0,1:22:33.91,1:22:35.44,Default,,0,0,0,,<i>which is what she did.</i>
+Dialogue: 0,1:22:36.83,1:22:38.74,Default,,0,0,0,,<i>Those are always key.</i>
+Dialogue: 0,1:22:39.54,1:22:41.07,Default,,0,0,0,,...anything that I wanted\Nfor myself.
+Dialogue: 0,1:22:41.83,1:22:45.04,Default,,0,0,0,,<i>WHEDON: Gina and I, if\Nwe're gonna talk about conflict</i>
+Dialogue: 0,1:22:45.08,1:22:48.08,Default,,0,0,0,,<i>had what I would say\Nwas our only conflict</i>
+Dialogue: 0,1:22:48.55,1:22:51.83,Default,,0,0,0,,<i>the only one I'm admitting to,\Nover this scene</i>
+Dialogue: 0,1:22:51.92,1:22:55.63,Default,,0,0,0,,<i>over this area.\NHow much would she show</i>
+Dialogue: 0,1:22:56.47,1:23:01.81,Default,,0,0,0,,<i>her mourning for Wash? And I\Nsaid, "I want you to keep it all in."</i>
+Dialogue: 0,1:23:01.89,1:23:05.73,Default,,0,0,0,,<i>And she was like, "I just, you\Nknow, I don't wanna seem like a robot.</i>
+Dialogue: 0,1:23:05.77,1:23:08.31,Default,,0,0,0,,<i>"The transition is weird,\Nit was tough."</i>
+Dialogue: 0,1:23:08.40,1:23:10.44,Default,,0,0,0,,<i>And then we got to</i>
+Dialogue: 0,1:23:10.48,1:23:13.57,Default,,0,0,0,,<i>"We've got to get you attacking\Nthose guys and you're gonna stab a guy.</i>
+Dialogue: 0,1:23:13.61,1:23:17.90,Default,,0,0,0,,<i>"When you stab him,\Nthat's when you'll show it."</i>
+Dialogue: 0,1:23:18.87,1:23:22.49,Default,,0,0,0,,<i>And well, she certainly did.\NAnd aften/vards she said</i>
+Dialogue: 0,1:23:22.58,1:23:26.16,Default,,0,0,0,,<i>you know, "Thank you for hearing me."\NAnd she was right. She did need that.</i>
+Dialogue: 0,1:23:26.25,1:23:29.04,Default,,0,0,0,,<i>As I was editing the movie,\NI saw more and more</i>
+Dialogue: 0,1:23:29.13,1:23:32.34,Default,,0,0,0,,<i>she did need some kind of\Nrelease, some kind of mourning</i>
+Dialogue: 0,1:23:32.42,1:23:35.46,Default,,0,0,0,,<i>besides the funeral\Nthat was to come.</i>
+Dialogue: 0,1:23:36.05,1:23:40.80,Default,,0,0,0,,<i>Now I've talked right over, obviously,\Nthe great Kaylee "l'm gonna Iive" moment.</i>
+Dialogue: 0,1:23:43.73,1:23:47.01,Default,,0,0,0,,<i>And there, by the way,\Nis the CGI weapon</i>
+Dialogue: 0,1:23:47.10,1:23:48.85,Default,,0,0,0,,<i>that we gave to Inara.</i>
+Dialogue: 0,1:23:48.94,1:23:52.81,Default,,0,0,0,,<i>If you look carefully, she does have a\Nbow when she's in the back of the frame</i>
+Dialogue: 0,1:23:52.90,1:23:55.19,Default,,0,0,0,,<i>but we took the color\Nout of it so you can't see it</i>
+Dialogue: 0,1:23:55.28,1:23:57.32,Default,,0,0,0,,<i>and took the string\Nout of her face.</i>
+Dialogue: 0,1:24:03.37,1:24:06.70,Default,,0,0,0,,<i>And here, Rhythm</i> & <i>Hues\Nwas given the job</i>
+Dialogue: 0,1:24:06.79,1:24:10.41,Default,,0,0,0,,<i>of designing\Nthis generator shaft</i>
+Dialogue: 0,1:24:10.80,1:24:15.76,Default,,0,0,0,,<i>and did a really good job of\Nmaking it seem like the jaws of death</i>
+Dialogue: 0,1:24:16.59,1:24:19.30,Default,,0,0,0,,<i>without making it seem\Nlike it had no purpose.</i>
+Dialogue: 0,1:24:19.35,1:24:23.09,Default,,0,0,0,,<i>You do believe that it in fact\Nwould run this place.</i>
+Dialogue: 0,1:24:25.81,1:24:27.39,Default,,0,0,0,,Zoe, gorrammit!
+Dialogue: 0,1:24:33.69,1:24:35.52,Default,,0,0,0,,<i>Because the bow and arrow\Nwas just not registering.</i>
+Dialogue: 0,1:24:35.57,1:24:37.69,Default,,0,0,0,,<i>This stabbing is what\NI'm talking about.</i>
+Dialogue: 0,1:24:37.74,1:24:39.90,Default,,0,0,0,,<i>It gets her out of the way\Nso he can shoot</i>
+Dialogue: 0,1:24:39.99,1:24:44.41,Default,,0,0,0,,<i>and it gives her a chance to just\Ngo to town on one of these guys</i>
+Dialogue: 0,1:24:44.49,1:24:48.11,Default,,0,0,0,,<i>and let loose everything\Nshe was not expressing before.</i>
+Dialogue: 0,1:24:49.08,1:24:50.20,Default,,0,0,0,,<i>The best thing...</i>
+Dialogue: 0,1:24:50.29,1:24:55.25,Default,,0,0,0,,<i>The best thing about doing this,\Nbelieve me when I say it's not the effects.</i>
+Dialogue: 0,1:24:56.30,1:25:00.13,Default,,0,0,0,,<i>They're, you know,\Ndifficult at best.</i>
+Dialogue: 0,1:25:00.22,1:25:03.38,Default,,0,0,0,,<i>The best thing is\Nwhat the actors bring you.</i>
+Dialogue: 0,1:25:05.60,1:25:09.76,Default,,0,0,0,,<i>When you disagree\Nor find something unexpected</i>
+Dialogue: 0,1:25:10.85,1:25:14.02,Default,,0,0,0,,<i>and sometimes, you know,\NI like to think that I'm right</i>
+Dialogue: 0,1:25:14.07,1:25:16.52,Default,,0,0,0,,<i>but I would watch some of this</i>
+Dialogue: 0,1:25:16.57,1:25:19.95,Default,,0,0,0,,<i>and I'd do eight takes of\Nsomething and then use the first one</i>
+Dialogue: 0,1:25:19.95,1:25:22.73,Default,,0,0,0,,<i>but we inter-cut them\Neven more in editing.</i>
+Dialogue: 0,1:25:25.08,1:25:28.12,Default,,0,0,0,,<i>Anyway, once when\Nhe knocks over the case</i>
+Dialogue: 0,1:25:28.16,1:25:31.87,Default,,0,0,0,,<i>so we see what happens if\Nyou fall in the jaws of death</i>
+Dialogue: 0,1:25:31.96,1:25:35.45,Default,,0,0,0,,<i>once to re-establish the space\Nand then finally as Mal leaves</i>
+Dialogue: 0,1:25:35.51,1:25:39.34,Default,,0,0,0,,<i>and, you know, knowing exactly\Nwhen we were gonna do that...</i>
+Dialogue: 0,1:25:39.43,1:25:41.76,Default,,0,0,0,,<i>There's our third of the five.</i>
+Dialogue: 0,1:25:42.18,1:25:45.22,Default,,0,0,0,,<i>Keeps you going exactly\Nas much as you need.</i>
+Dialogue: 0,1:25:48.81,1:25:52.30,Default,,0,0,0,,<i>Now, special effects\Ncannot buy you Nathan Fillion</i>
+Dialogue: 0,1:25:52.35,1:25:54.35,Default,,0,0,0,,<i>throwing his face\Ninto Plexiglas.</i>
+Dialogue: 0,1:25:54.61,1:25:59.57,Default,,0,0,0,,<i>Luckily, Nathan will do that for\Nyou himself at the drop of a hat.</i>
+Dialogue: 0,1:26:00.65,1:26:02.57,Default,,0,0,0,,<i>And so, that's useful.</i>
+Dialogue: 0,1:26:02.66,1:26:06.49,Default,,0,0,0,,<i>I also love the cutting\Nin this sequence</i>
+Dialogue: 0,1:26:06.58,1:26:09.86,Default,,0,0,0,,<i>where things just get worse\Nand worse and worse.</i>
+Dialogue: 0,1:26:10.46,1:26:13.74,Default,,0,0,0,,<i>A shout out also to\Nour extraordinary sound guys</i>
+Dialogue: 0,1:26:14.96,1:26:18.33,Default,,0,0,0,,<i>because I watched\Nthis scene many times</i>
+Dialogue: 0,1:26:18.38,1:26:20.100,Default,,0,0,0,,<i>and I thought\Nit was beautifully edited</i>
+Dialogue: 0,1:26:21.05,1:26:25.59,Default,,0,0,0,,<i>but I listened to it towards the\Nend of the final mix and was like</i>
+Dialogue: 0,1:26:25.68,1:26:28.26,Default,,0,0,0,,<i>"I'm feeling something I haven't\Nfelt and I don't know what it is"</i>
+Dialogue: 0,1:26:28.35,1:26:30.68,Default,,0,0,0,,<i>and realized it was fear.</i>
+Dialogue: 0,1:26:31.39,1:26:34.85,Default,,0,0,0,,<i>The sounds they created for the\NReavers, which is again the hardest thing</i>
+Dialogue: 0,1:26:34.94,1:26:37.23,Default,,0,0,0,,<i>when I talked about\Nhiding intent.</i>
+Dialogue: 0,1:26:37.32,1:26:41.06,Default,,0,0,0,,<i>They had to be human, but not\Nhuman. They had to sound like humans</i>
+Dialogue: 0,1:26:41.15,1:26:45.11,Default,,0,0,0,,<i>who had strained their vocal\Npoints past the point of coherence</i>
+Dialogue: 0,1:26:45.20,1:26:48.78,Default,,0,0,0,,<i>but not sound like vampires,\Nnot sound like demons.</i>
+Dialogue: 0,1:26:50.58,1:26:53.99,Default,,0,0,0,,<i>It was very important to\Nfind a sound that was specific.</i>
+Dialogue: 0,1:26:54.04,1:26:57.08,Default,,0,0,0,,<i>And they had a dozen actors</i>
+Dialogue: 0,1:26:57.17,1:27:00.04,Default,,0,0,0,,<i>and really good actors</i>
+Dialogue: 0,1:27:00.67,1:27:03.71,Default,,0,0,0,,<i>in a room at a time making,\Nyou know, stepping up one by one</i>
+Dialogue: 0,1:27:03.80,1:27:07.92,Default,,0,0,0,,<i>and making these incoherent\Ngarbling sounds of pure rage.</i>
+Dialogue: 0,1:27:08.01,1:27:11.97,Default,,0,0,0,,<i>And it could be very,\Nvery intense.</i>
+Dialogue: 0,1:27:15.19,1:27:16.43,Default,,0,0,0,,(GUN FIRING)
+Dialogue: 0,1:27:17.19,1:27:18.56,Default,,0,0,0,,<i>Sean taking his own fall</i>
+Dialogue: 0,1:27:18.61,1:27:23.32,Default,,0,0,0,,<i>because Sean, any chance he\Ngets to do a stunt, he'll take as well.</i>
+Dialogue: 0,1:27:23.40,1:27:25.24,Default,,0,0,0,,<i>He loves to do that.</i>
+Dialogue: 0,1:27:25.70,1:27:26.90,Default,,0,0,0,,Ineed
+Dialogue: 0,1:27:27.45,1:27:29.53,Default,,0,0,0,,adrenaline and...
+Dialogue: 0,1:27:33.33,1:27:36.99,Default,,0,0,0,,<i>makes you believe, and\NBook makes you believe that</i>
+Dialogue: 0,1:27:37.08,1:27:41.20,Default,,0,0,0,,<i>you know, this guy, he might\Njust pick them all off, one by one.</i>
+Dialogue: 0,1:27:41.26,1:27:43.62,Default,,0,0,0,,<i>It might be\Nthat kind of movie.</i>
+Dialogue: 0,1:27:46.30,1:27:51.26,Default,,0,0,0,,<i>This sequence was really the end of\Nshooting for everybody in the sequence.</i>
+Dialogue: 0,1:27:51.35,1:27:53.72,Default,,0,0,0,,<i>Nathan was the only one\Nstill working after this.</i>
+Dialogue: 0,1:27:56.60,1:28:01.77,Default,,0,0,0,,<i>This scene, the only problem we had\Nwith the sound was on Sean's coverage</i>
+Dialogue: 0,1:28:01.86,1:28:05.19,Default,,0,0,0,,<i>and it's because\NSummer was weeping.</i>
+Dialogue: 0,1:28:06.03,1:28:09.57,Default,,0,0,0,,<i>We did, I think, two takes\Non Sean. He was so good</i>
+Dialogue: 0,1:28:11.12,1:28:14.36,Default,,0,0,0,,<i>and the relationship between them\Nthat had been built from the very start</i>
+Dialogue: 0,1:28:14.45,1:28:17.62,Default,,0,0,0,,<i>of the first episode of\Nthe show, three years ago</i>
+Dialogue: 0,1:28:17.67,1:28:22.63,Default,,0,0,0,,<i>was all played out in that moment,\Nand he absolutely just sent her sobbing.</i>
+Dialogue: 0,1:28:22.67,1:28:25.91,Default,,0,0,0,,<i>We had to wait to do her\Ncoverage until she recovered</i>
+Dialogue: 0,1:28:25.97,1:28:29.30,Default,,0,0,0,,<i>because she was crying too\Nmuch. It was really beautiful.</i>
+Dialogue: 0,1:28:31.26,1:28:34.68,Default,,0,0,0,,<i>And this of course is,\Nagain, there to say</i>
+Dialogue: 0,1:28:34.77,1:28:37.13,Default,,0,0,0,,<i>"It's not</i>
+Dialogue: 0,1:28:37.19,1:28:40.93,Default,,0,0,0,,<i>"Simon who's gonna die. It's River.\NShe is making the sacrifice play."</i>
+Dialogue: 0,1:28:41.36,1:28:44.65,Default,,0,0,0,,<i>They are establishing\Nto take us back into what was</i>
+Dialogue: 0,1:28:44.69,1:28:47.78,Default,,0,0,0,,<i>you know, as a\Ndifferent kind of epic fight.</i>
+Dialogue: 0,1:28:49.20,1:28:53.94,Default,,0,0,0,,<i>You saw in there one of the\Nlittle things I always liked to add.</i>
+Dialogue: 0,1:28:53.99,1:28:56.95,Default,,0,0,0,,<i>"Why hasn't he drawn\Nhis sword?" is the question.</i>
+Dialogue: 0,1:28:57.66,1:28:59.25,Default,,0,0,0,,<i>This was\Nin the script obviously.</i>
+Dialogue: 0,1:28:59.33,1:29:02.50,Default,,0,0,0,,<i>Mal 's tiny screwdriver and\Nthat worked out just great.</i>
+Dialogue: 0,1:29:04.17,1:29:05.50,Default,,0,0,0,,<i>But, why hasn't he\Ndrawn his sword?</i>
+Dialogue: 0,1:29:05.55,1:29:07.13,Default,,0,0,0,,<i>I answered by having him\Nstart to draw it</i>
+Dialogue: 0,1:29:07.17,1:29:10.92,Default,,0,0,0,,<i>and Mal giving a chop in the\Narmpit, which can be really painful.</i>
+Dialogue: 0,1:29:11.35,1:29:14.34,Default,,0,0,0,,<i>Not as painful as being\Nstabbed, admittedly</i>
+Dialogue: 0,1:29:14.39,1:29:19.18,Default,,0,0,0,,<i>but to me that kind of thing is a little\Nunexpected. It adds a little reality.</i>
+Dialogue: 0,1:29:19.52,1:29:21.60,Default,,0,0,0,,<i>And it answers a question.</i>
+Dialogue: 0,1:29:21.69,1:29:23.85,Default,,0,0,0,,<i>"The guy has a sword.\NWhy hasn't he used it?"</i>
+Dialogue: 0,1:29:24.02,1:29:27.77,Default,,0,0,0,,<i>And then, let's use the little\Nscrewdriver to stab him in the leg</i>
+Dialogue: 0,1:29:27.86,1:29:30.15,Default,,0,0,0,,<i>pull him fon/vard into the hit</i>
+Dialogue: 0,1:29:30.20,1:29:32.73,Default,,0,0,0,,<i>and let's cut around the fact\Nthat Mal's been stabbed.</i>
+Dialogue: 0,1:29:32.82,1:29:35.36,Default,,0,0,0,,<i>We had much more\N"Mal has been stabbed."</i>
+Dialogue: 0,1:29:36.37,1:29:40.53,Default,,0,0,0,,<i>But it wasn 't just a question of rating.\NIt was actually a question of believability.</i>
+Dialogue: 0,1:29:40.58,1:29:42.95,Default,,0,0,0,,<i>If you thought that\Nhe'd been totally run through</i>
+Dialogue: 0,1:29:44.00,1:29:46.87,Default,,0,0,0,,<i>then honestly,\Nwhy is he walking around now?</i>
+Dialogue: 0,1:29:46.96,1:29:50.25,Default,,0,0,0,,<i>It's easy to say that\Nmedicine is better in the future</i>
+Dialogue: 0,1:29:50.34,1:29:53.51,Default,,0,0,0,,<i>and he does say that The\NOperative patches up his hurt</i>
+Dialogue: 0,1:29:54.31,1:29:56.55,Default,,0,0,0,,<i>later on, but the fact\Nof the matter is</i>
+Dialogue: 0,1:29:56.64,1:29:58.97,Default,,0,0,0,,<i>you know, he's walking,\Ntalking, laughing, and scratching</i>
+Dialogue: 0,1:29:59.06,1:30:00.05,Default,,0,0,0,,<i>after he's been stabbed.</i>
+Dialogue: 0,1:30:00.14,1:30:01.89,Default,,0,0,0,,<i>So we minimized the stabbing</i>
+Dialogue: 0,1:30:02.52,1:30:05.76,Default,,0,0,0,,<i>so that it was a little more\Nbelievable to the audience.</i>
+Dialogue: 0,1:30:07.19,1:30:08.90,Default,,0,0,0,,<i>I really like to\Nhurt my heroes.</i>
+Dialogue: 0,1:30:08.99,1:30:10.10,Default,,0,0,0,,<i>I like to put them\Nthrough everything.</i>
+Dialogue: 0,1:30:10.20,1:30:13.23,Default,,0,0,0,,<i>I think it's well known,\Nwell documented</i>
+Dialogue: 0,1:30:13.32,1:30:18.03,Default,,0,0,0,,<i>that Nathan was in fact throwing\Nhis face into the Plexiglas deliberately</i>
+Dialogue: 0,1:30:18.08,1:30:20.91,Default,,0,0,0,,<i>and he did it six times\Nfor that other shot.</i>
+Dialogue: 0,1:30:20.100,1:30:23.46,Default,,0,0,0,,<i>Then his face\Nswelled up admirably.</i>
+Dialogue: 0,1:30:23.54,1:30:25.75,Default,,0,0,0,,<i>These close-ups of him,\Nby the way</i>
+Dialogue: 0,1:30:26.25,1:30:28.96,Default,,0,0,0,,<i>were the last thing I got\Non that reshoot day.</i>
+Dialogue: 0,1:30:29.05,1:30:32.26,Default,,0,0,0,,<i>Since I had it,\Nand we finished so quickly</i>
+Dialogue: 0,1:30:32.34,1:30:36.18,Default,,0,0,0,,<i>Isaid, "You know, the part where we\Nthink he's paralyzed by The Operative.</i>
+Dialogue: 0,1:30:36.26,1:30:40.97,Default,,0,0,0,,<i>"Ifl had a close-up of his hand\Nand his face, it would really help."</i>
+Dialogue: 0,1:30:41.06,1:30:42.27,Default,,0,0,0,,<i>So they ran out.</i>
+Dialogue: 0,1:30:42.35,1:30:46.47,Default,,0,0,0,,<i>I didn't say this before we shot it. I\Nsaid it when I realized we had time.</i>
+Dialogue: 0,1:30:46.56,1:30:49.52,Default,,0,0,0,,<i>I think it really helps give the\Nsequence</i> a <i>little more oomph.</i>
+Dialogue: 0,1:30:49.61,1:30:52.44,Default,,0,0,0,,Expect you'd want to say your\Nfamous last words right now.
+Dialogue: 0,1:30:52.78,1:30:54.49,Default,,0,0,0,,Just one trouble.
+Dialogue: 0,1:30:54.61,1:30:56.82,Default,,0,0,0,,<i>WHEDON: People really seemed\Nto appreciate the idea.</i>
+Dialogue: 0,1:30:56.91,1:30:59.78,Default,,0,0,0,,<i>Again, I think it's because you\Ngive them something to hold on to</i>
+Dialogue: 0,1:30:59.83,1:31:04.91,Default,,0,0,0,,<i>an explanation of the idea that\Nhis nerve cluster had been moved.</i>
+Dialogue: 0,1:31:04.96,1:31:08.100,Default,,0,0,0,,<i>And that's why The Operative's\Nfavorite trick didn't work on him.</i>
+Dialogue: 0,1:31:11.88,1:31:13.87,Default,,0,0,0,,<i>This is the most\Nimportant line</i>
+Dialogue: 0,1:31:14.47,1:31:16.55,Default,,0,0,0,,I'm gonna show you\Na world without sin.
+Dialogue: 0,1:31:17.35,1:31:19.63,Default,,0,0,0,,<i>WHEDON: in the film to me,\Nbecause, honestly</i>
+Dialogue: 0,1:31:19.72,1:31:23.06,Default,,0,0,0,,<i>the film is really about something.\NIt's about the right to be wrong.</i>
+Dialogue: 0,1:31:23.14,1:31:27.98,Default,,0,0,0,,<i>It's about the idea that you cannot\Nimpose your way of thinking on people</i>
+Dialogue: 0,1:31:28.02,1:31:31.98,Default,,0,0,0,,<i>even if your way of thinking is more\Nenlightened and better than theirs.</i>
+Dialogue: 0,1:31:32.03,1:31:34.27,Default,,0,0,0,,<i>It's just simply not\Nhow human beings are.</i>
+Dialogue: 0,1:31:34.32,1:31:38.78,Default,,0,0,0,,<i>And you take that further and you\Nsay, the idea of sin is in fact outmoded</i>
+Dialogue: 0,1:31:39.49,1:31:43.16,Default,,0,0,0,,<i>is in fact more archaic than\Nanything that Mal believes in.</i>
+Dialogue: 0,1:31:43.25,1:31:45.83,Default,,0,0,0,,<i>When he says,\N"l'm a fan of all seven"...</i>
+Dialogue: 0,1:31:46.00,1:31:50.96,Default,,0,0,0,,<i>Let's take a moment to\Nappreciate how that gives slightly</i>
+Dialogue: 0,1:31:52.01,1:31:55.42,Default,,0,0,0,,<i>as he walks on it. I love that.\NOur last look-down moment.</i>
+Dialogue: 0,1:31:56.14,1:31:59.22,Default,,0,0,0,,<i>He's saying that sin\Nis just what people are.</i>
+Dialogue: 0,1:31:59.31,1:32:01.64,Default,,0,0,0,,<i>It's been codified,\Nit's been given a name.</i>
+Dialogue: 0,1:32:01.68,1:32:03.76,Default,,0,0,0,,<i>But all of those things\Nwe take as faults</i>
+Dialogue: 0,1:32:03.85,1:32:06.68,Default,,0,0,0,,<i>are also the source\Nof pleasure and decency.</i>
+Dialogue: 0,1:32:06.77,1:32:09.68,Default,,0,0,0,,<i>We should perhaps\Nrethink it</i> now.
+Dialogue: 0,1:32:09.73,1:32:12.85,Default,,0,0,0,,<i>This is another\NSummer Glau oner.</i>
+Dialogue: 0,1:32:12.90,1:32:14.48,Default,,0,0,0,,<i>She's doing\Nall of this in one.</i>
+Dialogue: 0,1:32:14.53,1:32:17.36,Default,,0,0,0,,<i>And believe me when I say she\Nhad prepared to do a lot more.</i>
+Dialogue: 0,1:32:17.45,1:32:21.11,Default,,0,0,0,,<i>But for the momentum of the film,\Nlhad to end the shot at some point.</i>
+Dialogue: 0,1:32:21.95,1:32:23.53,Default,,0,0,0,,<i>That's an incredibly\Nheroic thing</i>
+Dialogue: 0,1:32:23.62,1:32:26.86,Default,,0,0,0,,<i>but it's also by virtue\Nof her being a dancer</i>
+Dialogue: 0,1:32:26.96,1:32:29.87,Default,,0,0,0,,<i>and Mark Moore, the cameraman,\Nbeing a bit of a dancer himself</i>
+Dialogue: 0,1:32:29.92,1:32:31.70,Default,,0,0,0,,<i>because he's circling her\Nthe whole time.</i>
+Dialogue: 0,1:32:31.75,1:32:34.29,Default,,0,0,0,,<i>So, we worked out the fight\Nthey had given us.</i>
+Dialogue: 0,1:32:36.55,1:32:39.92,Default,,0,0,0,,<i>And then found a pocket\Nfor Mark to get into</i>
+Dialogue: 0,1:32:40.01,1:32:42.50,Default,,0,0,0,,<i>to go all around her,\Nthe whole time.</i>
+Dialogue: 0,1:32:43.02,1:32:46.55,Default,,0,0,0,,<i>That also contains\Nthe great Jack Green lighting</i>
+Dialogue: 0,1:32:46.64,1:32:48.51,Default,,0,0,0,,<i>of throwing a spot on her</i>
+Dialogue: 0,1:32:48.60,1:32:52.06,Default,,0,0,0,,<i>and two spots around her\Nand just waving them around.</i>
+Dialogue: 0,1:32:52.15,1:32:53.94,Default,,0,0,0,,<i>You don't notice it\Nat the time</i>
+Dialogue: 0,1:32:54.32,1:32:57.06,Default,,0,0,0,,<i>but it gives it a very\Nexpressionistic feel</i>
+Dialogue: 0,1:32:57.74,1:32:59.65,Default,,0,0,0,,<i>which feels right for</i>
+Dialogue: 0,1:33:00.24,1:33:03.45,Default,,0,0,0,,<i>what River is going through,\Neven if it doesn't make logical sense</i>
+Dialogue: 0,1:33:03.54,1:33:06.40,Default,,0,0,0,,<i>because River herself\Ndoesn't make logical sense.</i>
+Dialogue: 0,1:33:06.45,1:33:08.70,Default,,0,0,0,,<i>And here we have the hero shot</i>
+Dialogue: 0,1:33:08.79,1:33:13.58,Default,,0,0,0,,<i>and I have never used that\Nterm more literally in my life.</i>
+Dialogue: 0,1:33:14.96,1:33:19.33,Default,,0,0,0,,<i>We designed the entire set and\Nthe entire sequence for this moment.</i>
+Dialogue: 0,1:33:21.22,1:33:24.76,Default,,0,0,0,,<i>It has been pointed out to me\Nthat I have a problem</i>
+Dialogue: 0,1:33:25.10,1:33:28.76,Default,,0,0,0,,<i>making fiction that doesn't have\Nsuper hard adolescent girls in it.</i>
+Dialogue: 0,1:33:29.23,1:33:30.59,Default,,0,0,0,,<i>I</i> don't care.
+Dialogue: 0,1:33:30.69,1:33:32.90,Default,,0,0,0,,<i>I think that's one of\Nthe sweetest things</i>
+Dialogue: 0,1:33:32.94,1:33:35.77,Default,,0,0,0,,<i>that I ever shot\Nand it makes me very happy.</i>
+Dialogue: 0,1:33:37.74,1:33:42.70,Default,,0,0,0,,<i>Here we overexposed Summer again\Nand we pushed it as far as we could.</i>
+Dialogue: 0,1:33:44.16,1:33:48.32,Default,,0,0,0,,<i>I think it makes it very intense.\NIt makes her look very intense</i>
+Dialogue: 0,1:33:48.41,1:33:49.95,Default,,0,0,0,,<i>to have it that\Nunnaturally bright.</i>
+Dialogue: 0,1:33:49.100,1:33:52.74,Default,,0,0,0,,<i>It</i> reminds me of\NGood Will Hunting.
+Dialogue: 0,1:33:52.79,1:33:56.46,Default,,0,0,0,,<i>The close-ups of Matt Damon,\Nwhen Robin Williams is talking to him.</i>
+Dialogue: 0,1:33:56.59,1:33:58.88,Default,,0,0,0,,<i>It's almost artsy.</i>
+Dialogue: 0,1:33:58.97,1:34:01.75,Default,,0,0,0,,<i>But in context of</i>\Na <i>big light shining on her</i>
+Dialogue: 0,1:34:01.80,1:34:04.72,Default,,0,0,0,,<i>you wouldn 't necessarily\Nrecognize it as such.</i>
+Dialogue: 0,1:34:07.22,1:34:09.47,Default,,0,0,0,,<i>That whole sequence\Ndid not exist originally.</i>
+Dialogue: 0,1:34:09.56,1:34:11.60,Default,,0,0,0,,<i>It went off on somebody\Nabout to pull the trigger</i>
+Dialogue: 0,1:34:11.65,1:34:13.93,Default,,0,0,0,,<i>and you found out after the\Nfuneral what had happened.</i>
+Dialogue: 0,1:34:14.31,1:34:16.65,Default,,0,0,0,,<i>But audiences weren't\Nreally keying into that.</i>
+Dialogue: 0,1:34:16.69,1:34:21.15,Default,,0,0,0,,<i>So, it was the advice of, again,\Nthe invaluable Mary Parent</i>
+Dialogue: 0,1:34:21.24,1:34:23.48,Default,,0,0,0,,<i>the executive on the thing</i>
+Dialogue: 0,1:34:23.91,1:34:28.03,Default,,0,0,0,,<i>to actually hear him say stand down\Nand understand that they had won.</i>
+Dialogue: 0,1:34:28.54,1:34:31.32,Default,,0,0,0,,<i>Because people were confused.\NSome people thought the movie was over</i>
+Dialogue: 0,1:34:31.66,1:34:35.50,Default,,0,0,0,,<i>some people thought that there had been\Na big fight and she'd killed everybody.</i>
+Dialogue: 0,1:34:36.21,1:34:39.88,Default,,0,0,0,,<i>But we didn't actually\Nhave footage of</i>
+Dialogue: 0,1:34:39.97,1:34:41.83,Default,,0,0,0,,<i>everybody reacting to him\Nsaying, "Stand down."</i>
+Dialogue: 0,1:34:41.93,1:34:45.01,Default,,0,0,0,,<i>So her look back\Nto Mal is, I think</i>
+Dialogue: 0,1:34:45.10,1:34:49.18,Default,,0,0,0,,<i>either reversed or taken after the fact.\NAnd those men putting their guns down</i>
+Dialogue: 0,1:34:49.56,1:34:52.35,Default,,0,0,0,,<i>they are actually putting their\Nguns down because I said, "Cut."</i>
+Dialogue: 0,1:34:52.73,1:34:54.39,Default,,0,0,0,,<i>And we slowed it down.</i>
+Dialogue: 0,1:34:54.48,1:34:58.77,Default,,0,0,0,,<i>They have</i> a <i>new process\Nwhereby they can smooth it out.</i>
+Dialogue: 0,1:34:58.86,1:35:01.02,Default,,0,0,0,,<i>If you look carefully, by the\Nway, in the left hand of the frame</i>
+Dialogue: 0,1:35:01.07,1:35:03.73,Default,,0,0,0,,<i>somebody's putting down\Nnot a gun but a camera.</i>
+Dialogue: 0,1:35:03.82,1:35:06.28,Default,,0,0,0,,<i>But luckily,\Nit blows through pretty fast.</i>
+Dialogue: 0,1:35:13.37,1:35:17.16,Default,,0,0,0,,<i>The funeral sequence, obviously,\Nit used to be</i> a <i>little bit longer.</i>
+Dialogue: 0,1:35:17.21,1:35:21.58,Default,,0,0,0,,<i>But, you know, we realized we did\Nhave to finish the movie at some point.</i>
+Dialogue: 0,1:35:21.67,1:35:24.21,Default,,0,0,0,,<i>But it was one of the first\Nthings we shot with the cast</i>
+Dialogue: 0,1:35:24.26,1:35:26.67,Default,,0,0,0,,<i>and as far out\Nas we went to get that...</i>
+Dialogue: 0,1:35:26.72,1:35:28.55,Default,,0,0,0,,<i>And again a Jack Green moment.</i>
+Dialogue: 0,1:35:28.60,1:35:31.72,Default,,0,0,0,,<i>Because we shot it at sunset,\Nit was very windy</i>
+Dialogue: 0,1:35:31.81,1:35:34.60,Default,,0,0,0,,<i>the light was very bright\Non them, but very dramatic.</i>
+Dialogue: 0,1:35:34.69,1:35:38.40,Default,,0,0,0,,<i>And he said, "We have to shoot\None right after the sun goes below."</i>
+Dialogue: 0,1:35:38.48,1:35:40.27,Default,,0,0,0,,<i>I said, "Okay, we'll try."</i>
+Dialogue: 0,1:35:40.36,1:35:44.32,Default,,0,0,0,,<i>And it turned out to be the most beautiful\Nlight that I've ever seen on people.</i>
+Dialogue: 0,1:35:45.03,1:35:49.07,Default,,0,0,0,,<i>We had to shoot it so fast, but\Nnobody had to speak, no sound.</i>
+Dialogue: 0,1:35:49.91,1:35:52.20,Default,,0,0,0,,<i>It was kind of a glorious\Ntime for everybody.</i>
+Dialogue: 0,1:35:52.25,1:35:55.41,Default,,0,0,0,,<i>It was a lot of people 's first\Nday and the return to the movie.</i>
+Dialogue: 0,1:35:55.50,1:35:58.96,Default,,0,0,0,,<i>The vista, even if it was a\Nlittle dry, it was very beautiful.</i>
+Dialogue: 0,1:35:59.04,1:36:01.25,Default,,0,0,0,,<i>And just to see them all\Nstanding there</i>
+Dialogue: 0,1:36:01.34,1:36:04.58,Default,,0,0,0,,<i>and to have, you know,\Nan unabashedly Western moment</i>
+Dialogue: 0,1:36:04.63,1:36:09.00,Default,,0,0,0,,<i>to honor the dead in that\Nmovie was very thrilling.</i>
+Dialogue: 0,1:36:12.02,1:36:14.97,Default,,0,0,0,,I can't guarantee that\Nthey won't come after you.
+Dialogue: 0,1:36:15.77,1:36:17.13,Default,,0,0,0,,The Parliament.
+Dialogue: 0,1:36:17.65,1:36:20.39,Default,,0,0,0,,Your broadwave about Miranda\Nhas weakened their regime.
+Dialogue: 0,1:36:20.44,1:36:21.85,Default,,0,0,0,,They are not gone.
+Dialogue: 0,1:36:25.90,1:36:29.44,Default,,0,0,0,,<i>He said, "I've put no\Nlight on Chiwetel's face.</i>
+Dialogue: 0,1:36:29.53,1:36:33.37,Default,,0,0,0,,<i>"I've put light on either side of\Nhim but I've kept him in darkness."</i>
+Dialogue: 0,1:36:34.95,1:36:39.07,Default,,0,0,0,,<i>I absolutely loved that,\Nbecause, you know, he's gone.</i>
+Dialogue: 0,1:36:40.09,1:36:43.25,Default,,0,0,0,,<i>He's a shadow. He's\Nlost himself completely.</i>
+Dialogue: 0,1:36:43.30,1:36:46.96,Default,,0,0,0,,<i>This is another thing. And I even had\Nthem take the light off his back there</i>
+Dialogue: 0,1:36:47.05,1:36:48.51,Default,,0,0,0,,<i>where it was</i>\Na <i>little bit bright,</i>
+Dialogue: 0,1:36:48.59,1:36:51.46,Default,,0,0,0,,<i>so that he'd be nothing\Nbut a shadow.</i>
+Dialogue: 0,1:36:52.06,1:36:53.72,Default,,0,0,0,,<i>Because he's lost\Nhis belief system</i>
+Dialogue: 0,1:36:53.81,1:36:56.97,Default,,0,0,0,,<i>and unlike Mal he is not the kind\Nof person who can live through that.</i>
+Dialogue: 0,1:36:57.06,1:36:59.97,Default,,0,0,0,,<i>It happened to Mal. Mal\Nwent on. It happened to him.</i>
+Dialogue: 0,1:37:00.44,1:37:02.77,Default,,0,0,0,,<i>He doesn't.\NHe drifts</i> away.
+Dialogue: 0,1:37:03.32,1:37:05.10,Default,,0,0,0,,<i>I find that\Nkind of beautiful.</i>
+Dialogue: 0,1:37:05.15,1:37:08.31,Default,,0,0,0,,<i>It makes me respect him, in\Na way, more than I ever did.</i>
+Dialogue: 0,1:37:09.78,1:37:12.65,Default,,0,0,0,,<i>For the hero to convince\Nthe bad guy that he is wrong</i>
+Dialogue: 0,1:37:12.70,1:37:15.53,Default,,0,0,0,,<i>to me is a lot more powerful\Nthan just killing him.</i>
+Dialogue: 0,1:37:15.62,1:37:19.74,Default,,0,0,0,,<i>This was a sequence that,\Nin rehearsal</i>
+Dialogue: 0,1:37:19.83,1:37:23.45,Default,,0,0,0,,<i>Gina said, "Now this conversation\Nabout this ship. This is about me.</i>
+Dialogue: 0,1:37:24.17,1:37:25.38,Default,,0,0,0,,<i>"And so, how do you\Nwant me to play it?"</i>
+Dialogue: 0,1:37:25.46,1:37:28.46,Default,,0,0,0,,<i>Isaid, "Yes, obviously, it's\Nabout you. So, what I want..."</i>
+Dialogue: 0,1:37:28.51,1:37:32.30,Default,,0,0,0,,<i>And, Nathan just looked up and\Nsaid, "Wait. What? I'm sorry, it's what?</i>
+Dialogue: 0,1:37:32.60,1:37:34.34,Default,,0,0,0,,<i>"This</i> is... <i>It's about her?"</i>
+Dialogue: 0,1:37:34.39,1:37:37.43,Default,,0,0,0,,<i>And he looked back. He's\Nlike, "l totally missed that."</i>
+Dialogue: 0,1:37:37.85,1:37:40.09,Default,,0,0,0,,<i>He's very astute\Nabout what goes on</i>
+Dialogue: 0,1:37:40.19,1:37:42.80,Default,,0,0,0,,<i>and what the subtext is.\NAnd he had totally not gotten</i>
+Dialogue: 0,1:37:42.86,1:37:44.44,Default,,0,0,0,,<i>that they were\Ntalking about her.</i>
+Dialogue: 0,1:37:45.36,1:37:48.02,Default,,0,0,0,,<i>But, obviously\Nby the time we shot</i>
+Dialogue: 0,1:37:48.07,1:37:51.19,Default,,0,0,0,,<i>he'd figured that out. And\Nthey played it beautifully.</i>
+Dialogue: 0,1:37:53.87,1:37:56.61,Default,,0,0,0,,<i>I loved this resolve\Nbetween them</i>
+Dialogue: 0,1:37:57.33,1:37:59.70,Default,,0,0,0,,<i>because it's not flying\Ninto each other's arms.</i>
+Dialogue: 0,1:38:00.04,1:38:04.03,Default,,0,0,0,,<i>It's just extremely sweet. It\Nholds the promise of something.</i>
+Dialogue: 0,1:38:05.05,1:38:09.26,Default,,0,0,0,,<i>And it's tough, because, you know,\NI have so many people to resolve</i>
+Dialogue: 0,1:38:09.55,1:38:11.34,Default,,0,0,0,,<i>and so much to do.</i>
+Dialogue: 0,1:38:14.43,1:38:19.39,Default,,0,0,0,,<i>Nathan and I would joke about\Nthe scene with Chiwetel downstairs</i>
+Dialogue: 0,1:38:19.48,1:38:21.39,Default,,0,0,0,,<i>where he'd say,\Nbasically said</i>
+Dialogue: 0,1:38:21.48,1:38:23.69,Default,,0,0,0,,<i>"Listen, you want to\Nspeed it up a little, pal?</i>
+Dialogue: 0,1:38:23.73,1:38:25.60,Default,,0,0,0,,<i>"'Cause I gotta go comfort</i>\Na <i>grieving widow</i>
+Dialogue: 0,1:38:25.69,1:38:28.56,Default,,0,0,0,,<i>"talk to a whore, and teach\Nan under-aged girl about love."</i>
+Dialogue: 0,1:38:29.40,1:38:33.94,Default,,0,0,0,,<i>He's gotta deal with all of these people\Non his crew, who happen to be all women.</i>
+Dialogue: 0,1:38:35.07,1:38:38.86,Default,,0,0,0,,<i>For this resolve to work,\Nlet's note the rain</i>
+Dialogue: 0,1:38:38.91,1:38:41.74,Default,,0,0,0,,<i>that Zoic, the CGI people,\Nput on the lens on that take-off.</i>
+Dialogue: 0,1:38:41.83,1:38:43.29,Default,,0,0,0,,<i>I love that very much.</i>
+Dialogue: 0,1:38:45.92,1:38:49.83,Default,,0,0,0,,<i>It is kind of an odd structure to end\Na movie, especially an action movie</i>
+Dialogue: 0,1:38:49.92,1:38:53.29,Default,,0,0,0,,<i>but this has always been\Nabout the people on this ship.</i>
+Dialogue: 0,1:38:53.59,1:38:58.89,Default,,0,0,0,,<i>And the resolve here is that Mal is\Nsaying something he could never have said.</i>
+Dialogue: 0,1:38:59.10,1:39:01.56,Default,,0,0,0,,<i>And when she says,\N"l like to hear you say it"</i>
+Dialogue: 0,1:39:02.10,1:39:05.77,Default,,0,0,0,,<i>she specifically means\N"say it out loud."</i>
+Dialogue: 0,1:39:06.19,1:39:09.48,Default,,0,0,0,,<i>"Because at the beginning of\Nthis movie you couldn't have.</i>
+Dialogue: 0,1:39:09.86,1:39:13.48,Default,,0,0,0,,<i>"I couldn't have understood it necessarily,\Nand you couldn't have said it."</i>
+Dialogue: 0,1:39:14.61,1:39:17.73,Default,,0,0,0,,<i>They are the two people who\Nhave found themselves the most</i>
+Dialogue: 0,1:39:17.83,1:39:19.94,Default,,0,0,0,,<i>and found the freedom\Nthat they need.</i>
+Dialogue: 0,1:39:20.04,1:39:23.87,Default,,0,0,0,,<i>Nathan said, "I don't know how I\Nam gonna do this speech about love."</i>
+Dialogue: 0,1:39:23.96,1:39:26.29,Default,,0,0,0,,<i>After the fact he said, "I\Nwas a little worried about it.</i>
+Dialogue: 0,1:39:26.34,1:39:29.67,Default,,0,0,0,,<i>"It sounded maybe</i> a <i>little bit\Nhokey. " He said, "I got on set."</i>
+Dialogue: 0,1:39:29.76,1:39:31.100,Default,,0,0,0,,<i>He said, "I turned. I\Nlooked into those two eyes."</i>
+Dialogue: 0,1:39:32.09,1:39:35.13,Default,,0,0,0,,<i>He said, "And that's where\Nthat speech came from."</i>
+Dialogue: 0,1:39:35.22,1:39:39.34,Default,,0,0,0,,<i>Because the energy he got\Noff Summer, just staring at her</i>
+Dialogue: 0,1:39:40.14,1:39:41.97,Default,,0,0,0,,<i>gave him that speech.</i>
+Dialogue: 0,1:39:42.27,1:39:44.68,Default,,0,0,0,,<i>That's why I love\Nthis crew so much.</i>
+Dialogue: 0,1:39:44.77,1:39:48.23,Default,,0,0,0,,<i>The way they work off each\Nother and with each other.</i>
+Dialogue: 0,1:39:49.19,1:39:51.98,Default,,0,0,0,,<i>They were a family.\NThis was a home.</i>
+Dialogue: 0,1:39:52.03,1:39:55.99,Default,,0,0,0,,<i>Maybe the kind that\Nas I constantly restate</i>
+Dialogue: 0,1:39:56.61,1:40:00.15,Default,,0,0,0,,<i>is falling apart,\Nbut it's a home nonetheless.</i>
+Dialogue: 0,1:40:00.66,1:40:02.70,Default,,0,0,0,,<i>I'm done talking.\NWatch the credits.</i>

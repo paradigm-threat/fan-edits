@@ -1,0 +1,16 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "KidFriendly/The Rescuers Down Under (1990) - Alena Edition",
+  "files": [
+    {
+      "path": "The Rescuers Down Under (1990) - Alena Edition.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 49646
+    },
+    {
+      "path": "The Rescuers Down Under (1990) - Alena Edition.srt",
+      "kind": "srt",
+      "bytes": 26799
+    }
+  ]
+}

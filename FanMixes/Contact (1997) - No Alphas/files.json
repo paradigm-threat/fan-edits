@@ -1,5 +1,11 @@
 {
   "schema": "flashback.project-files.v1",
   "path": "FanMixes/Contact (1997) - No Alphas",
-  "files": []
+  "files": [
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 1050
+    }
+  ]
 }

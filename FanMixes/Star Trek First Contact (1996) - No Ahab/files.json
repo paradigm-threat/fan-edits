@@ -6,6 +6,11 @@
       "path": "Star Trek First Contact (1996) - No Ahab.kdenlive",
       "kind": "kdenlive",
       "bytes": 528920
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 1126
     }
   ]
 }

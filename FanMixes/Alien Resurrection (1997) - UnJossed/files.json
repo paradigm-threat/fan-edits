@@ -8,6 +8,16 @@
       "bytes": 80625
     },
     {
+      "path": "Alien Resurrection (1997) - UnJossed.kdenlive.ass",
+      "kind": "other",
+      "bytes": 0
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 3841
+    },
+    {
       "path": "poster.jpg",
       "kind": "poster",
       "bytes": 262269
@@ -16,6 +26,11 @@
       "path": "README.md",
       "kind": "readme",
       "bytes": 5597
+    },
+    {
+      "path": "Alien Resurrection (1997) - UnJossed.srt",
+      "kind": "srt",
+      "bytes": 66647
     }
   ]
 }

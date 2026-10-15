@@ -3,9 +3,54 @@
   "path": "KidFriendly/Cinderella (1950) - KidFriendly Edition",
   "files": [
     {
+      "path": "Cinderella (1950) - KidFriendly Edition.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 6656
+    },
+    {
+      "path": "build_remove_ranges.py",
+      "kind": "other",
+      "bytes": 4301
+    },
+    {
+      "path": "Cinderella (1950) - KidFriendly Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 54567
+    },
+    {
+      "path": "generate-cinderella.sh",
+      "kind": "other",
+      "bytes": 624
+    },
+    {
+      "path": "remove-cinderella-kidfriendly-ranges.json",
+      "kind": "other",
+      "bytes": 970
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 6451
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 2245
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 1186
+    },
+    {
+      "path": "Cinderella (1950) - KidFriendly Edition.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 45895
+    },
+    {
+      "path": "Cinderella (1950) - KidFriendly Edition.srt",
+      "kind": "srt",
+      "bytes": 66085
     }
   ]
 }

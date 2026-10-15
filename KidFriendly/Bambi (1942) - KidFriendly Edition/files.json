@@ -3,9 +3,54 @@
   "path": "KidFriendly/Bambi (1942) - KidFriendly Edition",
   "files": [
     {
+      "path": "Bambi (1942) - KidFriendly Edition.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 5332
+    },
+    {
+      "path": "Bambi (1942) - KidFriendly Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 27587
+    },
+    {
+      "path": "build_remove_ranges.py",
+      "kind": "other",
+      "bytes": 3597
+    },
+    {
+      "path": "generate-bambi.sh",
+      "kind": "other",
+      "bytes": 604
+    },
+    {
+      "path": "remove-bambi-kidfriendly-ranges.json",
+      "kind": "other",
+      "bytes": 536
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 6744
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 1682
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 998
+    },
+    {
+      "path": "Bambi (1942) - KidFriendly Edition.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 22820
+    },
+    {
+      "path": "Bambi (1942) - KidFriendly Edition.srt",
+      "kind": "srt",
+      "bytes": 24930
     }
   ]
 }

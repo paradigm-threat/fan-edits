@@ -1,0 +1,47 @@
+{
+  "description": "The Mummy (1999) Debugged. Times are source seconds on the 4K YTS rip. join_fade false: same scene, hard cut. No --snap. Removals are usually violence; Jonathan arm is also medical unrealism (wound vanishes next shot).",
+  "ranges": [
+    {
+      "start": 349.933,
+      "end": 387.888,
+      "join_fade": false,
+      "reason": "violence",
+      "note": "Hom-Dai: live scarabs poured onto wrapped Imhotep. Resume Magi narration 'He was to remain sealed'."
+    },
+    {
+      "start": 3482.836,
+      "end": 3541.793,
+      "join_fade": false,
+      "reason": "violence",
+      "note": "Camp lecture: scarab skeletons / ate him alive / Hom-Dai / 10 plagues (source 00:58:02.836–00:59:01.793, cut 2026-09-23). Wider than the original 20s eat-talk window."
+    },
+    {
+      "start": 3659.03,
+      "end": 3818.398,
+      "join_fade": false,
+      "reason": "violence",
+      "note": "Hamunaptra: curse scarab swarm after Book of the Dead. Resume search 'Evelyn?'"
+    },
+    {
+      "start": 4291.704,
+      "end": 4334.372,
+      "join_fade": false,
+      "reason": "violence",
+      "note": "Cairo: Imhotep/Beni finish Burns with scarabs. Resume biblical plague 'rivers and waters of Egypt ran red'."
+    },
+    {
+      "start": 5792.908,
+      "end": 5853.283,
+      "join_fade": false,
+      "reason": "unrealism",
+      "note": "Jonathan arm: scarab under the skin, dirty hunting knife, next shot uninjured (source 01:36:32.908–01:37:33.283)."
+    },
+    {
+      "start": 6807.236,
+      "end": 6876.203,
+      "join_fade": false,
+      "reason": "violence",
+      "note": "Beni treasure-chamber death: scarabs eat him after 'Goodbye, Beni.' (source 01:53:27.236–01:54:36.203). Resume 'Look out!'"
+    }
+  ]
+}
