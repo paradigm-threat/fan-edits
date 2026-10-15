@@ -223,9 +223,11 @@
         /* Stack front/back in one grid cell; active layer sets height from poster. */
         '.fb-slideshow-stage{display:grid}',
         /* Opacity-only crossfade — do not use visibility:hidden on inactive (kills old-card fade). */
-        '.fb-slideshow-layer{grid-area:1/1;min-width:0;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;color:#e8c872;text-decoration:none;opacity:0;transition:opacity 1.1s ease-in-out;pointer-events:none;z-index:1}',
+        '.fb-slideshow-layer{grid-area:1/1;min-width:0;display:grid;grid-template-columns:1fr 1fr;align-items:stretch;color:#e8c872;text-decoration:none;opacity:0;transition:opacity 1.1s ease-in-out;pointer-events:none;z-index:1;margin:0}',
         '.fb-slideshow-layer:hover,.fb-slideshow-layer:focus{text-decoration:none}',
         '.fb-slideshow-layer.is-active{opacity:1;pointer-events:auto;z-index:2}',
+        '.fb-slideshow-title-link{color:#f5e6be;text-decoration:none}',
+        '.fb-slideshow-title-link:hover,.fb-slideshow-title-link:focus-visible{color:#e8c872;text-decoration:underline}',
         /* Poster column: intrinsic 2:3 height drives the whole card — no empty gap under art. */
         '.fb-slideshow-img{display:block;width:100%;height:auto;aspect-ratio:2/3;object-fit:contain;object-position:center center;background:#0d0505}',
         '.fb-slideshow-layer:not(.has-poster){grid-template-columns:1fr}',

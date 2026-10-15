@@ -951,6 +951,7 @@
     bar.className = 'fb-media-bar';
     bar.style.display = 'block';
     bar.setAttribute('role', 'progressbar');
+    bar.setAttribute('aria-label', 'Seed / download progress');
     bar.setAttribute('aria-valuemin', '0');
     bar.setAttribute('aria-valuemax', '100');
     bar.setAttribute('aria-valuenow', '0');

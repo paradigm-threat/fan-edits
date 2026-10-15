@@ -61,6 +61,7 @@
     var head = C.el('div', 'fb-live-chat-head');
     var title = C.el('h2', 'fb-live-chat-title', 'Live chat');
     var meta = C.el('div', 'fb-live-chat-meta');
+    meta.setAttribute('aria-live', 'polite');
     meta.textContent = '#' + channel;
     var openFull = C.el('a', 'fb-link');
     openFull.href = '/chat?c=' + encodeURIComponent(channel);
@@ -112,6 +113,7 @@
           input.type = 'text';
           input.maxLength = 400;
           input.placeholder = 'Message #' + channel;
+          input.setAttribute('aria-label', 'Message');
           var sendBtn = C.el('button', 'fb-live-chat-send', 'Send');
           sendBtn.type = 'button';
           foot.appendChild(nickInput);

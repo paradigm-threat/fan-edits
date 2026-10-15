@@ -411,7 +411,7 @@
       '.fb-chat-msg{margin:0 0 8px;word-break:break-word}',
       '.fb-chat-msg-nick{color:#e8c872;font-weight:600;margin-right:6px}',
       '.fb-chat-msg-action{color:#c4b49a;font-style:italic}',
-      '.fb-chat-msg-time{color:#6a5a4a;font-size:.75rem;margin-right:6px}',
+      '.fb-chat-msg-time{color:#a69788;font-size:.75rem;margin-right:6px}',
       '.fb-chat-link{color:#e8c872}',
       '.fb-chat-code{font-family:ui-monospace,Consolas,monospace;font-size:.88em;color:#e8c872}',
       '.fb-chat-img-wrap{margin:6px 0}',
@@ -437,7 +437,8 @@
       '.fb-chat-status{font-size:.78rem;color:#a69788}',
       '.fb-chat-app.is-fullscreen{position:fixed;inset:0;z-index:200;width:100%;height:100%;max-width:none;min-height:100%;border-radius:0;border:0}',
       'body.fb-chat-fs-open{overflow:hidden}',
-      'body.fb-chat-fs-open .fb-header,body.fb-chat-fs-open .fb-now-showing-host,body.fb-chat-fs-open .fb-footer{visibility:hidden}',
+      /* Visual hide kept; JS sets inert so chrome leaves the tab order */
+      'body.fb-chat-fs-open .fb-header,body.fb-chat-fs-open .fb-now-showing-host,body.fb-chat-fs-open .fb-footer,body.fb-chat-fs-open .fb-marquee{visibility:hidden}',
       '@media (max-width:800px){.fb-chat-app{flex-direction:column;height:min(70vh,720px);min-height:min(70vh,720px)}.fb-chat-side{width:100%;max-width:none;max-height:160px;border-right:0;border-bottom:1px solid #3a2a1a}.fb-chat-names{display:none}.fb-chat-app.is-fullscreen{height:100%;min-height:100%}}',
     ].join('');
     (global.document.head || global.document.documentElement).appendChild(st);

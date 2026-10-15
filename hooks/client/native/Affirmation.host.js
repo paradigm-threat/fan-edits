@@ -160,6 +160,28 @@
     }
   }
 
+  function syncPlayControlTabOrder() {
+    try {
+      const unlocked =
+        hasWelcome() && pathSlug() && hasMovie(pathSlug());
+      const btns = global.document.querySelectorAll('.fb-video-controls .fb-btn');
+      for (let i = 0; i < btns.length; i++) {
+        const b = btns[i];
+        if (unlocked) {
+          if (b.getAttribute('data-fb-tab-locked') === '1') {
+            b.removeAttribute('tabindex');
+            b.removeAttribute('data-fb-tab-locked');
+          }
+          if (!b.disabled) b.removeAttribute('aria-disabled');
+        } else {
+          b.setAttribute('tabindex', '-1');
+          b.setAttribute('aria-disabled', 'true');
+          b.setAttribute('data-fb-tab-locked', '1');
+        }
+      }
+    } catch (_) {}
+  }
+
   function syncDocFlags() {
     try {
       const el = global.document.documentElement;
@@ -173,6 +195,7 @@
         el.removeAttribute('data-fb-movie-ack');
         el.classList.remove('fb-playback-unlocked');
       }
+      syncPlayControlTabOrder();
     } catch (_) {}
   }
 
@@ -189,7 +212,8 @@
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-media-unlock-target{display:block!important}' +
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-movie-ack{display:none!important}' +
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-video-controls .fb-btn{opacity:1;pointer-events:auto}' +
-        'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-affirmation-native[data-fb-affirmation="title"]{display:none!important}';
+        'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-affirmation-native[data-fb-affirmation="title"]{display:none!important}' +
+        '.fb-gate-error{margin:0 0 10px;font-size:.9rem;color:#c45c4a}';
       (global.document.head || global.document.documentElement).appendChild(st);
     } catch (_) {}
   }
@@ -273,11 +297,18 @@
       return hidden;
     }
 
+    const titleId = 'fb-gate-title-' + mode + '-' + String(Date.now());
+    const returnFocus =
+      global.document && global.document.activeElement
+        ? global.document.activeElement
+        : null;
+
     const root = global.document.createElement('div');
     root.className = 'fb-gate fb-affirmation-native';
     root.setAttribute('data-fb-affirmation', mode);
     root.setAttribute('role', 'dialog');
     root.setAttribute('aria-modal', 'true');
+    root.setAttribute('aria-labelledby', titleId);
 
     const panel = global.document.createElement('div');
     panel.className = 'fb-gate-panel fb-gate-card';
@@ -289,6 +320,7 @@
 
     const h = global.document.createElement('h2');
     h.className = 'fb-gate-title';
+    h.id = titleId;
     h.textContent = title;
     panel.appendChild(h);
 
@@ -315,23 +347,109 @@
 
     const hint = global.document.createElement('p');
     hint.className = 'fb-gate-hint';
+    hint.id = titleId + '-hint';
     hint.textContent = 'Check the box above, then tap OK to continue.';
     panel.appendChild(hint);
+
+    const err = global.document.createElement('p');
+    err.className = 'fb-gate-error';
+    err.setAttribute('role', 'alert');
+    err.setAttribute('aria-live', 'assertive');
+    err.hidden = true;
+    err.textContent = 'Please check the box to continue.';
+    panel.appendChild(err);
 
     const btn = global.document.createElement('button');
     btn.type = 'button';
     btn.className = 'fb-btn fb-btn-primary fb-gate-ok';
     btn.textContent = confirmLabel;
 
+    function focusableIn(container) {
+      if (!container || !container.querySelectorAll) return [];
+      const nodes = container.querySelectorAll(
+        'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])',
+      );
+      const out = [];
+      for (let i = 0; i < nodes.length; i++) {
+        const n = nodes[i];
+        if (n.offsetParent === null && n !== cb) continue;
+        out.push(n);
+      }
+      return out;
+    }
+
+    function setAppInert(on) {
+      try {
+        const app = global.document.querySelector('.fb-app');
+        if (!app) return;
+        const kids = app.children;
+        for (let i = 0; i < kids.length; i++) {
+          const el = kids[i];
+          if (el.contains(root) || el === root) continue;
+          if (on) el.setAttribute('inert', '');
+          else el.removeAttribute('inert');
+        }
+        // Gate is usually a sibling of main chrome or inside affirmation host —
+        // also inert main chrome when gate is a fixed overlay on body.
+        const chrome = global.document.querySelectorAll(
+          '.fb-header, .fb-main, .fb-footer, .fb-marquee, .fb-now-showing-host',
+        );
+        for (let j = 0; j < chrome.length; j++) {
+          if (chrome[j].contains(root)) continue;
+          if (on) chrome[j].setAttribute('inert', '');
+          else chrome[j].removeAttribute('inert');
+        }
+      } catch (_) {}
+    }
+
+    function onTrapKey(ev) {
+      if (!ev || ev.key !== 'Tab') return;
+      const list = focusableIn(panel);
+      if (!list.length) return;
+      const first = list[0];
+      const last = list[list.length - 1];
+      const active = global.document.activeElement;
+      if (ev.shiftKey) {
+        if (active === first || !panel.contains(active)) {
+          ev.preventDefault();
+          last.focus();
+        }
+      } else if (active === last || !panel.contains(active)) {
+        ev.preventDefault();
+        first.focus();
+      }
+    }
+
+    function teardownModal() {
+      root.removeEventListener('keydown', onTrapKey);
+      setAppInert(false);
+      try {
+        if (returnFocus && typeof returnFocus.focus === 'function') {
+          returnFocus.focus();
+        } else {
+          const main = global.document.querySelector('.fb-main, main, #main');
+          if (main) {
+            if (!main.hasAttribute('tabindex')) main.setAttribute('tabindex', '-1');
+            main.focus();
+          }
+        }
+      } catch (_) {}
+    }
+
     function doConfirm() {
       if (!cb.checked) {
         cb.focus();
         box.classList.add('fb-gate-check-box-warn');
+        cb.setAttribute('aria-invalid', 'true');
+        err.hidden = false;
         return;
       }
+      err.hidden = true;
+      cb.removeAttribute('aria-invalid');
       persist(storageKey, mode, slugHint);
       root.style.display = 'none';
       root.setAttribute('data-confirmed', '1');
+      teardownModal();
       if (onConfirmId != null && typeof invokeHandler === 'function') {
         try {
           invokeHandler(onConfirmId);
@@ -343,6 +461,14 @@
         } catch (_) {}
       }
     }
+
+    cb.addEventListener('change', () => {
+      if (cb.checked) {
+        box.classList.remove('fb-gate-check-box-warn');
+        cb.removeAttribute('aria-invalid');
+        err.hidden = true;
+      }
+    });
 
     btn.addEventListener('click', doConfirm);
     btn.addEventListener('pointerdown', () => {
@@ -365,6 +491,13 @@
     }
 
     root.appendChild(panel);
+    root.addEventListener('keydown', onTrapKey);
+    setAppInert(true);
+    global.setTimeout(function () {
+      try {
+        cb.focus();
+      } catch (_) {}
+    }, 0);
     return root;
   }
 
