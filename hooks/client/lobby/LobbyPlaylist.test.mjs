@@ -15,10 +15,23 @@ const tip = JSON.parse(
   fs.readFileSync(path.join(dir, 'lobby.playlist.json'), 'utf8'),
 )
 
-function loadLib() {
-  const global = { localStorage: null }
+function loadLib(localStorage = null) {
+  const global = { localStorage }
   vm.runInNewContext(src, { globalThis: global, global, console })
   return global.FlashbackLobbyPlaylist
+}
+
+function memoryStorage() {
+  const map = new Map()
+  return {
+    getItem: (k) => (map.has(k) ? map.get(k) : null),
+    setItem: (k, v) => {
+      map.set(k, String(v))
+    },
+    removeItem: (k) => {
+      map.delete(k)
+    },
+  }
 }
 
 const SAMPLE = {
@@ -157,6 +170,32 @@ test('tip lobby.playlist.json is valid flashback-logical-playlist/v1', () => {
   assert.equal(xmas.song, 'christmas')
 })
 
+test('readWebEnabled / writeWebEnabled persist to localStorage', () => {
+  const store = memoryStorage()
+  const L = loadLib(store)
+  assert.equal(L.readWebEnabled(), false)
+  L.writeWebEnabled(true)
+  assert.equal(store.getItem('fb-lobby-music-enabled'), '1')
+  assert.equal(L.readWebEnabled(), true)
+  L.writeWebEnabled(false)
+  assert.equal(store.getItem('fb-lobby-music-enabled'), '0')
+  assert.equal(L.readWebEnabled(), false)
+  store.setItem('fb-lobby-music-enabled', 'true')
+  assert.equal(L.readWebEnabled(), true)
+})
+
+test('LobbyAudio.host.js persists enable + unlocks without toggling off', () => {
+  const audioSrc = fs.readFileSync(
+    path.join(dir, '../native/LobbyAudio.host.js'),
+    'utf8',
+  )
+  assert.match(audioSrc, /writeWebEnabled/)
+  assert.match(audioSrc, /readWebEnabled/)
+  assert.match(audioSrc, /playBlocked/)
+  assert.match(audioSrc, /do not toggle off/)
+  assert.match(audioSrc, /armGestureUnlock/)
+})
+
 test('park-host-common loads lobby host scripts', () => {
   const common = fs.readFileSync(
     path.join(dir, '../native/park-host-common.js'),
@@ -165,6 +204,7 @@ test('park-host-common loads lobby host scripts', () => {
   assert.match(common, /ensureLobbyHostScripts/)
   assert.match(common, /LobbyPlaylist\.js/)
   assert.match(common, /LobbyAudio\.host\.js/)
+  assert.match(common, /v=33/)
 })
 
 test('registry lists LobbyPlaylist + LobbyAudio', () => {

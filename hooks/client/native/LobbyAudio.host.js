@@ -1,10 +1,14 @@
 /**
  * Lobby OST — background playlist while browsing; fades when theater is active.
- * Web: off until user taps Lobby music (autoplay gesture unlock).
+ * Web: off until user taps Lobby music (autoplay gesture unlock); choice in localStorage.
  * Playlist: /hooks/client/lobby/lobby.playlist.json + LobbyPlaylist.js
  */
 ;(function (global) {
   'use strict'
+
+  // Singleton — park-host-common + gateway inject may both load this file.
+  if (global.__fbLobbyAudioBooted) return
+  global.__fbLobbyAudioBooted = true
 
   var PLAYLIST_URL = '/hooks/client/lobby/lobby.playlist.json'
   var playlist = null
@@ -17,6 +21,8 @@
   var targetVol = 0.28
   var applying = false
   var btn = null
+  var unlockArmed = false
+  var playBlocked = false
 
   function LP() {
     return global.FlashbackLobbyPlaylist
@@ -86,6 +92,21 @@
     playIndex(queueIdx, false)
   }
 
+  function armGestureUnlock() {
+    if (unlockArmed) return
+    unlockArmed = true
+    var once = function () {
+      global.document.removeEventListener('pointerdown', once, true)
+      global.document.removeEventListener('keydown', once, true)
+      unlockArmed = false
+      var lib = LP()
+      if (!lib || !lib.readWebEnabled()) return
+      retryPlayFromGesture()
+    }
+    global.document.addEventListener('pointerdown', once, true)
+    global.document.addEventListener('keydown', once, true)
+  }
+
   function playIndex(i, fadeIn) {
     if (!queue.length) return
     queueIdx = ((i % queue.length) + queue.length) % queue.length
@@ -97,7 +118,6 @@
         a.load()
       } catch (e) {}
     }
-    // Prefetch next
     try {
       var next = queue[(queueIdx + 1) % queue.length]
       if (next && next !== url) {
@@ -113,9 +133,11 @@
     var p = a.play()
     if (p && typeof p.then === 'function') {
       p.then(function () {
+        playBlocked = false
         if (fadeIn) fadeTo(targetVol, (playlist && playlist.fadeInMs) || 1200)
       }).catch(function () {
-        /* gesture required — button will retry */
+        playBlocked = true
+        armGestureUnlock()
       })
     } else if (fadeIn) {
       fadeTo(targetVol, (playlist && playlist.fadeInMs) || 1200)
@@ -155,7 +177,7 @@
           playIndex(0, true)
         } else {
           var a = ensureAudio()
-          if (a.paused) {
+          if (a.paused || playBlocked) {
             playIndex(queueIdx, true)
           } else if (a.volume < targetVol * 0.9) {
             fadeTo(targetVol, dec.fadeInMs)
@@ -168,20 +190,26 @@
   }
 
   function updateButton(enabled) {
-    if (!btn) {
-      btn = global.document.querySelector('[data-fb-lobby-music]')
+    var nodes = global.document.querySelectorAll('[data-fb-lobby-music]')
+    for (var i = 0; i < nodes.length; i++) {
+      var el = nodes[i]
+      el.setAttribute('aria-pressed', enabled ? 'true' : 'false')
+      el.textContent = enabled
+        ? playBlocked
+          ? 'Lobby music: on (tap)'
+          : 'Lobby music: on'
+        : 'Lobby music'
+      if (enabled) el.classList.add('fb-lobby-on')
+      else el.classList.remove('fb-lobby-on')
     }
-    if (!btn) return
-    btn.setAttribute('aria-pressed', enabled ? 'true' : 'false')
-    btn.textContent = enabled ? 'Lobby music: on' : 'Lobby music'
-    if (enabled) btn.classList.add('fb-lobby-on')
-    else btn.classList.remove('fb-lobby-on')
+    btn = nodes.length ? nodes[0] : null
   }
 
   function setEnabled(on) {
     var lib = LP()
     if (!lib) return
     lib.writeWebEnabled(!!on)
+    playBlocked = false
     applyDecision()
   }
 
@@ -192,6 +220,7 @@
     setEnabled(next)
     if (next) {
       // Explicit gesture unlock
+      playBlocked = false
       ensureAudio()
       applyDecision()
     }
@@ -217,42 +246,73 @@
       .catch(function () {})
   }
 
+  function retryPlayFromGesture() {
+    playBlocked = false
+    ensureAudio()
+    applyDecision()
+  }
+
   function wireButton() {
-    btn = global.document.querySelector('[data-fb-lobby-music]')
-    if (!btn || btn.getAttribute('data-fb-lobby-wired') === '1') return
-    btn.setAttribute('data-fb-lobby-wired', '1')
-    btn.addEventListener('click', function (ev) {
-      ev.preventDefault()
-      toggle()
-    })
+    var nodes = global.document.querySelectorAll('[data-fb-lobby-music]')
+    if (!nodes.length) return
+    for (var i = 0; i < nodes.length; i++) {
+      var el = nodes[i]
+      if (el.getAttribute('data-fb-lobby-wired') === '1') continue
+      el.setAttribute('data-fb-lobby-wired', '1')
+      el.addEventListener('click', function (ev) {
+        ev.preventDefault()
+        var lib = LP()
+        // When already enabled but autoplay-blocked, the click is the unlock
+        // gesture — do not toggle off.
+        if (lib && lib.readWebEnabled() && playBlocked) {
+          retryPlayFromGesture()
+          return
+        }
+        toggle()
+      })
+    }
     var lib = LP()
     updateButton(lib ? lib.readWebEnabled() : false)
+  }
+
+  function syncUi() {
+    wireButton()
+    var lib = LP()
+    if (lib) updateButton(lib.readWebEnabled())
   }
 
   function onNavigate() {
     try {
       var path = (global.location && global.location.pathname) || '/'
-      // Leaving a title page ends "theater" for external VLC sessions
-      if (path === '/' || path.indexOf('/FanMixes') < 0 && path.indexOf('/KidFriendly') < 0) {
-        /* keep theater until explicit clear or library */
-      }
       if (path === '/') setTheater(false)
     } catch (e) {}
   }
 
   function boot() {
-    wireButton()
+    syncUi()
     loadPlaylist()
     onNavigate()
+    // Persisted "on" still needs a user gesture after reload (autoplay policy).
+    try {
+      var lib = LP()
+      if (lib && lib.readWebEnabled()) {
+        playBlocked = true
+        armGestureUnlock()
+        updateButton(true)
+      }
+    } catch (e) {}
     global.addEventListener('fb-lobby-theater', function (ev) {
       var d = (ev && ev.detail) || {}
       setTheater(!!d.theater)
     })
     global.addEventListener('popstate', onNavigate)
-    // Re-check season hourly
     global.setInterval(function () {
       applyDecision()
     }, 60 * 60 * 1000)
+    var sched = global.__fbScheduleParkNativeReupgrade
+    if (typeof sched === 'function') {
+      sched(syncUi)
+    }
   }
 
   if (global.document && global.document.readyState === 'loading') {
@@ -266,5 +326,10 @@
     setEnabled: setEnabled,
     toggle: toggle,
     apply: applyDecision,
+    syncUi: syncUi,
+    isEnabled: function () {
+      var lib = LP()
+      return !!(lib && lib.readWebEnabled())
+    },
   }
 })(typeof globalThis !== 'undefined' ? globalThis : this)
