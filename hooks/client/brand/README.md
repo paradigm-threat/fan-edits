@@ -1,12 +1,12 @@
 # Flashback Repository — Logo & Icon Set
 
-Antique gold on near-black. **Header logo** = cinematic three-frame film strip (Relay path). **App / favicon** = flat three-node mark. Source under `svg/` and `png/`. Atmosphere under `jpg/`.
+Antique gold on near-black. **Header logo** = full cinematic wordmark (film-strip + name + tagline in the image). **App / favicon** = flat three-node mark. Source under `svg/` and `png/`. Atmosphere under `jpg/`.
 
 ## In repo
 
 | Path | Role |
 |------|------|
-| `png/logo-header.png` | Header mark (film-strip / landmarks) |
+| `png/logo-header.png` | Header wordmark (text baked into image) |
 | `png/logo-primary-800.png` | Large logo still |
 | `png/icon-512.png` | App / PWA icon |
 | `png/icon-192.png` | PWA icon |

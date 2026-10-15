@@ -115,9 +115,9 @@ themes:
         color: "var(warn)"
       ".fb-brand-logo":
         display: "block"
-        height: "52px"
+        height: "56px"
         width: "auto"
-        maxWidth: "140px"
+        maxWidth: "420px"
         flexShrink: "0"
         borderRadius: "0"
         objectFit: "contain"
@@ -127,21 +127,6 @@ themes:
         width: "28px"
         flexShrink: "0"
         objectFit: "contain"
-      ".fb-brand-text":
-        display: "flex"
-        flexDirection: "column"
-        gap: "2px"
-      ".fb-brand-name":
-        fontSize: "1.35rem"
-        fontWeight: "700"
-        letterSpacing: "0.04em"
-        color: "var(cream)"
-      ".fb-brand-tag":
-        fontSize: "0.72rem"
-        lineHeight: "1.25"
-        maxWidth: "22rem"
-        color: "var(creamMuted)"
-        fontStyle: "italic"
       ".fb-footer-brand":
         display: "inline-flex"
         flexDirection: "row"
@@ -1187,14 +1172,10 @@ themes:
           padding: "28px 28px 56px"
       "@media (max-width: 640px)":
         ".fb-brand-logo":
-          height: "40px"
+          height: "44px"
           width: "auto"
-          maxWidth: "120px"
+          maxWidth: "280px"
           borderRadius: "0"
-        ".fb-brand-name":
-          fontSize: "1.1rem"
-        ".fb-brand-tag":
-          display: "none"
         ".fb-header":
           padding: "12px 14px"
         ".fb-backdrop":

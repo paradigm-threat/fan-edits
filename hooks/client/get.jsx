@@ -2275,15 +2275,9 @@ export default function FlashbackApp() {
               className="fb-brand-logo"
               src="/hooks/client/brand/png/logo-header.png"
               alt=""
-              width="132"
-              height="52"
+              width="1024"
+              height="130"
             />
-            <span className="fb-brand-text">
-              <span className="fb-brand-name">Flashback Repository</span>
-              <span className="fb-brand-tag">
-                Reaffirming our First Amendment one Movie at a time
-              </span>
-            </span>
           </a>
           <nav className="fb-nav">
             <a className="fb-link" href="/">
