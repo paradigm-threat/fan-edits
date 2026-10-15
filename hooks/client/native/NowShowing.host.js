@@ -651,10 +651,11 @@
     if (existing) {
       const haveSig = existing.getAttribute('data-fb-items-sig') || '';
       const haveVariant = existing.getAttribute('data-fb-variant') || '';
-      // Pre-readme carousel shells match sig but omit .fb-slideshow-readme — force rebuild.
+      // Pre-readme / pre-a11y carousel shells match sig but omit new nodes — force rebuild.
       if (
         wantVariant === 'carousel' &&
-        !existing.querySelector('.fb-slideshow-readme')
+        (!existing.querySelector('.fb-slideshow-readme') ||
+          !existing.querySelector('.fb-slideshow-title-link'))
       ) {
         return true;
       }

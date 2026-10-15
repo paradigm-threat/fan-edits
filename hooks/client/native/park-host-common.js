@@ -161,6 +161,7 @@
         '.fb-gate-check-box,.fb-gate-check{display:flex;flex-direction:row;gap:14px;align-items:flex-start;margin:20px 0 8px;padding:14px;background:rgba(0,0,0,.28);border:1px solid #b8860b;border-radius:4px;font-size:1rem;line-height:1.45;color:#f5e6be;cursor:pointer}',
         '.fb-gate-check-box input,.fb-gate input[type=checkbox]{width:24px;height:24px;min-width:24px;flex-shrink:0;margin-top:1px;accent-color:#e8c872;cursor:pointer}',
         '.fb-gate-check-box-warn{outline:2px solid #c44;outline-offset:2px}',
+        'a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,.fb-btn:focus-visible,.fb-slideshow-nav:focus-visible,.fb-chat-chan:focus-visible,.fb-theme-toggle:focus-visible{outline:2px solid #e8c872;outline-offset:3px}',
         '.fb-gate-hint{margin:0 0 16px;font-size:.88rem;color:#c4b49a}',
         '.fb-gate-ok{width:100%;justify-content:center;padding:12px 18px;font-size:1.02rem;cursor:pointer;border:1px solid #e8c872;background:linear-gradient(180deg,#5a2430,#2a1018);color:#f5e6be;border-radius:4px}',
         '.fb-gate-links{margin:16px 0 0;font-size:.85rem;text-align:center}',
