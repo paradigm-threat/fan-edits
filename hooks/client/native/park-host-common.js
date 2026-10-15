@@ -367,22 +367,36 @@
     } catch (_) {}
   }
 
-  /** Lobby OST — always load (button on home; no park-native placeholder). */
+  /** Lobby OST — backup load when gateway inject is absent. */
   function ensureLobbyHostScripts() {
+    var LOBBY_CACHE = 'v=33';
+    var tryInject = function () {
+      try {
+        if (!global.document || global.FlashbackLobbyAudio) return;
+        // Gateway inject puts LobbyAudio after this file; wait a tick so siblings exist.
+        if (
+          global.document.querySelector(
+            'script[src*="LobbyAudio.host.js"],script[data-fb-lobby-host="1"]',
+          )
+        ) {
+          return;
+        }
+        var urls = [
+          '/hooks/client/lobby/LobbyPlaylist.js?' + LOBBY_CACHE,
+          '/hooks/client/native/LobbyAudio.host.js?' + LOBBY_CACHE,
+        ];
+        for (var i = 0; i < urls.length; i++) {
+          var s = global.document.createElement('script');
+          s.src = urls[i];
+          s.async = false;
+          s.setAttribute('data-fb-lobby-host', '1');
+          global.document.head.appendChild(s);
+        }
+      } catch (_) {}
+    };
+    tryInject();
     try {
-      if (!global.document || global.FlashbackLobbyAudio) return;
-      if (global.document.querySelector('script[data-fb-lobby-host="1"]')) return;
-      var urls = [
-        '/hooks/client/lobby/LobbyPlaylist.js',
-        '/hooks/client/native/LobbyAudio.host.js',
-      ];
-      for (var i = 0; i < urls.length; i++) {
-        var s = global.document.createElement('script');
-        s.src = urls[i];
-        s.async = false;
-        s.setAttribute('data-fb-lobby-host', '1');
-        global.document.head.appendChild(s);
-      }
+      global.setTimeout(tryInject, 0);
     } catch (_) {}
   }
 
