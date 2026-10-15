@@ -192,7 +192,7 @@ test('LobbyAudio.host.js persists enable + unlocks without toggling off', () => 
   assert.match(audioSrc, /writeWebEnabled/)
   assert.match(audioSrc, /readWebEnabled/)
   assert.match(audioSrc, /playBlocked/)
-  assert.match(audioSrc, /do not toggle off/)
+  assert.match(audioSrc, /unlock \/ resume/)
   assert.match(audioSrc, /armGestureUnlock/)
 })
 
@@ -204,7 +204,7 @@ test('park-host-common loads lobby host scripts', () => {
   assert.match(common, /ensureLobbyHostScripts/)
   assert.match(common, /LobbyPlaylist\.js/)
   assert.match(common, /LobbyAudio\.host\.js/)
-  assert.match(common, /v=33/)
+  assert.match(common, /v=34/)
 })
 
 test('registry lists LobbyPlaylist + LobbyAudio', () => {

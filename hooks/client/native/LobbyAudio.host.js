@@ -262,13 +262,19 @@
       el.addEventListener('click', function (ev) {
         ev.preventDefault()
         var lib = LP()
-        // When already enabled but autoplay-blocked, the click is the unlock
-        // gesture — do not toggle off.
-        if (lib && lib.readWebEnabled() && playBlocked) {
-          retryPlayFromGesture()
+        if (!lib) return
+        // Enabled + not audibly playing → this click is the unlock / resume
+        // gesture (document pointerdown may already have cleared playBlocked).
+        if (lib.readWebEnabled()) {
+          var a = audio
+          if (playBlocked || !a || a.paused) {
+            retryPlayFromGesture()
+            return
+          }
+          setEnabled(false)
           return
         }
-        toggle()
+        setEnabled(true)
       })
     }
     var lib = LP()

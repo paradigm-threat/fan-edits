@@ -369,7 +369,7 @@
 
   /** Lobby OST — backup load when gateway inject is absent. */
   function ensureLobbyHostScripts() {
-    var LOBBY_CACHE = 'v=33';
+    var LOBBY_CACHE = 'v=34';
     var tryInject = function () {
       try {
         if (!global.document || global.FlashbackLobbyAudio) return;
