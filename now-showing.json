@@ -1,5 +1,23 @@
 [
   {
+    "slug": "riddick-2013-unjinxed",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/riddick-2013-unjinxed/Riddick_2013_-_Unjinxed_Edition.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/riddick-2013-unjinxed/Riddick_2013_-_Unjinxed_Edition_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/riddick-2013-unjinxed/Riddick_2013_-_Unjinxed_Edition_mobile-720p.mkv"
+  },
+  {
+    "slug": "alien-resurrection-1997-unjossed",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/alien-resurrection-1997-unjossed/Alien_Resurrection_1997_-_UnJossed_Edition.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/alien-resurrection-1997-unjossed/Alien_Resurrection_1997_-_UnJossed_Edition_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/alien-resurrection-1997-unjossed/Alien_Resurrection_1997_-_UnJossed_Edition_mobile-720p.mkv"
+  },
+  {
+    "slug": "2012-2009-salvation",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/2012-2009-salvation/2012_2009_-_Salvation.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/2012-2009-salvation/2012_2009_-_Salvation_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/2012-2009-salvation/2012_2009_-_Salvation_mobile-720p.mkv"
+  },
+  {
     "slug": "congo-1995-adult-supervision",
     "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/congo-1995-adult-supervision/Congo_1995_-_Adult_Supervision_Edition.mkv",
     "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/congo-1995-adult-supervision/Congo_1995_-_Adult_Supervision_Edition_web-1080p.mkv",
