@@ -401,6 +401,7 @@ def status_for(folder: Path, media: str | None, readme: Path) -> str:
 
 
 # Edit now-showing.json to change the marquee / carousel rotation.
+# Order is newest-first (descending): latest Now showing title leads the carousel/LCD.
 # Entries may be slug strings or objects:
 #   { "slug": "…",
 #     "streamHttps": "https://….b-cdn.net/now-showing/<slug>/<Title_Safe>.mkv",
