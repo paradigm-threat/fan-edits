@@ -1,0 +1,60 @@
+{
+  "format": "flashback-logical-playlist/v1",
+  "state": {
+    "season": {
+      "source": "calendar",
+      "christmas": { "start": "11-15", "end": "01-02" }
+    },
+    "theater": { "source": "host" },
+    "enabled": { "source": "host" }
+  },
+  "defaultSong": "publicDomain",
+  "when": [
+    { "if": "!enabled || theater", "do": "fadeOut", "ms": 800 },
+    {
+      "if": "enabled && !theater && season == christmas",
+      "do": "play",
+      "song": "christmas"
+    },
+    { "if": "enabled && !theater", "do": "play", "song": "publicDomain" }
+  ],
+  "songs": {
+    "publicDomain": {
+      "loop": true,
+      "shuffle": true,
+      "tracks": [
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/01-mozart-eine-kleine-nachtmusik-i.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/02-mozart-eine-kleine-nachtmusik-ii.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/03-mozart-eine-kleine-nachtmusik-iii.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/04-mozart-eine-kleine-nachtmusik-iv.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/05-mozart-symphony-40-i.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/06-mozart-figaro-overture.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/07-mozart-magic-flute-overture.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/10-mozart-ave-verum-corpus.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/11-bach-air-on-the-g-string.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/12-bach-brandenburg-3-i.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/13-handel-water-music-hornpipe.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/14-handel-messiah-hallelujah.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/15-vivaldi-spring-i.mp3"
+      ]
+    },
+    "christmas": {
+      "loop": true,
+      "shuffle": true,
+      "tracks": [
+        "https://flashbackrepository.b-cdn.net/lobby/christmas/01-carol-of-the-bells.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/christmas/02-veni-veni.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/christmas/03-away-in-a-manger.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/christmas/06-hallelujah.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/christmas/07-do-you-hear-what-i-hear.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/christmas/08-lo-how-a-rose.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/christmas/09-traditions-of-christmas.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/christmas/12-fum-fum-fum.mp3",
+        "https://flashbackrepository.b-cdn.net/lobby/christmas/13-auld-lang-syne.mp3"
+      ]
+    }
+  },
+  "volume": 0.28,
+  "fadeInMs": 1200,
+  "fadeOutMs": 800
+}
