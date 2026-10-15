@@ -1,4 +1,11 @@
 {
+  "schema": "flashback.project-files.v1",
   "path": "FanMixes/Thor Ragnarok (2017) - Kid friendly",
-  "files": []
+  "files": [
+    {
+      "path": "Thor Ragnarok (2017) - Kid friendly.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 344400
+    }
+  ]
 }

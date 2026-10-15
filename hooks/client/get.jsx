@@ -840,7 +840,7 @@ function kindLabel(kind) {
   return 'File'
 }
 
-/** Downloadable project files from files.json (feature MKVs are not listed). */
+/** Downloadable project files from the folder index (files.json). Never hardcoded per title. */
 function loadProjectFiles(projectPath) {
   let out = []
   const base = str(projectPath)
@@ -864,13 +864,22 @@ function loadProjectFiles(projectPath) {
         continue
       }
       const lower = rel.toLowerCase()
+      const kind = str(it.kind || 'other')
+      // Feature media + page chrome already shown elsewhere (Notes / poster).
       if (lower.indexOf('.mkv') === lower.length - 4 && lower.length >= 4) {
+        continue
+      }
+      if (kind === 'readme' || kind === 'poster' || kind === 'manifest') {
+        continue
+      }
+      const baseName = lower.lastIndexOf('/') >= 0 ? lower.slice(lower.lastIndexOf('/') + 1) : lower
+      if (baseName === 'files.json' || baseName === 'readme.md') {
         continue
       }
       out = out.concat([
         {
           path: rel,
-          kind: str(it.kind || 'other'),
+          kind: kind,
           bytes: typeof it.bytes === 'number' ? it.bytes : 0,
         },
       ])

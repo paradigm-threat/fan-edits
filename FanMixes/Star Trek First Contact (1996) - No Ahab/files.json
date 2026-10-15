@@ -1,4 +1,11 @@
 {
+  "schema": "flashback.project-files.v1",
   "path": "FanMixes/Star Trek First Contact (1996) - No Ahab",
-  "files": []
+  "files": [
+    {
+      "path": "Star Trek First Contact (1996) - No Ahab.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 528920
+    }
+  ]
 }

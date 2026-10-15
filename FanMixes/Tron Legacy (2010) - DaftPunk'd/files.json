@@ -1,4 +1,16 @@
 {
+  "schema": "flashback.project-files.v1",
   "path": "FanMixes/Tron Legacy (2010) - DaftPunk'd",
-  "files": []
+  "files": [
+    {
+      "path": "legacy.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 449977
+    },
+    {
+      "path": "Tron Legacy (2010) - DaftPunk'd.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 449977
+    }
+  ]
 }

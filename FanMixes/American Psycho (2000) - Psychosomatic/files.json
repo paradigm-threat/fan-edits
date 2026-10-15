@@ -1,4 +1,11 @@
 {
+  "schema": "flashback.project-files.v1",
   "path": "FanMixes/American Psycho (2000) - Psychosomatic",
-  "files": []
+  "files": [
+    {
+      "path": "American Psycho (2000) - Psychosomatic.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 235373
+    }
+  ]
 }

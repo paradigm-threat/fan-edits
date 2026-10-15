@@ -21,6 +21,11 @@
       "path": "README.md",
       "kind": "readme",
       "bytes": 3528
+    },
+    {
+      "path": "The Chronicles Of Riddick (2004) - Fry's Edition.srt",
+      "kind": "srt",
+      "bytes": 47619
     }
   ]
 }

@@ -104,15 +104,36 @@ def scan_project(project_dir: Path) -> list[dict]:
     return files
 
 
-def main() -> None:
-    idx = json.loads((ROOT / "index.json").read_text())
-    projects = idx.get("projects") or []
-    wrote = 0
-    for p in projects:
-        rel = (p.get("path") or "").strip().strip("/")
-        if not rel:
+def discover_project_dirs() -> list[Path]:
+    """Folder index: every FanMixes/* and KidFriendly/* title directory on disk."""
+    found: list[Path] = []
+    for top in ("FanMixes", "KidFriendly"):
+        root = ROOT / top
+        if not root.is_dir():
             continue
-        project_dir = ROOT / rel
+        for child in sorted(root.iterdir(), key=lambda p: p.name.lower()):
+            if child.is_dir() and not child.name.startswith("."):
+                found.append(child)
+    return found
+
+
+def main() -> None:
+    # Prefer scanning title folders directly so files.json tracks the tree,
+    # not a hardcoded per-movie list or only index.json membership.
+    dirs = discover_project_dirs()
+    if not dirs and (ROOT / "index.json").is_file():
+        # Fallback for sparse checkouts that only materialize index paths.
+        idx = json.loads((ROOT / "index.json").read_text())
+        for p in idx.get("projects") or []:
+            rel = (p.get("path") or "").strip().strip("/")
+            if rel:
+                dirs.append(ROOT / rel)
+
+    wrote = 0
+    for project_dir in dirs:
+        if not project_dir.is_dir():
+            continue
+        rel = project_dir.relative_to(ROOT).as_posix()
         files = scan_project(project_dir)
         out = {
             "schema": "flashback.project-files.v1",
