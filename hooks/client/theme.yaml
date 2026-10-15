@@ -257,6 +257,9 @@ themes:
         marginLeft: "auto"
         marginRight: "auto"
         boxSizing: "border-box"
+        # Opaque enough for cream copy; slight transparency keeps theater texture
+        background: "rgba(13,5,5,0.9)"
+        borderRadius: "2px"
       # Chat page: stay in article column; clear space above site footer
       ".fb-main-chat":
         paddingBottom: "28px"
