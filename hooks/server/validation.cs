@@ -107,11 +107,20 @@ function isAllowedPath(p) {
   // Edit projects + project-files manifests (not feature media)
   if (endsWith(p, '.kdenlive') || endsWith(p, '.KDENLIVE')) return true
   if (endsWith(p, '.py') || endsWith(p, '.ps1') || endsWith(p, '.PS1')) return true
+  if (endsWith(p, '.sh') || endsWith(p, '.SH')) return true
   if (endsWith(p, 'files.json') || endsWith(p, 'stats.json')) return true
+  if (isProjectJsonPath(p)) return true
   if (endsWith(p, '.srt') || endsWith(p, '.SRT')) return true
   if (endsWith(p, '.ass') || endsWith(p, '.ASS')) return true
   if (contains(p, 'remove-') && (endsWith(p, '-ranges.json') || endsWith(p, '-ranges.JSON'))) return true
   if (endsWith(p, '.relay.shifted.srt')) return true
+  return false
+}
+
+
+function isProjectJsonPath(p) {
+  if (!endsWith(p, '.json') && !endsWith(p, '.JSON')) return false
+  if (startsWith(p, 'FanMixes/') || startsWith(p, 'KidFriendly/')) return true
   return false
 }
 
