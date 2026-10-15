@@ -380,12 +380,19 @@
 
     function setAppInert(on) {
       try {
+        // Only when gate is in the document — contains() fails while detached and
+        // would inert the affirmation host that later mounts the gate (blocks clicks).
+        if (on && (!root.isConnected || !global.document.contains(root))) return;
         const app = global.document.querySelector('.fb-app');
         if (!app) return;
         const kids = app.children;
         for (let i = 0; i < kids.length; i++) {
           const el = kids[i];
-          if (el.contains(root) || el === root) continue;
+          if (el.contains(root) || el === root) {
+            // Host wrapping the gate must stay interactive.
+            el.removeAttribute('inert');
+            continue;
+          }
           if (on) el.setAttribute('inert', '');
           else el.removeAttribute('inert');
         }
@@ -395,7 +402,10 @@
           '.fb-header, .fb-main, .fb-footer, .fb-marquee, .fb-now-showing-host',
         );
         for (let j = 0; j < chrome.length; j++) {
-          if (chrome[j].contains(root)) continue;
+          if (chrome[j].contains(root)) {
+            chrome[j].removeAttribute('inert');
+            continue;
+          }
           if (on) chrome[j].setAttribute('inert', '');
           else chrome[j].removeAttribute('inert');
         }
@@ -492,8 +502,9 @@
 
     root.appendChild(panel);
     root.addEventListener('keydown', onTrapKey);
-    setAppInert(true);
+    // Defer until after host.replaceChildren(root) so contains(root) sees the mount.
     global.setTimeout(function () {
+      setAppInert(true);
       try {
         cb.focus();
       } catch (_) {}
