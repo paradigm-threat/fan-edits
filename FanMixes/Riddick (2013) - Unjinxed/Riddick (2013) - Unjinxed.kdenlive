@@ -895,7 +895,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">6155</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Riddick (2013) - Unperverted Edition.kdenlive.ass",
+        "file": "Riddick (2013) - Unjinxed.kdenlive.ass",
         "id": 0,
         "name": "Subtitles"
     }
@@ -2251,7 +2251,7 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Riddick (2013) - Unperverted Edition.kdenlive.ass</property>
+   <property name="av.filename">Riddick (2013) - Unjinxed.kdenlive.ass</property>
    <property name="disable">1</property>
   </filter>
  </tractor>
@@ -2354,7 +2354,7 @@
   <property name="kdenlive:docproperties.rendertcoverlay">0</property>
   <property name="kdenlive:docproperties.rendertctype">-1</property>
   <property name="kdenlive:docproperties.rendertwopass">0</property>
-  <property name="kdenlive:docproperties.renderurl">Riddick (2013) - Unperverted Edition.mp4</property>
+  <property name="kdenlive:docproperties.renderurl">Riddick (2013) - Unjinxed.mp4</property>
   <property name="xml_retain">1</property>
   <entry in="00:00:00.000" out="02:06:47.631" producer="chain3"/>
   <entry in="00:00:00.000" out="03:57:46.088" producer="tractor2"/>
