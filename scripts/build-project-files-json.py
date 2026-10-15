@@ -20,7 +20,7 @@ SKIP_SUFFIXES = (
     ".pyc",
 )
 SKIP_NAME_PARTS = ("_backup", ".bak-", "~")
-SKIP_DIR_NAMES = {".git", "node_modules", "seams", "__pycache__", ".relay"}
+SKIP_DIR_NAMES = {".git", "node_modules", "seams", "__pycache__", ".relay", "_sources"}
 KIND_RULES = (
     (".kdenlive", "kdenlive"),
     (".srt", "srt"),

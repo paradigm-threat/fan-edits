@@ -6,3 +6,9 @@ hooks/client/native/node_modules/
 hooks/client/native/test-results/
 ops/chat/chat-edge/node_modules/
 .relay/logs/
+
+# Local feature/source media (never tip) — keep relative links in .kdenlive
+FanMixes/**/_sources/
+KidFriendly/**/_sources/
+FanMixes/**/*.mkv
+KidFriendly/**/*.mkv

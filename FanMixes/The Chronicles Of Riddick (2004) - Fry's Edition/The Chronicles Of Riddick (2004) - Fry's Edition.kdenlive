@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="N:/Videos/FanEdits/FanMixes/The Chronicles Of Riddick (2004) - Fry's Edition" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="." version="7.33.0">
  <profile colorspace="709" description="3840x1600 23.98fps" display_aspect_den="5" display_aspect_num="12" frame_rate_den="1001" frame_rate_num="24000" height="1600" progressive="1" sample_aspect_den="1" sample_aspect_num="1" width="3840"/>
  <chain id="chain5" out="02:14:05.339">
   <property name="length">192895</property>
@@ -71,7 +71,7 @@
  <chain id="chain6" out="01:59:13.013">
   <property name="length">171501</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
+  <property name="resource">Chronicles of Riddick (2004).mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="meta.media.nb_streams">6</property>
   <property name="meta.media.0.stream.type">video</property>
@@ -164,7 +164,7 @@
  <chain id="chain1" out="01:59:13.013">
   <property name="length">171501</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
+  <property name="resource">Chronicles of Riddick (2004).mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -510,7 +510,7 @@
  <chain id="chain4" out="01:59:13.013">
   <property name="length">171501</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
+  <property name="resource">Chronicles of Riddick (2004).mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -892,7 +892,7 @@
  <chain id="chain8" out="01:59:13.013">
   <property name="length">171501</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
+  <property name="resource">Chronicles of Riddick (2004).mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
@@ -1936,7 +1936,7 @@
  <chain id="chain0" out="01:59:13.013">
   <property name="length">171501</property>
   <property name="eof">pause</property>
-  <property name="resource">N:/Videos/Horror and SciFi/Riddick Movies/Chronicles of Riddick (2004).mkv</property>
+  <property name="resource">Chronicles of Riddick (2004).mkv</property>
   <property name="mlt_service">avformat-novalidate</property>
   <property name="seekable">1</property>
   <property name="audio_index">1</property>
