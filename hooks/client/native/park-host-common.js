@@ -367,8 +367,28 @@
     } catch (_) {}
   }
 
+  /** Lobby OST — always load (button on home; no park-native placeholder). */
+  function ensureLobbyHostScripts() {
+    try {
+      if (!global.document || global.FlashbackLobbyAudio) return;
+      if (global.document.querySelector('script[data-fb-lobby-host="1"]')) return;
+      var urls = [
+        '/hooks/client/lobby/LobbyPlaylist.js',
+        '/hooks/client/native/LobbyAudio.host.js',
+      ];
+      for (var i = 0; i < urls.length; i++) {
+        var s = global.document.createElement('script');
+        s.src = urls[i];
+        s.async = false;
+        s.setAttribute('data-fb-lobby-host', '1');
+        global.document.head.appendChild(s);
+      }
+    } catch (_) {}
+  }
+
   ensureParkNativeCss();
   wireTheaterThemeToggles();
+  ensureLobbyHostScripts();
 
   global.__fbEnsureParkNativeCss = ensureParkNativeCss;
   global.__fbHostNeedsUpgrade = hostNeedsUpgrade;

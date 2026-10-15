@@ -29,6 +29,8 @@ function injectParkNativeHosts(html) {
   var snip =
     '<script data-fb-park-native="1" src="/hooks/client/native/park-host-common.js"></script>' +
     '<script data-fb-park-native="1" src="/hooks/client/native/telemetry.js"></script>' +
+    '<script data-fb-park-native="1" src="/hooks/client/lobby/LobbyPlaylist.js"></script>' +
+    '<script data-fb-park-native="1" src="/hooks/client/native/LobbyAudio.host.js"></script>' +
     '<script data-fb-park-native="1" src="/hooks/client/native/Affirmation.host.js"></script>' +
     '<script data-fb-park-native="1" src="/hooks/client/native/Board.host.js"></script>' +
     '<script data-fb-park-native="1" src="/hooks/client/native/ChatCommon.host.js"></script>' +
@@ -57,6 +59,8 @@ assert.ok(out.indexOf('telemetry.js') >= 0, 'theater telemetry script included')
 assert.ok(out.indexOf('Board.host.js') >= 0, 'board host script included')
 assert.ok(out.indexOf('ChatCommon.host.js') >= 0, 'chat common script included')
 assert.ok(out.indexOf('LiveChat.host.js') >= 0, 'live chat host script included')
+assert.ok(out.indexOf('LobbyAudio.host.js') >= 0, 'lobby audio host script included')
+assert.ok(out.indexOf('LobbyPlaylist.js') >= 0, 'lobby playlist script included')
 assert.ok(!out.includes('</html><script data-fb-park-native'), 'no hosts after html')
 
 console.log('inject-park-hosts.test.mjs OK')
