@@ -8,7 +8,7 @@ The Grid is the reason to watch: lightcycles, clubs, and that soundtrack. Theatr
 
 ## Changes
 
-- About **30** short picture holes (~10.6 min removed).
+- About **30** picture holes (~10.6 min removed). Cut list: [CHANGES.md](CHANGES.md) (scene labels TBD — needs theatrical source SRT / picture check).
 - Preserves Grid set pieces and Daft Punk–driven sequences.
 - Trims padding between action / score peaks.
 

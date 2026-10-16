@@ -360,7 +360,7 @@ def analyze_folder(folder: Path) -> dict:
 INTENT = {
     "2012 (2009) - Salvation": "Removes unnecessary death scenes and russophobic beats.",
     "Alien Resurrection (1997) - UnJossed": "Removes most Joss Whedon-inspired body-horror, including the hybrid alien birth and death.",
-    "American Psycho (2000) - Psychosomatic": "Picture cuts from the Kdenlive timeline. Scene labels TBD where the SRT does not make the beat obvious.",
+    "American Psycho (2000) - Psychosomatic": "Trims Bateman’s longest self-mythology / body and blood-lust monologue blocks so the satire and dread do not stall on vanity essays. Business-card satire and murder-mystery ambiguity stay.",
     "Boogie Nights (1997) - No Lookout": "Removes PTA’s whip-pan out of Reed’s demo-tape office through On the Lookout, the Valley night drive, and the donut-shop stick-up/kill. Lands on the first black frame; the original black hold into the Rahad-planning scene stays.",
     "Congo (1995) - Incel": "Trims Dr. Elliot’s incel-ish dialogue, some Travis/Captain Wanta screaming, and some gore. The Bob Driscoll encounter is moved next to the campsite (not days of travel later).",
     "Fear and Loathing in Las Vegas (1998) - No North Star": "Removes the North Star Coffee Lounge (waitress, knife, lemon meringue pie). Duke’s “massive crime often slips by unrecognized” stays; next line is “It was all over now.”",
@@ -382,7 +382,7 @@ INTENT = {
     "The Mummy (1999) - Debugged": "Kid-friendlier cut: scarabs that kill or eat people are removed. Hom-Dai eat, camp flesh-eater lecture, Hamunaptra swarm, Cairo Burns finish, and Jonathan’s vanishing arm wound. Later user trims may appear as extra holes below.",
     "The Mummy Returns (2001) - Debugged": "Kid-friendlier match to Mummy 1. Planned removals are the pygmy eat-swarms. Extra holes below are additional Kdenlive trims (or join artifacts) to label later.",
     "The Pentagon Papers (2003) - Widescreen": "No story cuts. 4:3 PAL DVD is upscaled and center-cropped to 16:9. Enhanced SRT is citations only.",
-    "Tron Legacy (2010) - DaftPunk'd": "Kdenlive picture cuts. No source-timeline SRT in the project — times only. Scene labels TBD.",
+    "Tron Legacy (2010) - DaftPunk'd": "Tighter theatrical cut: ~11 minutes of dead-air / connective tissue removed so Daft Punk’s score and Grid set pieces lead. Father/son and CLU story stay. No source-timeline SRT in the project — times only until a theatrical SRT is added.",
     "War of the Worlds (1953) - No Clip": "Short picture trims on the 1953 film. Scene labels TBD from the removed cues.",
     "War of the Worlds (2005) - Family Therapy": "Removes toxic family behavior so the film is about the invasion, not domestic abrasion. Also cuts Vincent/Julio solar-flare arguing, SpongeBob, some alien-death/lightning travel, and replaces Freeman’s intro with Richard Burton (addition/replacement, not a hole).",
 }

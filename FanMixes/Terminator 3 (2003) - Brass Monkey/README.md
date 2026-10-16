@@ -13,6 +13,7 @@ Everything about T3 was lackluster compared to the prequels. I honestly think it
 - Dialog about Kate worrying over her wedding removed.
 - Many other distracting or contradictory scenes trimmed — e.g. a trailer-sequence “cash only” sign (phones down) that contradicts the clerk’s police call going through later.
 - Background track “Dat Funky Man” replaced with Beastie Boys’ “Brass Monkey” (felt like the original song pick for that scene).
+- Picture holes: **38** (~15.1 min). Cut list: [CHANGES.md](CHANGES.md) (many scene labels still TBD).
 
 ## Trailer
 

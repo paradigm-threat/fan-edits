@@ -5,12 +5,17 @@
     {
       "path": "American Psycho (2000) - Psychosomatic.kdenlive",
       "kind": "kdenlive",
-      "bytes": 235373
+      "bytes": 45615
     },
     {
       "path": "American Psycho (2000) - Psychosomatic.kdenlive.ass",
       "kind": "other",
       "bytes": 115349
+    },
+    {
+      "path": "American Psycho (2000) - Psychosomatic.kdenlive.srt",
+      "kind": "srt",
+      "bytes": 90460
     },
     {
       "path": "American Psycho (2000) - Psychosomatic.srt",
@@ -20,12 +25,12 @@
     {
       "path": "CHANGES.md",
       "kind": "other",
-      "bytes": 4972
+      "bytes": 5251
     },
     {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 2825
+      "bytes": 1952
     },
     {
       "path": "files.json",
@@ -41,6 +46,11 @@
       "path": "subs/American.Psycho.2000.Remastered.1080p.srt",
       "kind": "srt",
       "bytes": 87398
+    },
+    {
+      "path": "subs/from-render-embedded.srt",
+      "kind": "srt",
+      "bytes": 90145
     }
   ]
 }
