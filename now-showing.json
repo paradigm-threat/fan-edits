@@ -1,7 +1,15 @@
 [
   {
+    "slug": "terminator-3-2003-brass-monkey",
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey_mobile-720p.mkv"
+  },
+  {
     "slug": "american-psycho-2000-psychosomatic",
-    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic.mkv"
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic_mobile-720p.mkv"
   },
   {
     "slug": "the-chronicles-of-riddick-2004-fry-s-edition",

@@ -1,5 +1,6 @@
 {
   "nowShowing": [
+    "terminator-3-2003-brass-monkey",
     "american-psycho-2000-psychosomatic",
     "the-chronicles-of-riddick-2004-fry-s-edition",
     "riddick-2013-unjinxed",
@@ -86,8 +87,10 @@
       ],
       "subtitlesJson": "[{\"src\":\"/FanMixes/American Psycho (2000) - Psychosomatic/subs/American.Psycho.2000.Remastered.1080p.srt\",\"label\":\"English\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/American Psycho (2000) - Psychosomatic/subs/from-render-embedded.srt\",\"label\":\"English\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic.mkv",
-      "qualityWebEnabled": false,
-      "qualityMobileEnabled": false,
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic_mobile-720p.mkv",
+      "qualityWebEnabled": true,
+      "qualityMobileEnabled": true,
       "blurb": "*American Psycho* is a brilliant movie \u2014 unlike the original *Psycho*, or *The Texas Chain Saw Massacre*, or the other classic horror titles people stack it next to. This one stands out. Slogan: **This confession has meant nothing.**",
       "poster": "poster.jpg"
     },
@@ -437,16 +440,20 @@
       "path": "FanMixes/Terminator 3 (2003) - Brass Monkey",
       "title": "Terminator 3 (2003) \u2014 Brass Monkey Edition",
       "originalTitle": "Terminator 3 (2003)",
-      "status": "wip",
-      "media": "",
-      "mediaWeb": "",
-      "mediaMobile": "",
-      "image": "",
+      "status": "showing",
+      "media": "Terminator 3 (2003) - Brass Monkey Edition.mkv",
+      "mediaWeb": "Terminator 3 (2003) - Brass Monkey Edition.web-1080p.mkv",
+      "mediaMobile": "Terminator 3 (2003) - Brass Monkey Edition.mobile-720p.mkv",
+      "image": "FanMixes/Terminator 3 (2003) - Brass Monkey/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
-      "qualityWebEnabled": false,
-      "qualityMobileEnabled": false,
-      "blurb": "In Brass Monkey Edition, I attempt to cut out all distracting dialog and sequences in Terminator 3 to be more like the first two movies."
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey_mobile-720p.mkv",
+      "qualityWebEnabled": true,
+      "qualityMobileEnabled": true,
+      "blurb": "T3 tries to be T1/T2 and keeps stepping on itself \u2014 shticky open, exposition that sounds like the characters read the script, and John Connor written as a pouty obstacle. This cut trims that clutter so the chase and the machines can carry the movie. The name is not a joke title: ",
+      "poster": "poster.jpg"
     },
     {
       "slug": "the-big-lebowski-1998-enhanced-citations",

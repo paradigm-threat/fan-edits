@@ -12,3 +12,13 @@ FanMixes/**/_sources/
 KidFriendly/**/_sources/
 FanMixes/**/*.mkv
 KidFriendly/**/*.mkv
+FanMixes/**/ost/*.mp3
+FanMixes/**/ost/*.wav
+FanMixes/**/ost/*.flac
+FanMixes/**/ost/*.m4a
+FanMixes/**/ost/desktop.ini
+KidFriendly/**/ost/*.mp3
+KidFriendly/**/ost/*.wav
+KidFriendly/**/ost/*.flac
+KidFriendly/**/ost/*.m4a
+KidFriendly/**/ost/desktop.ini
