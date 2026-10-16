@@ -1,7 +1,7 @@
 {
   "schema": "relay.assets-manifest.v1",
-  "mediaRoot": "bafybeibbrw3hzksho5c455i42x3y5xul5mksav7mfox6mwgssl7yvtyvv4",
-  "mediaRootBuiltAt": "2026-10-15T20:26:48Z",
+  "mediaRoot": "bafybeihjkdboh466hodf3gdvah47ovj4kneg4uciytzxchth4lkwfsazey",
+  "mediaRootBuiltAt": "2026-10-16T10:21:16Z",
   "assets": [
     {
       "id": "FanMixes_2012 (2009) - Salvation_2012 (2009) - Salvation.mkv",
@@ -18,6 +18,14 @@
       "contentType": "video/x-matroska",
       "sha256": "bcbc22b2993e493ff822801c5ef36301cecdb6d317b84668184c35919e9f6084",
       "bytes": 683033790
+    },
+    {
+      "id": "FanMixes_American Psycho (2000) - Psychosomatic_American Psycho (2000) - Psychosomatic.mkv",
+      "path": "FanMixes/American Psycho (2000) - Psychosomatic/American Psycho (2000) - Psychosomatic.mkv",
+      "ipfs": "bafybeifn7lnufqsdwh7bay2v6r4uqlbg6owbpeh5fjwanzccdxup5fofuq",
+      "contentType": "video/x-matroska",
+      "sha256": "671a279320820229039ba2788a75b9a2ebf5a82fb1b2f188ed8581b79cbe3756",
+      "bytes": 1111914882
     },
     {
       "id": "FanMixes_Boogie Nights (1997) - No Lookout_Boogie Nights (1997) - No Lookout - final.hevc.mp4",

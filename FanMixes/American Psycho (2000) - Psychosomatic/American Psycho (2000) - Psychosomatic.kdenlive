@@ -721,7 +721,7 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">American Psycho (2000) - Psychosomatic.kdenlive.srt</property>
+   <property name="av.filename">subs/American.Psycho.2000.Remastered.1080p.srt</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

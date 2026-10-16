@@ -1,5 +1,6 @@
 {
   "nowShowing": [
+    "american-psycho-2000-psychosomatic",
     "the-chronicles-of-riddick-2004-fry-s-edition",
     "riddick-2013-unjinxed",
     "alien-resurrection-1997-unjossed",
@@ -60,6 +61,37 @@
       "poster": "poster.jpg"
     },
     {
+      "slug": "american-psycho-2000-psychosomatic",
+      "category": "FanMixes",
+      "path": "FanMixes/American Psycho (2000) - Psychosomatic",
+      "title": "American Psycho (2000) \u2014 Psychosomatic",
+      "originalTitle": "American Psycho (2000)",
+      "status": "showing",
+      "media": "American Psycho (2000) - Psychosomatic.mkv",
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "FanMixes/American Psycho (2000) - Psychosomatic/poster.jpg",
+      "subtitles": [
+        {
+          "src": "FanMixes/American Psycho (2000) - Psychosomatic/subs/American.Psycho.2000.Remastered.1080p.srt",
+          "label": "English",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/American Psycho (2000) - Psychosomatic/subs/from-render-embedded.srt",
+          "label": "English",
+          "lang": "en"
+        }
+      ],
+      "subtitlesJson": "[{\"src\":\"/FanMixes/American Psycho (2000) - Psychosomatic/subs/American.Psycho.2000.Remastered.1080p.srt\",\"label\":\"English\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/American Psycho (2000) - Psychosomatic/subs/from-render-embedded.srt\",\"label\":\"English\",\"lang\":\"en\"}]",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic.mkv",
+      "qualityWebEnabled": false,
+      "qualityMobileEnabled": false,
+      "blurb": "*American Psycho* is a brilliant movie \u2014 unlike the original *Psycho*, or *The Texas Chain Saw Massacre*, or the other classic horror titles people stack it next to. This one stands out. Slogan: **This confession has meant nothing.**",
+      "poster": "poster.jpg"
+    },
+    {
       "slug": "boogie-nights-1997-no-lookout",
       "category": "FanMixes",
       "path": "FanMixes/Boogie Nights (1997) - No Lookout",
@@ -103,6 +135,23 @@
       "qualityMobileEnabled": true,
       "blurb": "A leaner *Congo* that strips Dr. Peter Elliot\u2019s childish / incel-adjacent berating of ex-CIA Karen Ross so the adventure can lead \u2014 and trims Travis/Captain Wanta screaming, some gore, plus a travel plot hole by moving the Bob Driscoll encounter forward.",
       "poster": "poster.jpg"
+    },
+    {
+      "slug": "contact-1997-no-alphas",
+      "category": "FanMixes",
+      "path": "FanMixes/Contact (1997) - No Alphas",
+      "title": "Contact (1997) \u2014 No Alphas",
+      "originalTitle": "Contact (1997)",
+      "status": "wip",
+      "media": "",
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "subtitlesJson": "[]",
+      "qualityWebEnabled": false,
+      "qualityMobileEnabled": false,
+      "blurb": "A cut of *Contact* that strips obnoxious alpha-male private beats so Ellie\u2019s story is the signal, the machine, and the cosmos \u2014 not their insecurities."
     },
     {
       "slug": "fear-and-loathing-in-las-vegas-1998-no-north-star",
@@ -204,8 +253,20 @@
       "mediaWeb": "",
       "mediaMobile": "",
       "image": "",
-      "subtitles": [],
-      "subtitlesJson": "[]",
+      "subtitles": [
+        {
+          "src": "FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.english.srt",
+          "label": "English (default)",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.enhanced.srt",
+          "label": "Enhanced / Citations",
+          "lang": "en"
+        }
+      ],
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.english.srt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.enhanced.srt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "Paradigm Threat [AU-062](https://paradigmthreat.net/influence/smithsonian/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md)."
@@ -354,6 +415,23 @@
       "poster": "poster.jpg"
     },
     {
+      "slug": "star-trek-first-contact-1996-no-ahab",
+      "category": "FanMixes",
+      "path": "FanMixes/Star Trek First Contact (1996) - No Ahab",
+      "title": "Star Trek: First Contact (1996) \u2014 No Ahab",
+      "originalTitle": "Star Trek: First Contact (1996)",
+      "status": "wip",
+      "media": "",
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "subtitlesJson": "[]",
+      "qualityWebEnabled": false,
+      "qualityMobileEnabled": false,
+      "blurb": "A bridge-focused cut that skips Picard\u2019s Captain Ahab / Moby-Dick meltdown and the stay-and-fight spiral so the Borg crisis stays tactical."
+    },
+    {
       "slug": "terminator-3-2003-brass-monkey",
       "category": "FanMixes",
       "path": "FanMixes/Terminator 3 (2003) - Brass Monkey",
@@ -381,8 +459,20 @@
       "mediaWeb": "",
       "mediaMobile": "",
       "image": "",
-      "subtitles": [],
-      "subtitlesJson": "[]",
+      "subtitles": [
+        {
+          "src": "FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.english.srt",
+          "label": "English (default)",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.enhanced.srt",
+          "label": "Enhanced / Citations",
+          "lang": "en"
+        }
+      ],
+      "subtitlesJson": "[{\"src\":\"/FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.english.srt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.enhanced.srt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "Follow-up to [The Mummy (1999) - Debugged](../The%20Mummy%20%281999%29%20-%20Debugged/) and Paradigm Threat [AU-062](https://paradigmthreat.net/influence/eugene/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md)."
@@ -523,11 +613,57 @@
       "mediaWeb": "",
       "mediaMobile": "",
       "image": "",
+      "subtitles": [
+        {
+          "src": "FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).english.srt",
+          "label": "English (default)",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).enhanced.srt",
+          "label": "Enhanced / Citations",
+          "lang": "en"
+        }
+      ],
+      "subtitlesJson": "[{\"src\":\"/FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).english.srt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).enhanced.srt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "qualityWebEnabled": false,
+      "qualityMobileEnabled": false,
+      "blurb": "Sharper **16:9** presentation of the FX / Paramount TV movie. No story cuts. The 4:3 PAL DVD is AI-upscaled, then center-cropped \u2014 not stretched, not outpainted."
+    },
+    {
+      "slug": "thor-ragnarok-2017-kid-friendly",
+      "category": "FanMixes",
+      "path": "FanMixes/Thor Ragnarok (2017) - Kid friendly",
+      "title": "Thor Ragnarok (2017) \u2014 Kid friendly",
+      "originalTitle": "Thor Ragnarok (2017)",
+      "status": "wip",
+      "media": "",
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
       "subtitles": [],
       "subtitlesJson": "[]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
-      "blurb": "Sharper **16:9** presentation of the FX / Paramount TV movie. No story cuts \u2014 only a cleaner frame for modern screens."
+      "blurb": "A lighter *Thor: Ragnarok* timeline for family co-watch \u2014 same Sakaar / Asgard story, fewer hard edges."
+    },
+    {
+      "slug": "tron-legacy-2010-daftpunk-d",
+      "category": "FanMixes",
+      "path": "FanMixes/Tron Legacy (2010) - DaftPunk'd",
+      "title": "Tron Legacy (2010) \u2014 DaftPunk'd",
+      "originalTitle": "Tron Legacy (2010)",
+      "status": "wip",
+      "media": "",
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "subtitlesJson": "[]",
+      "qualityWebEnabled": false,
+      "qualityMobileEnabled": false,
+      "blurb": "A tighter *Tron: Legacy* that trims ~11 minutes of dead air so Daft Punk\u2019s score and the Grid action lead."
     },
     {
       "slug": "van-helsing-deanna-d",
@@ -546,9 +682,14 @@
           "label": "English (default)",
           "lang": "en",
           "default": true
+        },
+        {
+          "src": "FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.enhanced.srt",
+          "label": "Enhanced / Citations",
+          "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.enhanced.srt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d_mobile-720p.mkv",
@@ -569,6 +710,23 @@
       "height": 2160,
       "videoCodec": "hevc",
       "poster": "poster.jpg"
+    },
+    {
+      "slug": "war-of-the-worlds-1953-no-clip",
+      "category": "FanMixes",
+      "path": "FanMixes/War of the Worlds (1953) - No Clip",
+      "title": "War of the Worlds (1953) \u2014 No Clip",
+      "originalTitle": "War of the Worlds (1953)",
+      "status": "wip",
+      "media": "",
+      "mediaWeb": "",
+      "mediaMobile": "",
+      "image": "",
+      "subtitles": [],
+      "subtitlesJson": "[]",
+      "qualityWebEnabled": false,
+      "qualityMobileEnabled": false,
+      "blurb": "A light trim of the 1953 *War of the Worlds* \u2014 short picture cuts only (~1 minute), not a rewrite of the classic."
     },
     {
       "slug": "war-of-the-worlds-2005-family-therapy",

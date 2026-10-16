@@ -40,6 +40,7 @@ FanMixes/
   Serenity (2005) - Unjossed/
     README.md                          # Human summary + how to build/render
     PLAN.md                            # Optional: editorial strategy, QC, filler plan
+    poster.jpg                         # Vertical 2:3 catalog art (see docs/POSTER-STYLE.md)
     Serenity (2005) - Unjossed.kdenlive
     Serenity (2005) - Unjossed.srt     # Source-timeline English subs (working copy)
     Serenity (2005) - Unjossed.kdenlive.ass
@@ -299,7 +300,13 @@ Also ask:
 
 ---
 
-## 9. Per-project README template
+## 9. Posters & artwork
+
+Catalog art lives at `FanMixes/<Title>/poster.jpg` (git tip binary). For generation prompts, house style, and other aspect ratios (16:9 hero, 21:9 ultrawide, square, story), see **[POSTER-STYLE.md](POSTER-STYLE.md)**.
+
+---
+
+## 10. Per-project README template
 
 ```markdown
 # Title (Year) — Edition Name
@@ -326,7 +333,7 @@ Date — what changed.
 
 ---
 
-## 10. Reference projects
+## 11. Reference projects
 
 | Project | Learn this |
 |---------|------------|
@@ -338,7 +345,7 @@ Date — what changed.
 
 ---
 
-## 11. Checklist before marking a FanMix “done”
+## 12. Checklist before marking a FanMix “done”
 
 - [ ] `ffprobe` passes on source rip.
 - [ ] `README.md` complete (changes, source path, build, render).
@@ -347,12 +354,13 @@ Date — what changed.
 - [ ] All joins QC’d; shifted subs match output.
 - [ ] Source rip **copied to local disk**; final render read from local copy (not NAS).
 - [ ] Final `.mkv` at **same resolution** as source, high-quality HEVC, embedded English subs.
+- [ ] `poster.jpg` in house style ([POSTER-STYLE.md](POSTER-STYLE.md)); optional wide/square crops if needed.
 - [ ] Project folder **synced back to server** (final MKV, project files, logs) — **excluding** the original source rip.
 - [ ] Root [README.md](../README.md) Fan Edit list updated (if owner wants release).
 
 ---
 
-## 12. Common failures
+## 13. Common failures
 
 | Symptom | Fix |
 |---------|-----|
