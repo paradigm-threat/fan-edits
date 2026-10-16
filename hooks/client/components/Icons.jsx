@@ -3,29 +3,27 @@
  */
 import React from 'react'
 
-/** Flat 3-node Relay film mark (matches brand/svg/icon-mark.svg), for small chrome. */
+/** Stacked Flashback mark (png/icon-192.png) — film frames + FLASHBACK / REPOSITORY. */
 export function BrandMark(props) {
   let className = 'fb-icon fb-icon-brand'
+  let width = 32
+  let height = 32
   try {
     if (props && props.className) {
       className = className + ' ' + props.className
     }
+    if (props && props.width) width = props.width
+    if (props && props.height) height = props.height
   } catch (e) {}
   return (
-    <svg className={className} viewBox="0 0 120 120" width="32" height="32" aria-hidden="true">
-      <rect x="6" y="6" width="108" height="108" rx="18" fill="none" stroke="currentColor" strokeWidth="5" />
-      <rect x="18" y="22" width="24" height="76" rx="8" fill="none" stroke="currentColor" strokeWidth="4.5" />
-      <circle cx="30" cy="38" r="5.5" fill="currentColor" />
-      <circle cx="30" cy="82" r="5.5" fill="currentColor" />
-      <rect x="48" y="22" width="24" height="76" rx="8" fill="none" stroke="currentColor" strokeWidth="4.5" />
-      <circle cx="60" cy="38" r="5.5" fill="currentColor" />
-      <circle cx="60" cy="82" r="5.5" fill="currentColor" />
-      <rect x="78" y="22" width="24" height="76" rx="8" fill="none" stroke="currentColor" strokeWidth="4.5" />
-      <circle cx="90" cy="38" r="5.5" fill="currentColor" />
-      <circle cx="90" cy="82" r="5.5" fill="currentColor" />
-      <rect x="40" y="56" width="10" height="8" rx="2" fill="currentColor" />
-      <rect x="70" y="56" width="10" height="8" rx="2" fill="currentColor" />
-    </svg>
+    <img
+      className={className}
+      src="/hooks/client/brand/png/icon-192.png"
+      width={width}
+      height={height}
+      alt=""
+      aria-hidden="true"
+    />
   )
 }
 

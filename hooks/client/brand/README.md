@@ -1,23 +1,23 @@
 # Flashback Repository — Logo & Icon Set
 
-Antique gold on near-black. **Header logo** = full cinematic wordmark (film-strip + name + tagline in the image). **App / favicon** = flat three-node mark. Source under `svg/` and `png/`. Atmosphere under `jpg/`.
+Antique gold on near-black. **Header logo** = horizontal wordmark (film-strip + name + tagline). **App / PWA icon** = stacked mark (film-strip with **FLASHBACK / REPOSITORY** text below). Do **not** use the retired flat three-node mark. Source under `svg/` and `png/`. Atmosphere under `jpg/`.
 
 ## In repo
 
 | Path | Role |
 |------|------|
 | `png/logo-header.png` | Header wordmark (text baked into image) |
-| `png/logo-primary-800.png` | Large logo still |
-| `png/icon-512.png` | App / PWA icon |
-| `png/icon-192.png` | PWA icon |
+| `png/banner-wide.png` | Stacked mark + FLASHBACK / REPOSITORY (source for app icon) |
+| `png/logo-primary-800.png` | Large film-strip still (no text) |
+| `png/icon-512.png` | App / PWA icon (stacked mark + text, square) |
+| `png/icon-192.png` | PWA / small brand mark (same art) |
 | `jpg/velvet/theater-bg-*.jpg` | **Default** illustrated curtain covers (mobile / tablet / desktop / wide) |
 | `jpg/classic/theater-bg-*.jpg` | Alternate photo-aisle covers (same breakpoints) |
 | `svg/logo-primary.svg` | Legacy full wordmark (optional) |
 | `svg/logo-compact.svg` | Legacy header wordmark (optional) |
 | `svg/logo-mono.svg` | Legacy white mono |
-| `svg/icon-mark.svg` | Square app mark (flat Relay film) |
-| `svg/favicon.svg` | Small mark |
-| `../favicon.svg` | Site favicon (same art) |
+| `svg/favicon.svg` | Prefer `png/icon-192.png` for app surfaces |
+| `../favicon.svg` | Site favicon |
 
 ### Theater themes
 
