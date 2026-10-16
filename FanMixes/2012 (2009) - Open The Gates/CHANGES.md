@@ -1,4 +1,4 @@
-# Changes — 2012 (2009) - Salvation
+# Changes — 2012 (2009) - Open The Gates
 
 Cut list from the Kdenlive timeline versus the original feature. A hole is a source-time window that is not on the video (or sparse audio) playlist. Removed dialogue is taken from the original-timeline SRT that overlaps that window. If the scene is not obvious from the cues, it is marked **TBD**.
 
@@ -6,8 +6,8 @@ Cut list from the Kdenlive timeline versus the original feature. A hole is a sou
 
 Removes unnecessary death scenes and russophobic beats.
 
-- Kdenlive: `2012 (2009) - Salvation.kdenlive`
-- Source SRT: `2012 (2009) - Salvation.srt`
+- Kdenlive: `2012 (2009) - Open The Gates.kdenlive`
+- Source SRT: `2012 (2009) - Open The Gates.srt`
 - Picture holes: **56** (~35.7 min of source removed)
 
 ## Removals (source times)

@@ -5,7 +5,7 @@ Use this when prompting ChatGPT, Midjourney, Flux, or similar to generate FanMix
 Reference posters (house look):
 
 - `FanMixes/The Mummy (1999) - Debugged/poster.jpg`
-- `FanMixes/2012 (2009) - Salvation/poster.jpg`
+- `FanMixes/2012 (2009) - Open The Gates/poster.jpg`
 - `FanMixes/Congo (1995) - Adult Supervision/poster.jpg`
 - `FanMixes/War of the Worlds (2005) - Family Therapy/poster.jpg`
 

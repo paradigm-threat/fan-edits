@@ -358,7 +358,7 @@ def analyze_folder(folder: Path) -> dict:
 
 
 INTENT = {
-    "2012 (2009) - Salvation": "Removes unnecessary death scenes and russophobic beats.",
+    "2012 (2009) - Open The Gates": "Removes unnecessary death scenes and russophobic beats.",
     "Alien Resurrection (1997) - UnJossed": "Removes most Joss Whedon-inspired body-horror, including the hybrid alien birth and death.",
     "American Psycho (2000) - Psychosomatic": "Trims Bateman’s longest self-mythology / body and blood-lust monologue blocks so the satire and dread do not stall on vanity essays. Business-card satire and murder-mystery ambiguity stay.",
     "Boogie Nights (1997) - No Lookout": "Removes PTA’s whip-pan out of Reed’s demo-tape office through On the Lookout, the Valley night drive, and the donut-shop stick-up/kill. Lands on the first black frame; the original black hold into the Rahad-planning scene stays.",

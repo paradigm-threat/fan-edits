@@ -35,7 +35,7 @@ CREDITS: dict[str, dict] = {}
 
 # Copy these to HDD before encode — never render a long HEVC from gvfs.
 NAS_STAGE = {
-    "2012 (2009) - Salvation": GVFS
+    "2012 (2009) - Open The Gates": GVFS
     / "Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv",
     "Alien Resurrection (1997) - UnJossed": GVFS
     / "Horror and SciFi/Alien Movie Collection/Alien Resurrection (1997) [1080p]/www.UIndex.org    -    Alien Resurrection 1997 Theatrical Cut BluRay 1080p DDP 5 1 x264-hallowed/Alien Resurrection 1997 Theatrical Cut BluRay 1080p DDP 5 1 x264-hallowed.mkv",

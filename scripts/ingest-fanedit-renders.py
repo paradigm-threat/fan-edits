@@ -38,7 +38,8 @@ def score(p: Path) -> tuple[int, int]:
         "unjinxed",
         "deschwartzed",
         "incel",
-        "salvation",
+        "open the gates",
+        "salvation",  # legacy folder keyword
         "lookout",
         "north star",
         "nay tomorrow",

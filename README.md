@@ -37,7 +37,7 @@ The Flashback APK loads this site from `https://flashbackrepository.org`. It doe
 
 ## Current list of completed Fan Edits:
 
-[2012 (2009) - Open The Gates](/FanMixes/2012%20(2009)%20-%20Salvation "2012 (2009) - Open The Gates")
+[2012 (2009) - Open The Gates](/FanMixes/2012%20(2009)%20-%20Open%20The%20Gates "2012 (2009) - Open The Gates")
 
 [Alien Resurrection (1997) - UnJossed](/FanMixes/Alien%20Resurrection%20(1997)%20-%20UnJossed "Alien Resurrection (1997) - UnJossed")
 

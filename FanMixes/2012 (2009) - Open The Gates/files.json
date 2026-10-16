@@ -1,9 +1,9 @@
 {
   "schema": "flashback.project-files.v1",
-  "path": "FanMixes/2012 (2009) - Salvation",
+  "path": "FanMixes/2012 (2009) - Open The Gates",
   "files": [
     {
-      "path": "2012 (2009) - Salvation.kdenlive",
+      "path": "2012 (2009) - Open The Gates.kdenlive",
       "kind": "kdenlive",
       "bytes": 142015
     },
@@ -13,7 +13,7 @@
       "bytes": 117258
     },
     {
-      "path": "2012 (2009) - Salvation.kdenlive.ass",
+      "path": "2012 (2009) - Open The Gates.kdenlive.ass",
       "kind": "other",
       "bytes": 117258
     },
@@ -33,7 +33,7 @@
       "bytes": 5816
     },
     {
-      "path": "2012 (2009) - Salvation.srt",
+      "path": "2012 (2009) - Open The Gates.srt",
       "kind": "srt",
       "bytes": 98628
     }
