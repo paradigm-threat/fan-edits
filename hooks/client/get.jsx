@@ -2406,24 +2406,29 @@ export default function FlashbackApp() {
             <a className="fb-link" href="/setup">
               Setup
             </a>
-            <a className="fb-link" href="/request">
-              Request
-            </a>
             <a className="fb-link" href="/motivation">
               Why
             </a>
             <a className="fb-link" href="/submit">
               Submit
             </a>
-            <a className="fb-link" href="/board">
-              Board
-            </a>
-            <a className="fb-link" href="/chat">
-              Chat
-            </a>
-            <a className="fb-link" href="/legal">
-              Legal
-            </a>
+            <details className="fb-nav-drop" name="fb-nav">
+              <summary className="fb-link fb-nav-sum">More</summary>
+              <div className="fb-nav-panel">
+                <a className="fb-link" href="/request">
+                  Request
+                </a>
+                <a className="fb-link" href="/board">
+                  Board
+                </a>
+                <a className="fb-link" href="/chat">
+                  Chat
+                </a>
+                <a className="fb-link" href="/legal">
+                  Legal
+                </a>
+              </div>
+            </details>
             <a
               className="fb-link fb-theme-toggle"
               href="#theme"
@@ -2431,33 +2436,38 @@ export default function FlashbackApp() {
             >
               Theme: Velvet
             </a>
-            <span className="fb-lobby">
-              <label className="fb-lobby-field">
-                Music
-                <select
-                  className="fb-lobby-playlist"
-                  data-fb-lobby-playlist="1"
-                  aria-label="Lobby playlist"
-                >
-                  <option value="off" selected>Off</option>
-                  <option value="auto">Auto</option>
-                  <option value="allYear">All year</option>
-                  <option value="winter">Winter</option>
-                </select>
-              </label>
-              <label className="fb-lobby-field">
-                Vol
-                <input
-                  className="fb-lobby-volume"
-                  data-fb-lobby-volume="1"
-                  type="range"
-                  min="0"
-                  max="100"
-                  value="25"
-                  aria-label="Lobby volume"
-                />
-              </label>
-            </span>
+            <details className="fb-nav-drop" name="fb-nav">
+              <summary className="fb-link fb-nav-sum">Music</summary>
+              <div className="fb-nav-panel">
+                <span className="fb-lobby">
+                  <label className="fb-lobby-field">
+                    Playlist
+                    <select
+                      className="fb-lobby-playlist"
+                      data-fb-lobby-playlist="1"
+                      aria-label="Lobby playlist"
+                    >
+                      <option value="off" selected>Off</option>
+                      <option value="auto">Auto</option>
+                      <option value="allYear">All year</option>
+                      <option value="winter">Winter</option>
+                    </select>
+                  </label>
+                  <label className="fb-lobby-field">
+                    Vol
+                    <input
+                      className="fb-lobby-volume"
+                      data-fb-lobby-volume="1"
+                      type="range"
+                      min="0"
+                      max="100"
+                      value="25"
+                      aria-label="Lobby volume"
+                    />
+                  </label>
+                </span>
+              </div>
+            </details>
           </nav>
         </header>
         <NowShowing variant="lcd" itemsJson={nowItemsJson} ariaLabel="Now showing titles" />
