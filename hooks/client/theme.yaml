@@ -572,17 +572,34 @@ themes:
         overscrollBehavior: "auto"
         WebkitOverflowScrolling: "touch"
         paddingRight: "6px"
+      ".fb-watch-toggle":
+        position: "absolute"
+        width: "1px"
+        height: "1px"
+        padding: "0"
+        margin: "-1px"
+        overflow: "hidden"
+        clip: "rect(0, 0, 0, 0)"
+        border: "0"
       ".fb-watch-scrim":
+        display: "none"
         position: "fixed"
         inset: "0"
         zIndex: "80"
-        display: "flex"
         alignItems: "center"
         justifyContent: "center"
         padding: "22px"
         background: "rgba(6,4,5,0.9)"
         boxSizing: "border-box"
+      ".fb-watch-toggle:checked ~ .fb-watch-scrim":
+        display: "flex"
+      ".fb-watch-backdrop":
+        position: "absolute"
+        inset: "0"
+        cursor: "pointer"
       ".fb-watch-dialog":
+        position: "relative"
+        zIndex: "1"
         width: "min(640px, 100%)"
         maxHeight: "85vh"
         overflowY: "auto"
@@ -593,7 +610,9 @@ themes:
         boxSizing: "border-box"
       ".fb-watch-close":
         display: "block"
+        width: "auto"
         margin: "0 0 10px auto"
+        cursor: "pointer"
       ".fb-video-panel":
         position: "relative"
         flex: "1 1 auto"

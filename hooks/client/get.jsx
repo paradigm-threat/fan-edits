@@ -1674,9 +1674,6 @@ export default function FlashbackApp() {
   const movieAckState = useState(initialMovieAck)
   const movieAckStored = movieAckState[0]
   const setMovieAck = movieAckState[1]
-  const watchOpenState = useState(false)
-  const watchOpen = watchOpenState[0]
-  const setWatchOpen = watchOpenState[1]
   // Re-read localStorage each render (SSR useState stays false; inject/query may set LS).
   let movieAckFromLs = false
   if (kind.kind === 'movie') {
@@ -2165,6 +2162,9 @@ export default function FlashbackApp() {
     }
     main = (
       <div className="fb-movie">
+        {hasFeatureMedia ? (
+          <input id="fb-watch-open" className="fb-watch-toggle" type="checkbox" />
+        ) : null}
         <a className="fb-back" href="/">
           ← Library
         </a>
@@ -2183,15 +2183,9 @@ export default function FlashbackApp() {
               />
             ) : null}
             {hasFeatureMedia ? (
-              <button
-                type="button"
-                className="fb-btn fb-btn-primary fb-watch-cta"
-                onClick={() => {
-                  setWatchOpen(true)
-                }}
-              >
+              <label htmlFor="fb-watch-open" className="fb-btn fb-btn-primary fb-watch-cta">
                 Watch
-              </button>
+              </label>
             ) : (
               <p className="fb-movie-nomedia">
                 Feature media is not catalogued for streaming yet. Project files are still listed
@@ -2235,41 +2229,18 @@ export default function FlashbackApp() {
             }}
           />
         ) : null}
-        {watchOpen === true && hasFeatureMedia ? (
-          <div
-            className="fb-watch-scrim"
-            role="presentation"
-            onClick={() => {
-              setWatchOpen(false)
-            }}
-            onKeyDown={(ev) => {
-              if (ev && ev.key === 'Escape') {
-                setWatchOpen(false)
-              }
-            }}
-          >
+        {hasFeatureMedia ? (
+          <div className="fb-watch-scrim">
+            <label htmlFor="fb-watch-open" className="fb-watch-backdrop" aria-label="Close" />
             <div
               className="fb-watch-dialog"
               role="dialog"
               aria-modal="true"
               aria-label="Ways to watch this movie"
-              tabIndex={0}
-              onClick={(ev) => {
-                if (ev && ev.stopPropagation) {
-                  ev.stopPropagation()
-                }
-              }}
             >
-              <button
-                type="button"
-                className="fb-btn fb-watch-close"
-                autoFocus={true}
-                onClick={() => {
-                  setWatchOpen(false)
-                }}
-              >
+              <label htmlFor="fb-watch-open" className="fb-btn fb-watch-close">
                 Close
-              </button>
+              </label>
               <div className="fb-video-panel">{mediaSurface}</div>
               {inPageMkvOk === true ? (
                 <div className="fb-video-controls">
@@ -2376,6 +2347,7 @@ export default function FlashbackApp() {
             '@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}}',
             '@media (prefers-reduced-motion:reduce){.fb-screen-glow{animation:none!important}}',
             /* Backdrop covers live in theater-bg.css (velvet default + classic alt). */
+            '.fb-watch-scrim{display:none}.fb-watch-toggle:checked ~ .fb-watch-scrim{display:flex}',
             '@media (max-width:640px){.fb-movie-hero{display:flex;flex-direction:column;height:auto;min-height:0}.fb-movie-art{width:100%;max-width:320px}.fb-movie-poster{width:100%;height:auto;max-height:70vh;flex:0 0 auto}.fb-watch-cta{flex:0 0 auto;min-height:48px}.fb-movie-notes{max-height:50vh;height:auto}.fb-gate,.fb-affirmation-native{align-items:stretch;justify-content:flex-start;padding:0;overflow:auto}.fb-gate-panel,.fb-gate-card{max-width:none;width:100%;min-height:100%;border-radius:0;box-shadow:none;box-sizing:border-box;padding:max(20px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))}}',
           ].join('')}
         </style>

@@ -400,9 +400,22 @@
     } catch (_) {}
   }
 
+  function bindWatchDialog() {
+    try {
+      if (!global.document || global.__fbWatchDialogBound) return;
+      global.__fbWatchDialogBound = true;
+      global.document.addEventListener('keydown', function (ev) {
+        if (!ev || ev.key !== 'Escape') return;
+        var box = global.document.getElementById('fb-watch-open');
+        if (box && box.checked) box.checked = false;
+      });
+    } catch (_) {}
+  }
+
   ensureParkNativeCss();
   wireTheaterThemeToggles();
   ensureLobbyHostScripts();
+  bindWatchDialog();
 
   global.__fbEnsureParkNativeCss = ensureParkNativeCss;
   global.__fbHostNeedsUpgrade = hostNeedsUpgrade;
