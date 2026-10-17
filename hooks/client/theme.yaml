@@ -517,6 +517,8 @@ themes:
       ".fb-blog-body ul":
         margin: "0 0 0.85em"
         paddingLeft: "1.2em"
+      ".fb-main-movie":
+        maxWidth: "1180px"
       ".fb-movie":
         display: "flex"
         flexDirection: "column"
@@ -524,39 +526,89 @@ themes:
         margin: "8px 0 10px"
         fontSize: "1.75rem"
         color: "var(cream)"
+      ".fb-movie-hero":
+        display: "grid"
+        gridTemplateColumns: "auto minmax(0, 1fr)"
+        alignItems: "stretch"
+        gap: "18px"
+        height: "calc(100dvh - 11.5rem)"
+        minHeight: "420px"
+        marginBottom: "8px"
+      ".fb-movie-art":
+        display: "flex"
+        flexDirection: "column"
+        height: "100%"
+        # Width follows poster 2:3 inside the top 90%; the CTA is the bottom 10%.
+        aspectRatio: "3 / 5"
+        minHeight: "0"
+        minWidth: "0"
+        gap: "8px"
       ".fb-movie-blurb":
         color: "var(creamMuted)"
-        marginBottom: "16px"
-      ".fb-movie-stage":
-        display: "flex"
-        flexDirection: "row"
-        alignItems: "flex-start"
-        gap: "18px"
-        order: "2"
-        marginBottom: "8px"
+        marginBottom: "12px"
       ".fb-movie-poster":
         display: "block"
-        flex: "0 0 auto"
-        width: "min(280px, 42%)"
+        flex: "9 1 0"
+        minHeight: "0"
+        width: "100%"
         height: "auto"
+        objectFit: "contain"
+        objectPosition: "center center"
         margin: "0"
         border: "1px solid var(border)"
         background: "var(screen)"
         cursor: "zoom-in"
+      ".fb-watch-cta":
+        flex: "1 1 0"
+        width: "100%"
+        minHeight: "0"
+        justifyContent: "center"
+        fontSize: "1.15rem"
+      ".fb-movie-notes":
+        minWidth: "0"
+        minHeight: "0"
+        height: "100%"
+        overflowX: "hidden"
+        overflowY: "auto"
+        overscrollBehavior: "auto"
+        WebkitOverflowScrolling: "touch"
+        paddingRight: "6px"
+      ".fb-watch-scrim":
+        position: "fixed"
+        inset: "0"
+        zIndex: "80"
+        display: "flex"
+        alignItems: "center"
+        justifyContent: "center"
+        padding: "22px"
+        background: "rgba(6,4,5,0.9)"
+        boxSizing: "border-box"
+      ".fb-watch-dialog":
+        width: "min(640px, 100%)"
+        maxHeight: "85vh"
+        overflowY: "auto"
+        padding: "16px 16px 8px"
+        background: "linear-gradient(165deg, #3a1820 0%, #1a0c10 55%, #12080a 100%)"
+        border: "1px solid var(gold)"
+        boxShadow: "0 24px 70px rgba(0,0,0,0.6)"
+        boxSizing: "border-box"
+      ".fb-watch-close":
+        display: "block"
+        margin: "0 0 10px auto"
       ".fb-video-panel":
         position: "relative"
         flex: "1 1 auto"
         minWidth: "0"
         marginBottom: "0"
-        padding: "12px"
-        background: "var(screen)"
-        border: "1px solid var(border)"
+        padding: "0"
+        background: "transparent"
+        border: "none"
         order: "2"
       ".fb-movie-nomedia":
         order: "2"
-      ".fb-movie-watch":
-        order: "2"
-        marginBottom: "8px"
+        margin: "8px 0 0"
+        color: "var(creamMuted)"
+        fontSize: "0.92rem"
       ".fb-movie-files":
         order: "4"
         marginTop: "18px"
@@ -613,9 +665,9 @@ themes:
         color: "var(creamMuted)"
         fontFamily: "ui-monospace, 'Courier New', monospace"
       ".fb-readme":
-        marginTop: "18px"
-        paddingTop: "16px"
-        borderTop: "1px solid var(border)"
+        marginTop: "0"
+        paddingTop: "0"
+        borderTop: "none"
         fontSize: "0.95rem"
         order: "3"
       ".fb-back":
@@ -1196,10 +1248,27 @@ themes:
           backgroundImage: "url(/hooks/client/brand/jpg/velvet/theater-bg-mobile.jpg)"
         ".fb-movie-title":
           fontSize: "1.35rem"
-        ".fb-movie-stage":
+        ".fb-movie-hero":
+          display: "flex"
           flexDirection: "column"
+          height: "auto"
+          minHeight: "0"
+        ".fb-movie-art":
+          width: "100%"
+          maxWidth: "320px"
+          height: "auto"
         ".fb-movie-poster":
-          width: "min(280px, 100%)"
+          width: "100%"
+          height: "auto"
+          maxHeight: "70vh"
+          flex: "0 0 auto"
+          maxWidth: "100%"
+        ".fb-watch-cta":
+          flex: "0 0 auto"
+          minHeight: "48px"
+        ".fb-movie-notes":
+          height: "auto"
+          maxHeight: "50vh"
         ".fb-gate":
           alignItems: "stretch"
           justifyContent: "flex-start"
