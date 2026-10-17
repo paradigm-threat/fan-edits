@@ -260,9 +260,13 @@
     const doc = global.document;
     root.className = 'fb-now-showing fb-now-showing-carousel';
     let idx = 0;
+    /** In-flight destination while crossfading (idx stays on the outgoing slide until settle). */
+    let pendingIdx = null;
     let busy = false;
     let autoTimer = null;
     let fadeTimer = null;
+    let fadeEndHandler = null;
+    let fadeEndEl = null;
     const list = items.filter((it) => it && it.title);
     if (list.length === 0) {
       root.textContent = 'No titles yet.';
@@ -482,28 +486,65 @@
     }
 
     function paintInstant() {
+      // Snap with no opacity tween so interrupt clicks feel immediate.
+      const layers = [front.a, back.a];
+      for (let i = 0; i < layers.length; i++) {
+        layers[i].style.transition = 'none';
+      }
       const it = list[idx];
       fillLayer(front, it);
       front.a.classList.add('is-active');
       front.a.setAttribute('aria-hidden', 'false');
       back.a.classList.remove('is-active');
       back.a.setAttribute('aria-hidden', 'true');
+      void front.a.offsetWidth;
+      for (let j = 0; j < layers.length; j++) {
+        layers[j].style.transition = '';
+      }
       announce();
       prefetch((idx + 1) % list.length);
       prefetch((idx - 1 + list.length) % list.length);
     }
 
+    function abortFade() {
+      if (fadeTimer) {
+        global.clearTimeout(fadeTimer);
+        fadeTimer = null;
+      }
+      if (fadeEndEl && fadeEndHandler) {
+        try {
+          fadeEndEl.removeEventListener('transitionend', fadeEndHandler);
+        } catch (_) {}
+      }
+      fadeEndEl = null;
+      fadeEndHandler = null;
+    }
+
     function go(delta) {
       if (list.length < 2) return;
-      if (busy) return;
-      const nextIdx = (idx + delta + list.length) % list.length;
+      // Advance from the slide the user already navigated toward (not the outgoing idx).
+      const from = pendingIdx != null ? pendingIdx : idx;
+      const nextIdx = (from + delta + list.length) % list.length;
+      pendingIdx = nextIdx;
       const { fadeMs } = timing();
-      if (reduceMotion) {
+
+      // Reduced motion, or a click while a fade is still running: snap now.
+      if (reduceMotion || busy) {
+        abortFade();
+        busy = false;
         idx = nextIdx;
+        pendingIdx = null;
+        // Mid-fade: visible content may be on back — swap roles so front is the active layer.
+        if (back.a.classList.contains('is-active') && !front.a.classList.contains('is-active')) {
+          const tmp = front;
+          front = back;
+          back = tmp;
+        }
         paintInstant();
         armAuto();
         return;
       }
+
       busy = true;
       const incoming = list[nextIdx];
       const outgoingEl = front.a;
@@ -522,7 +563,10 @@
         front = back;
         back = tmp;
         idx = nextIdx;
+        pendingIdx = null;
         busy = false;
+        fadeEndEl = null;
+        fadeEndHandler = null;
         announce();
         prefetch((idx + 1) % list.length);
         armAuto();
@@ -540,8 +584,12 @@
           global.clearTimeout(fadeTimer);
           fadeTimer = null;
         }
+        fadeEndEl = null;
+        fadeEndHandler = null;
         finish();
       };
+      fadeEndEl = incomingEl;
+      fadeEndHandler = onEnd;
       incomingEl.addEventListener('transitionend', onEnd);
       if (fadeTimer) global.clearTimeout(fadeTimer);
       fadeTimer = global.setTimeout(function () {
@@ -549,6 +597,8 @@
         done = true;
         incomingEl.removeEventListener('transitionend', onEnd);
         fadeTimer = null;
+        fadeEndEl = null;
+        fadeEndHandler = null;
         finish();
       }, fadeMs + 120);
     }
