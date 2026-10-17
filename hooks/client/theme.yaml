@@ -137,8 +137,28 @@ themes:
         display: "flex"
         flexDirection: "row"
         flexWrap: "wrap"
+        alignItems: "center"
         gap: "16px"
         fontSize: "0.95rem"
+      ".fb-nav-drop":
+        position: "relative"
+      ".fb-nav-sum":
+        cursor: "pointer"
+        listStyle: "none"
+      ".fb-nav-panel":
+        position: "absolute"
+        top: "calc(100% + 8px)"
+        right: "0"
+        zIndex: "50"
+        display: "flex"
+        flexDirection: "column"
+        alignItems: "flex-start"
+        gap: "10px"
+        minWidth: "9rem"
+        padding: "12px 14px"
+        background: "linear-gradient(180deg, #1a0a0c 0%, #120608 100%)"
+        border: "1px solid var(border)"
+        boxShadow: "0 12px 28px rgba(0,0,0,0.55)"
       # Class on the <a> itself — descendant selectors like `.fb-nav a` are not emitted.
       ".fb-link":
         color: "var(gold)"
@@ -151,10 +171,10 @@ themes:
         color: "var(cream)"
         textDecoration: "underline"
       ".fb-lobby":
-        display: "inline-flex"
-        flexDirection: "row"
-        alignItems: "center"
-        gap: "8px"
+        display: "flex"
+        flexDirection: "column"
+        alignItems: "stretch"
+        gap: "10px"
         color: "var(gold)"
       ".fb-lobby-field":
         display: "inline-flex"
