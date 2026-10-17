@@ -394,6 +394,62 @@ function rewriteReadmeAssetLinks(md, projectPath) {
   return out
 }
 
+/** Leading README poster art duplicates the catalog poster (and 404s on the slug URL). */
+function isPosterMarkdownTarget(alt, href) {
+  const h = str(href).toLowerCase()
+  const a = str(alt).toLowerCase()
+  if (
+    h.indexOf('poster.jpg') >= 0 ||
+    h.indexOf('poster.jpeg') >= 0 ||
+    h.indexOf('poster.png') >= 0 ||
+    h.indexOf('poster.webp') >= 0
+  ) {
+    return true
+  }
+  if (a.indexOf('poster') >= 0) {
+    return true
+  }
+  return false
+}
+
+function stripLeadingPosterImage(md) {
+  const raw = str(md)
+  let i = 0
+  while (i < raw.length) {
+    const ch = raw.charAt(i)
+    if (ch === ' ' || ch === '\n' || ch === '\r' || ch === '\t') {
+      i = i + 1
+      continue
+    }
+    break
+  }
+  if (raw.slice(i, i + 2) !== '![') {
+    return raw
+  }
+  const mark = raw.indexOf('](', i)
+  if (mark < 0) {
+    return raw
+  }
+  const close = markdownLinkCloseParen(raw, mark + 2)
+  if (close < 0) {
+    return raw
+  }
+  const alt = raw.slice(i + 2, mark)
+  let href = raw.slice(mark + 2, close)
+  const sp = href.indexOf(' ')
+  if (sp >= 0) {
+    href = href.slice(0, sp)
+  }
+  if (!isPosterMarkdownTarget(alt, href)) {
+    return raw
+  }
+  let rest = raw.slice(close + 1)
+  while (rest.charAt(0) === '\n' || rest.charAt(0) === '\r') {
+    rest = rest.slice(1)
+  }
+  return rest
+}
+
 function pickPlayableSrc(project) {
   if (!project) {
     return ''
@@ -1613,6 +1669,9 @@ export default function FlashbackApp() {
   const movieAckState = useState(initialMovieAck)
   const movieAckStored = movieAckState[0]
   const setMovieAck = movieAckState[1]
+  const watchOpenState = useState(false)
+  const watchOpen = watchOpenState[0]
+  const setWatchOpen = watchOpenState[1]
   // Re-read localStorage each render (SSR useState stays false; inject/query may set LS).
   let movieAckFromLs = false
   if (kind.kind === 'movie') {
@@ -2034,7 +2093,15 @@ export default function FlashbackApp() {
       }
     }
     const posterHref = encodeMarkdownUrl(absoluteStreamUrl(projectPosterPath(selected)))
-    const readmeMd = rewriteReadmeAssetLinks(hero.body || '', selected ? selected.path : '')
+    const readmeMd = stripLeadingPosterImage(
+      rewriteReadmeAssetLinks(hero.body || '', selected ? selected.path : ''),
+    )
+    const hasFeatureMedia =
+      selected &&
+      (projectMediaField(selected, 'media').length > 0 ||
+        projectMediaField(selected, 'mediaWeb').length > 0 ||
+        projectMediaField(selected, 'mediaMobile').length > 0 ||
+        projectMediaField(selected, 'streamHttps').length > 0)
     let mediaSurface = null
     if (selected) {
       mediaSurface = (
@@ -2098,13 +2165,8 @@ export default function FlashbackApp() {
         </a>
         <h1 className="fb-movie-title">{displayTitle}</h1>
         {movieHitsEl}
-        {displayBlurb.length > 0 ? (
-          <div className="fb-movie-blurb fb-prose">
-            <MarkdownRenderer content={displayBlurb} />
-          </div>
-        ) : null}
-        <section className="fb-movie-watch" aria-label="Watch">
-          <div className="fb-movie-stage">
+        <section className="fb-movie-hero" aria-label="Watch">
+          <div className="fb-movie-art">
             {posterHref.length > 0 ? (
               <img
                 src={posterHref}
@@ -2112,61 +2174,19 @@ export default function FlashbackApp() {
                 className="fb-movie-poster"
                 data-fb-pop-image="1"
                 aria-label={'View poster for ' + displayTitle}
-                width={280}
-                height={420}
                 decoding="async"
               />
             ) : null}
-            {selected &&
-            (projectMediaField(selected, 'media').length > 0 ||
-              projectMediaField(selected, 'mediaWeb').length > 0 ||
-              projectMediaField(selected, 'mediaMobile').length > 0) ? (
-              <div className="fb-video-panel">
-                {mediaSurface}
-                <Affirmation
-                  mode="title"
-                  eyebrow="CONFIRM"
-                  title={'I confirm I own a legal copy of ' + projectOriginalTitle(selected)}
-                  body={
-                    'Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nFeature video is on IPFS (not in public git repos); this site only unlocks stream access after you confirm ownership. Not a pirate archive.'
-                  }
-                  checkboxLabel={
-                    'I confirm I own a legal copy of ' +
-                    projectOriginalTitle(selected) +
-                    ' before I play its edit.'
-                  }
-                  confirmLabel="OK — I confirm"
-                  storageKey={movieStorageKey(selected.slug)}
-                  confirmed={movieAck === true}
-                  linksJson='[{"label":"Ownership policy","href":"/legal"},{"label":"Terms","href":"/terms"}]'
-                  onConfirm={() => {
-                    setMovieAck(true)
-                    setAck(true)
-                  }}
-                />
-                {inPageMkvOk === true ? (
-                  <div className="fb-video-controls">
-                    <button
-                      type="button"
-                      className="fb-btn fb-btn-inpage-play"
-                      disabled={playDisabled}
-                      title={playTitle}
-                      onClick={sendPlay}
-                    >
-                      <PlayChevron className="fb-btn-icon" /> Play
-                    </button>
-                    <button
-                      type="button"
-                      className="fb-btn fb-btn-inpage-pause"
-                      disabled={playDisabled}
-                      title={pauseTitle}
-                      onClick={sendPause}
-                    >
-                      Pause
-                    </button>
-                  </div>
-                ) : null}
-              </div>
+            {hasFeatureMedia ? (
+              <button
+                type="button"
+                className="fb-btn fb-btn-primary fb-watch-cta"
+                onClick={() => {
+                  setWatchOpen(true)
+                }}
+              >
+                Watch
+              </button>
             ) : (
               <p className="fb-movie-nomedia">
                 Feature media is not catalogued for streaming yet. Project files are still listed
@@ -2174,11 +2194,103 @@ export default function FlashbackApp() {
               </p>
             )}
           </div>
+          <div className="fb-movie-notes">
+            {displayBlurb.length > 0 ? (
+              <div className="fb-movie-blurb fb-prose">
+                <MarkdownRenderer content={displayBlurb} />
+              </div>
+            ) : null}
+            {readmeMd.length > 0 ? (
+              <div className="fb-readme fb-prose">
+                <MarkdownRenderer content={readmeMd} />
+              </div>
+            ) : null}
+          </div>
         </section>
-        <div className="fb-readme fb-prose">
-          <h2 className="fb-section-title">Notes</h2>
-          <MarkdownRenderer content={readmeMd} />
-        </div>
+        {selected ? (
+          <Affirmation
+            mode="title"
+            eyebrow="CONFIRM"
+            title={'I confirm I own a legal copy of ' + projectOriginalTitle(selected)}
+            body={
+              'Same house rule fanedit communities have used for years: the edit is for people who already have the movie.\n\nFeature video is on IPFS (not in public git repos); this site only unlocks stream access after you confirm ownership. Not a pirate archive.'
+            }
+            checkboxLabel={
+              'I confirm I own a legal copy of ' +
+              projectOriginalTitle(selected) +
+              ' before I play its edit.'
+            }
+            confirmLabel="OK — I confirm"
+            storageKey={movieStorageKey(selected.slug)}
+            confirmed={movieAck === true}
+            linksJson='[{"label":"Ownership policy","href":"/legal"},{"label":"Terms","href":"/terms"}]'
+            onConfirm={() => {
+              setMovieAck(true)
+              setAck(true)
+            }}
+          />
+        ) : null}
+        {watchOpen === true && hasFeatureMedia ? (
+          <div
+            className="fb-watch-scrim"
+            role="presentation"
+            onClick={() => {
+              setWatchOpen(false)
+            }}
+            onKeyDown={(ev) => {
+              if (ev && ev.key === 'Escape') {
+                setWatchOpen(false)
+              }
+            }}
+          >
+            <div
+              className="fb-watch-dialog"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Ways to watch this movie"
+              tabIndex={0}
+              onClick={(ev) => {
+                if (ev && ev.stopPropagation) {
+                  ev.stopPropagation()
+                }
+              }}
+            >
+              <button
+                type="button"
+                className="fb-btn fb-watch-close"
+                autoFocus={true}
+                onClick={() => {
+                  setWatchOpen(false)
+                }}
+              >
+                Close
+              </button>
+              <div className="fb-video-panel">{mediaSurface}</div>
+              {inPageMkvOk === true ? (
+                <div className="fb-video-controls">
+                  <button
+                    type="button"
+                    className="fb-btn fb-btn-inpage-play"
+                    disabled={playDisabled}
+                    title={playTitle}
+                    onClick={sendPlay}
+                  >
+                    <PlayChevron className="fb-btn-icon" /> Play
+                  </button>
+                  <button
+                    type="button"
+                    className="fb-btn fb-btn-inpage-pause"
+                    disabled={playDisabled}
+                    title={pauseTitle}
+                    onClick={sendPause}
+                  >
+                    Pause
+                  </button>
+                </div>
+              ) : null}
+            </div>
+          </div>
+        ) : null}
         <section className="fb-movie-files" aria-label="Project files">
           <h2 className="fb-section-title">Project files</h2>
           <p className="fb-files-lead">
@@ -2243,6 +2355,13 @@ export default function FlashbackApp() {
     <span className="fb-footer-hits" data-fb-hits="site" hidden />
   )
 
+  let mainClass = 'fb-main'
+  if (kind.kind === 'chat') {
+    mainClass = 'fb-main fb-main-chat'
+  } else if (kind.kind === 'movie') {
+    mainClass = 'fb-main fb-main-movie'
+  }
+
   return (
     <StyleContext src="hooks/client/theme.yaml">
       <div className="fb-app">
@@ -2252,7 +2371,7 @@ export default function FlashbackApp() {
             '@media (prefers-reduced-motion:no-preference){.fb-screen-glow{animation:fb-glow-pulse 5.5s ease-in-out infinite}}',
             '@media (prefers-reduced-motion:reduce){.fb-screen-glow{animation:none!important}}',
             /* Backdrop covers live in theater-bg.css (velvet default + classic alt). */
-            '@media (max-width:640px){.fb-movie-stage{flex-direction:column}.fb-movie-poster{width:min(280px,100%)}.fb-gate,.fb-affirmation-native{align-items:stretch;justify-content:flex-start;padding:0;overflow:auto}.fb-gate-panel,.fb-gate-card{max-width:none;width:100%;min-height:100%;border-radius:0;box-shadow:none;box-sizing:border-box;padding:max(20px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))}}',
+            '@media (max-width:640px){.fb-movie-hero{display:flex;flex-direction:column;height:auto;min-height:0}.fb-movie-art{width:100%;max-width:320px}.fb-movie-poster{width:100%;height:auto;max-height:70vh;flex:0 0 auto}.fb-watch-cta{flex:0 0 auto;min-height:48px}.fb-movie-notes{max-height:50vh;height:auto}.fb-gate,.fb-affirmation-native{align-items:stretch;justify-content:flex-start;padding:0;overflow:auto}.fb-gate-panel,.fb-gate-card{max-width:none;width:100%;min-height:100%;border-radius:0;box-shadow:none;box-sizing:border-box;padding:max(20px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))}}',
           ].join('')}
         </style>
         <div className={playing === true ? 'fb-backdrop fb-backdrop-playing' : 'fb-backdrop'} aria-hidden="true">
@@ -2334,7 +2453,7 @@ export default function FlashbackApp() {
           </nav>
         </header>
         <NowShowing variant="lcd" itemsJson={nowItemsJson} ariaLabel="Now showing titles" />
-        <main className={kind.kind === 'chat' ? 'fb-main fb-main-chat' : 'fb-main'}>
+        <main className={mainClass}>
           {main}
           {kind.kind !== 'chat' ? (
             <LiveChat
