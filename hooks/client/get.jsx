@@ -2172,26 +2172,28 @@ export default function FlashbackApp() {
         {movieHitsEl}
         <section className="fb-movie-hero" aria-label="Watch">
           <div className="fb-movie-art">
-            {posterHref.length > 0 ? (
-              <img
-                src={posterHref}
-                alt=""
-                className="fb-movie-poster"
-                data-fb-pop-image="1"
-                aria-label={'View poster for ' + displayTitle}
-                decoding="async"
-              />
-            ) : null}
-            {hasFeatureMedia ? (
-              <label htmlFor="fb-watch-open" className="fb-btn fb-btn-primary fb-watch-cta">
-                Watch
-              </label>
-            ) : (
-              <p className="fb-movie-nomedia">
-                Feature media is not catalogued for streaming yet. Project files are still listed
-                below when present.
-              </p>
-            )}
+            <div className="fb-poster-stack">
+              {posterHref.length > 0 ? (
+                <img
+                  src={posterHref}
+                  alt=""
+                  className="fb-movie-poster"
+                  data-fb-pop-image="1"
+                  aria-label={'View poster for ' + displayTitle}
+                  decoding="async"
+                />
+              ) : null}
+              {hasFeatureMedia ? (
+                <label htmlFor="fb-watch-open" className="fb-btn fb-btn-primary fb-watch-cta">
+                  Watch
+                </label>
+              ) : (
+                <p className="fb-movie-nomedia">
+                  Feature media is not catalogued for streaming yet. Project files are still listed
+                  below when present.
+                </p>
+              )}
+            </div>
           </div>
           <div className="fb-movie-notes">
             {displayBlurb.length > 0 ? (
@@ -2267,6 +2269,14 @@ export default function FlashbackApp() {
             </div>
           </div>
         ) : null}
+        <div className="fb-movie-chat">
+          <LiveChat
+            prefix="fb"
+            channel={pageChatChannel}
+            path={route || '/'}
+            mode="embed"
+          />
+        </div>
         <section className="fb-movie-files" aria-label="Project files">
           <h2 className="fb-section-title">Project files</h2>
           <p className="fb-files-lead">
@@ -2432,7 +2442,7 @@ export default function FlashbackApp() {
         <NowShowing variant="lcd" itemsJson={nowItemsJson} ariaLabel="Now showing titles" />
         <main className={mainClass}>
           {main}
-          {kind.kind !== 'chat' ? (
+          {kind.kind !== 'chat' && kind.kind !== 'movie' ? (
             <LiveChat
               prefix="fb"
               channel={pageChatChannel}

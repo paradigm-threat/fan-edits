@@ -7,7 +7,7 @@
 (function (global) {
   'use strict';
 
-  var CSS_ID = 'fb-park-native-css-v12';
+  var CSS_ID = 'fb-park-native-css-v13';
   var BRAND_LINKS_ID = 'fb-brand-head-links';
   var THEATER_BG_CSS = '/hooks/client/brand/theater-bg.css';
   var THEATER_THEME_KEY = 'flashback.theaterTheme.v1';
@@ -141,6 +141,7 @@
         'fb-park-native-css-v9',
         'fb-park-native-css-v10',
         'fb-park-native-css-v11',
+        'fb-park-native-css-v12',
       ].forEach(
         function (oldId) {
           var old = global.document.getElementById(oldId);
@@ -155,7 +156,11 @@
         '.fb-gate,.fb-affirmation-native{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(6,4,5,.9);box-sizing:border-box}',
         '.fb-gate-panel,.fb-gate-card{max-width:480px;width:100%;padding:28px 26px 24px;background:linear-gradient(165deg,#3a1820 0%,#1a0c10 55%,#12080a 100%);border:1px solid #e8c872;box-shadow:0 24px 70px rgba(0,0,0,.6);border-radius:4px;color:#f5e6be}',
         '@media (max-width:640px){.fb-gate,.fb-affirmation-native{align-items:stretch;justify-content:flex-start;padding:0;overflow:auto}.fb-gate-panel,.fb-gate-card{max-width:none;width:100%;min-height:100%;border-radius:0;box-shadow:none;box-sizing:border-box;padding:max(20px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))}}',
-        '@media (max-width:640px){.fb-movie-hero{display:flex;flex-direction:column;height:auto;min-height:0}.fb-movie-art{width:100%;max-width:320px;height:auto}.fb-movie-poster{width:100%;height:auto;max-height:70vh;flex:0 0 auto;max-width:100%}.fb-watch-cta{flex:0 0 auto;min-height:48px}.fb-movie-notes{height:auto;max-height:50vh}}',
+        '.fb-movie-art{display:flex;flex-direction:column;align-items:center;min-width:0;overflow:hidden}',
+        '.fb-poster-stack{display:table;height:100%;max-width:100%;border-collapse:separate;border-spacing:0 8px}',
+        '.fb-movie-poster{display:block;width:auto;height:auto;max-width:100%;max-height:calc(100% - 56px)}',
+        '.fb-watch-cta{display:table-caption;caption-side:bottom;width:100%;max-width:100%;box-sizing:border-box;min-height:48px}',
+        '@media (max-width:640px){.fb-movie-hero{display:flex;flex-direction:column;height:auto;min-height:0}.fb-movie-art{width:100%;max-width:320px;height:auto;overflow:visible}.fb-poster-stack{display:flex;flex-direction:column;width:100%;height:auto;gap:8px}.fb-movie-poster{width:100%;height:auto;max-height:70vh;max-width:100%}.fb-watch-cta{display:flex;width:100%;min-height:48px}.fb-movie-notes{height:auto;max-height:50vh}}',
         '.fb-gate-eyebrow,.fb-gate-kicker{margin:0 0 8px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#e8c872}',
         '.fb-gate-title{margin:0 0 14px;font-size:1.5rem;line-height:1.25;color:#f5e6be}',
         '.fb-gate-body{margin:0 0 14px;color:#c4b49a;font-size:1rem;line-height:1.55}',

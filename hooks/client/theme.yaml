@@ -538,19 +538,29 @@ themes:
       ".fb-movie-art":
         display: "flex"
         flexDirection: "column"
+        alignItems: "center"
         height: "100%"
         minHeight: "0"
         minWidth: "0"
-        gap: "8px"
+        overflow: "hidden"
+      ".fb-poster-stack":
+        display: "table"
+        height: "100%"
+        maxWidth: "100%"
+        borderCollapse: "separate"
+        borderSpacing: "0 8px"
+      ".fb-movie-chat":
+        order: "3"
+        marginTop: "18px"
       ".fb-movie-blurb":
         color: "var(creamMuted)"
         marginBottom: "12px"
       ".fb-movie-poster":
         display: "block"
-        flex: "9 1 0"
-        minHeight: "0"
-        width: "100%"
+        width: "auto"
         height: "auto"
+        maxWidth: "100%"
+        maxHeight: "calc(100% - 56px)"
         objectFit: "contain"
         objectPosition: "center center"
         margin: "0"
@@ -558,9 +568,11 @@ themes:
         background: "var(screen)"
         cursor: "zoom-in"
       ".fb-watch-cta":
-        flex: "1 1 0"
+        display: "table-caption"
+        captionSide: "bottom"
         width: "100%"
-        minHeight: "0"
+        boxSizing: "border-box"
+        minHeight: "48px"
         justifyContent: "center"
         fontSize: "1.15rem"
       ".fb-movie-notes":
@@ -628,7 +640,7 @@ themes:
         color: "var(creamMuted)"
         fontSize: "0.92rem"
       ".fb-movie-files":
-        order: "4"
+        order: "5"
         marginTop: "18px"
         paddingTop: "16px"
         borderTop: "1px solid var(border)"
@@ -1275,14 +1287,18 @@ themes:
           width: "100%"
           maxWidth: "320px"
           height: "auto"
+          overflow: "visible"
+        ".fb-poster-stack":
+          width: "100%"
+          height: "auto"
         ".fb-movie-poster":
           width: "100%"
           height: "auto"
           maxHeight: "70vh"
-          flex: "0 0 auto"
           maxWidth: "100%"
         ".fb-watch-cta":
-          flex: "0 0 auto"
+          display: "flex"
+          width: "100%"
           minHeight: "48px"
         ".fb-movie-notes":
           height: "auto"
