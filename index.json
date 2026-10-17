@@ -1,5 +1,6 @@
 {
   "nowShowing": [
+    "the-day-after-tomorrow-2004-yuppocolypse",
     "tron-legacy-2010-the-miracle",
     "terminator-3-2003-brass-monkey",
     "american-psycho-2000-psychosomatic",
@@ -565,7 +566,7 @@
       "path": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse",
       "title": "The Day After Tomorrow (2004) \u2014 Yuppocolypse",
       "originalTitle": "The Day After Tomorrow (2004)",
-      "status": "coming_soon",
+      "status": "showing",
       "media": "The Day After Tomorrow (2004) - Yuppocolypse.mkv",
       "mediaWeb": "",
       "mediaMobile": "",
@@ -584,8 +585,11 @@
         }
       ],
       "subtitlesJson": "[{\"src\":\"/FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/subs/The Day After Tomorrow (2004) - Yuppocolypse.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/subs/The Day After Tomorrow (2004) - Yuppocolypse.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
-      "qualityWebEnabled": false,
-      "qualityMobileEnabled": false,
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-day-after-tomorrow-2004-yuppocolypse/The_Day_After_Tomorrow_2004_-_Yuppocolypse.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-day-after-tomorrow-2004-yuppocolypse/The_Day_After_Tomorrow_2004_-_Yuppocolypse_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-day-after-tomorrow-2004-yuppocolypse/The_Day_After_Tomorrow_2004_-_Yuppocolypse_mobile-720p.mkv",
+      "qualityWebEnabled": true,
+      "qualityMobileEnabled": true,
       "blurb": "A leaner *Day After Tomorrow*: keep the catastrophe, cut the soft yuppie movie wrapped around it (~33 min out). Slogan: **Yorke warned us about Yuppies Networking.**",
       "poster": "poster.jpg"
     },
