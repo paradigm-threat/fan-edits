@@ -1,6 +1,10 @@
 # The Day After Tomorrow (2004) — Yuppocolypse
 
-A leaner *Day After Tomorrow*: keep the catastrophe, cut the soft yuppie movie wrapped around it (~33 min out). Slogan: **Less meet-cute, more ice age.**
+![The Day After Tomorrow Yuppocolypse Poster](poster.jpg)
+
+A leaner *Day After Tomorrow*: keep the catastrophe, cut the soft yuppie movie wrapped around it (~33 min out). Slogan: **Yorke warned us about Yuppies Networking.**
+
+Thom Yorke delivered that exact warning in Radiohead’s 1997 milestone track, [“Paranoid Android”](https://en.wikipedia.org/wiki/Paranoid_Android) (*OK Computer*). In the chaotic third section, right before the somber “rain down” segment, he sings: *“The crackle of pigskin / The dust and the screaming / The yuppies networking / The panic, the vomit”* ([Genius](https://genius.com/Radiohead-paranoid-android-lyrics)). The poster (and this cut’s name) take that line as the brief: freeze out the networking soft-life so the storm can lead.
 
 ## Motivation
 
