@@ -2168,8 +2168,6 @@ export default function FlashbackApp() {
         <a className="fb-back" href="/">
           ← Library
         </a>
-        <h1 className="fb-movie-title">{displayTitle}</h1>
-        {movieHitsEl}
         <section className="fb-movie-hero" aria-label="Watch">
           <div className="fb-movie-art">
             <div className="fb-poster-stack">
@@ -2196,16 +2194,20 @@ export default function FlashbackApp() {
             </div>
           </div>
           <div className="fb-movie-notes">
-            {displayBlurb.length > 0 ? (
-              <div className="fb-movie-blurb fb-prose">
-                <MarkdownRenderer content={displayBlurb} />
-              </div>
-            ) : null}
-            {readmeMd.length > 0 ? (
-              <div className="fb-readme fb-prose">
-                <MarkdownRenderer content={readmeMd} />
-              </div>
-            ) : null}
+            <div className="fb-movie-notes-scroll">
+              <h1 className="fb-movie-title">{displayTitle}</h1>
+              {displayBlurb.length > 0 ? (
+                <div className="fb-movie-blurb fb-prose">
+                  <MarkdownRenderer content={displayBlurb} />
+                </div>
+              ) : null}
+              {readmeMd.length > 0 ? (
+                <div className="fb-readme fb-prose">
+                  <MarkdownRenderer content={readmeMd} />
+                </div>
+              ) : null}
+            </div>
+            {movieHitsEl}
           </div>
         </section>
         {selected ? (
