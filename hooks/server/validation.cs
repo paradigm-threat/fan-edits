@@ -111,6 +111,7 @@ function isAllowedPath(p) {
   if (endsWith(p, 'files.json') || endsWith(p, 'stats.json')) return true
   if (isProjectJsonPath(p)) return true
   if (endsWith(p, '.srt') || endsWith(p, '.SRT')) return true
+  if (endsWith(p, '.vtt') || endsWith(p, '.VTT')) return true
   if (endsWith(p, '.ass') || endsWith(p, '.ASS')) return true
   if (contains(p, 'remove-') && (endsWith(p, '-ranges.json') || endsWith(p, '-ranges.JSON'))) return true
   if (endsWith(p, '.relay.shifted.srt')) return true

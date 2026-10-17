@@ -40,17 +40,24 @@ FanMixes/
   Serenity (2005) - Unjossed/
     README.md                          # Human summary + how to build/render
     PLAN.md                            # Optional: editorial strategy, QC, filler plan
+    CHANGES.md                         # Picture holes (source times) + scene labels
     poster.jpg                         # Vertical 2:3 catalog art (see docs/POSTER-STYLE.md)
+    _sources/                          # gitignored — theatrical SRT + optional rip symlink
+      theatrical.srt                   # Source-clock English (ONLY file for hole labels)
     Serenity (2005) - Unjossed.kdenlive
-    Serenity (2005) - Unjossed.srt     # Source-timeline English subs (working copy)
+    Serenity (2005) - Unjossed.srt     # Often cut-timed or incomplete — do NOT trust for labels
     Serenity (2005) - Unjossed.kdenlive.ass
-    Serenity (2005) - Unjossed.kdenlive.shifted.srt   # After cuts — output timeline
+    Serenity (2005) - Unjossed.kdenlive.shifted.srt   # After cuts — output / player timeline
+    subs/<stem>.english.srt            # Player: dialogue only (cut timeline)
+    subs/<stem>.enhanced.srt           # Player: dialogue + [Edit:] cut cards
     remove-serenity-ranges.json        # Machine-readable cut windows (seconds)
     generate-serenity.sh               # Optional: regen kdenlive from subs + JSON
     render_final_mkv.py                # Optional: ffmpeg render from playlist2
 ```
 
 **Naming:** `Title (Year) - Edition Name` — match existing projects (`Alien Resurrection (1997) - UnJossed`, `Riddick (2013) - Unjinxed`).
+
+`_sources/` is gitignored (`FanMixes/**/_sources/`). Keep theatrical SRTs there locally; document how to extract them in the FanMix README.
 
 ---
 
@@ -93,10 +100,13 @@ flowchart TD
 
 1. **Find the rip** (owner-provided path). Example: `N:\Videos\Horror and SciFi\Serenity (2005)  [2160p x265 10bit FS90 Joy].mkv`.
 2. **Probe** video: resolution, fps, duration, audio layout (stereo vs 5.1), codec (note 10-bit HEVC vs 8-bit for render script).
-3. **Subtitles** — prefer English SRT aligned to the **same rip**:
-   - Extract: `ffmpeg -i movie.mkv -map 0:s:0 -c:s srt subs.en.srt` (adjust stream index).
-   - Or use a sidecar from the release’s `Subs/` folder.
-4. Check in a working copy as `Title (Year) - Edition.srt` (or `Movie.en.srt` in the FanMix folder). **Do not commit** if the repo policy gitignores subs from releases; follow `.gitignore`.
+3. **Subtitles** — extract English aligned to the **same rip** (source clock):
+   - Probe streams: `ffprobe -show_entries stream=index,codec_type,codec_name -show_entries stream_tags=language,title -of csv=p=0 movie.mkv`
+   - Prefer a full **English / English CC** text track (not Forced-only).
+   - Extract into gitignored `_sources/`:  
+     `ffmpeg -i movie.mkv -map 0:N -c:s srt "_sources/theatrical.srt"` (replace `N` with the English CC index).
+   - Or copy a sidecar from the release’s `Subs/` folder to `_sources/theatrical.srt`.
+4. Optional working copy as `Title (Year) - Edition.srt` in the FanMix folder for editing — but treat it as **suspect for hole labels** until you prove it matches theatrical duration/clock (see §12).
 
 ### Phase B — Editorial plan
 
@@ -306,32 +316,76 @@ Catalog art lives at `FanMixes/<Title>/poster.jpg` (git tip binary). For generat
 
 ---
 
-## 10. Per-project README template
+## 10. Per-project README (house style)
+
+READMEs are the **public argument** for the cut — not a dump of hole times (that is [CHANGES.md](../FanMixes/)). Match recent FanMixes ([Brass Monkey](../FanMixes/Terminator%203%20(2003)%20-%20Brass%20Monkey/), [The Miracle](../FanMixes/Tron%20Legacy%20(2010)%20-%20The%20Miracle/), [Psychosomatic](../FanMixes/American%20Psycho%20(2000)%20-%20Psychosomatic/), [Yuppocolypse](../FanMixes/The%20Day%20After%20Tomorrow%20(2004)%20-%20Yuppocolypse/)).
+
+### Required shape
+
+1. **Title line** — `# Title (Year) — Edition Name`
+2. **Hero blurb** — one short paragraph: what the theatrical does wrong / what this cut keeps. Optional **slogan** in bold.
+3. **`## Motivation`** — owner’s thesis in plain language. Why this edition exists; what stays sacred; what gets thrown out.
+4. **Inline citations** — when critics, interviews, or fan writeups **agree with the thesis**, link them in the sentence (do not invent quotes). Prefer primary reviews over aggregators.
+5. **`## Changes`** — runtime removed + hole count; link to `CHANGES.md`; group bullets by theme (not raw timecode lists).
+6. **`## Source media (not in git)`** — rip filename; `_sources/theatrical.srt` for labels; warn if project `*.srt` is cut-timed / unreliable (§12).
+7. **Build / render / sync** — only if the project has scripts; always remind: copy rip **local** before render (§5 Phase F).
+8. Footer: contribute link to `/submit`.
+
+Optional: poster image under the title; trailer embed; `## TODO` for open picture QC.
+
+### Motivation rules
+
+- Write like a director’s note, not a changelog.
+- **Plain writing** — no purple marketing; no invented lore. Investigation angles (e.g. Brass Monkey needle-drop) need a clear claim + linked evidence.
+- Citations support *agreement*, not decoration. Bad fit → omit.
+- Do **not** paste Scene TBD skeletons into the README; summarize labeled CHANGES only.
+- Keep CHANGES as the machine/human cut list; README stays readable on the catalog page.
+
+### Template
 
 ```markdown
 # Title (Year) — Edition Name
 
+![Poster](poster.jpg)
+
+One-paragraph thesis. Slogan: **Short punch line.**
+
+## Motivation
+
+Why this cut exists. What the theatrical wastes time on. What you keep.
+Optional: critics who already said the same thing with [inline links](https://example.com).
+
 ## Changes
-Bullet list of what this cut does.
+
+**~N min removed across M picture holes.** Full list: [CHANGES.md](CHANGES.md).
+
+### Theme A
+- Bullet…
+
+### Theme B
+- Bullet…
 
 ## Source media (not in git)
-Where the owner should place the rip; exact filename example.
 
-## Build
-How to run generate-*.sh / manual Kdenlive steps.
+- Rip: `Exact.Filename.mkv`
+- Theatrical SRT for hole labels: `_sources/theatrical.srt`
+- Do **not** label holes from `Title - Edition.srt` if it is cut-timed / wrong clock
+
+## Build / label
+
+    python3 scripts/list_kdenlive_cuts.py
 
 ## Render
+
 Copy source rip from NAS to local disk first (see docs/LLM-FAN-EDIT-INSTRUCTIONS.md §5 Phase F).
-Command for render_final_mkv.py `--video` (local path) or Kdenlive export settings.
 
-## Sync back to server
-After render, copy the **entire project folder** to NAS — **exclude** the original source rip MKV (see §5 Phase F Step 1).
+---
 
-## Changelog
-Date — what changed.
+Want to contribute a cut or fix notes? See [Submit](/submit).
 ```
 
 ---
+
 
 ## 11. Reference projects
 
@@ -341,26 +395,121 @@ Date — what changed.
 | [Riddick (2013) - Unjinxed](../FanMixes/Riddick%20%282013%29%20-%20Unjinxed/) | Dialog-focused cringe removal. |
 | [Fried Green Tomatoes (1991) - No Frank Bennett](../FanMixes/Fried%20Green%20Tomatoes%20%281991%29%20-%20No%20Frank%20Bennett/) | `remove-*-ranges.json`, `generate-*.sh`, `render_final_mkv.py`, `PLAN.md`. |
 | [Silent Hill (2006) - Nay Tomorrow](../FanMixes/Silent%20Hill%20%282006%29%20-%20Nay%20Tomorrow/) | Gore + exposition; join discipline; external OST notes. |
+| [Terminator 3 (2003) - Brass Monkey](../FanMixes/Terminator%203%20(2003)%20-%20Brass%20Monkey/) | `_sources/theatrical.srt` for labels; cut-timed project SRT; CHANGES timing caveat. |
+| [The Day After Tomorrow (2004) - Yuppocolypse](../FanMixes/The%20Day%20After%20Tomorrow%20(2004)%20-%20Yuppocolypse/) | Wrong-SRT labeling failure mode; relabel from theatrical. |
 | [Thor Ragnarok (2017) - Kid friendly](../FanMixes/Thor%20Ragnarok%20%282017%29%20-%20Kid%20friendly/) | Kid-friendly severity. |
 
 ---
 
-## 12. Checklist before marking a FanMix “done”
+## 12. CHANGES.md — accurate cut analysis (timing & which SRT)
+
+`CHANGES.md` is the authoritative cut list for humans and for enhanced-subtitle cards. Getting the **clock** wrong produces confident-looking garbage (TBD scenes, or worse: dialogue from the wrong scene pasted under a hole).
+
+### Two clocks
+
+| Clock | What it is | Used for |
+|-------|------------|----------|
+| **Source** | Timecode on the original rip / theatrical feature | Kdenlive `in`/`out`, hole windows in CHANGES, `remove-*-ranges.json` |
+| **Cut** | Timecode on the finished edit (`cut ≈ source − Σ holes before t`) | Player `subs/*.english.srt`, `*.shifted.srt`, theater playback, enhanced `[Edit:]` placement |
+
+Hole header times in CHANGES are always **source** times:
+
+```text
+cut_t = source_t − sum(durations of holes that end at or before source_t)
+```
+
+### Which SRT for what
+
+| File | Clock | Use for hole labels? | Use for player / enhanced? |
+|------|-------|----------------------|----------------------------|
+| `_sources/theatrical.srt` | Source (matches rip) | **Yes — preferred** | No (too long; includes removed dialogue) |
+| `*.kdenlive.shifted.srt` / `subs/*.english.srt` | Cut | No | **Yes** |
+| Project `Title - Edition.srt` or `*.kdenlive.ass` | **Unknown until proven** | No, unless README/CHANGES explicitly says source-timed and duration ≈ rip | Only if proven cut-timed |
+| Remaster / alternate-rip SRT | Source *for that rip* | Only if it is the same picture the `.kdenlive` was cut from | No |
+
+**Hard rule:** Never label CHANGES holes by overlapping project/cut SRTs against source hole times. That is how *Day After Tomorrow — Yuppocolypse* got wrong “Removed subtitles” (e.g. disaster dialogue under soft-establishment holes) while every scene stayed TBD.
+
+### Prove an SRT’s clock before trusting it
+
+1. `ffprobe` rip duration (e.g. ~124 min).
+2. Last cue end on the SRT. If the SRT ends ~30+ min early and you removed ~30 min of picture, it may be **cut-timed** (or truncated) — still not safe for labeling unless you verified it.
+3. Spot-check: pick a famous early line; does its SRT time match the rip when you scrub the source MKV?
+4. Prefer extracting fresh from the rip into `_sources/theatrical.srt` (English CC text track, not Forced-only).
+
+### How to generate hole times
+
+```bash
+# Lists source-time gaps on the feature playlist; prefers _sources/theatrical.srt when present
+python3 scripts/list_kdenlive_cuts.py
+# Optional: python3 scripts/list_kdenlive_cuts.py --write-md   # skeleton CHANGES (Scene TBD)
+```
+
+- Hole **starts/ends** come from Kdenlive kept ranges (picture truth).
+- Overlapping cues for “Removed subtitles” must come from **theatrical / source** SRT only.
+- `list_kdenlive_cuts.py` scores `_sources/theatrical.srt` highest; do not defeat that by deleting theatrical and regenerating against a project SRT.
+
+### Labeling holes (Brass Monkey / Tron / Yuppocolypse style)
+
+1. Keep auto-generated times; replace `Scene: TBD` with a short **bold title** + one-line blurb.
+2. Prefer scene/intent language over dumping every removed cue into the title.
+3. Mark silent pads honestly: `confirm on picture` / `no overlapping theatrical dialogue` — do not invent plot.
+4. Put a **Timing caveat** at the top of CHANGES when the project `*.srt` is cut-timed or unreliable (see Brass Monkey, Yuppocolypse).
+5. Picture check wins over SRT when they disagree (misaligned remaster, commentary track, forced subs).
+6. Do **not** call CHANGES “done” while most holes are still Scene TBD — and do **not** run the enhanced-card builder on TBD-only lists.
+
+### `_sources/` checklist (local, gitignored)
+
+- [ ] `_sources/theatrical.srt` extracted from the **same** rip the `.kdenlive` uses.
+- [ ] Optional symlink to the rip under `_sources/` for picture QC (never commit `.mkv`).
+- [ ] README documents rip filename + how to re-extract theatrical.
+- [ ] CHANGES points at theatrical for labels and warns against the project SRT if needed.
+
+Reference: [Terminator 3 — Brass Monkey CHANGES](../FanMixes/Terminator%203%20(2003)%20-%20Brass%20Monkey/CHANGES.md), [Day After Tomorrow — Yuppocolypse CHANGES](../FanMixes/The%20Day%20After%20Tomorrow%20(2004)%20-%20Yuppocolypse/CHANGES.md).
+
+---
+
+## 13. Enhanced cut-commentary subtitles
+
+When `CHANGES.md` has **labeled** picture holes (not Scene TBD / confirm-on-picture-only), generate dual player tracks under `subs/`:
+
+| File | Contents |
+|------|----------|
+| `subs/<stem>.english.srt` (+ `.vtt`) | Dialogue only — no edit cards |
+| `subs/<stem>.enhanced.srt` (+ `.vtt`) | Dialogue + `[Edit: …]` join notices and short follow-up cards |
+
+```bash
+python3 scripts/build_edit_enhanced_srt.py --project "FanMixes/<Title> - <Edition>"
+# or the labeled-CHANGES batch:
+python3 scripts/build_edit_enhanced_srt.py --all-ready
+python3 scripts/build_edit_enhanced_srt.py --project "…" --dry-run   # preview card times
+```
+
+Hole times in CHANGES are **source** times; the script maps them to the **cut** timeline (§12) and places cards in dialogue gaps (0.4s pad, ~2.4s minimum). Follow-up cards use CHANGES/README motivation only when there is room. Do **not** invent an enhanced track while CHANGES is still TBD-only. Citation-only projects (Mission Mars, Lebowski, Pentagon) keep their investigation cards — do not invent fake picture-cut notices.
+
+Dialogue input must be **cut-timed** (`*.shifted.srt` / existing `subs/*.english.srt`). If only a source-timed `*.kdenlive.srt` exists, the builder shifts it through the hole list; prefer a real shifted/english track when available.
+
+After writing `subs/*.enhanced.srt`, regenerate the catalog: `python3 scripts/generate-index-json.py` (labels enhanced as **Enhanced / Citations**).
+
+---
+
+## 14. Checklist before marking a FanMix “done”
 
 - [ ] `ffprobe` passes on source rip.
 - [ ] `README.md` complete (changes, source path, build, render).
 - [ ] Cut list JSON + rationale documented.
+- [ ] `_sources/theatrical.srt` present locally; CHANGES holes labeled from it (not TBD-only).
 - [ ] `.kdenlive` opens with correct media path.
 - [ ] All joins QC’d; shifted subs match output.
 - [ ] Source rip **copied to local disk**; final render read from local copy (not NAS).
 - [ ] Final `.mkv` at **same resolution** as source, high-quality HEVC, embedded English subs.
+- [ ] If CHANGES holes are labeled: `subs/*.english.srt` + `subs/*.enhanced.srt` via `build_edit_enhanced_srt.py`; regen `index.json`.
 - [ ] `poster.jpg` in house style ([POSTER-STYLE.md](POSTER-STYLE.md)); optional wide/square crops if needed.
 - [ ] Project folder **synced back to server** (final MKV, project files, logs) — **excluding** the original source rip.
 - [ ] Root [README.md](../README.md) Fan Edit list updated (if owner wants release).
 
 ---
 
-## 13. Common failures
+## 15. Common failures
 
 | Symptom | Fix |
 |---------|-----|
@@ -370,6 +519,10 @@ Date — what changed.
 | Audio glitch at cut | Extend handles; keyframe snap; short crossfade. |
 | Subtitle drift | Regenerate shifted SRT/ASS from source SRT + kept segments. |
 | Render stalls, I/O errors, corrupt output | Source or output on NAS — **copy rip locally**, re-render; verify with `ffprobe` before and after. |
+| CHANGES “Removed subtitles” name the wrong scene | Project/cut SRT was used against **source** hole times — extract `_sources/theatrical.srt` from the rip and relabel (Yuppocolypse lesson). |
+| Every hole is Scene TBD | Skeleton from `list_kdenlive_cuts.py --write-md` only — label from theatrical cues + picture; do not ship enhanced cards yet. |
+| Project SRT ends far before rip duration | Likely cut-timed or truncated — fine for playback if shifted correctly; **never** for hole labels. |
+| Enhanced cards on wrong clock | Confirm CHANGES times are source; dialogue SRT is cut-timed (`*.shifted.srt` / `*.english.srt`) or source (`*.kdenlive.srt` without shifted, then builder maps). |
 
 ---
 

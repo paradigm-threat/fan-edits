@@ -3,6 +3,11 @@
   "path": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse",
   "files": [
     {
+      "path": "poster.jpg",
+      "kind": "other",
+      "bytes": 0
+    },
+    {
       "path": "The Day After Tomorrow (2004) - Yuppocolypse.kdenlive",
       "kind": "kdenlive",
       "bytes": 236089
