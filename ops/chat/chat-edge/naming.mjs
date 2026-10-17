@@ -1,85 +1,164 @@
-/** Theater-house anon nick generation (no raw IP in nick). */
+/**
+ * Anon nick generation for mesh chat.
+ * Picks from a curated Paradigm Threat / pop / researcher lexicon (no raw IP in nick).
+ */
 
-const HOUSES = [
-  'Orpheum',
-  'Rialto',
-  'Bijou',
-  'Palace',
-  'Rex',
-  'Strand',
-  'Vista',
-  'Cameo',
-  'Regal',
-  'Apollo',
-  'Lux',
-  'Marlowe',
-  'Capitol',
-  'Egyptian',
-  'Paradise',
-  'Astoria',
+/** IRC-safe display names (letter start, ≤24 after sanitize). */
+const PT_NICKS = [
+  // Pop + Saturnian / Earthbound
+  'MrSaturn',
+  'SaturnValley',
+  'BuzzBuzz',
+  'GiygasEcho',
+  'PokeyMinch',
+  'Magicant',
+  'ManiMani',
+  'StarmanDX',
+  'HappyHappy',
+  'DeepDarkness',
+  'PolarMountain',
+  'KronosKing',
+  'KaiwanStar',
+  'GoldenAge',
+  'AsherahTree',
+  'BaalSplit',
+  'IblisScar',
+  // Predictive programming / fiction
+  'Marvin',
+  'Steppenwolf',
+  'MagicTheater',
+  'WareLit',
+  'InTheHead',
+  'CombineWatch',
+  'GmanBrief',
+  'GordonFree',
+  'AlyxContain',
+  'Epistle3',
+  'ChildrenOfMen',
+  'ArkOfArts',
+  'QuietusDose',
+  'Gutterballs',
+  'MoHGlitch',
+  'JenovaScar',
+  'MidgarSpine',
+  'VersionB',
+  'AerisSpell',
+  'Lifestream',
+  'ShinraCorp',
+  'ZackDelusion',
+  'TonyStarkish',
+  'ThanosCull',
+  'IronManPlan',
+  // Researchers / investigators named in corpus
+  'Juergens',
+  'Thornhill',
+  'Talbott',
+  'Cardona',
+  'Velikovsky',
+  'Sitchin',
+  'Cochrane',
+  'HanyokLeak',
+  'GageWatch',
+  'CorbettLane',
+  'AssangeVault',
+  'SnowdenLeak',
+  // Event / agency flavor
+  'Insider911',
+  'NSA-Ally',
+  'CIA-Skeptic',
+  'Building7',
+  'FalseFlagDay',
+  'Oct7Stage',
+  'VegasHotspot',
+  'GulfOfTonkin',
+  'PentagonPaper',
+  'TitanicBox',
+  'AstorPrize',
+  'StrausLived',
+  'HughesClass',
+  'FedReset',
+  'Mudflood',
+  'TartariaMap',
+  'HollowEarth',
+  'MarsRV',
+  'FaceOnMars',
+  'CydoniaScan',
+  'RemoteViewer',
+  'CERNPortal',
+  'XenGate',
+  'QTrance',
+  'FlatTrance',
+  'ControlledOpp',
+  'PredictiveProg',
+  'DeepStateMap',
+  'NixonGrounded',
+  'TrumpCleanup',
+  'ReaganPuppet',
+  'PresDecouple',
+  'Neonational',
+  'SinEater',
+  'JungPsyche',
+  'HesseScan',
+  'AUWitness',
+  'RedactionGap',
+  'TimelineFix',
+  'ParadigmTip',
+  'RelayGuest',
+  'LobbySkeptic',
+  'CorpusReader',
+  'OpenInquiry',
+  'DocVerified',
+  'AuthorNote',
+  'KeywordHunt',
+  'SubstackBan',
+  'PerpWalkCO',
+  'AntibodyPlan',
+  'Containment',
+  'Disclosure',
+  'ReadingRoom',
+  'FOIADump',
+  'DeclassWave',
+  'CampNSA',
+  'CampCIA',
+  'AllianceMark',
+  'OccultIcon',
+  'VikingAsgard',
+  'AtlantisHost',
+  'MartianFork',
+  'Earthling',
+  'HeartChamber',
+  'BreedingSign',
+  'HonestAtheist',
+  'SaturnSatan',
+  'CreatorSplit',
+  'GodIsAWoman',
+  'LoveVsFear',
+  'DarkAgeLock',
+  'SolarInterlude',
 ];
 
-const COUNTRY_HOUSE = {
-  US: 'Orpheum',
-  CA: 'Rialto',
-  GB: 'Palace',
-  UK: 'Palace',
-  IE: 'Strand',
-  FR: 'Cameo',
-  DE: 'Capitol',
-  NL: 'Vista',
-  BE: 'Lux',
-  ES: 'Egyptian',
-  IT: 'Apollo',
-  PT: 'Paradise',
-  BR: 'Astoria',
-  MX: 'Regal',
-  JP: 'Marlowe',
-  KR: 'Rex',
-  CN: 'Bijou',
-  HK: 'Bijou',
-  TW: 'Cameo',
-  SG: 'Vista',
-  AU: 'Strand',
-  NZ: 'Strand',
-  IN: 'Lux',
-  SE: 'Apollo',
-  NO: 'Apollo',
-  FI: 'Apollo',
-  PL: 'Capitol',
-  UA: 'Capitol',
-  RU: 'Palace',
-  ZA: 'Egyptian',
-  AR: 'Astoria',
-  CL: 'Astoria',
-};
-
-const EDIT_VERBS = [
-  'Trim',
-  'Fade',
-  'Cut',
-  'Dissolve',
-  'Wipe',
-  'Match',
-  'Ripple',
-  'Splice',
-  'Grade',
-  'Dub',
-];
-
-const CITY_ADJ = [
-  'Brooklyn',
-  'Osaka',
-  'Chicago',
-  'Lisbon',
-  'Seoul',
-  'Austin',
-  'Berlin',
-  'Kyoto',
-  'Miami',
-  'Dublin',
-  'Taipei',
-  'Denver',
+/** Fan-edit / cut-room flavored picks (still PT-adjacent). */
+const CUT_ROOM_NICKS = [
+  'TrimReel',
+  'FadeCut',
+  'SpliceBay',
+  'GradeBooth',
+  'DubStage',
+  'MatchFrame',
+  'WipeLane',
+  'RippleEdit',
+  'DissolveIn',
+  'CutRoom',
+  'LobbyCut',
+  'FanEditDesk',
+  'NowShowing',
+  'ReelSkeptic',
+  'FrameWatch',
+  'AspectFix',
+  'SubtitleSpy',
+  'DirectorCut',
+  'AssemblyCut',
+  'Workprint',
 ];
 
 function fnv1a(str) {
@@ -101,25 +180,22 @@ function sanitizeNick(raw) {
   return n;
 }
 
+/**
+ * Stable anon nick from IP/UA/country seed — curated lexicon, never embeds raw IP.
+ * @param {{ country?: string, ip?: string, ua?: string, mode?: string }} opts
+ */
 export function theaterNick({ country, ip, ua, mode } = {}) {
   const m = mode === 'cut-room' ? 'cut-room' : 'theater';
   const cc = String(country || '')
     .trim()
     .toUpperCase()
     .slice(0, 2);
-  const seed = `${String(ip || '').replace(/\.\d+$/, '.0')}|${String(ua || '').slice(0, 80)}|${cc}`;
+  // Coarse IP (drop last octet) so DHCP churn doesn't rotate the nick every lease.
+  const seed = `${String(ip || '').replace(/\.\d+$/, '.0')}|${String(ua || '').slice(0, 80)}|${cc}|${m}`;
   const h = fnv1a(seed);
-
-  if (m === 'cut-room') {
-    const adj = CITY_ADJ[h % CITY_ADJ.length];
-    const verb = EDIT_VERBS[(h >>> 8) % EDIT_VERBS.length];
-    return sanitizeNick(adj + verb) || 'LobbyCut';
-  }
-
-  const house = COUNTRY_HOUSE[cc] || HOUSES[h % HOUSES.length] || 'Lobby';
-  const row = String.fromCharCode(65 + ((h >>> 4) % 26));
-  const seat = String(1 + ((h >>> 12) % 24));
-  return sanitizeNick(`${house}-${row}${seat}`) || 'Lobby-A1';
+  const pool = m === 'cut-room' ? CUT_ROOM_NICKS : PT_NICKS;
+  const pick = pool[h % pool.length] || pool[0] || 'RelayGuest';
+  return sanitizeNick(pick) || 'RelayGuest';
 }
 
 export function countryFromHeaders(headers) {
@@ -139,4 +215,4 @@ export function countryFromHeaders(headers) {
   return '';
 }
 
-export { sanitizeNick, HOUSES };
+export { sanitizeNick, PT_NICKS, CUT_ROOM_NICKS };

@@ -257,11 +257,21 @@ const wss = new WebSocketServer({ server, path: '/chat/ws' });
 
 wss.on('connection', async (ws, req) => {
   const country = countryFromHeaders(req.headers);
-  let desired = theaterNick({
-    country,
-    ip: clientIp(req),
-    ua: req.headers['user-agent'] || '',
-  });
+  let qNick = '';
+  try {
+    const wu = new URL(req.url || '/', 'http://chat.local');
+    qNick = sanitizeNick(wu.searchParams.get('nick') || '');
+  } catch (_) {
+    qNick = '';
+  }
+  // Prefer client session nick (?nick=); else curated lexicon pick.
+  let desired =
+    qNick ||
+    theaterNick({
+      country,
+      ip: clientIp(req),
+      ua: req.headers['user-agent'] || '',
+    });
 
   const irc = new IrcClient({
     host: IRC_HOST,
