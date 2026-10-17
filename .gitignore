@@ -7,6 +7,16 @@ hooks/client/native/test-results/
 ops/chat/chat-edge/node_modules/
 .relay/logs/
 
+# Python bytecode / caches
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
 # Local feature/source media (never tip) — keep relative links in .kdenlive
 FanMixes/**/_sources/
 KidFriendly/**/_sources/
@@ -22,3 +32,17 @@ KidFriendly/**/ost/*.wav
 KidFriendly/**/ost/*.flac
 KidFriendly/**/ost/*.m4a
 KidFriendly/**/ost/desktop.ini
+
+# FanMix working junk (not player tracks)
+FanMixes/**/from-render*
+KidFriendly/**/from-render*
+FanMixes/**/*.kdenlive.vtt
+KidFriendly/**/*.kdenlive.vtt
+FanMixes/**/*_backup*.kdenlive
+KidFriendly/**/*_backup*.kdenlive
+FanMixes/**/*Remastered*.vtt
+KidFriendly/**/*Remastered*.vtt
+*.pyc
+.DS_Store
+Thumbs.db
+desktop.ini
