@@ -565,16 +565,29 @@
       "path": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse",
       "title": "The Day After Tomorrow (2004) \u2014 Yuppocolypse",
       "originalTitle": "The Day After Tomorrow (2004)",
-      "status": "wip",
-      "media": "",
+      "status": "coming_soon",
+      "media": "The Day After Tomorrow (2004) - Yuppocolypse.mkv",
       "mediaWeb": "",
       "mediaMobile": "",
-      "image": "",
-      "subtitles": [],
-      "subtitlesJson": "[]",
+      "image": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/poster.jpg",
+      "subtitles": [
+        {
+          "src": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/subs/The Day After Tomorrow (2004) - Yuppocolypse.english.vtt",
+          "label": "English (default)",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/subs/The Day After Tomorrow (2004) - Yuppocolypse.enhanced.vtt",
+          "label": "Enhanced / Citations",
+          "lang": "en"
+        }
+      ],
+      "subtitlesJson": "[{\"src\":\"/FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/subs/The Day After Tomorrow (2004) - Yuppocolypse.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/subs/The Day After Tomorrow (2004) - Yuppocolypse.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
-      "blurb": "A leaner *Day After Tomorrow* that spends less time establishing the yuppie protagonists before the climate disaster takes over."
+      "blurb": "A leaner *Day After Tomorrow*: keep the catastrophe, cut the soft yuppie movie wrapped around it (~33 min out). Slogan: **Yorke warned us about Yuppies Networking.**",
+      "poster": "poster.jpg"
     },
     {
       "slug": "the-mummy-1999-debugged",
