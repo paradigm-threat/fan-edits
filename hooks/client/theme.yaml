@@ -312,7 +312,10 @@ themes:
         fontSize: "0.78rem"
         letterSpacing: "0.04em"
       ".fb-movie-hits":
-        margin: "0 0 12px"
+        flex: "0 0 auto"
+        margin: "8px 0 0"
+        paddingTop: "8px"
+        borderTop: "1px solid var(border)"
         color: "var(creamMuted)"
         fontSize: "0.85rem"
         letterSpacing: "0.03em"
@@ -532,7 +535,7 @@ themes:
         display: "flex"
         flexDirection: "column"
       ".fb-movie-title":
-        margin: "8px 0 10px"
+        margin: "0 0 10px"
         fontSize: "1.75rem"
         color: "var(cream)"
       ".fb-movie-hero":
@@ -589,9 +592,15 @@ themes:
         justifyContent: "center"
         fontSize: "1.15rem"
       ".fb-movie-notes":
+        display: "flex"
+        flexDirection: "column"
         minWidth: "0"
         minHeight: "0"
         height: "100%"
+        overflow: "hidden"
+      ".fb-movie-notes-scroll":
+        flex: "1 1 auto"
+        minHeight: "0"
         overflowX: "hidden"
         overflowY: "auto"
         overscrollBehavior: "auto"
