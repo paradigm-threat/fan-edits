@@ -151,8 +151,8 @@
       st.id = CSS_ID;
       st.textContent = [
         /* Affirmation / ownership gate — fullscreen modal for welcome AND title */
-        '.fb-gate,.fb-affirmation-native{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(6,4,5,.9);box-sizing:border-box;pointer-events:none}',
-        '.fb-gate-panel,.fb-gate-card{max-width:480px;width:100%;padding:28px 26px 24px;background:linear-gradient(165deg,#3a1820 0%,#1a0c10 55%,#12080a 100%);border:1px solid #e8c872;box-shadow:0 24px 70px rgba(0,0,0,.6);border-radius:4px;color:#f5e6be;pointer-events:auto}',
+        '.fb-gate,.fb-affirmation-native{position:fixed;inset:0;z-index:100;display:flex;align-items:center;justify-content:center;padding:22px;background:rgba(6,4,5,.9);box-sizing:border-box}',
+        '.fb-gate-panel,.fb-gate-card{max-width:480px;width:100%;padding:28px 26px 24px;background:linear-gradient(165deg,#3a1820 0%,#1a0c10 55%,#12080a 100%);border:1px solid #e8c872;box-shadow:0 24px 70px rgba(0,0,0,.6);border-radius:4px;color:#f5e6be}',
         '@media (max-width:640px){.fb-gate,.fb-affirmation-native{align-items:stretch;justify-content:flex-start;padding:0;overflow:auto}.fb-gate-panel,.fb-gate-card{max-width:none;width:100%;min-height:100%;border-radius:0;box-shadow:none;box-sizing:border-box;padding:max(20px,env(safe-area-inset-top)) 18px max(24px,env(safe-area-inset-bottom))}}',
         '.fb-gate-eyebrow,.fb-gate-kicker{margin:0 0 8px;font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:#e8c872}',
         '.fb-gate-title{margin:0 0 14px;font-size:1.5rem;line-height:1.25;color:#f5e6be}',
@@ -369,7 +369,7 @@
 
   /** Lobby OST — backup load when gateway inject is absent. */
   function ensureLobbyHostScripts() {
-    var LOBBY_CACHE = 'v=35';
+    var LOBBY_CACHE = 'v=36';
     var tryInject = function () {
       try {
         if (!global.document || global.FlashbackLobbyAudio) return;
@@ -400,9 +400,22 @@
     } catch (_) {}
   }
 
+  function bindWatchDialog() {
+    try {
+      if (!global.document || global.__fbWatchDialogBound) return;
+      global.__fbWatchDialogBound = true;
+      global.document.addEventListener('keydown', function (ev) {
+        if (!ev || ev.key !== 'Escape') return;
+        var box = global.document.getElementById('fb-watch-open');
+        if (box && box.checked) box.checked = false;
+      });
+    } catch (_) {}
+  }
+
   ensureParkNativeCss();
   wireTheaterThemeToggles();
   ensureLobbyHostScripts();
+  bindWatchDialog();
 
   global.__fbEnsureParkNativeCss = ensureParkNativeCss;
   global.__fbHostNeedsUpgrade = hostNeedsUpgrade;
