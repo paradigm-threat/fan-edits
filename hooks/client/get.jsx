@@ -2429,14 +2429,34 @@ export default function FlashbackApp() {
             >
               Theme: Velvet
             </a>
-            <button
-              type="button"
-              className="fb-link fb-lobby-music"
-              data-fb-lobby-music="1"
-              aria-pressed="false"
-            >
-              Lobby music
-            </button>
+            <span className="fb-lobby">
+              <label className="fb-lobby-field">
+                Music
+                <select
+                  className="fb-lobby-playlist"
+                  data-fb-lobby-playlist="1"
+                  aria-label="Lobby playlist"
+                  defaultValue="off"
+                >
+                  <option value="off">Off</option>
+                  <option value="auto">Auto</option>
+                  <option value="allYear">All year</option>
+                  <option value="winter">Winter</option>
+                </select>
+              </label>
+              <label className="fb-lobby-field">
+                Vol
+                <input
+                  className="fb-lobby-volume"
+                  data-fb-lobby-volume="1"
+                  type="range"
+                  min="0"
+                  max="100"
+                  defaultValue="25"
+                  aria-label="Lobby volume"
+                />
+              </label>
+            </span>
           </nav>
         </header>
         <NowShowing variant="lcd" itemsJson={nowItemsJson} ariaLabel="Now showing titles" />

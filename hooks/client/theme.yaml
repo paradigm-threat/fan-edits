@@ -150,20 +150,29 @@ themes:
       ".fb-link:hover":
         color: "var(cream)"
         textDecoration: "underline"
-      ".fb-lobby-music":
-        background: "transparent"
-        border: "none"
-        padding: "0"
-        margin: "0"
-        font: "inherit"
-        cursor: "pointer"
+      ".fb-lobby":
+        display: "inline-flex"
+        flexDirection: "row"
+        alignItems: "center"
+        gap: "8px"
         color: "var(gold)"
-        letterSpacing: "0.02em"
-      ".fb-lobby-music:hover":
+      ".fb-lobby-field":
+        display: "inline-flex"
+        flexDirection: "row"
+        alignItems: "center"
+        gap: "4px"
+        fontSize: "0.85rem"
+        color: "var(gold)"
+      ".fb-lobby-playlist":
+        background: "#1a0c10"
         color: "var(cream)"
-        textDecoration: "underline"
-      ".fb-lobby-music.fb-lobby-on":
-        color: "var(cream)"
+        border: "1px solid var(goldDim)"
+        fontFamily: "inherit"
+        fontSize: "0.85rem"
+        padding: "2px 4px"
+      ".fb-lobby-volume":
+        width: "72px"
+        accentColor: "var(gold)"
       ".fb-marquee":
         position: "relative"
         zIndex: "2"
