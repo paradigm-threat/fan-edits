@@ -404,10 +404,26 @@
     try {
       if (!global.document || global.__fbWatchDialogBound) return;
       global.__fbWatchDialogBound = true;
+      function setOpen(on) {
+        var box = global.document.getElementById('fb-watch-open');
+        if (box) box.checked = !!on;
+        var scrim = global.document.querySelector('.fb-watch-scrim');
+        if (scrim) scrim.style.display = on ? 'flex' : 'none';
+      }
+      global.document.addEventListener('click', function (ev) {
+        var t = ev && ev.target;
+        if (!t || !t.closest) return;
+        if (t.closest('.fb-watch-cta')) {
+          if (ev.preventDefault) ev.preventDefault();
+          setOpen(true);
+        } else if (t.closest('.fb-watch-close') || t.closest('.fb-watch-backdrop')) {
+          if (ev.preventDefault) ev.preventDefault();
+          setOpen(false);
+        }
+      });
       global.document.addEventListener('keydown', function (ev) {
         if (!ev || ev.key !== 'Escape') return;
-        var box = global.document.getElementById('fb-watch-open');
-        if (box && box.checked) box.checked = false;
+        setOpen(false);
       });
     } catch (_) {}
   }
