@@ -528,7 +528,8 @@ themes:
         color: "var(cream)"
       ".fb-movie-hero":
         display: "grid"
-        gridTemplateColumns: "auto minmax(0, 1fr)"
+        # Cap the poster column so a tall window cannot crush the notes.
+        gridTemplateColumns: "minmax(180px, 42%) minmax(0, 1fr)"
         alignItems: "stretch"
         gap: "18px"
         height: "calc(100dvh - 11.5rem)"
@@ -538,8 +539,6 @@ themes:
         display: "flex"
         flexDirection: "column"
         height: "100%"
-        # Width follows poster 2:3 inside the top 90%; the CTA is the bottom 10%.
-        aspectRatio: "3 / 5"
         minHeight: "0"
         minWidth: "0"
         gap: "8px"

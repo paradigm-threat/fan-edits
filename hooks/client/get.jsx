@@ -581,6 +581,11 @@ function parseReadmeHero(readme, folderName) {
     if (s.indexOf('|') === 0) {
       break
     }
+    // Catalog poster is shown beside the notes; don't fold a leading poster embed into the blurb.
+    if (s.indexOf('![') === 0 && s.toLowerCase().indexOf('poster') >= 0) {
+      i = i + 1
+      continue
+    }
     if (blurb.length > 0) {
       blurb = blurb + ' '
     }
@@ -2033,9 +2038,9 @@ export default function FlashbackApp() {
     }
     let displayBlurb = ''
     if (hero.blurb.length > 0) {
-      displayBlurb = hero.blurb
+      displayBlurb = stripLeadingPosterImage(hero.blurb)
     } else if (selected && selected.blurb) {
-      displayBlurb = selected.blurb
+      displayBlurb = stripLeadingPosterImage(selected.blurb)
     }
     let startAtVal = ''
     const startAtNum = startAtFromLocation()
