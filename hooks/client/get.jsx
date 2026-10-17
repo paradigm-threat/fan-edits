@@ -2436,9 +2436,8 @@ export default function FlashbackApp() {
                   className="fb-lobby-playlist"
                   data-fb-lobby-playlist="1"
                   aria-label="Lobby playlist"
-                  defaultValue="off"
                 >
-                  <option value="off">Off</option>
+                  <option value="off" selected>Off</option>
                   <option value="auto">Auto</option>
                   <option value="allYear">All year</option>
                   <option value="winter">Winter</option>
@@ -2452,7 +2451,7 @@ export default function FlashbackApp() {
                   type="range"
                   min="0"
                   max="100"
-                  defaultValue="25"
+                  value="25"
                   aria-label="Lobby volume"
                 />
               </label>
