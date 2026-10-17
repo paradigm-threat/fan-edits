@@ -207,6 +207,9 @@
       st.textContent =
         '.fb-media-unlock-target{display:none}' +
         '.fb-video-controls .fb-btn{opacity:.45;pointer-events:none}' +
+        /* Scrim is visual only — clicks reach page chrome; card stays interactive. */
+        '.fb-affirmation-native{pointer-events:none}' +
+        '.fb-affirmation-native .fb-gate-panel,.fb-affirmation-native .fb-gate-card{pointer-events:auto}' +
         'html[data-fb-welcome-ack="1"] .fb-affirmation-native[data-fb-affirmation="welcome"]{display:none!important}' +
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-media-locked{display:none!important}' +
         'html[data-fb-welcome-ack="1"][data-fb-movie-ack] .fb-media-unlock-target{display:block!important}' +
@@ -307,7 +310,8 @@
     root.className = 'fb-gate fb-affirmation-native';
     root.setAttribute('data-fb-affirmation', mode);
     root.setAttribute('role', 'dialog');
-    root.setAttribute('aria-modal', 'true');
+    // Not a hard modal: backdrop dismiss / background browse must stay possible.
+    root.setAttribute('aria-modal', 'false');
     root.setAttribute('aria-labelledby', titleId);
 
     const panel = global.document.createElement('div');
@@ -364,75 +368,30 @@
     btn.className = 'fb-btn fb-btn-primary fb-gate-ok';
     btn.textContent = confirmLabel;
 
-    function focusableIn(container) {
-      if (!container || !container.querySelectorAll) return [];
-      const nodes = container.querySelectorAll(
-        'a[href],button:not([disabled]),input:not([disabled]),select:not([disabled]),textarea:not([disabled]),[tabindex]:not([tabindex="-1"])',
-      );
-      const out = [];
-      for (let i = 0; i < nodes.length; i++) {
-        const n = nodes[i];
-        if (n.offsetParent === null && n !== cb) continue;
-        out.push(n);
-      }
-      return out;
-    }
-
-    function setAppInert(on) {
+    /** Clear leftover inert from older gate builds — never re-apply (blocks carousel / chrome). */
+    function clearAffirmationInert() {
       try {
-        // Only when gate is in the document — contains() fails while detached and
-        // would inert the affirmation host that later mounts the gate (blocks clicks).
-        if (on && (!root.isConnected || !global.document.contains(root))) return;
-        const app = global.document.querySelector('.fb-app');
-        if (!app) return;
-        const kids = app.children;
-        for (let i = 0; i < kids.length; i++) {
-          const el = kids[i];
-          if (el.contains(root) || el === root) {
-            // Host wrapping the gate must stay interactive.
-            el.removeAttribute('inert');
-            continue;
-          }
-          if (on) el.setAttribute('inert', '');
-          else el.removeAttribute('inert');
-        }
-        // Gate is usually a sibling of main chrome or inside affirmation host —
-        // also inert main chrome when gate is a fixed overlay on body.
         const chrome = global.document.querySelectorAll(
           '.fb-header, .fb-main, .fb-footer, .fb-marquee, .fb-now-showing-host',
         );
         for (let j = 0; j < chrome.length; j++) {
-          if (chrome[j].contains(root)) {
-            chrome[j].removeAttribute('inert');
-            continue;
-          }
-          if (on) chrome[j].setAttribute('inert', '');
-          else chrome[j].removeAttribute('inert');
+          chrome[j].removeAttribute('inert');
+        }
+        const app = global.document.querySelector('.fb-app');
+        if (!app) return;
+        const kids = app.children;
+        for (let i = 0; i < kids.length; i++) {
+          kids[i].removeAttribute('inert');
         }
       } catch (_) {}
     }
 
-    function onTrapKey(ev) {
-      if (!ev || ev.key !== 'Tab') return;
-      const list = focusableIn(panel);
-      if (!list.length) return;
-      const first = list[0];
-      const last = list[list.length - 1];
-      const active = global.document.activeElement;
-      if (ev.shiftKey) {
-        if (active === first || !panel.contains(active)) {
-          ev.preventDefault();
-          last.focus();
-        }
-      } else if (active === last || !panel.contains(active)) {
-        ev.preventDefault();
-        first.focus();
-      }
-    }
-
     function teardownModal() {
-      root.removeEventListener('keydown', onTrapKey);
-      setAppInert(false);
+      root.removeEventListener('keydown', onGateKey);
+      try {
+        global.document.removeEventListener('pointerdown', onBackgroundUse, true);
+      } catch (_) {}
+      clearAffirmationInert();
       try {
         if (returnFocus && typeof returnFocus.focus === 'function') {
           returnFocus.focus();
@@ -444,6 +403,34 @@
           }
         }
       } catch (_) {}
+    }
+
+    /** Hide for this page load only — do not write localStorage (background / Escape dismiss). */
+    function dismissTransient() {
+      if (root.getAttribute('data-confirmed') === '1') return;
+      if (root.style.display === 'none') return;
+      root.style.display = 'none';
+      root.setAttribute('data-fb-session-dismissed', '1');
+      root.setAttribute('aria-hidden', 'true');
+      teardownModal();
+    }
+
+    function onBackgroundUse(ev) {
+      if (!ev || !ev.target) return;
+      if (root.style.display === 'none') return;
+      // Interacting with the card (checkbox / OK / links) keeps the gate up.
+      if (panel.contains(ev.target)) return;
+      dismissTransient();
+    }
+
+    function onGateKey(ev) {
+      if (!ev) return;
+      if (ev.key === 'Escape') {
+        ev.preventDefault();
+        dismissTransient();
+        return;
+      }
+      // Tab may leave the card into page chrome — no hard focus trap (inert removed).
     }
 
     function doConfirm() {
@@ -459,6 +446,7 @@
       persist(storageKey, mode, slugHint);
       root.style.display = 'none';
       root.setAttribute('data-confirmed', '1');
+      root.removeAttribute('data-fb-session-dismissed');
       teardownModal();
       if (onConfirmId != null && typeof invokeHandler === 'function') {
         try {
@@ -501,10 +489,14 @@
     }
 
     root.appendChild(panel);
-    root.addEventListener('keydown', onTrapKey);
-    // Defer until after host.replaceChildren(root) so contains(root) sees the mount.
+    root.addEventListener('keydown', onGateKey);
+    // Capture phase: first background click hides gate without localStorage, then event reaches target.
+    try {
+      global.document.addEventListener('pointerdown', onBackgroundUse, true);
+    } catch (_) {}
+    // Clear any stuck inert from prior builds; never re-apply (carousel / chrome stay usable).
     global.setTimeout(function () {
-      setAppInert(true);
+      clearAffirmationInert();
       try {
         cb.focus();
       } catch (_) {}
