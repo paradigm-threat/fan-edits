@@ -75,18 +75,18 @@
       "image": "FanMixes/American Psycho (2000) - Psychosomatic/poster.jpg",
       "subtitles": [
         {
-          "src": "FanMixes/American Psycho (2000) - Psychosomatic/subs/American.Psycho.2000.Remastered.1080p.srt",
-          "label": "English",
+          "src": "FanMixes/American Psycho (2000) - Psychosomatic/subs/American Psycho (2000) - Psychosomatic.english.vtt",
+          "label": "English (default)",
           "lang": "en",
           "default": true
         },
         {
-          "src": "FanMixes/American Psycho (2000) - Psychosomatic/subs/from-render-embedded.srt",
-          "label": "English",
+          "src": "FanMixes/American Psycho (2000) - Psychosomatic/subs/American Psycho (2000) - Psychosomatic.enhanced.vtt",
+          "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/American Psycho (2000) - Psychosomatic/subs/American.Psycho.2000.Remastered.1080p.srt\",\"label\":\"English\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/American Psycho (2000) - Psychosomatic/subs/from-render-embedded.srt\",\"label\":\"English\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/American Psycho (2000) - Psychosomatic/subs/American Psycho (2000) - Psychosomatic.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/American Psycho (2000) - Psychosomatic/subs/American Psycho (2000) - Psychosomatic.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic_mobile-720p.mkv",
@@ -112,9 +112,14 @@
           "label": "English (default)",
           "lang": "en",
           "default": true
+        },
+        {
+          "src": "FanMixes/Boogie Nights (1997) - No Lookout/subs/Boogie Nights (1997) - No Lookout.enhanced.vtt",
+          "label": "Enhanced / Citations",
+          "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Boogie Nights (1997) - No Lookout/subs/Boogie Nights (1997) - No Lookout.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Boogie Nights (1997) - No Lookout/subs/Boogie Nights (1997) - No Lookout.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Boogie Nights (1997) - No Lookout/subs/Boogie Nights (1997) - No Lookout.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "A single-block cut of PTA\u2019s *Boogie Nights* that skips the late-film collapse from the office whip-pan through On the Lookout and the donut-shop stick-up, then resumes on the film\u2019s own fade into the Rahad-planning scene."
@@ -168,8 +173,20 @@
       "mediaWeb": "",
       "mediaMobile": "",
       "image": "",
-      "subtitles": [],
-      "subtitlesJson": "[]",
+      "subtitles": [
+        {
+          "src": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/subs/Fear and Loathing in Las Vegas (1998) - No North Star.english.vtt",
+          "label": "English (default)",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/subs/Fear and Loathing in Las Vegas (1998) - No North Star.enhanced.vtt",
+          "label": "Enhanced / Citations",
+          "lang": "en"
+        }
+      ],
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/subs/Fear and Loathing in Las Vegas (1998) - No North Star.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/subs/Fear and Loathing in Las Vegas (1998) - No North Star.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "A single-scene cut that removes the North Star Coffee Lounge waitress/knife sequence and resumes on the Red Shark run to the airport."
@@ -206,8 +223,20 @@
       "mediaWeb": "",
       "mediaMobile": "",
       "image": "",
-      "subtitles": [],
-      "subtitlesJson": "[]",
+      "subtitles": [
+        {
+          "src": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/subs/Fried Green Tomatoes (1991) - No Frank Bennett.english.vtt",
+          "label": "English (default)",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/subs/Fried Green Tomatoes (1991) - No Frank Bennett.enhanced.vtt",
+          "label": "Enhanced / Citations",
+          "lang": "en"
+        }
+      ],
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/subs/Fried Green Tomatoes (1991) - No Frank Bennett.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/subs/Fried Green Tomatoes (1991) - No Frank Bennett.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "Removes Frank Bennett as a face, voice, and name-driven plot thread so the Idgie / Ruth / Ninny / Evelyn emotional spine can lead."
@@ -259,18 +288,18 @@
       "image": "",
       "subtitles": [
         {
-          "src": "FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.english.srt",
+          "src": "FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.english.vtt",
           "label": "English (default)",
           "lang": "en",
           "default": true
         },
         {
-          "src": "FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.enhanced.srt",
+          "src": "FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.english.srt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.enhanced.srt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Mission to Mars (2000) - Enhanced Citations/subs/Mission to Mars.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "Paradigm Threat [AU-062](https://paradigmthreat.net/influence/smithsonian/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md)."
@@ -328,8 +357,20 @@
       "mediaWeb": "",
       "mediaMobile": "",
       "image": "",
-      "subtitles": [],
-      "subtitlesJson": "[]",
+      "subtitles": [
+        {
+          "src": "FanMixes/Serenity (2005) - Unjossed/subs/Serenity (2005) - Unjossed.english.vtt",
+          "label": "English (default)",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/Serenity (2005) - Unjossed/subs/Serenity (2005) - Unjossed.enhanced.vtt",
+          "label": "Enhanced / Citations",
+          "lang": "en"
+        }
+      ],
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Serenity (2005) - Unjossed/subs/Serenity (2005) - Unjossed.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Serenity (2005) - Unjossed/subs/Serenity (2005) - Unjossed.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "A family/kids cut of *Serenity*: strict on Reaver gore, keeps the action and core plot, and leaves favorite Whedon beats (including \u201cleaf on the wind\u201d and the final fight) alone unless they break tone after horror."
@@ -443,11 +484,23 @@
       "originalTitle": "Terminator 3 (2003)",
       "status": "showing",
       "media": "Terminator 3 (2003) - Brass Monkey Edition.mkv",
-      "mediaWeb": "",
-      "mediaMobile": "",
+      "mediaWeb": "Terminator 3 (2003) - Brass Monkey Edition.web-1080p.mkv",
+      "mediaMobile": "Terminator 3 (2003) - Brass Monkey Edition.mobile-720p.mkv",
       "image": "FanMixes/Terminator 3 (2003) - Brass Monkey/poster.jpg",
-      "subtitles": [],
-      "subtitlesJson": "[]",
+      "subtitles": [
+        {
+          "src": "FanMixes/Terminator 3 (2003) - Brass Monkey/subs/Terminator 3 (2003) - Brass Monkey.english.vtt",
+          "label": "English (default)",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/Terminator 3 (2003) - Brass Monkey/subs/Terminator 3 (2003) - Brass Monkey.enhanced.vtt",
+          "label": "Enhanced / Citations",
+          "lang": "en"
+        }
+      ],
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Terminator 3 (2003) - Brass Monkey/subs/Terminator 3 (2003) - Brass Monkey.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Terminator 3 (2003) - Brass Monkey/subs/Terminator 3 (2003) - Brass Monkey.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey_mobile-720p.mkv",
@@ -469,18 +522,18 @@
       "image": "",
       "subtitles": [
         {
-          "src": "FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.english.srt",
+          "src": "FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.english.vtt",
           "label": "English (default)",
           "lang": "en",
           "default": true
         },
         {
-          "src": "FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.enhanced.srt",
+          "src": "FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.english.srt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.enhanced.srt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/The Big Lebowski (1998) - Enhanced Citations/subs/The Big Lebowski.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "Follow-up to [The Mummy (1999) - Debugged](../The%20Mummy%20%281999%29%20-%20Debugged/) and Paradigm Threat [AU-062](https://paradigmthreat.net/influence/eugene/investigations/occult-icons-mountain-of-heaven-glitch-investigation.md)."
@@ -623,18 +676,18 @@
       "image": "",
       "subtitles": [
         {
-          "src": "FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).english.srt",
+          "src": "FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).english.vtt",
           "label": "English (default)",
           "lang": "en",
           "default": true
         },
         {
-          "src": "FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).enhanced.srt",
+          "src": "FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).english.srt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).enhanced.srt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/The Pentagon Papers (2003) - Widescreen/subs/The Pentagon Papers (2003).enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "Sharper **16:9** presentation of the FX / Paramount TV movie. No story cuts. The 4:3 PAL DVD is AI-upscaled, then center-cropped \u2014 not stretched, not outpainted."
@@ -664,11 +717,23 @@
       "originalTitle": "Tron Legacy (2010)",
       "status": "showing",
       "media": "Tron Legacy (2010) - The Miracle.mkv",
-      "mediaWeb": "",
-      "mediaMobile": "",
+      "mediaWeb": "Tron Legacy (2010) - The Miracle.web-1080p.mkv",
+      "mediaMobile": "Tron Legacy (2010) - The Miracle.mobile-720p.mkv",
       "image": "FanMixes/Tron Legacy (2010) - The Miracle/poster.jpg",
-      "subtitles": [],
-      "subtitlesJson": "[]",
+      "subtitles": [
+        {
+          "src": "FanMixes/Tron Legacy (2010) - The Miracle/subs/Tron Legacy (2010) - The Miracle.english.vtt",
+          "label": "English (default)",
+          "lang": "en",
+          "default": true
+        },
+        {
+          "src": "FanMixes/Tron Legacy (2010) - The Miracle/subs/Tron Legacy (2010) - The Miracle.enhanced.vtt",
+          "label": "Enhanced / Citations",
+          "lang": "en"
+        }
+      ],
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Tron Legacy (2010) - The Miracle/subs/Tron Legacy (2010) - The Miracle.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Tron Legacy (2010) - The Miracle/subs/Tron Legacy (2010) - The Miracle.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/tron-legacy-2010-the-miracle/Tron_Legacy_2010_-_The_Miracle.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/tron-legacy-2010-the-miracle/Tron_Legacy_2010_-_The_Miracle_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/tron-legacy-2010-the-miracle/Tron_Legacy_2010_-_The_Miracle_mobile-720p.mkv",
@@ -696,12 +761,12 @@
           "default": true
         },
         {
-          "src": "FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.enhanced.srt",
+          "src": "FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.enhanced.srt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d_mobile-720p.mkv",

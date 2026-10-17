@@ -305,6 +305,10 @@ def pick_srt(folder: Path) -> Path | None:
         if "source.txt" in n:
             continue
         score = 0
+        if p.parent.name == "_sources" and "theatrical" in n:
+            score += 20  # Brass Monkey–style source clock for hole labels
+        if "theatrical" in n:
+            score += 10
         if "source" in n:
             score += 8
         if p.parent.name == "subs" and "english" not in n and "debugged" not in n:
@@ -315,6 +319,9 @@ def pick_srt(folder: Path) -> Path | None:
             score += 2
         if p.parent == folder:
             score += 3
+        # Prefer not to label holes from cut-edition / project SRT when theatrical exists
+        if "yuppocolypse" in n or "edition" in n:
+            score -= 5
         scored.append((score, p))
     if not scored:
         return None
