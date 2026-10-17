@@ -39,7 +39,7 @@ const SAMPLE = {
   state: {
     season: {
       source: 'calendar',
-      christmas: { start: '11-15', end: '01-02' },
+      winter: { start: '11-15', end: '01-02' },
     },
     theater: { source: 'host' },
     enabled: { source: 'host' },
@@ -48,9 +48,9 @@ const SAMPLE = {
   when: [
     { if: '!enabled || theater', do: 'fadeOut', ms: 800 },
     {
-      if: 'enabled && !theater && season == christmas',
+      if: 'enabled && !theater && season == winter',
       do: 'play',
-      song: 'christmas',
+      song: 'winter',
     },
     { if: 'enabled && !theater', do: 'play', song: 'publicDomain' },
   ],
@@ -60,10 +60,10 @@ const SAMPLE = {
       shuffle: true,
       tracks: ['https://example.com/a.mp3', 'https://example.com/b.mp3'],
     },
-    christmas: {
+    winter: {
       loop: true,
       shuffle: true,
-      tracks: ['https://example.com/xmas.mp3'],
+      tracks: ['https://example.com/winter.mp3'],
     },
   },
   volume: 0.28,
@@ -76,35 +76,35 @@ function d(y, m, day) {
   return new Date(y, m - 1, day, 12, 0, 0)
 }
 
-test('calendarSeason: christmas wraps Nov 15 – Jan 2', () => {
+test('calendarSeason: winter wraps Nov 15 – Jan 2', () => {
   const L = loadLib()
   const cfg = { start: '11-15', end: '01-02' }
-  assert.equal(L.calendarSeason(d(2026, 11, 15), cfg), 'christmas')
-  assert.equal(L.calendarSeason(d(2026, 12, 25), cfg), 'christmas')
-  assert.equal(L.calendarSeason(d(2027, 1, 2), cfg), 'christmas')
+  assert.equal(L.calendarSeason(d(2026, 11, 15), cfg), 'winter')
+  assert.equal(L.calendarSeason(d(2026, 12, 25), cfg), 'winter')
+  assert.equal(L.calendarSeason(d(2027, 1, 2), cfg), 'winter')
   assert.equal(L.calendarSeason(d(2026, 11, 14), cfg), 'default')
   assert.equal(L.calendarSeason(d(2027, 1, 3), cfg), 'default')
   assert.equal(L.calendarSeason(d(2026, 10, 15), cfg), 'default')
 })
 
-test('evaluate: fadeOut when disabled or theater', () => {
+test('evaluate: fadeOut when off or theater', () => {
   const L = loadLib()
-  const off = L.evaluate(SAMPLE, { enabled: false, theater: false, now: d(2026, 6, 1) })
+  const off = L.evaluate(SAMPLE, { mode: 'off', theater: false, now: d(2026, 6, 1) })
   assert.equal(off.action, 'fadeOut')
   assert.equal(off.ms, 800)
 
   const theater = L.evaluate(SAMPLE, {
-    enabled: true,
+    mode: 'auto',
     theater: true,
     now: d(2026, 6, 1),
   })
   assert.equal(theater.action, 'fadeOut')
 })
 
-test('evaluate: publicDomain outside christmas window', () => {
+test('evaluate: auto → publicDomain outside winter window', () => {
   const L = loadLib()
   const dec = L.evaluate(SAMPLE, {
-    enabled: true,
+    mode: 'auto',
     theater: false,
     now: d(2026, 10, 15),
   })
@@ -116,17 +116,51 @@ test('evaluate: publicDomain outside christmas window', () => {
   assert.equal(dec.volume, 0.28)
 })
 
-test('evaluate: christmas song in season', () => {
+test('evaluate: auto → winter song in season', () => {
   const L = loadLib()
   const dec = L.evaluate(SAMPLE, {
-    enabled: true,
+    mode: 'auto',
     theater: false,
     now: d(2026, 12, 20),
   })
   assert.equal(dec.action, 'play')
-  assert.equal(dec.song, 'christmas')
-  assert.equal(dec.season, 'christmas')
-  assert.deepEqual(dec.tracks, ['https://example.com/xmas.mp3'])
+  assert.equal(dec.song, 'winter')
+  assert.equal(dec.season, 'winter')
+  assert.deepEqual(dec.tracks, ['https://example.com/winter.mp3'])
+})
+
+test('evaluate: allYear forces publicDomain in winter window', () => {
+  const L = loadLib()
+  const dec = L.evaluate(SAMPLE, {
+    mode: 'allYear',
+    theater: false,
+    now: d(2026, 12, 20),
+  })
+  assert.equal(dec.action, 'play')
+  assert.equal(dec.song, 'publicDomain')
+  assert.equal(dec.season, 'default')
+})
+
+test('evaluate: winter forces winter song mid-year', () => {
+  const L = loadLib()
+  const dec = L.evaluate(SAMPLE, {
+    mode: 'winter',
+    theater: false,
+    now: d(2026, 6, 15),
+  })
+  assert.equal(dec.action, 'play')
+  assert.equal(dec.song, 'winter')
+  assert.equal(dec.season, 'winter')
+})
+
+test('cycleWebMode: off → auto → allYear → winter → off', () => {
+  const store = memoryStorage()
+  const L = loadLib(store)
+  assert.equal(L.readWebMode(), 'off')
+  assert.equal(L.cycleWebMode(), 'auto')
+  assert.equal(L.cycleWebMode(), 'allYear')
+  assert.equal(L.cycleWebMode(), 'winter')
+  assert.equal(L.cycleWebMode(), 'off')
 })
 
 test('shuffleCopy is deterministic for a seed and preserves membership', () => {
@@ -144,7 +178,8 @@ test('tip lobby.playlist.json is valid flashback-logical-playlist/v1', () => {
   assert.equal(tip.defaultSong, 'publicDomain')
   assert.ok(Array.isArray(tip.when) && tip.when.length >= 3)
   assert.ok(tip.songs.publicDomain?.tracks?.length >= 1)
-  assert.ok(tip.songs.christmas?.tracks?.length >= 1)
+  assert.ok(tip.songs.winter?.tracks?.length >= 1)
+  assert.ok(tip.state.season.winter)
   for (const songId of Object.keys(tip.songs)) {
     for (const u of tip.songs[songId].tracks) {
       assert.match(u, /^https:\/\/flashbackrepository\.b-cdn\.net\/lobby\//)
@@ -153,7 +188,7 @@ test('tip lobby.playlist.json is valid flashback-logical-playlist/v1', () => {
   }
   const L = loadLib()
   const midyear = L.evaluate(tip, {
-    enabled: true,
+    mode: 'auto',
     theater: false,
     now: d(2026, 6, 15),
   })
@@ -162,35 +197,30 @@ test('tip lobby.playlist.json is valid flashback-logical-playlist/v1', () => {
   assert.ok(midyear.tracks.length >= 1)
 
   const xmas = L.evaluate(tip, {
-    enabled: true,
+    mode: 'auto',
     theater: false,
     now: d(2026, 12, 1),
   })
   assert.equal(xmas.action, 'play')
-  assert.equal(xmas.song, 'christmas')
+  assert.equal(xmas.song, 'winter')
 })
 
-test('readWebEnabled / writeWebEnabled persist to localStorage', () => {
+test('readWebMode migrates legacy enabled flag', () => {
   const store = memoryStorage()
+  store.setItem('fb-lobby-music-enabled', '1')
   const L = loadLib(store)
-  assert.equal(L.readWebEnabled(), false)
-  L.writeWebEnabled(true)
-  assert.equal(store.getItem('fb-lobby-music-enabled'), '1')
-  assert.equal(L.readWebEnabled(), true)
-  L.writeWebEnabled(false)
-  assert.equal(store.getItem('fb-lobby-music-enabled'), '0')
-  assert.equal(L.readWebEnabled(), false)
-  store.setItem('fb-lobby-music-enabled', 'true')
-  assert.equal(L.readWebEnabled(), true)
+  assert.equal(L.readWebMode(), 'auto')
+  assert.equal(store.getItem('fb-lobby-music-mode'), 'auto')
 })
 
-test('LobbyAudio.host.js persists enable + unlocks without toggling off', () => {
+test('LobbyAudio.host.js cycles modes and unlocks without skipping', () => {
   const audioSrc = fs.readFileSync(
     path.join(dir, '../native/LobbyAudio.host.js'),
     'utf8',
   )
-  assert.match(audioSrc, /writeWebEnabled/)
-  assert.match(audioSrc, /readWebEnabled/)
+  assert.match(audioSrc, /writeWebMode/)
+  assert.match(audioSrc, /readWebMode/)
+  assert.match(audioSrc, /cycleWebMode/)
   assert.match(audioSrc, /playBlocked/)
   assert.match(audioSrc, /unlock \/ resume/)
   assert.match(audioSrc, /armGestureUnlock/)
@@ -204,7 +234,7 @@ test('park-host-common loads lobby host scripts', () => {
   assert.match(common, /ensureLobbyHostScripts/)
   assert.match(common, /LobbyPlaylist\.js/)
   assert.match(common, /LobbyAudio\.host\.js/)
-  assert.match(common, /v=34/)
+  assert.match(common, /v=36/)
 })
 
 test('registry lists LobbyPlaylist + LobbyAudio', () => {

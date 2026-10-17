@@ -3,7 +3,7 @@
   "state": {
     "season": {
       "source": "calendar",
-      "christmas": { "start": "11-15", "end": "01-02" }
+      "winter": { "start": "11-15", "end": "01-02" }
     },
     "theater": { "source": "host" },
     "enabled": { "source": "host" }
@@ -12,9 +12,9 @@
   "when": [
     { "if": "!enabled || theater", "do": "fadeOut", "ms": 800 },
     {
-      "if": "enabled && !theater && season == christmas",
+      "if": "enabled && !theater && season == winter",
       "do": "play",
-      "song": "christmas"
+      "song": "winter"
     },
     { "if": "enabled && !theater", "do": "play", "song": "publicDomain" }
   ],
@@ -35,12 +35,10 @@
         "https://flashbackrepository.b-cdn.net/lobby/public-domain/10-mozart-ave-verum-corpus.mp3",
         "https://flashbackrepository.b-cdn.net/lobby/public-domain/11-bach-air-on-the-g-string.mp3",
         "https://flashbackrepository.b-cdn.net/lobby/public-domain/12-bach-brandenburg-3-i.mp3",
-        "https://flashbackrepository.b-cdn.net/lobby/public-domain/13-handel-water-music-hornpipe.mp3",
-        "https://flashbackrepository.b-cdn.net/lobby/public-domain/14-handel-messiah-hallelujah.mp3",
-        "https://flashbackrepository.b-cdn.net/lobby/public-domain/15-vivaldi-spring-i.mp3"
+        "https://flashbackrepository.b-cdn.net/lobby/public-domain/13-handel-water-music-hornpipe.mp3"
       ]
     },
-    "christmas": {
+    "winter": {
       "loop": true,
       "shuffle": true,
       "tracks": [

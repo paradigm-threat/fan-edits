@@ -3,6 +3,19 @@
 Logical playlist: [`lobby.playlist.json`](./lobby.playlist.json).  
 Audio lives on Bunny CDN (`lobby/public-domain/`, `lobby/christmas/`) — not in git.
 
+## Menu music modes
+
+Cycles in the header / APK menu: **off → auto → all year → winter**.
+
+| Mode | Behavior |
+|------|----------|
+| off | Silent |
+| auto | Winter window (Nov 15 – Jan 2) → song `winter`; otherwise `publicDomain` |
+| all year | Always `publicDomain` |
+| winter | Always `winter` (Mannheim Steamroller bridge set) |
+
+No additional soundtrack songs for now.
+
 ## Default song: `publicDomain`
 
 Harkins-style classical lobby (Mozart-era + common PD staples). Prefer PD/CC0/CC-BY **recordings**.
@@ -22,16 +35,14 @@ Harkins-style classical lobby (Mozart-era + common PD staples). Prefer PD/CC0/CC
 | pd-11 | Bach — Air on the G String | `11-bach-air-on-the-g-string.mp3` | [IA](https://archive.org/details/AirOnTheGStringviolincello) |
 | pd-12 | Bach — Brandenburg Concerto No. 3, I | `12-bach-brandenburg-3-i.mp3` | [IA 78](https://archive.org/details/78_brandenburg-concerto-no-3-in-g-major_j-s-bach_gbia0479750b) — George Blood / 78rpm |
 | pd-13 | Handel — Water Music, Alla Hornpipe | `13-handel-water-music-hornpipe.mp3` | [IA 78](https://archive.org/details/78_hornpipe_philharmonia-orchestra-of-hamburg-george-frederick-handel-hans-jrgen-walt_gbia0268936) — George Blood / 78rpm |
-| pd-14 | Handel — Messiah, Hallelujah | `14-handel-messiah-hallelujah.mp3` | [IA 78](https://archive.org/details/78_hallelujah-chorus_handel_gbia3006123a) — George Blood / 78rpm |
-| pd-15 | Vivaldi — The Four Seasons, Spring I | `15-vivaldi-spring-i.mp3` | John Harrison / Wichita State Chamber Players — [CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/) via [IA](https://archive.org/details/musica-John_Harrison_with_the_Wichita_State_University_Chamber_Players_-_01_-_Spring_Mvt_1_Allegro) |
 
-**Ingested:** pd-01–15 (15 tracks). Gaps filled: pd-08, pd-09.
+**Ingested:** pd-01–13 (13 tracks). Removed: Messiah Hallelujah, Vivaldi Spring.
 
-## Christmas song: `christmas`
+## Winter song: `winter` (Mannheim)
 
 Canonical target: **Mannheim Steamroller — Christmas Symphony II** (2013).
 
-Bridge until that rip is available: overlapping tracks from *A Fresh Aire Christmas* + *Christmas Extraordinaire* in `~/Music`, plus Westwind Ensemble tribute covers for titles missing from those albums.
+Bridge until that rip is available: overlapping tracks from *A Fresh Aire Christmas* + *Christmas Extraordinaire* in `~/Music`, plus Westwind Ensemble tribute covers for titles missing from those albums. Bunny path remains `lobby/christmas/` for now.
 
 | # | Symphony II title | Bridge source (local) | Bunny file |
 |---|-------------------|------------------------|------------|
@@ -51,7 +62,7 @@ Bridge until that rip is available: overlapping tracks from *A Fresh Aire Christ
 
 **Bridge note:** private CD rips / tribute covers for lobby CDN only — replace with *Christmas Symphony II* when available. Not redistributed in git.
 
-## Season
+## Season (auto mode)
 
-- **Christmas:** local date Nov 15 – Jan 2 inclusive → song `christmas`
+- **Winter:** local date Nov 15 – Jan 2 inclusive → song `winter`
 - **Otherwise:** default song `publicDomain`
