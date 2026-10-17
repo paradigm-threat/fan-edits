@@ -4,13 +4,16 @@
  *
  * Music mode (localStorage `fb-lobby-music-mode`):
  *   off | auto | allYear | winter
+ * Volume (localStorage `fb-lobby-volume`): 0–1, default 0.25.
  * Legacy `fb-lobby-music-enabled` migrates to auto/off.
  */
 ;(function (global) {
   'use strict'
 
   var LS_MODE = 'fb-lobby-music-mode'
+  var LS_VOLUME = 'fb-lobby-volume'
   var LS_ENABLED_LEGACY = 'fb-lobby-music-enabled'
+  var DEFAULT_VOLUME = 0.25
   var MODES = ['off', 'auto', 'allYear', 'winter']
 
   function pad2(n) {
@@ -82,6 +85,34 @@
     } catch (e) {
       return 'off'
     }
+  }
+
+  function clampVolume(v) {
+    var n = Number(v)
+    if (n > 1 && n <= 100) n = n / 100
+    if (!(n >= 0)) return DEFAULT_VOLUME
+    if (n > 1) return 1
+    return n
+  }
+
+  function readWebVolume() {
+    try {
+      if (!global.localStorage) return DEFAULT_VOLUME
+      var raw = global.localStorage.getItem(LS_VOLUME)
+      if (raw == null || String(raw).length === 0) return DEFAULT_VOLUME
+      return clampVolume(raw)
+    } catch (e) {
+      return DEFAULT_VOLUME
+    }
+  }
+
+  function writeWebVolume(v) {
+    try {
+      if (global.localStorage) {
+        var n = clampVolume(v)
+        global.localStorage.setItem(LS_VOLUME, String(Math.round(n * 100) / 100))
+      }
+    } catch (e) {}
   }
 
   function writeWebMode(mode) {
@@ -251,6 +282,8 @@
   global.FlashbackLobbyPlaylist = {
     LS_KEY: LS_ENABLED_LEGACY,
     LS_MODE: LS_MODE,
+    LS_VOLUME: LS_VOLUME,
+    DEFAULT_VOLUME: DEFAULT_VOLUME,
     MODES: MODES,
     calendarSeason: calendarSeason,
     effectiveSeason: effectiveSeason,
@@ -258,6 +291,9 @@
     modeLabel: modeLabel,
     readWebMode: readWebMode,
     writeWebMode: writeWebMode,
+    readWebVolume: readWebVolume,
+    writeWebVolume: writeWebVolume,
+    clampVolume: clampVolume,
     cycleWebMode: cycleWebMode,
     readWebEnabled: readWebEnabled,
     writeWebEnabled: writeWebEnabled,

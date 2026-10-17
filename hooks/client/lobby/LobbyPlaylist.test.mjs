@@ -213,14 +213,26 @@ test('readWebMode migrates legacy enabled flag', () => {
   assert.equal(store.getItem('fb-lobby-music-mode'), 'auto')
 })
 
-test('LobbyAudio.host.js cycles modes and unlocks without skipping', () => {
+test('readWebVolume defaults to 25% and persists', () => {
+  const store = memoryStorage()
+  const L = loadLib(store)
+  assert.equal(L.readWebVolume(), 0.25)
+  L.writeWebVolume(0.4)
+  assert.equal(L.readWebVolume(), 0.4)
+  L.writeWebVolume(80)
+  assert.equal(L.readWebVolume(), 0.8)
+})
+
+test('LobbyAudio.host.js selects a playlist and volume instead of cycling', () => {
   const audioSrc = fs.readFileSync(
     path.join(dir, '../native/LobbyAudio.host.js'),
     'utf8',
   )
   assert.match(audioSrc, /writeWebMode/)
   assert.match(audioSrc, /readWebMode/)
-  assert.match(audioSrc, /cycleWebMode/)
+  assert.match(audioSrc, /readWebVolume/)
+  assert.match(audioSrc, /data-fb-lobby-playlist/)
+  assert.match(audioSrc, /data-fb-lobby-volume/)
   assert.match(audioSrc, /playBlocked/)
   assert.match(audioSrc, /unlock \/ resume/)
   assert.match(audioSrc, /armGestureUnlock/)
@@ -234,7 +246,7 @@ test('park-host-common loads lobby host scripts', () => {
   assert.match(common, /ensureLobbyHostScripts/)
   assert.match(common, /LobbyPlaylist\.js/)
   assert.match(common, /LobbyAudio\.host\.js/)
-  assert.match(common, /v=36/)
+  assert.match(common, /v=44/)
 })
 
 test('registry lists LobbyPlaylist + LobbyAudio', () => {

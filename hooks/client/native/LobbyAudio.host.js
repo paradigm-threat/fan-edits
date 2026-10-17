@@ -1,6 +1,7 @@
 /**
  * Lobby OST — background playlist while browsing; fades when theater is active.
- * Web modes (localStorage `fb-lobby-music-mode`): off → auto → all year → winter.
+ * Web playlist (localStorage `fb-lobby-music-mode`): off | auto | all year | winter.
+ * Volume (localStorage `fb-lobby-volume`): 0–1, default 0.25.
  * Cross-tab: Web Locks (`flashback-lobby-audio`) — only one tab is the audio leader;
  * followers silence locally. Playlist: lobby.playlist.json.
  */
@@ -21,7 +22,7 @@
   var activeSong = ''
   var theater = false
   var fadeTimer = null
-  var targetVol = 0.28
+  var targetVol = 0.25
   var applying = false
   var btn = null
   var unlockArmed = false
@@ -138,7 +139,7 @@
       global.addEventListener('storage', function (ev) {
         var lib = LP()
         if (!lib || !ev) return
-        if (ev.key !== lib.LS_MODE && ev.key !== lib.LS_KEY) return
+        if (ev.key !== lib.LS_MODE && ev.key !== lib.LS_KEY && ev.key !== lib.LS_VOLUME) return
         playBlocked = false
         applyDecision()
         updateButton(lib.readWebMode())
@@ -276,11 +277,11 @@
     try {
       var mode = lib.readWebMode()
       var enabled = mode !== 'off'
+      targetVol = lib.readWebVolume ? lib.readWebVolume() : 0.25
       var dec = lib.evaluate(playlist, {
         mode: mode,
         theater: theater,
       })
-      targetVol = dec.volume
       updateButton(mode)
       // Follower tabs never start audio — leader holds Web Lock.
       if (!isAudioLeader) {
@@ -311,8 +312,8 @@
           var a = ensureAudio()
           if (a.paused || playBlocked) {
             playIndex(queueIdx, true)
-          } else if (a.volume < targetVol * 0.9) {
-            fadeTo(targetVol, dec.fadeInMs)
+          } else if (Math.abs(a.volume - targetVol) > 0.02) {
+            fadeTo(targetVol, 200)
           }
         }
       }
@@ -327,26 +328,26 @@
     if (m == null && lib) m = lib.readWebMode()
     m = (lib && lib.normalizeMode ? lib.normalizeMode(m) : m) || 'off'
     var enabled = m !== 'off'
-    var modeText =
-      lib && lib.modeLabel ? lib.modeLabel(m) : m === 'allYear' ? 'all year' : m
-    var nodes = global.document.querySelectorAll('[data-fb-lobby-music]')
-    for (var i = 0; i < nodes.length; i++) {
-      var el = nodes[i]
-      el.setAttribute('aria-pressed', enabled ? 'true' : 'false')
-      el.setAttribute('data-fb-lobby-mode', m)
-      var label = 'Lobby music: ' + modeText
-      if (enabled) {
-        if (!isAudioLeader || otherTabPlaying) {
-          label = 'Lobby music: ' + modeText + ' (other tab)'
-        } else if (playBlocked) {
-          label = 'Lobby music: ' + modeText + ' (tap)'
-        }
-      }
-      el.textContent = label
-      if (enabled) el.classList.add('fb-lobby-on')
-      else el.classList.remove('fb-lobby-on')
+    var selects = global.document.querySelectorAll('[data-fb-lobby-playlist]')
+    for (var i = 0; i < selects.length; i++) {
+      var sel = selects[i]
+      if (sel.value !== m) sel.value = m
+      var note = ''
+      if (enabled && (!isAudioLeader || otherTabPlaying)) note = 'Playing in another tab'
+      else if (enabled && playBlocked) note = 'Tap the page to start lobby music'
+      if (note) sel.setAttribute('title', note)
+      else sel.removeAttribute('title')
     }
-    btn = nodes.length ? nodes[0] : null
+    var vol = lib && lib.readWebVolume ? lib.readWebVolume() : targetVol
+    targetVol = vol
+    var pct = String(Math.round(vol * 100))
+    var sliders = global.document.querySelectorAll('[data-fb-lobby-volume]')
+    for (var s = 0; s < sliders.length; s++) {
+      var slider = sliders[s]
+      if (global.document.activeElement === slider) continue
+      if (slider.value !== pct) slider.value = pct
+    }
+    btn = selects.length ? selects[0] : null
   }
 
   function setMode(mode) {
@@ -411,30 +412,35 @@
   }
 
   function wireButton() {
-    var nodes = global.document.querySelectorAll('[data-fb-lobby-music]')
-    if (!nodes.length) return
-    for (var i = 0; i < nodes.length; i++) {
-      var el = nodes[i]
-      if (el.getAttribute('data-fb-lobby-wired') === '1') continue
-      el.setAttribute('data-fb-lobby-wired', '1')
-      el.addEventListener('click', function (ev) {
-        ev.preventDefault()
+    var selects = global.document.querySelectorAll('[data-fb-lobby-playlist]')
+    for (var i = 0; i < selects.length; i++) {
+      var sel = selects[i]
+      if (sel.getAttribute('data-fb-lobby-wired') === '1') continue
+      sel.setAttribute('data-fb-lobby-wired', '1')
+      sel.addEventListener('change', function (ev) {
+        var next = ev && ev.target ? ev.target.value : 'off'
+        setMode(next)
+        // Playlist change is a user gesture — unlock / resume if the browser blocked play.
+        if (next !== 'off') retryPlayFromGesture()
+      })
+    }
+    var sliders = global.document.querySelectorAll('[data-fb-lobby-volume]')
+    for (var s = 0; s < sliders.length; s++) {
+      var slider = sliders[s]
+      if (slider.getAttribute('data-fb-lobby-wired') === '1') continue
+      slider.setAttribute('data-fb-lobby-wired', '1')
+      slider.addEventListener('input', function (ev) {
         var lib = LP()
-        if (!lib) return
-        // On + leader + not audibly playing → unlock / resume without cycling.
-        // Follower tabs (other tab holds Web Lock) turn off.
-        if (lib.readWebEnabled()) {
-          if (!isAudioLeader) {
-            setMode('off')
-            return
-          }
-          var a = audio
-          if (playBlocked || !a || a.paused) {
-            retryPlayFromGesture()
-            return
-          }
+        if (!lib || !lib.writeWebVolume) return
+        var raw = ev && ev.target ? Number(ev.target.value) : 25
+        var v = lib.clampVolume ? lib.clampVolume(raw) : raw / 100
+        lib.writeWebVolume(v)
+        targetVol = v
+        if (audio) {
+          clearFade()
+          audio.volume = v
         }
-        toggle()
+        broadcast({ type: 'volume', volume: v })
       })
     }
     var lib = LP()
