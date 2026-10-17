@@ -1,5 +1,6 @@
 {
   "nowShowing": [
+    "tron-legacy-2010-the-miracle",
     "terminator-3-2003-brass-monkey",
     "american-psycho-2000-psychosomatic",
     "the-chronicles-of-riddick-2004-fry-s-edition",
@@ -442,8 +443,8 @@
       "originalTitle": "Terminator 3 (2003)",
       "status": "showing",
       "media": "Terminator 3 (2003) - Brass Monkey Edition.mkv",
-      "mediaWeb": "Terminator 3 (2003) - Brass Monkey Edition.web-1080p.mkv",
-      "mediaMobile": "Terminator 3 (2003) - Brass Monkey Edition.mobile-720p.mkv",
+      "mediaWeb": "",
+      "mediaMobile": "",
       "image": "FanMixes/Terminator 3 (2003) - Brass Monkey/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
@@ -656,21 +657,25 @@
       "blurb": "A lighter *Thor: Ragnarok* timeline for family co-watch \u2014 same Sakaar / Asgard story, fewer hard edges."
     },
     {
-      "slug": "tron-legacy-2010-daftpunk-d",
+      "slug": "tron-legacy-2010-the-miracle",
       "category": "FanMixes",
-      "path": "FanMixes/Tron Legacy (2010) - DaftPunk'd",
-      "title": "Tron Legacy (2010) \u2014 DaftPunk'd",
+      "path": "FanMixes/Tron Legacy (2010) - The Miracle",
+      "title": "Tron Legacy (2010) \u2014 The Miracle",
       "originalTitle": "Tron Legacy (2010)",
       "status": "wip",
       "media": "",
       "mediaWeb": "",
       "mediaMobile": "",
-      "image": "",
+      "image": "FanMixes/Tron Legacy (2010) - The Miracle/poster.jpg",
       "subtitles": [],
       "subtitlesJson": "[]",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/tron-legacy-2010-the-miracle/Tron_Legacy_2010_-_The_Miracle.mkv",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/tron-legacy-2010-the-miracle/Tron_Legacy_2010_-_The_Miracle_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/tron-legacy-2010-the-miracle/Tron_Legacy_2010_-_The_Miracle_mobile-720p.mkv",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
-      "blurb": "A tighter *Tron: Legacy* that trims ~11 minutes of dead air so Daft Punk\u2019s score and the Grid action lead."
+      "blurb": "Slogan: **Less Castor, more Bio-Digital Jazz, Man!**",
+      "poster": "poster.jpg"
     },
     {
       "slug": "van-helsing-deanna-d",
