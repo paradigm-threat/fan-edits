@@ -37,10 +37,7 @@ Object names must be **URL-path safe without percent-encoding**: only `A–Z` `a
 | **No** `%` encoding in `streamHttps` path segments | link basename == object name |
 | Keep slug **folder**; title lives in the **filename** | `now-showing/<slug>/<Title_Safe>.mkv` |
 
-Optional ladder (same title stem; H.264 MP4 from `encode-ladder-nvenc.sh`):
-
-- `now-showing/<slug>/<Title_Safe>_web-1080p.mkv`
-- `now-showing/<slug>/<Title_Safe>_mobile-720p.mkv`
+The object is one **HEVC (H.265) MKV** with the English subtitle track embedded. There is no 1080p or 720p ladder and no H.264 file.
 
 ---
 
@@ -49,9 +46,7 @@ Optional ladder (same title stem; H.264 MP4 from `encode-ladder-nvenc.sh`):
 ```text
 now-showing/
   <slug>/
-    <Title_Safe>.mkv              # required for Now showing
-    <Title_Safe>_web-1080p.mkv    # optional — enable only when present
-    <Title_Safe>_mobile-720p.mkv  # optional — enable only when present
+    <Title_Safe>.mkv              # HEVC, English subtitles embedded
 ```
 
 **CDN host:** `flashbackrepository.b-cdn.net`
@@ -67,13 +62,11 @@ Then add to `now-showing.json`:
 ```json
 {
   "slug": "the-mummy-1999-debugged",
-  "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged.mkv",
-  "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_web-1080p.mkv",
-  "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_mobile-720p.mkv"
+  "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged.mkv"
 }
 ```
 
-Until those fields exist, the theater shows **1080p (soon)** / **720p (soon)** as **disabled** (catalog still lists `mediaWeb` / `mediaMobile` placeholders).
+Play and download use that one file. Subtitles are the track inside the MKV.
 
 ---
 
@@ -90,7 +83,7 @@ Prefer objects (slug-only strings still work for rotation without Bunny):
 ]
 ```
 
-Pipeline: `now-showing.json` → `scripts/generate-index-json.py` → `index.json` (`nowShowing` slug list + `streamHttps*` on projects) → `get.jsx` / `ExternalPlay`.
+Pipeline: `now-showing.json` → `scripts/generate-index-json.py` → `index.json` (`nowShowing` slug list + `streamHttps` on projects) → `get.jsx` / `ExternalPlay`.
 
 ---
 
@@ -117,9 +110,8 @@ Server-side move/copy: S3 API at `https://de-s3.storage.bunnycdn.com` (Access Ke
 | CDN HEAD/Range 200/206 on titled paths | yes |
 | Delete flat root MKVs | yes (purge CDN if old URLs still cache) |
 | Wire `streamHttps` in catalog + ExternalPlay | yes |
-| Disable 1080p/720p until Bunny ladder exists | yes |
+| HEVC MKV only; no 1080p/720p ladder | yes |
 | Upload helper enforces titled names (`scripts/bunny-now-showing-put.sh`) | yes |
-| Upload web-1080p / mobile-720p + enable URLs | in progress (this host; publish per title) |
 | Fleet IPFS movie cache retired | pending |
 | `git push` tip / publish | yes (titled `streamHttps` on tip) |
 

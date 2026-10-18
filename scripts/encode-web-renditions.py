@@ -217,6 +217,11 @@ def encode_master(
 
 
 def main() -> int:
+    print(
+        "refusing H.264 web/mobile MP4: publish one HEVC MKV with embedded subtitles",
+        file=sys.stderr,
+    )
+    return 2
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument(
         "targets",

@@ -206,6 +206,11 @@ def convert_subs(folder: Path) -> None:
 
 
 def main() -> int:
+    print(
+        "refusing H.264 web/mobile render: publish one HEVC MKV with embedded subtitles",
+        file=sys.stderr,
+    )
+    return 2
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--project", type=Path, required=True, help="`.kdenlive` or `.mlt` timeline")
     ap.add_argument(

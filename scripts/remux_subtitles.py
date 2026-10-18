@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Replace subtitle track in MKV (copy video/audio)."""
+"""Mux an SRT into an HEVC MKV as the default English subtitle track. Video and audio are copied."""
 from __future__ import annotations
 
 import argparse
@@ -13,6 +13,7 @@ def main() -> int:
     ap.add_argument("--video", type=Path, required=True, help="MKV with video/audio")
     ap.add_argument("--subs", type=Path, required=True, help="SRT on output timeline")
     ap.add_argument("--out", type=Path, required=True)
+    ap.add_argument("--title", default="English", help="Subtitle track title inside the MKV")
     args = ap.parse_args()
     if not args.video.exists():
         raise SystemExit(f"missing: {args.video}")
@@ -43,7 +44,7 @@ def main() -> int:
         "-metadata:s:s:0",
         "language=eng",
         "-metadata:s:s:0",
-        "title=English (KidFriendly edit)",
+        f"title={args.title}",
         "-disposition:s:0",
         "default",
         str(tmp),
