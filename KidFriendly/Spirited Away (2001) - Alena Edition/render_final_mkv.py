@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Render Spirited Away Alena Edition: trim+concat from playlist2, two-pass libx264 (~source bitrate),
+Render Spirited Away Alena Edition: trim+concat from playlist2, two-pass libx265 (~source bitrate),
 English dub AAC 5.1, mux shifted SRT as default subtitle track.
 """
 from __future__ import annotations
@@ -146,7 +146,7 @@ def main() -> int:
         "-pix_fmt",
         "yuv420p",
         "-c:v",
-        "libx264",
+        "libx265",
         "-b:v",
         f"{v_kbps}k",
         "-maxrate",
@@ -183,7 +183,7 @@ def main() -> int:
         "-pix_fmt",
         "yuv420p",
         "-c:v",
-        "libx264",
+        "libx265",
         "-b:v",
         f"{v_kbps}k",
         "-maxrate",

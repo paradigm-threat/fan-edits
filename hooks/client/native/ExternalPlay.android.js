@@ -45,14 +45,6 @@ function intentHrefFor(abs) {
 
 function buildLadder(p) {
   const master = absoluteHref(propStr(p, 'streamUrl'))
-  const web = absoluteHref(propStr(p, 'streamUrlWeb'))
-  const mobile = absoluteHref(propStr(p, 'streamUrlMobile'))
-  const disableWeb =
-    p.disableWeb === true || propStr(p, 'disableWeb') === 'true' || propStr(p, 'data-disable-web') === 'true'
-  const disableMobile =
-    p.disableMobile === true ||
-    propStr(p, 'disableMobile') === 'true' ||
-    propStr(p, 'data-disable-mobile') === 'true'
   let out = []
   function push(kind, label, url) {
     if (!url || url.length === 0) {
@@ -65,10 +57,11 @@ function buildLadder(p) {
     }
     out = out.concat([{ kind: kind, label: label, url: url, disabled: false }])
   }
-  push('master', 'Full quality', master)
-  // Hide 1080p/720p until Bunny ladder URLs exist (disable* means not ready).
-  if (!disableWeb) push('web', '1080p', web)
-  if (!disableMobile) push('mobile', '720p', mobile)
+  push('master', 'HEVC MKV', master)
+  const disableWeb = propStr(p, 'disableWeb') === 'true' || p.disableWeb === true
+  const disableMobile = propStr(p, 'disableMobile') === 'true' || p.disableMobile === true
+  if (!disableWeb) push('web', '1080p HEVC', absoluteHref(propStr(p, 'streamUrlWeb')))
+  if (!disableMobile) push('mobile', '720p HEVC', absoluteHref(propStr(p, 'streamUrlMobile')))
   return out
 }
 
@@ -104,8 +97,7 @@ export default function ExternalPlay(props) {
   const active = ladder[activeIndex] || null
   const abs = catalogShowing && active ? active.url : ''
   const intentHref = abs ? intentHrefFor(abs) : ''
-  // Ladder + master are always MKV (no H.264 MP4 product).
-  const dlLabel = 'Download MKV'
+  const dlLabel = 'Download HEVC MKV'
 
   // Bunny HTTPS for Now showing only — never site /ipfs/ gateway.
   let bunnyHref = ''

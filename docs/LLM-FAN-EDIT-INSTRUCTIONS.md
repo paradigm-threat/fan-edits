@@ -501,7 +501,7 @@ After writing `subs/*.enhanced.srt`, regenerate the catalog: `python3 scripts/ge
 - [ ] `.kdenlive` opens with correct media path.
 - [ ] All joins QC’d; shifted subs match output.
 - [ ] Source rip **copied to local disk**; final render read from local copy (not NAS).
-- [ ] Final `.mkv` at **same resolution** as source, high-quality HEVC, embedded English subs.
+- [ ] Final `.mkv` at **same resolution** as source, HEVC (H.265), embedded English subs. No H.264 1080p or 720p ladder.
 - [ ] If CHANGES holes are labeled: `subs/*.english.srt` + `subs/*.enhanced.srt` via `build_edit_enhanced_srt.py`; regen `index.json`.
 - [ ] `poster.jpg` in house style ([POSTER-STYLE.md](POSTER-STYLE.md)); optional wide/square crops if needed.
 - [ ] Project folder **synced back to server** (final MKV, project files, logs) — **excluding** the original source rip.

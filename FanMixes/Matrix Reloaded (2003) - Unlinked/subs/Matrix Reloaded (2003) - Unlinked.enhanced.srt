@@ -1,0 +1,4649 @@
+1
+00:01:27,295 --> 00:01:29,130
+See you tomorrow.
+
+2
+00:01:48,441 --> 00:01:49,484
+Oh, my God!
+
+3
+00:02:12,131 --> 00:02:13,633
+I'm in.
+
+4
+00:04:06,746 --> 00:04:08,539
+We're almost there.
+
+5
+00:04:08,706 --> 00:04:12,669
+- Sir, are you sure about this?
+- I told you, we're going to be all right.
+
+6
+00:04:12,835 --> 00:04:18,299
+I understand, sir. It's just that I'm scoping
+some serious sentinel activity up here.
+
+7
+00:04:55,931 --> 00:04:59,431
+[Edit: Link’s first scene with Morpheus: “trust me,” then repatch the main AC.]
+
+8
+00:05:04,679 --> 00:05:06,931
+Still can't sleep?
+
+9
+00:05:08,891 --> 00:05:10,268
+You wanna talk?
+
+10
+00:05:12,603 --> 00:05:14,981
+They're just dreams.
+
+11
+00:05:17,316 --> 00:05:19,694
+If you're afraid of something...
+
+12
+00:05:19,861 --> 00:05:21,696
+I just wish...
+
+13
+00:05:22,363 --> 00:05:24,615
+I wish I knew what I'm supposed to do.
+
+14
+00:05:24,782 --> 00:05:26,617
+That's all.
+
+15
+00:05:27,535 --> 00:05:29,120
+I just wish I knew.
+
+16
+00:05:29,287 --> 00:05:33,541
+She's gonna call. Don't worry.
+
+17
+00:05:33,708 --> 00:05:34,751
+Here you are.
+
+18
+00:05:34,917 --> 00:05:38,379
+- Are we ready to go?
+- We're already late.
+
+19
+00:05:38,546 --> 00:05:43,176
+These geotherms confirm
+the last transmission of the <i>Osiris.</i>
+
+20
+00:05:43,926 --> 00:05:45,595
+The machines are digging.
+
+21
+00:05:47,263 --> 00:05:49,557
+They're boring from the surface
+down to Zion.
+
+22
+00:05:49,724 --> 00:05:52,310
+- Mother--
+- They'll avoid the perimeter defense.
+
+23
+00:05:52,477 --> 00:05:53,978
+How fast are they moving?
+
+24
+00:05:54,145 --> 00:05:57,523
+Control estimates their descent
+at 100 meters an hour.
+
+25
+00:05:57,690 --> 00:06:00,151
+- How deep are they?
+- Almost 2000 meters.
+
+26
+00:06:00,318 --> 00:06:03,863
+- What about the scans from the <i>Osiris?</i>
+- They can't be accurate.
+
+27
+00:06:04,030 --> 00:06:05,948
+- They may be.
+- It's not possible.
+
+28
+00:06:06,115 --> 00:06:08,576
+That'd mean there are
+a quarter-million sentinels.
+
+29
+00:06:08,743 --> 00:06:10,244
+- That's right.
+- That can't be.
+
+30
+00:06:10,411 --> 00:06:12,080
+Why not?
+
+31
+00:06:12,246 --> 00:06:16,000
+A sentinel for every man,
+woman and child in Zion.
+
+32
+00:06:16,959 --> 00:06:20,922
+That sounds exactly like
+the thinking of a machine to me.
+
+33
+00:06:21,089 --> 00:06:23,257
+Morpheus, glad you could join us.
+
+34
+00:06:23,758 --> 00:06:24,926
+Niobe.
+
+35
+00:06:26,302 --> 00:06:29,680
+My apologies to all.
+But as you are undoubtedly aware...
+
+36
+00:06:29,847 --> 00:06:33,142
+...it's become difficult to locate
+a secure broadcast position.
+
+37
+00:06:33,309 --> 00:06:36,562
+- Squiddies got our best spots.
+- Lines are crawling with them.
+
+38
+00:06:36,729 --> 00:06:40,525
+And if Niobe's right, in 72 hours
+there's gonna be a quarter-million more.
+
+39
+00:06:40,691 --> 00:06:41,818
+What are we gonna do?
+
+40
+00:06:41,984 --> 00:06:44,278
+We're gonna do what
+Commander Lock ordered.
+
+41
+00:06:44,612 --> 00:06:47,198
+We'll evacuate broadcast level
+and return to Zion.
+
+42
+00:06:47,365 --> 00:06:52,495
+And does the commander have a plan
+for stopping 250,000 sentinels?
+
+43
+00:06:52,662 --> 00:06:55,331
+A strategy is still being formulated.
+
+44
+00:06:55,498 --> 00:06:57,166
+I'm sure it is.
+
+45
+00:07:12,181 --> 00:07:14,183
+What do you think
+we should do, Morpheus?
+
+46
+00:07:14,392 --> 00:07:16,519
+- Proceed as ordered...
+- What is it?
+
+47
+00:07:16,686 --> 00:07:17,728
+I don't know.
+
+48
+00:07:17,895 --> 00:07:20,690
+...however, I must
+ask one of you for help.
+
+49
+00:07:20,857 --> 00:07:26,571
+Some of you believe as I believe, some
+of you do not. Those of you that do...
+
+50
+00:07:26,737 --> 00:07:29,282
+...know we are nearing
+the end of our struggle.
+
+51
+00:07:29,448 --> 00:07:33,703
+The prophecy will be fulfilled soon.
+But before it can be...
+
+52
+00:07:33,870 --> 00:07:37,206
+...the Oracle must be consulted.
+
+53
+00:07:45,131 --> 00:07:47,383
+If we return and recharge now...
+
+54
+00:07:47,550 --> 00:07:51,304
+...we can be back in 36 hours, well
+before the machines reach this depth.
+
+55
+00:07:51,512 --> 00:07:53,347
+Do you understand what you're asking?
+
+56
+00:07:53,514 --> 00:07:56,350
+I am asking that one ship
+remain here in our place...
+
+57
+00:07:56,517 --> 00:07:59,228
+...in case the Oracle
+should attempt to contact us.
+
+58
+00:07:59,395 --> 00:08:02,523
+Bullshit. You're asking one of us
+to disobey a direct order.
+
+59
+00:08:02,690 --> 00:08:07,236
+That's right, I am. But we well know
+that the reason most of us are here...
+
+60
+00:08:07,403 --> 00:08:10,031
+...is because of our affinity
+for disobedience.
+
+61
+00:08:10,198 --> 00:08:12,116
+What happens when you
+get back to Zion...
+
+62
+00:08:12,283 --> 00:08:14,702
+...and the commander
+throws you in the stockade?
+
+63
+00:08:14,869 --> 00:08:16,078
+He won't.
+
+64
+00:08:17,205 --> 00:08:20,416
+Goddamn it, Morpheus,
+you ain't never gonna change.
+
+65
+00:08:21,125 --> 00:08:23,878
+Shit, I'll do it just to see
+what Deadbolt does to you.
+
+66
+00:08:24,045 --> 00:08:25,588
+You got 36 hours.
+
+67
+00:08:28,382 --> 00:08:30,218
+I'm looking for Neo.
+
+68
+00:08:30,384 --> 00:08:33,763
+- Never heard of him.
+- I have something for him.
+
+69
+00:08:34,972 --> 00:08:37,183
+A gift.
+
+70
+00:08:37,391 --> 00:08:40,269
+You see, he set me free.
+
+71
+00:08:42,563 --> 00:08:44,941
+Fine, whatever. Now piss off.
+
+72
+00:08:45,483 --> 00:08:46,526
+Who was that?
+
+73
+00:08:46,692 --> 00:08:48,527
+How did you know someone was here?
+
+74
+00:08:48,694 --> 00:08:50,154
+He gave you this.
+
+75
+00:08:55,910 --> 00:08:57,328
+He said you set him free.
+
+76
+00:08:59,288 --> 00:09:01,624
+Is everything all right, sir?
+
+77
+00:09:02,250 --> 00:09:04,627
+The meeting is over.
+Retreat to your exits.
+
+78
+00:09:04,794 --> 00:09:07,004
+- Agents are coming.
+- Agents?
+
+79
+00:09:07,463 --> 00:09:08,839
+Go.
+
+80
+00:09:18,641 --> 00:09:19,725
+Hiya, fellas.
+
+81
+00:09:19,892 --> 00:09:21,018
+- It's him.
+- The anomaly.
+
+82
+00:09:21,185 --> 00:09:22,436
+- Do we proceed?
+- Yes.
+
+83
+00:09:22,603 --> 00:09:25,106
+- He is still--
+- Only human.
+
+84
+00:09:31,279 --> 00:09:33,531
+Hm. Upgrades.
+
+85
+00:10:28,461 --> 00:10:31,005
+- That went as expected.
+- Yes.
+
+86
+00:10:31,172 --> 00:10:33,841
+It's happening exactly as before.
+
+87
+00:10:34,008 --> 00:10:36,677
+Well, not exactly.
+
+88
+00:10:37,455 --> 00:10:40,955
+[Edit: Link’s post-chase report: agents, weird encryption, “Superman thing.”]
+
+89
+00:11:27,395 --> 00:11:28,854
+Where are you?
+
+90
+00:11:33,526 --> 00:11:37,113
+This is the <i>Nebuchadnezzar,</i>
+requesting access through Gate Three.
+
+91
+00:11:41,158 --> 00:11:45,621
+<i>Nebuchadnezzar,</i> this is Zion Control.
+Maintain present velocity and stand by.
+
+92
+00:11:45,788 --> 00:11:47,289
+<i>Roger that, Control.</i>
+
+93
+00:11:47,456 --> 00:11:50,960
+This is Control requesting immediate
+stand-down of arms at Gate Three.
+
+94
+00:11:51,752 --> 00:11:54,964
+We have the <i>Nebuchadnezzar</i>
+on approach. Let's open her up.
+
+95
+00:12:00,553 --> 00:12:03,472
+<i>You are cleared through
+Gate Three to Bay Seven.</i>
+
+96
+00:12:03,639 --> 00:12:05,349
+Roger that, Control.
+
+97
+00:12:12,481 --> 00:12:15,568
+Door's open, bed's made.
+Welcome home.
+
+98
+00:12:16,318 --> 00:12:18,487
+No place like it.
+
+99
+00:12:32,668 --> 00:12:36,380
+Roger that, Control. Zion Control,
+stand by for Gate Three lockdown.
+
+100
+00:13:25,888 --> 00:13:28,307
+<i>The</i> Nebuchadnezzar <i>is down.
+Bay Seven.</i>
+
+101
+00:13:28,474 --> 00:13:29,642
+Understood.
+
+102
+00:13:39,610 --> 00:13:40,903
+Captain Mifune.
+
+103
+00:13:41,987 --> 00:13:43,155
+Captain Morpheus.
+
+104
+00:13:43,322 --> 00:13:46,158
+Are you here to escort me
+to the stockade, captain?
+
+105
+00:13:46,325 --> 00:13:47,993
+- I'm just here to keep the peace.
+-
+
+106
+00:13:48,786 --> 00:13:50,621
+- Link.
+- Sir?
+
+107
+00:13:50,788 --> 00:13:53,374
+I want the ship ready to go
+as soon as possible.
+
+108
+00:13:53,541 --> 00:13:55,084
+Understood, sir.
+
+109
+00:13:55,484 --> 00:13:58,984
+[Edit: “Commander Lock requests your immediate counsel.”]
+
+110
+00:14:00,895 --> 00:14:04,395
+[Edit: Zion greeting: the kid, “you saved me,” Link and Trinity meeting.]
+
+111
+00:14:17,231 --> 00:14:20,526
+- Morpheus.
+- Commander Lock.
+
+112
+00:14:20,776 --> 00:14:25,281
+I spoke to the other captains. I wanted to
+offer you a chance to explain your actions.
+
+113
+00:14:25,447 --> 00:14:28,325
+I wasn't aware that my actions
+required any explanation.
+
+114
+00:14:28,492 --> 00:14:30,786
+You were given an order
+to return to Zion.
+
+115
+00:14:30,953 --> 00:14:33,789
+- I did.
+- You asked for one ship to remain behind.
+
+116
+00:14:33,956 --> 00:14:36,625
+I would have stayed,
+but I needed to recharge my ship.
+
+117
+00:14:36,792 --> 00:14:39,503
+So you admit to a direct contravention
+of your duty.
+
+118
+00:14:39,670 --> 00:14:43,090
+We need a presence inside the Matrix
+to await contact from the Oracle.
+
+119
+00:14:43,257 --> 00:14:45,217
+I don't want to hear that shit!
+
+120
+00:14:45,384 --> 00:14:48,053
+I don't care about oracles
+or prophecies or messiahs!
+
+121
+00:14:48,220 --> 00:14:51,640
+I care about one thing: Stopping that
+army from destroying this city.
+
+122
+00:14:51,807 --> 00:14:54,643
+To do that I need soldiers
+to obey my orders.
+
+123
+00:14:54,810 --> 00:14:59,398
+With all due respect, commander,
+there is only one way to save our city.
+
+124
+00:14:59,565 --> 00:15:00,983
+How?
+
+125
+00:15:01,150 --> 00:15:03,944
+- Neo.
+- Goddamn it, Morpheus.
+
+126
+00:15:04,111 --> 00:15:06,739
+Not everyone believes what you believe.
+
+127
+00:15:06,906 --> 00:15:08,991
+My beliefs do not require them to.
+
+128
+00:15:17,166 --> 00:15:21,086
+There's a gathering tonight. Everyone's
+talking. A lot of people are scared.
+
+129
+00:15:21,253 --> 00:15:24,006
+No one remembers the last time
+so many ships were docked.
+
+130
+00:15:24,173 --> 00:15:27,134
+- Something big is happening, isn't it?
+- Hey.
+
+131
+00:15:27,301 --> 00:15:30,471
+We're not allowed to say anything,
+so stop asking.
+
+132
+00:15:35,768 --> 00:15:38,896
+Goddamn, it's good to be home.
+
+133
+00:15:51,594 --> 00:15:55,094
+[Edit: Lock telling Morpheus he will recommend he be removed from duty.]
+
+134
+00:15:57,623 --> 00:16:00,042
+- Councillor Hamann.
+- Commander.
+
+135
+00:16:00,709 --> 00:16:03,420
+- Captain.
+- Councillor.
+
+136
+00:16:03,587 --> 00:16:06,965
+Council's asked me to speak tonight
+at the temple gathering.
+
+137
+00:16:07,132 --> 00:16:11,220
+The presence of the fleet and the
+persistence of rumors must be addressed.
+
+138
+00:16:11,387 --> 00:16:13,889
+The people must be told
+what is happening.
+
+139
+00:16:14,056 --> 00:16:15,766
+Of course, councillor.
+
+140
+00:16:16,475 --> 00:16:21,730
+But might I advise a level of discretion
+concerning specific details.
+
+141
+00:16:21,897 --> 00:16:24,900
+- We do not wish to start a panic.
+- Quite right.
+
+142
+00:16:25,067 --> 00:16:28,153
+A panic is not what anyone wants.
+
+143
+00:16:28,320 --> 00:16:31,657
+What about you, captain?
+What would you advise?
+
+144
+00:16:34,076 --> 00:16:38,080
+The truth. No one will panic,
+because there is nothing to fear.
+
+145
+00:16:38,080 --> 00:16:41,125
+That army won't reach
+the gates of Zion.
+
+146
+00:16:41,917 --> 00:16:45,504
+- What makes you so sure?
+- Consider what we have seen, councillor.
+
+147
+00:16:45,671 --> 00:16:47,548
+Consider that in the past six months...
+
+148
+00:16:47,715 --> 00:16:49,758
+...we have freed more minds
+than in six years.
+
+149
+00:16:49,925 --> 00:16:52,928
+This attack is an act of desperation.
+
+150
+00:16:53,095 --> 00:16:56,932
+I believe very soon the prophecy
+will be fulfilled and this war will end.
+
+151
+00:16:58,809 --> 00:17:00,936
+I hope you're right, captain.
+
+152
+00:17:01,103 --> 00:17:03,814
+I do not believe it to be
+a matter of hope, councillor.
+
+153
+00:17:03,981 --> 00:17:06,567
+It is simply a matter of time.
+
+154
+00:17:08,736 --> 00:17:10,195
+My stop.
+
+155
+00:17:10,362 --> 00:17:11,780
+See you soon.
+
+156
+00:17:11,947 --> 00:17:13,407
+Hopefully not too soon.
+
+157
+00:17:13,574 --> 00:17:16,744
+Let's go, kid.
+These two got things to do.
+
+158
+00:17:26,170 --> 00:17:27,921
+Are you thinking what I'm thinking?
+
+159
+00:17:28,088 --> 00:17:30,507
+I am if you're thinking
+this elevator is too slow.
+
+160
+00:17:30,674 --> 00:17:34,011
+- How long do we charge the <i>Neb?</i>
+- Twenty-four, maybe 30 hours.
+
+161
+00:17:34,178 --> 00:17:38,390
+Some people go their entire lives
+without hearing news that good.
+
+162
+00:18:02,831 --> 00:18:07,169
+Neo, please, I have a son,
+Jacob, aboard the <i>Gnosis.</i>
+
+163
+00:18:07,336 --> 00:18:10,839
+- Please, watch over him.
+- I'll try.
+
+164
+00:18:11,006 --> 00:18:13,091
+I have a daughter on the <i>Icarus.</i>
+
+165
+00:18:13,884 --> 00:18:15,177
+No, wait.
+
+166
+00:18:15,344 --> 00:18:17,846
+It's all right. They need you.
+
+167
+00:18:18,013 --> 00:18:20,265
+- I need you.
+- I know.
+
+168
+00:18:20,808 --> 00:18:23,101
+There's time.
+
+169
+00:18:26,194 --> 00:18:29,694
+[Edit: Link with Zee and the kids (“Where’s my puss…”), the promise, “Because of Morpheus.”]
+
+170
+00:18:35,405 --> 00:18:38,826
+- They started yet?
+- Only Councillor Hamann's opening prayer.
+
+171
+00:18:38,992 --> 00:18:42,079
+Tonight, let us honor
+these men and women.
+
+172
+00:18:42,246 --> 00:18:44,873
+These are our soldiers, our warriors.
+
+173
+00:18:45,040 --> 00:18:49,294
+These are our husbands and wives,
+our brothers and sisters...
+
+174
+00:18:49,461 --> 00:18:51,129
+...our children.
+
+175
+00:18:51,713 --> 00:18:54,842
+Let us remember those
+that have been lost...
+
+176
+00:18:55,008 --> 00:18:58,220
+...and let us give thanks
+for those that have been found...
+
+177
+00:18:58,387 --> 00:19:01,682
+...and who stand here beside us.
+
+178
+00:19:01,890 --> 00:19:05,561
+Now I would like someone else
+to close this prayer...
+
+179
+00:19:05,727 --> 00:19:08,939
+...someone who hasn't spoken here
+in a long time...
+
+180
+00:19:09,106 --> 00:19:14,486
+...but who I believe has something to say
+that we all need to hear.
+
+181
+00:19:15,487 --> 00:19:17,072
+I give you Morpheus.
+
+182
+00:19:36,592 --> 00:19:40,762
+Zion! Hear me!
+
+183
+00:19:41,763 --> 00:19:44,892
+It is true what many of you have heard.
+
+184
+00:19:45,058 --> 00:19:49,062
+The machines have gathered
+an army, and as I speak...
+
+185
+00:19:49,229 --> 00:19:53,150
+...that army is drawing nearer to our home.
+
+186
+00:19:54,610 --> 00:19:59,281
+Believe me when I say we have
+a difficult time ahead of us.
+
+187
+00:19:59,948 --> 00:20:06,121
+But if we are to be prepared for it,
+we must first shed our fear of it.
+
+188
+00:20:06,622 --> 00:20:11,543
+I stand here before you now
+truthfully unafraid.
+
+189
+00:20:12,127 --> 00:20:13,879
+Why?
+
+190
+00:20:14,296 --> 00:20:17,132
+Because I believe something you do not?
+
+191
+00:20:17,299 --> 00:20:19,134
+No!
+
+192
+00:20:19,426 --> 00:20:24,389
+I stand here without fear
+because I remember.
+
+193
+00:20:24,556 --> 00:20:28,477
+I remember that I am here not because
+of the path that lies before me...
+
+194
+00:20:28,644 --> 00:20:31,980
+...but because of the path
+that lies behind me.
+
+195
+00:20:32,147 --> 00:20:36,818
+I remember that for 100 years
+we have fought these machines.
+
+196
+00:20:36,985 --> 00:20:41,740
+I remember that for 100 years
+they have sent their armies to destroy us.
+
+197
+00:20:41,907 --> 00:20:47,079
+And after a century of war,
+I remember that which matters most:
+
+198
+00:20:48,872 --> 00:20:51,875
+We are still here!
+
+199
+00:20:58,590 --> 00:21:00,676
+Tonight...
+
+200
+00:21:00,842 --> 00:21:04,221
+...let us send a message to that army.
+
+201
+00:21:04,388 --> 00:21:07,432
+Tonight, let us shake this cave.
+
+202
+00:21:07,599 --> 00:21:11,478
+Tonight, let us tremble these halls...
+
+203
+00:21:11,645 --> 00:21:14,773
+...of earth, steel and stone.
+
+204
+00:21:14,940 --> 00:21:20,195
+Let us be heard from red core
+to black sky.
+
+205
+00:21:20,362 --> 00:21:24,908
+Tonight, let us make them remember:
+
+206
+00:21:25,075 --> 00:21:30,038
+This is Zion and we are not afraid!
+
+207
+00:21:51,427 --> 00:21:54,927
+[Edit: Niobe and Morpheus: “I remember you used to dance.” Speech itself stays.]
+
+208
+00:22:08,035 --> 00:22:09,870
+Excuse me.
+
+209
+00:22:21,715 --> 00:22:25,218
+- I missed you.
+- I can tell.
+
+210
+00:22:25,677 --> 00:22:29,389
+I was thinking, everyone is here.
+
+211
+00:22:29,931 --> 00:22:32,225
+Follow me.
+
+212
+00:25:53,218 --> 00:25:56,805
+Neo, what is it?
+
+213
+00:25:57,097 --> 00:25:59,349
+What's wrong?
+
+214
+00:26:00,934 --> 00:26:03,270
+It's okay, you can tell me.
+
+215
+00:26:03,645 --> 00:26:06,147
+Trinity...
+
+216
+00:26:06,314 --> 00:26:09,109
+Don't be afraid.
+
+217
+00:26:09,276 --> 00:26:11,611
+I can't lose you.
+
+218
+00:26:11,778 --> 00:26:13,655
+You're not gonna lose me.
+
+219
+00:26:17,784 --> 00:26:20,662
+You feel this?
+
+220
+00:26:20,829 --> 00:26:22,622
+I'm never letting go.
+
+221
+00:26:59,826 --> 00:27:02,495
+Good night, Zion.
+
+222
+00:27:02,662 --> 00:27:05,332
+Sweet dreams.
+
+223
+00:27:15,508 --> 00:27:17,177
+- You all right?
+- I'll make it.
+
+224
+00:27:17,344 --> 00:27:19,971
+Did you see that agent?
+I've never seen anything like that.
+
+225
+00:27:20,138 --> 00:27:22,223
+It doesn't matter.
+All that matters is this.
+
+226
+00:27:22,390 --> 00:27:24,684
+You first.
+
+227
+00:27:35,570 --> 00:27:38,448
+- Oh, God.
+- "Smith" will suffice.
+
+228
+00:27:50,377 --> 00:27:53,671
+- Thank you.
+- My pleasure.
+
+229
+00:28:43,638 --> 00:28:46,933
+- Care for some company?
+- Councillor Hamann.
+
+230
+00:28:47,809 --> 00:28:50,645
+I don't want to intrude
+if you'd prefer to be alone.
+
+231
+00:28:51,104 --> 00:28:54,649
+- No, I could probably use some company.
+- Good.
+
+232
+00:28:55,108 --> 00:28:57,485
+So could I.
+
+233
+00:29:00,613 --> 00:29:03,116
+It's nice tonight.
+
+234
+00:29:03,616 --> 00:29:06,035
+Very calm.
+
+235
+00:29:06,202 --> 00:29:08,955
+It feels like everyone is sleeping
+very peacefully.
+
+236
+00:29:09,330 --> 00:29:11,791
+Not everyone.
+
+237
+00:29:12,083 --> 00:29:16,796
+I hate sleeping.
+I never sleep more than a few hours.
+
+238
+00:29:16,963 --> 00:29:21,009
+I figure I slept the first 11 years
+of my life, now I'm making up for it.
+
+239
+00:29:21,468 --> 00:29:26,181
+- What about you?
+- I just haven't been able to sleep much.
+
+240
+00:29:27,640 --> 00:29:30,810
+- It's a good sign.
+- Of what?
+
+241
+00:29:30,977 --> 00:29:34,147
+That you are in fact still human.
+
+242
+00:29:37,734 --> 00:29:41,654
+Have you ever been
+to the engineering level?
+
+243
+00:29:41,821 --> 00:29:44,866
+I love to walk there at night.
+It's quite amazing.
+
+244
+00:29:45,033 --> 00:29:47,577
+- Would you like to see it?
+- Sure.
+
+245
+00:29:58,254 --> 00:30:02,717
+Almost no one comes down here.
+Unless, of course, there's a problem.
+
+246
+00:30:02,884 --> 00:30:07,972
+That's how it is with people. Nobody cares
+how it works as long as it works.
+
+247
+00:30:08,139 --> 00:30:10,433
+I like it down here.
+
+248
+00:30:10,600 --> 00:30:16,397
+I like to be reminded this city survives
+because of these machines.
+
+249
+00:30:16,564 --> 00:30:21,694
+These machines are keeping us alive
+while other machines are coming to kill us.
+
+250
+00:30:22,111 --> 00:30:26,950
+Interesting, isn't it?
+The power to give life...
+
+251
+00:30:27,116 --> 00:30:30,328
+- ...and the power to end it.
+- We have the same power.
+
+252
+00:30:30,495 --> 00:30:33,206
+Yeah, I suppose we do, but...
+
+253
+00:30:33,373 --> 00:30:36,834
+...sometimes I think about those people
+still plugged into the Matrix.
+
+254
+00:30:37,001 --> 00:30:40,004
+And when I look at these machines...
+
+255
+00:30:40,171 --> 00:30:45,260
+...I can't help thinking that, in a way,
+we are plugged into them.
+
+256
+00:30:45,552 --> 00:30:48,429
+But we control these machines,
+they don't control us.
+
+257
+00:30:48,847 --> 00:30:51,850
+Of course not. How could they?
+
+258
+00:30:52,016 --> 00:30:54,561
+The idea is pure nonsense...
+
+259
+00:30:55,061 --> 00:30:58,189
+...but it does make one wonder just...
+
+260
+00:30:58,356 --> 00:30:59,941
+...what is control?
+
+261
+00:31:00,191 --> 00:31:03,236
+If we wanted, we could
+shut these machines down.
+
+262
+00:31:03,611 --> 00:31:08,074
+Of course. That's it. You hit it.
+That's control, isn't it?
+
+263
+00:31:08,700 --> 00:31:12,078
+If we wanted,
+we could smash them to bits.
+
+264
+00:31:12,328 --> 00:31:16,457
+Although if we did, we'd have to consider
+what would happen to our lights...
+
+265
+00:31:16,624 --> 00:31:19,294
+...our heat, our air.
+
+266
+00:31:20,295 --> 00:31:24,424
+So we need machines and they need us.
+Is that your point, councillor?
+
+267
+00:31:24,591 --> 00:31:27,218
+No. No point.
+
+268
+00:31:27,927 --> 00:31:32,015
+Old men like me don't bother
+with making points. There's no point.
+
+269
+00:31:32,807 --> 00:31:36,603
+Is that why there are no young men
+on the Council?
+
+270
+00:31:36,769 --> 00:31:38,438
+Good point.
+
+271
+00:31:39,147 --> 00:31:43,318
+Why don't you tell me
+what's on your mind, councillor.
+
+272
+00:31:43,484 --> 00:31:46,738
+There is so much in this world...
+
+273
+00:31:46,905 --> 00:31:49,824
+...that I do not understand.
+
+274
+00:31:51,618 --> 00:31:56,372
+See that machine? It has something to do
+with recycling our water supply.
+
+275
+00:31:56,539 --> 00:31:59,542
+I have absolutely no idea how it works.
+
+276
+00:31:59,709 --> 00:32:03,796
+But I do understand the reason
+for it to work.
+
+277
+00:32:05,298 --> 00:32:09,802
+I have absolutely no idea how you
+are able to do some of the things you do.
+
+278
+00:32:10,970 --> 00:32:14,140
+But I believe there's a reason for that
+as well.
+
+279
+00:32:15,016 --> 00:32:20,146
+I only hope we understand that reason
+before it's too late.
+
+280
+00:32:26,653 --> 00:32:28,321
+- Ballard.
+- Is he here?
+
+281
+00:32:30,740 --> 00:32:33,326
+Neo, it's from the Oracle.
+
+282
+00:32:36,287 --> 00:32:37,080
+It's time to go.
+
+283
+00:32:37,747 --> 00:32:41,247
+[Edit: Zee’s charm: “that operator’s me,” “I’m coming home.”]
+
+284
+00:32:47,382 --> 00:32:49,550
+- Neo!
+- How the hell--?
+
+285
+00:32:49,967 --> 00:32:52,136
+Bane.
+
+286
+00:32:52,303 --> 00:32:53,638
+Is something wrong?
+
+287
+00:32:53,805 --> 00:32:55,515
+No, I'm fine.
+
+288
+00:32:55,682 --> 00:32:58,476
+I just wanted to catch you to say...
+
+289
+00:32:58,643 --> 00:33:00,478
+...good luck.
+
+290
+00:33:02,146 --> 00:33:03,856
+Thanks.
+
+291
+00:33:04,023 --> 00:33:06,442
+We'll see you.
+
+292
+00:33:08,027 --> 00:33:11,114
+Neo! Just in time.
+
+293
+00:33:11,280 --> 00:33:13,616
+- You're gonna see the Oracle?
+- There's no time.
+
+294
+00:33:13,783 --> 00:33:15,410
+I had to give something to Neo.
+
+295
+00:33:16,119 --> 00:33:18,830
+A gift from one of the orphans.
+
+296
+00:33:19,122 --> 00:33:22,417
+He made me swear to get it to you
+before you left.
+
+297
+00:33:23,292 --> 00:33:25,753
+He said you'd understand.
+
+298
+00:33:28,423 --> 00:33:30,550
+Thanks.
+
+299
+00:33:37,640 --> 00:33:40,560
+I was just told you cleared
+the <i>Nebuchadnezzar</i> for takeoff.
+
+300
+00:33:40,727 --> 00:33:42,687
+That is correct.
+
+301
+00:33:42,854 --> 00:33:44,814
+Am I still in charge
+of our defense system?
+
+302
+00:33:44,981 --> 00:33:46,274
+Of course.
+
+303
+00:33:46,983 --> 00:33:51,028
+I believe I need every ship we have
+if we're going to survive this attack.
+
+304
+00:33:51,612 --> 00:33:53,781
+I understand that, commander.
+
+305
+00:33:53,948 --> 00:33:56,534
+Then why did you allow
+the <i>Nebuchadnezzar</i> to leave?
+
+306
+00:33:56,701 --> 00:34:01,581
+Because I believe our survival depends
+on more than how many ships we have.
+
+307
+00:34:04,083 --> 00:34:06,377
+Be careful.
+
+308
+00:34:35,406 --> 00:34:37,617
+Hello.
+
+309
+00:34:47,919 --> 00:34:51,464
+- You seek the Oracle.
+- Who are you?
+
+310
+00:34:54,509 --> 00:34:59,013
+I am Seraph. I can take you to her,
+but first I must apologize.
+
+311
+00:34:59,263 --> 00:35:00,973
+Apologize for what?
+
+312
+00:35:01,641 --> 00:35:03,434
+For this.
+
+313
+00:36:00,741 --> 00:36:02,994
+Good.
+
+314
+00:36:05,496 --> 00:36:08,666
+The Oracle has many enemies.
+I had to be sure.
+
+315
+00:36:08,833 --> 00:36:11,043
+- Of what?
+- That you are the One.
+
+316
+00:36:11,502 --> 00:36:15,256
+- You could have just asked.
+- No. You do not truly know someone...
+
+317
+00:36:15,423 --> 00:36:17,675
+...until you fight them.
+
+318
+00:36:18,217 --> 00:36:21,679
+Come. She's waiting.
+
+319
+00:36:36,736 --> 00:36:38,613
+Where the hell did they go?
+
+320
+00:36:38,988 --> 00:36:41,699
+These are back doors, aren't they?
+
+321
+00:36:41,866 --> 00:36:44,785
+Programmer access.
+
+322
+00:36:45,870 --> 00:36:49,624
+- How do they work?
+- A code is hidden in tumblers.
+
+323
+00:36:49,790 --> 00:36:54,795
+One position opens a lock and another
+position opens one of these doors.
+
+324
+00:36:56,547 --> 00:36:59,383
+Are you a programmer?
+
+325
+00:36:59,550 --> 00:37:01,886
+Then what are you?
+
+326
+00:37:04,055 --> 00:37:07,558
+I protect that which matters most.
+
+327
+00:37:27,078 --> 00:37:30,456
+Well, come on. I ain't gonna bite you.
+
+328
+00:37:30,873 --> 00:37:33,668
+Come around here
+and let me have a look at you.
+
+329
+00:37:36,879 --> 00:37:39,257
+My goodness, look at you.
+
+330
+00:37:39,590 --> 00:37:42,426
+You turned out all right, didn't you?
+
+331
+00:37:42,593 --> 00:37:44,804
+- How do you feel?
+- I--
+
+332
+00:37:44,971 --> 00:37:48,557
+I know you're not sleeping.
+We'll get to that.
+
+333
+00:37:48,724 --> 00:37:51,435
+Why don't you come
+and have a sit this time.
+
+334
+00:37:52,144 --> 00:37:56,274
+- Maybe I'll stand.
+- Well, suit yourself.
+
+335
+00:38:07,410 --> 00:38:09,954
+- I felt like sitting.
+- I know.
+
+336
+00:38:11,122 --> 00:38:13,040
+So...
+
+337
+00:38:15,126 --> 00:38:17,545
+...let's get the obvious stuff
+out of the way.
+
+338
+00:38:17,837 --> 00:38:22,299
+- You're not human, are you?
+- It's tough to get more obvious than that.
+
+339
+00:38:22,466 --> 00:38:28,306
+If I had to guess, I'd say you're
+a program from the machine world.
+
+340
+00:38:28,681 --> 00:38:32,893
+- So is he.
+- So far, so good.
+
+341
+00:38:33,060 --> 00:38:36,230
+But if that's true, that could mean
+you're part of this system...
+
+342
+00:38:36,397 --> 00:38:38,983
+...another kind of control.
+
+343
+00:38:39,150 --> 00:38:43,654
+- Keep going.
+- I suppose the most obvious question is...
+
+344
+00:38:43,821 --> 00:38:47,742
+- ...how can I trust you?
+- Bingo.
+
+345
+00:38:48,784 --> 00:38:52,038
+It is a pickle, no doubt about it.
+Bad news is...
+
+346
+00:38:52,204 --> 00:38:55,875
+...there's no way you can really know
+if I'm here to help you or not.
+
+347
+00:38:56,042 --> 00:38:59,587
+So it's really up to you. Just have
+to make up your own damn mind...
+
+348
+00:38:59,754 --> 00:39:04,550
+...to either accept what
+I'm going to tell you or reject it.
+
+349
+00:39:05,843 --> 00:39:08,012
+Candy?
+
+350
+00:39:10,723 --> 00:39:15,144
+- Do you already know if I'll take it?
+- Wouldn't be much of an oracle if I didn't.
+
+351
+00:39:15,311 --> 00:39:18,522
+But if you already know,
+how can I make a choice?
+
+352
+00:39:18,689 --> 00:39:22,735
+Because you didn't come here to make
+the choice. You've already made it.
+
+353
+00:39:22,902 --> 00:39:27,531
+You're here to try to understand
+why you made it.
+
+354
+00:39:33,079 --> 00:39:36,040
+I thought you'd have figured that out
+by now.
+
+355
+00:39:37,792 --> 00:39:40,377
+- Why are you here?
+- Same reason.
+
+356
+00:39:40,628 --> 00:39:43,381
+I love candy.
+
+357
+00:39:43,547 --> 00:39:46,384
+But why help us?
+
+358
+00:39:46,550 --> 00:39:50,054
+We're all here to do
+what we're all here to do.
+
+359
+00:39:50,596 --> 00:39:53,682
+I'm interested in one thing, Neo:
+the future.
+
+360
+00:39:53,849 --> 00:39:58,062
+And believe me, I know, the only way
+to get there is together.
+
+361
+00:39:58,896 --> 00:40:03,818
+- Are there other programs like you?
+- Well, not like me, but...
+
+362
+00:40:03,984 --> 00:40:06,654
+Look. See those birds?
+
+363
+00:40:06,904 --> 00:40:10,282
+At some point, a program was written
+to govern them.
+
+364
+00:40:10,449 --> 00:40:16,288
+A program was written to watch over the
+trees and the wind, the sunrise and sunset.
+
+365
+00:40:16,539 --> 00:40:19,417
+There are programs running
+all over the place.
+
+366
+00:40:19,583 --> 00:40:24,046
+The ones doing their job, doing what
+they were meant to do, are invisible.
+
+367
+00:40:24,213 --> 00:40:28,050
+You'd never even know they were here.
+But the other ones...
+
+368
+00:40:28,217 --> 00:40:32,304
+Well, you hear about them all the time.
+
+369
+00:40:32,888 --> 00:40:35,766
+- I've never heard of them.
+- Of course you have.
+
+370
+00:40:35,933 --> 00:40:40,855
+Every time you've heard someone
+say they saw a ghost or an angel...
+
+371
+00:40:41,021 --> 00:40:45,609
+...every story you've ever heard about
+vampires, werewolves or aliens...
+
+372
+00:40:45,776 --> 00:40:48,112
+...is the system assimilating
+some program...
+
+373
+00:40:48,279 --> 00:40:52,950
+...that's doing something
+they're not supposed to be doing.
+
+374
+00:40:53,117 --> 00:40:56,120
+Programs hacking programs.
+
+375
+00:40:56,287 --> 00:40:59,165
+- Why?
+- They have their reasons...
+
+376
+00:40:59,331 --> 00:41:03,294
+...but usually a program chooses exile
+when it faces deletion.
+
+377
+00:41:03,711 --> 00:41:07,631
+- And why would a program be deleted?
+- Maybe it breaks down.
+
+378
+00:41:07,798 --> 00:41:12,344
+Maybe a better program is created
+to replace it. Happens all the time.
+
+379
+00:41:12,511 --> 00:41:17,475
+And when it does, a program
+can either choose to hide here...
+
+380
+00:41:17,641 --> 00:41:20,311
+...or return to the source.
+
+381
+00:41:21,979 --> 00:41:25,274
+- The machine mainframe.
+- Yes.
+
+382
+00:41:25,441 --> 00:41:27,943
+Where you must go.
+
+383
+00:41:28,110 --> 00:41:32,323
+Where the path of the One ends.
+You've seen it...
+
+384
+00:41:33,491 --> 00:41:36,327
+...in your dreams, haven't you?
+
+385
+00:41:36,493 --> 00:41:39,330
+A door made of light?
+
+386
+00:41:41,582 --> 00:41:45,127
+What happens when you go through
+the door?
+
+387
+00:41:47,254 --> 00:41:50,257
+I see Trinity...
+
+388
+00:41:50,424 --> 00:41:53,594
+...and something happens...
+
+389
+00:41:53,761 --> 00:41:55,679
+...something bad.
+
+390
+00:41:55,846 --> 00:41:59,850
+She starts to fall,
+and then I wake up.
+
+391
+00:42:00,893 --> 00:42:04,772
+- Do you see her die?
+- No.
+
+392
+00:42:05,564 --> 00:42:08,609
+You have the sight now, Neo.
+
+393
+00:42:08,776 --> 00:42:11,779
+You are looking at the world
+without time.
+
+394
+00:42:11,946 --> 00:42:14,365
+Then why can't I see
+what happens to her?
+
+395
+00:42:14,531 --> 00:42:18,285
+We can never see past the choices
+we don't understand.
+
+396
+00:42:18,452 --> 00:42:21,622
+Are you saying I have to choose
+whether Trinity lives or dies?
+
+397
+00:42:21,872 --> 00:42:25,668
+No, you've already made the choice.
+
+398
+00:42:25,834 --> 00:42:28,379
+Now you have to understand it.
+
+399
+00:42:29,004 --> 00:42:30,381
+No.
+
+400
+00:42:30,548 --> 00:42:33,801
+I can't do that. I won't.
+
+401
+00:42:34,510 --> 00:42:36,887
+- Well, you have to.
+- Why?
+
+402
+00:42:37,471 --> 00:42:40,558
+Because you're the One.
+
+403
+00:42:42,726 --> 00:42:45,729
+What if I can't?
+
+404
+00:42:45,896 --> 00:42:47,898
+What happens if I fail?
+
+405
+00:42:48,482 --> 00:42:51,485
+Then Zion will fall.
+
+406
+00:42:58,951 --> 00:43:03,831
+Our time is up. Listen to me, Neo.
+You can save Zion...
+
+407
+00:43:04,123 --> 00:43:07,334
+...if you reach the source, but to do that
+you need the Keymaker.
+
+408
+00:43:07,501 --> 00:43:08,544
+The Keymaker?
+
+409
+00:43:08,711 --> 00:43:12,298
+He disappeared. We didn't
+know what happened to him until now.
+
+410
+00:43:12,464 --> 00:43:16,218
+He's being held prisoner
+by a very dangerous program...
+
+411
+00:43:16,385 --> 00:43:19,930
+...one of the oldest of us.
+He is called the Merovingian.
+
+412
+00:43:20,097 --> 00:43:22,975
+- And he won't let him go willingly.
+- What does he want?
+
+413
+00:43:23,142 --> 00:43:27,980
+What do all men with power want?
+More power.
+
+414
+00:43:28,689 --> 00:43:31,942
+Be there at that exact time...
+
+415
+00:43:32,109 --> 00:43:34,778
+...and you will have a chance.
+
+416
+00:43:35,571 --> 00:43:37,823
+We must go.
+
+417
+00:43:37,990 --> 00:43:43,370
+Seems like every time we meet
+I got nothing but bad news.
+
+418
+00:43:43,954 --> 00:43:46,707
+I'm sorry about that. I surely am.
+
+419
+00:43:47,207 --> 00:43:49,752
+But for what it's worth...
+
+420
+00:43:50,794 --> 00:43:54,465
+...you've made a believer out of me.
+
+421
+00:43:55,758 --> 00:43:57,885
+Good luck, kiddo.
+
+422
+00:44:17,780 --> 00:44:20,783
+Mr. Anderson.
+
+423
+00:44:21,825 --> 00:44:23,827
+Did you get my package?
+
+424
+00:44:23,994 --> 00:44:26,163
+- Yeah.
+- Well, good.
+
+425
+00:44:27,331 --> 00:44:30,209
+- Smith?
+- He's not reading like an agent.
+
+426
+00:44:30,376 --> 00:44:34,254
+- Surprised to see me?
+- No.
+
+427
+00:44:34,546 --> 00:44:37,007
+- Then you're aware of it.
+- Of what?
+
+428
+00:44:38,217 --> 00:44:40,219
+Our connection.
+
+429
+00:44:40,386 --> 00:44:43,055
+I don't fully understand how it happened.
+
+430
+00:44:43,222 --> 00:44:46,600
+Perhaps some part of you
+imprinted onto me...
+
+431
+00:44:46,767 --> 00:44:49,436
+...something overwritten or copied.
+
+432
+00:44:49,603 --> 00:44:52,314
+It is, at this point, irrelevant.
+What matters is...
+
+433
+00:44:52,481 --> 00:44:55,567
+...that whatever happened,
+happened for a reason.
+
+434
+00:44:55,734 --> 00:44:57,403
+And what reason is that?
+
+435
+00:44:57,861 --> 00:45:01,824
+I killed you, Mr. Anderson.
+I watched you die.
+
+436
+00:45:01,990 --> 00:45:05,244
+With a certain satisfaction,
+I might add.
+
+437
+00:45:05,411 --> 00:45:08,914
+And then something happened,
+something that I knew was impossible...
+
+438
+00:45:09,081 --> 00:45:10,916
+...but it happened anyway.
+
+439
+00:45:11,625 --> 00:45:14,795
+You destroyed me, Mr. Anderson.
+
+440
+00:45:16,797 --> 00:45:21,385
+Afterward, I knew the rules, I understood
+what I was supposed to do...
+
+441
+00:45:21,552 --> 00:45:24,555
+...but I didn't.
+
+442
+00:45:24,972 --> 00:45:28,892
+I couldn't. I was compelled to stay...
+
+443
+00:45:29,351 --> 00:45:32,896
+...compelled to disobey.
+
+444
+00:45:33,480 --> 00:45:37,234
+And now, here I stand
+because of you, Mr. Anderson.
+
+445
+00:45:37,401 --> 00:45:41,363
+Because of you, I'm no longer an agent
+of this system.
+
+446
+00:45:41,530 --> 00:45:44,741
+Because of you, I've changed.
+I'm unplugged.
+
+447
+00:45:44,908 --> 00:45:49,747
+A new man, so to speak.
+Like you, apparently free.
+
+448
+00:45:50,080 --> 00:45:51,457
+Congratulations.
+
+449
+00:45:52,207 --> 00:45:54,543
+Thank you.
+
+450
+00:45:55,127 --> 00:45:59,756
+But as you well know,
+appearances can be deceiving...
+
+451
+00:45:59,923 --> 00:46:05,095
+...which brings me back to the reason
+why we're here.
+
+452
+00:46:05,262 --> 00:46:10,142
+We're not here because we're free.
+We're here because we are not free.
+
+453
+00:46:10,309 --> 00:46:14,229
+There's no escaping reason,
+no denying purpose.
+
+454
+00:46:14,396 --> 00:46:17,774
+Because as we both know,
+without purpose...
+
+455
+00:46:17,941 --> 00:46:22,779
+- ...we would not exist.
+- It is purpose that created us.
+
+456
+00:46:22,946 --> 00:46:25,949
+- Purpose that connects us.
+- Purpose that pulls us.
+
+457
+00:46:26,116 --> 00:46:27,951
+- That guides us.
+- That drives us.
+
+458
+00:46:28,118 --> 00:46:32,080
+- It is purpose that defines.
+- Purpose that binds us.
+
+459
+00:46:32,080 --> 00:46:35,459
+We are here because of you,
+Mr. Anderson.
+
+460
+00:46:35,626 --> 00:46:40,005
+We're here to take from you
+what you tried to take from us:
+
+461
+00:46:41,965 --> 00:46:44,051
+Purpose.
+
+462
+00:46:47,137 --> 00:46:49,014
+- What's happening to him?
+- Don't know.
+
+463
+00:46:52,059 --> 00:46:55,646
+Yes, that's it. It'll be over soon.
+
+464
+00:48:42,502 --> 00:48:44,963
+- You.
+- Yes, me.
+
+465
+00:48:49,134 --> 00:48:52,012
+Me, me, me.
+
+466
+00:48:56,892 --> 00:48:58,560
+Me too.
+
+467
+00:51:06,313 --> 00:51:07,355
+More.
+
+468
+00:52:09,626 --> 00:52:12,462
+It is inevitable.
+
+469
+00:52:12,879 --> 00:52:14,297
+Come on, get out of there.
+
+470
+00:52:57,507 --> 00:52:59,843
+Are you all right?
+
+471
+00:53:00,927 --> 00:53:02,846
+- It was Smith.
+- Yes.
+
+472
+00:53:03,722 --> 00:53:06,349
+- Now there's more than one?
+- A lot more.
+
+473
+00:53:06,516 --> 00:53:10,312
+- How is that possible?
+- I don't know.
+
+474
+00:53:10,478 --> 00:53:12,939
+Somehow, he's found a way
+to copy himself.
+
+475
+00:53:13,106 --> 00:53:17,319
+- Is that what he was doing to you?
+- I don't know what he was doing...
+
+476
+00:53:17,485 --> 00:53:20,238
+- ...but I know what it felt like.
+- What?
+
+477
+00:53:21,156 --> 00:53:24,868
+It felt like I was back in that hallway.
+
+478
+00:53:25,035 --> 00:53:26,453
+It felt like dying.
+
+479
+00:53:26,953 --> 00:53:29,080
+The machines are tunneling to avoid
+our defense system.
+
+480
+00:53:29,080 --> 00:53:33,835
+But I believe they will intersect
+certain pipelines to control them.
+
+481
+00:53:34,002 --> 00:53:36,546
+These points of intersection
+are crucial...
+
+482
+00:53:36,713 --> 00:53:39,507
+...because I believe they're
+vulnerable to counterattack.
+
+483
+00:53:39,674 --> 00:53:43,720
+Although it has been suggested that
+this is the same kind of attack...
+
+484
+00:53:43,887 --> 00:53:47,557
+...we've defended for years,
+I urge the Council to realize the truth.
+
+485
+00:53:47,724 --> 00:53:51,061
+This is the single greatest threat
+we have ever faced...
+
+486
+00:53:51,227 --> 00:53:55,065
+...and if we do not act accordingly,
+we will not survive.
+
+487
+00:53:55,232 --> 00:53:59,236
+Commander Lock, the Council is well
+aware of the seriousness of this attack.
+
+488
+00:53:59,527 --> 00:54:04,074
+You have our leave to prepare our defense
+by any and all means necessary.
+
+489
+00:54:04,241 --> 00:54:06,910
+- Thank you, Council.
+- However...
+
+490
+00:54:07,160 --> 00:54:10,497
+...we ask if there's been word
+from the <i>Nebuchadnezzar.</i>
+
+491
+00:54:10,747 --> 00:54:13,249
+No, councillor. No word. Nothing.
+
+492
+00:54:14,876 --> 00:54:18,838
+Then we request a ship be dispatched
+to ascertain the fate of the One.
+
+493
+00:54:19,005 --> 00:54:22,759
+I wish that were possible, councillor,
+but I do not believe our defense...
+
+494
+00:54:22,926 --> 00:54:26,471
+- ...can suffer the loss of another ship.
+- It will, commander, if it must.
+
+495
+00:54:26,638 --> 00:54:28,974
+It could take one ship days
+to find the <i>Nebuchadnezzar.</i>
+
+496
+00:54:29,140 --> 00:54:32,185
+- Then send two.
+- This is insane.
+
+497
+00:54:32,352 --> 00:54:35,355
+Careful, commander.
+
+498
+00:54:35,563 --> 00:54:38,900
+Forgive my frustration, councillors.
+
+499
+00:54:39,067 --> 00:54:42,946
+But I wish I were able to comprehend
+the Council's choice in this matter.
+
+500
+00:54:43,113 --> 00:54:46,283
+Comprehension is not
+a requisite of cooperation.
+
+501
+00:54:46,449 --> 00:54:48,910
+If you are asking me
+to order two of my captains--
+
+502
+00:54:49,077 --> 00:54:50,787
+There's no need for such an order.
+
+503
+00:54:50,954 --> 00:54:54,499
+The captains are present.
+They can answer for themselves.
+
+504
+00:54:54,958 --> 00:55:00,213
+The Council is calling for two volunteers
+to aid the <i>Nebuchadnezzar.</i>
+
+505
+00:55:00,380 --> 00:55:04,551
+Are there two among you
+that would answer such a call?
+
+506
+00:55:05,844 --> 00:55:09,639
+Captain Soren of the <i>Vigilant</i>
+will answer the Council's call.
+
+507
+00:55:09,806 --> 00:55:12,726
+You understand the situation,
+Captain Soren?
+
+508
+00:55:12,892 --> 00:55:15,353
+- Yes, ma'am.
+- Thank you, captain.
+
+509
+00:55:16,771 --> 00:55:18,189
+Is there another?
+
+510
+00:55:18,982 --> 00:55:22,694
+- Captain, I think we should volunteer.
+- What? You have gone crazy.
+
+511
+00:55:22,861 --> 00:55:24,738
+- Listen--
+- Shut your hole, Bane...
+
+512
+00:55:24,904 --> 00:55:26,406
+...before I put you in one.
+
+513
+00:55:26,456 --> 00:55:27,524
+[Edit: “Is there no other?” after the council.]
+
+514
+00:55:27,574 --> 00:55:30,785
+Captain Niobe of the <i>Logos</i>
+will answer the councillor's call.
+
+515
+00:55:30,785 --> 00:55:32,120
+- Thank you, Captain Niobe.
+
+516
+00:55:32,328 --> 00:55:37,417
+Commander Lock, you have your orders.
+This Council is hereby adjourned.
+
+517
+00:55:42,627 --> 00:55:46,127
+[Edit: Niobe to Jason: “some things never change, and some things do.”]
+
+518
+00:55:55,352 --> 00:55:56,770
+What can you see, Neo?
+
+519
+00:55:56,936 --> 00:55:59,272
+It's strange.
+The code is somehow different.
+
+520
+00:55:59,439 --> 00:56:01,024
+- Encrypted?
+- Maybe.
+
+521
+00:56:01,191 --> 00:56:03,151
+Is that good for us or bad for us?
+
+522
+00:56:03,860 --> 00:56:06,988
+Well, it looks like every floor
+is wired with explosives.
+
+523
+00:56:07,614 --> 00:56:09,157
+Bad for us.
+
+524
+00:56:09,574 --> 00:56:11,076
+Here we go.
+
+525
+00:56:19,084 --> 00:56:22,003
+Yes. We are here to speak
+with the Merovingian.
+
+526
+00:56:22,462 --> 00:56:26,299
+Well, of course.
+He has been expecting you.
+
+527
+00:56:26,466 --> 00:56:27,509
+Follow me.
+
+528
+00:56:48,196 --> 00:56:51,866
+A-ha. Here he is at last.
+
+529
+00:56:52,075 --> 00:56:55,370
+Neo, the One himself.
+
+530
+00:56:55,537 --> 00:56:56,955
+Right?
+
+531
+00:56:57,122 --> 00:56:59,457
+And the legendary Morpheus.
+
+532
+00:57:00,291 --> 00:57:05,171
+And Trinity, of course.
+I have heard so much.
+
+533
+00:57:05,338 --> 00:57:08,800
+You honor me. Please, sit. Join us.
+This is my wife, Persephone.
+
+534
+00:57:09,717 --> 00:57:13,012
+Something to eat? Drink?
+
+535
+00:57:13,304 --> 00:57:16,349
+Of course, such things are contrivances,
+like so much here.
+
+536
+00:57:16,516 --> 00:57:19,018
+For the sake of appearances.
+
+537
+00:57:19,185 --> 00:57:22,647
+- No, thank you.
+- Yes, of course. Who has time?
+
+538
+00:57:22,814 --> 00:57:27,902
+Who has time? But then, if we do not ever
+take time, how can we ever have time?
+
+539
+00:57:31,657 --> 00:57:33,157
+[Edit: Merovingian’s wine speech.]
+
+540
+00:57:33,157 --> 00:57:33,616
+You know why we are here.
+
+541
+00:57:35,368 --> 00:57:40,248
+I am a trafficker of information.
+I know everything I can.
+
+542
+00:57:40,665 --> 00:57:46,504
+The question is,
+do you know why you are here?
+
+543
+00:57:46,796 --> 00:57:49,257
+We are looking for the Keymaker.
+
+544
+00:57:49,924 --> 00:57:54,429
+Oh, yes, it is true.
+The Keymaker, of course.
+
+545
+00:57:54,596 --> 00:57:57,557
+But this is not a reason,
+this is not a why.
+
+546
+00:57:57,724 --> 00:58:01,477
+The Keymaker himself, his very nature,
+is a means, it is not an end.
+
+547
+00:58:01,644 --> 00:58:07,400
+And so to look for him is to be
+looking for a means to do...
+
+548
+00:58:07,567 --> 00:58:10,737
+- ...what?
+- You know the answer to that question.
+
+549
+00:58:10,904 --> 00:58:13,031
+But do you?
+
+550
+00:58:13,239 --> 00:58:15,575
+You think you do, but you do not.
+
+551
+00:58:15,742 --> 00:58:18,953
+You are here
+because you were sent here.
+
+552
+00:58:19,120 --> 00:58:22,248
+You were told to come here,
+and then you obeyed.
+
+553
+00:58:23,416 --> 00:58:25,752
+It is, of course, the way of all things.
+
+554
+00:58:25,919 --> 00:58:28,588
+You see, there is only one constant...
+
+555
+00:58:28,755 --> 00:58:32,926
+...one universal. It is the only real truth.
+
+556
+00:58:33,092 --> 00:58:34,761
+Causality.
+
+557
+00:58:34,928 --> 00:58:37,222
+Action, reaction.
+
+558
+00:58:37,388 --> 00:58:41,601
+- Cause and effect.
+- Everything begins with choice.
+
+559
+00:58:41,768 --> 00:58:43,519
+No. Wrong.
+
+560
+00:58:43,686 --> 00:58:48,274
+Choice is an illusion created
+between those with power...
+
+561
+00:58:48,441 --> 00:58:50,526
+...and those without.
+
+562
+00:58:50,985 --> 00:58:56,449
+Our only hope, our only peace,
+is to understand it, to understand the why.
+
+563
+00:58:56,499 --> 00:58:57,999
+[Edit: “Look at that woman,” the cake, causality.]
+
+564
+00:58:57,999 --> 00:59:00,036
+"Why" is what separates us from them...
+
+565
+00:59:00,203 --> 00:59:02,497
+...you from me.
+
+566
+00:59:02,664 --> 00:59:06,417
+"Why" is the only real source of power.
+Without it, you are powerless.
+
+567
+00:59:06,584 --> 00:59:09,879
+And this is how you come to me,
+without why, without power.
+
+568
+00:59:10,046 --> 00:59:12,840
+Another link in the chain.
+
+569
+00:59:13,049 --> 00:59:14,342
+But fear not.
+
+570
+00:59:14,509 --> 00:59:18,388
+Since I have seen how good you are
+at following orders...
+
+571
+00:59:18,555 --> 00:59:21,182
+...I will tell you what to do next.
+
+572
+00:59:21,683 --> 00:59:26,521
+Run back and give the fortuneteller
+this message:
+
+573
+00:59:26,729 --> 00:59:30,984
+Her time is almost up.
+
+574
+00:59:32,026 --> 00:59:35,571
+Now I have some real business to do,
+so I will say <i>adieu</i> and goodbye.
+
+575
+00:59:35,738 --> 00:59:38,241
+- This isn't over.
+- Oh, yes, it is.
+
+576
+00:59:38,408 --> 00:59:44,789
+The Keymaker is mine, and I see no reason
+why I should give him up.
+
+577
+00:59:44,956 --> 00:59:49,002
+- No reason at all.
+- Where are you going?
+
+578
+00:59:49,168 --> 00:59:53,881
+Please, <i>ma chérie,</i> I have told you.
+We are all victims of causality.
+
+579
+00:59:54,048 --> 00:59:57,385
+I drank too much wine,
+I must take a piss.
+
+580
+00:59:57,885 --> 01:00:01,014
+Cause and effect. <i>Au revoir.</i>
+
+581
+01:00:05,065 --> 01:00:08,565
+[Edit: “Touch me and that hand will never touch anything again.”]
+
+582
+01:00:09,272 --> 01:00:10,773
+Well, that didn't go so well.
+
+583
+01:00:10,823 --> 01:00:12,323
+[Edit: No dialogue. A join, not its own scene.]
+
+584
+01:00:12,323 --> 01:00:13,318
+Are you certain the Oracle
+didn't say anything else?
+
+585
+01:00:13,484 --> 01:00:15,611
+- Yes.
+- Maybe we did something wrong.
+
+586
+01:00:16,279 --> 01:00:17,613
+Or didn't do something.
+
+587
+01:00:17,780 --> 01:00:21,034
+No, what happened couldn't have
+happened any other way.
+
+588
+01:00:21,200 --> 01:00:23,953
+- How do you know?
+- We are still alive.
+
+589
+01:00:27,248 --> 01:00:30,501
+If you want the Keymaker, follow me.
+
+590
+01:00:36,162 --> 01:00:39,662
+[Edit: Persephone: “It’s just a kiss,” then “Terrible. Forget it.”]
+
+591
+01:01:05,536 --> 01:01:07,288
+Not again.
+
+592
+01:01:10,708 --> 01:01:13,336
+It's all right, boys. They're with me.
+
+593
+01:01:14,003 --> 01:01:16,381
+These fellas work for my husband.
+
+594
+01:01:16,547 --> 01:01:20,385
+They do his dirty work.
+They're very good, very loyal.
+
+595
+01:01:20,551 --> 01:01:22,095
+Aren't you, boys?
+
+596
+01:01:22,261 --> 01:01:23,304
+Yes, mistress.
+
+597
+01:01:23,471 --> 01:01:26,182
+They come from a much older version
+of the Matrix.
+
+598
+01:01:26,349 --> 01:01:30,520
+But like so many back then, they caused
+more problems than they solved.
+
+599
+01:01:31,270 --> 01:01:36,275
+My husband saved them because
+they're notoriously difficult to terminate.
+
+600
+01:01:36,442 --> 01:01:40,488
+How many people keep silver bullets
+in their gun?
+
+601
+01:01:45,201 --> 01:01:48,413
+You can either run and tell my husband
+what I have done...
+
+602
+01:01:48,579 --> 01:01:51,165
+...or you can stay there and die.
+
+603
+01:01:52,083 --> 01:01:54,043
+He's in the ladies' room!
+
+604
+01:02:00,133 --> 01:02:02,051
+Hurry.
+
+605
+01:02:27,618 --> 01:02:30,788
+- My name is Neo.
+- Yes. I'm the Keymaker.
+
+606
+01:02:30,955 --> 01:02:32,874
+I've been waiting for you.
+
+607
+01:02:38,796 --> 01:02:43,384
+Oh! My God! My God, Persephone,
+how could you do this? You betray me.
+
+608
+01:02:47,722 --> 01:02:50,558
+- Cause and effect, my love.
+- Cause?
+
+609
+01:02:50,725 --> 01:02:53,728
+There is no cause for this. What cause?
+
+610
+01:02:53,895 --> 01:02:58,191
+What cause? How about the lipstick
+you're still wearing?
+
+611
+01:02:58,357 --> 01:03:01,068
+Lipstick? Lipstick.
+
+612
+01:03:01,235 --> 01:03:05,072
+What craziness are you talking about,
+woman? There is no lipstick!
+
+613
+01:03:06,783 --> 01:03:09,452
+She wasn't kissing your face, my love.
+
+614
+01:03:10,578 --> 01:03:15,041
+Aye-yi-yi-yi.
+Woman, this is nothing.
+
+615
+01:03:15,208 --> 01:03:20,755
+- It is a game. It is only a game.
+- So is this.
+
+616
+01:03:20,922 --> 01:03:22,924
+Have fun.
+
+617
+01:03:29,430 --> 01:03:31,098
+All right.
+
+618
+01:03:31,265 --> 01:03:33,017
+All right.
+
+619
+01:03:33,267 --> 01:03:36,062
+Let us find out where this goes.
+
+620
+01:03:36,229 --> 01:03:39,106
+You two, get the Keymaker.
+
+621
+01:03:45,613 --> 01:03:47,615
+That's a nice trick.
+
+622
+01:03:47,782 --> 01:03:49,075
+I cannot go back.
+
+623
+01:03:49,617 --> 01:03:51,619
+I'll handle them.
+
+624
+01:03:52,119 --> 01:03:58,251
+Handle us? You'll handle us? You know,
+your predecessors had much more respect.
+
+625
+01:04:11,639 --> 01:04:13,683
+Okay, you have some skill.
+
+626
+01:04:15,893 --> 01:04:17,854
+Kill him.
+
+627
+01:05:18,039 --> 01:05:20,082
+You see? He's just a man.
+
+628
+01:07:34,884 --> 01:07:37,636
+Goddamn it, woman,
+you will be the end of me.
+
+629
+01:07:39,764 --> 01:07:43,768
+Mark my words, boy,
+and mark them well.
+
+630
+01:07:43,934 --> 01:07:49,148
+I have survived your predecessors,
+and I will survive you.
+
+631
+01:08:09,210 --> 01:08:12,588
+- Where are you going?
+- Another way. Always another way.
+
+632
+01:08:16,717 --> 01:08:18,594
+Close it, quick!
+
+633
+01:08:23,390 --> 01:08:25,935
+Could we move along?
+
+634
+01:08:29,480 --> 01:08:31,065
+Run!
+
+635
+01:08:46,080 --> 01:08:49,333
+Step away from the door.
+
+636
+01:08:54,421 --> 01:08:55,714
+We owe you for that.
+
+637
+01:08:57,967 --> 01:08:59,134
+Just like new.
+
+638
+01:08:59,426 --> 01:09:00,886
+Drop your weapon.
+
+639
+01:09:06,267 --> 01:09:08,102
+- Stay with him.
+- What about Neo?
+
+640
+01:09:08,269 --> 01:09:09,812
+He can handle himself.
+
+641
+01:09:12,898 --> 01:09:13,983
+Get in back.
+
+642
+01:09:51,645 --> 01:09:52,813
+Shit.
+
+643
+01:09:53,314 --> 01:09:54,815
+- Operator.
+<i>- Link, where am I?</i>
+
+644
+01:09:55,357 --> 01:09:58,569
+You won't believe this,
+but you're way up in the mountains.
+
+645
+01:09:58,861 --> 01:10:01,155
+- Really?
+- <i>It'll take me a while to get an exit.</i>
+
+646
+01:10:01,655 --> 01:10:02,698
+- Shit!
+- <i>What?</i>
+
+647
+01:10:02,907 --> 01:10:05,576
+The twins are after Morpheus and Trinity.
+They don't have a way out.
+
+648
+01:10:05,743 --> 01:10:09,121
+- Where are they?
+- <i>Middle of the city, 500 miles due south.</i>
+
+649
+01:10:25,888 --> 01:10:27,473
+<i>- Operator.</i>
+- Get us out of here.
+
+650
+01:10:27,640 --> 01:10:30,392
+- <i>Won't be easy.</i>
+- I know. We're inside the core network.
+
+651
+01:10:30,559 --> 01:10:33,187
+<i>The only exit I got
+near you is the Winslow overpass.</i>
+
+652
+01:10:33,354 --> 01:10:35,439
+- Off the freeway.
+- <i>Yes, sir.</i>
+
+653
+01:10:35,606 --> 01:10:39,360
+- Fine, we'll make it.
+- <i>I should-- Oh, shit! Look out behind you!</i>
+
+654
+01:10:44,365 --> 01:10:45,950
+- Incoming fire.
+- Down!
+
+655
+01:10:54,208 --> 01:10:55,376
+Hold on!
+
+656
+01:11:12,393 --> 01:11:14,895
+Oh, no. This is getting real ugly
+real fast.
+
+657
+01:11:15,062 --> 01:11:16,772
+Are you watching this, Link?
+
+658
+01:11:16,939 --> 01:11:20,567
+Yes, sir. There's an all points on you.
+Eight units headed your way.
+
+659
+01:11:21,610 --> 01:11:23,570
+Any suggestions?
+
+660
+01:11:25,447 --> 01:11:27,449
+- Turn right.
+- Right, now.
+
+661
+01:11:34,915 --> 01:11:37,751
+Straight here.
+You'll hit a connecting tunnel to the 101.
+
+662
+01:11:37,918 --> 01:11:39,295
+- Good man.
+
+663
+01:11:39,457 --> 01:11:40,957
+[Edit: Link on the freeway: “Winslow overpass.”]
+
+664
+01:11:40,957 --> 01:11:41,630
+You always told me
+to stay off the freeway.
+
+665
+01:11:41,797 --> 01:11:44,425
+- Yes, that's true.
+- You said it was suicide.
+
+666
+01:11:44,633 --> 01:11:46,552
+Then let us hope...
+
+667
+01:11:46,719 --> 01:11:48,095
+...that I was wrong.
+
+668
+01:11:59,982 --> 01:12:01,066
+- Operator.
+- Link, it's Niobe.
+
+669
+01:12:01,233 --> 01:12:02,860
+We've been sent to bring you in.
+
+670
+01:12:03,027 --> 01:12:06,113
+- I need to talk to Morpheus.
+- Believe me, Niobe, he needs you.
+
+671
+01:12:06,280 --> 01:12:08,282
+- <i>Where is he?</i>
+- Just follow the sirens.
+
+672
+01:12:15,831 --> 01:12:17,750
+Repeat, they're approaching the--
+
+673
+01:12:20,919 --> 01:12:25,132
+- We have them now.
+- The exile is the primary target.
+
+674
+01:13:28,278 --> 01:13:29,738
+<i>Shots fired.</i>
+
+675
+01:13:32,366 --> 01:13:34,243
+Move!
+
+676
+01:15:24,228 --> 01:15:27,439
+- We are getting aggravated.
+- Yes, we are.
+
+677
+01:16:13,485 --> 01:16:15,487
+Trinity.
+
+678
+01:16:15,904 --> 01:16:17,030
+Get him out of here.
+
+679
+01:16:20,659 --> 01:16:22,744
+Come on!
+
+680
+01:16:39,761 --> 01:16:41,263
+Crush him.
+
+681
+01:17:11,752 --> 01:17:12,794
+Morpheus.
+
+682
+01:17:12,961 --> 01:17:14,463
+He's okay. Keep moving.
+
+683
+01:17:15,464 --> 01:17:17,257
+Let's go.
+
+684
+01:17:23,013 --> 01:17:25,182
+I need a download
+to hot-wire a motorcycle.
+
+685
+01:17:25,349 --> 01:17:27,684
+No problem.
+One crash course on motorcycle--
+
+686
+01:17:27,851 --> 01:17:29,269
+Wait.
+
+687
+01:17:30,646 --> 01:17:32,105
+Cancel that.
+
+688
+01:17:32,272 --> 01:17:34,483
+You are handy.
+
+689
+01:17:34,650 --> 01:17:36,568
+Jump on.
+
+690
+01:20:03,840 --> 01:20:04,883
+She means nothing.
+
+691
+01:20:05,050 --> 01:20:08,178
+- Find the exile.
+- We have them.
+
+692
+01:20:08,512 --> 01:20:10,639
+<i>One-Adam-12, please respond.</i>
+
+693
+01:20:17,103 --> 01:20:18,813
+Get down.
+
+694
+01:22:29,819 --> 01:22:31,446
+Gotcha.
+
+695
+01:22:32,197 --> 01:22:33,281
+She's good.
+
+696
+01:22:37,661 --> 01:22:39,955
+You are no longer necessary.
+
+697
+01:22:46,628 --> 01:22:50,340
+We do only what we're meant to do.
+
+698
+01:22:51,967 --> 01:22:55,553
+Then you are meant for one more thing:
+deletion.
+
+699
+01:22:56,513 --> 01:22:58,390
+Go kick his ass.
+
+700
+01:23:48,440 --> 01:23:51,192
+Neo, if you're out there,
+I could use some help.
+
+701
+01:23:51,943 --> 01:23:53,403
+What is that?
+
+702
+01:24:23,266 --> 01:24:26,144
+Yes! Yes!
+
+703
+01:24:32,734 --> 01:24:37,864
+We have confirmation from the <i>Icarus.</i> First
+two ships are in position for counterattack.
+
+704
+01:24:38,114 --> 01:24:39,157
+Good.
+
+705
+01:24:40,158 --> 01:24:41,201
+Any change?
+
+706
+01:24:41,367 --> 01:24:44,120
+They hit some iron ore here.
+Slowed them down a little.
+
+707
+01:24:44,287 --> 01:24:47,415
+- How much?
+- An hour, maybe.
+
+708
+01:24:47,582 --> 01:24:50,126
+That would give them
+a little over nine hours.
+
+709
+01:24:50,960 --> 01:24:52,587
+Yes, sir.
+
+710
+01:25:25,203 --> 01:25:27,455
+<i>There is a building.</i>
+
+711
+01:25:27,622 --> 01:25:33,294
+Inside this building, there is a level
+where no elevator can go...
+
+712
+01:25:33,461 --> 01:25:35,380
+...and no stair can reach.
+
+713
+01:25:36,047 --> 01:25:42,137
+<i>This level is filled with doors.
+These doors lead to many places.</i>
+
+714
+01:25:42,303 --> 01:25:44,639
+Hidden places.
+
+715
+01:25:44,973 --> 01:25:48,601
+But one door is special.
+
+716
+01:25:48,768 --> 01:25:50,979
+One door leads to the source.
+
+717
+01:25:59,320 --> 01:26:03,741
+This building is protected
+by a very secure system.
+
+718
+01:26:03,908 --> 01:26:06,744
+- Every alarm triggers the bomb.
+- Bomb? Did he say bomb?
+
+719
+01:26:06,870 --> 01:26:09,539
+But like all systems,
+it has a weakness.
+
+720
+01:26:09,706 --> 01:26:12,709
+The system is based on the rules
+of a building.
+
+721
+01:26:12,876 --> 01:26:16,254
+- One system built on another.
+- Electricity.
+
+722
+01:26:16,796 --> 01:26:21,551
+- If one fails, so must the other.
+- No electricity, no alarms.
+
+723
+01:26:21,718 --> 01:26:24,554
+You'd have to take out a city block
+to kill the power.
+
+724
+01:26:24,721 --> 01:26:28,433
+- Not one, 27.
+- Twenty-seven blocks?
+
+725
+01:26:29,267 --> 01:26:31,728
+<i>There is a power station.</i>
+
+726
+01:26:31,895 --> 01:26:34,147
+<i>It must be destroyed.</i>
+
+727
+01:26:34,314 --> 01:26:38,651
+- There must be some kind of fail-safe.
+- Yes, there is an emergency system.
+
+728
+01:26:40,278 --> 01:26:44,073
+<i>The core network of the grid
+must be accessed.</i>
+
+729
+01:26:44,240 --> 01:26:47,076
+<i>The emergency system
+must be deactivated.</i>
+
+730
+01:26:47,243 --> 01:26:48,661
+<i>What do you need us for?</i>
+
+731
+01:26:48,828 --> 01:26:50,079
+Neo could take them out
+easier than we could.
+
+732
+01:26:51,164 --> 01:26:52,916
+- There's no time.
+- Why?
+
+733
+01:26:53,082 --> 01:26:56,210
+Once the door is unprotected,
+the connection will be severed.
+
+734
+01:26:56,377 --> 01:26:58,671
+But another connection
+must first be made.
+
+735
+01:26:59,505 --> 01:27:03,343
+<i>- How long will that take?</i>
+<i>- Exactly 314 seconds.</i>
+
+736
+01:27:03,509 --> 01:27:05,094
+<i>Just over five minutes.</i>
+
+737
+01:27:05,261 --> 01:27:07,513
+<i>That is the length
+and breadth of the window.</i>
+
+738
+01:27:07,680 --> 01:27:09,974
+Only the One can open the door...
+
+739
+01:27:10,183 --> 01:27:13,102
+...and only during that window
+can the door be opened.
+
+740
+01:27:14,354 --> 01:27:15,939
+How do you know all this?
+
+741
+01:27:16,105 --> 01:27:21,277
+I know because I must know.
+It is my purpose.
+
+742
+01:27:21,444 --> 01:27:26,950
+It's the reason I'm here,
+the same reason we're all here.
+
+743
+01:27:37,710 --> 01:27:40,505
+Neo, I know something's wrong.
+
+744
+01:27:41,172 --> 01:27:43,216
+You don't have to tell me.
+
+745
+01:27:43,383 --> 01:27:47,136
+I just want you to know that I'm here.
+
+746
+01:27:50,682 --> 01:27:52,141
+All must be done as one.
+
+747
+01:27:54,560 --> 01:27:56,229
+If one fails...
+
+748
+01:27:57,021 --> 01:27:58,731
+<i>...all fail.</i>
+
+749
+01:27:58,781 --> 01:28:00,281
+[Edit: “Can’t hurt. If one fails…”]
+
+750
+01:28:00,281 --> 01:28:02,902
+At midnight, there is a shift change
+in the security of both buildings.
+
+751
+01:28:04,279 --> 01:28:07,532
+<i>At midnight, we will strike.</i>
+
+752
+01:28:08,157 --> 01:28:09,242
+Hey!
+
+753
+01:28:09,409 --> 01:28:13,371
+- You count sheep at home.
+- Why? I get paid to count them here.
+
+754
+01:28:23,548 --> 01:28:25,758
+Okay, they're inside.
+
+755
+01:28:25,925 --> 01:28:28,428
+- How much time?
+- Twelve minutes.
+
+756
+01:28:31,139 --> 01:28:32,223
+Oh, shit.
+
+757
+01:28:35,601 --> 01:28:41,065
+All of our lives, we have fought this war.
+Tonight, I believe we can end it.
+
+758
+01:28:42,567 --> 01:28:44,736
+<i>Tonight is not an accident.</i>
+
+759
+01:28:46,070 --> 01:28:48,072
+<i>There are no accidents.</i>
+
+760
+01:28:49,449 --> 01:28:54,495
+We have not come here by chance.
+I do not believe in chance.
+
+761
+01:28:54,662 --> 01:29:00,251
+When I see three objectives,
+three captains, three ships...
+
+762
+01:29:00,418 --> 01:29:03,921
+...I do not see coincidence.
+I see providence.
+
+763
+01:29:04,255 --> 01:29:06,591
+<i>I see purpose.</i>
+
+764
+01:29:09,302 --> 01:29:15,641
+I believe it is our fate to be here.
+It is our destiny.
+
+765
+01:29:15,808 --> 01:29:20,813
+I believe this night holds
+for each and every one of us...
+
+766
+01:29:20,980 --> 01:29:24,317
+...the very meaning of our lives.
+
+767
+01:29:24,484 --> 01:29:28,654
+I want to ask you to do something,
+but I don't know how.
+
+768
+01:29:29,238 --> 01:29:31,157
+I promise you, if I can, I will.
+
+769
+01:29:32,492 --> 01:29:35,828
+What if I asked you to stay out of this...
+
+770
+01:29:36,788 --> 01:29:38,790
+...no matter what...
+
+771
+01:29:38,956 --> 01:29:41,292
+...to stay out of the Matrix?
+
+772
+01:29:42,376 --> 01:29:44,170
+Why?
+
+773
+01:29:52,387 --> 01:29:53,471
+Please.
+
+774
+01:29:55,556 --> 01:29:56,891
+All right.
+
+775
+01:30:00,228 --> 01:30:02,730
+What is it, Niobe?
+
+776
+01:30:02,897 --> 01:30:07,026
+I can't help it, Morpheus. I can't
+help thinking, what if you're wrong?
+
+777
+01:30:07,193 --> 01:30:10,488
+What if all this, the prophecy,
+everything, is bullshit?
+
+778
+01:30:10,655 --> 01:30:14,659
+Then tomorrow we may all be dead.
+
+779
+01:30:15,076 --> 01:30:17,703
+But how would that be different
+from any other day?
+
+780
+01:30:27,171 --> 01:30:33,678
+This is a war, and we are soldiers.
+
+781
+01:30:33,928 --> 01:30:36,848
+<i>Death can come for us at any time...</i>
+
+782
+01:30:37,390 --> 01:30:39,183
+<i>...in anyplace.</i>
+
+783
+01:30:39,350 --> 01:30:41,269
+Incoming. Incoming!
+
+784
+01:30:43,229 --> 01:30:44,856
+Incoming!
+
+785
+01:30:50,778 --> 01:30:53,239
+Now consider the alternative.
+
+786
+01:30:53,406 --> 01:30:57,994
+What if I am right?
+What if the prophecy is true?
+
+787
+01:30:58,161 --> 01:31:02,582
+What if tomorrow the war could be over?
+
+788
+01:31:03,541 --> 01:31:06,544
+Isn't that worth fighting for?
+
+789
+01:31:07,670 --> 01:31:10,298
+Isn't that worth dying for?
+
+790
+01:31:11,215 --> 01:31:13,843
+- Time?
+- Three minutes.
+
+791
+01:31:14,010 --> 01:31:15,136
+Almost there.
+
+792
+01:31:35,198 --> 01:31:36,574
+It is done.
+
+793
+01:31:36,741 --> 01:31:38,034
+Find the others.
+
+794
+01:31:39,160 --> 01:31:41,412
+I got Niobe there.
+They're out of the station.
+
+795
+01:31:41,579 --> 01:31:44,248
+- What about Soren?
+- There.
+
+796
+01:31:44,415 --> 01:31:46,250
+They're still inside, but...
+
+797
+01:31:47,126 --> 01:31:48,169
+They're not moving.
+
+798
+01:32:12,318 --> 01:32:14,237
+That's it, let's go.
+
+799
+01:32:16,364 --> 01:32:18,199
+Call Neo now.
+
+800
+01:32:22,161 --> 01:32:24,080
+- I lost them. They're inside the portal.
+- What about the grid?
+
+801
+01:32:29,126 --> 01:32:32,630
+Everything is operational.
+The emergency system is rerouting power.
+
+802
+01:32:38,302 --> 01:32:40,471
+Jesus.
+
+803
+01:32:40,638 --> 01:32:44,684
+Soon as they open that door,
+it's all over.
+
+804
+01:32:44,850 --> 01:32:46,811
+The hell it is.
+
+805
+01:32:47,562 --> 01:32:48,896
+What are you--? Trinity!
+
+806
+01:32:50,189 --> 01:32:53,150
+I will not wait and do nothing.
+I will not watch them die.
+
+807
+01:32:53,317 --> 01:32:55,486
+We're talking less than five minutes.
+
+808
+01:32:55,653 --> 01:32:58,155
+In five minutes,
+I'll tear that building down.
+
+809
+01:32:58,322 --> 01:33:01,867
+- How much further?
+- Here, just here.
+
+810
+01:33:03,160 --> 01:33:07,164
+I'm sorry, this is a dead end.
+
+811
+01:33:08,332 --> 01:33:10,835
+It's gotta be the ugliest hack
+I have ever done.
+
+812
+01:33:14,046 --> 01:33:17,174
+That's as close as I can get you.
+You better grow wings.
+
+813
+01:33:35,776 --> 01:33:36,819
+- Operator.
+<i>- I'm in.</i>
+
+814
+01:33:36,986 --> 01:33:39,155
+Keep moving. Sixty-fifth floor.
+
+815
+01:33:39,739 --> 01:33:43,909
+You look surprised to see me again,
+Mr. Anderson.
+
+816
+01:33:44,076 --> 01:33:49,457
+Well, that's the difference between us.
+I have been expecting you.
+
+817
+01:33:49,624 --> 01:33:52,543
+- What do you want, Smith?
+- You haven't figured that out?
+
+818
+01:33:52,710 --> 01:33:58,215
+Still using all the muscles
+except the one that matters.
+
+819
+01:33:58,382 --> 01:34:01,052
+I want exactly what you want.
+
+820
+01:34:01,218 --> 01:34:03,304
+I want everything.
+
+821
+01:34:03,763 --> 01:34:06,265
+Would that include a bullet
+from this gun?
+
+822
+01:34:06,432 --> 01:34:08,225
+Go ahead, shoot.
+
+823
+01:34:08,392 --> 01:34:13,689
+The best thing about being me,
+there's so many me's.
+
+824
+01:34:25,076 --> 01:34:28,704
+Christ! What the hell happened in here?
+
+825
+01:34:29,580 --> 01:34:31,624
+Hold it right there, little lady.
+
+826
+01:34:40,966 --> 01:34:42,760
+If you can't beat us...
+
+827
+01:34:42,927 --> 01:34:44,762
+Join us.
+
+828
+01:34:46,931 --> 01:34:48,015
+Morpheus!
+
+829
+01:35:01,612 --> 01:35:04,740
+Still no sight of them.
+They only got two minutes left.
+
+830
+01:35:18,504 --> 01:35:19,547
+One minute.
+
+831
+01:35:28,764 --> 01:35:29,807
+Come on.
+
+832
+01:35:30,975 --> 01:35:32,893
+Come on.
+
+833
+01:35:33,477 --> 01:35:35,354
+Please.
+
+834
+01:35:45,281 --> 01:35:46,824
+Kill them.
+
+835
+01:35:54,707 --> 01:35:55,750
+They're in.
+
+836
+01:35:55,916 --> 01:35:57,877
+<i>I don't believe it.</i>
+
+837
+01:36:13,434 --> 01:36:15,561
+It was meant to be.
+
+838
+01:36:15,728 --> 01:36:21,108
+Morpheus, that door will take you home.
+
+839
+01:36:29,867 --> 01:36:34,205
+You will know which door.
+Hurry, Neo.
+
+840
+01:36:39,710 --> 01:36:42,880
+Trinity, I got some serious activity
+headed your way.
+
+841
+01:37:35,182 --> 01:37:36,559
+Hello, Neo.
+
+842
+01:37:37,101 --> 01:37:40,896
+- Who are you?
+- I am the Architect.
+
+843
+01:37:41,063 --> 01:37:44,692
+I created the Matrix.
+I've been waiting for you.
+
+844
+01:37:44,942 --> 01:37:49,113
+You have many questions. Though the
+process has altered your consciousness...
+
+845
+01:37:49,280 --> 01:37:51,282
+...you remain irrevocably human.
+
+846
+01:37:51,448 --> 01:37:55,035
+Ergo, some of my answers you will
+understand and some you will not.
+
+847
+01:37:55,452 --> 01:37:59,498
+Concordantly, while your first question
+may be the most pertinent...
+
+848
+01:37:59,665 --> 01:38:03,377
+...you may or may not realize
+it is also the most irrelevant.
+
+849
+01:38:04,253 --> 01:38:05,879
+Why am I here?
+
+850
+01:38:06,046 --> 01:38:09,967
+Your life is the sum of a remainder
+of an unbalanced equation...
+
+851
+01:38:10,134 --> 01:38:12,469
+...inherent to the programming
+of the Matrix.
+
+852
+01:38:12,636 --> 01:38:16,724
+You are the eventuality of an anomaly,
+which despite my sincerest efforts...
+
+853
+01:38:16,891 --> 01:38:19,727
+...I've been unable to eliminate
+from what is otherwise...
+
+854
+01:38:19,893 --> 01:38:24,356
+...a harmony of mathematical precision.
+
+855
+01:38:24,690 --> 01:38:27,026
+While it remains a burden
+assiduously avoided...
+
+856
+01:38:27,192 --> 01:38:31,655
+...it is not unexpected and thus
+not beyond a measure of control...
+
+857
+01:38:31,822 --> 01:38:35,784
+...which has led you, inexorably...
+
+858
+01:38:36,744 --> 01:38:37,995
+...here.
+
+859
+01:38:38,162 --> 01:38:42,249
+- You haven't answered my question.
+- Quite right.
+
+860
+01:38:42,416 --> 01:38:46,211
+Interesting.
+That was quicker than the others.
+
+861
+01:38:46,378 --> 01:38:49,006
+<i>Others? How many?
+What others?</i>
+
+862
+01:38:49,173 --> 01:38:51,675
+The Matrix is older than you know.
+
+863
+01:38:51,842 --> 01:38:55,846
+I count from the emergence of one integral
+anomaly to the emergence of the next.
+
+864
+01:38:56,013 --> 01:38:58,265
+In which case, this is the sixth version.
+
+865
+01:38:58,432 --> 01:39:00,893
+<i>Five before me?
+He's lying. Bullshit.</i>
+
+866
+01:39:01,060 --> 01:39:04,605
+<i>There are only two possible explanations.
+There were five before me.</i>
+
+867
+01:39:04,772 --> 01:39:06,065
+<i>Either no one told me...</i>
+
+868
+01:39:07,316 --> 01:39:11,320
+- ...or no one knows.
+- Precisely.
+
+869
+01:39:11,487 --> 01:39:14,782
+As you are undoubtedly gathering,
+the anomaly is systemic...
+
+870
+01:39:14,949 --> 01:39:18,369
+...creating fluctuations in even
+the most simplistic equations.
+
+871
+01:39:18,535 --> 01:39:21,789
+<i>You can't control me!
+I'm gonna smash you to bits!</i>
+
+872
+01:39:21,955 --> 01:39:23,749
+<i>I'm gonna fucking kill you!</i>
+
+873
+01:39:23,916 --> 01:39:27,086
+<i>You can't make me do anything.
+You old, white prick!</i>
+
+874
+01:39:29,380 --> 01:39:30,881
+Choice.
+
+875
+01:39:31,048 --> 01:39:32,883
+The problem is choice.
+
+876
+01:39:55,114 --> 01:39:58,742
+The first Matrix I designed
+was naturally perfect, a work of art.
+
+877
+01:39:58,909 --> 01:40:00,744
+Flawless, sublime.
+
+878
+01:40:00,911 --> 01:40:04,415
+A triumph equaled only
+by its monumental failure.
+
+879
+01:40:05,082 --> 01:40:07,501
+The inevitability of its doom
+is apparent now...
+
+880
+01:40:07,668 --> 01:40:11,004
+...as a consequence of the imperfection
+inherent in every human.
+
+881
+01:40:11,171 --> 01:40:14,133
+Thus, I redesigned it
+based on your history...
+
+882
+01:40:14,299 --> 01:40:18,303
+...to more accurately reflect
+the varying grotesqueries of your nature.
+
+883
+01:40:19,013 --> 01:40:22,766
+However, I was again frustrated
+by failure.
+
+884
+01:40:24,226 --> 01:40:26,854
+I have come to understand
+that the answer eluded me...
+
+885
+01:40:27,021 --> 01:40:29,064
+...because it required a lesser mind.
+
+886
+01:40:29,231 --> 01:40:35,195
+Or perhaps, a mind less bound
+by the parameters of perfection.
+
+887
+01:40:35,612 --> 01:40:40,034
+Thus, the answer was stumbled upon
+by another, an intuitive program...
+
+888
+01:40:40,200 --> 01:40:44,079
+...initially created to investigate
+certain aspects of the human psyche.
+
+889
+01:40:45,164 --> 01:40:51,128
+If I am the father of the Matrix,
+she would undoubtedly be its mother.
+
+890
+01:40:51,754 --> 01:40:54,048
+- The Oracle.
+- Please.
+
+891
+01:40:54,757 --> 01:40:58,761
+As I was saying, she stumbled upon a
+solution whereby 99 percent of subjects...
+
+892
+01:40:58,927 --> 01:41:01,805
+...accepted the program, as long as they
+were given a choice...
+
+893
+01:41:01,972 --> 01:41:06,101
+...even if they were only aware
+of the choice at a near unconscious level.
+
+894
+01:41:06,268 --> 01:41:09,688
+While this answer functioned,
+it was fundamentally flawed...
+
+895
+01:41:09,855 --> 01:41:13,859
+...thus creating the otherwise
+contradictory systemic anomaly...
+
+896
+01:41:14,026 --> 01:41:16,737
+...that, if left unchecked,
+might threaten the system.
+
+897
+01:41:17,112 --> 01:41:21,241
+Ergo, those that refused the program,
+while a minority, if unchecked...
+
+898
+01:41:21,408 --> 01:41:25,496
+...would constitute
+an escalating probability of disaster.
+
+899
+01:41:25,662 --> 01:41:27,456
+This is about Zion.
+
+900
+01:41:27,915 --> 01:41:31,585
+You are here because Zion
+is about to be destroyed.
+
+901
+01:41:31,752 --> 01:41:36,173
+Its every living inhabitant terminated,
+its entire existence eradicated.
+
+902
+01:41:36,465 --> 01:41:37,508
+Bullshit.
+
+903
+01:41:37,674 --> 01:41:40,844
+Denial is the most predictable
+of all human responses.
+
+904
+01:41:41,053 --> 01:41:47,518
+But rest assured, this will be
+the sixth time we have destroyed it...
+
+905
+01:41:47,684 --> 01:41:51,688
+...and we have become
+exceedingly efficient at it.
+
+906
+01:42:04,409 --> 01:42:05,702
+The function of the One...
+
+907
+01:42:05,869 --> 01:42:10,541
+...is now to return to the source, allowing
+a dissemination of the code you carry...
+
+908
+01:42:10,707 --> 01:42:12,417
+...reinserting the prime program.
+
+909
+01:42:13,001 --> 01:42:17,005
+After which you will be required to select
+from the Matrix 23 individuals...
+
+910
+01:42:17,172 --> 01:42:20,425
+...sixteen female, seven male,
+to rebuild Zion.
+
+911
+01:42:20,592 --> 01:42:25,138
+Failure to comply with this process
+will result in a cataclysmic system crash...
+
+912
+01:42:25,305 --> 01:42:27,641
+...killing everyone connected
+to the Matrix...
+
+913
+01:42:27,808 --> 01:42:30,394
+...which, coupled with the
+extermination of Zion...
+
+914
+01:42:30,561 --> 01:42:34,773
+...will result in the extinction
+of the entire human race.
+
+915
+01:42:35,107 --> 01:42:39,194
+You won't let it happen. You can't.
+You need human beings to survive.
+
+916
+01:42:39,987 --> 01:42:43,615
+There are levels of survival
+we are prepared to accept.
+
+917
+01:42:43,782 --> 01:42:46,577
+The relevant issue is
+whether or not you are ready...
+
+918
+01:42:46,743 --> 01:42:50,330
+...to accept the responsibility for the death
+of every human being in this world.
+
+919
+01:42:56,795 --> 01:42:59,339
+It is interesting reading your reactions.
+
+920
+01:43:00,382 --> 01:43:04,219
+Your five predecessors were, by design,
+based on a similar predication...
+
+921
+01:43:04,386 --> 01:43:08,849
+...a contingent affirmation that was meant
+to create a profound attachment...
+
+922
+01:43:09,016 --> 01:43:12,603
+...to the rest of your species,
+facilitating the function of the One.
+
+923
+01:43:12,769 --> 01:43:15,105
+While the others experience this
+in a general way...
+
+924
+01:43:15,272 --> 01:43:18,233
+...your experience is far more specific...
+
+925
+01:43:18,567 --> 01:43:21,445
+...vis-à-vis love.
+
+926
+01:43:22,446 --> 01:43:24,072
+Trinity!
+
+927
+01:43:26,366 --> 01:43:30,704
+Apropos, she entered the Matrix
+to save your life at the cost of her own.
+
+928
+01:43:31,079 --> 01:43:32,122
+No.
+
+929
+01:43:32,831 --> 01:43:36,960
+Which brings us at last to the moment
+of truth, wherein the fundamental flaw...
+
+930
+01:43:37,127 --> 01:43:40,214
+...is ultimately expressed
+and the anomaly revealed...
+
+931
+01:43:40,380 --> 01:43:44,384
+...as both beginning and end.
+
+932
+01:43:44,551 --> 01:43:46,219
+There are two doors.
+
+933
+01:43:46,386 --> 01:43:49,598
+The door to your right leads to the source
+and the salvation of Zion.
+
+934
+01:43:50,182 --> 01:43:56,480
+The door to your left leads back to the
+Matrix, to her and the end of your species.
+
+935
+01:43:56,647 --> 01:44:01,026
+As you adequately put,
+the problem is choice.
+
+936
+01:44:01,193 --> 01:44:04,696
+But we already know what
+you are going to do, don't we?
+
+937
+01:44:04,863 --> 01:44:08,951
+Already I can see the chain reaction,
+the chemical precursors that signal...
+
+938
+01:44:09,117 --> 01:44:14,373
+...the onset of an emotion designed
+specifically to overwhelm logic and reason.
+
+939
+01:44:14,539 --> 01:44:19,169
+An emotion that is already blinding you
+from the simple and obvious truth:
+
+940
+01:44:19,336 --> 01:44:25,842
+She is going to die and there is nothing
+you can do to stop it.
+
+941
+01:44:30,847 --> 01:44:34,977
+Hope. It is the quintessential
+human delusion, simultaneously...
+
+942
+01:44:35,143 --> 01:44:38,855
+...the source of your greatest strength
+and your greatest weakness.
+
+943
+01:44:39,022 --> 01:44:43,360
+If I were you, I would hope
+that we don't meet again.
+
+944
+01:44:43,527 --> 01:44:44,945
+We won't.
+
+945
+01:44:52,369 --> 01:44:54,579
+We got a serious situation, sir.
+
+946
+01:44:55,038 --> 01:44:56,123
+Oh, no.
+
+947
+01:45:55,766 --> 01:45:59,311
+- What was that?
+- It's moving faster than anything I've seen.
+
+948
+01:46:53,096 --> 01:46:56,596
+[Edit: “Holy shit, he caught her.”]
+
+949
+01:47:03,667 --> 01:47:05,502
+Neo, I had to.
+
+950
+01:47:05,669 --> 01:47:07,420
+I know.
+
+951
+01:47:12,467 --> 01:47:15,011
+The bullet is still inside.
+
+952
+01:47:25,772 --> 01:47:27,691
+Trinity...
+
+953
+01:47:28,900 --> 01:47:30,610
+...don't you quit on me now.
+
+954
+01:47:39,786 --> 01:47:42,372
+I'm sorry.
+
+955
+01:47:48,879 --> 01:47:51,173
+Trinity.
+
+956
+01:48:01,141 --> 01:48:03,101
+Trinity...
+
+957
+01:48:03,268 --> 01:48:05,061
+...I know you can hear me.
+
+958
+01:48:05,854 --> 01:48:08,398
+I'm not letting go.
+
+959
+01:48:08,565 --> 01:48:10,192
+I can't.
+
+960
+01:48:11,401 --> 01:48:13,612
+I love you too damn much.
+
+961
+01:48:42,307 --> 01:48:43,600
+I can't take this.
+
+962
+01:48:47,354 --> 01:48:50,440
+I guess this makes us even.
+
+963
+01:49:03,119 --> 01:49:05,080
+I don't understand it.
+
+964
+01:49:05,247 --> 01:49:08,250
+Everything was done
+as it was supposed to be done.
+
+965
+01:49:08,416 --> 01:49:11,461
+Once the One reaches the source,
+the war should be over.
+
+966
+01:49:11,628 --> 01:49:14,464
+- In 24 hours, it will be.
+- What?
+
+967
+01:49:14,631 --> 01:49:18,969
+If we don't do something in 24 hours,
+Zion will be destroyed.
+
+968
+01:49:19,386 --> 01:49:21,012
+- What?
+- How do you know that?
+
+969
+01:49:21,471 --> 01:49:23,515
+- I was told it would happen.
+- By whom?
+
+970
+01:49:24,516 --> 01:49:27,352
+It doesn't matter. I believed him.
+
+971
+01:49:27,519 --> 01:49:31,356
+- That's impossible. The prophecy tells us--
+- It was a lie, Morpheus.
+
+972
+01:49:33,108 --> 01:49:35,652
+The prophecy was a lie.
+
+973
+01:49:36,861 --> 01:49:39,114
+The One was never meant
+to end anything.
+
+974
+01:49:39,114 --> 01:49:43,076
+It was all another system of control.
+
+975
+01:49:43,243 --> 01:49:46,329
+I don't believe that.
+
+976
+01:49:46,663 --> 01:49:48,081
+But you said it yourself.
+
+977
+01:49:49,165 --> 01:49:53,169
+How can the prophecy be true
+if the war isn't over?
+
+978
+01:49:59,342 --> 01:50:01,803
+I'm sorry.
+
+979
+01:50:01,970 --> 01:50:05,348
+I know it isn't easy to hear, but...
+
+980
+01:50:05,515 --> 01:50:08,685
+...I swear to you it's the truth.
+
+981
+01:50:11,896 --> 01:50:14,607
+- What are we gonna do?
+- I don't know.
+
+982
+01:50:16,818 --> 01:50:18,028
+Oh, no!
+
+983
+01:50:27,370 --> 01:50:30,707
+- What are they doing?
+- They're just out of EMP range.
+
+984
+01:50:31,207 --> 01:50:32,459
+It's a bomb.
+
+985
+01:50:33,626 --> 01:50:35,837
+We have to get out of here. Now.
+
+986
+01:51:12,540 --> 01:51:14,417
+I have dreamed a dream...
+
+987
+01:51:17,462 --> 01:51:20,840
+...but now that dream
+has gone from me.
+
+988
+01:51:31,893 --> 01:51:34,145
+Here they come.
+
+989
+01:51:34,396 --> 01:51:36,106
+Let's go, Morpheus.
+
+990
+01:51:37,524 --> 01:51:40,568
+- We won't make it.
+- We have to try.
+
+991
+01:51:48,284 --> 01:51:51,287
+- Come on!
+- Something's different.
+
+992
+01:51:51,454 --> 01:51:53,456
+What?
+
+993
+01:51:54,124 --> 01:51:55,625
+I can feel them.
+
+994
+01:52:18,565 --> 01:52:20,150
+Neo!
+
+995
+01:52:26,322 --> 01:52:29,909
+- What happened?
+- I don't know.
+
+996
+01:52:35,165 --> 01:52:37,083
+It's the <i>Hammer.</i>
+
+997
+01:52:48,762 --> 01:52:51,473
+He's in some kind of coma...
+
+998
+01:52:51,639 --> 01:52:53,892
+...but his vitals are stable.
+
+999
+01:52:55,101 --> 01:52:57,020
+What about you?
+
+1000
+01:52:57,187 --> 01:52:59,314
+I'm fine.
+
+1001
+01:52:59,481 --> 01:53:01,858
+You could use some rest.
+
+1002
+01:53:02,025 --> 01:53:03,860
+No, I'm gonna stay with him.
+
+1003
+01:53:10,950 --> 01:53:13,578
+Lock was right.
+He guessed that the machines...
+
+1004
+01:53:13,745 --> 01:53:16,623
+...would cut <i>off</i> the mainlines
+in and out of Zion.
+
+1005
+01:53:16,790 --> 01:53:19,542
+He thought a counterattack
+might surprise them.
+
+1006
+01:53:19,793 --> 01:53:23,213
+It sounded good.
+I figured we had a shot...
+
+1007
+01:53:23,546 --> 01:53:26,090
+...until someone screwed it up.
+
+1008
+01:53:26,257 --> 01:53:28,885
+An EMP was triggered before
+we got in position.
+
+1009
+01:53:29,052 --> 01:53:30,929
+Five ships were instantly downed.
+
+1010
+01:53:31,095 --> 01:53:32,889
+When the machines broke through...
+
+1011
+01:53:33,056 --> 01:53:36,267
+...it wasn't a battle, it was a slaughter.
+
+1012
+01:53:36,434 --> 01:53:39,270
+Was it an accident?
+Some sort of malfunction?
+
+1013
+01:53:39,437 --> 01:53:41,898
+- No one knows.
+- Someone does.
+
+1014
+01:53:42,065 --> 01:53:43,816
+Who?
+
+1015
+01:53:43,983 --> 01:53:47,695
+Once the machines were done with us,
+they started digging again.
+
+1016
+01:53:47,862 --> 01:53:50,156
+We made a quick pass
+to look for survivors.
+
+1017
+01:53:50,365 --> 01:53:51,449
+You found one?
+
+1018
+01:53:53,201 --> 01:53:54,911
+Only one.
+
+1019
+02:03:48,003 --> 02:03:51,298
+<i>Everything that has a beginning...</i>
+
+1020
+02:03:51,465 --> 02:03:53,175
+<i>...has an end.</i>
+
+1021
+02:03:55,594 --> 02:03:58,472
+<i>I see the end coming.</i>
+
+1022
+02:03:58,639 --> 02:04:02,434
+<i>I see the darkness spreading.
+I see death.</i>
+
+1023
+02:04:04,562 --> 02:04:07,565
+Mr. Anderson, welcome back.
+
+1024
+02:04:07,731 --> 02:04:09,733
+We missed you.
+
+1025
+02:04:09,900 --> 02:04:11,735
+It ends tonight.
+
+1026
+02:04:18,951 --> 02:04:22,079
+<i>You are all that stands in his way.</i>
+
+1027
+02:04:23,664 --> 02:04:28,210
+<i>If you cannot stop him tonight,
+then I fear that tomorrow may never come.</i>
+

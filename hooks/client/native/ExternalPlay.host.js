@@ -210,18 +210,15 @@
     const ladder = [];
     function pushRung(kind, label, url) {
       const u = String(url || '');
-      // Only live URLs — hide 1080p/720p until Bunny ladder (streamHttpsWeb/Mobile) exists.
       if (!u) return;
       for (let i = 0; i < ladder.length; i++) {
         if (ladder[i].url === u) return;
       }
       ladder.push({ kind: kind, label: label, url: u, disabled: false });
     }
-    pushRung('master', 'Full quality', masterUrl);
-    if (!disableWeb) pushRung('web', '1080p', webUrl);
-    if (!disableMobile) pushRung('mobile', '720p', mobileUrl);
-    // When disable* flags are set, rungs stay hidden (placeholders only). When flags
-    // are false and URLs exist, show them.
+    pushRung('master', 'HEVC MKV', masterUrl);
+    if (!disableWeb) pushRung('web', '1080p HEVC', webUrl);
+    if (!disableMobile) pushRung('mobile', '720p HEVC', mobileUrl);
 
     const smartTv = isSmartTvBrowser();
     let selectedIdx = 0;
@@ -403,8 +400,7 @@
     } else if (dlHref0) {
       dlLink.setAttribute('download', dlName0);
     }
-    // Ladder + master are always MKV (no H.264 MP4 product).
-    dlLink.textContent = 'Download MKV';
+    dlLink.textContent = 'Download HEVC MKV';
 
     // Catalog: clickable ipfs:// + Copy CID (never site /ipfs/ gateway download)
     const ipfsLink = el('a', 'fb-btn fb-theater-ipfs-uri');

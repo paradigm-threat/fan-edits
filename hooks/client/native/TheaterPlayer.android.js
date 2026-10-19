@@ -85,13 +85,13 @@ function downloadLinks(p) {
   const mobile = propStr(p, 'srcMobile')
   let dl = []
   if (master.length > 0) {
-    dl = dl.concat([{ label: 'Full quality (MKV)', href: master }])
+    dl = dl.concat([{ label: 'HEVC MKV', href: master }])
   }
-  if (web.length > 0 && web !== master) {
-    dl = dl.concat([{ label: '1080p (MP4)', href: web }])
+  if (web.length > 0) {
+    dl = dl.concat([{ label: '1080p HEVC', href: web }])
   }
-  if (mobile.length > 0 && mobile !== master && mobile !== web) {
-    dl = dl.concat([{ label: '720p (MP4)', href: mobile }])
+  if (mobile.length > 0) {
+    dl = dl.concat([{ label: '720p HEVC', href: mobile }])
   }
   let links = []
   for (let i = 0; i < dl.length; i++) {

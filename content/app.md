@@ -27,7 +27,7 @@ You do **not** need a computer or Terminal for Android. Already installed? Use *
 3. Transfer the APK (USB, cloud download on the TV browser, or `adb install`), then open it and install.
 4. Launch **Flashback Repository** from your apps row.
 
-If in-app Play fails with a codec / decoder error on a 1080p-only stick while the master is 4K HEVC, pick **1080p (H.264)** on the title page (when catalogued), or **Open in external player** → [VLC](https://play.google.com/store/apps/details?id=org.videolan.vlc).
+If in-app Play fails with a codec / decoder error, use **Open in external player** → [VLC](https://play.google.com/store/apps/details?id=org.videolan.vlc). The file is one HEVC MKV, and the subtitles are inside it.
 
 ---
 

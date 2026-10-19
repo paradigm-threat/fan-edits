@@ -270,14 +270,10 @@
     return relayWasmPrefix() + 'relay_video_wasm_pkg/relay_video_wasm_bg.wasm';
   }
 
-  /** Build ordered ladder: archival MKV/HEVC master first; optional H.264 rungs if present. */
+  /** The playable file is the HEVC MKV. Subtitles are embedded in that file. */
   function buildSrcLadder(props, preferredSrc) {
     const preferred = String(preferredSrc || prop(props, 'src', '') || '');
-    const web = prop(props, 'srcWeb', '') || prop(props, 'data-src-web', '');
-    const mobile = prop(props, 'srcMobile', '') || prop(props, 'data-src-mobile', '');
-    const master = prop(props, 'srcMaster', '') || prop(props, 'data-src-master', '');
-    const avc = canPlayAvcMp4();
-    const desktop = prefersDesktopPlayback();
+    const master = prop(props, 'srcMaster', '') || prop(props, 'data-src-master', '') || preferred;
     const order = [];
     function push(kind, url) {
       const u = String(url || '');
@@ -287,34 +283,9 @@
       }
       order.push({ kind: kind, src: u });
     }
-    // Library default: full-quality master (MKV). In-page Play is not the product path.
     push('master', master);
-    if (desktop) {
-      if (avc) {
-        push('web', web);
-        push('mobile', mobile);
-      }
-    } else {
-      if (avc) {
-        push('mobile', mobile);
-        push('web', web);
-      }
-    }
-    if (preferred) {
-      let idx = -1;
-      for (let i = 0; i < order.length; i++) {
-        if (order[i].src === preferred) {
-          idx = i;
-          break;
-        }
-      }
-      if (idx > 0) {
-        const hit = order.splice(idx, 1)[0];
-        order.unshift(hit);
-      } else if (idx < 0) {
-        order.unshift({ kind: 'preferred', src: preferred });
-      }
-    }
+    push('web', prop(props, 'srcWeb', '') || prop(props, 'data-src-web', ''));
+    push('mobile', prop(props, 'srcMobile', '') || prop(props, 'data-src-mobile', ''));
     return order;
   }
 
@@ -535,9 +506,6 @@
   }
 
   function downloadLabelForKind(kind, src) {
-    if (kind === 'master') return 'Full quality (MKV)';
-    if (kind === 'web') return '1080p (H.264 MP4)';
-    if (kind === 'mobile') return '720p (H.264 MP4)';
     if (kind === 'sub') {
       const s = String(src || '').toLowerCase();
       if (s.indexOf('enhanced') >= 0 || s.indexOf('citation') >= 0) return 'Subtitles (enhanced)';
@@ -545,12 +513,8 @@
       return 'Subtitles';
     }
     const s = String(src || '').toLowerCase();
-    if (s.indexOf('.mkv') >= 0) return 'Full quality (MKV)';
-    if (s.indexOf('.hevc.mp4') >= 0) return 'Full quality (HEVC MP4)';
-    if (s.indexOf('1080') >= 0 || s.indexOf('.web-') >= 0) return '1080p (H.264 MP4)';
-    if (s.indexOf('720') >= 0 || s.indexOf('mobile') >= 0) return '720p (H.264 MP4)';
     if (s.indexOf('.vtt') >= 0 || s.indexOf('.srt') >= 0) return 'Subtitles';
-    return 'Download';
+    return 'HEVC MKV';
   }
 
   function absoluteMediaUrl(url) {
@@ -1196,10 +1160,10 @@
       }
       const code = err && err.code ? String(err.code) : '';
       if (code === 'WEBCODECS_UNSUPPORTED') {
-        return 'Full quality needs hardware decode this browser does not provide. Switching to 1080p for compatibility.';
+        return 'This browser cannot decode this HEVC MKV. Open it in VLC. Subtitles are inside the file.';
       }
       if (code === 'SOURCE_TOO_LARGE') {
-        return 'This archival file is too large for in-browser demux right now. Download the MKV below, or wait for a 1080p web rendition.';
+        return 'This HEVC MKV is too large for in-browser demux. Download it and play it in VLC. Subtitles are inside the file.';
       }
       if (code === 'FETCH_FAILED') {
         return 'The video file could not be downloaded from this mirror. Trying another source.';
@@ -1643,7 +1607,7 @@
           : '';
       let note =
         reason ||
-        'Trying ' + (next.kind === 'mobile' ? '720p MP4' : next.kind === 'web' ? '1080p MP4' : 'master') + '…';
+        'Trying ' + (next.kind === 'mobile' ? '720p HEVC' : next.kind === 'web' ? '1080p HEVC' : 'master') + '…';
       if (prevKind === 'master' && (next.kind === 'web' || next.kind === 'mobile')) {
         // Keep a caller-supplied spoken reason when present; otherwise explain the rung.
         if (!reason || reason.indexOf('compatibility') < 0) {

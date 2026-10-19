@@ -187,9 +187,9 @@ def media_root_poster(slug: str) -> str | None:
     return None
 
 
-# Ladder containers are MKV only (no H.264 MP4 product).
-WEB_SUFFIXES = (".web-1080p.mkv",)
-MOBILE_SUFFIXES = (".mobile-720p.mkv",)
+# Published file is one HEVC MKV. These suffixes are skipped if a ladder file is still on disk.
+WEB_SUFFIXES = (".web-1080p.mkv", ".web-1080p.mp4")
+MOBILE_SUFFIXES = (".mobile-720p.mkv", ".mobile-720p.mp4")
 HEVC_SUFFIX = ".hevc.mp4"
 
 
@@ -266,7 +266,7 @@ def find_named_rendition(
 
 
 def find_media(folder: Path, folder_rel: str, manifest_paths: set[str]) -> str | None:
-    """Return archival master basename (HEVC MP4 preferred; not web/mobile encodes)."""
+    """Return the HEVC MKV basename. Ladder and MP4 files are not the product."""
     candidates: list[str] = []
     if folder.is_dir():
         for p in sorted(folder.iterdir()):
@@ -285,8 +285,11 @@ def find_media(folder: Path, folder_rel: str, manifest_paths: set[str]) -> str |
                     candidates.append(rest)
     if not candidates:
         return None
-    candidates.sort(key=_media_rank)
-    return candidates[0]
+    mkv = [c for c in candidates if c.lower().endswith(".mkv")]
+    if not mkv:
+        return None
+    mkv.sort(key=_media_rank)
+    return mkv[0]
 
 
 def _subtitle_label(name: str) -> tuple[str, bool]:
@@ -403,12 +406,11 @@ def status_for(folder: Path, media: str | None, readme: Path) -> str:
 # Edit now-showing.json to change the marquee / carousel rotation.
 # Entries may be slug strings or objects:
 #   { "slug": "…",
-#     "streamHttps": "https://….b-cdn.net/now-showing/<slug>/<Title_Safe>.mkv",
-#     "streamHttpsWeb": "…/<Title_Safe>_web-1080p.mkv",
-#     "streamHttpsMobile": "…/<Title_Safe>_mobile-720p.mkv" }
+#     "streamHttps": "https://….b-cdn.net/now-showing/<slug>/<Title_Safe>.mkv" }
+# Master is one HEVC MKV. Optional streamHttpsWeb / streamHttpsMobile are HEVC MKVs.
 # Never master.mkv / parens / %encoding — see docs/BUNNY_NOW_SHOWING_PLAN.md.
 # generate-index-json maps those slugs → status=showing, copies slug list into
-# index.json.nowShowing, and stamps streamHttps* onto matching projects.
+# index.json.nowShowing, and stamps streamHttps onto matching projects.
 NOW_SHOWING_FILE = ROOT / "now-showing.json"
 
 STREAM_HTTPS_KEYS = ("streamHttps", "streamHttpsWeb", "streamHttpsMobile")
@@ -480,8 +482,8 @@ def main() -> None:
         reel_candidates = list(folder.glob("*.reel")) if folder.is_dir() else []
         reel = reel_candidates[0].as_posix() if len(reel_candidates) == 1 else None
         media = find_media(folder, folder_rel, manifest_paths)
-        media_web = find_named_rendition(folder, folder_rel, manifest_paths, WEB_SUFFIXES)
-        media_mobile = find_named_rendition(folder, folder_rel, manifest_paths, MOBILE_SUFFIXES)
+        media_web = ""
+        media_mobile = ""
         poster = find_poster(folder, folder_rel)
         if not poster:
             poster = media_root_poster(slug)
@@ -516,20 +518,13 @@ def main() -> None:
             "subtitles": subs,
             "subtitlesJson": json.dumps(tracks_for_player, separators=(",", ":")),
         }
-        # Bunny Now showing HTTPS (optional). Keep mediaWeb/mediaMobile basenames for
-        # catalog UI (disabled until streamHttpsWeb/Mobile exist). Live ladder URLs
-        # only when those Bunny fields are set.
+        # Bunny Now showing HTTPS. Master plus optional 1080p/720p HEVC MKVs.
         bunny = now_showing_meta.get(slug) or {}
         for key in STREAM_HTTPS_KEYS:
             if key in bunny:
                 entry[key] = bunny[key]
-        if status == "showing" and bunny.get("streamHttps"):
-            # Ladder UI only when Bunny streamHttpsWeb/Mobile exist (no tip MP4 phantoms).
-            entry["qualityWebEnabled"] = bool(bunny.get("streamHttpsWeb"))
-            entry["qualityMobileEnabled"] = bool(bunny.get("streamHttpsMobile"))
-        else:
-            entry["qualityWebEnabled"] = bool(media_web)
-            entry["qualityMobileEnabled"] = bool(media_mobile)
+        entry["qualityWebEnabled"] = bool(bunny.get("streamHttpsWeb"))
+        entry["qualityMobileEnabled"] = bool(bunny.get("streamHttpsMobile"))
         if blurb:
             entry["blurb"] = blurb
         else:

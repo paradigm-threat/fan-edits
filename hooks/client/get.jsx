@@ -133,9 +133,7 @@ function mediaSrcFor(project, basename) {
 }
 
 /**
- * Push archival master first (highest quality). Host uses native HTML5 or
- * WASM demux; fall back to H.264 MP4 compatibility on failure.
- * Among MP4s: wide → 1080p then 720p; Save-Data/narrow → 720p then 1080p.
+ * The playable file is the HEVC MKV. Subtitles are embedded in that file.
  */
 function prefersDesktopPlayback() {
   try {
@@ -454,49 +452,11 @@ function pickPlayableSrc(project) {
   if (!project) {
     return ''
   }
-  const mobile = projectMediaField(project, 'mediaMobile')
-  const web = projectMediaField(project, 'mediaWeb')
   const master = projectMediaField(project, 'media')
-  const avc = canPlayAvcMp4()
-  const hevc = canPlayHevcMp4()
-  const desktop = prefersDesktopPlayback()
-  // HEVC archival MP4 when the browser can decode it; else H.264 web/mobile ladder.
-  let order = []
-  if (hevc && master.length > 0) {
-    order = order.concat([master])
-  }
-  if (desktop) {
-    if (web.length > 0 && avc) {
-      order = order.concat([web])
-    }
-    if (mobile.length > 0 && avc) {
-      order = order.concat([mobile])
-    }
-  } else {
-    if (mobile.length > 0 && avc) {
-      order = order.concat([mobile])
-    }
-    if (web.length > 0 && avc) {
-      order = order.concat([web])
-    }
-  }
-  if ((!hevc || order.length === 0) && master.length > 0) {
-    // Last resort: try archival MP4 even if canPlayType was empty (some Chrome builds).
-    let has = false
-    for (let i = 0; i < order.length; i++) {
-      if (order[i] === master) {
-        has = true
-        break
-      }
-    }
-    if (!has) {
-      order = order.concat([master])
-    }
-  }
-  if (order.length === 0) {
+  if (master.length === 0) {
     return ''
   }
-  return mediaSrcFor(project, order[0])
+  return mediaSrcFor(project, master)
 }
 
 function resolveCidForLogical(logical) {
@@ -2066,7 +2026,7 @@ export default function FlashbackApp() {
         }
         const bunnyWeb = projectMediaField(selected, 'streamHttpsWeb')
         const bunnyMobile = projectMediaField(selected, 'streamHttpsMobile')
-        // Live 1080p/720p only when Bunny ladder URLs exist — never tip phantoms.
+        // Optional 1080p/720p HEVC MKVs. Hidden when those Bunny URLs are absent.
         if (bunnyWeb.length > 0) {
           streamUrlWeb = encodeMarkdownUrl(absoluteStreamUrl(bunnyWeb))
         }

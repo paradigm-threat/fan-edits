@@ -10,7 +10,7 @@
     {
       "path": "CHANGES.md",
       "kind": "other",
-      "bytes": 2080
+      "bytes": 2014
     },
     {
       "path": "Matrix Revolutions (2003) - Unlinked Edition.kdenlive.ass",
@@ -23,9 +23,34 @@
       "bytes": 92498
     },
     {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 353862
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 501
+      "bytes": 4445
+    },
+    {
+      "path": "subs/Matrix Revolutions (2003) - Unlinked.enhanced.srt",
+      "kind": "srt",
+      "bytes": 73513
+    },
+    {
+      "path": "subs/Matrix Revolutions (2003) - Unlinked.enhanced.vtt",
+      "kind": "other",
+      "bytes": 69477
+    },
+    {
+      "path": "subs/Matrix Revolutions (2003) - Unlinked.english.vtt",
+      "kind": "other",
+      "bytes": 68212
+    },
+    {
+      "path": "subs/Matrix Revolutions (2003) - Unlinked.english.srt",
+      "kind": "srt",
+      "bytes": 72705
     }
   ]
 }
