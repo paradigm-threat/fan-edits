@@ -260,10 +260,12 @@
       ],
       "subtitlesJson": "[{\"src\":\"/FanMixes/Matrix Reloaded (2003) - Unlinked/subs/Matrix Reloaded (2003) - Unlinked.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Matrix Reloaded (2003) - Unlinked/subs/Matrix Reloaded (2003) - Unlinked.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/matrix-reloaded-2003-unlinked/Matrix_Reloaded_2003_-_Unlinked.mkv",
-      "qualityWebEnabled": false,
-      "qualityMobileEnabled": false,
+      "qualityWebEnabled": true,
+      "qualityMobileEnabled": true,
       "blurb": "Bane sabotages the hovercrafts. Post-production sabotages the franchise.",
-      "poster": "poster.jpg"
+      "poster": "poster.jpg",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/matrix-reloaded-2003-unlinked/Matrix_Reloaded_2003_-_Unlinked_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/matrix-reloaded-2003-unlinked/Matrix_Reloaded_2003_-_Unlinked_mobile-720p.mkv"
     },
     {
       "slug": "matrix-revolutions-2003-unlinked",
@@ -291,10 +293,12 @@
       ],
       "subtitlesJson": "[{\"src\":\"/FanMixes/Matrix Revolutions (2003) - Unlinked/subs/Matrix Revolutions (2003) - Unlinked.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Matrix Revolutions (2003) - Unlinked/subs/Matrix Revolutions (2003) - Unlinked.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/matrix-revolutions-2003-unlinked/Matrix_Revolutions_2003_-_Unlinked.mkv",
-      "qualityWebEnabled": false,
-      "qualityMobileEnabled": false,
+      "qualityWebEnabled": true,
+      "qualityMobileEnabled": true,
       "blurb": "CGI scenes were clearly designed by Square USA before being finished by ESC.",
-      "poster": "poster.jpg"
+      "poster": "poster.jpg",
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/matrix-revolutions-2003-unlinked/Matrix_Revolutions_2003_-_Unlinked_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/matrix-revolutions-2003-unlinked/Matrix_Revolutions_2003_-_Unlinked_mobile-720p.mkv"
     },
     {
       "slug": "ninja-scroll-1993-minor-damage",

@@ -77,10 +77,14 @@
   },
   {
     "slug": "matrix-reloaded-2003-unlinked",
-    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/matrix-reloaded-2003-unlinked/Matrix_Reloaded_2003_-_Unlinked.mkv"
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/matrix-reloaded-2003-unlinked/Matrix_Reloaded_2003_-_Unlinked.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/matrix-reloaded-2003-unlinked/Matrix_Reloaded_2003_-_Unlinked_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/matrix-reloaded-2003-unlinked/Matrix_Reloaded_2003_-_Unlinked_mobile-720p.mkv"
   },
   {
     "slug": "matrix-revolutions-2003-unlinked",
-    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/matrix-revolutions-2003-unlinked/Matrix_Revolutions_2003_-_Unlinked.mkv"
+    "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/matrix-revolutions-2003-unlinked/Matrix_Revolutions_2003_-_Unlinked.mkv",
+    "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/matrix-revolutions-2003-unlinked/Matrix_Revolutions_2003_-_Unlinked_web-1080p.mkv",
+    "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/matrix-revolutions-2003-unlinked/Matrix_Revolutions_2003_-_Unlinked_mobile-720p.mkv"
   }
 ]
