@@ -275,7 +275,7 @@ CITATIONS: list[tuple[float, float, str]] = [
     (
         6186.5,
         6.2,
-        "[Disappeared Mazatlán 1974. FBI/Coast Guard murk. Banshee is requiem and brand management.]",
+        "[Oscar Zeta Acosta disappeared mysteriously in May 1974 in Mazatlán, Mexico. Body never found.]",
     ),
     (
         6193.5,

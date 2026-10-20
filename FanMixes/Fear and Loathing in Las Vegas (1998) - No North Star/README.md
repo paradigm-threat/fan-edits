@@ -12,6 +12,8 @@ Hunter’s path of least resistance — and it may well be Hunter’s own typing
 
 *Where the Buffalo Roam* (1980) is closer even under the false name Carl Lazlo: a lawyer who **quits**. Gilliam’s film keeps the Vegas lie: Samoan gag, appetite gag, knife-diner cruelty. Latino casting and Chicano posters in the L.A. office do not fix a script that still erases what he was.
 
+Oscar Zeta Acosta disappeared mysteriously in May 1974 while traveling in Mazatlán, Mexico, and his body was never found. Thompson’s “Banshee” is half requiem, half brand management over that void.
+
 ### Who suppressed him?
 
 The Samoan label is deliberate demotion. Motive is not only comic color. It is to keep two contagious truths off the mass stage: Chicano civil-rights counsel, and anarchist revolt (including the bombing climate Acosta wrote himself inside and later called Hunter a Benedict Arnold for helping to halt). You cannot safely “call him out” as bomber in a youth hit — that backfires into martyr copycats. So you do not call him out. You make him carnival.
