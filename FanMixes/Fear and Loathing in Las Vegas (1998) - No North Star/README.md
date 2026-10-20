@@ -45,7 +45,7 @@ Acosta first, then the machine that packaged him:
 - Hunter S. Thompson — “The Banshee Screams for Buffalo Meat” (in *The Great Shark Hunt*)
 - [What “Fear and Loathing in Las Vegas” Owes to Oscar Acosta](https://www.newyorker.com/books/second-read/what-fear-and-loathing-in-las-vegas-owes-to-oscar-acosta)
 - Working notes: `~/dev/wget/acosta/ANALYSIS.md`
-- Investigation: [Hunter Thompson — authorship prop, Acosta, Nixon](/home/ari/dev/pt/paradigm-threat-files/influence/stolen_credit/investigations/hunter-thompson-authorship-prop-nixon-investigation.md)
+- Investigation: [Hunter Thompson — authorship prop, Acosta, Nixon](/home/ari/dev/pt/paradigm-threat-files/influence/stolen_credit/investigations/hunter-thompson-authorship-prop-nixon-investigation.md) — includes Mazatlán disappearance data (§7), drug-deal vs guerrilla-export triage (§8), and Hunter as early NSA-functional containment (§9)
 
 ---
 
