@@ -265,12 +265,12 @@ CITATIONS: list[tuple[float, float, str]] = [
     (
         6089.5,
         5.8,
-        "[Edit: North Star Coffee Lounge — waitress, knife, “lemon meringue pie.”]",
+        "[Edit: North Star — Gilliam’s favorite scene; moral nadir he kept on purpose.]",
     ),
     (
         6159.5,
-        6.0,
-        "[Cut: inaccurate cruelty piled on a dishonest Acosta. Excess, not honesty about a dangerous man.]",
+        6.2,
+        "[Cut anyway: violence on a fake Acosta still steals his soul. Honest danger needs the Brown Buffalo.]",
     ),
     (
         6186.5,
@@ -295,12 +295,12 @@ CITATIONS: list[tuple[float, float, str]] = [
     (
         6459.0,
         6.2,
-        "[No North Star: refuse the meanest leftover of the comedy demotion. Keep the “massive crime” line.]",
+        "[No North Star: Gilliam’s structural anchor stays cut. Keep the “massive crime” line.]",
     ),
     (
         6466.0,
         6.2,
-        "[Acosta’s soul was the ambitions. The movie sold appetite. This cut stops one cruelty too far.]",
+        "[Acosta could be violent in life. Without who he was, the knife scene is still soul-theft.]",
     ),
     (
         6555.0,

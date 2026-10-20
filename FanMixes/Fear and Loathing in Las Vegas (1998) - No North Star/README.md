@@ -37,9 +37,15 @@ The film keeps one deliberate wink at the firebomb history and sells it as gag. 
 
 ### Why this cut — North Star
 
-The books/movies erased Acosta’s soul, but that scene went too far. The North Star Coffee Lounge beat is Gonzo alone with the knife and “lemon meringue pie,” waitress terrorized, Duke only narrating — the meanest leftover of the comedy demotion. We are already being sold the wrong Acosta (Samoan, sidekick, ambitions cut out). Piling inaccurate cruelty on that erasure is not honesty about a dangerous man. It is more fodder.
+The books/movies erased Acosta’s soul, but that scene went too far.
 
-Gilliam himself called North Star the low point — “two guys who have gone beyond the pale… unforgivable” — and kept it as the nadir rather than cut it. This edit disagrees: on top of a dishonest Acosta, that cruelty is one scene too far. The preceding narration already names the crime. Skipping the diner leaves the reflection intact and resumes on the Red Shark run to the airport.
+Terry Gilliam did **not** keep North Star by accident. He treated the Coffee Lounge as the moral nadir and structural anchor of the whole film — “two guys who have gone beyond the pale… unforgivable” — and has repeatedly called it his favorite and most important scene: the beat where Gonzo crosses into real threat with the phone and the knife, Duke has to make a moral choice, and the movie stops being a pure drug romp. Earlier scripts often dropped it; Gilliam put it back on purpose.
+
+There is also a verified factual basis for Acosta being volatile and aggressive with people in real life. Thompson’s own packaging leans on that danger. Specific cinematic beats like the knife-wielding waitress terror may be dramatized for the screen — but the mean streak is not invented from nothing.
+
+**Still: without being honest about who Acosta is, that scene cannot stay.** On a Samoan carnival sidekick with ambitions cut out, North Star does not reveal a dangerous political man. It **steals his soul** again — violence without the Brown Buffalo, without Chicano counsel, without the firebomb-orbit stakes that made him radioactive. Honesty about a violent man would lead with that history. This cut refuses to screen the cruelty as the price of admission to a dishonest Acosta, even if he was known for being violent.
+
+The preceding narration already names the crime (“a really massive crime often slips by unrecognized”). Skipping the diner leaves the reflection intact and resumes on the Red Shark run to the airport.
 
 ## The 1998 film machine
 
@@ -50,7 +56,7 @@ How the Vegas product got locked into carnival chaos instead of a harder politic
 - **The Writers Guild war.** The WGA initially refused to give Gilliam and Grisoni screenwriting credit, attempting to credit only Alex Cox and Tod Davies even though the production had discarded that script. Gilliam publicly went to war with the union — including resigning / burning his WGA card in protest — before the credits were amended to list Gilliam and Grisoni first, then Cox and Davies.
 - **Box office disappointment.** Commercial flop on release: about **$10.6 million** against an **$18.5 million** budget, heavily polarizing critics, before evolving into an iconic cult classic. The novel reprints spiked anyway.
 
-Net effect of the shuffle: the version that survived is the one Thompson and Depp wanted — literal carnival chaos — not Cox’s heavier anti-war/animation frame. The Samoan sidekick machine stayed intact either way. North Star stayed in because Gilliam chose it as the ugly bottom.
+Net effect of the shuffle: the version that survived is the one Thompson and Depp wanted — literal carnival chaos — not Cox’s heavier anti-war/animation frame. The Samoan sidekick machine stayed intact either way. North Star stayed in because Gilliam chose it as his favorite scene and the film’s moral bottom — which is exactly why this cut has to answer him: nadir on a fake Acosta is still soul-theft.
 
 ## Changes
 
