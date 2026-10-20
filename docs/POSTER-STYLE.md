@@ -2,12 +2,15 @@
 
 Use this when prompting ChatGPT, Midjourney, Flux, or similar to generate FanMix artwork. Canonical on-disk file for the catalog is still **`FanMixes/<Title>/poster.jpg`** (vertical one-sheet). Extra crops below are optional companions for apps and embeds.
 
-Reference posters (house look):
+Live house-look examples (cite the URL in the prompt if you want a visual reference — never name a poster without a link, or the bot will ask you to upload it):
 
-- `FanMixes/The Mummy (1999) - Debugged/poster.jpg`
-- `FanMixes/2012 (2009) - Open The Gates/poster.jpg`
-- `FanMixes/Congo (1995) - Adult Supervision/poster.jpg`
-- `FanMixes/War of the Worlds (2005) - Family Therapy/poster.jpg`
+- https://flashbackrepository.org/FanMixes/The%20Mummy%20(1999)%20-%20Debugged/poster.jpg
+- https://flashbackrepository.org/FanMixes/2012%20(2009)%20-%20Open%20The%20Gates/poster.jpg
+- https://flashbackrepository.org/FanMixes/Congo%20(1995)%20-%20Adult%20Supervision/poster.jpg
+- https://flashbackrepository.org/FanMixes/War%20of%20the%20Worlds%20(2005)%20-%20Family%20Therapy/poster.jpg
+- https://flashbackrepository.org/FanMixes/Matrix%20Reloaded%20(2003)%20-%20Unlinked/poster.jpg
+
+On disk the same files are `FanMixes/<Title>/poster.jpg`.
 
 ---
 
@@ -33,10 +36,10 @@ Brand gold language should rhyme with site brand (`hooks/client/brand/` — anti
 
 Paste this block first, then append the title-specific scene, tagline, and corner icons.
 
+Do **not** name other Flashback posters in the prompt unless you also paste their full `https://flashbackrepository.org/.../poster.jpg` URL. Uncited names make the bot ask for uploads. Prefer describing the house rules below, or add one optional reference line with a live URL.
+
 ```text
-Create a theatrical fan-edit movie poster in the Flashback Repository house style
-(same family as The Mummy Debugged, 2012 Open The Gates, Congo Adult Supervision,
-War of the Worlds Family Therapy):
+Create a theatrical fan-edit movie poster in the Flashback Repository house style:
 
 - Thick ornate gold/bronze decorative border around the entire image; film-themed filigree
 - Four corner medallions with small thematic icons (specify per title)
@@ -48,8 +51,12 @@ War of the Worlds Family Therapy):
 - Bottom credit strip in small caps:
   A FAN EDIT BY FLASHBACK REPOSITORY • <SHORT CUT LABEL>
 - Prestige cinematic digital art, muted gold accents echoing the frame
+- Antique gold on near-black brand language
 - No studio logos, no watermarks, no celebrity likeness, no meme text, no purple AI glow,
   no crowded face collage
+
+Optional visual reference (only if citing a live URL):
+Style match this live poster: https://flashbackrepository.org/FanMixes/<Title>/poster.jpg
 
 Then the title-specific brief:
 - Film / edit name / year / tagline / cut label
