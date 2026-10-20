@@ -184,8 +184,10 @@
       ],
       "subtitlesJson": "[{\"src\":\"/FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/subs/Fear and Loathing in Las Vegas (1998) - No North Star.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/subs/Fear and Loathing in Las Vegas (1998) - No North Star.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/fear-and-loathing-in-las-vegas-1998-no-north-star/Fear_and_Loathing_in_Las_Vegas_1998_-_No_North_Star.mkv",
-      "qualityWebEnabled": false,
-      "qualityMobileEnabled": false,
+      "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/fear-and-loathing-in-las-vegas-1998-no-north-star/Fear_and_Loathing_in_Las_Vegas_1998_-_No_North_Star_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/fear-and-loathing-in-las-vegas-1998-no-north-star/Fear_and_Loathing_in_Las_Vegas_1998_-_No_North_Star_mobile-720p.mkv",
+      "qualityWebEnabled": true,
+      "qualityMobileEnabled": true,
       "blurb": "The books/movies erased Acosta\u2019s soul, but that scene went too far.",
       "poster": "poster.jpg"
     },
