@@ -4,7 +4,7 @@ Companion to [README.md](README.md) and [remove-north-star-ranges.json](remove-n
 
 ## 1. Goal
 
-Remove the **North Star Coffee Lounge** scene (Duke and Gonzo terrorize the waitress; knife) without a mid-shot jump. Keep Duke's preceding narration and the Red Shark run to the airport.
+Remove the **North Star Coffee Lounge** scene (Gonzo terrorizes the waitress with the knife; Duke narrates) without a mid-shot jump. Keep Duke's preceding narration and the Red Shark run to the airport.
 
 ## 2. Source times (this rip)
 
