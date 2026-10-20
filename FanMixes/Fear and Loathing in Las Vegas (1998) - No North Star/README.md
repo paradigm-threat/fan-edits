@@ -14,6 +14,19 @@ Hunter’s path of least resistance — and it may well be Hunter’s own typing
 
 Oscar Zeta Acosta disappeared mysteriously in May 1974 while traveling in Mazatlán, Mexico, and his body was never found. Thompson’s “Banshee” is half requiem, half brand management over that void.
 
+### Working conclusions
+
+These are the working conclusions from the investigation — not a closed murder case:
+
+- **Samoan freeze = deliberate demotion.** Keep Chicano counsel and anarchist/bombing-orbit truth off the mass stage. You cannot safely “call him out” as bomber in a youth hit — that backfires into martyr copycats. So you make him carnival.
+- **Hunter’s useful role = harvest + contain.** Comedy material under an Anglo byline; radioactive associate cut down to size. Acosta himself called Hunter the **“Benedict Arnold of the cockroach revolt”** for helping halt the bombings. That outcome is a stability win whether or not anyone’s paycheck said intel.
+- **Early NSA-functional alignment (open on payroll, closed on function).** Gonzo as ground-truth reporting that still prefers reality and domestic stability over CIA-style martyr theater. Eyes on the prize; demotion beats assassination copy. Institutional membership unproven.
+- **Mazatlán: rule “drug deal gone bad” down.** Trafficking networks are family-oriented; a temporary loud cog is rarely worth a clean disappearance unless he threatened the network. The rumor also demotes him the same way Samoan did — appetites, not revolt.
+- **Stronger threat profile = armed revolutionary export + domestic firebomb orbit.** Acosta’s own autobiographical essay (~1971): he was on his way to **Guatemala to smuggle guns to the revolutionaries and write about them**, **stopped in Juárez**, jailed, then redirected to L.A. walkouts. **Intent is primary-sourced; successful overseas guerrilla founding is not.** *Buffalo Roam* amplifies Lazlo into on-screen Latin-American gun-running under a fake name — film threat story, not documentary proof. Domestic *Cockroach* climate (Molotovs, Tooner Flats firebomb charges, CLF banners) already made him radioactive at home. If even the beginnings of cross-border gun logistics were real, foreign or partnered security actors have a coherent motive to erase him — the same motive class as suppressing his terrorism-adjacent orbit in California.
+- **“Italian-style fascism” as his program is not in the primary texts.** Anarchist sheriff / Chicano revolt / firebomb-orbit counsel. Say revolutionary force if that is the claim; do not glue Mussolini onto Acosta without a cite.
+
+Full triage: [Hunter Thompson — authorship prop, Acosta, Nixon](/home/ari/dev/pt/paradigm-threat-files/influence/stolen_credit/investigations/hunter-thompson-authorship-prop-nixon-investigation.md) §§7–9.
+
 ### Who suppressed him?
 
 The Samoan label is deliberate demotion. Motive is not only comic color. It is to keep two contagious truths off the mass stage: Chicano civil-rights counsel, and anarchist revolt (including the bombing climate Acosta wrote himself inside and later called Hunter a Benedict Arnold for helping to halt). You cannot safely “call him out” as bomber in a youth hit — that backfires into martyr copycats. So you do not call him out. You make him carnival.
@@ -26,7 +39,18 @@ The film keeps one deliberate wink at the firebomb history and sells it as gag. 
 
 The books/movies erased Acosta’s soul, but that scene went too far. The North Star Coffee Lounge beat is Gonzo alone with the knife and “lemon meringue pie,” waitress terrorized, Duke only narrating — the meanest leftover of the comedy demotion. We are already being sold the wrong Acosta (Samoan, sidekick, ambitions cut out). Piling inaccurate cruelty on that erasure is not honesty about a dangerous man. It is more fodder.
 
-The preceding narration already names the crime. Skipping the diner leaves the reflection intact and resumes on the Red Shark run to the airport.
+Gilliam himself called North Star the low point — “two guys who have gone beyond the pale… unforgivable” — and kept it as the nadir rather than cut it. This edit disagrees: on top of a dishonest Acosta, that cruelty is one scene too far. The preceding narration already names the crime. Skipping the diner leaves the reflection intact and resumes on the Red Shark run to the airport.
+
+## The 1998 film machine
+
+How the Vegas product got locked into carnival chaos instead of a harder political read:
+
+- **John Cusack.** Cusack directed a successful stage version of the book and was Thompson’s close friend. He was nearly locked to play Duke until Thompson met Johnny Depp, instantly finding a “kindred spirit” he insisted must play him.
+- **The director shuffle.** Original director Alex Cox was fired after fierce creative differences with Hunter S. Thompson over the script (producer Laila Nabulsi forced the studio choice; Thompson’s disapproval of the Cox/Davies treatment is on record in *Breakfast with Hunter*). Cox wanted a serious, structured anti-war film with heavy animation; Thompson and Depp demanded a wildly chaotic, literal interpretation of the book. Terry Gilliam stepped in and, with Tony Grisoni, rewrote the screenplay from the book in about ten days (Gilliam: eight days then a two-day rewrite).
+- **The Writers Guild war.** The WGA initially refused to give Gilliam and Grisoni screenwriting credit, attempting to credit only Alex Cox and Tod Davies even though the production had discarded that script. Gilliam publicly went to war with the union — including resigning / burning his WGA card in protest — before the credits were amended to list Gilliam and Grisoni first, then Cox and Davies.
+- **Box office disappointment.** Commercial flop on release: about **$10.6 million** against an **$18.5 million** budget, heavily polarizing critics, before evolving into an iconic cult classic. The novel reprints spiked anyway.
+
+Net effect of the shuffle: the version that survived is the one Thompson and Depp wanted — literal carnival chaos — not Cox’s heavier anti-war/animation frame. The Samoan sidekick machine stayed intact either way. North Star stayed in because Gilliam chose it as the ugly bottom.
 
 ## Changes
 
@@ -41,11 +65,11 @@ Acosta first, then the machine that packaged him:
 
 - Oscar Zeta Acosta — *The Autobiography of a Brown Buffalo* (1972)
 - Oscar Zeta Acosta — *The Revolt of the Cockroach People* (1973)
-- Oscar Zeta Acosta — *The Uncollected Works* (ed. Stavans) — letter to Hunter; Playboy gonzo letter
+- Oscar Zeta Acosta — *The Uncollected Works* (ed. Stavans) — letter to Hunter; Playboy gonzo letter; autobiographical essay (Guatemala guns / Juárez)
 - Hunter S. Thompson — “The Banshee Screams for Buffalo Meat” (in *The Great Shark Hunt*)
 - [What “Fear and Loathing in Las Vegas” Owes to Oscar Acosta](https://www.newyorker.com/books/second-read/what-fear-and-loathing-in-las-vegas-owes-to-oscar-acosta)
 - Working notes: `~/dev/wget/acosta/ANALYSIS.md`
-- Investigation: [Hunter Thompson — authorship prop, Acosta, Nixon](/home/ari/dev/pt/paradigm-threat-files/influence/stolen_credit/investigations/hunter-thompson-authorship-prop-nixon-investigation.md) — includes Mazatlán disappearance data (§7), drug-deal vs guerrilla-export triage (§8), and Hunter as early NSA-functional containment (§9)
+- Investigation: [Hunter Thompson — authorship prop, Acosta, Nixon](/home/ari/dev/pt/paradigm-threat-files/influence/stolen_credit/investigations/hunter-thompson-authorship-prop-nixon-investigation.md) — Mazatlán data (§7), drug-deal vs guerrilla-export triage (§8), Hunter as early NSA-functional containment (§9)
 
 ---
 
