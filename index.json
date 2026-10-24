@@ -1,5 +1,6 @@
 {
   "nowShowing": [
+    "boogie-nights-1997-no-lookout",
     "fear-and-loathing-in-las-vegas-1998-no-north-star",
     "the-day-after-tomorrow-2004-yuppocolypse",
     "tron-legacy-2010-the-miracle",
@@ -97,13 +98,13 @@
       "slug": "boogie-nights-1997-no-lookout",
       "category": "FanMixes",
       "path": "FanMixes/Boogie Nights (1997) - No Lookout",
-      "title": "Boogie Nights (1997) \u2014 No Lookout",
+      "title": "Boogie Nights (1997) \u2014 Absolution",
       "originalTitle": "Boogie Nights (1997)",
       "status": "wip",
       "media": "",
       "mediaWeb": "",
       "mediaMobile": "",
-      "image": "",
+      "image": "FanMixes/Boogie Nights (1997) - No Lookout/poster.jpg",
       "subtitles": [
         {
           "src": "FanMixes/Boogie Nights (1997) - No Lookout/subs/Boogie Nights (1997) - No Lookout.english.vtt",
@@ -118,9 +119,11 @@
         }
       ],
       "subtitlesJson": "[{\"src\":\"/FanMixes/Boogie Nights (1997) - No Lookout/subs/Boogie Nights (1997) - No Lookout.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Boogie Nights (1997) - No Lookout/subs/Boogie Nights (1997) - No Lookout.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/boogie-nights-1997-no-lookout/Boogie_Nights_1997_-_Absolution.mkv",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
-      "blurb": "A single-block cut of PTA\u2019s *Boogie Nights* that skips the late-film collapse from the office whip-pan through On the Lookout and the donut-shop stick-up, then resumes on the film\u2019s own fade into the Rahad-planning scene."
+      "blurb": "A single-block cut of PTA\u2019s *Boogie Nights*. It removes the late punishment sequence, from the whip-pan out of Reed\u2019s demo-tape office through Amber\u2019s collapse and custody hearing, Dirk\u2019s bank rejection, On the Lookout, the Valley night drive, and the donut-shop stick-up. Picture",
+      "poster": "poster.jpg"
     },
     {
       "slug": "congo-1995-adult-supervision",
