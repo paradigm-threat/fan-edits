@@ -27,7 +27,7 @@ SKIP = {
 
 ONE_CUT = [
     "Fear and Loathing in Las Vegas (1998) - No North Star",
-    "Boogie Nights (1997) - No Lookout",
+    "Boogie Nights (1997) - Absolution",
 ]
 
 # Extra-OST: only append a credits tail when a replacement credits song exists.

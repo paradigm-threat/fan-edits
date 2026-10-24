@@ -31,7 +31,7 @@ READY_REL = [
     "FanMixes/Serenity (2005) - Unjossed",
     "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett",
     "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star",
-    "FanMixes/Boogie Nights (1997) - No Lookout",
+    "FanMixes/Boogie Nights (1997) - Absolution",
     "FanMixes/The Mummy (1999) - Debugged",
 ]
 

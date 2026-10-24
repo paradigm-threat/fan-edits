@@ -1,6 +1,6 @@
 # Editorial plan: *Boogie Nights* (1997) — Absolution
 
-Companion to [README.md](README.md) and [remove-lookout-ranges.json](remove-lookout-ranges.json).
+Companion to [README.md](README.md) and [remove-absolution-ranges.json](remove-absolution-ranges.json).
 
 ## 1. Goal
 

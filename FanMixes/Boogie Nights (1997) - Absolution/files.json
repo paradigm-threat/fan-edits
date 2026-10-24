@@ -1,14 +1,14 @@
 {
   "schema": "flashback.project-files.v1",
-  "path": "FanMixes/Boogie Nights (1997) - No Lookout",
+  "path": "FanMixes/Boogie Nights (1997) - Absolution",
   "files": [
     {
-      "path": "Boogie Nights (1997) - No Lookout.kdenlive",
+      "path": "Boogie Nights (1997) - Absolution.kdenlive",
       "kind": "kdenlive",
       "bytes": 5933
     },
     {
-      "path": "Boogie Nights (1997) - No Lookout.kdenlive.ass",
+      "path": "Boogie Nights (1997) - Absolution.kdenlive.ass",
       "kind": "other",
       "bytes": 169975
     },
@@ -38,12 +38,12 @@
       "bytes": 599
     },
     {
-      "path": "generate-lookout.sh",
+      "path": "generate-absolution.sh",
       "kind": "other",
-      "bytes": 572
+      "bytes": 575
     },
     {
-      "path": "remove-lookout-ranges.json",
+      "path": "remove-absolution-ranges.json",
       "kind": "other",
       "bytes": 805
     },
@@ -55,32 +55,47 @@
     {
       "path": "PLAN.md",
       "kind": "plan",
-      "bytes": 2104
+      "bytes": 2145
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 299044
     },
     {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 910
+      "bytes": 3036
     },
     {
-      "path": "Boogie Nights (1997) - No Lookout.kdenlive.shifted.srt",
+      "path": "Boogie Nights (1997) - Absolution.kdenlive.shifted.srt",
       "kind": "srt",
       "bytes": 141473
     },
     {
-      "path": "Boogie Nights (1997) - No Lookout.srt",
+      "path": "Boogie Nights (1997) - Absolution.srt",
       "kind": "srt",
       "bytes": 168752
     },
     {
-      "path": "subs/Boogie Nights (1997) - No Lookout.english.srt",
+      "path": "subs/Boogie Nights (1997) - Absolution.english.srt",
       "kind": "srt",
-      "bytes": 141471
+      "bytes": 140341
     },
     {
-      "path": "subs/Boogie Nights (1997) - No Lookout.english.vtt",
+      "path": "subs/Boogie Nights (1997) - Absolution.enhanced.srt",
+      "kind": "srt",
+      "bytes": 140691
+    },
+    {
+      "path": "subs/Boogie Nights (1997) - Absolution.english.vtt",
       "kind": "vtt",
       "bytes": 132220
+    },
+    {
+      "path": "subs/Boogie Nights (1997) - Absolution.enhanced.vtt",
+      "kind": "vtt",
+      "bytes": 132560
     }
   ]
 }

@@ -19,7 +19,7 @@ The child abuse in the movie is a control lever. It is the linchpin on the finan
 
 ## What this cut removes
 
-Those messages get ruined by the counter-message the film is forced to deliver toward the end. The rule is simple. Anyone who took part has to be punished, in the same movie, for their sins. Indulge in pornography or drugs and you lose your family, lose your children, get beaten, get rejected. The cultural change was real. The mandatory ending is something else.
+Those messages get ruined by the counter-message the film is forced to deliver toward the end. The rule is simple. Anyone who took part in drug or sex culture has to be punished, in the same movie, for their 'sins'. Indulge in pornography or drugs and you lose your family, lose your children, get beaten, get rejected. Even Blow (2001) was forced to have that punishing ending. What is not allowed is an honest analysis of the justice system as it exists. That was reserved for other movies to tackle - like Find Me Guilty (2006).
 
 Hollywood is not allowed to leave a movie like this without a punishment-for-your-sins sequence. That sequence is an old Catholic doctrine in script form: humans are born in sin and must be redeemed through the church. Someone comes in, edits the script, and writes the punishment. That block is what this cut removes.
 

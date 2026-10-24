@@ -1,4 +1,4 @@
-# Changes — Boogie Nights (1997) - No Lookout
+# Changes — Boogie Nights (1997) - Absolution
 
 Cut list from the Kdenlive timeline versus the original feature. A hole is a source-time window that is not on the video (or sparse audio) playlist. Removed dialogue is taken from the original-timeline SRT that overlaps that window. If the scene is not obvious from the cues, it is marked **TBD**.
 
@@ -6,8 +6,8 @@ Cut list from the Kdenlive timeline versus the original feature. A hole is a sou
 
 Removes PTA’s whip-pan out of Reed’s demo-tape office through On the Lookout, the Valley night drive, and the donut-shop stick-up/kill. Lands on the first black frame; the original black hold into the Rahad-planning scene stays.
 
-- Kdenlive: `Boogie Nights (1997) - No Lookout.kdenlive`
-- Source SRT: `Boogie Nights (1997) - No Lookout.srt`
+- Kdenlive: `Boogie Nights (1997) - Absolution.kdenlive`
+- Source SRT: `Boogie Nights (1997) - Absolution.srt`
 - Picture holes: **1** (~19.4 min of source removed)
 
 ## Removals (source times)
