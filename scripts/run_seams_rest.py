@@ -39,7 +39,7 @@ NAS_STAGE = {
     / "Horror and SciFi/2012 (2009) [1080p]/2012 (2009) [2160p] [4K] [BluRay] [5.1] [YTS.MX]/2012.2009.2160p.4K.BluRay.x265.10bit.AAC5.1-[YTS.MX].mkv",
     "Alien Resurrection (1997) - UnJossed": GVFS
     / "Horror and SciFi/Alien Movie Collection/Alien Resurrection (1997) [1080p]/www.UIndex.org    -    Alien Resurrection 1997 Theatrical Cut BluRay 1080p DDP 5 1 x264-hallowed/Alien Resurrection 1997 Theatrical Cut BluRay 1080p DDP 5 1 x264-hallowed.mkv",
-    "Congo (1995) - Incel": GVFS
+    "Congo (1995) - Adult Supervision": GVFS
     / "General Movies/Congo (1995)/Congo.1995.1080p.BluRay.x264.AAC5.1-[YTS.MX].mp4",
     "Final Fantasy (2001) - The Phantom Menace": GVFS
     / "Horror and SciFi/Final Fantasy/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX/Final.Fantasy.The.Spirits.Within.2001.1080p.BluRay.HEVC.DTS-LiNUX.mkv",

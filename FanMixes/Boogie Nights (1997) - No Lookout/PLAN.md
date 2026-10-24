@@ -1,4 +1,4 @@
-# Editorial plan: *Boogie Nights* (1997) — No Lookout
+# Editorial plan: *Boogie Nights* (1997) — Absolution
 
 Companion to [README.md](README.md) and [remove-lookout-ranges.json](remove-lookout-ranges.json).
 
@@ -18,7 +18,7 @@ Remove the **bad-scene block** from the office whip-pan through On the Lookout *
 | 1:50:00+ | Amber custody hearing |
 | 1:53:11–2:01:32 | Jack & Rollergirl **On the Lookout** |
 | 2:01:45 | Night-drive montage (Vons / Miss Donuts / Kids Mart / Star Light) |
-| 2:02:14–2:05:18 | Buck & Jessie at the donut shop → **stick-up / kill** |
+| 2:02:14–2:05:18 | Buck & Jessie at the donut shop → stick-up |
 | **2:05:19.000** | First fully black frame (luma ≈ 1) |
 | 2:05:19–2:05:24.25 | Held black |
 | 2:05:24.5+ | Fade-up: Rahad Jackson planning (*“The guy's name is Rahad Jackson.”*) |
@@ -38,7 +38,7 @@ Office → `xfade=fadeblack` 0.50 s + `acrossfade` onto the film’s own black, 
 
 ## 5. Story cost (accepted)
 
-Keep Reed’s tape argument. Skip Amber’s collapse, the loan, custody, On the Lookout, and **Buck’s death**. Resume at the coke-deal planning scene.
+Keep Reed’s tape argument and Little Bill’s New Year’s suicide. Skip Amber’s collapse, the loan, custody, On the Lookout, and the donut-shop stick-up. Resume at the coke-deal planning scene.
 
 ## 6. QC
 

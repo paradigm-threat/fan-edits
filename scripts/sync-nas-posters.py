@@ -28,9 +28,7 @@ HD = Path("/media/ari/HD/FanEditRender")
 NAS_FM = Path("/mnt/nobiserv-public/Videos/FanEdits/FanMixes")
 
 # Repo folder name → NAS folder name when titles diverge
-NAS_ALIASES = {
-    "Congo (1995) - Adult Supervision": "Congo (1995) - Incel",
-}
+NAS_ALIASES = {}
 
 SKIP_MKV_SUBSTR = ("seam", "source", "trailer", "preview", "sample")
 
