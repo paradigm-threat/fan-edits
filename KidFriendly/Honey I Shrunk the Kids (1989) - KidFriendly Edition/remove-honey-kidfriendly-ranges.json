@@ -1,0 +1,61 @@
+{
+  "description": "Kid-friendly (approx age 3): removes neighbor violence threats, laser re-fire/garbage terror, cat/pollen panic, bee attack, sprinkler drowning, ant fight, giant-dog slobber, teen kiss/parent fear beat, scorpion/Antie death/funeral, lawnmower chase, Cheerios near-miss, and post-edit scorpion callback. Keeps shrinking discovery, backyard adventure, befriending Antie, bee ride, Lego camp, Quark rescue, reunion, and happy ending. Manual scene list from embedded English SRT; pad ~6s.",
+  "ranges": [
+    {
+      "start": 358,
+      "end": 372,
+      "join_fade": false
+    },
+    {
+      "start": 1444,
+      "end": 1460,
+      "join_fade": false
+    },
+    {
+      "start": 1594,
+      "end": 1718,
+      "join_fade": false
+    },
+    {
+      "start": 2159,
+      "end": 2390,
+      "join_fade": false
+    },
+    {
+      "start": 2681,
+      "end": 2890,
+      "join_fade": false
+    },
+    {
+      "start": 3228,
+      "end": 3365,
+      "join_fade": false
+    },
+    {
+      "start": 3403,
+      "end": 3438,
+      "join_fade": false
+    },
+    {
+      "start": 4154,
+      "end": 4210,
+      "join_fade": false
+    },
+    {
+      "start": 4358,
+      "end": 4983,
+      "join_fade": false,
+      "transition": "fade_black"
+    },
+    {
+      "start": 5011,
+      "end": 5082,
+      "join_fade": false
+    },
+    {
+      "start": 5308,
+      "end": 5322,
+      "join_fade": false
+    }
+  ]
+}

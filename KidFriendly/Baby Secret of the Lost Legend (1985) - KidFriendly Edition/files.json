@@ -1,0 +1,51 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "KidFriendly/Baby Secret of the Lost Legend (1985) - KidFriendly Edition",
+  "files": [
+    {
+      "path": "Baby Secret of the Lost Legend (1985) - KidFriendly Edition.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 152709
+    },
+    {
+      "path": "Baby Secret of the Lost Legend (1985) - KidFriendly Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 25915
+    },
+    {
+      "path": "generate-baby.sh",
+      "kind": "other",
+      "bytes": 679
+    },
+    {
+      "path": "remove-baby-kidfriendly-ranges.json",
+      "kind": "other",
+      "bytes": 1427
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 6545
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 3763
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 2668
+    },
+    {
+      "path": "Baby Secret of the Lost Legend (1985) - KidFriendly Edition.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 21655
+    },
+    {
+      "path": "Baby Secret of the Lost Legend (1985) - KidFriendly Edition.srt",
+      "kind": "srt",
+      "bytes": 60333
+    }
+  ]
+}

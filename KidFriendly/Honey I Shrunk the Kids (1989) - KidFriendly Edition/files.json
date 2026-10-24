@@ -1,0 +1,46 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "KidFriendly/Honey I Shrunk the Kids (1989) - KidFriendly Edition",
+  "files": [
+    {
+      "path": "Honey I Shrunk the Kids (1989) - KidFriendly Edition.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 7124
+    },
+    {
+      "path": "generate-honey.sh",
+      "kind": "other",
+      "bytes": 634
+    },
+    {
+      "path": "Honey I Shrunk the Kids (1989) - KidFriendly Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 73742
+    },
+    {
+      "path": "remove-honey-kidfriendly-ranges.json",
+      "kind": "other",
+      "bytes": 1476
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 10994
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 4000
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 2989
+    },
+    {
+      "path": "Honey I Shrunk the Kids (1989) - KidFriendly Edition.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 62538
+    }
+  ]
+}

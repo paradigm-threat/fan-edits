@@ -1,0 +1,70 @@
+{
+  "description": "Kid-friendly (approx age 3): removes death/illness, profanity, intimacy, gun violence, dinosaur capture/killing, military battles, cave horror, and adult humor. Keeps discovery, befriending Baby, gentle journey beats, and mother-baby reunion. Manual scene list from YTS English SRT; pad ~6s, merge nearby blocks.",
+  "ranges": [
+    {
+      "start": 0,
+      "end": 28,
+      "join_fade": false
+    },
+    {
+      "start": 485,
+      "end": 528,
+      "join_fade": false
+    },
+    {
+      "start": 568,
+      "end": 945,
+      "join_fade": false
+    },
+    {
+      "start": 972,
+      "end": 1075,
+      "join_fade": false
+    },
+    {
+      "start": 1502,
+      "end": 1570,
+      "join_fade": false
+    },
+    {
+      "start": 1600,
+      "end": 1635,
+      "join_fade": false
+    },
+    {
+      "start": 1715,
+      "end": 2075,
+      "join_fade": false
+    },
+    {
+      "start": 2180,
+      "end": 2210,
+      "join_fade": false
+    },
+    {
+      "start": 2450,
+      "end": 3095,
+      "join_fade": false
+    },
+    {
+      "start": 3295,
+      "end": 3335,
+      "join_fade": false
+    },
+    {
+      "start": 3400,
+      "end": 3455,
+      "join_fade": false
+    },
+    {
+      "start": 3535,
+      "end": 5238,
+      "join_fade": true
+    },
+    {
+      "start": 5340,
+      "end": 5565,
+      "join_fade": false
+    }
+  ]
+}
