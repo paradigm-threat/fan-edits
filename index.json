@@ -121,8 +121,9 @@
       "subtitlesJson": "[{\"src\":\"/FanMixes/Boogie Nights (1997) - No Lookout/subs/Boogie Nights (1997) - No Lookout.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Boogie Nights (1997) - No Lookout/subs/Boogie Nights (1997) - No Lookout.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/boogie-nights-1997-no-lookout/Boogie_Nights_1997_-_Absolution.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/boogie-nights-1997-no-lookout/Boogie_Nights_1997_-_Absolution_web-1080p.mkv",
+      "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/boogie-nights-1997-no-lookout/Boogie_Nights_1997_-_Absolution_mobile-720p.mkv",
       "qualityWebEnabled": true,
-      "qualityMobileEnabled": false,
+      "qualityMobileEnabled": true,
       "blurb": "A single-block cut of PTA\u2019s *Boogie Nights*. It removes the late punishment sequence, from the whip-pan out of Reed\u2019s demo-tape office through Amber\u2019s collapse and custody hearing, Dirk\u2019s bank rejection, On the Lookout, the Valley night drive, and the donut-shop stick-up. Picture",
       "poster": "poster.jpg"
     },
