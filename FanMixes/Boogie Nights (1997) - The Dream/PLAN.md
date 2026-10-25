@@ -1,6 +1,6 @@
-# Editorial plan: *Boogie Nights* (1997) — Absolution
+# Editorial plan: *Boogie Nights* (1997) — The Dream
 
-Companion to [README.md](README.md) and [remove-absolution-ranges.json](remove-absolution-ranges.json).
+Companion to [README.md](README.md) and [remove-the-dream-ranges.json](remove-the-dream-ranges.json).
 
 ## 1. Goal
 

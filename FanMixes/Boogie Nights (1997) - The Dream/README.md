@@ -1,6 +1,8 @@
-# Boogie Nights (1997) — Absolution
+# Boogie Nights (1997) — The Dream
 
-![Boogie Nights Absolution Poster](poster.jpg)
+![Boogie Nights The Dream Poster](poster.jpg)
+
+Slogan: **Hollywood punishment-for-sins tropes do not age well**
 
 A single-block cut of PTA’s *Boogie Nights*. It removes the late punishment sequence, from the whip-pan out of Reed’s demo-tape office through Amber’s collapse and custody hearing, Dirk’s bank rejection, On the Lookout, the Valley night drive, and the donut-shop stick-up. Picture resumes on the film’s own fade into the Rahad-planning scene.
 
