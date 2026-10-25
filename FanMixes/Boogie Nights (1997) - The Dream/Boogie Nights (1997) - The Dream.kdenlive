@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/home/ari/dev/fan-edits/FanMixes/Boogie Nights (1997) - The Dream" version="7.33.0">
- <profile colorspace="709" description="1916x800 24000/1001fps" frame_rate_num="24000" frame_rate_den="1001" height="800" progressive="1" sample_aspect_num="1" sample_aspect_den="1" width="1916" />
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/home/ari/dev/fan-edits/FanMixes/Boogie Nights (1997) - The Dream" version="7.22.0">
+ <profile colorspace="709" description="1916x800 23.98fps" frame_rate_num="24000" frame_rate_den="1001" height="800" progressive="1" sample_aspect_num="1" sample_aspect_den="1" display_aspect_num="479" display_aspect_den="200" width="1916" bottom_field_first="0" />
  <producer id="producer0" in="00:00:00.000" out="02:16:12.551">
   <property name="length">2147483647</property>
   <property name="eof">continue</property>
@@ -150,7 +150,7 @@
   <property name="kdenlive:sequenceproperties.hidesubtitle">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Boogie Nights (1997) - The Dream.kdenlive.ass",
+        "file": "Boogie Nights (1997) - The Dream.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -186,8 +186,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Boogie Nights (1997) - The Dream.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">Boogie Nights (1997) - The Dream.kdenlive.srt</property>
+   <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">
@@ -198,7 +198,7 @@
   <property name="kdenlive:docproperties.binsort">0</property>
   <property name="kdenlive:docproperties.documentid">1760486400000</property>
   <property name="kdenlive:docproperties.enableproxy">0</property>
-  <property name="kdenlive:docproperties.kdenliveversion">25.04.2</property>
+  <property name="kdenlive:docproperties.kdenliveversion">23.08.5</property>
   <property name="kdenlive:docproperties.opensequences">{8d6aedc2-5937-4ef8-a9ca-afbac5bfb243}</property>
   <property name="kdenlive:docproperties.sessionid">{424be30e-5c7a-48aa-a250-f3291f30e7bd}</property>
   <property name="kdenlive:docproperties.uuid">{8d6aedc2-5937-4ef8-a9ca-afbac5bfb243}</property>
