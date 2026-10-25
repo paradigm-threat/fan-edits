@@ -1034,7 +1034,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">161373</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Congo (1995) - Incel Edition.kdenlive.ass",
+        "file": "Congo (1995) - Adult Supervision.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -5753,8 +5753,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Congo (1995) - Incel Edition.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">Congo (1995) - Adult Supervision.kdenlive.srt</property>
+   <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

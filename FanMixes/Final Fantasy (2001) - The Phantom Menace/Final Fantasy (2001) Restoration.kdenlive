@@ -1135,36 +1135,6 @@ http://timsheehy.com</property>
    <property name="dbpeak">1</property>
    <property name="disable">1</property>
   </filter>
-  <filter id="filter22" out="00:00:44.795">
-   <property name="mlt_service">ladspa.2142</property>
-   <property name="kdenlive_id">ladspa.2142</property>
-   <property name="0">5000</property>
-   <property name="1">-70</property>
-   <property name="2">-9</property>
-   <property name="3">1</property>
-   <property name="4">1</property>
-   <property name="5">1</property>
-   <property name="6">1</property>
-   <property name="7">23</property>
-   <property name="wetness">1</property>
-   <property name="kdenlive:collapsed">0</property>
-   <property name="instances">1</property>
-  </filter>
-  <filter id="filter23" out="00:00:44.795">
-   <property name="mlt_service">ladspa.2142</property>
-   <property name="kdenlive_id">ladspa.2142</property>
-   <property name="0">10000</property>
-   <property name="1">-70</property>
-   <property name="2">0</property>
-   <property name="3">1</property>
-   <property name="4">1</property>
-   <property name="5">1</property>
-   <property name="6">1</property>
-   <property name="7">38</property>
-   <property name="wetness">1</property>
-   <property name="kdenlive:collapsed">0</property>
-   <property name="instances">1</property>
-  </filter>
  </tractor>
  <chain id="chain3" out="00:01:50.133">
   <property name="length">2641</property>
@@ -3121,7 +3091,7 @@ https://youtube.com/rebeccaetripp</property>
   <property name="kdenlive:sequenceproperties.scrollPos">11479</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Final Fantasy (2001) Restoration.kdenlive.ass",
+        "file": "Final Fantasy (2001) Restoration.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -4583,7 +4553,8 @@ https://youtube.com/rebeccaetripp</property>
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Final Fantasy (2001) Restoration.kdenlive.ass</property>
+   <property name="av.filename">Final Fantasy (2001) Restoration.kdenlive.srt</property>
+     <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

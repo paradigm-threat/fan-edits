@@ -30687,7 +30687,7 @@ Sonic's on a roll</property>
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Sonic - DeSchwartzed 2020.kdenlive.ass",
+        "file": "Sonic (2020) - DeSchwartzed.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -32027,7 +32027,8 @@ Sonic's on a roll</property>
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Sonic - DeSchwartzed 2020.kdenlive.ass</property>
+   <property name="av.filename">Sonic (2020) - DeSchwartzed.kdenlive.srt</property>
+     <property name="disable">0</property>
   </filter>
  </tractor>
  <chain id="chain9" out="00:03:09.092">

@@ -6528,7 +6528,7 @@ http://vurez.com</property>
   <property name="kdenlive:sequenceproperties.scrollPos">37784</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Ninja Scroll (1993) - Minor Damage.kdenlive.ass",
+        "file": "Ninja Scroll (1993) - Minor Damage.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -10378,7 +10378,8 @@ http://vurez.com</property>
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Ninja Scroll (1993) - Minor Damage.kdenlive.ass</property>
+   <property name="av.filename">Ninja Scroll (1993) - Minor Damage.kdenlive.srt</property>
+     <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

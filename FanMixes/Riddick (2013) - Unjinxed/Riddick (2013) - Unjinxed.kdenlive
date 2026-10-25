@@ -895,7 +895,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">6155</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Riddick (2013) - Unjinxed.kdenlive.ass",
+        "file": "Riddick (2013) - Unjinxed.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -2251,8 +2251,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Riddick (2013) - Unjinxed.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">Riddick (2013) - Unjinxed.kdenlive.srt</property>
+   <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

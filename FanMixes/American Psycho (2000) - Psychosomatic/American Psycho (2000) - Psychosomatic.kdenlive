@@ -639,7 +639,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "C:/Users/kado/AppData/Local/Temp/1759622028253-{af3c1200-f402-43df-94e8-399782370914}.ass",
+        "file": "American Psycho (2000) - Psychosomatic.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -721,7 +721,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">subs/American.Psycho.2000.Remastered.1080p.srt</property>
+   <property name="av.filename">American Psycho (2000) - Psychosomatic.kdenlive.srt</property>
+     <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

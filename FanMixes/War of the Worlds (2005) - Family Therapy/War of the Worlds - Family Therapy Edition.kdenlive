@@ -3045,7 +3045,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">1687</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "War of the Worlds - Family Therapy Edition.kdenlive.ass",
+        "file": "War of the Worlds - Family Therapy Edition.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -3856,8 +3856,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">War of the Worlds - Family Therapy Edition.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">War of the Worlds - Family Therapy Edition.kdenlive.srt</property>
+   <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

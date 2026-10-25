@@ -1188,7 +1188,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">7478</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Alien Resurrection (1997) - UnJossed.kdenlive.ass",
+        "file": "Alien Resurrection (1997) - UnJossed.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     },
@@ -1456,7 +1456,14 @@
    <property name="start">0.5</property>
    <property name="disable">1</property>
   </filter>
- </tractor>
+   <filter id="filter_subs">
+   <property name="mlt_service">avfilter.subtitles</property>
+   <property name="av.alpha">1</property>
+   <property name="internal_added">237</property>
+   <property name="av.filename">Alien Resurrection (1997) - UnJossed.kdenlive.srt</property>
+   <property name="disable">0</property>
+  </filter>
+</tractor>
  <playlist id="main_bin">
   <property name="kdenlive:folder.-1.2">Sequences</property>
   <property name="kdenlive:sequenceFolder">2</property>

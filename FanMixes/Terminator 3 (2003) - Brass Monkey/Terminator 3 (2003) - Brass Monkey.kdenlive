@@ -559,21 +559,6 @@
   <property name="kdenlive:audio_rec"/>
   <track hide="video" producer="playlist2"/>
   <track hide="video" producer="playlist3"/>
-  <filter id="filter20" out="00:35:55.681">
-   <property name="mlt_service">ladspa.2142</property>
-   <property name="kdenlive_id">ladspa.2142</property>
-   <property name="0">2500</property>
-   <property name="1">0</property>
-   <property name="2">0</property>
-   <property name="3">1</property>
-   <property name="4">1</property>
-   <property name="5">1</property>
-   <property name="6">1</property>
-   <property name="7">5</property>
-   <property name="wetness">1</property>
-   <property name="kdenlive:collapsed">0</property>
-   <property name="instances">1</property>
-  </filter>
   <filter id="filter17">
    <property name="channel">-1</property>
    <property name="mlt_service">panner</property>
@@ -3403,7 +3388,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">157798</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Terminator 3 (2003) - Brass Monkey Edition.kdenlive.ass",
+        "file": "Terminator 3 (2003) - Brass Monkey.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -4349,8 +4334,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Terminator 3 (2003) - Brass Monkey Edition.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">Terminator 3 (2003) - Brass Monkey.kdenlive.srt</property>
+   <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

@@ -7087,6 +7087,7 @@
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
    <property name="av.filename">The Mummy Returns Debugged.kdenlive.srt</property>
+     <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

@@ -2054,7 +2054,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        P12 (2009) - Cover-up Edition.kdenlive.ass",
+        "file": "2012 (2009) - Open The Gates.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -3289,8 +3289,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">2012 (2009) - Cover-up Edition.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">2012 (2009) - Open The Gates.kdenlive.srt</property>
+   <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

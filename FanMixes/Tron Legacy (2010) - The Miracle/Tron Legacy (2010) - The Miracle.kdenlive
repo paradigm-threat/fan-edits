@@ -1655,7 +1655,7 @@
   <property name="outline">0</property>
   <property name="align">left</property>
   <property name="pad">0</property>
-  <property name="family">Sans</property>
+  <property name="family">Noto Sans</property>
   <property name="size">48</property>
   <property name="style">normal</property>
   <property name="weight">400</property>

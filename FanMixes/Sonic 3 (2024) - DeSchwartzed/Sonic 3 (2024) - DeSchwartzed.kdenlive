@@ -9545,20 +9545,6 @@ http://adamlederer.com</property>
    <property name="dbpeak">1</property>
    <property name="disable">1</property>
   </filter>
-  <filter id="filter10" out="01:16:27.444">
-   <property name="mlt_service">ladspa.1123</property>
-   <property name="kdenlive_id">ladspa.1123</property>
-   <property name="4">0</property>
-   <property name="5">0.5</property>
-   <property name="6">0.000345</property>
-   <property name="7">0.000345</property>
-   <property name="8">1</property>
-   <property name="9">0.5</property>
-   <property name="wetness">0.111111</property>
-   <property name="kdenlive:collapsed">0</property>
-   <property name="instances">1</property>
-   <property name="disable">1</property>
-  </filter>
  </tractor>
  <chain id="chain1" out="01:50:17.351">
   <property name="length">158658</property>
@@ -91842,7 +91828,7 @@ https://soundcloud.com/alexanderliss</property>
   <property name="kdenlive:sequenceproperties.scrollPos">79156</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Sonic - DeSchwartzed 2024.kdenlive.ass",
+        "file": "Sonic 3 (2024) - DeSchwartzed.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -96753,7 +96739,7 @@ https://soundcloud.com/alexanderliss</property>
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Sonic - DeSchwartzed 2024.kdenlive.ass</property>
+   <property name="av.filename">Sonic 3 (2024) - DeSchwartzed.kdenlive.srt</property>
    <property name="disable">0</property>
   </filter>
  </tractor>

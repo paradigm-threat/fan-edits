@@ -8896,6 +8896,7 @@
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
    <property name="av.filename">Van Helsing - DeAnna'd.kdenlive.srt</property>
+     <property name="disable">0</property>
   </filter>
  </tractor>
  <chain id="chain12" out="00:01:45.212">

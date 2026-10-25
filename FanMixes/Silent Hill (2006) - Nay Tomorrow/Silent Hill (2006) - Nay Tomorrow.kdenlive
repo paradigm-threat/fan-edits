@@ -2543,35 +2543,6 @@
    <property name="accepts_blanks">1</property>
    <property name="reverse">1</property>
   </transition>
-  <filter id="filter47" out="01:42:15.807">
-   <property name="mlt_service">ladspa.2159</property>
-   <property name="kdenlive_id">ladspa.2159</property>
-   <property name="0">1.25</property>
-   <property name="1">90</property>
-   <property name="2">75</property>
-   <property name="3">25</property>
-   <property name="4">100</property>
-   <property name="5">0</property>
-   <property name="6">0</property>
-   <property name="wetness">1</property>
-   <property name="kdenlive:collapsed">1</property>
-   <property name="instances">1</property>
-  </filter>
-  <filter id="filter48" out="01:42:15.807">
-   <property name="mlt_service">ladspa.2142</property>
-   <property name="kdenlive_id">ladspa.2142</property>
-   <property name="0">10000</property>
-   <property name="1">0</property>
-   <property name="2">0</property>
-   <property name="3">1</property>
-   <property name="4">1</property>
-   <property name="5">1</property>
-   <property name="6">1</property>
-   <property name="7">0</property>
-   <property name="wetness">1</property>
-   <property name="kdenlive:collapsed">0</property>
-   <property name="instances">1</property>
-  </filter>
   <filter id="filter44">
    <property name="window">75</property>
    <property name="max_gain">20dB</property>
@@ -4685,7 +4656,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">4001</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Silent Hill (2006) - Nay Tomorrow Edition.kdenlive.ass",
+        "file": "Silent Hill (2006) - Nay Tomorrow.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -5181,7 +5152,7 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Silent Hill (2006) - Nay Tomorrow Edition.kdenlive.ass</property>
+   <property name="av.filename">Silent Hill (2006) - Nay Tomorrow.kdenlive.srt</property>
    <property name="disable">0</property>
   </filter>
  </tractor>

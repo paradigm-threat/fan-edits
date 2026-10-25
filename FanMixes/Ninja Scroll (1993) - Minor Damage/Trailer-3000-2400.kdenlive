@@ -619,7 +619,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Trailer-3000.kdenlive.ass",
+        "file": "Trailer-3000-2400.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -748,7 +748,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Trailer-3000.kdenlive.ass</property>
+   <property name="av.filename">Trailer-3000-2400.kdenlive.srt</property>
+     <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

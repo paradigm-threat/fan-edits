@@ -25335,7 +25335,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">0</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Sound of Music - Alena Edition.kdenlive.ass",
+        "file": "Sound of Music - Alena Edition.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -25749,8 +25749,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Sound of Music - Alena Edition.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">Sound of Music - Alena Edition.kdenlive.srt</property>
+   <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

@@ -3913,7 +3913,7 @@ http://timsheehy.com</property>
   <property name="kdenlive:sequenceproperties.scrollPos">12989</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Sonic 2 (2022) - DeSchwartzed Edition.kdenlive.ass",
+        "file": "Sonic 2 (2022) - DeSchwartzed.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -6079,8 +6079,8 @@ http://timsheehy.com</property>
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Sonic 2 (2022) - DeSchwartzed Edition.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">Sonic 2 (2022) - DeSchwartzed.kdenlive.srt</property>
+   <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

@@ -1007,36 +1007,6 @@ http://timsheehy.com</property>
   <property name="kdenlive:audio_rec"/>
   <track hide="video" producer="playlist4"/>
   <track hide="video" producer="playlist5"/>
-  <filter id="filter23" out="00:00:36.995">
-   <property name="mlt_service">ladspa.2142</property>
-   <property name="kdenlive_id">ladspa.2142</property>
-   <property name="0">5000</property>
-   <property name="1">-70</property>
-   <property name="2">-9</property>
-   <property name="3">1</property>
-   <property name="4">1</property>
-   <property name="5">1</property>
-   <property name="6">1</property>
-   <property name="7">16</property>
-   <property name="wetness">1</property>
-   <property name="kdenlive:collapsed">0</property>
-   <property name="instances">1</property>
-  </filter>
-  <filter id="filter24" out="00:00:36.995">
-   <property name="mlt_service">ladspa.2142</property>
-   <property name="kdenlive_id">ladspa.2142</property>
-   <property name="0">10000</property>
-   <property name="1">-70</property>
-   <property name="2">0</property>
-   <property name="3">1</property>
-   <property name="4">1</property>
-   <property name="5">1</property>
-   <property name="6">1</property>
-   <property name="7">32</property>
-   <property name="wetness">1</property>
-   <property name="kdenlive:collapsed">0</property>
-   <property name="instances">1</property>
-  </filter>
   <filter id="filter20">
    <property name="window">75</property>
    <property name="max_gain">20dB</property>
@@ -5517,14 +5487,6 @@ https://youtube.com/rebeccaetripp</property>
     <property name="mlt_service">qtcrop</property>
     <property name="kdenlive_id">qtcrop</property>
    </filter>
-   <filter id="filter47">
-    <property name="color">00:00:00.000=#b4636363</property>
-    <property name="radius">00:00:00.000=1</property>
-    <property name="x">00:00:00.000=8</property>
-    <property name="y">00:00:00.000=8</property>
-    <property name="mlt_service">dropshadow</property>
-    <property name="kdenlive_id">dropshadow</property>
-   </filter>
   </entry>
   <entry in="00:00:54.763" out="00:03:09.218" producer="chain16">
    <property name="kdenlive:id">4</property>
@@ -5551,14 +5513,6 @@ https://youtube.com/rebeccaetripp</property>
     <property name="mlt_service">qtcrop</property>
     <property name="kdenlive_id">qtcrop</property>
    </filter>
-   <filter id="filter50">
-    <property name="color">00:00:54.763=#b4636363</property>
-    <property name="radius">00:00:54.763=1</property>
-    <property name="x">00:00:54.763=8</property>
-    <property name="y">00:00:54.763=8</property>
-    <property name="mlt_service">dropshadow</property>
-    <property name="kdenlive_id">dropshadow</property>
-   </filter>
   </entry>
   <entry in="00:03:09.259" out="00:08:40.874" producer="chain16">
    <property name="kdenlive:id">4</property>
@@ -5584,14 +5538,6 @@ https://youtube.com/rebeccaetripp</property>
     <property name="radius">00:03:09.259=0</property>
     <property name="mlt_service">qtcrop</property>
     <property name="kdenlive_id">qtcrop</property>
-   </filter>
-   <filter id="filter53">
-    <property name="color">00:03:09.259=#b4636363</property>
-    <property name="radius">00:03:09.259=1</property>
-    <property name="x">00:03:09.259=8</property>
-    <property name="y">00:03:09.259=8</property>
-    <property name="mlt_service">dropshadow</property>
-    <property name="kdenlive_id">dropshadow</property>
    </filter>
   </entry>
   <entry in="00:08:57.724" out="00:09:20.062" producer="chain16">
@@ -6899,16 +6845,6 @@ https://youtube.com/rebeccaetripp</property>
     <property name="Operation">0.5</property>
     <property name="kdenlive:collapsed">0</property>
    </filter>
-   <filter id="filter57">
-    <property name="color">00:00:36.286=0xffffffb4</property>
-    <property name="radius">00:00:36.286=100</property>
-    <property name="x">00:00:36.286=0</property>
-    <property name="y">00:00:36.286=0</property>
-    <property name="mlt_service">dropshadow</property>
-    <property name="kdenlive_id">dropshadow</property>
-    <property name="kdenlive:collapsed">0</property>
-    <property name="disable">1</property>
-   </filter>
    <filter id="filter58" in="00:00:50.926" out="00:00:54.721">
     <property name="start">1</property>
     <property name="level">1</property>
@@ -6955,7 +6891,7 @@ https://youtube.com/rebeccaetripp</property>
   <property name="kdenlive:sequenceproperties.scrollPos">678523</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Final Fantasy (2001) - The Phantom Menace.kdenlive.ass",
+        "file": "Final Fantasy (2001) - The Phantom Menace.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -11593,8 +11529,8 @@ https://youtube.com/rebeccaetripp</property>
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Final Fantasy (2001) - The Phantom Menace.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">Final Fantasy (2001) - The Phantom Menace.kdenlive.srt</property>
+   <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

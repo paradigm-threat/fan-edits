@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/home/ari/dev/fan-edits/FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett" version="7.33.0">
+<mlt LC_NUMERIC="en_US.UTF-8" producer="main_bin" root="/home/ari/dev/fan-edits/FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett" version="7.22.0">
  <profile colorspace="709" description="1920x1040 23.98fps" display_aspect_num="1" display_aspect_den="1" frame_rate_num="24000" frame_rate_den="1001" height="1040" progressive="1" sample_aspect_num="1" sample_aspect_den="1" width="1920" />
  <producer id="producer0" in="00:00:00.000" out="01:56:14.685">
   <property name="length">2147483647</property>
@@ -359,6 +359,7 @@
    <property name="kdenlive:id">5</property>
    </entry>
   </playlist>
+ <playlist id="playlist_sub_tractor1"/>
  <tractor id="tractor1" in="00:00:00.000" out="01:56:14.685">
   <property name="kdenlive:audio_track">1</property>
   <property name="kdenlive:trackheight">84</property>
@@ -367,7 +368,9 @@
   <property name="kdenlive:thumbs_format" />
   <property name="kdenlive:audio_rec" />
   <track hide="video" producer="playlist2" />
-  </tractor>
+    <track hide="video" producer="playlist_sub_tractor1"/>
+</tractor>
+ <playlist id="playlist_sub_tractor2"/>
  <tractor id="tractor2" in="00:00:00.000" out="01:56:14.685">
   <property name="kdenlive:trackheight">84</property>
   <property name="kdenlive:timeline_active">1</property>
@@ -375,7 +378,8 @@
   <property name="kdenlive:thumbs_format" />
   <property name="kdenlive:audio_rec" />
   <track hide="audio" producer="playlist3" />
-  </tractor>
+    <track hide="audio" producer="playlist_sub_tractor2"/>
+</tractor>
  <tractor id="tractor3" in="00:00:00.000" out="01:56:14.685">
   <property name="kdenlive:duration">01:56:14.685</property>
   <property name="kdenlive:clipname">Sequence 1</property>
@@ -389,7 +393,7 @@
   <property name="kdenlive:sequenceproperties.tracksCount">2</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Fried Green Tomatoes (1991) - No Frank Bennett.kdenlive.ass",
+        "file": "Fried Green Tomatoes (1991) - No Frank Bennett.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -422,13 +426,26 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Fried Green Tomatoes (1991) - No Frank Bennett.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">Fried Green Tomatoes (1991) - No Frank Bennett.kdenlive.srt</property>
+   <property name="disable">0</property>
    </filter>
   </tractor>
  <playlist id="main_bin">
+  <property name="kdenlive:folder.-1.2">Sequences</property>
+  <property name="kdenlive:sequenceFolder">2</property>
+
   <property name="kdenlive:docproperties.uuid">{9129dc2e-4eaf-4033-a1ec-00a55cac0d2e}</property>
-  <property name="kdenlive:docproperties.kdenliveversion">25.04.2</property>
+  <property name="kdenlive:docproperties.kdenliveversion">23.08.5</property>
   <property name="kdenlive:docproperties.documentid">4310887470</property>
-  </playlist>
- </mlt>
+    <property name="kdenlive:docproperties.activetimeline">{9129dc2e-4eaf-4033-a1ec-00a55cac0d2e}</property>
+  <property name="kdenlive:docproperties.opensequences">{9129dc2e-4eaf-4033-a1ec-00a55cac0d2e}</property>
+  <property name="kdenlive:docproperties.version">1.1</property>
+  <property name="xml_retain">1</property>
+  <entry in="00:00:00.000" out="02:16:32.235" producer="chain0" />
+  <entry in="00:00:00.000" out="01:56:14.685" producer="tractor3" />
+ </playlist>
+  <tractor id="tractor4" in="00:00:00.000" out="01:56:14.685">
+  <property name="kdenlive:projectTractor">1</property>
+  <track in="00:00:00.000" out="01:56:14.685" producer="tractor3" />
+ </tractor>
+</mlt>

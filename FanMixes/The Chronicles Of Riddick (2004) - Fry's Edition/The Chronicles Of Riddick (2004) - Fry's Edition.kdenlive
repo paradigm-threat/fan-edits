@@ -2681,7 +2681,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">8571</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "The Chronicles of Riddick (2004) - Carolyn Fry Edition.kdenlive.ass",
+        "file": "The Chronicles Of Riddick (2004) - Fry's Edition.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -4040,8 +4040,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">The Chronicles of Riddick (2004) - Carolyn Fry Edition.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">The Chronicles Of Riddick (2004) - Fry's Edition.kdenlive.srt</property>
+   <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">

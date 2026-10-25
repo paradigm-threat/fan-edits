@@ -713,7 +713,7 @@
 </property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "Trailer.kdenlive.ass",
+        "file": "Trailer.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -785,7 +785,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">Trailer.kdenlive.ass</property>
+   <property name="av.filename">Trailer.kdenlive.srt</property>
+     <property name="disable">0</property>
   </filter>
  </tractor>
  <chain id="chain4" out="01:18:00.042">

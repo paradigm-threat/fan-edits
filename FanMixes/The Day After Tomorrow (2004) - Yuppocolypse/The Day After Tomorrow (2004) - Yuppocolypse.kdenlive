@@ -372,21 +372,6 @@
   <property name="kdenlive:audio_rec"/>
   <track hide="video" producer="playlist0"/>
   <track hide="video" producer="playlist1"/>
-  <filter id="filter5" out="00:13:41.708">
-   <property name="mlt_service">ladspa.2142</property>
-   <property name="kdenlive_id">ladspa.2142</property>
-   <property name="0">10000</property>
-   <property name="1">-63.697</property>
-   <property name="2">-24.4242</property>
-   <property name="3">1</property>
-   <property name="4">1</property>
-   <property name="5">1</property>
-   <property name="6">1</property>
-   <property name="7">19</property>
-   <property name="wetness">1</property>
-   <property name="kdenlive:collapsed">0</property>
-   <property name="instances">1</property>
-  </filter>
   <filter id="filter3">
    <property name="window">75</property>
    <property name="max_gain">20dB</property>
@@ -1915,7 +1900,7 @@
   <property name="kdenlive:sequenceproperties.scrollPos">18993</property>
   <property name="kdenlive:sequenceproperties.subtitlesList">[
     {
-        "file": "The Day After Tomorrow (2004) - Chemtrail Edition.kdenlive.ass",
+        "file": "The Day After Tomorrow (2004) - Yuppocolypse.kdenlive.srt",
         "id": 0,
         "name": "Subtitles"
     }
@@ -6424,8 +6409,8 @@
    <property name="mlt_service">avfilter.subtitles</property>
    <property name="av.alpha">1</property>
    <property name="internal_added">237</property>
-   <property name="av.filename">The Day After Tomorrow (2004) - Chemtrail Edition.kdenlive.ass</property>
-   <property name="disable">1</property>
+   <property name="av.filename">The Day After Tomorrow (2004) - Yuppocolypse.kdenlive.srt</property>
+   <property name="disable">0</property>
   </filter>
  </tractor>
  <playlist id="main_bin">
