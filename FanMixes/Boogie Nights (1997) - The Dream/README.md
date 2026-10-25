@@ -4,7 +4,7 @@
 
 Slogan: **Hollywood punishment-for-sins tropes do not age well**
 
-A single-block cut of PTA’s *Boogie Nights*. It removes the late punishment sequence, from the whip-pan out of Reed’s demo-tape office through Amber’s collapse and custody hearing, Dirk’s bank rejection, On the Lookout, the Valley night drive, and the donut-shop stick-up. Picture resumes on the film’s own fade into the Rahad-planning scene.
+A cut of PTA’s *Boogie Nights*. It removes the late punishment sequence, from the whip-pan out of Reed’s demo-tape office through Amber’s collapse and custody hearing, Dirk’s bank rejection, On the Lookout, the Valley night drive, and the donut-shop stick-up. Picture resumes on the film’s own fade into the Rahad-planning scene. It also removes the Colonel’s jail beating, later, after Buck’s commercial.
 
 ## What the movie is about
 
@@ -25,6 +25,12 @@ Those messages get ruined by the counter-message the film is forced to deliver t
 
 Hollywood is not allowed to leave a movie like this without a punishment-for-your-sins sequence. That sequence is an old Catholic doctrine in script form: humans are born in sin and must be redeemed through the church. Someone comes in, edits the script, and writes the punishment. That block is what this cut removes.
 
+The additional cut is the Colonel beaten in jail. The movie never explains the scene. It leaves completely open whether he had ever abused a child. What the scene is actually showing is a cultural change. The rest of the family abandons him. They cannot give themselves up to protect him from that change. It has the same shape as Little Bill’s suicide: something outside their control. To protect the family, they put their attention on the people who are actually in need, and the Colonel is left behind.
+
+That beating still comes out. Hollywood should not send an incomplete message like this. The Colonel is completely innocent. Even on the reading that he looked at pornography of children, a real police officer would have followed that to the people making it. Stopping at one person using it leaves a contradiction the film never addresses.
+
+A Beach Boys song plays across the whole jail scene. Lifting the scene breaks the song, and the join is obvious. The scene still goes.
+
 ## Why the drug deal stays
 
 The Rahad scene stays. It is desperation and loss of agency. Dirk, Reed, and Todd thought they were extremely powerful and popular, the face of the change. The only move left to them is to fall back on the vice. That deal would have stayed a desperate buy if Todd Parker had not tried to deceive the drug lord. The message of the scene is the collapse, and it sets up the redemption sequence in the next scene.
@@ -32,6 +38,7 @@ The Rahad scene stays. It is desperation and loss of agency. Dirk, Reed, and Tod
 ## What changed
 
 - Removes the stretch from Reed’s demo-tape office through Amber and Dirk, the bank loan, the custody hearing, On the Lookout, the Valley night drive, and the donut-shop stick-up
+- Removes the Colonel’s jail beating after Buck’s commercial. Buck’s “that was great” stays. Picture returns as the next scene is already underway
 - Keeps Little Bill’s New Year’s suicide
 - Keeps the Rahad drug deal: collapse into desperation, then the redemption that follows
 - Resumes on the film’s own black hold into the Rahad planning scene

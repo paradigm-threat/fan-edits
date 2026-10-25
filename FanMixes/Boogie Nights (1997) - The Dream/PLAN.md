@@ -4,7 +4,7 @@ Companion to [README.md](README.md) and [remove-the-dream-ranges.json](remove-th
 
 ## 1. Goal
 
-Remove the **bad-scene block** from the office whip-pan through On the Lookout **and** the donut-shop stick-up/kill. Land on the film’s own **fade to black at 2:05:19**, then the original hold and fade-up into the Rahad-planning scene.
+Remove the **bad-scene block** from the office whip-pan through On the Lookout **and** the donut-shop stick-up/kill. Land on the film’s own **fade to black at 2:05:19**, then the original hold and fade-up into the Rahad-planning scene. Also remove the Colonel’s jail beating (**2:20:47.798–2:21:20.646**). The timeline in the Kdenlive file is the cut. Do not regenerate it from this plan.
 
 ## 2. What the window contains (this rip)
 
@@ -32,9 +32,20 @@ Remove the **bad-scene block** from the office whip-pan through On the Lookout *
 
 Removed ~19.4 min of source.
 
+## 3b. Colonel jail beating
+
+| | Snapped | Why |
+|--|---------|-----|
+| Out | **2:20:47.798** | After “Buck, honey, that was great.” |
+| In | **2:21:20.646** | After the jail beating. The Spanish countdown has already started. |
+
+Removed ~32.8 s. Hard cut. A Beach Boys song covers the scene, so the song breaks at the join. That break stays.
+
+The timeline starts the next scene’s audio at source **2:21:15.933**, about 4.7 s under the end of Buck’s take. Picture stays on Buck until **2:21:20.646**. The encode keeps that lead, then locks sound to picture.
+
 ## 4. Seam
 
-Office → `xfade=fadeblack` 0.50 s + `acrossfade` onto the film’s own black, then PTA’s hold and fade-up. Do **not** GOP-snap.
+Office → `xfade=fadeblack` 0.50 s + `acrossfade` onto the film’s own black, then PTA’s hold and fade-up. Do **not** GOP-snap. The Colonel join is a hard cut.
 
 ## 5. Story cost (accepted)
 

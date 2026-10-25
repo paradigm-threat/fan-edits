@@ -34,14 +34,15 @@ def parse_playlist2_segments(kdenlive: Path) -> list[tuple[float, float]]:
         raise SystemExit("playlist2 not found in kdenlive")
     segs: list[tuple[float, float]] = []
     for ent in pl.findall("entry"):
-        if ent.get("producer") != "chain0":
+        producer = ent.get("producer") or ""
+        if not producer.startswith("chain"):
             continue
         a = timecode_to_seconds(ent.get("in", "0"))
         b = timecode_to_seconds(ent.get("out", "0"))
         if b > a:
             segs.append((a, b))
     if not segs:
-        raise SystemExit("no chain0 entries in playlist2")
+        raise SystemExit("no chain entries in playlist2")
     return segs
 
 
@@ -121,6 +122,41 @@ def probe_audio_meta(video: Path) -> dict:
     }
 
 
+def join_fades(
+    segments: list[tuple[float, float]], fade_dur: float, min_gap: float
+) -> list[float]:
+    """Fade seconds pulled back at the start of each kept run. Index 0 is always 0.
+
+    A long source hole uses the office fadeblack. A short hole (the Colonel
+    beating) stays a hard cut.
+    """
+    fades = [0.0]
+    for i in range(1, len(segments)):
+        gap = segments[i][0] - segments[i - 1][1]
+        fades.append(fade_dur if fade_dur > 0 and gap >= min_gap else 0.0)
+    return fades
+
+
+def last_audio_in(kdenlive: Path) -> float | None:
+    """Source in-point of the audio entry that carries the end of the timeline.
+
+    Playlist1 is the second audio track. On this cut it holds the scene after
+    the Colonel, and its in-point is earlier than the picture in-point.
+    """
+    root = ET.parse(kdenlive).getroot()
+    pl = root.find(".//playlist[@id='playlist1']")
+    if pl is None:
+        return None
+    entries = [
+        e
+        for e in pl.findall("entry")
+        if (e.get("producer") or "").startswith("chain")
+    ]
+    if not entries:
+        return None
+    return timecode_to_seconds(entries[-1].get("in", "0"))
+
+
 def build_filter_complex(
     segments: list[tuple[float, float]],
     fps_num: int,
@@ -128,45 +164,84 @@ def build_filter_complex(
     *,
     xfade: str,
     fade_dur: float,
+    min_gap: float = 60.0,
+    last_audio_start: float | None = None,
 ) -> str:
     fd = fps_den / float(fps_num)
-    if len(segments) == 1:
-        a, b = segments[0]
-        end_ex = b + fd
-        return (
-            f"[0:v]trim=start={a}:end={end_ex},setpts=PTS-STARTPTS[outv];"
-            f"[0:a:0]atrim=start={a}:end={end_ex},asetpts=PTS-STARTPTS[outa]"
+    n = len(segments)
+    if n < 1:
+        raise SystemExit("no kept runs on playlist2")
+    lead = 0.0
+    if last_audio_start is not None and n >= 2:
+        gap = segments[-1][0] - last_audio_start
+        if 0.05 < gap < 30:
+            lead = gap
+    parts: list[str] = []
+    for i, (start, end_inclusive) in enumerate(segments):
+        end_ex = end_inclusive + fd
+        a_start = start - lead if i == n - 1 and lead else start
+        vpad = "outv" if n == 1 else f"v{i}"
+        apad = "outa" if n == 1 else f"a{i}"
+        parts.append(
+            f"[0:v]trim=start={start:.3f}:end={end_ex:.3f},setpts=PTS-STARTPTS[{vpad}]"
         )
-    if len(segments) != 2:
-        raise SystemExit(f"this renderer expects 1–2 kept runs, got {len(segments)}")
-    if fade_dur <= 0:
-        chunks: list[str] = []
-        for i, (start, end_inclusive) in enumerate(segments):
-            end_ex = end_inclusive + fd
-            chunks.append(
-                f"[0:v]trim=start={start}:end={end_ex},setpts=PTS-STARTPTS[v{i}];"
-                f"[0:a:0]atrim=start={start}:end={end_ex},asetpts=PTS-STARTPTS[a{i}]"
-            )
-        return (
-            ";".join(chunks)
-            + ";[v0][v1]concat=n=2:v=1:a=0[outv];[a0][a1]concat=n=2:v=0:a=1[outa]"
+        parts.append(
+            f"[0:a:0]atrim=start={a_start:.3f}:end={end_ex:.3f},asetpts=PTS-STARTPTS[{apad}]"
         )
+    if n == 1:
+        return ";".join(parts)
 
-    (a0, b0), (a1, b1) = segments
-    end0 = b0 + fd
-    end1 = b1 + fd
-    len0 = end0 - a0
-    if len0 <= fade_dur + 0.05:
-        raise SystemExit("first kept run is shorter than the xfade")
-    offset = round(len0 - fade_dur, 3)
-    return (
-        f"[0:v]trim=start={a0}:end={end0},setpts=PTS-STARTPTS[v0];"
-        f"[0:v]trim=start={a1}:end={end1},setpts=PTS-STARTPTS[v1];"
-        f"[v0][v1]xfade=transition={xfade}:duration={fade_dur}:offset={offset}[outv];"
-        f"[0:a:0]atrim=start={a0}:end={end0},asetpts=PTS-STARTPTS[a0];"
-        f"[0:a:0]atrim=start={a1}:end={end1},asetpts=PTS-STARTPTS[a1];"
-        f"[a0][a1]acrossfade=d={fade_dur}:c1=tri:c2=tri[outa]"
-    )
+    fades = join_fades(segments, fade_dur, min_gap)
+    vlabel, alabel = "v0", "a0"
+    vlen = (segments[0][1] + fd) - segments[0][0]
+    for i in range(1, n):
+        seglen = (segments[i][1] + fd) - segments[i][0]
+        vout = "outv" if i == n - 1 else f"vx{i}"
+        aout = "outa" if i == n - 1 else f"ax{i}"
+        jcut = i == n - 1 and lead > 0 and fades[i] == 0
+        if fades[i] > 0:
+            if vlen <= fades[i] + 0.05:
+                raise SystemExit("kept run is shorter than the xfade")
+            offset = round(vlen - fades[i], 3)
+            parts.append(
+                f"[{vlabel}][v{i}]xfade=transition={xfade}:duration={fades[i]}:offset={offset}[{vout}]"
+            )
+            parts.append(
+                f"[{alabel}][a{i}]acrossfade=d={fades[i]}:c1=tri:c2=tri[{aout}]"
+            )
+            vlen = vlen + seglen - fades[i]
+        elif jcut:
+            if vlen <= lead + 0.05:
+                raise SystemExit("kept run is shorter than the audio lead")
+            head_end = round(vlen - lead, 3)
+            parts.append(f"[{vlabel}][v{i}]concat=n=2:v=1:a=0[{vout}]")
+            parts.append(f"[{alabel}]asplit=2[ah{i}][at{i}]")
+            parts.append(
+                f"[ah{i}]atrim=end={head_end:.3f},asetpts=PTS-STARTPTS[head{i}]"
+            )
+            parts.append(
+                f"[at{i}]atrim=start={head_end:.3f},asetpts=PTS-STARTPTS[tail{i}]"
+            )
+            parts.append(f"[a{i}]asplit=2[ap{i}][ar{i}]")
+            parts.append(
+                f"[ap{i}]atrim=end={lead:.3f},asetpts=PTS-STARTPTS[pre{i}]"
+            )
+            parts.append(
+                f"[ar{i}]atrim=start={lead:.3f},asetpts=PTS-STARTPTS[rest{i}]"
+            )
+            parts.append(
+                f"[tail{i}][pre{i}]amix=inputs=2:duration=first:dropout_transition=0:normalize=0[mix{i}]"
+            )
+            parts.append(
+                f"[head{i}][mix{i}][rest{i}]concat=n=3:v=0:a=1[{aout}]"
+            )
+            vlen = vlen + seglen
+        else:
+            parts.append(f"[{vlabel}][v{i}]concat=n=2:v=1:a=0[{vout}]")
+            parts.append(f"[{alabel}][a{i}]concat=n=2:v=0:a=1[{aout}]")
+            vlen = vlen + seglen
+        vlabel, alabel = vout, aout
+    return ";".join(parts)
 
 
 def shift_srt_for_xfade(src: Path, dst: Path, join_out: float, fade_dur: float) -> None:
@@ -211,6 +286,96 @@ def shift_srt_for_xfade(src: Path, dst: Path, join_out: float, fade_dur: float) 
         return f"{fmt(a)} --> {fmt(b)}"
 
     dst.write_text(tc.sub(repl, text), encoding="utf-8")
+
+
+def remap_srt(
+    src: Path,
+    dst: Path,
+    segments: list[tuple[float, float]],
+    fades: list[float],
+) -> int:
+    """Map original-timeline cues onto the kept runs. Cues inside a hole are dropped.
+
+    fades[i] is the overlap pulled back at the start of kept run i.
+    """
+    import re
+
+    text = src.read_text(encoding="utf-8", errors="replace")
+    tc = re.compile(
+        r"(\d{2}):(\d{2}):(\d{2}),(\d{3})\s*-->\s*"
+        r"(\d{2}):(\d{2}):(\d{2}),(\d{3})"
+    )
+
+    def to_sec(h: str, m: str, s: str, ms: str) -> float:
+        return int(h) * 3600 + int(m) * 60 + int(s) + int(ms) / 1000.0
+
+    def fmt(t: float) -> str:
+        if t < 0:
+            t = 0.0
+        h = int(t // 3600)
+        t -= h * 3600
+        m = int(t // 60)
+        t -= m * 60
+        s = int(t)
+        ms = int(round((t - s) * 1000))
+        if ms >= 1000:
+            ms = 0
+            s += 1
+        return f"{h:02d}:{m:02d}:{s:02d},{ms:03d}"
+
+    def locate(t: float) -> tuple[int, float] | None:
+        cursor = 0.0
+        for i, (a, b) in enumerate(segments):
+            start_out = cursor - fades[i]
+            if a - 0.04 <= t <= b + 0.04:
+                return i, start_out + (t - a)
+            cursor = start_out + (b - a)
+        return None
+
+    blocks = re.split(r"\n\s*\n", text.strip())
+    kept: list[str] = []
+    for block in blocks:
+        m = tc.search(block)
+        if not m:
+            continue
+        a = to_sec(*m.group(1, 2, 3, 4))
+        b = to_sec(*m.group(5, 6, 7, 8))
+        la = locate(a)
+        lb = locate(b)
+        if la is None and lb is None:
+            continue
+        if la is not None and lb is not None and la[0] != lb[0]:
+            continue
+        if la is None and lb is not None:
+            # Starts in a hole and ends in a kept run: show the remainder.
+            cursor = 0.0
+            start_out = 0.0
+            for i, (sa, sb) in enumerate(segments):
+                start_out = cursor - fades[i]
+                if i == lb[0]:
+                    break
+                cursor = start_out + (sb - sa)
+            a_out, b_out = start_out, lb[1]
+        elif la is not None and lb is None:
+            a_out = la[1]
+            b_out = a_out + max(0.04, segments[la[0]][1] - a)
+        else:
+            assert la is not None and lb is not None
+            a_out, b_out = la[1], lb[1]
+        if b_out <= a_out:
+            b_out = a_out + 0.04
+        new_line = f"{fmt(a_out)} --> {fmt(b_out)}"
+        kept.append(tc.sub(new_line, block, count=1))
+    renumbered: list[str] = []
+    for i, block in enumerate(kept, 1):
+        lines = block.splitlines()
+        if lines and lines[0].strip().isdigit():
+            lines[0] = str(i)
+        else:
+            lines.insert(0, str(i))
+        renumbered.append("\n".join(lines))
+    dst.write_text("\n\n".join(renumbered) + "\n", encoding="utf-8")
+    return len(renumbered)
 
 
 def run(cmd: list[str], *, cwd: Path | None = None) -> None:
@@ -336,21 +501,27 @@ def main() -> int:
         if args.preview_only:
             return 0
 
-    subs_in = args.subs or kden.with_suffix(kden.suffix + ".shifted.srt")
+    feature_srt = kden.with_suffix(".srt")
+    subs_in = args.subs or (feature_srt if feature_srt.exists() else kden.with_suffix(kden.suffix + ".shifted.srt"))
     if not subs_in.exists():
-        raise SystemExit(f"missing shifted subs: {subs_in}")
+        raise SystemExit(f"missing subs: {subs_in}")
 
     out = args.out or (here / f"{here.name} - final.mkv")
     out.parent.mkdir(parents=True, exist_ok=True)
 
     vmeta = probe_video_meta(video)
     ameta = probe_audio_meta(video)
+    min_gap = 60.0
+    fades = join_fades(segs, fade_dur, min_gap)
+    audio_in = last_audio_in(kden)
     fc = build_filter_complex(
         segs,
         vmeta["fps_num"],
         vmeta["fps_den"],
         xfade=xfade,
         fade_dur=fade_dur,
+        min_gap=min_gap,
+        last_audio_start=audio_in,
     )
     scratch = Path(os.environ.get("FANEDIT_SCRATCH", "/media/ari/HD/FanEditRender"))
     tmp_root = scratch / "tmp" / "fanmix_encode"
@@ -359,8 +530,12 @@ def main() -> int:
     fc_path.write_text(fc, encoding="utf-8")
     tmp_nosub = tmp_root / "nosubs.mkv"
     subs_adj = tmp_root / "shifted-xfade.srt"
-    join_out = segs[0][1] - segs[0][0] if segs else 0.0
-    shift_srt_for_xfade(subs_in, subs_adj, join_out, fade_dur)
+    n_cues = remap_srt(subs_in, subs_adj, segs, fades)
+    lead = (segs[-1][0] - audio_in) if audio_in is not None else 0.0
+    print(
+        f"subs={subs_in.name} cues={n_cues} fades={fades} audio_lead={lead:.3f}",
+        file=sys.stderr,
+    )
 
     pix = "yuv420p"
     encode = [

@@ -4,11 +4,11 @@ Cut list from the Kdenlive timeline versus the original feature. A hole is a sou
 
 ## Intent
 
-Removes PTA’s whip-pan out of Reed’s demo-tape office through On the Lookout, the Valley night drive, and the donut-shop stick-up/kill. Lands on the first black frame; the original black hold into the Rahad-planning scene stays.
+Removes PTA’s whip-pan out of Reed’s demo-tape office through On the Lookout, the Valley night drive, and the donut-shop stick-up/kill. Lands on the first black frame; the original black hold into the Rahad-planning scene stays. Also removes the Colonel’s jail beating after Buck’s commercial.
 
 - Kdenlive: `Boogie Nights (1997) - The Dream.kdenlive`
 - Source SRT: `Boogie Nights (1997) - The Dream.srt`
-- Picture holes: **1** (~19.4 min of source removed)
+- Picture holes: **2** (~19.9 min of source removed)
 
 ## Removals (source times)
 
@@ -57,3 +57,12 @@ Removes PTA’s whip-pan out of Reed’s demo-tape office through On the Lookout
   - So let's just talk, okay?
   - If there is something that I didn't fill out correctly on this...
   - … +204 more cues in this window
+
+### 2. 02:20:47.798 – 02:21:20.646 (32.8s)
+
+- **Scene:** The Colonel beaten in jail. Buck’s line “Buck, honey, that was great.” (02:20:44) stays. Picture returns at 02:21:20.646, during the Spanish countdown. A Beach Boys song runs across the jail scene, so the musical join is broken on purpose.
+- **Removed subtitles:**
+  - I said, shut up, Colonel.
+  - Shut up, Colonel.
+  - I said, shut up.
+  - Cinco, cuatro, tres, dos, uno. (cue starts at 02:21:17.469, inside the hole; picture returns before the cue ends)
