@@ -18,6 +18,20 @@ __pycache__/
 .ruff_cache/
 
 # Local feature/source media (never tip) — keep relative links in .kdenlive
+# Audio and video stay out of git everywhere. IPFS stubs are the pointers.
+*.mkv
+*.mp4
+*.mp3
+*.m4a
+*.wav
+*.flac
+*.aac
+*.ogg
+*.opus
+*.webm
+*.avi
+*.mov
+*.m4v
 FanMixes/**/_sources/
 KidFriendly/**/_sources/
 FanMixes/**/*.mkv
