@@ -59,13 +59,38 @@ api_ok() {
   [[ "${ok}" -eq 1 ]]
 }
 
+node_fqdn="$(
+  grep -E '^RELAY_NODE_FQDN=' /opt/relay/relay.env 2>/dev/null | head -1 | cut -d= -f2- || true
+)"
+node_fqdn="${node_fqdn:-${RELAY_NODE_FQDN:-}}"
+
+# Chat hub: keep channels.json + parent dir writable by relay-chat (atomic save).
+# Deploy/rsync often reverts /opt/relay/chat to relay:relay and trips EACCES crash-loops.
+ensure_chat_index_perms() {
+  local chat_root="${CHAT_ROOT:-/opt/relay/chat}"
+  local index="${CHAT_INDEX:-${chat_root}/channels.json}"
+  [[ -d "${chat_root}" ]] || return 0
+  if ! id relay-chat >/dev/null 2>&1; then
+    return 0
+  fi
+  # Parent must allow create/replace; setgid keeps group stable across ops.
+  chown relay:relay "${chat_root}" 2>/dev/null || true
+  chmod 2775 "${chat_root}" 2>/dev/null || true
+  usermod -aG relay relay-chat 2>/dev/null || true
+  setfacl -m u:relay-chat:rwx "${chat_root}" 2>/dev/null || true
+  if [[ -e "${index}" ]]; then
+    chown relay-chat:relay-chat "${index}" 2>/dev/null || true
+    chmod 664 "${index}" 2>/dev/null || true
+  fi
+}
+
+if [[ "${node_fqdn}" == "iad1.relaygateway.net" || "${node_fqdn}" == iad1.* ]]; then
+  ensure_chat_index_perms
+fi
+
 if [[ -z "${CHAT_CADDY_MODE:-}" ]]; then
   # Never hairpin on the chat hub: if :8098 is down, keep local proxy (fail locally)
   # instead of reverse_proxy https://iad1 (Caddy→self TLS storm).
-  node_fqdn="$(
-    grep -E '^RELAY_NODE_FQDN=' /opt/relay/relay.env 2>/dev/null | head -1 | cut -d= -f2- || true
-  )"
-  node_fqdn="${node_fqdn:-${RELAY_NODE_FQDN:-}}"
   if [[ "${node_fqdn}" == "iad1.relaygateway.net" || "${node_fqdn}" == iad1.* ]]; then
     export CHAT_CADDY_MODE=local
   elif curl -fsS --max-time 1 http://127.0.0.1:8098/chat/api/health >/dev/null 2>&1 \
