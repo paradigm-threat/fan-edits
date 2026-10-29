@@ -1,11 +1,11 @@
 {
   "schema": "relay.assets-manifest.v1",
-  "mediaRoot": "bafybeiew76v7zwggj2gvmk7y6jeu55e3rhgt3ajxadhrjtxol6g6hwt5xa",
-  "mediaRootBuiltAt": "2026-10-10T16:00:57Z",
+  "mediaRoot": "bafybeicowvsfixjsog7hehku66aaybbzdz2az7efe6zep4oespwjnszsru",
+  "mediaRootBuiltAt": "2026-10-17T10:46:23Z",
   "assets": [
     {
-      "id": "FanMixes_2012 (2009) - Salvation_2012 (2009) - Salvation.mkv",
-      "path": "FanMixes/2012 (2009) - Salvation/2012 (2009) - Salvation.mkv",
+      "id": "FanMixes_2012 (2009) - Open The Gates_2012 (2009) - Open The Gates.mkv",
+      "path": "FanMixes/2012 (2009) - Open The Gates/2012 (2009) - Open The Gates.mkv",
       "ipfs": "bafybeigrst2gz4kdohc5ivojkhcbsphoye3du3qwiuobddjlas37sxby6u",
       "contentType": "video/x-matroska",
       "sha256": "aabbf95182b8799e41cf30dce7e2b827be85c8ce8bcb343957c364625d65f070",
@@ -20,8 +20,16 @@
       "bytes": 683033790
     },
     {
-      "id": "FanMixes_Boogie Nights (1997) - No Lookout_Boogie Nights (1997) - No Lookout - final.hevc.mp4",
-      "path": "FanMixes/Boogie Nights (1997) - No Lookout/Boogie Nights (1997) - No Lookout - final.hevc.mp4",
+      "id": "FanMixes_American Psycho (2000) - Psychosomatic_American Psycho (2000) - Psychosomatic.mkv",
+      "path": "FanMixes/American Psycho (2000) - Psychosomatic/American Psycho (2000) - Psychosomatic.mkv",
+      "ipfs": "bafybeifn7lnufqsdwh7bay2v6r4uqlbg6owbpeh5fjwanzccdxup5fofuq",
+      "contentType": "video/x-matroska",
+      "sha256": "671a279320820229039ba2788a75b9a2ebf5a82fb1b2f188ed8581b79cbe3756",
+      "bytes": 1111914882
+    },
+    {
+      "id": "FanMixes_Boogie Nights (1997) - The Dream_Boogie Nights (1997) - The Dream.hevc.mp4",
+      "path": "FanMixes/Boogie Nights (1997) - The Dream/Boogie Nights (1997) - The Dream.hevc.mp4",
       "ipfs": "bafybeiagffyyh6b7ttnk2kr4txzlkg5qzgmgsyy6fmjifjojt2ncenta6a",
       "contentType": "video/mp4",
       "sha256": "eb279af194b38bc69b143633e220049885d2dd4f6b4572908678ca3a83ace9c3",
@@ -36,8 +44,8 @@
       "bytes": 1056477295
     },
     {
-      "id": "FanMixes_Fear and Loathing in Las Vegas (1998) - No North Star_Fear and Loathing in Las Vegas (1998) - No North Star - final.mkv",
-      "path": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/Fear and Loathing in Las Vegas (1998) - No North Star - final.mkv",
+      "id": "FanMixes_Fear and Loathing in Las Vegas (1998) - No North Star_Fear and Loathing in Las Vegas (1998) - No North Star.mkv",
+      "path": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/Fear and Loathing in Las Vegas (1998) - No North Star.mkv",
       "ipfs": "bafybeievvskcnvwxuixwu4vk2vcboa7vlquoibjfcwen5jjiwe4haf2jzi",
       "contentType": "video/x-matroska",
       "sha256": "2d3914315f9f7166cd660f82851a889e3eed4b9be057e917e4704a1fc4145e7b",
@@ -52,8 +60,8 @@
       "bytes": 719063619
     },
     {
-      "id": "FanMixes_Fried Green Tomatoes (1991) - No Frank Bennett_Fried Green Tomatoes (1991) - No Frank Bennett - final.mkv",
-      "path": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/Fried Green Tomatoes (1991) - No Frank Bennett - final.mkv",
+      "id": "FanMixes_Fried Green Tomatoes (1991) - No Frank Bennett_Fried Green Tomatoes (1991) - No Frank Bennett.mkv",
+      "path": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/Fried Green Tomatoes (1991) - No Frank Bennett.mkv",
       "ipfs": "bafybeie6uh4ewfqbhxii7mdlwvkgv6peuc2hf3hs3mvrw5skgyogyapeu4",
       "contentType": "video/x-matroska",
       "sha256": "0aa6809ff211d5f57027d6bc1a4ca8f047ac3d8ea58236381005285e67fb9b74",
@@ -132,6 +140,22 @@
       "bytes": 1646318524
     },
     {
+      "id": "FanMixes_Terminator 3 (2003) - Brass Monkey_Terminator 3 (2003) - Brass Monkey Edition.mkv",
+      "path": "FanMixes/Terminator 3 (2003) - Brass Monkey/Terminator 3 (2003) - Brass Monkey Edition.mkv",
+      "ipfs": "bafybeievkyx47qtij7iobu4qs4u4fcmyywmzryrap6ctiapantcslmqr7m",
+      "contentType": "video/x-matroska",
+      "sha256": "aea3f3ca2cc0021e9a3cbf11c5d24b69666ec2362499b6c40e243a4094d8a617",
+      "bytes": 666869421
+    },
+    {
+      "id": "FanMixes_The Chronicles Of Riddick (2004) - Fry's Edition_The Chronicles Of Riddick (2004) - Fry's Edition.mkv",
+      "path": "FanMixes/The Chronicles Of Riddick (2004) - Fry's Edition/The Chronicles Of Riddick (2004) - Fry's Edition.mkv",
+      "ipfs": "bafybeia5qolxnugcuaqn4cmsz7mew4cqytcyu3gtgohsly4bntdtlos6j4",
+      "contentType": "video/x-matroska",
+      "sha256": "7a17a7b1813d022cefd703741210401e90389a48773a857660eb98832863a9a2",
+      "bytes": 6436973190
+    },
+    {
       "id": "FanMixes_The Mummy (1999) - Debugged_The Mummy Debugged.mkv",
       "path": "FanMixes/The Mummy (1999) - Debugged/The Mummy Debugged.mkv",
       "ipfs": "bafybeicfynx4o23njy4owttcziexmm4f6ibnqceharrhoxsvsbaaax7rxq",
@@ -146,6 +170,14 @@
       "contentType": "video/x-matroska",
       "sha256": "a1617a642db7c212d74be5c30123162f455ec66666edeb63f514d7715591df9a",
       "bytes": 2893240472
+    },
+    {
+      "id": "FanMixes_Tron Legacy (2010) - The Miracle_Tron Legacy (2010) - The Miracle.mkv",
+      "path": "FanMixes/Tron Legacy (2010) - The Miracle/Tron Legacy (2010) - The Miracle.mkv",
+      "ipfs": "bafybeigldolk55uzngbjj75vesn5eza7lzqd6ri2s6tvey6vnqhf42uzha",
+      "contentType": "video/x-matroska",
+      "sha256": "30744cc29e295fbf212678e0f9f503f53ec4a14c52a11953d9674401b978a312",
+      "bytes": 2056886532
     },
     {
       "id": "FanMixes_Van Helsing - DeAnna'd_Van Helsing - DeAnna'd.mkv",
