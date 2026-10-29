@@ -60,7 +60,15 @@ api_ok() {
 }
 
 if [[ -z "${CHAT_CADDY_MODE:-}" ]]; then
-  if curl -fsS --max-time 1 http://127.0.0.1:8098/chat/api/health >/dev/null 2>&1 \
+  # Never hairpin on the chat hub: if :8098 is down, keep local proxy (fail locally)
+  # instead of reverse_proxy https://iad1 (Caddy→self TLS storm).
+  node_fqdn="$(
+    grep -E '^RELAY_NODE_FQDN=' /opt/relay/relay.env 2>/dev/null | head -1 | cut -d= -f2- || true
+  )"
+  node_fqdn="${node_fqdn:-${RELAY_NODE_FQDN:-}}"
+  if [[ "${node_fqdn}" == "iad1.relaygateway.net" || "${node_fqdn}" == iad1.* ]]; then
+    export CHAT_CADDY_MODE=local
+  elif curl -fsS --max-time 1 http://127.0.0.1:8098/chat/api/health >/dev/null 2>&1 \
     || curl -fsS --max-time 1 http://127.0.0.1:8098/api/health >/dev/null 2>&1; then
     export CHAT_CADDY_MODE=local
   else
