@@ -125,6 +125,8 @@ function isAllowedPath(p) {
   ) {
     return true
   }
+  // Site content catalogs (blog index, etc.)
+  if (startsWith(p, 'content/') && (endsWith(p, '.json') || endsWith(p, '.JSON'))) return true
   return false
 }
 
