@@ -95,6 +95,8 @@ function isAllowedPath(p) {
   if (startsWith(p, '.relay/assets/') && endsWith(p, '.ipfs')) return true
   if (startsWith(p, 'hooks/')) return true
   if (startsWith(p, 'scripts/')) return true
+  // Flashback chat sidecar install tree (Ergo/chat-edge configs — not chatlogs)
+  if (startsWith(p, 'ops/chat/')) return true
   if (startsWith(p, 'docs/') && (endsWith(p, '.md') || endsWith(p, '.MD'))) return true
   // Flashback APK sideload + in-app update manifest (git tip, not IPFS)
   if (startsWith(p, 'downloads/') && (endsWith(p, '.apk') || endsWith(p, '.json') || endsWith(p, '.md') || endsWith(p, '.MD'))) return true
@@ -102,15 +104,30 @@ function isAllowedPath(p) {
   if (isGitTipPosterPath(p)) return true
   if (endsWith(p, '.md') || endsWith(p, '.MD')) return true
   if (endsWith(p, '.reel')) return true
+  // Edit projects + project-files manifests (not feature media)
+  if (endsWith(p, '.kdenlive') || endsWith(p, '.KDENLIVE')) return true
+  if (endsWith(p, 'files.json') || endsWith(p, 'stats.json')) return true
+  if (endsWith(p, '.vtt') || endsWith(p, '.VTT')) return true
   if (endsWith(p, '.srt') || endsWith(p, '.SRT')) return true
   if (endsWith(p, '.ass') || endsWith(p, '.ASS')) return true
   if (contains(p, 'remove-') && (endsWith(p, '-ranges.json') || endsWith(p, '-ranges.JSON'))) return true
   if (endsWith(p, '.relay.shifted.srt')) return true
+  // FanMix / KidFriendly cut tooling + scene JSON (still no feature media)
+  if (
+    (startsWith(p, 'FanMixes/') || startsWith(p, 'KidFriendly/')) &&
+    (endsWith(p, '.py') ||
+      endsWith(p, '.sh') ||
+      endsWith(p, '.ps1') ||
+      endsWith(p, '.json') ||
+      endsWith(p, '.JSON'))
+  ) {
+    return true
+  }
   return false
 }
 
 function isGitTipPosterPath(p) {
-  var lower = p.toLowerCase()
+  var lower = ('' + p).toLowerCase()
   var slash = lower.lastIndexOf('/')
   var file = slash >= 0 ? lower.slice(slash + 1) : lower
   return (
