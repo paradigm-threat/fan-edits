@@ -1,0 +1,101 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "FanMixes/Boogie Nights (1997) - The Dream",
+  "files": [
+    {
+      "path": "Boogie Nights (1997) - The Dream.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 10565
+    },
+    {
+      "path": "Boogie Nights (1997) - The Dream.kdenlive.ass",
+      "kind": "other",
+      "bytes": 169975
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 3137
+    },
+    {
+      "path": "cut-black-end.scenes.json",
+      "kind": "other",
+      "bytes": 459
+    },
+    {
+      "path": "cut-end-fine.scenes.json",
+      "kind": "other",
+      "bytes": 279
+    },
+    {
+      "path": "cut-end.scenes.json",
+      "kind": "other",
+      "bytes": 377
+    },
+    {
+      "path": "cut-start.scenes.json",
+      "kind": "other",
+      "bytes": 599
+    },
+    {
+      "path": "generate-the-dream.sh",
+      "kind": "other",
+      "bytes": 572
+    },
+    {
+      "path": "remove-the-dream-ranges.json",
+      "kind": "other",
+      "bytes": 805
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 13344
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 2142
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 287290
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 3100
+    },
+    {
+      "path": "Boogie Nights (1997) - The Dream.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 141473
+    },
+    {
+      "path": "Boogie Nights (1997) - The Dream.srt",
+      "kind": "srt",
+      "bytes": 168752
+    },
+    {
+      "path": "subs/Boogie Nights (1997) - The Dream.english.srt",
+      "kind": "srt",
+      "bytes": 140341
+    },
+    {
+      "path": "subs/Boogie Nights (1997) - The Dream.enhanced.srt",
+      "kind": "srt",
+      "bytes": 140691
+    },
+    {
+      "path": "subs/Boogie Nights (1997) - The Dream.english.vtt",
+      "kind": "vtt",
+      "bytes": 132220
+    },
+    {
+      "path": "subs/Boogie Nights (1997) - The Dream.enhanced.vtt",
+      "kind": "vtt",
+      "bytes": 132560
+    }
+  ]
+}

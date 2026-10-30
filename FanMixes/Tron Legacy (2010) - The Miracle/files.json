@@ -1,0 +1,36 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "FanMixes/Tron Legacy (2010) - The Miracle",
+  "files": [
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 0
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 0
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "other",
+      "bytes": 0
+    },
+    {
+      "path": "Tron Legacy (2010) - The Miracle.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 0
+    },
+    {
+      "path": "Tron Legacy (2010) - The Miracle.kdenlive.srt",
+      "kind": "srt",
+      "bytes": 0
+    },
+    {
+      "path": "_sources/",
+      "kind": "dir",
+      "bytes": 0
+    }
+  ]
+}

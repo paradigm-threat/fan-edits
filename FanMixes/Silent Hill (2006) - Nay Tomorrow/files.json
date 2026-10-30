@@ -3,9 +3,39 @@
   "path": "FanMixes/Silent Hill (2006) - Nay Tomorrow",
   "files": [
     {
+      "path": "Silent Hill (2006) - Nay Tomorrow.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 266871
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 8242
+    },
+    {
+      "path": "Silent Hill (2006) - Nay Tomorrow Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 68575
+    },
+    {
+      "path": "Silent Hill (2006) - Nay Tomorrow.kdenlive.ass",
+      "kind": "other",
+      "bytes": 68575
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 226557
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 931
+    },
+    {
+      "path": "Silent Hill (2006) - Nay Tomorrow.srt",
+      "kind": "srt",
+      "bytes": 56414
     }
   ]
 }

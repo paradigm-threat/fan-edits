@@ -3,9 +3,74 @@
   "path": "FanMixes/War of the Worlds (2005) - Family Therapy",
   "files": [
     {
+      "path": "War of the Worlds (2005) - Family Therapy.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 200934
+    },
+    {
+      "path": "ost/01 - Jeff Wayne - The Eve Of The War.mp3",
+      "kind": "music",
+      "bytes": 21921725
+    },
+    {
+      "path": "ost/06 - Jeff Wayne - Epilogue (Part 1).mp3",
+      "kind": "music",
+      "bytes": 6559263
+    },
+    {
+      "path": "ost/Orson Welles - War Of The Worlds - Radio Broadcast 1938 - Complete Broadcast..mp3",
+      "kind": "music",
+      "bytes": 54756551
+    },
+    {
+      "path": "ost/The Red Weed (Instrumental).mp3",
+      "kind": "music",
+      "bytes": 8450017
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 14277
+    },
+    {
+      "path": "ost/album-cover.webp",
+      "kind": "other",
+      "bytes": 109406
+    },
+    {
+      "path": "ost/desktop.ini",
+      "kind": "other",
+      "bytes": 106
+    },
+    {
+      "path": "ost/War of the Worlds (2005) - Family Therapy Edition.png",
+      "kind": "other",
+      "bytes": 6564261
+    },
+    {
+      "path": "War of the Worlds (2005) - Family Therapy.kdenlive.ass",
+      "kind": "other",
+      "bytes": 56849
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 246840
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 1245
+    },
+    {
+      "path": "War of the Worlds (2005) - Family Therapy.kdenlive.srt",
+      "kind": "srt",
+      "bytes": 44732
+    },
+    {
+      "path": "War of the Worlds (2005) - Family Therapy.srt",
+      "kind": "srt",
+      "bytes": 47703
     }
   ]
 }

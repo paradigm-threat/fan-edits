@@ -5,12 +5,12 @@
     {
       "path": "Van Helsing - DeAnna'd.edit.kdenlive",
       "kind": "kdenlive",
-      "bytes": 378911
+      "bytes": 384678
     },
     {
       "path": "Van Helsing - DeAnna'd.kdenlive",
       "kind": "kdenlive",
-      "bytes": 379462
+      "bytes": 384828
     },
     {
       "path": "castlevania-symphony_of_the_night_ost/04 Symphony of the Night.mp3",
@@ -38,14 +38,24 @@
       "bytes": 3571708
     },
     {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 444320
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 2281
+      "bytes": 2296
     },
     {
       "path": "subs/Van Helsing - DeAnna'd.english.srt",
       "kind": "srt",
-      "bytes": 29758
+      "bytes": 29718
+    },
+    {
+      "path": "subs/Van Helsing - DeAnna'd.enhanced.srt",
+      "kind": "srt",
+      "bytes": 31976
     },
     {
       "path": "Van Helsing - DeAnna'd.edit.kdenlive.srt",
@@ -65,7 +75,7 @@
     {
       "path": "subs/Van Helsing - DeAnna'd.english.vtt",
       "kind": "vtt",
-      "bytes": 27844
+      "bytes": 27808
     }
   ]
 }

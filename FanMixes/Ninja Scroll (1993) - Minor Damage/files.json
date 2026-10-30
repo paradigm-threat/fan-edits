@@ -3,9 +3,74 @@
   "path": "FanMixes/Ninja Scroll (1993) - Minor Damage",
   "files": [
     {
+      "path": "Ninja Scroll (1993) - Minor Damage.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 485593
+    },
+    {
+      "path": "Ninja Scroll (1993).kdenlive",
+      "kind": "kdenlive",
+      "bytes": 163055
+    },
+    {
+      "path": "Trailer-3000-2400.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 42607
+    },
+    {
+      "path": "Trailer-3000.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 42596
+    },
+    {
+      "path": "Trailer.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 44316
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 10060
+    },
+    {
+      "path": "Ninja Scroll (1993) - Minor Damage.kdenlive.ass",
+      "kind": "other",
+      "bytes": 57445
+    },
+    {
+      "path": "Ninja Scroll (1993).kdenlive.ass",
+      "kind": "other",
+      "bytes": 57879
+    },
+    {
+      "path": "Trailer-3000-2400.kdenlive.ass",
+      "kind": "other",
+      "bytes": 2832
+    },
+    {
+      "path": "Trailer-3000.kdenlive.ass",
+      "kind": "other",
+      "bytes": 2832
+    },
+    {
+      "path": "Trailer.kdenlive.ass",
+      "kind": "other",
+      "bytes": 2832
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 270894
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 1086
+    },
+    {
+      "path": "Ninja Scroll (1993) - Minor Damage.srt",
+      "kind": "srt",
+      "bytes": 45499
     }
   ]
 }

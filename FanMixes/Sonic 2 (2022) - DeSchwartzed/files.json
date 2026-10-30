@@ -3,9 +3,39 @@
   "path": "FanMixes/Sonic 2 (2022) - DeSchwartzed",
   "files": [
     {
+      "path": "Sonic 2 (2022) - DeSchwartzed.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 267777
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 12885
+    },
+    {
+      "path": "Sonic - DeSchwartzed 2022.kdenlive.ass",
+      "kind": "other",
+      "bytes": 59685
+    },
+    {
+      "path": "Sonic 2 (2022) - DeSchwartzed Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 59685
+    },
+    {
+      "path": "Sonic 2 (2022) - DeSchwartzed.ass",
+      "kind": "other",
+      "bytes": 59685
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 286778
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 3101
+      "bytes": 4332
     }
   ]
 }

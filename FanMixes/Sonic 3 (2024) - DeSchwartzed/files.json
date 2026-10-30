@@ -3,9 +3,39 @@
   "path": "FanMixes/Sonic 3 (2024) - DeSchwartzed",
   "files": [
     {
+      "path": "Sonic 3 (2024) - DeSchwartzed.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 2093006
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 21818
+    },
+    {
+      "path": "Sonic - DeSchwartzed 2024.kdenlive.ass",
+      "kind": "other",
+      "bytes": 63780
+    },
+    {
+      "path": "Sonic 3 (2024) - DeSchwartzed.kdenlive.ass",
+      "kind": "other",
+      "bytes": 63780
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 260594
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 3292
+      "bytes": 4804
+    },
+    {
+      "path": "Sonic 3 (2024) - DeSchwartzed.srt",
+      "kind": "srt",
+      "bytes": 52159
     }
   ]
 }

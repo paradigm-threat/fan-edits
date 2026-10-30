@@ -3,9 +3,39 @@
   "path": "FanMixes/Alien Resurrection (1997) - UnJossed",
   "files": [
     {
+      "path": "Alien Resurrection (1997) - UnJossed.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 79031
+    },
+    {
+      "path": "Alien Resurrection (1997) - UnJossed.kdenlive.ass",
+      "kind": "other",
+      "bytes": 0
+    },
+    {
+      "path": "Alien Resurrection - DeJoss.kdenlive-1.ass",
+      "kind": "other",
+      "bytes": 0
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 3841
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 262269
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 668
+      "bytes": 5597
+    },
+    {
+      "path": "Alien Resurrection (1997) - UnJossed.srt",
+      "kind": "srt",
+      "bytes": 66647
     }
   ]
 }

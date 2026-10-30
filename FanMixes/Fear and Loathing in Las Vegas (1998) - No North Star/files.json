@@ -3,9 +3,59 @@
   "path": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star",
   "files": [
     {
+      "path": "Fear and Loathing in Las Vegas (1998) - No North Star.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 6007
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 2546
+    },
+    {
+      "path": "cut-window.scenes.json",
+      "kind": "other",
+      "bytes": 1247
+    },
+    {
+      "path": "Fear and Loathing in Las Vegas (1998) - No North Star.kdenlive.ass",
+      "kind": "other",
+      "bytes": 186677
+    },
+    {
+      "path": "generate-north-star.sh",
+      "kind": "other",
+      "bytes": 648
+    },
+    {
+      "path": "remove-north-star-ranges.json",
+      "kind": "other",
+      "bytes": 880
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 15219
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 1940
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 700
+    },
+    {
+      "path": "Fear and Loathing in Las Vegas (1998) - No North Star.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 152938
+    },
+    {
+      "path": "Fear and Loathing in Las Vegas (1998) - No North Star.srt",
+      "kind": "srt",
+      "bytes": 165662
     }
   ]
 }

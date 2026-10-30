@@ -3,6 +3,26 @@
   "path": "FanMixes/Congo (1995) - Adult Supervision",
   "files": [
     {
+      "path": "Congo (1995) - Adult Supervision.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 184338
+    },
+    {
+      "path": "Congo (1995) - Adult Supervision.kdenlive.ass",
+      "kind": "other",
+      "bytes": 79191
+    },
+    {
+      "path": "Congo (1995) - Incel Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 79191
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 301741
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 2229

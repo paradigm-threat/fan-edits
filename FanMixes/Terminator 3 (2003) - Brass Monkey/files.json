@@ -3,9 +3,79 @@
   "path": "FanMixes/Terminator 3 (2003) - Brass Monkey",
   "files": [
     {
+      "path": "Terminator 3 (2003) - Brass Monkey.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 209636
+    },
+    {
+      "path": "ost/11 I'll Be Back.mp3",
+      "kind": "music",
+      "bytes": 9623896
+    },
+    {
+      "path": "ost/14 Hasta la Vista, Baby (T1000 Freezes).mp3",
+      "kind": "music",
+      "bytes": 7340924
+    },
+    {
+      "path": "ost/Brass Monkey.mp3",
+      "kind": "music",
+      "bytes": 3779757
+    },
+    {
+      "path": "ost/Convenience Store Ambience (Supermarket Grocery Shop Interior Background Noise Clip) (Sound Effect).mp3",
+      "kind": "music",
+      "bytes": 2882174
+    },
+    {
+      "path": "ost/Fuck You Asshole.mp3",
+      "kind": "music",
+      "bytes": 1662151
+    },
+    {
+      "path": "ost/Love Scene.mp3",
+      "kind": "music",
+      "bytes": 3592496
+    },
+    {
+      "path": "ost/Radio.mp3",
+      "kind": "music",
+      "bytes": 3457077
+    },
+    {
+      "path": "ost/Tunnel Chase.mp3",
+      "kind": "music",
+      "bytes": 7526537
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 7410
+    },
+    {
+      "path": "Terminator 3 (2003) - Brass Monkey Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 45954
+    },
+    {
+      "path": "Terminator 3 (2003) - Brass Monkey.kdenlive.ass",
+      "kind": "other",
+      "bytes": 45954
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 263419
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 1182
+      "bytes": 5214
+    },
+    {
+      "path": "Terminator 3 (2003) - Brass Monkey.srt",
+      "kind": "srt",
+      "bytes": 37839
     }
   ]
 }

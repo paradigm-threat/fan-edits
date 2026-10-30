@@ -3,9 +3,69 @@
   "path": "FanMixes/Riddick (2013) - Unjinxed",
   "files": [
     {
+      "path": "Riddick (2013) - Unjinxed.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 100282
+    },
+    {
+      "path": "apply_riddick_reorder.py",
+      "kind": "other",
+      "bytes": 12102
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 10820
+    },
+    {
+      "path": "remove-riddick-unjinxed-ranges.json",
+      "kind": "other",
+      "bytes": 1253
+    },
+    {
+      "path": "render-riddick.ps1",
+      "kind": "other",
+      "bytes": 2136
+    },
+    {
+      "path": "render_final_mkv.py",
+      "kind": "other",
+      "bytes": 7337
+    },
+    {
+      "path": "Riddick (2013) - Unjinxed.kdenlive.ass",
+      "kind": "other",
+      "bytes": 41900
+    },
+    {
+      "path": "Riddick (2013) - Unperverted Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 41900
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 4207
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 265595
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 1007
+      "bytes": 2847
+    },
+    {
+      "path": "Riddick (2013) - Unjinxed.kdenlive.shifted.srt",
+      "kind": "srt",
+      "bytes": 35396
+    },
+    {
+      "path": "Riddick (2013) - Unjinxed.srt",
+      "kind": "srt",
+      "bytes": 47932
     }
   ]
 }

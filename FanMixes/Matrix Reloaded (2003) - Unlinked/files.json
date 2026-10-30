@@ -3,9 +3,54 @@
   "path": "FanMixes/Matrix Reloaded (2003) - Unlinked",
   "files": [
     {
+      "path": "Matrix Reloaded (2003) - Unlinked.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 205560
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 2779
+    },
+    {
+      "path": "Matrix Reloaded (2003) - Unlinked Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 95449
+    },
+    {
+      "path": "Matrix Reloaded (2003) - Unlinked.kdenlive.ass",
+      "kind": "other",
+      "bytes": 95449
+    },
+    {
+      "path": "poster.jpg",
+      "kind": "poster",
+      "bytes": 280124
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 745
+      "bytes": 4968
+    },
+    {
+      "path": "subs/Matrix Reloaded (2003) - Unlinked.enhanced.srt",
+      "kind": "srt",
+      "bytes": 77207
+    },
+    {
+      "path": "subs/Matrix Reloaded (2003) - Unlinked.english.vtt",
+      "kind": "other",
+      "bytes": 71426
+    },
+    {
+      "path": "subs/Matrix Reloaded (2003) - Unlinked.enhanced.vtt",
+      "kind": "other",
+      "bytes": 73186
+    },
+    {
+      "path": "subs/Matrix Reloaded (2003) - Unlinked.english.srt",
+      "kind": "srt",
+      "bytes": 75898
     }
   ]
 }

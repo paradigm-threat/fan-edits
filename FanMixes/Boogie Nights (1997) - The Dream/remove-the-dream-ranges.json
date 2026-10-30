@@ -1,0 +1,22 @@
+{
+  "description": "Remove from PTA's whip-pan off Reed/Dirk in the gold-record office (after 'we look like assholes right now') through On the Lookout, the Valley night drive, and the donut-shop stick-up/kill. Resume on the first fully black frame at 2:05:19.000 (measured luma ~1); original ~5 s of black then fade-up into the Rahad-planning scene. Large jump uses fadeblack + acrossfade.",
+  "xfade": {
+    "transition": "fadeblack",
+    "duration": 0.5
+  },
+  "ranges": [
+    {
+      "start": 6356.058,
+      "end": 7519.0,
+      "join_fade": true,
+      "transition": "fadeblack",
+      "note": "Office whip-pan through Amber/Dirk, bank loan, custody, On the Lookout, night-drive, donut shop, Buck stick-up/kill; first held black frame 2:05:19.000, next picture 2:05:24.5 Rahad planning"
+    },
+    {
+      "start": 8447.798,
+      "end": 8480.646,
+      "join_fade": false,
+      "note": "Colonel jail beating after Buck's commercial. Hard cut. Beach Boys cue breaks at the join. Picture returns at 2:21:20.646 during the Spanish countdown."
+    }
+  ]
+}

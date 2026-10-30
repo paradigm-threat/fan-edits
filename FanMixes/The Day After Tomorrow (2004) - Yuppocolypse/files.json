@@ -3,9 +3,39 @@
   "path": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse",
   "files": [
     {
+      "path": "poster.jpg",
+      "kind": "other",
+      "bytes": 0
+    },
+    {
+      "path": "The Day After Tomorrow (2004) - Yuppocolypse.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 236089
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 16125
+    },
+    {
+      "path": "The Day After Tomorrow (2004) - Chemtrail Edition.kdenlive.ass",
+      "kind": "other",
+      "bytes": 79437
+    },
+    {
+      "path": "The Day After Tomorrow (2004) - Yuppocolypse.kdenlive.ass",
+      "kind": "other",
+      "bytes": 79437
+    },
+    {
       "path": "README.md",
       "kind": "readme",
       "bytes": 483
+    },
+    {
+      "path": "The Day After Tomorrow (2004) - Yuppocolypse.srt",
+      "kind": "srt",
+      "bytes": 68798
     }
   ]
 }

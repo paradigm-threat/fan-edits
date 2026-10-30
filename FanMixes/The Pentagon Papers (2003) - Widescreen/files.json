@@ -3,9 +3,64 @@
   "path": "FanMixes/The Pentagon Papers (2003) - Widescreen",
   "files": [
     {
+      "path": "build_crop_filter.py",
+      "kind": "other",
+      "bytes": 2414
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 759
+    },
+    {
+      "path": "face_crop_plan.py",
+      "kind": "other",
+      "bytes": 15027
+    },
+    {
+      "path": "INVESTIGATION.md",
+      "kind": "other",
+      "bytes": 4505
+    },
+    {
+      "path": "upscale_widescreen.ps1",
+      "kind": "other",
+      "bytes": 4604
+    },
+    {
+      "path": "upscale_widescreen.py",
+      "kind": "other",
+      "bytes": 18461
+    },
+    {
+      "path": "widen_preview.py",
+      "kind": "other",
+      "bytes": 2078
+    },
+    {
+      "path": "PLAN.md",
+      "kind": "plan",
+      "bytes": 5394
+    },
+    {
       "path": "README.md",
       "kind": "readme",
-      "bytes": 1218
+      "bytes": 5090
+    },
+    {
+      "path": "subs/The Pentagon Papers (2003).english.srt",
+      "kind": "srt",
+      "bytes": 100324
+    },
+    {
+      "path": "subs/The Pentagon Papers (2003).enhanced.srt",
+      "kind": "srt",
+      "bytes": 105911
+    },
+    {
+      "path": "The Pentagon Papers (2003) - Widescreen.english.srt",
+      "kind": "srt",
+      "bytes": 100324
     }
   ]
 }

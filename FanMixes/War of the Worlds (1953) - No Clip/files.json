@@ -1,0 +1,31 @@
+{
+  "schema": "flashback.project-files.v1",
+  "path": "FanMixes/War of the Worlds (1953) - No Clip",
+  "files": [
+    {
+      "path": "War of the Worlds (1953) - No Clip.kdenlive",
+      "kind": "kdenlive",
+      "bytes": 167134
+    },
+    {
+      "path": "CHANGES.md",
+      "kind": "other",
+      "bytes": 2015
+    },
+    {
+      "path": "War of the Worlds (1953) - No Clip.kdenlive.ass",
+      "kind": "other",
+      "bytes": 85100
+    },
+    {
+      "path": "README.md",
+      "kind": "readme",
+      "bytes": 650
+    },
+    {
+      "path": "War of the Worlds (1953) - No Clip.srt",
+      "kind": "srt",
+      "bytes": 68711
+    }
+  ]
+}

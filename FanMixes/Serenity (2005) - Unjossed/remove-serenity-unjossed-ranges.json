@@ -1,0 +1,41 @@
+{
+  "description": "Serenity Unjossed \u2014 family/kids, strict reaver gore. Whole batteries beat; Haven shortened to Mal reaction; Maidenhead fight kept; leaf on wind + final fight kept.",
+  "ranges": [
+    {
+      "start": 95.0,
+      "end": 185.0,
+      "note": "Opening: Reaver attack on screen (gore only)"
+    },
+    {
+      "start": 1870.22,
+      "end": 1919.13,
+      "note": "Whole Kaylee/Jayne batteries beat; batteries beat (cont.); batteries beat (cont.)",
+      "join_fade": false
+    },
+    {
+      "start": 3055.0,
+      "end": 3320.0,
+      "note": "Haven: bodies on posts \u2014 trim to Mal reaction (~2:05); Haven: extend trim if posts still visible"
+    },
+    {
+      "start": 3780.0,
+      "end": 3865.0,
+      "note": "Maidenhead: reaver-gore inserts only (keep martial arts)"
+    },
+    {
+      "start": 5280.0,
+      "end": 5385.0,
+      "note": "Lab: reaver specimen / gore visuals"
+    },
+    {
+      "start": 5580.0,
+      "end": 5680.0,
+      "note": "Mr. Universe reaver horror (reduce)"
+    },
+    {
+      "start": 5850.0,
+      "end": 5920.0,
+      "note": "Reaver fleet / corpse shock beats"
+    }
+  ]
+}
