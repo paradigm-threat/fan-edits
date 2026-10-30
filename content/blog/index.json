@@ -1,9 +1,15 @@
 {
   "posts": [
     {
+      "slug": "2026-10-15-fanedit-org-ban",
+      "date": "2026-10-15",
+      "title": "Banned from fanedit.org",
+      "path": "content/blog/2026-10-15-fanedit-org-ban.md"
+    },
+    {
       "slug": "2026-10-05-launch",
       "date": "2026-10-05",
-      "title": "We’re live — and Halloween gets a Sommers trio",
+      "title": "We\u2019re live \u2014 and Halloween gets a Sommers trio",
       "path": "content/blog/2026-10-05-launch.md"
     }
   ]

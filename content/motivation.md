@@ -22,6 +22,35 @@ Progress is real. It is also slow. We are not there yet.
 
 Existing fanedit communities set useful ownership norms. They also feel deeply compromised — a **controlled opposition** form of the scene, where industry fear manages the outlet. Quality and dissent get filtered. The author of this repository is banned from those venues; they are not open to people trying to stand out with serious material.
 
+### Banned from fanedit.org (2026) — and how the game works
+
+They **never provide ban reasons**. They **never provide shadowban reasons**. That is not a paperwork gap. It is the method.
+
+The performance is always the same: act like staff are merely **curating inappropriate comments** — tidy, proportional, community-minded. What actually happens is different. Entire projects get **archived / soft-erased** because **two words** appeared in a cut description. Mocking admin content and kill-word enforcement make the vocabulary rule visible without ever writing it down as a stated ban notice. You are not moderated for a comment tone. You are disappeared for naming a cut reason they will not allow in the sandbox.
+
+What I can document from the outside (they will not):
+
+1. **“Predictive Programming”** — forbidden in practice. The phrase, and every edit that used it as a reason to trim. Projects go dark over body text, not over a transparent rule citation.
+2. **After I asked them to disable the account and they refused**, heckling continued. Replies to those attacks were written with an LLM. Generative AI posting is also forbidden there. Visibility died first; the account ban came after.
+
+The last thing I told them before the ban was simple: **post your rules**. If you think a term should be avoided or prohibited, **say so**. An average person who once saw the public Wikipedia pages on the subject has no reason to believe the words are now unspeakable on a film forum. Silence is the trap.
+
+#### Wikipedia deletions → forum kill-switches
+
+We found **two** Wikipedia entries for predictive programming that were deleted — **2015**, then again **2020**. 2020 opened one of the darkest presidential campaign stretches in recent American memory, and with it a **huge spike in cancel culture**. Scrubbing the last encyclopedia page that still existed that year did not merely tidy a wiki. It set the **grounds for removal** anywhere online for anyone who still treated the term as live vocabulary — especially people like me who **never realized it had been banned at all** and walked straight into the trap.
+
+That trap only works if the forbidden list stays **unposted**. Words so radioactive they cannot even appear in the site rules are how you know you are dealing with a **black hole** the internet was sinking into before things turned around — not with ordinary community guidelines.
+
+#### Not a nonpartisan manners dispute
+
+This cannot honestly be sold as nonpartisan housekeeping. In that era it was overwhelmingly **one side** — Democrats and their cultural apparatus — that made canceling people an acceptable strategy at every social level, while accusing the other side of doing the same. Attacking a president or the Christian faith was treated as normal discourse that required no apology. When friends finally stopped listening after years of that assault, the attackers called *that* “cancel culture.”
+
+**Real cancel culture** is what happens when **no rules are posted**, administration **shadow-removes** people’s old work and comments without notice, and there is **no audience left to petition** — no list of grievances, no appeal that reaches daylight. All of that went out the window once certain terms became so forbidden they could not be named in the rules themselves.
+
+From beginning to end the posture is **100% disingenuous**: soft power dressed as housekeeping. A venue that will not say why it erased you, while erasing *projects* over vocabulary, is not a craft forum with strict manners. It is a **permitted outlet** — ownership norms on the surface, industry-aligned containment underneath. That is why I conclude it is **mostly industry-agent run**: the incentives match a sandbox that never lets owned-media remix approach serious competition with the product pipeline it claims to serve.
+
+Flashback Repository is the catalog that remains. Same record in the [home blog](/content/blog/2026-10-15-fanedit-org-ban.md).
+
 Historic leaders have described controlled opposition as a containment strategy. Applied to culture, it means a permitted sandbox that never approaches the full potential of owned-media remix. We have not begun even **1%** of that potential.
 
 ## Pushback by doing the work

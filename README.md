@@ -118,6 +118,12 @@ Navigate to the Applications section.
 Find mailto in the list and select Use Gmail from the dropdown menu.
 
 
+## Banned from fanedit.org (2026)
+
+[fanedit.org](https://fanedit.org/) never states ban or shadowban reasons. The pose is “we’re just curating inappropriate comments.” In practice they **archive entire projects** over **two words** in a description — soft erasure dressed as manners. Wikipedia’s predictive-programming pages were deleted in **2015** and again around **2020** (peak cancel-culture years); that scrub set the trap for anyone who still used the term and never saw an unposted kill-list. Last thing I told them: **post your rules**. Disingenuous end to end; I conclude the venue is **mostly industry-agent run**.
+
+Public catalog: [flashbackrepository.org](https://flashbackrepository.org/). Full analysis on the site **Why** page and [home blog](content/blog/2026-10-15-fanedit-org-ban.md).
+
 ## Banned from /r/FanEdit Subreddit for accusation of piracy.
 
 Within the 2nd day of posting my fanedits I got perm banned, and they won't let me appeal. 
