@@ -20,7 +20,7 @@ Antique gold on near-black. **Header logo** = cinematic three-frame film strip (
 | `svg/favicon.svg` | Small mark |
 | `../favicon.svg` | Site favicon (same art) |
 
-Raster root favicons / OG image may also live as **thin IPFS** (stubs under `.relay/assets/` / local under `.relay/local-assets/`):
+Raster root favicons / OG image may also live as **thin IPFS** stubs under `.relay/assets/` (or as tip binaries when small enough for git):
 
 - `/favicon.ico`, `/favicon-16x16.png`, `/favicon-32x32.png`
 - `/apple-touch-icon.png`, `/android-chrome-192x192.png`, `/android-chrome-512x512.png`

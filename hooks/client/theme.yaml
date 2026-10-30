@@ -113,6 +113,13 @@ themes:
         color: "var(gold)"
         textDecoration: "none"
         minWidth: "0"
+      # Beat global a:hover underline (brand is a home link).
+      ".fb-brand:hover":
+        color: "var(gold)"
+        textDecoration: "none"
+      ".fb-brand:focus":
+        color: "var(gold)"
+        textDecoration: "none"
       ".fb-brand-logo":
         display: "block"
         height: "52px"

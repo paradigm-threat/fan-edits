@@ -94,6 +94,8 @@ function isAllowedPath(p) {
   if (p === '.gitignore') return true
   if (startsWith(p, '.relay/assets/') && endsWith(p, '.ipfs')) return true
   if (startsWith(p, 'hooks/')) return true
+  // Cursor agent rules checked into tip for FanMix conventions
+  if (startsWith(p, '.cursor/rules/') && (endsWith(p, '.mdc') || endsWith(p, '.md') || endsWith(p, '.MD'))) return true
   if (startsWith(p, 'scripts/')) return true
   // Flashback chat sidecar install tree (Ergo/chat-edge configs — not chatlogs)
   if (startsWith(p, 'ops/chat/')) return true

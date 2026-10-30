@@ -1,0 +1,23 @@
+---
+description: New FanMix Kdenlive projects start as continuous source + ASS subs; never inherit cuts or per-cue slices
+alwaysApply: true
+---
+
+# Kdenlive blank projects (FanEdits)
+
+Full detail: [docs/LLM-FAN-EDIT-INSTRUCTIONS.md](docs/LLM-FAN-EDIT-INSTRUCTIONS.md) Phase A2 + §15.
+
+## New FanMix / new `.kdenlive`
+
+1. Use `scripts/clone_kdenlive_blank.py` — **flatten is default**. Do not pass `--keep-template-cuts` for real edits.
+2. Timeline must be **one continuous A1 + V1** clip of the rip. No inherited razors, blanks, or same-track `mix` from Mummy (or any cut template).
+3. **Do not** pre-slice into per-subtitle clips. That lags scrubbing and drifts vs 4K masters. Razor later in the GUI (or only if the owner explicitly wants the legacy generator path).
+4. Wire `subtitlesList` to **`*.kdenlive.ass`**, not `.srt`. Keep `.srt` as sidecar only.
+5. Multi-line ASS: one physical `Dialogue:` line; soft breaks with `\N`. Bare newlines drop the second line (e.g. only `Mr. Cooper says` shows).
+6. No `avfilter.subtitles` burn-in on 4K. Proxies ON; final render uses the master.
+
+## If something already broke
+
+- `Incorrect Mix` / clips removed on open → re-flatten or re-clone.
+- Overwrite `.ass` dialog / missing track → point list at `.ass`; rebuild ASS from SRT with `\N`.
+- “Gaps” in subtitle chips → usually silence; verify cue count vs fresh MKV extract before re-extracting.
