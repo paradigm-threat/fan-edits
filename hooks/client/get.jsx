@@ -1144,11 +1144,38 @@ function chatChannelForRoute(kind, route) {
   if (p.charAt(0) === '/') {
     p = p.slice(1)
   }
-  p = p.replace(/[^a-zA-Z0-9_\-]/g, '-').toLowerCase()
+  // CleverScript: no regex character-class negation / anchors — scrub char-by-char.
+  p = slugChannelPart(p)
   if (!p) {
     return 'page-home'
   }
   return 'page-' + p
+}
+
+/** Lowercase a–z / 0–9 / _ / - only; other chars → `-`. CleverScript-safe. */
+function slugChannelPart(raw) {
+  const s = str(raw).toLowerCase()
+  let out = ''
+  for (let i = 0; i < s.length; i++) {
+    const ch = s.charAt(i)
+    const code = s.charCodeAt(i)
+    const isNum = code >= 48 && code <= 57
+    const isLower = code >= 97 && code <= 122
+    if (isNum || isLower || ch === '_' || ch === '-') {
+      out = out + ch
+    } else {
+      out = out + '-'
+    }
+  }
+  return out
+}
+
+function stripLeadingHash(raw) {
+  let c = str(raw).trim()
+  if (c.charAt(0) === '#') {
+    c = c.slice(1)
+  }
+  return c
 }
 
 function chatChannelFromLocation(fallback) {
@@ -1167,11 +1194,11 @@ function chatChannelFromLocation(fallback) {
         }
       }
       if (c) {
-        return c.replace(/^#/, '')
+        return stripLeadingHash(c)
       }
     }
     if (loc && loc.hash && String(loc.hash).length > 1) {
-      return String(loc.hash).replace(/^#/, '')
+      return stripLeadingHash(String(loc.hash))
     }
   } catch (eLoc) {}
   return fallback || 'flashback'
