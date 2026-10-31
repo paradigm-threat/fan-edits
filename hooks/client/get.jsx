@@ -726,20 +726,48 @@ function pushTheaterCommand(playingFlag, commandVal, seqVal) {
   } catch (e) {}
 }
 
+function projectPrefersMuxedSubs(project) {
+  try {
+    const media = projectMediaField(project, 'media').toLowerCase()
+    if (media.length > 4 && media.slice(media.length - 4) === '.mkv') {
+      return true
+    }
+  } catch (e0) {}
+  try {
+    const stream = projectMediaField(project, 'streamHttps').toLowerCase()
+    if (stream.indexOf('.mkv') >= 0) {
+      return true
+    }
+  } catch (e1) {}
+  return false
+}
+
+function isEnhancedSubtitleName(blob) {
+  const s = str(blob).toLowerCase()
+  return s.indexOf('enhanced') >= 0 || s.indexOf('citation') >= 0
+}
+
 function subtitleTracks(project) {
   if (!project || !project.subtitles) {
     return []
   }
+  const muxed = projectPrefersMuxedSubs(project)
   let out = []
   const list = project.subtitles
   for (let i = 0; i < list.length; i++) {
     const t = list[i]
+    const srcRaw = t.src || ''
+    const labelRaw = t.label || 'Subtitles'
+    // MKV masters already carry ASS — only keep Enhanced / Citations sidecars.
+    if (muxed && !isEnhancedSubtitleName(srcRaw + ' ' + labelRaw)) {
+      continue
+    }
     const track = {
-      src: t.src.charAt(0) === '/' ? t.src : '/' + t.src,
-      label: t.label || 'Subtitles',
+      src: srcRaw.charAt(0) === '/' ? srcRaw : '/' + srcRaw,
+      label: labelRaw,
       lang: t.lang || 'en',
     }
-    if (t.default === true) {
+    if (!muxed && t.default === true) {
       track.default = true
     }
     out = out.concat([track])
@@ -968,6 +996,35 @@ function jsonEscapeStr(s) {
 
 /** Prefer prebuilt string from index.json (CleverScript-safe); else build tracks. */
 function subtitlesJson(project) {
+  // When MKV muxed ASS is the product path, rebuild from filtered tracks so a stale
+  // index.json default-English VTT list cannot double captions in TheaterPlayer.
+  if (projectPrefersMuxedSubs(project)) {
+    try {
+      const tracks = subtitleTracks(project)
+      if (!tracks || tracks.length === 0) {
+        return '[]'
+      }
+      let body = ''
+      for (let i = 0; i < tracks.length; i++) {
+        const t = tracks[i]
+        if (i > 0) {
+          body = body + ','
+        }
+        body =
+          body +
+          '{"src":"' +
+          jsonEscapeStr(t.src) +
+          '","label":"' +
+          jsonEscapeStr(t.label || 'Subtitles') +
+          '","lang":"' +
+          jsonEscapeStr(t.lang || 'en') +
+          '"}'
+      }
+      return '[' + body + ']'
+    } catch (eMux) {
+      return '[]'
+    }
+  }
   try {
     if (project && project.subtitlesJson) {
       const ready = str(project.subtitlesJson)

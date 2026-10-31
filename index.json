@@ -97,18 +97,12 @@
       "image": "FanMixes/American Psycho (2000) - Psychosomatic/poster.jpg",
       "subtitles": [
         {
-          "src": "FanMixes/American Psycho (2000) - Psychosomatic/subs/American Psycho (2000) - Psychosomatic.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/American Psycho (2000) - Psychosomatic/subs/American Psycho (2000) - Psychosomatic.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/American Psycho (2000) - Psychosomatic/subs/American Psycho (2000) - Psychosomatic.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/American Psycho (2000) - Psychosomatic/subs/American Psycho (2000) - Psychosomatic.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/American Psycho (2000) - Psychosomatic/subs/American Psycho (2000) - Psychosomatic.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/american-psycho-2000-psychosomatic/American_Psycho_2000_-_Psychosomatic_mobile-720p.mkv",
@@ -154,18 +148,12 @@
       "image": "FanMixes/Boogie Nights (1997) - The Dream/poster.jpg",
       "subtitles": [
         {
-          "src": "FanMixes/Boogie Nights (1997) - The Dream/subs/Boogie Nights (1997) - The Dream.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/Boogie Nights (1997) - The Dream/subs/Boogie Nights (1997) - The Dream.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Boogie Nights (1997) - The Dream/subs/Boogie Nights (1997) - The Dream.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Boogie Nights (1997) - The Dream/subs/Boogie Nights (1997) - The Dream.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Boogie Nights (1997) - The Dream/subs/Boogie Nights (1997) - The Dream.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/boogie-nights-1997-the-dream/Boogie_Nights_1997_-_The_Dream.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/boogie-nights-1997-the-dream/Boogie_Nights_1997_-_The_Dream_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/boogie-nights-1997-the-dream/Boogie_Nights_1997_-_The_Dream_mobile-720p.mkv",
@@ -242,18 +230,12 @@
       "image": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/poster.jpg",
       "subtitles": [
         {
-          "src": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/subs/Fear and Loathing in Las Vegas (1998) - No North Star.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/subs/Fear and Loathing in Las Vegas (1998) - No North Star.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/subs/Fear and Loathing in Las Vegas (1998) - No North Star.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/subs/Fear and Loathing in Las Vegas (1998) - No North Star.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Fear and Loathing in Las Vegas (1998) - No North Star/subs/Fear and Loathing in Las Vegas (1998) - No North Star.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/fear-and-loathing-in-las-vegas-1998-no-north-star/Fear_and_Loathing_in_Las_Vegas_1998_-_No_North_Star.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/fear-and-loathing-in-las-vegas-1998-no-north-star/Fear_and_Loathing_in_Las_Vegas_1998_-_No_North_Star_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/fear-and-loathing-in-las-vegas-1998-no-north-star/Fear_and_Loathing_in_Las_Vegas_1998_-_No_North_Star_mobile-720p.mkv",
@@ -296,18 +278,12 @@
       "image": "",
       "subtitles": [
         {
-          "src": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/subs/Fried Green Tomatoes (1991) - No Frank Bennett.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/subs/Fried Green Tomatoes (1991) - No Frank Bennett.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/subs/Fried Green Tomatoes (1991) - No Frank Bennett.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/subs/Fried Green Tomatoes (1991) - No Frank Bennett.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Fried Green Tomatoes (1991) - No Frank Bennett/subs/Fried Green Tomatoes (1991) - No Frank Bennett.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "Removes Frank Bennett as a face, voice, and name-driven plot thread so the Idgie / Ruth / Ninny / Evelyn emotional spine can lead."
@@ -325,18 +301,12 @@
       "image": "FanMixes/Matrix Reloaded (2003) - Unlinked/poster.jpg",
       "subtitles": [
         {
-          "src": "FanMixes/Matrix Reloaded (2003) - Unlinked/subs/Matrix Reloaded (2003) - Unlinked.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/Matrix Reloaded (2003) - Unlinked/subs/Matrix Reloaded (2003) - Unlinked.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Matrix Reloaded (2003) - Unlinked/subs/Matrix Reloaded (2003) - Unlinked.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Matrix Reloaded (2003) - Unlinked/subs/Matrix Reloaded (2003) - Unlinked.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Matrix Reloaded (2003) - Unlinked/subs/Matrix Reloaded (2003) - Unlinked.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/matrix-reloaded-2003-unlinked/Matrix_Reloaded_2003_-_Unlinked.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/matrix-reloaded-2003-unlinked/Matrix_Reloaded_2003_-_Unlinked_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/matrix-reloaded-2003-unlinked/Matrix_Reloaded_2003_-_Unlinked_mobile-720p.mkv",
@@ -358,18 +328,12 @@
       "image": "FanMixes/Matrix Revolutions (2003) - Unlinked/poster.jpg",
       "subtitles": [
         {
-          "src": "FanMixes/Matrix Revolutions (2003) - Unlinked/subs/Matrix Revolutions (2003) - Unlinked.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/Matrix Revolutions (2003) - Unlinked/subs/Matrix Revolutions (2003) - Unlinked.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Matrix Revolutions (2003) - Unlinked/subs/Matrix Revolutions (2003) - Unlinked.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Matrix Revolutions (2003) - Unlinked/subs/Matrix Revolutions (2003) - Unlinked.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Matrix Revolutions (2003) - Unlinked/subs/Matrix Revolutions (2003) - Unlinked.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/matrix-revolutions-2003-unlinked/Matrix_Revolutions_2003_-_Unlinked.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/matrix-revolutions-2003-unlinked/Matrix_Revolutions_2003_-_Unlinked_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/matrix-revolutions-2003-unlinked/Matrix_Revolutions_2003_-_Unlinked_mobile-720p.mkv",
@@ -450,18 +414,12 @@
       "image": "",
       "subtitles": [
         {
-          "src": "FanMixes/Serenity (2005) - Unjossed/subs/Serenity (2005) - Unjossed.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/Serenity (2005) - Unjossed/subs/Serenity (2005) - Unjossed.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Serenity (2005) - Unjossed/subs/Serenity (2005) - Unjossed.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Serenity (2005) - Unjossed/subs/Serenity (2005) - Unjossed.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Serenity (2005) - Unjossed/subs/Serenity (2005) - Unjossed.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "qualityWebEnabled": false,
       "qualityMobileEnabled": false,
       "blurb": "A family/kids cut of *Serenity*: strict on Reaver gore, keeps the action and core plot, and leaves favorite Whedon beats (including \u201cleaf on the wind\u201d and the final fight) alone unless they break tone after horror."
@@ -580,18 +538,12 @@
       "image": "FanMixes/Terminator 3 (2003) - Brass Monkey/poster.jpg",
       "subtitles": [
         {
-          "src": "FanMixes/Terminator 3 (2003) - Brass Monkey/subs/Terminator 3 (2003) - Brass Monkey.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/Terminator 3 (2003) - Brass Monkey/subs/Terminator 3 (2003) - Brass Monkey.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Terminator 3 (2003) - Brass Monkey/subs/Terminator 3 (2003) - Brass Monkey.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Terminator 3 (2003) - Brass Monkey/subs/Terminator 3 (2003) - Brass Monkey.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Terminator 3 (2003) - Brass Monkey/subs/Terminator 3 (2003) - Brass Monkey.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/terminator-3-2003-brass-monkey/Terminator_3_2003_-_Brass_Monkey_mobile-720p.mkv",
@@ -663,18 +615,12 @@
       "image": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/poster.jpg",
       "subtitles": [
         {
-          "src": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/subs/The Day After Tomorrow (2004) - Yuppocolypse.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/subs/The Day After Tomorrow (2004) - Yuppocolypse.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/subs/The Day After Tomorrow (2004) - Yuppocolypse.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/subs/The Day After Tomorrow (2004) - Yuppocolypse.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/The Day After Tomorrow (2004) - Yuppocolypse/subs/The Day After Tomorrow (2004) - Yuppocolypse.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-day-after-tomorrow-2004-yuppocolypse/The_Day_After_Tomorrow_2004_-_Yuppocolypse.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-day-after-tomorrow-2004-yuppocolypse/The_Day_After_Tomorrow_2004_-_Yuppocolypse_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-day-after-tomorrow-2004-yuppocolypse/The_Day_After_Tomorrow_2004_-_Yuppocolypse_mobile-720p.mkv",
@@ -696,18 +642,12 @@
       "image": "FanMixes/The Mummy (1999) - Debugged/poster.jpg",
       "subtitles": [
         {
-          "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/The Mummy (1999) - Debugged/subs/The Mummy Debugged.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-1999-debugged/The_Mummy_1999_-_Debugged_mobile-720p.mkv",
@@ -740,15 +680,8 @@
       "mediaWeb": "",
       "mediaMobile": "",
       "image": "FanMixes/The Mummy Returns (2001) - Debugged/poster.jpg",
-      "subtitles": [
-        {
-          "src": "FanMixes/The Mummy Returns (2001) - Debugged/subs/The Mummy Returns Debugged.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        }
-      ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/The Mummy Returns (2001) - Debugged/subs/The Mummy Returns Debugged.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true}]",
+      "subtitles": [],
+      "subtitlesJson": "[]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/The_Mummy_Returns_2001_-_Debugged.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/The_Mummy_Returns_2001_-_Debugged_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/the-mummy-returns-2001-debugged/The_Mummy_Returns_2001_-_Debugged_mobile-720p.mkv",
@@ -829,18 +762,12 @@
       "image": "FanMixes/Tron Legacy (2010) - The Miracle/poster.jpg",
       "subtitles": [
         {
-          "src": "FanMixes/Tron Legacy (2010) - The Miracle/subs/Tron Legacy (2010) - The Miracle.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/Tron Legacy (2010) - The Miracle/subs/Tron Legacy (2010) - The Miracle.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Tron Legacy (2010) - The Miracle/subs/Tron Legacy (2010) - The Miracle.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Tron Legacy (2010) - The Miracle/subs/Tron Legacy (2010) - The Miracle.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Tron Legacy (2010) - The Miracle/subs/Tron Legacy (2010) - The Miracle.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/tron-legacy-2010-the-miracle/Tron_Legacy_2010_-_The_Miracle.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/tron-legacy-2010-the-miracle/Tron_Legacy_2010_-_The_Miracle_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/tron-legacy-2010-the-miracle/Tron_Legacy_2010_-_The_Miracle_mobile-720p.mkv",
@@ -862,18 +789,12 @@
       "image": "FanMixes/Van Helsing - DeAnna'd/poster.jpg",
       "subtitles": [
         {
-          "src": "FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.english.vtt",
-          "label": "English (default)",
-          "lang": "en",
-          "default": true
-        },
-        {
           "src": "FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.enhanced.vtt",
           "label": "Enhanced / Citations",
           "lang": "en"
         }
       ],
-      "subtitlesJson": "[{\"src\":\"/FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.english.vtt\",\"label\":\"English (default)\",\"lang\":\"en\",\"default\":true},{\"src\":\"/FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
+      "subtitlesJson": "[{\"src\":\"/FanMixes/Van Helsing - DeAnna'd/subs/Van Helsing - DeAnna'd.enhanced.vtt\",\"label\":\"Enhanced / Citations\",\"lang\":\"en\"}]",
       "streamHttps": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d.mkv",
       "streamHttpsWeb": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d_web-1080p.mkv",
       "streamHttpsMobile": "https://flashbackrepository.b-cdn.net/now-showing/van-helsing-deanna-d/Van_Helsing_2004_-_DeAnna_d_mobile-720p.mkv",

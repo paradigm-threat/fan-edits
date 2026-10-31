@@ -270,7 +270,7 @@
     return relayWasmPrefix() + 'relay_video_wasm_pkg/relay_video_wasm_bg.wasm';
   }
 
-  /** Build ordered ladder: archival MKV/HEVC master first; optional H.264 rungs if present. */
+  /** Build ordered ladder: archival MKV master first; optional H.264 MKV rungs if present. */
   function buildSrcLadder(props, preferredSrc) {
     const preferred = String(preferredSrc || prop(props, 'src', '') || '');
     const web = prop(props, 'srcWeb', '') || prop(props, 'data-src-web', '');
@@ -345,6 +345,38 @@
     }
   }
 
+  function isMkvUrl(url) {
+    const u = String(url || '')
+      .split('?')[0]
+      .toLowerCase();
+    return u.endsWith('.mkv') || u.indexOf('.mkv') >= 0;
+  }
+
+  function isEnhancedSubtitleTrack(t) {
+    const blob = String((t && (t.label || t.src)) || '').toLowerCase();
+    return blob.indexOf('enhanced') >= 0 || blob.indexOf('citation') >= 0;
+  }
+
+  /** MKV masters already mux ASS — drop default English sidecars to avoid doubled captions. */
+  function filterSubtitleTracksForSrc(tracks, src) {
+    const list = Array.isArray(tracks) ? tracks : [];
+    if (!isMkvUrl(src)) return list;
+    const out = [];
+    for (let i = 0; i < list.length; i++) {
+      const t = list[i];
+      if (!t) continue;
+      if (isEnhancedSubtitleTrack(t)) {
+        out.push({
+          src: t.src,
+          label: t.label,
+          lang: t.lang,
+          isDefault: false,
+        });
+      }
+    }
+    return out;
+  }
+
   function attachSubtitleTracks(video, tracks) {
     if (!video || !tracks || !tracks.length) return;
     // Clear prior tracks
@@ -358,7 +390,7 @@
       el.src = t.src;
       el.srclang = t.lang || 'en';
       el.label = t.label || 'Subtitles';
-      if (i === 0 && t.isDefault) {
+      if (t.isDefault) {
         try {
           el.setAttribute('default', '');
         } catch (_) {}
@@ -369,7 +401,8 @@
       const tt = video.textTracks;
       if (tt && tt.length) {
         for (let j = 0; j < tt.length; j++) {
-          tt[j].mode = j === 0 && tracks[0] && tracks[0].isDefault ? 'showing' : 'hidden';
+          // Never auto-show unless the track is explicitly default (enhanced stays off).
+          tt[j].mode = tracks[j] && tracks[j].isDefault ? 'showing' : 'hidden';
         }
       }
     } catch (_) {}
@@ -536,8 +569,8 @@
 
   function downloadLabelForKind(kind, src) {
     if (kind === 'master') return 'Full quality (MKV)';
-    if (kind === 'web') return '1080p (H.264 MP4)';
-    if (kind === 'mobile') return '720p (H.264 MP4)';
+    if (kind === 'web') return '1080p (MKV)';
+    if (kind === 'mobile') return '720p (MKV)';
     if (kind === 'sub') {
       const s = String(src || '').toLowerCase();
       if (s.indexOf('enhanced') >= 0 || s.indexOf('citation') >= 0) return 'Subtitles (enhanced)';
@@ -545,10 +578,13 @@
       return 'Subtitles';
     }
     const s = String(src || '').toLowerCase();
-    if (s.indexOf('.mkv') >= 0) return 'Full quality (MKV)';
-    if (s.indexOf('.hevc.mp4') >= 0) return 'Full quality (HEVC MP4)';
-    if (s.indexOf('1080') >= 0 || s.indexOf('.web-') >= 0) return '1080p (H.264 MP4)';
-    if (s.indexOf('720') >= 0 || s.indexOf('mobile') >= 0) return '720p (H.264 MP4)';
+    if (s.indexOf('.mkv') >= 0) {
+      if (s.indexOf('web-1080p') >= 0 || s.indexOf('_web-1080p') >= 0) return '1080p (MKV)';
+      if (s.indexOf('mobile-720p') >= 0 || s.indexOf('_mobile-720p') >= 0) return '720p (MKV)';
+      return 'Full quality (MKV)';
+    }
+    if (s.indexOf('1080') >= 0 || s.indexOf('.web-') >= 0) return '1080p (MKV)';
+    if (s.indexOf('720') >= 0 || s.indexOf('mobile') >= 0) return '720p (MKV)';
     if (s.indexOf('.vtt') >= 0 || s.indexOf('.srt') >= 0) return 'Subtitles';
     return 'Download';
   }
@@ -903,8 +939,11 @@
     const seedMessage = prop(props, 'seedMessage', 'This file needs to be seeded');
     const seedHint = prop(props, 'seedHint', '');
     const unlocked = prop(props, 'unlocked', 'false') === 'true';
-    const subtitleTracks = parseSubtitlesJson(
-      prop(props, 'subtitlesJson', '') || prop(props, 'data-subtitles-json', ''),
+    const subtitleTracks = filterSubtitleTracksForSrc(
+      parseSubtitlesJson(
+        prop(props, 'subtitlesJson', '') || prop(props, 'data-subtitles-json', ''),
+      ),
+      srcLadder.length ? srcLadder[0].src : preferredSrc,
     );
     let startAt = parseMediaTime(prop(props, 'startAt', ''));
     const fromUrl = seekFromLocation();

@@ -107,6 +107,15 @@ flowchart TD
      `ffmpeg -i movie.mkv -map 0:N -c:s srt "_sources/theatrical.srt"` (replace `N` with the English CC index).
    - Or copy a sidecar from the release’s `Subs/` folder to `_sources/theatrical.srt`.
 4. Optional working copy as `Title (Year) - Edition.srt` in the FanMix folder for editing — but treat it as **suspect for hole labels** until you prove it matches theatrical duration/clock (see §12).
+5. **Kdenlive ASS track (mandatory soft-break rule)** — wire `subtitlesList` to `*.kdenlive.ass`, not `.srt`. Multi-line SRT cues must become **one physical** `Dialogue:` line with `\N` soft breaks. Bare LF/CR (or `\r\N`) inside Dialogue text **silently drops** the rest of the cue in Kdenlive (classic miss: only `Well, fuck layman's terms.` shows; `Do you speak English?` is gone). **Never** hand-convert SRT→ASS. Use:
+
+```bash
+python3 scripts/rebuild_kdenlive_ass_from_srt.py --ass "FanMixes/Title/Title.kdenlive.ass"
+python3 scripts/rebuild_kdenlive_ass_from_srt.py --scan FanMixes   # bare_cont / empty / cr\\N
+python3 scripts/rebuild_kdenlive_ass_from_srt.py --fix FanMixes    # rebuild every broken ASS that has an SRT
+```
+
+After writing any `.ass`, re-scan or spot-check a known multi-line cue for a single-line `\N` form.
 
 ### Phase B — Editorial plan
 
@@ -518,6 +527,7 @@ After writing `subs/*.enhanced.srt`, regenerate the catalog: `python3 scripts/ge
 | `missing shifted subs` | Re-run `kdenlive_from_subs.py` or export subs after edit. |
 | Audio glitch at cut | Extend handles; keyframe snap; short crossfade. |
 | Subtitle drift | Regenerate shifted SRT/ASS from source SRT + kept segments. |
+| Second line of a cue missing in Kdenlive (first line only) | ASS has bare newline or `\r\N` inside Dialogue — run `scripts/rebuild_kdenlive_ass_from_srt.py --fix` (or `--ass`). Do not delete the missing line from the SRT. |
 | Render stalls, I/O errors, corrupt output | Source or output on NAS — **copy rip locally**, re-render; verify with `ffprobe` before and after. |
 | CHANGES “Removed subtitles” name the wrong scene | Project/cut SRT was used against **source** hole times — extract `_sources/theatrical.srt` from the rip and relabel (Yuppocolypse lesson). |
 | Every hole is Scene TBD | Skeleton from `list_kdenlive_cuts.py --write-md` only — label from theatrical cues + picture; do not ship enhanced cards yet. |

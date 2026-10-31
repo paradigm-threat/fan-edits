@@ -201,15 +201,15 @@ def is_web_or_skip_media(name: str) -> bool:
 
 
 def _media_rank(name: str) -> tuple[int, int, str]:
-    """Prefer final MKV (embedded subs) over HEVC MP4 remux."""
+    """Prefer final MKV (embedded ASS) over legacy remuxes. HEVC MP4 is last resort."""
     n = name.lower()
     if n.endswith(".mkv") and "clean" not in n and "seam" not in n:
         tier = 0
-    elif n.endswith(HEVC_SUFFIX):
-        tier = 1
     elif n.endswith(".mkv"):
+        tier = 1
+    elif n.endswith(".mp4") and not n.endswith(HEVC_SUFFIX) and not is_web_or_skip_media(name):
         tier = 2
-    elif n.endswith(".mp4") and not is_web_or_skip_media(name):
+    elif n.endswith(HEVC_SUFFIX):
         tier = 3
     else:
         tier = 4
@@ -266,7 +266,11 @@ def find_named_rendition(
 
 
 def find_media(folder: Path, folder_rel: str, manifest_paths: set[str]) -> str | None:
-    """Return archival master basename (HEVC MP4 preferred; not web/mobile encodes)."""
+    """Return archival master basename (MKV with muxed ASS preferred; not web/mobile encodes).
+
+    When any usable ``.mkv`` master exists, ``.hevc.mp4`` remuxes are excluded so the
+    catalog never prefers the old MP4 product path.
+    """
     candidates: list[str] = []
     if folder.is_dir():
         for p in sorted(folder.iterdir()):
@@ -283,6 +287,11 @@ def find_media(folder: Path, folder_rel: str, manifest_paths: set[str]) -> str |
                     continue
                 if rest not in candidates:
                     candidates.append(rest)
+    if not candidates:
+        return None
+    has_mkv = any(c.lower().endswith(".mkv") for c in candidates)
+    if has_mkv:
+        candidates = [c for c in candidates if not c.lower().endswith(HEVC_SUFFIX)]
     if not candidates:
         return None
     candidates.sort(key=_media_rank)
@@ -303,12 +312,16 @@ def _is_build_artifact_subtitle(name: str) -> bool:
     return "kdenlive" in name.lower()
 
 
+def _is_enhanced_subtitle(name: str) -> bool:
+    n = name.lower()
+    return "enhanced" in n or "citation" in n
+
+
 def _is_named_player_subtitle(name: str) -> bool:
     """Dialogue / citations tracks (not unlabeled duplicates of the same cut)."""
     n = name.lower()
     return (
-        "enhanced" in n
-        or "citation" in n
+        _is_enhanced_subtitle(name)
         or "english" in n
         or "default" in n
     )
@@ -328,12 +341,14 @@ def ensure_vtt_for_srts(folder: Path) -> None:
     subprocess.run([sys.executable, str(helper), str(subs_dir)], cwd=ROOT, check=False)
 
 
-def find_subtitles(folder: Path, folder_rel: str) -> list[dict]:
-    """Prefer WebVTT sidecars for HTML5 <track>; convert SRT → VTT when needed.
+def find_subtitles(
+    folder: Path, folder_rel: str, *, prefer_muxed_subs: bool = False
+) -> list[dict]:
+    """Build optional HTML5 <track> list from ``subs/`` sidecars.
 
-    When a project has named player tracks (english / enhanced), expose only those —
-    e.g. Mummy Debugged: English (default) + Enhanced / Citations — not kdenlive or
-    unlabeled duplicate stems.
+    When ``prefer_muxed_subs`` is True (MKV master / Bunny stream with in-file ASS),
+    omit default English sidecars so TheaterPlayer does not stack VTT on muxed ASS.
+    Enhanced / Citations sidecars are kept and never marked default.
     """
     ensure_vtt_for_srts(folder)
     subs_dir = folder / "subs"
@@ -352,7 +367,7 @@ def find_subtitles(folder: Path, folder_rel: str) -> list[dict]:
             "label": label,
             "lang": "en",
         }
-        if default:
+        if default and not prefer_muxed_subs:
             entry["default"] = True
         out.append(entry)
         seen_stems.add(p.stem.lower())
@@ -368,7 +383,7 @@ def find_subtitles(folder: Path, folder_rel: str) -> list[dict]:
             "label": label,
             "lang": "en",
         }
-        if default:
+        if default and not prefer_muxed_subs:
             entry["default"] = True
         out.append(entry)
     named = [
@@ -378,6 +393,12 @@ def find_subtitles(folder: Path, folder_rel: str) -> list[dict]:
     ]
     if named:
         out = named
+    if prefer_muxed_subs:
+        # Muxed ASS covers dialogue; only expose Enhanced / Citations as opt-in CC.
+        out = [t for t in out if _is_enhanced_subtitle(Path(t["src"]).name)]
+        for t in out:
+            t.pop("default", None)
+        return out
     if out and not any(t.get("default") for t in out):
         out[0]["default"] = True
     return out
@@ -485,7 +506,12 @@ def main() -> None:
         poster = find_poster(folder, folder_rel)
         if not poster:
             poster = media_root_poster(slug)
-        subs = find_subtitles(folder, folder_rel)
+        bunny_early = now_showing_meta.get(slug) or {}
+        stream_https = str(bunny_early.get("streamHttps") or "")
+        prefer_muxed = (media or "").lower().endswith(".mkv") or stream_https.lower().endswith(
+            ".mkv"
+        )
+        subs = find_subtitles(folder, folder_rel, prefer_muxed_subs=prefer_muxed)
         status = publish_status(slug, status_for(folder, media, ROOT / rel), now_showing_set)
         # CleverScript SSR cannot reliably walk nested object arrays; ship a ready JSON string.
         tracks_for_player = []

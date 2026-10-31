@@ -1,0 +1,38 @@
+---
+description: ASS subtitles must use \N soft breaks; never bare newlines in Dialogue text
+globs: **/*.{ass,srt,kdenlive}
+alwaysApply: true
+---
+
+# ASS soft breaks (FanEdits)
+
+Kdenlive / libass drop everything after a **real newline** inside a `Dialogue:` text field. Multi-line SRT cues must become **one physical ASS line** with soft breaks.
+
+## Hard rules
+
+1. One `Dialogue:` event = **one physical line** in the `.ass` file.
+2. Soft line breaks: literal `\N` (backslash + N). Never paste SRT newlines into ASS text.
+3. Never write `\r\N` (CR before `\N`) — that also truncates the second line.
+4. Keep full Kdenlive header: `[Script Info]` + `[V4+ Styles]` + `[Events]`. Events-only files are rejected as “invalid”.
+5. Prefer LF-only ASS files. Do not hand-convert SRT→ASS in a one-off shell/Python snippet.
+6. Wire `subtitlesList` to `*.kdenlive.ass`, not `.srt`.
+
+## Required tool
+
+```bash
+python3 scripts/rebuild_kdenlive_ass_from_srt.py --scan FanMixes
+python3 scripts/rebuild_kdenlive_ass_from_srt.py --fix FanMixes
+python3 scripts/rebuild_kdenlive_ass_from_srt.py --ass "FanMixes/.../Title.kdenlive.ass"
+```
+
+After any ASS write, confirm `bare_cont=0` via `--scan` (or that a known multi-line cue contains `\N` on one line, e.g. `Well, fuck layman's terms.\NDo you speak English?`).
+
+## Symptom → fix
+
+| Symptom | Cause | Fix |
+|---------|--------|-----|
+| Second subtitle line missing in preview | Bare LF after first line of Dialogue | `--fix` / rebuild from SRT with `\N` |
+| Only first half of a two-line cue shows | Same | Same |
+| Cue present in `.srt` but “gone” in Kdenlive | Project pointed at broken `.ass`, or ASS truncated | Point at `.ass`; rebuild |
+
+Do **not** “fix” by deleting the second line or splitting into two cues unless the owner asks — restore the full cue with `\N`.
