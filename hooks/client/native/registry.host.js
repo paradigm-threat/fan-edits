@@ -5,6 +5,8 @@
 (function () {
   // In-browser theater host omitted — ExternalPlay / VLC only (avoids tab crashes).
   var scripts = [
+    '/hooks/client/lobby/LobbyPlaylist.js',
+    '/hooks/client/native/LobbyAudio.host.js',
     '/hooks/client/native/telemetry.js',
     '/hooks/client/native/Affirmation.host.js',
     '/hooks/client/native/ExternalPlay.host.js',

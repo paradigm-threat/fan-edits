@@ -1,11 +1,15 @@
 /**
- * flashback-logical-playlist/v1 — shared evaluator (web + documentation mirror).
- * SongWalker-inspired: nested songs, host state, when rules.
+ * flashback-logical-playlist/v1 — web lobby music.
  *
- * Music mode (localStorage `fb-lobby-music-mode`):
- *   off | auto | allYear | winter
+ * Menu (localStorage `fb-lobby-music-mode`):
+ *   off | default | allYear | winter | SomaFM station ids
+ * **default** hashes the local date. Year-round: Classical, Deep Space One,
+ * Secret Agent, Illinois Street Lounge, Groove Salad, Groove Salad 2,
+ * Groove Salad Classic. November–February also include Winter and Christmas Lounge.
+ * An explicit choice ignores that roll until the user selects Default again.
  * Volume (localStorage `fb-lobby-volume`): 0–1, default 0.25.
- * Legacy `fb-lobby-music-enabled` migrates to auto/off.
+ * Legacy `auto` / `fb-lobby-music-enabled` migrates to default/off.
+ * Unset storage stays off (no autoplay for a first visit).
  */
 ;(function (global) {
   'use strict'
@@ -14,57 +18,133 @@
   var LS_VOLUME = 'fb-lobby-volume'
   var LS_ENABLED_LEGACY = 'fb-lobby-music-enabled'
   var DEFAULT_VOLUME = 0.25
-  var MODES = ['off', 'auto', 'allYear', 'winter']
 
-  function pad2(n) {
-    return n < 10 ? '0' + n : String(n)
+  var CLASSICAL = {
+    id: 'allYear',
+    label: 'Classical',
+    kind: 'local',
+    songId: 'publicDomain',
   }
+  var WINTER = {
+    id: 'winter',
+    label: 'Winter',
+    kind: 'local',
+    songId: 'winter',
+    christmas: true,
+  }
+  var DEEP_SPACE = { id: 'deepspaceone', label: 'Deep Space One', kind: 'radio' }
+  var SECRET_AGENT = { id: 'secretagent', label: 'Secret Agent', kind: 'radio' }
+  var CHRISTMAS_LOUNGE = {
+    id: 'christmas',
+    label: 'Christmas Lounge',
+    kind: 'radio',
+    christmas: true,
+  }
+  var ILLINOIS = {
+    id: 'illstreet',
+    label: 'Illinois Street Lounge',
+    kind: 'radio',
+  }
+  var GROOVE_SALAD = { id: 'groovesalad', label: 'Groove Salad', kind: 'radio' }
+  var GROOVE_SALAD_2 = { id: 'groovesalad2', label: 'Groove Salad 2', kind: 'radio' }
+  var GROOVE_SALAD_CLASSIC = {
+    id: 'gsclassic',
+    label: 'Groove Salad Classic',
+    kind: 'radio',
+  }
+
+  var SOURCES = [
+    CLASSICAL,
+    WINTER,
+    DEEP_SPACE,
+    SECRET_AGENT,
+    CHRISTMAS_LOUNGE,
+    ILLINOIS,
+    GROOVE_SALAD,
+    GROOVE_SALAD_2,
+    GROOVE_SALAD_CLASSIC,
+  ]
+  var YEAR_ROUND = [
+    CLASSICAL,
+    DEEP_SPACE,
+    SECRET_AGENT,
+    ILLINOIS,
+    GROOVE_SALAD,
+    GROOVE_SALAD_2,
+    GROOVE_SALAD_CLASSIC,
+  ]
+  var CHRISTMAS_SOURCES = [WINTER, CHRISTMAS_LOUNGE]
+  var MODES = ['off', 'default'].concat(
+    SOURCES.map(function (s) {
+      return s.id
+    }),
+  )
 
   function normalizeMode(m) {
     var s = String(m || '').trim()
-    if (s === 'off' || s === '0' || s === 'false') return 'off'
-    if (s === 'auto' || s === 'on' || s === 'true' || s === '1') return 'auto'
-    if (s === 'allYear' || s === 'all' || s === 'all-year' || s === 'year') {
+    if (s === 'off' || s === '0' || s === 'false' || s === '') return 'off'
+    if (
+      s === 'default' ||
+      s === 'auto' ||
+      s === 'on' ||
+      s === 'true' ||
+      s === '1' ||
+      s === 'somafm' ||
+      s === 'soma' ||
+      s === 'radio'
+    ) {
+      return 'default'
+    }
+    if (s === 'allYear' || s === 'all' || s === 'all-year' || s === 'year' || s === 'classical') {
       return 'allYear'
     }
-    if (
-      s === 'winter' ||
-      s === 'christmas' ||
-      s === 'holiday' ||
-      s === 'xmas'
-    ) {
-      return 'winter'
+    if (s === 'winter' || s === 'holiday' || s === 'xmas') return 'winter'
+    if (s === 'deepspaceone' || s === 'deep space one') return 'deepspaceone'
+    if (s === 'secretagent' || s === 'secret agent') return 'secretagent'
+    if (s === 'christmas' || s === 'christmas lounge' || s === 'christmaslounge') {
+      return 'christmas'
     }
+    if (s === 'illstreet' || s === 'illinois' || s === 'illinois street lounge') {
+      return 'illstreet'
+    }
+    if (s === 'groovesalad' || s === 'groove salad') return 'groovesalad'
+    if (s === 'groovesalad2' || s === 'groove salad 2') return 'groovesalad2'
+    if (s === 'gsclassic' || s === 'groove salad classic') return 'gsclassic'
     return 'off'
   }
 
-  /** @returns {'winter'|'default'} */
-  function calendarSeason(now, winter) {
+  function christmasWindow(now) {
     var d = now || new Date()
-    var start = (winter && winter.start) || '10-15'
-    var end = (winter && winter.end) || '01-02'
-    var sp = start.split('-')
-    var ep = end.split('-')
-    var sm = parseInt(sp[0], 10)
-    var sd = parseInt(sp[1], 10)
-    var em = parseInt(ep[0], 10)
-    var ed = parseInt(ep[1], 10)
-    var md = (d.getMonth() + 1) * 100 + d.getDate()
-    var s = sm * 100 + sd
-    var e = em * 100 + ed
-    // Range wraps year (Nov → Jan)
-    if (s > e) {
-      return md >= s || md <= e ? 'winter' : 'default'
-    }
-    return md >= s && md <= e ? 'winter' : 'default'
+    var month = d.getMonth()
+    return month === 10 || month === 11 || month === 0 || month === 1
   }
 
-  function effectiveSeason(mode, calSeason) {
-    mode = normalizeMode(mode)
-    if (mode === 'winter') return 'winter'
-    if (mode === 'allYear') return 'default'
-    if (mode === 'auto') return calSeason
-    return 'default'
+  function defaultPool(now) {
+    return christmasWindow(now) ? YEAR_ROUND.concat(CHRISTMAS_SOURCES) : YEAR_ROUND.slice()
+  }
+
+  function dayKey(now) {
+    var d = now || new Date()
+    return d.getFullYear() * 10000 + (d.getMonth() + 1) * 100 + d.getDate()
+  }
+
+  /** Step 17 is coprime to pool sizes 7 and 9. */
+  function dayIndex(now, size) {
+    if (size <= 1) return 0
+    return (dayKey(now) * 17 + 3) % size
+  }
+
+  function resolve(mode, now) {
+    var m = normalizeMode(mode)
+    if (m === 'off') return null
+    if (m === 'default') {
+      var options = defaultPool(now)
+      return options[dayIndex(now, options.length)]
+    }
+    for (var i = 0; i < SOURCES.length; i++) {
+      if (SOURCES[i].id === m) return SOURCES[i]
+    }
+    return null
   }
 
   function readWebMode() {
@@ -74,8 +154,8 @@
       if (m != null && String(m).length) return normalizeMode(m)
       var legacy = global.localStorage.getItem(LS_ENABLED_LEGACY)
       if (legacy === '1' || legacy === 'true') {
-        writeWebMode('auto')
-        return 'auto'
+        writeWebMode('default')
+        return 'default'
       }
       if (legacy === '0' || legacy === 'false') {
         writeWebMode('off')
@@ -137,62 +217,27 @@
   }
 
   function writeWebEnabled(on) {
-    writeWebMode(on ? 'auto' : 'off')
+    writeWebMode(on ? 'default' : 'off')
   }
 
   function modeLabel(mode) {
-    switch (normalizeMode(mode)) {
-      case 'off':
-        return 'off'
-      case 'auto':
-        return 'auto'
-      case 'allYear':
-        return 'all year'
-      case 'winter':
-        return 'winter'
-      default:
-        return 'off'
-    }
+    var m = normalizeMode(mode)
+    if (m === 'off') return 'Off'
+    if (m === 'default') return 'Default'
+    var src = resolve(m)
+    return src ? src.label : 'Off'
   }
 
-  /**
-   * Evaluate a simple when-if expression against host state.
-   * Supported atoms: enabled, theater, season == winter|…
-   * Prefix ! for negation; && / || for combine.
-   */
-  function evalIf(expr, st) {
-    if (!expr || typeof expr !== 'string') return false
-    var partsOr = expr.split(/\s*\|\|\s*/)
-    for (var oi = 0; oi < partsOr.length; oi++) {
-      var andOk = true
-      var partsAnd = partsOr[oi].split(/\s*&&\s*/)
-      for (var ai = 0; ai < partsAnd.length; ai++) {
-        var t = partsAnd[ai].trim()
-        if (!t) continue
-        var neg = false
-        if (t.charAt(0) === '!') {
-          neg = true
-          t = t.slice(1).trim()
-        }
-        var ok = false
-        if (t === 'enabled') ok = !!st.enabled
-        else if (t === 'theater') ok = !!st.theater
-        else if (/^season\s*==\s*/.test(t)) {
-          var want = t.replace(/^season\s*==\s*/, '').trim()
-          if (want === 'christmas') want = 'winter'
-          ok = st.season === want
-        } else {
-          ok = false
-        }
-        if (neg) ok = !ok
-        if (!ok) {
-          andOk = false
-          break
-        }
-      }
-      if (andOk) return true
+  function tracksFor(playlist, songId) {
+    var songs = (playlist && playlist.songs) || {}
+    var song = songs[songId] || (songId === 'winter' ? songs.christmas : null) || {}
+    var raw = song.tracks || []
+    var tracks = []
+    for (var i = 0; i < raw.length; i++) {
+      var u = String(raw[i] || '').trim()
+      if (u.indexOf('http') === 0) tracks.push(u)
     }
-    return false
+    return { song: song, tracks: tracks }
   }
 
   /**
@@ -201,69 +246,49 @@
    */
   function evaluate(playlist, host) {
     var pl = playlist || {}
-    var seasonRoot = (pl.state && pl.state.season) || {}
-    var winterCfg = seasonRoot.winter || seasonRoot.christmas || {}
-    var calSeason = calendarSeason(host && host.now, winterCfg)
     var mode =
       host && host.mode != null
         ? normalizeMode(host.mode)
         : host && host.enabled === false
           ? 'off'
           : host && host.enabled
-            ? 'auto'
+            ? 'default'
             : 'off'
-    var season = effectiveSeason(mode, calSeason)
-    var st = {
-      enabled: mode !== 'off',
-      theater: !!(host && host.theater),
-      season: season,
-      mode: mode,
-    }
-    var volume = typeof pl.volume === 'number' ? pl.volume : 0.28
+    var now = host && host.now
+    var theater = !!(host && host.theater)
+    var volume = typeof pl.volume === 'number' ? pl.volume : 0.25
     var fadeInMs = typeof pl.fadeInMs === 'number' ? pl.fadeInMs : 1200
     var fadeOutMs = typeof pl.fadeOutMs === 'number' ? pl.fadeOutMs : 800
-    var when = pl.when || []
-    for (var i = 0; i < when.length; i++) {
-      var rule = when[i]
-      if (!rule || !evalIf(rule.if, st)) continue
-      if (rule.do === 'fadeOut') {
-        return {
-          action: 'fadeOut',
-          ms: typeof rule.ms === 'number' ? rule.ms : fadeOutMs,
-          volume: volume,
-          fadeInMs: fadeInMs,
-          fadeOutMs: fadeOutMs,
-          season: season,
-          mode: mode,
-        }
-      }
-      if (rule.do === 'play') {
-        var songId = rule.song || pl.defaultSong || 'publicDomain'
-        if (songId === 'christmas') songId = 'winter'
-        var songs = pl.songs || {}
-        var song = songs[songId] || (songId === 'winter' ? songs.christmas : null) || {}
-        return {
-          action: 'play',
-          song: songId,
-          tracks: song.tracks || [],
-          loop: song.loop !== false,
-          shuffle: !!song.shuffle,
-          volume: volume,
-          fadeInMs: fadeInMs,
-          fadeOutMs: fadeOutMs,
-          season: season,
-          mode: mode,
-        }
-      }
-    }
-    return {
-      action: 'none',
+    var base = {
       volume: volume,
       fadeInMs: fadeInMs,
       fadeOutMs: fadeOutMs,
-      season: season,
+      ms: fadeOutMs,
       mode: mode,
     }
+    if (mode === 'off' || theater) {
+      base.action = 'fadeOut'
+      return base
+    }
+    var source = resolve(mode, now)
+    if (!source) {
+      base.action = 'none'
+      return base
+    }
+    if (source.kind === 'radio') {
+      base.action = 'radio'
+      base.station = source.id
+      base.label = source.label
+      return base
+    }
+    var loaded = tracksFor(pl, source.songId)
+    base.action = 'play'
+    base.song = source.songId
+    base.tracks = loaded.tracks
+    base.loop = loaded.song.loop !== false
+    base.shuffle = !!loaded.song.shuffle
+    base.label = source.label
+    return base
   }
 
   function shuffleCopy(arr, seed) {
@@ -285,10 +310,13 @@
     LS_VOLUME: LS_VOLUME,
     DEFAULT_VOLUME: DEFAULT_VOLUME,
     MODES: MODES,
-    calendarSeason: calendarSeason,
-    effectiveSeason: effectiveSeason,
+    SOURCES: SOURCES,
     normalizeMode: normalizeMode,
     modeLabel: modeLabel,
+    christmasWindow: christmasWindow,
+    defaultPool: defaultPool,
+    dayIndex: dayIndex,
+    resolve: resolve,
     readWebMode: readWebMode,
     writeWebMode: writeWebMode,
     readWebVolume: readWebVolume,
@@ -299,6 +327,5 @@
     writeWebEnabled: writeWebEnabled,
     evaluate: evaluate,
     shuffleCopy: shuffleCopy,
-    pad2: pad2,
   }
 })(typeof globalThis !== 'undefined' ? globalThis : this)

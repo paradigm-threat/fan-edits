@@ -5,16 +5,17 @@ Audio lives on Bunny CDN (`lobby/public-domain/`, `lobby/christmas/`) — not in
 
 ## Menu music modes
 
-Cycles in the header / APK menu: **off → auto → all year → winter**.
+Header and APK menu: **Off**, **Default**, **Classical**, **Winter**, then SomaFM stations (Deep Space One, Secret Agent, Christmas Lounge, Illinois Street Lounge, Groove Salad, Groove Salad 2, Groove Salad Classic).
 
 | Mode | Behavior |
 |------|----------|
-| off | Silent |
-| auto | Winter window (Oct 15 – Jan 2) → song `winter`; otherwise `publicDomain` |
-| all year | Always `publicDomain` |
-| winter | Always `winter` (Mannheim Steamroller bridge set) |
+| off | Silent. A first visit to the website stays here until someone picks a playlist. |
+| default | Same local date always picks the same source. Year-round pool: Classical, Deep Space One, Secret Agent, Illinois Street Lounge, Groove Salad, Groove Salad 2, Groove Salad Classic. November–February also include Winter and Christmas Lounge. |
+| Classical (`allYear`) | Always song `publicDomain` |
+| winter | Always song `winter` (local carols), any month |
+| SomaFM ids | Live Icecast stream for that station, any month |
 
-No additional soundtrack songs for now.
+An explicit playlist ignores the day roll until Default is selected again. Volume defaults to 25%.
 
 ## Default song: `publicDomain`
 
@@ -62,7 +63,6 @@ Bridge until that rip is available: overlapping tracks from *A Fresh Aire Christ
 
 **Bridge note:** private CD rips / tribute covers for lobby CDN only — replace with *Christmas Symphony II* when available. Not redistributed in git.
 
-## Season (auto mode)
+## Default roll
 
-- **Winter:** local date Oct 15 – Jan 2 inclusive → song `winter`
-- **Otherwise:** default song `publicDomain`
+Only **Default** is date-gated. November, December, January, and February add Winter and Christmas Lounge to that roll. Choosing Winter or Christmas Lounge directly still plays them in any month.

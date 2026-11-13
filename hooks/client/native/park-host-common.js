@@ -273,9 +273,31 @@
     } catch (_) {}
   }
 
+  function ensureLobbyHostScripts() {
+    if (!global.document) return;
+    var specs = [
+      { file: 'LobbyPlaylist.js', src: '/hooks/client/lobby/LobbyPlaylist.js?v=44' },
+      { file: 'LobbyAudio.host.js', src: '/hooks/client/native/LobbyAudio.host.js?v=44' },
+    ];
+    var nodes = global.document.scripts || [];
+    for (var i = 0; i < specs.length; i++) {
+      var found = false;
+      for (var n = 0; n < nodes.length; n++) {
+        if (String(nodes[n].src || '').indexOf(specs[i].file) !== -1) found = true;
+      }
+      if (found) continue;
+      var s = global.document.createElement('script');
+      s.src = specs[i].src;
+      s.async = false;
+      (global.document.head || global.document.documentElement).appendChild(s);
+    }
+  }
+
   ensureParkNativeCss();
+  global.setTimeout(ensureLobbyHostScripts, 0);
 
   global.__fbEnsureParkNativeCss = ensureParkNativeCss;
   global.__fbHostNeedsUpgrade = hostNeedsUpgrade;
   global.__fbScheduleParkNativeReupgrade = scheduleParkNativeReupgrade;
+  global.__fbEnsureLobbyHostScripts = ensureLobbyHostScripts;
 })(typeof globalThis !== 'undefined' ? globalThis : window);

@@ -76,15 +76,22 @@ function d(y, m, day) {
   return new Date(y, m - 1, day, 12, 0, 0)
 }
 
-test('calendarSeason: winter wraps Nov 15 – Jan 2', () => {
+test('christmas window is November through February', () => {
   const L = loadLib()
-  const cfg = { start: '10-15', end: '01-02' }
-  assert.equal(L.calendarSeason(d(2026, 11, 15), cfg), 'winter')
-  assert.equal(L.calendarSeason(d(2026, 12, 25), cfg), 'winter')
-  assert.equal(L.calendarSeason(d(2027, 1, 2), cfg), 'winter')
-  assert.equal(L.calendarSeason(d(2026, 11, 14), cfg), 'default')
-  assert.equal(L.calendarSeason(d(2027, 1, 3), cfg), 'default')
-  assert.equal(L.calendarSeason(d(2026, 10, 15), cfg), 'default')
+  assert.equal(L.christmasWindow(d(2026, 11, 1)), true)
+  assert.equal(L.christmasWindow(d(2026, 12, 25)), true)
+  assert.equal(L.christmasWindow(d(2027, 1, 15)), true)
+  assert.equal(L.christmasWindow(d(2027, 2, 28)), true)
+  assert.equal(L.christmasWindow(d(2026, 10, 31)), false)
+  assert.equal(L.christmasWindow(d(2026, 3, 1)), false)
+})
+
+test('day index matches key * 17 + 3', () => {
+  const L = loadLib()
+  const now = d(2026, 6, 15)
+  const key = 2026 * 10000 + 6 * 100 + 15
+  assert.equal(L.dayIndex(now, 7), (key * 17 + 3) % 7)
+  assert.equal(L.dayIndex(now, 9), (key * 17 + 3) % 9)
 })
 
 test('evaluate: fadeOut when off or theater', () => {
@@ -101,66 +108,88 @@ test('evaluate: fadeOut when off or theater', () => {
   assert.equal(theater.action, 'fadeOut')
 })
 
-test('evaluate: auto → publicDomain outside winter window', () => {
+test('default roll is stable for a local date and skips Christmas outside Nov–Feb', () => {
   const L = loadLib()
-  const dec = L.evaluate(SAMPLE, {
-    mode: 'auto',
-    theater: false,
-    now: d(2026, 10, 15),
-  })
-  assert.equal(dec.action, 'play')
-  assert.equal(dec.song, 'publicDomain')
-  assert.equal(dec.season, 'default')
-  assert.equal(dec.tracks.length, 2)
-  assert.equal(dec.shuffle, true)
-  assert.equal(dec.volume, 0.28)
+  const morning = new Date(2026, 5, 15, 8, 0, 0)
+  const evening = new Date(2026, 5, 15, 20, 0, 0)
+  assert.equal(L.resolve('default', morning).id, L.resolve('default', evening).id)
+  const june = L.defaultPool(morning).map((s) => s.id)
+  assert.deepEqual(Array.from(june), [
+    'allYear',
+    'deepspaceone',
+    'secretagent',
+    'illstreet',
+    'groovesalad',
+    'groovesalad2',
+    'gsclassic',
+  ])
+  for (let day = 1; day <= 30; day++) {
+    const id = L.resolve('default', d(2026, 6, day)).id
+    assert.notEqual(id, 'winter')
+    assert.notEqual(id, 'christmas')
+  }
+  const decPool = L.defaultPool(d(2026, 12, 1)).map((s) => s.id)
+  assert.deepEqual(Array.from(decPool).slice(-2), ['winter', 'christmas'])
+  const seen = new Set()
+  for (let day = 1; day <= 31; day++) {
+    seen.add(L.resolve('default', d(2026, 12, day)).id)
+  }
+  assert.equal(seen.has('winter'), true)
+  assert.equal(seen.has('christmas'), true)
 })
 
-test('evaluate: auto → winter song in season', () => {
+test('evaluate: default plays the day source, classical stays publicDomain', () => {
   const L = loadLib()
-  const dec = L.evaluate(SAMPLE, {
-    mode: 'auto',
-    theater: false,
-    now: d(2026, 12, 20),
-  })
-  assert.equal(dec.action, 'play')
-  assert.equal(dec.song, 'winter')
-  assert.equal(dec.season, 'winter')
-  assert.deepEqual(dec.tracks, ['https://example.com/winter.mp3'])
-})
+  const now = d(2026, 6, 15)
+  const source = L.resolve('default', now)
+  const rolled = L.evaluate(SAMPLE, { mode: 'auto', theater: false, now })
+  assert.equal(rolled.volume, 0.28)
+  if (source.kind === 'radio') {
+    assert.equal(rolled.action, 'radio')
+    assert.equal(rolled.station, source.id)
+  } else {
+    assert.equal(rolled.action, 'play')
+    assert.equal(rolled.song, 'publicDomain')
+    assert.equal(rolled.tracks.length, 2)
+    assert.equal(rolled.shuffle, true)
+  }
 
-test('evaluate: allYear forces publicDomain in winter window', () => {
-  const L = loadLib()
-  const dec = L.evaluate(SAMPLE, {
+  const classical = L.evaluate(SAMPLE, {
     mode: 'allYear',
     theater: false,
     now: d(2026, 12, 20),
   })
-  assert.equal(dec.action, 'play')
-  assert.equal(dec.song, 'publicDomain')
-  assert.equal(dec.season, 'default')
+  assert.equal(classical.action, 'play')
+  assert.equal(classical.song, 'publicDomain')
 })
 
-test('evaluate: winter forces winter song mid-year', () => {
+test('evaluate: winter and Christmas Lounge stay available in June', () => {
   const L = loadLib()
-  const dec = L.evaluate(SAMPLE, {
+  const winter = L.evaluate(SAMPLE, {
     mode: 'winter',
     theater: false,
     now: d(2026, 6, 15),
   })
-  assert.equal(dec.action, 'play')
-  assert.equal(dec.song, 'winter')
-  assert.equal(dec.season, 'winter')
+  assert.equal(winter.action, 'play')
+  assert.equal(winter.song, 'winter')
+  assert.deepEqual(Array.from(winter.tracks), ['https://example.com/winter.mp3'])
+
+  const lounge = L.evaluate(SAMPLE, {
+    mode: 'christmas',
+    theater: false,
+    now: d(2026, 6, 15),
+  })
+  assert.equal(lounge.action, 'radio')
+  assert.equal(lounge.station, 'christmas')
 })
 
-test('cycleWebMode: off → auto → allYear → winter → off', () => {
+test('cycleWebMode: off → default → Classical', () => {
   const store = memoryStorage()
   const L = loadLib(store)
   assert.equal(L.readWebMode(), 'off')
-  assert.equal(L.cycleWebMode(), 'auto')
+  assert.equal(L.cycleWebMode(), 'default')
   assert.equal(L.cycleWebMode(), 'allYear')
-  assert.equal(L.cycleWebMode(), 'winter')
-  assert.equal(L.cycleWebMode(), 'off')
+  assert.equal(L.MODES.length, 11)
 })
 
 test('shuffleCopy is deterministic for a seed and preserves membership', () => {
@@ -187,30 +216,34 @@ test('tip lobby.playlist.json is valid flashback-logical-playlist/v1', () => {
     }
   }
   const L = loadLib()
-  const midyear = L.evaluate(tip, {
-    mode: 'auto',
+  const now = d(2026, 6, 15)
+  const source = L.resolve('auto', now)
+  const midyear = L.evaluate(tip, { mode: 'auto', theater: false, now })
+  if (source.kind === 'radio') {
+    assert.equal(midyear.action, 'radio')
+    assert.equal(midyear.station, source.id)
+  } else {
+    assert.equal(midyear.action, 'play')
+    assert.equal(midyear.song, 'publicDomain')
+    assert.ok(midyear.tracks.length >= 1)
+  }
+
+  const winter = L.evaluate(tip, {
+    mode: 'winter',
     theater: false,
     now: d(2026, 6, 15),
   })
-  assert.equal(midyear.action, 'play')
-  assert.equal(midyear.song, 'publicDomain')
-  assert.ok(midyear.tracks.length >= 1)
-
-  const xmas = L.evaluate(tip, {
-    mode: 'auto',
-    theater: false,
-    now: d(2026, 12, 1),
-  })
-  assert.equal(xmas.action, 'play')
-  assert.equal(xmas.song, 'winter')
+  assert.equal(winter.action, 'play')
+  assert.equal(winter.song, 'winter')
+  assert.ok(winter.tracks.length >= 1)
 })
 
 test('readWebMode migrates legacy enabled flag', () => {
   const store = memoryStorage()
   store.setItem('fb-lobby-music-enabled', '1')
   const L = loadLib(store)
-  assert.equal(L.readWebMode(), 'auto')
-  assert.equal(store.getItem('fb-lobby-music-mode'), 'auto')
+  assert.equal(L.readWebMode(), 'default')
+  assert.equal(store.getItem('fb-lobby-music-mode'), 'default')
 })
 
 test('readWebVolume defaults to 25% and persists', () => {
